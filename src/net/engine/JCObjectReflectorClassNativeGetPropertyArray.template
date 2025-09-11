@@ -15,7 +15,7 @@
 			}
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
-            throw java.lang.IllegalStateException(String.format("Failed to convert %s into JCObject", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(String.format("Failed to convert %s into JCObject", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

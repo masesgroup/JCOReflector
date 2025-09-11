@@ -7,7 +7,7 @@
             JCObject objMETHOD_NAME = (JCObject)retObjectMETHOD_NAME;
             return new METHOD_IMPLEMENTATION_RETURN_TYPE(objMETHOD_NAME);
         } catch (java.lang.ClassCastException cce) {
-            throw java.lang.IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -6,6 +6,11 @@
             retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
             return (METHOD_RETURN_TYPE)retObjectMETHOD_NAME;
         } catch (java.lang.ClassCastException cce) {
+            https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMETHOD_NAMENumber = (java.lang.Number)retObjectMETHOD_NAME;
+                return retObjectMETHOD_NAMENumber.METHOD_RETURN_TYPEValue();
+            } catch (java.lang.ClassCastException cce) { }
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into METHOD_RETURN_TYPE", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

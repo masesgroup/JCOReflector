@@ -99,9 +99,15 @@ object HelloNETSocketClientAsync { // The port number for the remote device.
   @throws[Throwable]
   def main(args: scala.Array[String]): Unit = {
     JCOReflector.setCommandLineArgs(args)
-    connectDone = new ManualResetEvent(false)
-    sendDone = new ManualResetEvent(false)
-    receiveDone = new ManualResetEvent(false)
-    StartClient()
+    try {
+        connectDone = new ManualResetEvent(false)
+        sendDone = new ManualResetEvent(false)
+        receiveDone = new ManualResetEvent(false)
+        StartClient()
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+        System.exit(-1)
+    }
   }
 }

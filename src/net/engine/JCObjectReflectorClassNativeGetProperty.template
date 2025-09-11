@@ -1,8 +1,9 @@
     public METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE getPROPERTY_JAVA_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
+        Object retObjectPROPERTY_NAME;
         try {
-            Object retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
             return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAME;
         } catch (java.lang.ClassCastException cce) {
             throw IllegalStateException(String.format("Failed to cast %s into PROPERTY_OUTPUTTYPE", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);

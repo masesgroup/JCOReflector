@@ -1,9 +1,10 @@
     public final METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_JAVA_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
+        Object retObjectPROPERTY_NAME;
         try {
             ArrayList<PROPERTY_OUTPUTTYPE> resultingArrayList = new ArrayList<PROPERTY_OUTPUTTYPE>();
-            Object retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
             JCObject resultingObjects = (JCObject)retObjectPROPERTY_NAME;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PROPERTY_IMPLEMENTATION_OUTPUTTYPE(resultingObject));

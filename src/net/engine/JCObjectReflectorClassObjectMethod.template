@@ -1,8 +1,9 @@
     public METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE METHOD_JAVA_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (METHOD_OBJECT == null)
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
+        Object retObjectMETHOD_NAME;
         try {
-            Object retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
             JCObject objMETHOD_NAME = (JCObject)retObjectMETHOD_NAME;
             return new METHOD_IMPLEMENTATION_RETURN_TYPE(objMETHOD_NAME);
         } catch (java.lang.ClassCastException cce) {

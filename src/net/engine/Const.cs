@@ -521,7 +521,7 @@ namespace MASES.JCOReflector.Engine
             public static string AUTOCLOSEABLE_CLOSE_METHOD = "    public void close() throws Exception {" + Environment.NewLine +
                                                                 "        try {" + Environment.NewLine +
                                                                 "            if (classInstance == null)" + Environment.NewLine +
-                                                                "                throw new UnsupportedOperationException(\"classInstance is null.\");" + Environment.NewLine +
+                                                                "                throw new java.lang.UnsupportedOperationException(\"classInstance is null.\");" + Environment.NewLine +
                                                                 "            try {" + Environment.NewLine +
                                                                 "                classInstance.Invoke(\"Dispose\");" + Environment.NewLine +
                                                                 "            }" + Environment.NewLine +

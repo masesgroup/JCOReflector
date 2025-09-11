@@ -2,8 +2,11 @@
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
         try {
-            JCObject val = (JCObject)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            Object retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            JCObject val = (JCObject)retObjectPROPERTY_NAME;
             return new PROPERTY_IMPLEMENTATION_OUTPUTTYPE(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

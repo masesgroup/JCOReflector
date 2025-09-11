@@ -2,7 +2,10 @@
         if (METHOD_OBJECT == null)
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {
-            return (METHOD_RETURN_TYPE)METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            Object retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            return (METHOD_RETURN_TYPE)retObjectMETHOD_NAME;
+        } catch (java.lang.ClassCastException cce) {
+            throw IllegalStateException(String.format("Failed to convert %s into METHOD_RETURN_TYPE", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

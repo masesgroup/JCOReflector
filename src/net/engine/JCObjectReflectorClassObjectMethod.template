@@ -2,8 +2,11 @@
         if (METHOD_OBJECT == null)
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {
-            JCObject objMETHOD_NAME = (JCObject)METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            Object retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            JCObject objMETHOD_NAME = (JCObject)retObjectMETHOD_NAME;
             return new METHOD_IMPLEMENTATION_RETURN_TYPE(objMETHOD_NAME);
+        } catch (java.lang.ClassCastException cce) {
+            throw IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -3,7 +3,8 @@
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            Object retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            JCObject resultingObjects = (JCObject)retObjectPROPERTY_NAME;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -12,6 +13,8 @@
 				resultingArray[indexPROPERTY_NAME] = (PROPERTY_OUTPUTTYPE)resultingArrayList.get(indexPROPERTY_NAME);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw IllegalStateException(String.format("Failed to convert %s into JCObject", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

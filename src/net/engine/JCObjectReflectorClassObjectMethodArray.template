@@ -3,13 +3,16 @@
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {
             ArrayList<METHOD_RETURN_TYPE> resultingArrayList = new ArrayList<METHOD_RETURN_TYPE>();
-            JCObject resultingObjects = (JCObject)METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            Object retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
+            JCObject resultingObjects = (JCObject)retObjectMETHOD_NAME;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new METHOD_IMPLEMENTATION_RETURN_TYPE(resultingObject));
             }
             METHOD_RETURN_TYPE[] resultingArray = new METHOD_RETURN_TYPE[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

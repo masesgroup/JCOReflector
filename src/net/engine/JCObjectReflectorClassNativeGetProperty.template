@@ -2,7 +2,10 @@
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
         try {
-            return (PROPERTY_OUTPUTTYPE)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            Object retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAME;
+        } catch (java.lang.ClassCastException cce) {
+            throw IllegalStateException(String.format("Failed to cast %s into PROPERTY_OUTPUTTYPE", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

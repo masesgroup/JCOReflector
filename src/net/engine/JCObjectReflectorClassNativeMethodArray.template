@@ -1,6 +1,6 @@
     public METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE[] METHOD_JAVA_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (METHOD_OBJECT == null)
-            throw new UnsupportedOperationException("METHOD_OBJECT is null.");
+            throw new java.lang.UnsupportedOperationException("METHOD_OBJECT is null.");
         java.lang.Object retObjectMETHOD_NAME = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
@@ -15,7 +15,7 @@
             }
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(String.format("Failed to cast %s into METHOD_RETURN_TYPE", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into METHOD_RETURN_TYPE", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

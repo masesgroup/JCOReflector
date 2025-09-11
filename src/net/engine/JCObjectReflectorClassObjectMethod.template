@@ -1,13 +1,13 @@
     public METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE METHOD_JAVA_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (METHOD_OBJECT == null)
-            throw new UnsupportedOperationException("METHOD_OBJECT is null.");
+            throw new java.lang.UnsupportedOperationException("METHOD_OBJECT is null.");
         java.lang.Object retObjectMETHOD_NAME = null;
         try {
             retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
             JCObject objMETHOD_NAME = (JCObject)retObjectMETHOD_NAME;
             return new METHOD_IMPLEMENTATION_RETURN_TYPE(objMETHOD_NAME);
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

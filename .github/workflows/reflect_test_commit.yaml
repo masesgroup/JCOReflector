@@ -439,12 +439,12 @@ jobs:
         continue-on-error: true
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}
+        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}
         shell: cmd
         continue-on-error: true
     
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}
+        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}
         shell: cmd
         continue-on-error: true
 
@@ -668,11 +668,11 @@ jobs:
         continue-on-error: true
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}  
+        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}  
         continue-on-error: true
     
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}
+        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}
         continue-on-error: true
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
@@ -792,11 +792,11 @@ jobs:
         continue-on-error: true
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}
+        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}
         continue-on-error: true
     
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}
+        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}
         continue-on-error: true
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
@@ -854,11 +854,31 @@ jobs:
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net9.0_${{ github.sha }}
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: net8.0
+          path: .\bin\net8.0\**\*
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: net9.0
+          path: .\bin\net9.0\**\*
+        
+      - uses: actions/upload-artifact@v4
+        with:
+          name: net462
+          path: .\bin\net462\**\*
+
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
 
       - run: nuget pack src\net\CLI\JCOReflectorCLI.nuspec -OutputDirectory .\bin
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: JCOReflectorNuGet
+          path: .\bin\*nupkg
 
       - name: Restore net462 JCOReflector source from cache
         uses: actions/cache/restore@v4
@@ -892,12 +912,6 @@ jobs:
               ./src/jvm/statistics/net9.0/
               ./src/jvm/src/net9.0/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net9.0_${{ github.sha }}
-
-      - name: Compress release files
-        run: |
-          Compress-Archive -Path .\bin\net8.0\* -DestinationPath .\bin\net8.0.zip
-          Compress-Archive -Path .\bin\net9.0\* -DestinationPath .\bin\net9.0.zip
-          Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
 
       - name: Extract commit SHA
         if: ${{ inputs.GeneratePR == true }}
@@ -965,26 +979,6 @@ jobs:
      #     message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
      #   env:
      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: JCOReflectorNuGet
-          path: .\bin\*nupkg
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: net8.0
-          path: .\bin\net8.0.zip
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: net9.0
-          path: .\bin\net9.0.zip
-        
-      - uses: actions/upload-artifact@v4
-        with:
-          name: net462
-          path: .\bin\net462.zip
 
   final_cleanup:
     needs: [ execute_finalize ]

@@ -1,7 +1,7 @@
     public METHOD_MODIFIER_KEYWORDMETHOD_RETURN_TYPE[] METHOD_JAVA_NAME(METHOD_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (METHOD_OBJECT == null)
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
-        Object retObjectMETHOD_NAME;
+        java.lang.Object retObjectMETHOD_NAME;
         try {
             ArrayList<METHOD_RETURN_TYPE> resultingArrayList = new ArrayList<METHOD_RETURN_TYPE>();
             retObjectMETHOD_NAME = METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);

@@ -15,7 +15,7 @@
             }
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
-            throw IllegalStateException(String.format("Failed to cast %s into METHOD_RETURN_TYPE", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
+            throw java.lang.IllegalStateException(String.format("Failed to cast %s into METHOD_RETURN_TYPE", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

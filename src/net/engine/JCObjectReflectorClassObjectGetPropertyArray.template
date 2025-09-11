@@ -13,7 +13,7 @@
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
-            throw IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
+            throw java.lang.IllegalStateException(String.format("Failed to cast %s into JCObject", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -6,7 +6,7 @@
             retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
             return (PROPERTY_OUTPUTTYPE)retObjectPROPERTY_NAME;
         } catch (java.lang.ClassCastException cce) {
-            throw IllegalStateException(String.format("Failed to cast %s into PROPERTY_OUTPUTTYPE", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
+            throw java.lang.IllegalStateException(String.format("Failed to cast %s into PROPERTY_OUTPUTTYPE", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

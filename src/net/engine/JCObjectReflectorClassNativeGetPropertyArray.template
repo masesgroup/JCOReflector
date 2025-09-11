@@ -1,7 +1,7 @@
     public METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_JAVA_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
-        java.lang.Object retObjectPROPERTY_NAME;
+        java.lang.Object retObjectPROPERTY_NAME = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);

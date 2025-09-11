@@ -13,7 +13,6 @@
             } catch (java.lang.ClassCastException cceInner) {
                 throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into METHOD_RETURN_TYPE and, as fallback solution, into java.lang.Number", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
             }
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into METHOD_RETURN_TYPE", retObjectMETHOD_NAME != null ? retObjectMETHOD_NAME.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

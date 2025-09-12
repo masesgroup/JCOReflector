@@ -144,10 +144,14 @@ public class IUnsafeWebRequestCreateImplementation extends NetObject implements 
     
     public WebRequest Create(Uri uri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", uri == null ? null : uri.getJCOInstance());
+            retObjectCreate = classInstance.Invoke("Create", uri == null ? null : uri.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new WebRequest(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

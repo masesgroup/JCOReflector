@@ -143,10 +143,14 @@ public class IDocumentProjectItemImplementation extends NetObject implements IDo
     
     public Stream GetContents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContents = null;
         try {
-            JCObject objGetContents = (JCObject)classInstance.Invoke("GetContents");
+            retObjectGetContents = classInstance.Invoke("GetContents");
+            JCObject objGetContents = (JCObject)retObjectGetContents;
             return new Stream(objGetContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContents != null ? retObjectGetContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IDocumentProjectItemImplementation extends NetObject implements IDo
 
     public void Open() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {

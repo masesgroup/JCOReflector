@@ -166,9 +166,13 @@ public class Equality extends BinaryOp  {
     
     public boolean EvaluateEquality(NetObject v1, NetObject v2) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.JScriptException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateEquality = null;
         try {
-            return (boolean)classInstance.Invoke("EvaluateEquality", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectEvaluateEquality = classInstance.Invoke("EvaluateEquality", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return (boolean)retObjectEvaluateEquality;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEvaluateEquality != null ? retObjectEvaluateEquality.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class Equality extends BinaryOp  {
 
     public static boolean JScriptEquals(NetObject v1, NetObject v2) throws Throwable, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.ArgumentNullException, system.MissingMethodException, system.OverflowException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptEquals = null;
         try {
-            return (boolean)classType.Invoke("JScriptEquals", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectJScriptEquals = classType.Invoke("JScriptEquals", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return (boolean)retObjectJScriptEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectJScriptEquals != null ? retObjectJScriptEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

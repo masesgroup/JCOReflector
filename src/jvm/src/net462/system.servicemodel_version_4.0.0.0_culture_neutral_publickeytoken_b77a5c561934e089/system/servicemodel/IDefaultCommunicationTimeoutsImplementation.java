@@ -147,10 +147,14 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
     
     public TimeSpan getCloseTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CloseTimeout");
+            retObjectCloseTimeout = classInstance.Get("CloseTimeout");
+            JCObject val = (JCObject)retObjectCloseTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseTimeout != null ? retObjectCloseTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
 
     public TimeSpan getOpenTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OpenTimeout");
+            retObjectOpenTimeout = classInstance.Get("OpenTimeout");
+            JCObject val = (JCObject)retObjectOpenTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTimeout != null ? retObjectOpenTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +177,14 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
 
     public TimeSpan getReceiveTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReceiveTimeout");
+            retObjectReceiveTimeout = classInstance.Get("ReceiveTimeout");
+            JCObject val = (JCObject)retObjectReceiveTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveTimeout != null ? retObjectReceiveTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +192,14 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
 
     public TimeSpan getSendTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SendTimeout");
+            retObjectSendTimeout = classInstance.Get("SendTimeout");
+            JCObject val = (JCObject)retObjectSendTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendTimeout != null ? retObjectSendTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

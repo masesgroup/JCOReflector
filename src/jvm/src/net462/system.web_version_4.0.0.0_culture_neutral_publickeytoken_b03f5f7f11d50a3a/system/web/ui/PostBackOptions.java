@@ -190,9 +190,13 @@ public class PostBackOptions extends NetObject  {
     
     public boolean getAutoPostBack() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoPostBack = null;
         try {
-            return (boolean)classInstance.Get("AutoPostBack");
+            retObjectAutoPostBack = classInstance.Get("AutoPostBack");
+            return (boolean)retObjectAutoPostBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoPostBack != null ? retObjectAutoPostBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +204,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setAutoPostBack(boolean AutoPostBack) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoPostBack", AutoPostBack);
         } catch (JCNativeException jcne) {
@@ -210,9 +214,13 @@ public class PostBackOptions extends NetObject  {
 
     public boolean getClientSubmit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientSubmit = null;
         try {
-            return (boolean)classInstance.Get("ClientSubmit");
+            retObjectClientSubmit = classInstance.Get("ClientSubmit");
+            return (boolean)retObjectClientSubmit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectClientSubmit != null ? retObjectClientSubmit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setClientSubmit(boolean ClientSubmit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientSubmit", ClientSubmit);
         } catch (JCNativeException jcne) {
@@ -230,9 +238,13 @@ public class PostBackOptions extends NetObject  {
 
     public boolean getPerformValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPerformValidation = null;
         try {
-            return (boolean)classInstance.Get("PerformValidation");
+            retObjectPerformValidation = classInstance.Get("PerformValidation");
+            return (boolean)retObjectPerformValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPerformValidation != null ? retObjectPerformValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +252,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setPerformValidation(boolean PerformValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PerformValidation", PerformValidation);
         } catch (JCNativeException jcne) {
@@ -250,9 +262,13 @@ public class PostBackOptions extends NetObject  {
 
     public boolean getRequiresJavaScriptProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresJavaScriptProtocol = null;
         try {
-            return (boolean)classInstance.Get("RequiresJavaScriptProtocol");
+            retObjectRequiresJavaScriptProtocol = classInstance.Get("RequiresJavaScriptProtocol");
+            return (boolean)retObjectRequiresJavaScriptProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresJavaScriptProtocol != null ? retObjectRequiresJavaScriptProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +276,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setRequiresJavaScriptProtocol(boolean RequiresJavaScriptProtocol) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequiresJavaScriptProtocol", RequiresJavaScriptProtocol);
         } catch (JCNativeException jcne) {
@@ -270,9 +286,13 @@ public class PostBackOptions extends NetObject  {
 
     public boolean getTrackFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackFocus = null;
         try {
-            return (boolean)classInstance.Get("TrackFocus");
+            retObjectTrackFocus = classInstance.Get("TrackFocus");
+            return (boolean)retObjectTrackFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrackFocus != null ? retObjectTrackFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +300,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setTrackFocus(boolean TrackFocus) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrackFocus", TrackFocus);
         } catch (JCNativeException jcne) {
@@ -290,9 +310,13 @@ public class PostBackOptions extends NetObject  {
 
     public java.lang.String getActionUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActionUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ActionUrl");
+            retObjectActionUrl = classInstance.Get("ActionUrl");
+            return (java.lang.String)retObjectActionUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActionUrl != null ? retObjectActionUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +324,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setActionUrl(java.lang.String ActionUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActionUrl", ActionUrl);
         } catch (JCNativeException jcne) {
@@ -310,9 +334,13 @@ public class PostBackOptions extends NetObject  {
 
     public java.lang.String getArgument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgument = null;
         try {
-            return (java.lang.String)classInstance.Get("Argument");
+            retObjectArgument = classInstance.Get("Argument");
+            return (java.lang.String)retObjectArgument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectArgument != null ? retObjectArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +348,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setArgument(java.lang.String Argument) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Argument", Argument);
         } catch (JCNativeException jcne) {
@@ -330,9 +358,13 @@ public class PostBackOptions extends NetObject  {
 
     public java.lang.String getValidationGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("ValidationGroup");
+            retObjectValidationGroup = classInstance.Get("ValidationGroup");
+            return (java.lang.String)retObjectValidationGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValidationGroup != null ? retObjectValidationGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +372,7 @@ public class PostBackOptions extends NetObject  {
 
     public void setValidationGroup(java.lang.String ValidationGroup) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationGroup", ValidationGroup);
         } catch (JCNativeException jcne) {
@@ -350,10 +382,14 @@ public class PostBackOptions extends NetObject  {
 
     public Control getTargetControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetControl");
+            retObjectTargetControl = classInstance.Get("TargetControl");
+            JCObject val = (JCObject)retObjectTargetControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetControl != null ? retObjectTargetControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

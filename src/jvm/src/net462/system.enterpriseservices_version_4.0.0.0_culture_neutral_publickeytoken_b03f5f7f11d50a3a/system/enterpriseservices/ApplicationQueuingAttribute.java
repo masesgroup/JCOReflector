@@ -166,9 +166,13 @@ public class ApplicationQueuingAttribute extends Attribute  {
     
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ApplicationQueuingAttribute extends Attribute  {
 
     public void setEnabled(boolean Enabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class ApplicationQueuingAttribute extends Attribute  {
 
     public boolean getQueueListenerEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueueListenerEnabled = null;
         try {
-            return (boolean)classInstance.Get("QueueListenerEnabled");
+            retObjectQueueListenerEnabled = classInstance.Get("QueueListenerEnabled");
+            return (boolean)retObjectQueueListenerEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectQueueListenerEnabled != null ? retObjectQueueListenerEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class ApplicationQueuingAttribute extends Attribute  {
 
     public void setQueueListenerEnabled(boolean QueueListenerEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueueListenerEnabled", QueueListenerEnabled);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,19 @@ public class ApplicationQueuingAttribute extends Attribute  {
 
     public int getMaxListenerThreads() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxListenerThreads = null;
         try {
-            return (int)classInstance.Get("MaxListenerThreads");
+            retObjectMaxListenerThreads = classInstance.Get("MaxListenerThreads");
+            return (int)retObjectMaxListenerThreads;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxListenerThreadsNumber = (java.lang.Number)retObjectMaxListenerThreads;
+                return retObjectMaxListenerThreadsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxListenerThreads != null ? retObjectMaxListenerThreads.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +234,7 @@ public class ApplicationQueuingAttribute extends Attribute  {
 
     public void setMaxListenerThreads(int MaxListenerThreads) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxListenerThreads", MaxListenerThreads);
         } catch (JCNativeException jcne) {

@@ -160,10 +160,14 @@ public class XmlILStorageConverter extends NetObject  {
     
     public static XmlAtomicValue BooleanToAtomicValue(boolean value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBooleanToAtomicValue = null;
         try {
-            JCObject objBooleanToAtomicValue = (JCObject)classType.Invoke("BooleanToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectBooleanToAtomicValue = classType.Invoke("BooleanToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objBooleanToAtomicValue = (JCObject)retObjectBooleanToAtomicValue;
             return new XmlAtomicValue(objBooleanToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBooleanToAtomicValue != null ? retObjectBooleanToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue BytesToAtomicValue(byte[] value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBytesToAtomicValue = null;
         try {
-            JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectBytesToAtomicValue = classType.Invoke("BytesToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objBytesToAtomicValue = (JCObject)retObjectBytesToAtomicValue;
             return new XmlAtomicValue(objBytesToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBytesToAtomicValue != null ? retObjectBytesToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue BytesToAtomicValue(JCORefOut dupParam0, int dupParam1, XmlQueryRuntime dupParam2) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBytesToAtomicValue = null;
         try {
-            JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectBytesToAtomicValue = classType.Invoke("BytesToAtomicValue", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objBytesToAtomicValue = (JCObject)retObjectBytesToAtomicValue;
             return new XmlAtomicValue(objBytesToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBytesToAtomicValue != null ? retObjectBytesToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue DateTimeToAtomicValue(DateTime value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateTimeToAtomicValue = null;
         try {
-            JCObject objDateTimeToAtomicValue = (JCObject)classType.Invoke("DateTimeToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectDateTimeToAtomicValue = classType.Invoke("DateTimeToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objDateTimeToAtomicValue = (JCObject)retObjectDateTimeToAtomicValue;
             return new XmlAtomicValue(objDateTimeToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeToAtomicValue != null ? retObjectDateTimeToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue DecimalToAtomicValue(Decimal value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecimalToAtomicValue = null;
         try {
-            JCObject objDecimalToAtomicValue = (JCObject)classType.Invoke("DecimalToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectDecimalToAtomicValue = classType.Invoke("DecimalToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objDecimalToAtomicValue = (JCObject)retObjectDecimalToAtomicValue;
             return new XmlAtomicValue(objDecimalToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecimalToAtomicValue != null ? retObjectDecimalToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue DoubleToAtomicValue(double value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDoubleToAtomicValue = null;
         try {
-            JCObject objDoubleToAtomicValue = (JCObject)classType.Invoke("DoubleToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectDoubleToAtomicValue = classType.Invoke("DoubleToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objDoubleToAtomicValue = (JCObject)retObjectDoubleToAtomicValue;
             return new XmlAtomicValue(objDoubleToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoubleToAtomicValue != null ? retObjectDoubleToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +250,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue Int32ToAtomicValue(int value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt32ToAtomicValue = null;
         try {
-            JCObject objInt32ToAtomicValue = (JCObject)classType.Invoke("Int32ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectInt32ToAtomicValue = classType.Invoke("Int32ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objInt32ToAtomicValue = (JCObject)retObjectInt32ToAtomicValue;
             return new XmlAtomicValue(objInt32ToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt32ToAtomicValue != null ? retObjectInt32ToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +265,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue Int64ToAtomicValue(long value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt64ToAtomicValue = null;
         try {
-            JCObject objInt64ToAtomicValue = (JCObject)classType.Invoke("Int64ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectInt64ToAtomicValue = classType.Invoke("Int64ToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objInt64ToAtomicValue = (JCObject)retObjectInt64ToAtomicValue;
             return new XmlAtomicValue(objInt64ToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt64ToAtomicValue != null ? retObjectInt64ToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +280,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue SingleToAtomicValue(Single value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleToAtomicValue = null;
         try {
-            JCObject objSingleToAtomicValue = (JCObject)classType.Invoke("SingleToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectSingleToAtomicValue = classType.Invoke("SingleToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objSingleToAtomicValue = (JCObject)retObjectSingleToAtomicValue;
             return new XmlAtomicValue(objSingleToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleToAtomicValue != null ? retObjectSingleToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +295,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue StringToAtomicValue(java.lang.String value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStringToAtomicValue = null;
         try {
-            JCObject objStringToAtomicValue = (JCObject)classType.Invoke("StringToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectStringToAtomicValue = classType.Invoke("StringToAtomicValue", value, index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objStringToAtomicValue = (JCObject)retObjectStringToAtomicValue;
             return new XmlAtomicValue(objStringToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringToAtomicValue != null ? retObjectStringToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +310,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue TimeSpanToAtomicValue(TimeSpan value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeSpanToAtomicValue = null;
         try {
-            JCObject objTimeSpanToAtomicValue = (JCObject)classType.Invoke("TimeSpanToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectTimeSpanToAtomicValue = classType.Invoke("TimeSpanToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objTimeSpanToAtomicValue = (JCObject)retObjectTimeSpanToAtomicValue;
             return new XmlAtomicValue(objTimeSpanToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeSpanToAtomicValue != null ? retObjectTimeSpanToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +325,14 @@ public class XmlILStorageConverter extends NetObject  {
 
     public static XmlAtomicValue XmlQualifiedNameToAtomicValue(XmlQualifiedName value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlQualifiedNameToAtomicValue = null;
         try {
-            JCObject objXmlQualifiedNameToAtomicValue = (JCObject)classType.Invoke("XmlQualifiedNameToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            retObjectXmlQualifiedNameToAtomicValue = classType.Invoke("XmlQualifiedNameToAtomicValue", value == null ? null : value.getJCOInstance(), index, runtime == null ? null : runtime.getJCOInstance());
+            JCObject objXmlQualifiedNameToAtomicValue = (JCObject)retObjectXmlQualifiedNameToAtomicValue;
             return new XmlAtomicValue(objXmlQualifiedNameToAtomicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlQualifiedNameToAtomicValue != null ? retObjectXmlQualifiedNameToAtomicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

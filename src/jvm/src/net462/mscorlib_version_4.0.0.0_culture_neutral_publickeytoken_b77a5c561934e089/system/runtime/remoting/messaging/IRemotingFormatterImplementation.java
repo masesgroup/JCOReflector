@@ -151,10 +151,14 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
     
     public NetObject Deserialize(Stream serializationStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,10 +166,14 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public NetObject Deserialize(Stream serializationStream, HeaderHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance(), handler);
+            retObjectDeserialize = classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance(), handler);
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +181,7 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +191,7 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance(), toObjectFromArray(headers));
         } catch (JCNativeException jcne) {
@@ -197,10 +205,14 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
     
     public ISurrogateSelector getSurrogateSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSurrogateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SurrogateSelector");
+            retObjectSurrogateSelector = classInstance.Get("SurrogateSelector");
+            JCObject val = (JCObject)retObjectSurrogateSelector;
             return new ISurrogateSelectorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSurrogateSelector != null ? retObjectSurrogateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public void setSurrogateSelector(ISurrogateSelector SurrogateSelector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SurrogateSelector", SurrogateSelector == null ? null : SurrogateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +230,14 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public SerializationBinder getBinder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binder");
+            retObjectBinder = classInstance.Get("Binder");
+            JCObject val = (JCObject)retObjectBinder;
             return new SerializationBinder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinder != null ? retObjectBinder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public void setBinder(SerializationBinder Binder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binder", Binder == null ? null : Binder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,10 +255,14 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public StreamingContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new StreamingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class IRemotingFormatterImplementation extends NetObject implements IRemo
 
     public void setContext(StreamingContext Context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
         } catch (JCNativeException jcne) {

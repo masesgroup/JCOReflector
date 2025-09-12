@@ -162,9 +162,13 @@ public class IssuedTokenClientCredential extends NetObject  {
     
     public boolean getCacheIssuedTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheIssuedTokens = null;
         try {
-            return (boolean)classInstance.Get("CacheIssuedTokens");
+            retObjectCacheIssuedTokens = classInstance.Get("CacheIssuedTokens");
+            return (boolean)retObjectCacheIssuedTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCacheIssuedTokens != null ? retObjectCacheIssuedTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public void setCacheIssuedTokens(boolean CacheIssuedTokens) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheIssuedTokens", CacheIssuedTokens);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,19 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public int getIssuedTokenRenewalThresholdPercentage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuedTokenRenewalThresholdPercentage = null;
         try {
-            return (int)classInstance.Get("IssuedTokenRenewalThresholdPercentage");
+            retObjectIssuedTokenRenewalThresholdPercentage = classInstance.Get("IssuedTokenRenewalThresholdPercentage");
+            return (int)retObjectIssuedTokenRenewalThresholdPercentage;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIssuedTokenRenewalThresholdPercentageNumber = (java.lang.Number)retObjectIssuedTokenRenewalThresholdPercentage;
+                return retObjectIssuedTokenRenewalThresholdPercentageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIssuedTokenRenewalThresholdPercentage != null ? retObjectIssuedTokenRenewalThresholdPercentage.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +206,7 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public void setIssuedTokenRenewalThresholdPercentage(int IssuedTokenRenewalThresholdPercentage) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedTokenRenewalThresholdPercentage", IssuedTokenRenewalThresholdPercentage);
         } catch (JCNativeException jcne) {
@@ -202,10 +216,14 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public system.servicemodel.channels.Binding getLocalIssuerBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalIssuerBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalIssuerBinding");
+            retObjectLocalIssuerBinding = classInstance.Get("LocalIssuerBinding");
+            JCObject val = (JCObject)retObjectLocalIssuerBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalIssuerBinding != null ? retObjectLocalIssuerBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +231,7 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public void setLocalIssuerBinding(system.servicemodel.channels.Binding LocalIssuerBinding) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalIssuerBinding", LocalIssuerBinding == null ? null : LocalIssuerBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,10 +241,14 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public EndpointAddress getLocalIssuerAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalIssuerAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalIssuerAddress");
+            retObjectLocalIssuerAddress = classInstance.Get("LocalIssuerAddress");
+            JCObject val = (JCObject)retObjectLocalIssuerAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalIssuerAddress != null ? retObjectLocalIssuerAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +256,7 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public void setLocalIssuerAddress(EndpointAddress LocalIssuerAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalIssuerAddress", LocalIssuerAddress == null ? null : LocalIssuerAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +266,14 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public SecurityKeyEntropyMode getDefaultKeyEntropyMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultKeyEntropyMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultKeyEntropyMode");
+            retObjectDefaultKeyEntropyMode = classInstance.Get("DefaultKeyEntropyMode");
+            JCObject val = (JCObject)retObjectDefaultKeyEntropyMode;
             return new SecurityKeyEntropyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultKeyEntropyMode != null ? retObjectDefaultKeyEntropyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +281,7 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public void setDefaultKeyEntropyMode(SecurityKeyEntropyMode DefaultKeyEntropyMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultKeyEntropyMode", DefaultKeyEntropyMode == null ? null : DefaultKeyEntropyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +291,14 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public TimeSpan getMaxIssuedTokenCachingTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxIssuedTokenCachingTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxIssuedTokenCachingTime");
+            retObjectMaxIssuedTokenCachingTime = classInstance.Get("MaxIssuedTokenCachingTime");
+            JCObject val = (JCObject)retObjectMaxIssuedTokenCachingTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxIssuedTokenCachingTime != null ? retObjectMaxIssuedTokenCachingTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +306,7 @@ public class IssuedTokenClientCredential extends NetObject  {
 
     public void setMaxIssuedTokenCachingTime(TimeSpan MaxIssuedTokenCachingTime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxIssuedTokenCachingTime", MaxIssuedTokenCachingTime == null ? null : MaxIssuedTokenCachingTime.getJCOInstance());
         } catch (JCNativeException jcne) {

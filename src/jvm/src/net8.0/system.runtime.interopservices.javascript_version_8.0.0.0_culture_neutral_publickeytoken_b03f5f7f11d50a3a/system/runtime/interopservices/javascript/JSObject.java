@@ -156,9 +156,13 @@ public class JSObject extends NetObject implements AutoCloseable {
     
     public boolean GetPropertyAsBoolean(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyAsBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetPropertyAsBoolean", propertyName);
+            retObjectGetPropertyAsBoolean = classInstance.Invoke("GetPropertyAsBoolean", propertyName);
+            return (boolean)retObjectGetPropertyAsBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPropertyAsBoolean != null ? retObjectGetPropertyAsBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public boolean HasProperty(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProperty = null;
         try {
-            return (boolean)classInstance.Invoke("HasProperty", propertyName);
+            retObjectHasProperty = classInstance.Invoke("HasProperty", propertyName);
+            return (boolean)retObjectHasProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasProperty != null ? retObjectHasProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +184,12 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public byte[] GetPropertyAsByteArray(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyAsByteArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPropertyAsByteArray", propertyName);
+            retObjectGetPropertyAsByteArray = classInstance.Invoke("GetPropertyAsByteArray", propertyName);
+            JCObject resultingObjects = (JCObject)retObjectGetPropertyAsByteArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -188,6 +198,8 @@ public class JSObject extends NetObject implements AutoCloseable {
 				resultingArray[indexGetPropertyAsByteArray] = (byte)resultingArrayList.get(indexGetPropertyAsByteArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetPropertyAsByteArray != null ? retObjectGetPropertyAsByteArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,19 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public double GetPropertyAsDouble(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyAsDouble = null;
         try {
-            return (double)classInstance.Invoke("GetPropertyAsDouble", propertyName);
+            retObjectGetPropertyAsDouble = classInstance.Invoke("GetPropertyAsDouble", propertyName);
+            return (double)retObjectGetPropertyAsDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPropertyAsDoubleNumber = (java.lang.Number)retObjectGetPropertyAsDouble;
+                return retObjectGetPropertyAsDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsDouble != null ? retObjectGetPropertyAsDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +227,19 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public int GetPropertyAsInt32(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyAsInt32 = null;
         try {
-            return (int)classInstance.Invoke("GetPropertyAsInt32", propertyName);
+            retObjectGetPropertyAsInt32 = classInstance.Invoke("GetPropertyAsInt32", propertyName);
+            return (int)retObjectGetPropertyAsInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPropertyAsInt32Number = (java.lang.Number)retObjectGetPropertyAsInt32;
+                return retObjectGetPropertyAsInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPropertyAsInt32 != null ? retObjectGetPropertyAsInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +247,14 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public JSObject GetPropertyAsJSObject(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyAsJSObject = null;
         try {
-            JCObject objGetPropertyAsJSObject = (JCObject)classInstance.Invoke("GetPropertyAsJSObject", propertyName);
+            retObjectGetPropertyAsJSObject = classInstance.Invoke("GetPropertyAsJSObject", propertyName);
+            JCObject objGetPropertyAsJSObject = (JCObject)retObjectGetPropertyAsJSObject;
             return new JSObject(objGetPropertyAsJSObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyAsJSObject != null ? retObjectGetPropertyAsJSObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +262,13 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public java.lang.String GetPropertyAsString(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPropertyAsString", propertyName);
+            retObjectGetPropertyAsString = classInstance.Invoke("GetPropertyAsString", propertyName);
+            return (java.lang.String)retObjectGetPropertyAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPropertyAsString != null ? retObjectGetPropertyAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +276,13 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public java.lang.String GetTypeOfProperty(java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeOfProperty = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTypeOfProperty", propertyName);
+            retObjectGetTypeOfProperty = classInstance.Invoke("GetTypeOfProperty", propertyName);
+            return (java.lang.String)retObjectGetTypeOfProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTypeOfProperty != null ? retObjectGetTypeOfProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +290,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -256,7 +300,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void SetProperty(java.lang.String propertyName, boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -266,7 +310,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void SetProperty(java.lang.String propertyName, byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -276,7 +320,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void SetProperty(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -286,7 +330,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void SetProperty(java.lang.String propertyName, double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -296,7 +340,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void SetProperty(java.lang.String propertyName, int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -306,7 +350,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void SetProperty(java.lang.String propertyName, JSObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,7 +360,7 @@ public class JSObject extends NetObject implements AutoCloseable {
 
     public void SetProperty(java.lang.String propertyName, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -327,7 +371,7 @@ public class JSObject extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -343,9 +387,13 @@ public class JSObject extends NetObject implements AutoCloseable {
     
     public boolean getIsDisposed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDisposed = null;
         try {
-            return (boolean)classInstance.Get("IsDisposed");
+            retObjectIsDisposed = classInstance.Get("IsDisposed");
+            return (boolean)retObjectIsDisposed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDisposed != null ? retObjectIsDisposed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

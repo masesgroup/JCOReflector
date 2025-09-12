@@ -144,7 +144,7 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
     
     public void AddToSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddToSelection");
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
 
     public void RemoveFromSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveFromSelection");
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
 
     public void Select() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select");
         } catch (JCNativeException jcne) {
@@ -178,9 +178,13 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
     
     public boolean getIsSelected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelected = null;
         try {
-            return (boolean)classInstance.Get("IsSelected");
+            retObjectIsSelected = classInstance.Get("IsSelected");
+            return (boolean)retObjectIsSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelected != null ? retObjectIsSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class ISelectionItemProviderImplementation extends NetObject implements I
 
     public IRawElementProviderSimple getSelectionContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionContainer");
+            retObjectSelectionContainer = classInstance.Get("SelectionContainer");
+            JCObject val = (JCObject)retObjectSelectionContainer;
             return new IRawElementProviderSimpleImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionContainer != null ? retObjectSelectionContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

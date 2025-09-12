@@ -173,9 +173,13 @@ public class DebugDirectoryEntry extends ValueType  {
     
     public boolean getIsPortableCodeView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPortableCodeView = null;
         try {
-            return (boolean)classInstance.Get("IsPortableCodeView");
+            retObjectIsPortableCodeView = classInstance.Get("IsPortableCodeView");
+            return (boolean)retObjectIsPortableCodeView;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPortableCodeView != null ? retObjectIsPortableCodeView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,19 @@ public class DebugDirectoryEntry extends ValueType  {
 
     public int getDataPointer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataPointer = null;
         try {
-            return (int)classInstance.Get("DataPointer");
+            retObjectDataPointer = classInstance.Get("DataPointer");
+            return (int)retObjectDataPointer;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDataPointerNumber = (java.lang.Number)retObjectDataPointer;
+                return retObjectDataPointerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataPointer != null ? retObjectDataPointer.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +207,19 @@ public class DebugDirectoryEntry extends ValueType  {
 
     public int getDataRelativeVirtualAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataRelativeVirtualAddress = null;
         try {
-            return (int)classInstance.Get("DataRelativeVirtualAddress");
+            retObjectDataRelativeVirtualAddress = classInstance.Get("DataRelativeVirtualAddress");
+            return (int)retObjectDataRelativeVirtualAddress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDataRelativeVirtualAddressNumber = (java.lang.Number)retObjectDataRelativeVirtualAddress;
+                return retObjectDataRelativeVirtualAddressNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataRelativeVirtualAddress != null ? retObjectDataRelativeVirtualAddress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +227,19 @@ public class DebugDirectoryEntry extends ValueType  {
 
     public int getDataSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSize = null;
         try {
-            return (int)classInstance.Get("DataSize");
+            retObjectDataSize = classInstance.Get("DataSize");
+            return (int)retObjectDataSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDataSizeNumber = (java.lang.Number)retObjectDataSize;
+                return retObjectDataSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDataSize != null ? retObjectDataSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +247,14 @@ public class DebugDirectoryEntry extends ValueType  {
 
     public DebugDirectoryEntryType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new DebugDirectoryEntryType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +262,14 @@ public class DebugDirectoryEntry extends ValueType  {
 
     public UInt16 getMajorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorVersion");
+            retObjectMajorVersion = classInstance.Get("MajorVersion");
+            JCObject val = (JCObject)retObjectMajorVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +277,14 @@ public class DebugDirectoryEntry extends ValueType  {
 
     public UInt16 getMinorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorVersion");
+            retObjectMinorVersion = classInstance.Get("MinorVersion");
+            JCObject val = (JCObject)retObjectMinorVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +292,14 @@ public class DebugDirectoryEntry extends ValueType  {
 
     public UInt32 getStamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStamp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stamp");
+            retObjectStamp = classInstance.Get("Stamp");
+            JCObject val = (JCObject)retObjectStamp;
             return new UInt32(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStamp != null ? retObjectStamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

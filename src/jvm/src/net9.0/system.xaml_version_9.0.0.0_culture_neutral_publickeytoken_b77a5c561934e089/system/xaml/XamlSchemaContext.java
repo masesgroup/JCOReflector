@@ -175,9 +175,13 @@ public class XamlSchemaContext extends NetObject  {
     
     public boolean TryGetCompatibleXamlNamespace(java.lang.String xamlNamespace, JCORefOut compatibleNamespace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.xaml.XamlSchemaException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetCompatibleXamlNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetCompatibleXamlNamespace", xamlNamespace, compatibleNamespace.getJCRefOut());
+            retObjectTryGetCompatibleXamlNamespace = classInstance.Invoke("TryGetCompatibleXamlNamespace", xamlNamespace, compatibleNamespace.getJCRefOut());
+            return (boolean)retObjectTryGetCompatibleXamlNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetCompatibleXamlNamespace != null ? retObjectTryGetCompatibleXamlNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class XamlSchemaContext extends NetObject  {
 
     public java.lang.String GetPreferredPrefix(java.lang.String xmlns) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.xaml.XamlSchemaException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPreferredPrefix", xmlns);
+            retObjectGetPreferredPrefix = classInstance.Invoke("GetPreferredPrefix", xmlns);
+            return (java.lang.String)retObjectGetPreferredPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPreferredPrefix != null ? retObjectGetPreferredPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class XamlSchemaContext extends NetObject  {
 
     public XamlDirective GetXamlDirective(java.lang.String xamlNamespace, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXamlDirective = null;
         try {
-            JCObject objGetXamlDirective = (JCObject)classInstance.Invoke("GetXamlDirective", xamlNamespace, name);
+            retObjectGetXamlDirective = classInstance.Invoke("GetXamlDirective", xamlNamespace, name);
+            JCObject objGetXamlDirective = (JCObject)retObjectGetXamlDirective;
             return new XamlDirective(objGetXamlDirective);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXamlDirective != null ? retObjectGetXamlDirective.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class XamlSchemaContext extends NetObject  {
 
     public XamlType GetXamlType(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXamlType = null;
         try {
-            JCObject objGetXamlType = (JCObject)classInstance.Invoke("GetXamlType", type == null ? null : type.getJCOInstance());
+            retObjectGetXamlType = classInstance.Invoke("GetXamlType", type == null ? null : type.getJCOInstance());
+            JCObject objGetXamlType = (JCObject)retObjectGetXamlType;
             return new XamlType(objGetXamlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXamlType != null ? retObjectGetXamlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class XamlSchemaContext extends NetObject  {
 
     public XamlType GetXamlType(XamlTypeName xamlTypeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.xaml.XamlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXamlType = null;
         try {
-            JCObject objGetXamlType = (JCObject)classInstance.Invoke("GetXamlType", xamlTypeName == null ? null : xamlTypeName.getJCOInstance());
+            retObjectGetXamlType = classInstance.Invoke("GetXamlType", xamlTypeName == null ? null : xamlTypeName.getJCOInstance());
+            JCObject objGetXamlType = (JCObject)retObjectGetXamlType;
             return new XamlType(objGetXamlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXamlType != null ? retObjectGetXamlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +252,13 @@ public class XamlSchemaContext extends NetObject  {
     
     public boolean getFullyQualifyAssemblyNamesInClrNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullyQualifyAssemblyNamesInClrNamespaces = null;
         try {
-            return (boolean)classInstance.Get("FullyQualifyAssemblyNamesInClrNamespaces");
+            retObjectFullyQualifyAssemblyNamesInClrNamespaces = classInstance.Get("FullyQualifyAssemblyNamesInClrNamespaces");
+            return (boolean)retObjectFullyQualifyAssemblyNamesInClrNamespaces;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFullyQualifyAssemblyNamesInClrNamespaces != null ? retObjectFullyQualifyAssemblyNamesInClrNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +266,13 @@ public class XamlSchemaContext extends NetObject  {
 
     public boolean getSupportMarkupExtensionsWithDuplicateArity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportMarkupExtensionsWithDuplicateArity = null;
         try {
-            return (boolean)classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
+            retObjectSupportMarkupExtensionsWithDuplicateArity = classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
+            return (boolean)retObjectSupportMarkupExtensionsWithDuplicateArity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportMarkupExtensionsWithDuplicateArity != null ? retObjectSupportMarkupExtensionsWithDuplicateArity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

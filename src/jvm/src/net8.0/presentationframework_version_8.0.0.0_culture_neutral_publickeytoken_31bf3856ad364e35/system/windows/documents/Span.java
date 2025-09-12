@@ -195,9 +195,13 @@ public class Span extends Inline  {
     
     public boolean ShouldSerializeInlines(XamlDesignerSerializationManager manager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeInlines = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeInlines", manager == null ? null : manager.getJCOInstance());
+            retObjectShouldSerializeInlines = classInstance.Invoke("ShouldSerializeInlines", manager == null ? null : manager.getJCOInstance());
+            return (boolean)retObjectShouldSerializeInlines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeInlines != null ? retObjectShouldSerializeInlines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +213,14 @@ public class Span extends Inline  {
     
     public InlineCollection getInlines() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInlines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Inlines");
+            retObjectInlines = classInstance.Get("Inlines");
+            JCObject val = (JCObject)retObjectInlines;
             return new InlineCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInlines != null ? retObjectInlines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -168,7 +168,7 @@ public class ServiceDebugBehavior extends NetObject  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -177,7 +177,7 @@ public class ServiceDebugBehavior extends NetObject  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -186,9 +186,13 @@ public class ServiceDebugBehavior extends NetObject  {
     
     public boolean getHttpHelpPageEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpHelpPageEnabled = null;
         try {
-            return (boolean)classInstance.Get("HttpHelpPageEnabled");
+            retObjectHttpHelpPageEnabled = classInstance.Get("HttpHelpPageEnabled");
+            return (boolean)retObjectHttpHelpPageEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHttpHelpPageEnabled != null ? retObjectHttpHelpPageEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public void setHttpHelpPageEnabled(boolean HttpHelpPageEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpHelpPageEnabled", HttpHelpPageEnabled);
         } catch (JCNativeException jcne) {
@@ -206,9 +210,13 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public boolean getHttpsHelpPageEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpsHelpPageEnabled = null;
         try {
-            return (boolean)classInstance.Get("HttpsHelpPageEnabled");
+            retObjectHttpsHelpPageEnabled = classInstance.Get("HttpsHelpPageEnabled");
+            return (boolean)retObjectHttpsHelpPageEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHttpsHelpPageEnabled != null ? retObjectHttpsHelpPageEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +224,7 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public void setHttpsHelpPageEnabled(boolean HttpsHelpPageEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpsHelpPageEnabled", HttpsHelpPageEnabled);
         } catch (JCNativeException jcne) {
@@ -226,9 +234,13 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public boolean getIncludeExceptionDetailInFaults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeExceptionDetailInFaults = null;
         try {
-            return (boolean)classInstance.Get("IncludeExceptionDetailInFaults");
+            retObjectIncludeExceptionDetailInFaults = classInstance.Get("IncludeExceptionDetailInFaults");
+            return (boolean)retObjectIncludeExceptionDetailInFaults;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeExceptionDetailInFaults != null ? retObjectIncludeExceptionDetailInFaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public void setIncludeExceptionDetailInFaults(boolean IncludeExceptionDetailInFaults) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeExceptionDetailInFaults", IncludeExceptionDetailInFaults);
         } catch (JCNativeException jcne) {
@@ -246,10 +258,14 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public system.servicemodel.channels.Binding getHttpHelpPageBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpHelpPageBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpHelpPageBinding");
+            retObjectHttpHelpPageBinding = classInstance.Get("HttpHelpPageBinding");
+            JCObject val = (JCObject)retObjectHttpHelpPageBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpHelpPageBinding != null ? retObjectHttpHelpPageBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public void setHttpHelpPageBinding(system.servicemodel.channels.Binding HttpHelpPageBinding) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpHelpPageBinding", HttpHelpPageBinding == null ? null : HttpHelpPageBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +283,14 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public system.servicemodel.channels.Binding getHttpsHelpPageBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpsHelpPageBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpsHelpPageBinding");
+            retObjectHttpsHelpPageBinding = classInstance.Get("HttpsHelpPageBinding");
+            JCObject val = (JCObject)retObjectHttpsHelpPageBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpsHelpPageBinding != null ? retObjectHttpsHelpPageBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +298,7 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public void setHttpsHelpPageBinding(system.servicemodel.channels.Binding HttpsHelpPageBinding) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpsHelpPageBinding", HttpsHelpPageBinding == null ? null : HttpsHelpPageBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +308,14 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public Uri getHttpHelpPageUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpHelpPageUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpHelpPageUrl");
+            retObjectHttpHelpPageUrl = classInstance.Get("HttpHelpPageUrl");
+            JCObject val = (JCObject)retObjectHttpHelpPageUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpHelpPageUrl != null ? retObjectHttpHelpPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +323,7 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public void setHttpHelpPageUrl(Uri HttpHelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpHelpPageUrl", HttpHelpPageUrl == null ? null : HttpHelpPageUrl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +333,14 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public Uri getHttpsHelpPageUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpsHelpPageUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpsHelpPageUrl");
+            retObjectHttpsHelpPageUrl = classInstance.Get("HttpsHelpPageUrl");
+            JCObject val = (JCObject)retObjectHttpsHelpPageUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpsHelpPageUrl != null ? retObjectHttpsHelpPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +348,7 @@ public class ServiceDebugBehavior extends NetObject  {
 
     public void setHttpsHelpPageUrl(Uri HttpsHelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpsHelpPageUrl", HttpsHelpPageUrl == null ? null : HttpsHelpPageUrl.getJCOInstance());
         } catch (JCNativeException jcne) {

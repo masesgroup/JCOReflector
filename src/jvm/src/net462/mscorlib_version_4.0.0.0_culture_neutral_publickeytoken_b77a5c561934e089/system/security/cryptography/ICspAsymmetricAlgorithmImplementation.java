@@ -143,10 +143,12 @@ public class ICspAsymmetricAlgorithmImplementation extends NetObject implements 
     
     public byte[] ExportCspBlob(boolean includePrivateParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportCspBlob = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ExportCspBlob", includePrivateParameters);
+            retObjectExportCspBlob = classInstance.Invoke("ExportCspBlob", includePrivateParameters);
+            JCObject resultingObjects = (JCObject)retObjectExportCspBlob;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -155,6 +157,8 @@ public class ICspAsymmetricAlgorithmImplementation extends NetObject implements 
 				resultingArray[indexExportCspBlob] = (byte)resultingArrayList.get(indexExportCspBlob);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExportCspBlob != null ? retObjectExportCspBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,7 +166,7 @@ public class ICspAsymmetricAlgorithmImplementation extends NetObject implements 
 
     public void ImportCspBlob(byte[] rawData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportCspBlob", (java.lang.Object)rawData);
         } catch (JCNativeException jcne) {
@@ -172,7 +176,7 @@ public class ICspAsymmetricAlgorithmImplementation extends NetObject implements 
 
     public void ImportCspBlob(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportCspBlob", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class ICspAsymmetricAlgorithmImplementation extends NetObject implements 
     
     public CspKeyContainerInfo getCspKeyContainerInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCspKeyContainerInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CspKeyContainerInfo");
+            retObjectCspKeyContainerInfo = classInstance.Get("CspKeyContainerInfo");
+            JCObject val = (JCObject)retObjectCspKeyContainerInfo;
             return new CspKeyContainerInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCspKeyContainerInfo != null ? retObjectCspKeyContainerInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

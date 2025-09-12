@@ -161,10 +161,14 @@ public class RefreshDataCompletedEventArgs extends AsyncCompletedEventArgs  {
     
     public PeerEndPoint getPeerEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerEndPoint");
+            retObjectPeerEndPoint = classInstance.Get("PeerEndPoint");
+            JCObject val = (JCObject)retObjectPeerEndPoint;
             return new PeerEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerEndPoint != null ? retObjectPeerEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

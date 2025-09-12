@@ -154,9 +154,19 @@ public class JitInfo extends NetObject  {
     
     public static long GetCompiledILBytes(boolean currentThread) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledILBytes = null;
         try {
-            return (long)classType.Invoke("GetCompiledILBytes", currentThread);
+            retObjectGetCompiledILBytes = classType.Invoke("GetCompiledILBytes", currentThread);
+            return (long)retObjectGetCompiledILBytes;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCompiledILBytesNumber = (java.lang.Number)retObjectGetCompiledILBytes;
+                return retObjectGetCompiledILBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetCompiledILBytes != null ? retObjectGetCompiledILBytes.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +174,19 @@ public class JitInfo extends NetObject  {
 
     public static long GetCompiledMethodCount(boolean currentThread) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledMethodCount = null;
         try {
-            return (long)classType.Invoke("GetCompiledMethodCount", currentThread);
+            retObjectGetCompiledMethodCount = classType.Invoke("GetCompiledMethodCount", currentThread);
+            return (long)retObjectGetCompiledMethodCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCompiledMethodCountNumber = (java.lang.Number)retObjectGetCompiledMethodCount;
+                return retObjectGetCompiledMethodCountNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetCompiledMethodCount != null ? retObjectGetCompiledMethodCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +194,14 @@ public class JitInfo extends NetObject  {
 
     public static TimeSpan GetCompilationTime(boolean currentThread) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompilationTime = null;
         try {
-            JCObject objGetCompilationTime = (JCObject)classType.Invoke("GetCompilationTime", currentThread);
+            retObjectGetCompilationTime = classType.Invoke("GetCompilationTime", currentThread);
+            JCObject objGetCompilationTime = (JCObject)retObjectGetCompilationTime;
             return new TimeSpan(objGetCompilationTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompilationTime != null ? retObjectGetCompilationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

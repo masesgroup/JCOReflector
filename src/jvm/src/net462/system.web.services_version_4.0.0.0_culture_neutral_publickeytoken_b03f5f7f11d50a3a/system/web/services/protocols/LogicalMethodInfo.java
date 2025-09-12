@@ -174,9 +174,13 @@ public class LogicalMethodInfo extends NetObject  {
     
     public static boolean IsBeginMethod(MethodInfo methodInfo) throws Throwable, system.NotImplementedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBeginMethod = null;
         try {
-            return (boolean)classType.Invoke("IsBeginMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
+            retObjectIsBeginMethod = classType.Invoke("IsBeginMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
+            return (boolean)retObjectIsBeginMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBeginMethod != null ? retObjectIsBeginMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class LogicalMethodInfo extends NetObject  {
 
     public static boolean IsEndMethod(MethodInfo methodInfo) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEndMethod = null;
         try {
-            return (boolean)classType.Invoke("IsEndMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
+            retObjectIsEndMethod = classType.Invoke("IsEndMethod", methodInfo == null ? null : methodInfo.getJCOInstance());
+            return (boolean)retObjectIsEndMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEndMethod != null ? retObjectIsEndMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public IAsyncResult BeginInvoke(NetObject target, NetObject[] values, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginInvoke = null;
         try {
-            JCObject objBeginInvoke = (JCObject)classInstance.Invoke("BeginInvoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginInvoke = classInstance.Invoke("BeginInvoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginInvoke = (JCObject)retObjectBeginInvoke;
             return new IAsyncResultImplementation(objBeginInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginInvoke != null ? retObjectBeginInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public NetObject GetCustomAttribute(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classInstance.Invoke("GetCustomAttribute", type == null ? null : type.getJCOInstance());
+            retObjectGetCustomAttribute = classInstance.Invoke("GetCustomAttribute", type == null ? null : type.getJCOInstance());
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new NetObject(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,16 +232,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public NetObject[] EndInvoke(NetObject target, IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndInvoke = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EndInvoke", target == null ? null : target.getJCOInstance(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndInvoke = classInstance.Invoke("EndInvoke", target == null ? null : target.getJCOInstance(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEndInvoke;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndInvoke != null ? retObjectEndInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,16 +253,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public NetObject[] GetCustomAttributes(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", type == null ? null : type.getJCOInstance());
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,16 +274,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public NetObject[] Invoke(NetObject target, NetObject[] values) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Invoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values));
+            retObjectInvoke = classInstance.Invoke("Invoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values));
+            JCObject resultingObjects = (JCObject)retObjectInvoke;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,16 +295,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
             ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Create", (java.lang.Object)toObjectFromArray(methodInfos));
+            retObjectCreate = classType.Invoke("Create", (java.lang.Object)toObjectFromArray(methodInfos));
+            JCObject resultingObjects = (JCObject)retObjectCreate;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
             }
             LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,16 +316,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public static LogicalMethodInfo[] Create(MethodInfo[] methodInfos, LogicalMethodTypes types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
             ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Create", toObjectFromArray(methodInfos), types == null ? null : types.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", toObjectFromArray(methodInfos), types == null ? null : types.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreate;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
             }
             LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,9 +341,13 @@ public class LogicalMethodInfo extends NetObject  {
     
     public boolean getIsAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsync = null;
         try {
-            return (boolean)classInstance.Get("IsAsync");
+            retObjectIsAsync = classInstance.Get("IsAsync");
+            return (boolean)retObjectIsAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAsync != null ? retObjectIsAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,9 +355,13 @@ public class LogicalMethodInfo extends NetObject  {
 
     public boolean getIsVoid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVoid = null;
         try {
-            return (boolean)classInstance.Get("IsVoid");
+            retObjectIsVoid = classInstance.Get("IsVoid");
+            return (boolean)retObjectIsVoid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsVoid != null ? retObjectIsVoid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +369,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public ICustomAttributeProvider getCustomAttributeProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomAttributeProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomAttributeProvider");
+            retObjectCustomAttributeProvider = classInstance.Get("CustomAttributeProvider");
+            JCObject val = (JCObject)retObjectCustomAttributeProvider;
             return new ICustomAttributeProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomAttributeProvider != null ? retObjectCustomAttributeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +384,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public ICustomAttributeProvider getReturnTypeCustomAttributeProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnTypeCustomAttributeProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnTypeCustomAttributeProvider");
+            retObjectReturnTypeCustomAttributeProvider = classInstance.Get("ReturnTypeCustomAttributeProvider");
+            JCObject val = (JCObject)retObjectReturnTypeCustomAttributeProvider;
             return new ICustomAttributeProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnTypeCustomAttributeProvider != null ? retObjectReturnTypeCustomAttributeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +399,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public MethodInfo getBeginMethodInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginMethodInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BeginMethodInfo");
+            retObjectBeginMethodInfo = classInstance.Get("BeginMethodInfo");
+            JCObject val = (JCObject)retObjectBeginMethodInfo;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginMethodInfo != null ? retObjectBeginMethodInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +414,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public MethodInfo getEndMethodInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndMethodInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndMethodInfo");
+            retObjectEndMethodInfo = classInstance.Get("EndMethodInfo");
+            JCObject val = (JCObject)retObjectEndMethodInfo;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndMethodInfo != null ? retObjectEndMethodInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +429,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public MethodInfo getMethodInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodInfo");
+            retObjectMethodInfo = classInstance.Get("MethodInfo");
+            JCObject val = (JCObject)retObjectMethodInfo;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodInfo != null ? retObjectMethodInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +444,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public ParameterInfo getAsyncCallbackParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncCallbackParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncCallbackParameter");
+            retObjectAsyncCallbackParameter = classInstance.Get("AsyncCallbackParameter");
+            JCObject val = (JCObject)retObjectAsyncCallbackParameter;
             return new ParameterInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncCallbackParameter != null ? retObjectAsyncCallbackParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,10 +459,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public ParameterInfo getAsyncResultParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncResultParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncResultParameter");
+            retObjectAsyncResultParameter = classInstance.Get("AsyncResultParameter");
+            JCObject val = (JCObject)retObjectAsyncResultParameter;
             return new ParameterInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncResultParameter != null ? retObjectAsyncResultParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +474,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public ParameterInfo getAsyncStateParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncStateParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncStateParameter");
+            retObjectAsyncStateParameter = classInstance.Get("AsyncStateParameter");
+            JCObject val = (JCObject)retObjectAsyncStateParameter;
             return new ParameterInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncStateParameter != null ? retObjectAsyncStateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,16 +489,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public final ParameterInfo[] getInParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInParameters = null;
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InParameters");
+            retObjectInParameters = classInstance.Get("InParameters");
+            JCObject resultingObjects = (JCObject)retObjectInParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInParameters != null ? retObjectInParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,16 +510,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public final ParameterInfo[] getOutParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutParameters = null;
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutParameters");
+            retObjectOutParameters = classInstance.Get("OutParameters");
+            JCObject resultingObjects = (JCObject)retObjectOutParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutParameters != null ? retObjectOutParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,16 +531,20 @@ public class LogicalMethodInfo extends NetObject  {
 
     public final ParameterInfo[] getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject resultingObjects = (JCObject)retObjectParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,9 +552,13 @@ public class LogicalMethodInfo extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,10 +566,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public NetType getDeclaringType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaringType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaringType");
+            retObjectDeclaringType = classInstance.Get("DeclaringType");
+            JCObject val = (JCObject)retObjectDeclaringType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaringType != null ? retObjectDeclaringType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,10 +581,14 @@ public class LogicalMethodInfo extends NetObject  {
 
     public NetType getReturnType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            retObjectReturnType = classInstance.Get("ReturnType");
+            JCObject val = (JCObject)retObjectReturnType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnType != null ? retObjectReturnType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

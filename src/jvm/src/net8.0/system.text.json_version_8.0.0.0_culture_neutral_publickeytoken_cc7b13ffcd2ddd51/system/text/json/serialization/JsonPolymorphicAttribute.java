@@ -167,9 +167,13 @@ public class JsonPolymorphicAttribute extends JsonAttribute  {
     
     public boolean getIgnoreUnrecognizedTypeDiscriminators() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreUnrecognizedTypeDiscriminators = null;
         try {
-            return (boolean)classInstance.Get("IgnoreUnrecognizedTypeDiscriminators");
+            retObjectIgnoreUnrecognizedTypeDiscriminators = classInstance.Get("IgnoreUnrecognizedTypeDiscriminators");
+            return (boolean)retObjectIgnoreUnrecognizedTypeDiscriminators;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreUnrecognizedTypeDiscriminators != null ? retObjectIgnoreUnrecognizedTypeDiscriminators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class JsonPolymorphicAttribute extends JsonAttribute  {
 
     public void setIgnoreUnrecognizedTypeDiscriminators(boolean IgnoreUnrecognizedTypeDiscriminators) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreUnrecognizedTypeDiscriminators", IgnoreUnrecognizedTypeDiscriminators);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class JsonPolymorphicAttribute extends JsonAttribute  {
 
     public java.lang.String getTypeDiscriminatorPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeDiscriminatorPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeDiscriminatorPropertyName");
+            retObjectTypeDiscriminatorPropertyName = classInstance.Get("TypeDiscriminatorPropertyName");
+            return (java.lang.String)retObjectTypeDiscriminatorPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeDiscriminatorPropertyName != null ? retObjectTypeDiscriminatorPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class JsonPolymorphicAttribute extends JsonAttribute  {
 
     public void setTypeDiscriminatorPropertyName(java.lang.String TypeDiscriminatorPropertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeDiscriminatorPropertyName", TypeDiscriminatorPropertyName);
         } catch (JCNativeException jcne) {
@@ -207,10 +215,14 @@ public class JsonPolymorphicAttribute extends JsonAttribute  {
 
     public JsonUnknownDerivedTypeHandling getUnknownDerivedTypeHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnknownDerivedTypeHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnknownDerivedTypeHandling");
+            retObjectUnknownDerivedTypeHandling = classInstance.Get("UnknownDerivedTypeHandling");
+            JCObject val = (JCObject)retObjectUnknownDerivedTypeHandling;
             return new JsonUnknownDerivedTypeHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnknownDerivedTypeHandling != null ? retObjectUnknownDerivedTypeHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class JsonPolymorphicAttribute extends JsonAttribute  {
 
     public void setUnknownDerivedTypeHandling(JsonUnknownDerivedTypeHandling UnknownDerivedTypeHandling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnknownDerivedTypeHandling", UnknownDerivedTypeHandling == null ? null : UnknownDerivedTypeHandling.getJCOInstance());
         } catch (JCNativeException jcne) {

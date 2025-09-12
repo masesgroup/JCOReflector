@@ -202,9 +202,13 @@ public class UIPermission extends CodeAccessPermission  {
     
     public boolean IsSubsetOf(IPermission target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSubsetOf = null;
         try {
-            return (boolean)classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
+            retObjectIsSubsetOf = classInstance.Invoke("IsSubsetOf", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectIsSubsetOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSubsetOf != null ? retObjectIsSubsetOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +216,13 @@ public class UIPermission extends CodeAccessPermission  {
 
     public boolean IsUnrestricted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUnrestricted = null;
         try {
-            return (boolean)classInstance.Invoke("IsUnrestricted");
+            retObjectIsUnrestricted = classInstance.Invoke("IsUnrestricted");
+            return (boolean)retObjectIsUnrestricted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUnrestricted != null ? retObjectIsUnrestricted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +230,14 @@ public class UIPermission extends CodeAccessPermission  {
 
     public IPermission Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new IPermissionImplementation(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +245,14 @@ public class UIPermission extends CodeAccessPermission  {
 
     public IPermission Intersect(IPermission target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersect = null;
         try {
-            JCObject objIntersect = (JCObject)classInstance.Invoke("Intersect", target == null ? null : target.getJCOInstance());
+            retObjectIntersect = classInstance.Invoke("Intersect", target == null ? null : target.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
             return new IPermissionImplementation(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +260,14 @@ public class UIPermission extends CodeAccessPermission  {
 
     public IPermission Union(IPermission target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnion = null;
         try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", target == null ? null : target.getJCOInstance());
+            retObjectUnion = classInstance.Invoke("Union", target == null ? null : target.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
             return new IPermissionImplementation(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +275,14 @@ public class UIPermission extends CodeAccessPermission  {
 
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class UIPermission extends CodeAccessPermission  {
 
     public void FromXml(SecurityElement esd) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", esd == null ? null : esd.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,10 +304,14 @@ public class UIPermission extends CodeAccessPermission  {
     
     public UIPermissionClipboard getClipboard() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipboard = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clipboard");
+            retObjectClipboard = classInstance.Get("Clipboard");
+            JCObject val = (JCObject)retObjectClipboard;
             return new UIPermissionClipboard(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipboard != null ? retObjectClipboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +319,7 @@ public class UIPermission extends CodeAccessPermission  {
 
     public void setClipboard(UIPermissionClipboard Clipboard) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clipboard", Clipboard == null ? null : Clipboard.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -301,10 +329,14 @@ public class UIPermission extends CodeAccessPermission  {
 
     public UIPermissionWindow getWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Window");
+            retObjectWindow = classInstance.Get("Window");
+            JCObject val = (JCObject)retObjectWindow;
             return new UIPermissionWindow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindow != null ? retObjectWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +344,7 @@ public class UIPermission extends CodeAccessPermission  {
 
     public void setWindow(UIPermissionWindow Window) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Window", Window == null ? null : Window.getJCOInstance());
         } catch (JCNativeException jcne) {

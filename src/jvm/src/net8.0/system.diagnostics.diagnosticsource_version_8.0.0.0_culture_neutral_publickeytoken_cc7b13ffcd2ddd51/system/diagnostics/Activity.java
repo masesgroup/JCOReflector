@@ -177,10 +177,14 @@ public class Activity extends NetObject implements AutoCloseable {
     
     public Activity AddBaggage(java.lang.String key, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddBaggage = null;
         try {
-            JCObject objAddBaggage = (JCObject)classInstance.Invoke("AddBaggage", key, value);
+            retObjectAddBaggage = classInstance.Invoke("AddBaggage", key, value);
+            JCObject objAddBaggage = (JCObject)retObjectAddBaggage;
             return new Activity(objAddBaggage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddBaggage != null ? retObjectAddBaggage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity AddEvent(ActivityEvent e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddEvent = null;
         try {
-            JCObject objAddEvent = (JCObject)classInstance.Invoke("AddEvent", e == null ? null : e.getJCOInstance());
+            retObjectAddEvent = classInstance.Invoke("AddEvent", e == null ? null : e.getJCOInstance());
+            JCObject objAddEvent = (JCObject)retObjectAddEvent;
             return new Activity(objAddEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddEvent != null ? retObjectAddEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +207,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity AddTag(java.lang.String key, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddTag = null;
         try {
-            JCObject objAddTag = (JCObject)classInstance.Invoke("AddTag", key, value == null ? null : value.getJCOInstance());
+            retObjectAddTag = classInstance.Invoke("AddTag", key, value == null ? null : value.getJCOInstance());
+            JCObject objAddTag = (JCObject)retObjectAddTag;
             return new Activity(objAddTag);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddTag != null ? retObjectAddTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +222,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity AddTag(java.lang.String key, java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddTag = null;
         try {
-            JCObject objAddTag = (JCObject)classInstance.Invoke("AddTag", key, value);
+            retObjectAddTag = classInstance.Invoke("AddTag", key, value);
+            JCObject objAddTag = (JCObject)retObjectAddTag;
             return new Activity(objAddTag);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddTag != null ? retObjectAddTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +237,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetBaggage(java.lang.String key, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetBaggage = null;
         try {
-            JCObject objSetBaggage = (JCObject)classInstance.Invoke("SetBaggage", key, value);
+            retObjectSetBaggage = classInstance.Invoke("SetBaggage", key, value);
+            JCObject objSetBaggage = (JCObject)retObjectSetBaggage;
             return new Activity(objSetBaggage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetBaggage != null ? retObjectSetBaggage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +252,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetEndTime(DateTime endTimeUtc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetEndTime = null;
         try {
-            JCObject objSetEndTime = (JCObject)classInstance.Invoke("SetEndTime", endTimeUtc == null ? null : endTimeUtc.getJCOInstance());
+            retObjectSetEndTime = classInstance.Invoke("SetEndTime", endTimeUtc == null ? null : endTimeUtc.getJCOInstance());
+            JCObject objSetEndTime = (JCObject)retObjectSetEndTime;
             return new Activity(objSetEndTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetEndTime != null ? retObjectSetEndTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +267,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetIdFormat(ActivityIdFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetIdFormat = null;
         try {
-            JCObject objSetIdFormat = (JCObject)classInstance.Invoke("SetIdFormat", format == null ? null : format.getJCOInstance());
+            retObjectSetIdFormat = classInstance.Invoke("SetIdFormat", format == null ? null : format.getJCOInstance());
+            JCObject objSetIdFormat = (JCObject)retObjectSetIdFormat;
             return new Activity(objSetIdFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetIdFormat != null ? retObjectSetIdFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +282,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetParentId(ActivityTraceId traceId, ActivitySpanId spanId, ActivityTraceFlags activityTraceFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetParentId = null;
         try {
-            JCObject objSetParentId = (JCObject)classInstance.Invoke("SetParentId", traceId == null ? null : traceId.getJCOInstance(), spanId == null ? null : spanId.getJCOInstance(), activityTraceFlags == null ? null : activityTraceFlags.getJCOInstance());
+            retObjectSetParentId = classInstance.Invoke("SetParentId", traceId == null ? null : traceId.getJCOInstance(), spanId == null ? null : spanId.getJCOInstance(), activityTraceFlags == null ? null : activityTraceFlags.getJCOInstance());
+            JCObject objSetParentId = (JCObject)retObjectSetParentId;
             return new Activity(objSetParentId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetParentId != null ? retObjectSetParentId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +297,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetParentId(java.lang.String parentId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetParentId = null;
         try {
-            JCObject objSetParentId = (JCObject)classInstance.Invoke("SetParentId", parentId);
+            retObjectSetParentId = classInstance.Invoke("SetParentId", parentId);
+            JCObject objSetParentId = (JCObject)retObjectSetParentId;
             return new Activity(objSetParentId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetParentId != null ? retObjectSetParentId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +312,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetStartTime(DateTime startTimeUtc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetStartTime = null;
         try {
-            JCObject objSetStartTime = (JCObject)classInstance.Invoke("SetStartTime", startTimeUtc == null ? null : startTimeUtc.getJCOInstance());
+            retObjectSetStartTime = classInstance.Invoke("SetStartTime", startTimeUtc == null ? null : startTimeUtc.getJCOInstance());
+            JCObject objSetStartTime = (JCObject)retObjectSetStartTime;
             return new Activity(objSetStartTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetStartTime != null ? retObjectSetStartTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +327,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetStatus(ActivityStatusCode code, java.lang.String description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetStatus = null;
         try {
-            JCObject objSetStatus = (JCObject)classInstance.Invoke("SetStatus", code == null ? null : code.getJCOInstance(), description);
+            retObjectSetStatus = classInstance.Invoke("SetStatus", code == null ? null : code.getJCOInstance(), description);
+            JCObject objSetStatus = (JCObject)retObjectSetStatus;
             return new Activity(objSetStatus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetStatus != null ? retObjectSetStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +342,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity SetTag(java.lang.String key, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetTag = null;
         try {
-            JCObject objSetTag = (JCObject)classInstance.Invoke("SetTag", key, value == null ? null : value.getJCOInstance());
+            retObjectSetTag = classInstance.Invoke("SetTag", key, value == null ? null : value.getJCOInstance());
+            JCObject objSetTag = (JCObject)retObjectSetTag;
             return new Activity(objSetTag);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetTag != null ? retObjectSetTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +357,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity Start() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            JCObject objStart = (JCObject)classInstance.Invoke("Start");
+            retObjectStart = classInstance.Invoke("Start");
+            JCObject objStart = (JCObject)retObjectStart;
             return new Activity(objStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +372,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public NetObject GetCustomProperty(java.lang.String propertyName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomProperty = null;
         try {
-            JCObject objGetCustomProperty = (JCObject)classInstance.Invoke("GetCustomProperty", propertyName);
+            retObjectGetCustomProperty = classInstance.Invoke("GetCustomProperty", propertyName);
+            JCObject objGetCustomProperty = (JCObject)retObjectGetCustomProperty;
             return new NetObject(objGetCustomProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomProperty != null ? retObjectGetCustomProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +387,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public NetObject GetTagItem(java.lang.String key) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTagItem = null;
         try {
-            JCObject objGetTagItem = (JCObject)classInstance.Invoke("GetTagItem", key);
+            retObjectGetTagItem = classInstance.Invoke("GetTagItem", key);
+            JCObject objGetTagItem = (JCObject)retObjectGetTagItem;
             return new NetObject(objGetTagItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTagItem != null ? retObjectGetTagItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +402,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String GetBaggageItem(java.lang.String key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBaggageItem = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetBaggageItem", key);
+            retObjectGetBaggageItem = classInstance.Invoke("GetBaggageItem", key);
+            return (java.lang.String)retObjectGetBaggageItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetBaggageItem != null ? retObjectGetBaggageItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +416,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -362,7 +426,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void SetCustomProperty(java.lang.String propertyName, NetObject propertyValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomProperty", propertyName, propertyValue == null ? null : propertyValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,7 +436,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void Stop() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -383,7 +447,7 @@ public class Activity extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -399,9 +463,13 @@ public class Activity extends NetObject implements AutoCloseable {
     
     public static boolean getForceDefaultIdFormat() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForceDefaultIdFormat = null;
         try {
-            return (boolean)classType.Get("ForceDefaultIdFormat");
+            retObjectForceDefaultIdFormat = classType.Get("ForceDefaultIdFormat");
+            return (boolean)retObjectForceDefaultIdFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForceDefaultIdFormat != null ? retObjectForceDefaultIdFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,7 +477,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public static void setForceDefaultIdFormat(boolean ForceDefaultIdFormat) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ForceDefaultIdFormat", ForceDefaultIdFormat);
         } catch (JCNativeException jcne) {
@@ -419,9 +487,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public boolean getHasRemoteParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasRemoteParent = null;
         try {
-            return (boolean)classInstance.Get("HasRemoteParent");
+            retObjectHasRemoteParent = classInstance.Get("HasRemoteParent");
+            return (boolean)retObjectHasRemoteParent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasRemoteParent != null ? retObjectHasRemoteParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,7 +501,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setHasRemoteParent(boolean HasRemoteParent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasRemoteParent", HasRemoteParent);
         } catch (JCNativeException jcne) {
@@ -439,9 +511,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public boolean getIsAllDataRequested() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAllDataRequested = null;
         try {
-            return (boolean)classInstance.Get("IsAllDataRequested");
+            retObjectIsAllDataRequested = classInstance.Get("IsAllDataRequested");
+            return (boolean)retObjectIsAllDataRequested;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAllDataRequested != null ? retObjectIsAllDataRequested.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,7 +525,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setIsAllDataRequested(boolean IsAllDataRequested) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAllDataRequested", IsAllDataRequested);
         } catch (JCNativeException jcne) {
@@ -459,9 +535,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public boolean getIsStopped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStopped = null;
         try {
-            return (boolean)classInstance.Get("IsStopped");
+            retObjectIsStopped = classInstance.Get("IsStopped");
+            return (boolean)retObjectIsStopped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStopped != null ? retObjectIsStopped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +549,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setIsStopped(boolean IsStopped) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsStopped", IsStopped);
         } catch (JCNativeException jcne) {
@@ -479,9 +559,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public boolean getRecorded() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecorded = null;
         try {
-            return (boolean)classInstance.Get("Recorded");
+            retObjectRecorded = classInstance.Get("Recorded");
+            return (boolean)retObjectRecorded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRecorded != null ? retObjectRecorded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,10 +573,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public DateTime getStartTimeUtc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartTimeUtc");
+            retObjectStartTimeUtc = classInstance.Get("StartTimeUtc");
+            JCObject val = (JCObject)retObjectStartTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartTimeUtc != null ? retObjectStartTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +588,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setStartTimeUtc(DateTime StartTimeUtc) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartTimeUtc", StartTimeUtc == null ? null : StartTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -510,10 +598,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public static Activity getCurrent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +613,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public static void setCurrent(Activity Current) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -531,10 +623,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public Activity getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,7 +638,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setParent(Activity Parent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -552,10 +648,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivityContext getContext() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new ActivityContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,10 +663,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public static ActivityIdFormat getDefaultIdFormat() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIdFormat = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultIdFormat");
+            retObjectDefaultIdFormat = classType.Get("DefaultIdFormat");
+            JCObject val = (JCObject)retObjectDefaultIdFormat;
             return new ActivityIdFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIdFormat != null ? retObjectDefaultIdFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,7 +678,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public static void setDefaultIdFormat(ActivityIdFormat DefaultIdFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultIdFormat", DefaultIdFormat == null ? null : DefaultIdFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -584,10 +688,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivityIdFormat getIdFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdFormat");
+            retObjectIdFormat = classInstance.Get("IdFormat");
+            JCObject val = (JCObject)retObjectIdFormat;
             return new ActivityIdFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdFormat != null ? retObjectIdFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,7 +703,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setIdFormat(ActivityIdFormat IdFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdFormat", IdFormat == null ? null : IdFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -605,10 +713,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivityKind getKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Kind");
+            retObjectKind = classInstance.Get("Kind");
+            JCObject val = (JCObject)retObjectKind;
             return new ActivityKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKind != null ? retObjectKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,7 +728,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setKind(ActivityKind Kind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Kind", Kind == null ? null : Kind.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -626,10 +738,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivitySource getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new ActivitySource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,7 +753,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setSource(ActivitySource Source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -647,10 +763,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivitySpanId getParentSpanId() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentSpanId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentSpanId");
+            retObjectParentSpanId = classInstance.Get("ParentSpanId");
+            JCObject val = (JCObject)retObjectParentSpanId;
             return new ActivitySpanId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentSpanId != null ? retObjectParentSpanId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,10 +778,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivitySpanId getSpanId() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpanId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpanId");
+            retObjectSpanId = classInstance.Get("SpanId");
+            JCObject val = (JCObject)retObjectSpanId;
             return new ActivitySpanId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpanId != null ? retObjectSpanId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -669,10 +793,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivityStatusCode getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new ActivityStatusCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,10 +808,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivityTraceFlags getActivityTraceFlags() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityTraceFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityTraceFlags");
+            retObjectActivityTraceFlags = classInstance.Get("ActivityTraceFlags");
+            JCObject val = (JCObject)retObjectActivityTraceFlags;
             return new ActivityTraceFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityTraceFlags != null ? retObjectActivityTraceFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -691,7 +823,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setActivityTraceFlags(ActivityTraceFlags ActivityTraceFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityTraceFlags", ActivityTraceFlags == null ? null : ActivityTraceFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -701,10 +833,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public ActivityTraceId getTraceId() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TraceId");
+            retObjectTraceId = classInstance.Get("TraceId");
+            JCObject val = (JCObject)retObjectTraceId;
             return new ActivityTraceId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceId != null ? retObjectTraceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,9 +848,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -722,7 +862,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -732,9 +872,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String getId() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -742,9 +886,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String getOperationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationName = null;
         try {
-            return (java.lang.String)classInstance.Get("OperationName");
+            retObjectOperationName = classInstance.Get("OperationName");
+            return (java.lang.String)retObjectOperationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOperationName != null ? retObjectOperationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -752,9 +900,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String getParentId() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentId = null;
         try {
-            return (java.lang.String)classInstance.Get("ParentId");
+            retObjectParentId = classInstance.Get("ParentId");
+            return (java.lang.String)retObjectParentId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParentId != null ? retObjectParentId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -762,9 +914,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String getRootId() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootId = null;
         try {
-            return (java.lang.String)classInstance.Get("RootId");
+            retObjectRootId = classInstance.Get("RootId");
+            return (java.lang.String)retObjectRootId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootId != null ? retObjectRootId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -772,9 +928,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String getStatusDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("StatusDescription");
+            retObjectStatusDescription = classInstance.Get("StatusDescription");
+            return (java.lang.String)retObjectStatusDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStatusDescription != null ? retObjectStatusDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -782,9 +942,13 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public java.lang.String getTraceStateString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceStateString = null;
         try {
-            return (java.lang.String)classInstance.Get("TraceStateString");
+            retObjectTraceStateString = classInstance.Get("TraceStateString");
+            return (java.lang.String)retObjectTraceStateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTraceStateString != null ? retObjectTraceStateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -792,7 +956,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setTraceStateString(java.lang.String TraceStateString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TraceStateString", TraceStateString);
         } catch (JCNativeException jcne) {
@@ -802,10 +966,14 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public TimeSpan getDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Duration");
+            retObjectDuration = classInstance.Get("Duration");
+            JCObject val = (JCObject)retObjectDuration;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuration != null ? retObjectDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -813,7 +981,7 @@ public class Activity extends NetObject implements AutoCloseable {
 
     public void setDuration(TimeSpan Duration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Duration", Duration == null ? null : Duration.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -174,7 +174,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
      */
     @Deprecated 
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -183,7 +183,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
      */
     @Deprecated 
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -192,7 +192,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
      */
     @Deprecated 
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -201,7 +201,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
      */
     @Deprecated 
     public void Validate(OperationDescription operationDescription) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
 
@@ -210,9 +210,13 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
     
     public boolean getAutoDisposeParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoDisposeParameters = null;
         try {
-            return (boolean)classInstance.Get("AutoDisposeParameters");
+            retObjectAutoDisposeParameters = classInstance.Get("AutoDisposeParameters");
+            return (boolean)retObjectAutoDisposeParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoDisposeParameters != null ? retObjectAutoDisposeParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +224,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public void setAutoDisposeParameters(boolean AutoDisposeParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoDisposeParameters", AutoDisposeParameters);
         } catch (JCNativeException jcne) {
@@ -230,9 +234,13 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public boolean getTransactionAutoComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionAutoComplete = null;
         try {
-            return (boolean)classInstance.Get("TransactionAutoComplete");
+            retObjectTransactionAutoComplete = classInstance.Get("TransactionAutoComplete");
+            return (boolean)retObjectTransactionAutoComplete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransactionAutoComplete != null ? retObjectTransactionAutoComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +248,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public void setTransactionAutoComplete(boolean TransactionAutoComplete) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionAutoComplete", TransactionAutoComplete);
         } catch (JCNativeException jcne) {
@@ -250,9 +258,13 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public boolean getTransactionScopeRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionScopeRequired = null;
         try {
-            return (boolean)classInstance.Get("TransactionScopeRequired");
+            retObjectTransactionScopeRequired = classInstance.Get("TransactionScopeRequired");
+            return (boolean)retObjectTransactionScopeRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransactionScopeRequired != null ? retObjectTransactionScopeRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +272,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public void setTransactionScopeRequired(boolean TransactionScopeRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionScopeRequired", TransactionScopeRequired);
         } catch (JCNativeException jcne) {
@@ -270,10 +282,14 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public ImpersonationOption getImpersonation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Impersonation");
+            retObjectImpersonation = classInstance.Get("Impersonation");
+            JCObject val = (JCObject)retObjectImpersonation;
             return new ImpersonationOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonation != null ? retObjectImpersonation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +297,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public void setImpersonation(ImpersonationOption Impersonation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Impersonation", Impersonation == null ? null : Impersonation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,10 +307,14 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public ReleaseInstanceMode getReleaseInstanceMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReleaseInstanceMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReleaseInstanceMode");
+            retObjectReleaseInstanceMode = classInstance.Get("ReleaseInstanceMode");
+            JCObject val = (JCObject)retObjectReleaseInstanceMode;
             return new ReleaseInstanceMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReleaseInstanceMode != null ? retObjectReleaseInstanceMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +322,7 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
 
     public void setReleaseInstanceMode(ReleaseInstanceMode ReleaseInstanceMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReleaseInstanceMode", ReleaseInstanceMode == null ? null : ReleaseInstanceMode.getJCOInstance());
         } catch (JCNativeException jcne) {

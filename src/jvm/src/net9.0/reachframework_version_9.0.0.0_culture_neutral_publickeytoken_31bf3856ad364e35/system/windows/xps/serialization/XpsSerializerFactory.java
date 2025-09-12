@@ -164,10 +164,14 @@ public class XpsSerializerFactory extends NetObject  {
     
     public SerializerWriter CreateSerializerWriter(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSerializerWriter = null;
         try {
-            JCObject objCreateSerializerWriter = (JCObject)classInstance.Invoke("CreateSerializerWriter", stream == null ? null : stream.getJCOInstance());
+            retObjectCreateSerializerWriter = classInstance.Invoke("CreateSerializerWriter", stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateSerializerWriter = (JCObject)retObjectCreateSerializerWriter;
             return new SerializerWriter(objCreateSerializerWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSerializerWriter != null ? retObjectCreateSerializerWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class XpsSerializerFactory extends NetObject  {
     
     public java.lang.String getDefaultFileExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultFileExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultFileExtension");
+            retObjectDefaultFileExtension = classInstance.Get("DefaultFileExtension");
+            return (java.lang.String)retObjectDefaultFileExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultFileExtension != null ? retObjectDefaultFileExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class XpsSerializerFactory extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +211,13 @@ public class XpsSerializerFactory extends NetObject  {
 
     public java.lang.String getManufacturerName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManufacturerName = null;
         try {
-            return (java.lang.String)classInstance.Get("ManufacturerName");
+            retObjectManufacturerName = classInstance.Get("ManufacturerName");
+            return (java.lang.String)retObjectManufacturerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectManufacturerName != null ? retObjectManufacturerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +225,14 @@ public class XpsSerializerFactory extends NetObject  {
 
     public Uri getManufacturerWebsite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManufacturerWebsite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManufacturerWebsite");
+            retObjectManufacturerWebsite = classInstance.Get("ManufacturerWebsite");
+            JCObject val = (JCObject)retObjectManufacturerWebsite;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManufacturerWebsite != null ? retObjectManufacturerWebsite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

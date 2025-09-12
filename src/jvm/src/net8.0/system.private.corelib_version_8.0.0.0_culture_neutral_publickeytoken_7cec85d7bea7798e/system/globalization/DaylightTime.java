@@ -171,10 +171,14 @@ public class DaylightTime extends NetObject  {
     
     public DateTime getEnd() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("End");
+            retObjectEnd = classInstance.Get("End");
+            JCObject val = (JCObject)retObjectEnd;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnd != null ? retObjectEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class DaylightTime extends NetObject  {
 
     public DateTime getStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Start");
+            retObjectStart = classInstance.Get("Start");
+            JCObject val = (JCObject)retObjectStart;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class DaylightTime extends NetObject  {
 
     public TimeSpan getDelta() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelta = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Delta");
+            retObjectDelta = classInstance.Get("Delta");
+            JCObject val = (JCObject)retObjectDelta;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelta != null ? retObjectDelta.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -176,9 +176,13 @@ public class QuestionEventArgs extends EventArgs  {
     
     public boolean getResponse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponse = null;
         try {
-            return (boolean)classInstance.Get("Response");
+            retObjectResponse = classInstance.Get("Response");
+            return (boolean)retObjectResponse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResponse != null ? retObjectResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class QuestionEventArgs extends EventArgs  {
 
     public void setResponse(boolean Response) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Response", Response);
         } catch (JCNativeException jcne) {

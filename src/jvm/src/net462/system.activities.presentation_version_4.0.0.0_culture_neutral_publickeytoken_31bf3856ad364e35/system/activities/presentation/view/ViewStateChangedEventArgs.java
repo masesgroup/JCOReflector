@@ -171,10 +171,14 @@ public class ViewStateChangedEventArgs extends EventArgs  {
     
     public ModelItem getParentModelItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentModelItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentModelItem");
+            retObjectParentModelItem = classInstance.Get("ParentModelItem");
+            JCObject val = (JCObject)retObjectParentModelItem;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentModelItem != null ? retObjectParentModelItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ViewStateChangedEventArgs extends EventArgs  {
 
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewValue");
+            retObjectNewValue = classInstance.Get("NewValue");
+            JCObject val = (JCObject)retObjectNewValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewValue != null ? retObjectNewValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class ViewStateChangedEventArgs extends EventArgs  {
 
     public NetObject getOldValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldValue");
+            retObjectOldValue = classInstance.Get("OldValue");
+            JCObject val = (JCObject)retObjectOldValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldValue != null ? retObjectOldValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +216,13 @@ public class ViewStateChangedEventArgs extends EventArgs  {
 
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            return (java.lang.String)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            return (java.lang.String)retObjectKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

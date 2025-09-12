@@ -171,10 +171,14 @@ public class CompiledExpressionInvoker extends NetObject  {
     
     public static NetObject GetCompiledExpressionRoot(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledExpressionRoot = null;
         try {
-            JCObject objGetCompiledExpressionRoot = (JCObject)classType.Invoke("GetCompiledExpressionRoot", target == null ? null : target.getJCOInstance());
+            retObjectGetCompiledExpressionRoot = classType.Invoke("GetCompiledExpressionRoot", target == null ? null : target.getJCOInstance());
+            JCObject objGetCompiledExpressionRoot = (JCObject)retObjectGetCompiledExpressionRoot;
             return new NetObject(objGetCompiledExpressionRoot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompiledExpressionRoot != null ? retObjectGetCompiledExpressionRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class CompiledExpressionInvoker extends NetObject  {
 
     public static NetObject GetCompiledExpressionRootForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledExpressionRootForImplementation = null;
         try {
-            JCObject objGetCompiledExpressionRootForImplementation = (JCObject)classType.Invoke("GetCompiledExpressionRootForImplementation", target == null ? null : target.getJCOInstance());
+            retObjectGetCompiledExpressionRootForImplementation = classType.Invoke("GetCompiledExpressionRootForImplementation", target == null ? null : target.getJCOInstance());
+            JCObject objGetCompiledExpressionRootForImplementation = (JCObject)retObjectGetCompiledExpressionRootForImplementation;
             return new NetObject(objGetCompiledExpressionRootForImplementation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompiledExpressionRootForImplementation != null ? retObjectGetCompiledExpressionRootForImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class CompiledExpressionInvoker extends NetObject  {
 
     public NetObject InvokeExpression(ActivityContext activityContext) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeExpression = null;
         try {
-            JCObject objInvokeExpression = (JCObject)classInstance.Invoke("InvokeExpression", activityContext == null ? null : activityContext.getJCOInstance());
+            retObjectInvokeExpression = classInstance.Invoke("InvokeExpression", activityContext == null ? null : activityContext.getJCOInstance());
+            JCObject objInvokeExpression = (JCObject)retObjectInvokeExpression;
             return new NetObject(objInvokeExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeExpression != null ? retObjectInvokeExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +216,7 @@ public class CompiledExpressionInvoker extends NetObject  {
 
     public static void SetCompiledExpressionRoot(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCompiledExpressionRoot", target == null ? null : target.getJCOInstance(), compiledExpressionRoot == null ? null : compiledExpressionRoot.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +226,7 @@ public class CompiledExpressionInvoker extends NetObject  {
 
     public static void SetCompiledExpressionRootForImplementation(NetObject target, ICompiledExpressionRoot compiledExpressionRoot) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCompiledExpressionRootForImplementation", target == null ? null : target.getJCOInstance(), compiledExpressionRoot == null ? null : compiledExpressionRoot.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class CompiledExpressionInvoker extends NetObject  {
     
     public boolean getIsStaticallyCompiled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStaticallyCompiled = null;
         try {
-            return (boolean)classInstance.Get("IsStaticallyCompiled");
+            retObjectIsStaticallyCompiled = classInstance.Get("IsStaticallyCompiled");
+            return (boolean)retObjectIsStaticallyCompiled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStaticallyCompiled != null ? retObjectIsStaticallyCompiled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class CompiledExpressionInvoker extends NetObject  {
 
     public void setIsStaticallyCompiled(boolean IsStaticallyCompiled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsStaticallyCompiled", IsStaticallyCompiled);
         } catch (JCNativeException jcne) {

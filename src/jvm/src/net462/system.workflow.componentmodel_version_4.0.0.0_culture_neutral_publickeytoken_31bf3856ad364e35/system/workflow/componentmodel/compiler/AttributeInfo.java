@@ -158,10 +158,14 @@ public class AttributeInfo extends NetObject  {
     
     public Attribute CreateAttribute() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateAttribute = null;
         try {
-            JCObject objCreateAttribute = (JCObject)classInstance.Invoke("CreateAttribute");
+            retObjectCreateAttribute = classInstance.Invoke("CreateAttribute");
+            JCObject objCreateAttribute = (JCObject)retObjectCreateAttribute;
             return new Attribute(objCreateAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAttribute != null ? retObjectCreateAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class AttributeInfo extends NetObject  {
 
     public NetObject GetArgumentValueAs(IServiceProvider serviceProvider, int argumentIndex, NetType requestedType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArgumentValueAs = null;
         try {
-            JCObject objGetArgumentValueAs = (JCObject)classInstance.Invoke("GetArgumentValueAs", serviceProvider == null ? null : serviceProvider.getJCOInstance(), argumentIndex, requestedType == null ? null : requestedType.getJCOInstance());
+            retObjectGetArgumentValueAs = classInstance.Invoke("GetArgumentValueAs", serviceProvider == null ? null : serviceProvider.getJCOInstance(), argumentIndex, requestedType == null ? null : requestedType.getJCOInstance());
+            JCObject objGetArgumentValueAs = (JCObject)retObjectGetArgumentValueAs;
             return new NetObject(objGetArgumentValueAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArgumentValueAs != null ? retObjectGetArgumentValueAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class AttributeInfo extends NetObject  {
     
     public boolean getCreatable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatable = null;
         try {
-            return (boolean)classInstance.Get("Creatable");
+            retObjectCreatable = classInstance.Get("Creatable");
+            return (boolean)retObjectCreatable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreatable != null ? retObjectCreatable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class AttributeInfo extends NetObject  {
 
     public NetType getAttributeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AttributeType");
+            retObjectAttributeType = classInstance.Get("AttributeType");
+            JCObject val = (JCObject)retObjectAttributeType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeType != null ? retObjectAttributeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

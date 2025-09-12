@@ -154,9 +154,19 @@ public class Buffer extends NetObject  {
     
     public static byte GetByte(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classType.Invoke("GetByte", array == null ? null : array.getJCOInstance(), index);
+            retObjectGetByte = classType.Invoke("GetByte", array == null ? null : array.getJCOInstance(), index);
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +174,19 @@ public class Buffer extends NetObject  {
 
     public static int ByteLength(Array array) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectByteLength = null;
         try {
-            return (int)classType.Invoke("ByteLength", array == null ? null : array.getJCOInstance());
+            retObjectByteLength = classType.Invoke("ByteLength", array == null ? null : array.getJCOInstance());
+            return (int)retObjectByteLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectByteLengthNumber = (java.lang.Number)retObjectByteLength;
+                return retObjectByteLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectByteLength != null ? retObjectByteLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +194,7 @@ public class Buffer extends NetObject  {
 
     public static void BlockCopy(Array src, int srcOffset, Array dst, int dstOffset, int count) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("BlockCopy", src == null ? null : src.getJCOInstance(), srcOffset, dst == null ? null : dst.getJCOInstance(), dstOffset, count);
         } catch (JCNativeException jcne) {
@@ -184,7 +204,7 @@ public class Buffer extends NetObject  {
 
     public static void SetByte(Array array, int index, byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetByte", array == null ? null : array.getJCOInstance(), index, value);
         } catch (JCNativeException jcne) {

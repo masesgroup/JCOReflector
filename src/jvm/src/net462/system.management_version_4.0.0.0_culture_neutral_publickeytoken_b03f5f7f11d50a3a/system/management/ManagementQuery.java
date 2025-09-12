@@ -153,10 +153,14 @@ public class ManagementQuery extends NetObject  {
     
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class ManagementQuery extends NetObject  {
     
     public java.lang.String getQueryLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("QueryLanguage");
+            retObjectQueryLanguage = classInstance.Get("QueryLanguage");
+            return (java.lang.String)retObjectQueryLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQueryLanguage != null ? retObjectQueryLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class ManagementQuery extends NetObject  {
 
     public void setQueryLanguage(java.lang.String QueryLanguage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueryLanguage", QueryLanguage);
         } catch (JCNativeException jcne) {
@@ -188,9 +196,13 @@ public class ManagementQuery extends NetObject  {
 
     public java.lang.String getQueryString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryString = null;
         try {
-            return (java.lang.String)classInstance.Get("QueryString");
+            retObjectQueryString = classInstance.Get("QueryString");
+            return (java.lang.String)retObjectQueryString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQueryString != null ? retObjectQueryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +210,7 @@ public class ManagementQuery extends NetObject  {
 
     public void setQueryString(java.lang.String QueryString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueryString", QueryString);
         } catch (JCNativeException jcne) {

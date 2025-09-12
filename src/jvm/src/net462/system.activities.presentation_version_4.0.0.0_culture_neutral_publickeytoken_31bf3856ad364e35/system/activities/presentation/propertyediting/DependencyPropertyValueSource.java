@@ -161,9 +161,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
     
     public boolean getIsCustomMarkupExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCustomMarkupExtension = null;
         try {
-            return (boolean)classInstance.Get("IsCustomMarkupExtension");
+            retObjectIsCustomMarkupExtension = classInstance.Get("IsCustomMarkupExtension");
+            return (boolean)retObjectIsCustomMarkupExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCustomMarkupExtension != null ? retObjectIsCustomMarkupExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsDataBound() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDataBound = null;
         try {
-            return (boolean)classInstance.Get("IsDataBound");
+            retObjectIsDataBound = classInstance.Get("IsDataBound");
+            return (boolean)retObjectIsDataBound;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDataBound != null ? retObjectIsDataBound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsDefaultValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultValue = null;
         try {
-            return (boolean)classInstance.Get("IsDefaultValue");
+            retObjectIsDefaultValue = classInstance.Get("IsDefaultValue");
+            return (boolean)retObjectIsDefaultValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefaultValue != null ? retObjectIsDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExpression = null;
         try {
-            return (boolean)classInstance.Get("IsExpression");
+            retObjectIsExpression = classInstance.Get("IsExpression");
+            return (boolean)retObjectIsExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExpression != null ? retObjectIsExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInherited = null;
         try {
-            return (boolean)classInstance.Get("IsInherited");
+            retObjectIsInherited = classInstance.Get("IsInherited");
+            return (boolean)retObjectIsInherited;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInherited != null ? retObjectIsInherited.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +231,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsLocal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocal = null;
         try {
-            return (boolean)classInstance.Get("IsLocal");
+            retObjectIsLocal = classInstance.Get("IsLocal");
+            return (boolean)retObjectIsLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLocal != null ? retObjectIsLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +245,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsLocalResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocalResource = null;
         try {
-            return (boolean)classInstance.Get("IsLocalResource");
+            retObjectIsLocalResource = classInstance.Get("IsLocalResource");
+            return (boolean)retObjectIsLocalResource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLocalResource != null ? retObjectIsLocalResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +259,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsResource = null;
         try {
-            return (boolean)classInstance.Get("IsResource");
+            retObjectIsResource = classInstance.Get("IsResource");
+            return (boolean)retObjectIsResource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsResource != null ? retObjectIsResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +273,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsSystemResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSystemResource = null;
         try {
-            return (boolean)classInstance.Get("IsSystemResource");
+            retObjectIsSystemResource = classInstance.Get("IsSystemResource");
+            return (boolean)retObjectIsSystemResource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSystemResource != null ? retObjectIsSystemResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +287,13 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public boolean getIsTemplateBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTemplateBinding = null;
         try {
-            return (boolean)classInstance.Get("IsTemplateBinding");
+            retObjectIsTemplateBinding = classInstance.Get("IsTemplateBinding");
+            return (boolean)retObjectIsTemplateBinding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTemplateBinding != null ? retObjectIsTemplateBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +301,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getCustomMarkupExtension() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCustomMarkupExtension = null;
         try {
-            JCObject val = (JCObject)classType.Get("CustomMarkupExtension");
+            retObjectCustomMarkupExtension = classType.Get("CustomMarkupExtension");
+            JCObject val = (JCObject)retObjectCustomMarkupExtension;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomMarkupExtension != null ? retObjectCustomMarkupExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +316,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getDataBound() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDataBound = null;
         try {
-            JCObject val = (JCObject)classType.Get("DataBound");
+            retObjectDataBound = classType.Get("DataBound");
+            JCObject val = (JCObject)retObjectDataBound;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBound != null ? retObjectDataBound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +331,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getDefaultValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultValue");
+            retObjectDefaultValue = classType.Get("DefaultValue");
+            JCObject val = (JCObject)retObjectDefaultValue;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +346,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getInherited() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInherited = null;
         try {
-            JCObject val = (JCObject)classType.Get("Inherited");
+            retObjectInherited = classType.Get("Inherited");
+            JCObject val = (JCObject)retObjectInherited;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInherited != null ? retObjectInherited.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +361,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getLocal() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocal = null;
         try {
-            JCObject val = (JCObject)classType.Get("Local");
+            retObjectLocal = classType.Get("Local");
+            JCObject val = (JCObject)retObjectLocal;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocal != null ? retObjectLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +376,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getLocalDynamicResource() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalDynamicResource = null;
         try {
-            JCObject val = (JCObject)classType.Get("LocalDynamicResource");
+            retObjectLocalDynamicResource = classType.Get("LocalDynamicResource");
+            JCObject val = (JCObject)retObjectLocalDynamicResource;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalDynamicResource != null ? retObjectLocalDynamicResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +391,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getLocalStaticResource() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocalStaticResource = null;
         try {
-            JCObject val = (JCObject)classType.Get("LocalStaticResource");
+            retObjectLocalStaticResource = classType.Get("LocalStaticResource");
+            JCObject val = (JCObject)retObjectLocalStaticResource;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalStaticResource != null ? retObjectLocalStaticResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +406,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getSystemResource() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemResource = null;
         try {
-            JCObject val = (JCObject)classType.Get("SystemResource");
+            retObjectSystemResource = classType.Get("SystemResource");
+            JCObject val = (JCObject)retObjectSystemResource;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemResource != null ? retObjectSystemResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +421,14 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
 
     public static DependencyPropertyValueSource getTemplateBinding() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTemplateBinding = null;
         try {
-            JCObject val = (JCObject)classType.Get("TemplateBinding");
+            retObjectTemplateBinding = classType.Get("TemplateBinding");
+            JCObject val = (JCObject)retObjectTemplateBinding;
             return new DependencyPropertyValueSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplateBinding != null ? retObjectTemplateBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

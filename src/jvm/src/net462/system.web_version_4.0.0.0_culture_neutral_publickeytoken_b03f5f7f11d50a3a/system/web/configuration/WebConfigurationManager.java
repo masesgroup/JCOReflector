@@ -158,10 +158,14 @@ public class WebConfigurationManager extends NetObject  {
     
     public static Configuration OpenMachineConfiguration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMachineConfiguration = null;
         try {
-            JCObject objOpenMachineConfiguration = (JCObject)classType.Invoke("OpenMachineConfiguration");
+            retObjectOpenMachineConfiguration = classType.Invoke("OpenMachineConfiguration");
+            JCObject objOpenMachineConfiguration = (JCObject)retObjectOpenMachineConfiguration;
             return new Configuration(objOpenMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMachineConfiguration != null ? retObjectOpenMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMachineConfiguration(java.lang.String locationSubPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMachineConfiguration = null;
         try {
-            JCObject objOpenMachineConfiguration = (JCObject)classType.Invoke("OpenMachineConfiguration", locationSubPath);
+            retObjectOpenMachineConfiguration = classType.Invoke("OpenMachineConfiguration", locationSubPath);
+            JCObject objOpenMachineConfiguration = (JCObject)retObjectOpenMachineConfiguration;
             return new Configuration(objOpenMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMachineConfiguration != null ? retObjectOpenMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMachineConfiguration(java.lang.String locationSubPath, java.lang.String server) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMachineConfiguration = null;
         try {
-            JCObject objOpenMachineConfiguration = (JCObject)classType.Invoke("OpenMachineConfiguration", locationSubPath, server);
+            retObjectOpenMachineConfiguration = classType.Invoke("OpenMachineConfiguration", locationSubPath, server);
+            JCObject objOpenMachineConfiguration = (JCObject)retObjectOpenMachineConfiguration;
             return new Configuration(objOpenMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMachineConfiguration != null ? retObjectOpenMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMachineConfiguration(java.lang.String locationSubPath, java.lang.String server, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMachineConfiguration = null;
         try {
-            JCObject objOpenMachineConfiguration = (JCObject)classType.Invoke("OpenMachineConfiguration", locationSubPath, server, userName, password);
+            retObjectOpenMachineConfiguration = classType.Invoke("OpenMachineConfiguration", locationSubPath, server, userName, password);
+            JCObject objOpenMachineConfiguration = (JCObject)retObjectOpenMachineConfiguration;
             return new Configuration(objOpenMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMachineConfiguration != null ? retObjectOpenMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedMachineConfiguration(ConfigurationFileMap fileMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedMachineConfiguration = null;
         try {
-            JCObject objOpenMappedMachineConfiguration = (JCObject)classType.Invoke("OpenMappedMachineConfiguration", fileMap == null ? null : fileMap.getJCOInstance());
+            retObjectOpenMappedMachineConfiguration = classType.Invoke("OpenMappedMachineConfiguration", fileMap == null ? null : fileMap.getJCOInstance());
+            JCObject objOpenMappedMachineConfiguration = (JCObject)retObjectOpenMappedMachineConfiguration;
             return new Configuration(objOpenMappedMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedMachineConfiguration != null ? retObjectOpenMappedMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedMachineConfiguration(ConfigurationFileMap fileMap, java.lang.String locationSubPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedMachineConfiguration = null;
         try {
-            JCObject objOpenMappedMachineConfiguration = (JCObject)classType.Invoke("OpenMappedMachineConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), locationSubPath);
+            retObjectOpenMappedMachineConfiguration = classType.Invoke("OpenMappedMachineConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), locationSubPath);
+            JCObject objOpenMappedMachineConfiguration = (JCObject)retObjectOpenMappedMachineConfiguration;
             return new Configuration(objOpenMappedMachineConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedMachineConfiguration != null ? retObjectOpenMappedMachineConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedWebConfiguration = null;
         try {
-            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path);
+            retObjectOpenMappedWebConfiguration = classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path);
+            JCObject objOpenMappedWebConfiguration = (JCObject)retObjectOpenMappedWebConfiguration;
             return new Configuration(objOpenMappedWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedWebConfiguration != null ? retObjectOpenMappedWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path, java.lang.String site) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedWebConfiguration = null;
         try {
-            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site);
+            retObjectOpenMappedWebConfiguration = classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site);
+            JCObject objOpenMappedWebConfiguration = (JCObject)retObjectOpenMappedWebConfiguration;
             return new Configuration(objOpenMappedWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedWebConfiguration != null ? retObjectOpenMappedWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenMappedWebConfiguration(WebConfigurationFileMap fileMap, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenMappedWebConfiguration = null;
         try {
-            JCObject objOpenMappedWebConfiguration = (JCObject)classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site, locationSubPath);
+            retObjectOpenMappedWebConfiguration = classType.Invoke("OpenMappedWebConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), path, site, locationSubPath);
+            JCObject objOpenMappedWebConfiguration = (JCObject)retObjectOpenMappedWebConfiguration;
             return new Configuration(objOpenMappedWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenMappedWebConfiguration != null ? retObjectOpenMappedWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenWebConfiguration(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenWebConfiguration = null;
         try {
-            JCObject objOpenWebConfiguration = (JCObject)classType.Invoke("OpenWebConfiguration", path);
+            retObjectOpenWebConfiguration = classType.Invoke("OpenWebConfiguration", path);
+            JCObject objOpenWebConfiguration = (JCObject)retObjectOpenWebConfiguration;
             return new Configuration(objOpenWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWebConfiguration != null ? retObjectOpenWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenWebConfiguration(java.lang.String path, java.lang.String site) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenWebConfiguration = null;
         try {
-            JCObject objOpenWebConfiguration = (JCObject)classType.Invoke("OpenWebConfiguration", path, site);
+            retObjectOpenWebConfiguration = classType.Invoke("OpenWebConfiguration", path, site);
+            JCObject objOpenWebConfiguration = (JCObject)retObjectOpenWebConfiguration;
             return new Configuration(objOpenWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWebConfiguration != null ? retObjectOpenWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenWebConfiguration(java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenWebConfiguration = null;
         try {
-            JCObject objOpenWebConfiguration = (JCObject)classType.Invoke("OpenWebConfiguration", path, site, locationSubPath);
+            retObjectOpenWebConfiguration = classType.Invoke("OpenWebConfiguration", path, site, locationSubPath);
+            JCObject objOpenWebConfiguration = (JCObject)retObjectOpenWebConfiguration;
             return new Configuration(objOpenWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWebConfiguration != null ? retObjectOpenWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenWebConfiguration(java.lang.String path, java.lang.String site, java.lang.String locationSubPath, java.lang.String server) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenWebConfiguration = null;
         try {
-            JCObject objOpenWebConfiguration = (JCObject)classType.Invoke("OpenWebConfiguration", path, site, locationSubPath, server);
+            retObjectOpenWebConfiguration = classType.Invoke("OpenWebConfiguration", path, site, locationSubPath, server);
+            JCObject objOpenWebConfiguration = (JCObject)retObjectOpenWebConfiguration;
             return new Configuration(objOpenWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWebConfiguration != null ? retObjectOpenWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static Configuration OpenWebConfiguration(java.lang.String path, java.lang.String site, java.lang.String locationSubPath, java.lang.String server, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenWebConfiguration = null;
         try {
-            JCObject objOpenWebConfiguration = (JCObject)classType.Invoke("OpenWebConfiguration", path, site, locationSubPath, server, userName, password);
+            retObjectOpenWebConfiguration = classType.Invoke("OpenWebConfiguration", path, site, locationSubPath, server, userName, password);
+            JCObject objOpenWebConfiguration = (JCObject)retObjectOpenWebConfiguration;
             return new Configuration(objOpenWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWebConfiguration != null ? retObjectOpenWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static NetObject GetSection(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSection = null;
         try {
-            JCObject objGetSection = (JCObject)classType.Invoke("GetSection", sectionName);
+            retObjectGetSection = classType.Invoke("GetSection", sectionName);
+            JCObject objGetSection = (JCObject)retObjectGetSection;
             return new NetObject(objGetSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSection != null ? retObjectGetSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static NetObject GetSection(java.lang.String sectionName, java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSection = null;
         try {
-            JCObject objGetSection = (JCObject)classType.Invoke("GetSection", sectionName, path);
+            retObjectGetSection = classType.Invoke("GetSection", sectionName, path);
+            JCObject objGetSection = (JCObject)retObjectGetSection;
             return new NetObject(objGetSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSection != null ? retObjectGetSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static NetObject GetWebApplicationSection(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWebApplicationSection = null;
         try {
-            JCObject objGetWebApplicationSection = (JCObject)classType.Invoke("GetWebApplicationSection", sectionName);
+            retObjectGetWebApplicationSection = classType.Invoke("GetWebApplicationSection", sectionName);
+            JCObject objGetWebApplicationSection = (JCObject)retObjectGetWebApplicationSection;
             return new NetObject(objGetWebApplicationSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWebApplicationSection != null ? retObjectGetWebApplicationSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +417,14 @@ public class WebConfigurationManager extends NetObject  {
     
     public static NameValueCollection getAppSettings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppSettings = null;
         try {
-            JCObject val = (JCObject)classType.Get("AppSettings");
+            retObjectAppSettings = classType.Get("AppSettings");
+            JCObject val = (JCObject)retObjectAppSettings;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppSettings != null ? retObjectAppSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +432,14 @@ public class WebConfigurationManager extends NetObject  {
 
     public static ConnectionStringSettingsCollection getConnectionStrings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnectionStrings = null;
         try {
-            JCObject val = (JCObject)classType.Get("ConnectionStrings");
+            retObjectConnectionStrings = classType.Get("ConnectionStrings");
+            JCObject val = (JCObject)retObjectConnectionStrings;
             return new ConnectionStringSettingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionStrings != null ? retObjectConnectionStrings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

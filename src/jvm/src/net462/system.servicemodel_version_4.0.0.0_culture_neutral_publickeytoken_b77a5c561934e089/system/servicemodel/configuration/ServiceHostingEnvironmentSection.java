@@ -169,9 +169,13 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
     
     public boolean getAspNetCompatibilityEnabled() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAspNetCompatibilityEnabled = null;
         try {
-            return (boolean)classInstance.Get("AspNetCompatibilityEnabled");
+            retObjectAspNetCompatibilityEnabled = classInstance.Get("AspNetCompatibilityEnabled");
+            return (boolean)retObjectAspNetCompatibilityEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAspNetCompatibilityEnabled != null ? retObjectAspNetCompatibilityEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public void setAspNetCompatibilityEnabled(boolean AspNetCompatibilityEnabled) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AspNetCompatibilityEnabled", AspNetCompatibilityEnabled);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public boolean getCloseIdleServicesAtLowMemory() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseIdleServicesAtLowMemory = null;
         try {
-            return (boolean)classInstance.Get("CloseIdleServicesAtLowMemory");
+            retObjectCloseIdleServicesAtLowMemory = classInstance.Get("CloseIdleServicesAtLowMemory");
+            return (boolean)retObjectCloseIdleServicesAtLowMemory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCloseIdleServicesAtLowMemory != null ? retObjectCloseIdleServicesAtLowMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public void setCloseIdleServicesAtLowMemory(boolean CloseIdleServicesAtLowMemory) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseIdleServicesAtLowMemory", CloseIdleServicesAtLowMemory);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public boolean getMultipleSiteBindingsEnabled() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultipleSiteBindingsEnabled = null;
         try {
-            return (boolean)classInstance.Get("MultipleSiteBindingsEnabled");
+            retObjectMultipleSiteBindingsEnabled = classInstance.Get("MultipleSiteBindingsEnabled");
+            return (boolean)retObjectMultipleSiteBindingsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultipleSiteBindingsEnabled != null ? retObjectMultipleSiteBindingsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public void setMultipleSiteBindingsEnabled(boolean MultipleSiteBindingsEnabled) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MultipleSiteBindingsEnabled", MultipleSiteBindingsEnabled);
         } catch (JCNativeException jcne) {
@@ -229,9 +241,19 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public int getMinFreeMemoryPercentageToActivateService() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinFreeMemoryPercentageToActivateService = null;
         try {
-            return (int)classInstance.Get("MinFreeMemoryPercentageToActivateService");
+            retObjectMinFreeMemoryPercentageToActivateService = classInstance.Get("MinFreeMemoryPercentageToActivateService");
+            return (int)retObjectMinFreeMemoryPercentageToActivateService;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinFreeMemoryPercentageToActivateServiceNumber = (java.lang.Number)retObjectMinFreeMemoryPercentageToActivateService;
+                return retObjectMinFreeMemoryPercentageToActivateServiceNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinFreeMemoryPercentageToActivateService != null ? retObjectMinFreeMemoryPercentageToActivateService.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +261,7 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public void setMinFreeMemoryPercentageToActivateService(int MinFreeMemoryPercentageToActivateService) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinFreeMemoryPercentageToActivateService", MinFreeMemoryPercentageToActivateService);
         } catch (JCNativeException jcne) {
@@ -249,10 +271,14 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public BaseAddressPrefixFilterElementCollection getBaseAddressPrefixFilters() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddressPrefixFilters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseAddressPrefixFilters");
+            retObjectBaseAddressPrefixFilters = classInstance.Get("BaseAddressPrefixFilters");
+            JCObject val = (JCObject)retObjectBaseAddressPrefixFilters;
             return new BaseAddressPrefixFilterElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseAddressPrefixFilters != null ? retObjectBaseAddressPrefixFilters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +286,14 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public ServiceActivationElementCollection getServiceActivations() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceActivations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceActivations");
+            retObjectServiceActivations = classInstance.Get("ServiceActivations");
+            JCObject val = (JCObject)retObjectServiceActivations;
             return new ServiceActivationElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceActivations != null ? retObjectServiceActivations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +301,14 @@ public class ServiceHostingEnvironmentSection extends ConfigurationSection  {
 
     public TransportConfigurationTypeElementCollection getTransportConfigurationTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransportConfigurationTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransportConfigurationTypes");
+            retObjectTransportConfigurationTypes = classInstance.Get("TransportConfigurationTypes");
+            JCObject val = (JCObject)retObjectTransportConfigurationTypes;
             return new TransportConfigurationTypeElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransportConfigurationTypes != null ? retObjectTransportConfigurationTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

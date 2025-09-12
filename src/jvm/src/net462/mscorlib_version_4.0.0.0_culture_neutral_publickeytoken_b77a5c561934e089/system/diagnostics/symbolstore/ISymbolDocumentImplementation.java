@@ -143,10 +143,12 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
     
     public byte[] GetCheckSum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCheckSum = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCheckSum");
+            retObjectGetCheckSum = classInstance.Invoke("GetCheckSum");
+            JCObject resultingObjects = (JCObject)retObjectGetCheckSum;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -155,6 +157,8 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 				resultingArray[indexGetCheckSum] = (byte)resultingArrayList.get(indexGetCheckSum);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetCheckSum != null ? retObjectGetCheckSum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,10 +166,12 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public byte[] GetSourceRange(int startLine, int startColumn, int endLine, int endColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSourceRange = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSourceRange", startLine, startColumn, endLine, endColumn);
+            retObjectGetSourceRange = classInstance.Invoke("GetSourceRange", startLine, startColumn, endLine, endColumn);
+            JCObject resultingObjects = (JCObject)retObjectGetSourceRange;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -174,6 +180,8 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 				resultingArray[indexGetSourceRange] = (byte)resultingArrayList.get(indexGetSourceRange);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSourceRange != null ? retObjectGetSourceRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,19 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public int FindClosestLine(int line) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindClosestLine = null;
         try {
-            return (int)classInstance.Invoke("FindClosestLine", line);
+            retObjectFindClosestLine = classInstance.Invoke("FindClosestLine", line);
+            return (int)retObjectFindClosestLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindClosestLineNumber = (java.lang.Number)retObjectFindClosestLine;
+                return retObjectFindClosestLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindClosestLine != null ? retObjectFindClosestLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +213,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
     
     public boolean getHasEmbeddedSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasEmbeddedSource = null;
         try {
-            return (boolean)classInstance.Get("HasEmbeddedSource");
+            retObjectHasEmbeddedSource = classInstance.Get("HasEmbeddedSource");
+            return (boolean)retObjectHasEmbeddedSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasEmbeddedSource != null ? retObjectHasEmbeddedSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +227,19 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public int getSourceLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceLength = null;
         try {
-            return (int)classInstance.Get("SourceLength");
+            retObjectSourceLength = classInstance.Get("SourceLength");
+            return (int)retObjectSourceLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSourceLengthNumber = (java.lang.Number)retObjectSourceLength;
+                return retObjectSourceLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSourceLength != null ? retObjectSourceLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +247,14 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public Guid getCheckSumAlgorithmId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSumAlgorithmId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckSumAlgorithmId");
+            retObjectCheckSumAlgorithmId = classInstance.Get("CheckSumAlgorithmId");
+            JCObject val = (JCObject)retObjectCheckSumAlgorithmId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckSumAlgorithmId != null ? retObjectCheckSumAlgorithmId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +262,14 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public Guid getDocumentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentType");
+            retObjectDocumentType = classInstance.Get("DocumentType");
+            JCObject val = (JCObject)retObjectDocumentType;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentType != null ? retObjectDocumentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +277,14 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public Guid getLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            JCObject val = (JCObject)retObjectLanguage;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +292,14 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public Guid getLanguageVendor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguageVendor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LanguageVendor");
+            retObjectLanguageVendor = classInstance.Get("LanguageVendor");
+            JCObject val = (JCObject)retObjectLanguageVendor;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLanguageVendor != null ? retObjectLanguageVendor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +307,13 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
 
     public java.lang.String getURL() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectURL = null;
         try {
-            return (java.lang.String)classInstance.Get("URL");
+            retObjectURL = classInstance.Get("URL");
+            return (java.lang.String)retObjectURL;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectURL != null ? retObjectURL.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

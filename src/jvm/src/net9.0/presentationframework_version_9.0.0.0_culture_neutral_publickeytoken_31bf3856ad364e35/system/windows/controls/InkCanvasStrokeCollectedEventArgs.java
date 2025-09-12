@@ -171,10 +171,14 @@ public class InkCanvasStrokeCollectedEventArgs extends RoutedEventArgs  {
     
     public Stroke getStroke() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStroke = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stroke");
+            retObjectStroke = classInstance.Get("Stroke");
+            JCObject val = (JCObject)retObjectStroke;
             return new Stroke(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStroke != null ? retObjectStroke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

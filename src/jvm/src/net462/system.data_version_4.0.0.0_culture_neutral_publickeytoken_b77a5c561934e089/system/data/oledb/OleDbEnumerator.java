@@ -163,10 +163,14 @@ public class OleDbEnumerator extends NetObject  {
     
     public DataTable GetElements() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElements = null;
         try {
-            JCObject objGetElements = (JCObject)classInstance.Invoke("GetElements");
+            retObjectGetElements = classInstance.Invoke("GetElements");
+            JCObject objGetElements = (JCObject)retObjectGetElements;
             return new DataTable(objGetElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElements != null ? retObjectGetElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class OleDbEnumerator extends NetObject  {
 
     public static OleDbDataReader GetEnumerator(NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnumerator = null;
         try {
-            JCObject objGetEnumerator = (JCObject)classType.Invoke("GetEnumerator", type == null ? null : type.getJCOInstance());
+            retObjectGetEnumerator = classType.Invoke("GetEnumerator", type == null ? null : type.getJCOInstance());
+            JCObject objGetEnumerator = (JCObject)retObjectGetEnumerator;
             return new OleDbDataReader(objGetEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnumerator != null ? retObjectGetEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class OleDbEnumerator extends NetObject  {
 
     public static OleDbDataReader GetRootEnumerator() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRootEnumerator = null;
         try {
-            JCObject objGetRootEnumerator = (JCObject)classType.Invoke("GetRootEnumerator");
+            retObjectGetRootEnumerator = classType.Invoke("GetRootEnumerator");
+            JCObject objGetRootEnumerator = (JCObject)retObjectGetRootEnumerator;
             return new OleDbDataReader(objGetRootEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRootEnumerator != null ? retObjectGetRootEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

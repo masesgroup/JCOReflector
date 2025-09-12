@@ -145,10 +145,12 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
     
     public byte[] Promote() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromote = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Promote");
+            retObjectPromote = classInstance.Invoke("Promote");
+            JCObject resultingObjects = (JCObject)retObjectPromote;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -157,6 +159,8 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
 				resultingArray[indexPromote] = (byte)resultingArrayList.get(indexPromote);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectPromote != null ? retObjectPromote.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
 
     public void Initialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -174,7 +178,7 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
 
     public void Rollback(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", singlePhaseEnlistment == null ? null : singlePhaseEnlistment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
 
     public void SinglePhaseCommit(SinglePhaseEnlistment singlePhaseEnlistment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SinglePhaseCommit", singlePhaseEnlistment == null ? null : singlePhaseEnlistment.getJCOInstance());
         } catch (JCNativeException jcne) {

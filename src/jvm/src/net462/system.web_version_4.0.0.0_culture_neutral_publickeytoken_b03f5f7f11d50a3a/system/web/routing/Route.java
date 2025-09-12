@@ -203,10 +203,14 @@ public class Route extends RouteBase  {
     
     public RouteData GetRouteData(HttpContextBase httpContext) throws Throwable, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRouteData = null;
         try {
-            JCObject objGetRouteData = (JCObject)classInstance.Invoke("GetRouteData", httpContext == null ? null : httpContext.getJCOInstance());
+            retObjectGetRouteData = classInstance.Invoke("GetRouteData", httpContext == null ? null : httpContext.getJCOInstance());
+            JCObject objGetRouteData = (JCObject)retObjectGetRouteData;
             return new RouteData(objGetRouteData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRouteData != null ? retObjectGetRouteData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +218,14 @@ public class Route extends RouteBase  {
 
     public VirtualPathData GetVirtualPath(RequestContext requestContext, RouteValueDictionary values) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVirtualPath = null;
         try {
-            JCObject objGetVirtualPath = (JCObject)classInstance.Invoke("GetVirtualPath", requestContext == null ? null : requestContext.getJCOInstance(), values == null ? null : values.getJCOInstance());
+            retObjectGetVirtualPath = classInstance.Invoke("GetVirtualPath", requestContext == null ? null : requestContext.getJCOInstance(), values == null ? null : values.getJCOInstance());
+            JCObject objGetVirtualPath = (JCObject)retObjectGetVirtualPath;
             return new VirtualPathData(objGetVirtualPath);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVirtualPath != null ? retObjectGetVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +237,13 @@ public class Route extends RouteBase  {
     
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("Url");
+            retObjectUrl = classInstance.Get("Url");
+            return (java.lang.String)retObjectUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +251,7 @@ public class Route extends RouteBase  {
 
     public void setUrl(java.lang.String Url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Url", Url);
         } catch (JCNativeException jcne) {
@@ -249,10 +261,14 @@ public class Route extends RouteBase  {
 
     public IRouteHandler getRouteHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RouteHandler");
+            retObjectRouteHandler = classInstance.Get("RouteHandler");
+            JCObject val = (JCObject)retObjectRouteHandler;
             return new IRouteHandlerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRouteHandler != null ? retObjectRouteHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +276,7 @@ public class Route extends RouteBase  {
 
     public void setRouteHandler(IRouteHandler RouteHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RouteHandler", RouteHandler == null ? null : RouteHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,10 +286,14 @@ public class Route extends RouteBase  {
 
     public RouteValueDictionary getConstraints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstraints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Constraints");
+            retObjectConstraints = classInstance.Get("Constraints");
+            JCObject val = (JCObject)retObjectConstraints;
             return new RouteValueDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstraints != null ? retObjectConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +301,7 @@ public class Route extends RouteBase  {
 
     public void setConstraints(RouteValueDictionary Constraints) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Constraints", Constraints == null ? null : Constraints.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,10 +311,14 @@ public class Route extends RouteBase  {
 
     public RouteValueDictionary getDataTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataTokens = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataTokens");
+            retObjectDataTokens = classInstance.Get("DataTokens");
+            JCObject val = (JCObject)retObjectDataTokens;
             return new RouteValueDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataTokens != null ? retObjectDataTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +326,7 @@ public class Route extends RouteBase  {
 
     public void setDataTokens(RouteValueDictionary DataTokens) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataTokens", DataTokens == null ? null : DataTokens.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,10 +336,14 @@ public class Route extends RouteBase  {
 
     public RouteValueDictionary getDefaults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaults = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Defaults");
+            retObjectDefaults = classInstance.Get("Defaults");
+            JCObject val = (JCObject)retObjectDefaults;
             return new RouteValueDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaults != null ? retObjectDefaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +351,7 @@ public class Route extends RouteBase  {
 
     public void setDefaults(RouteValueDictionary Defaults) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Defaults", Defaults == null ? null : Defaults.getJCOInstance());
         } catch (JCNativeException jcne) {

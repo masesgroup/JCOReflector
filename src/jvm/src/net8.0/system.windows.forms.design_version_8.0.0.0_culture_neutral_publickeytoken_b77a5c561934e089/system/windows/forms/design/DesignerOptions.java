@@ -166,9 +166,13 @@ public class DesignerOptions extends NetObject  {
     
     public boolean getEnableInSituEditing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableInSituEditing = null;
         try {
-            return (boolean)classInstance.Get("EnableInSituEditing");
+            retObjectEnableInSituEditing = classInstance.Get("EnableInSituEditing");
+            return (boolean)retObjectEnableInSituEditing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableInSituEditing != null ? retObjectEnableInSituEditing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setEnableInSituEditing(boolean EnableInSituEditing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableInSituEditing", EnableInSituEditing);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class DesignerOptions extends NetObject  {
 
     public boolean getObjectBoundSmartTagAutoShow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectBoundSmartTagAutoShow = null;
         try {
-            return (boolean)classInstance.Get("ObjectBoundSmartTagAutoShow");
+            retObjectObjectBoundSmartTagAutoShow = classInstance.Get("ObjectBoundSmartTagAutoShow");
+            return (boolean)retObjectObjectBoundSmartTagAutoShow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectObjectBoundSmartTagAutoShow != null ? retObjectObjectBoundSmartTagAutoShow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setObjectBoundSmartTagAutoShow(boolean ObjectBoundSmartTagAutoShow) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectBoundSmartTagAutoShow", ObjectBoundSmartTagAutoShow);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class DesignerOptions extends NetObject  {
 
     public boolean getShowGrid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowGrid = null;
         try {
-            return (boolean)classInstance.Get("ShowGrid");
+            retObjectShowGrid = classInstance.Get("ShowGrid");
+            return (boolean)retObjectShowGrid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowGrid != null ? retObjectShowGrid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setShowGrid(boolean ShowGrid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowGrid", ShowGrid);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class DesignerOptions extends NetObject  {
 
     public boolean getSnapToGrid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSnapToGrid = null;
         try {
-            return (boolean)classInstance.Get("SnapToGrid");
+            retObjectSnapToGrid = classInstance.Get("SnapToGrid");
+            return (boolean)retObjectSnapToGrid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSnapToGrid != null ? retObjectSnapToGrid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setSnapToGrid(boolean SnapToGrid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SnapToGrid", SnapToGrid);
         } catch (JCNativeException jcne) {
@@ -246,9 +262,13 @@ public class DesignerOptions extends NetObject  {
 
     public boolean getUseOptimizedCodeGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseOptimizedCodeGeneration = null;
         try {
-            return (boolean)classInstance.Get("UseOptimizedCodeGeneration");
+            retObjectUseOptimizedCodeGeneration = classInstance.Get("UseOptimizedCodeGeneration");
+            return (boolean)retObjectUseOptimizedCodeGeneration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseOptimizedCodeGeneration != null ? retObjectUseOptimizedCodeGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +276,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setUseOptimizedCodeGeneration(boolean UseOptimizedCodeGeneration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseOptimizedCodeGeneration", UseOptimizedCodeGeneration);
         } catch (JCNativeException jcne) {
@@ -266,9 +286,13 @@ public class DesignerOptions extends NetObject  {
 
     public boolean getUseSmartTags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSmartTags = null;
         try {
-            return (boolean)classInstance.Get("UseSmartTags");
+            retObjectUseSmartTags = classInstance.Get("UseSmartTags");
+            return (boolean)retObjectUseSmartTags;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSmartTags != null ? retObjectUseSmartTags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setUseSmartTags(boolean UseSmartTags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSmartTags", UseSmartTags);
         } catch (JCNativeException jcne) {
@@ -286,9 +310,13 @@ public class DesignerOptions extends NetObject  {
 
     public boolean getUseSnapLines() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSnapLines = null;
         try {
-            return (boolean)classInstance.Get("UseSnapLines");
+            retObjectUseSnapLines = classInstance.Get("UseSnapLines");
+            return (boolean)retObjectUseSnapLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSnapLines != null ? retObjectUseSnapLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +324,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setUseSnapLines(boolean UseSnapLines) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSnapLines", UseSnapLines);
         } catch (JCNativeException jcne) {
@@ -306,10 +334,14 @@ public class DesignerOptions extends NetObject  {
 
     public Size getGridSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridSize");
+            retObjectGridSize = classInstance.Get("GridSize");
+            JCObject val = (JCObject)retObjectGridSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridSize != null ? retObjectGridSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +349,7 @@ public class DesignerOptions extends NetObject  {
 
     public void setGridSize(Size GridSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridSize", GridSize == null ? null : GridSize.getJCOInstance());
         } catch (JCNativeException jcne) {

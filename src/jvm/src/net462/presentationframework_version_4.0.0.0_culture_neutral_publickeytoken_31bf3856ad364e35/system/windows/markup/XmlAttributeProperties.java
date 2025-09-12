@@ -157,9 +157,13 @@ public class XmlAttributeProperties extends NetObject  {
     
     public static java.lang.String GetXmlNamespaceMaps(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlNamespaceMaps = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlNamespaceMaps", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectGetXmlNamespaceMaps = classType.Invoke("GetXmlNamespaceMaps", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            return (java.lang.String)retObjectGetXmlNamespaceMaps;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlNamespaceMaps != null ? retObjectGetXmlNamespaceMaps.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class XmlAttributeProperties extends NetObject  {
 
     public static java.lang.String GetXmlnsDefinition(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlnsDefinition = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlnsDefinition", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectGetXmlnsDefinition = classType.Invoke("GetXmlnsDefinition", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            return (java.lang.String)retObjectGetXmlnsDefinition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlnsDefinition != null ? retObjectGetXmlnsDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class XmlAttributeProperties extends NetObject  {
 
     public static java.lang.String GetXmlSpace(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlSpace = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlSpace", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectGetXmlSpace = classType.Invoke("GetXmlSpace", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            return (java.lang.String)retObjectGetXmlSpace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlSpace != null ? retObjectGetXmlSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +199,14 @@ public class XmlAttributeProperties extends NetObject  {
 
     public static XmlnsDictionary GetXmlnsDictionary(DependencyObject dependencyObject) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlnsDictionary = null;
         try {
-            JCObject objGetXmlnsDictionary = (JCObject)classType.Invoke("GetXmlnsDictionary", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectGetXmlnsDictionary = classType.Invoke("GetXmlnsDictionary", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            JCObject objGetXmlnsDictionary = (JCObject)retObjectGetXmlnsDictionary;
             return new XmlnsDictionary(objGetXmlnsDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXmlnsDictionary != null ? retObjectGetXmlnsDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +214,7 @@ public class XmlAttributeProperties extends NetObject  {
 
     public static void SetXmlNamespaceMaps(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetXmlNamespaceMaps", dependencyObject == null ? null : dependencyObject.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -208,7 +224,7 @@ public class XmlAttributeProperties extends NetObject  {
 
     public static void SetXmlnsDefinition(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetXmlnsDefinition", dependencyObject == null ? null : dependencyObject.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -218,7 +234,7 @@ public class XmlAttributeProperties extends NetObject  {
 
     public static void SetXmlnsDictionary(DependencyObject dependencyObject, XmlnsDictionary value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetXmlnsDictionary", dependencyObject == null ? null : dependencyObject.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,7 +244,7 @@ public class XmlAttributeProperties extends NetObject  {
 
     public static void SetXmlSpace(DependencyObject dependencyObject, java.lang.String value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetXmlSpace", dependencyObject == null ? null : dependencyObject.getJCOInstance(), value);
         } catch (JCNativeException jcne) {

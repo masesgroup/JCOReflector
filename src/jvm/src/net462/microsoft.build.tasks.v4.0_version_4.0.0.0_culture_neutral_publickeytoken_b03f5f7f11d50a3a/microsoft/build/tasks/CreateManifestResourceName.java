@@ -156,9 +156,13 @@ public class CreateManifestResourceName extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public static java.lang.String MakeValidEverettIdentifier(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeValidEverettIdentifier = null;
         try {
-            return (java.lang.String)classType.Invoke("MakeValidEverettIdentifier", name);
+            retObjectMakeValidEverettIdentifier = classType.Invoke("MakeValidEverettIdentifier", name);
+            return (java.lang.String)retObjectMakeValidEverettIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeValidEverettIdentifier != null ? retObjectMakeValidEverettIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class CreateManifestResourceName extends TaskExtension  {
     
     public boolean getPrependCultureAsDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrependCultureAsDirectory = null;
         try {
-            return (boolean)classInstance.Get("PrependCultureAsDirectory");
+            retObjectPrependCultureAsDirectory = classInstance.Get("PrependCultureAsDirectory");
+            return (boolean)retObjectPrependCultureAsDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrependCultureAsDirectory != null ? retObjectPrependCultureAsDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +202,7 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public void setPrependCultureAsDirectory(boolean PrependCultureAsDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrependCultureAsDirectory", PrependCultureAsDirectory);
         } catch (JCNativeException jcne) {
@@ -200,16 +212,20 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public final ITaskItem[] getManifestResourceNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManifestResourceNames = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ManifestResourceNames");
+            retObjectManifestResourceNames = classInstance.Get("ManifestResourceNames");
+            JCObject resultingObjects = (JCObject)retObjectManifestResourceNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManifestResourceNames != null ? retObjectManifestResourceNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,16 +233,20 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public final ITaskItem[] getResourceFiles() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResourceFiles");
+            retObjectResourceFiles = classInstance.Get("ResourceFiles");
+            JCObject resultingObjects = (JCObject)retObjectResourceFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceFiles != null ? retObjectResourceFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +254,7 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public void setResourceFiles(ITaskItem[] ResourceFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceFiles", toObjectFromArray(ResourceFiles));
         } catch (JCNativeException jcne) {
@@ -244,16 +264,20 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public final ITaskItem[] getResourceFilesWithManifestResourceNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceFilesWithManifestResourceNames = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResourceFilesWithManifestResourceNames");
+            retObjectResourceFilesWithManifestResourceNames = classInstance.Get("ResourceFilesWithManifestResourceNames");
+            JCObject resultingObjects = (JCObject)retObjectResourceFilesWithManifestResourceNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceFilesWithManifestResourceNames != null ? retObjectResourceFilesWithManifestResourceNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +285,7 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public void setResourceFilesWithManifestResourceNames(ITaskItem[] ResourceFilesWithManifestResourceNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceFilesWithManifestResourceNames", toObjectFromArray(ResourceFilesWithManifestResourceNames));
         } catch (JCNativeException jcne) {
@@ -271,9 +295,13 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("RootNamespace");
+            retObjectRootNamespace = classInstance.Get("RootNamespace");
+            return (java.lang.String)retObjectRootNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootNamespace != null ? retObjectRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +309,7 @@ public class CreateManifestResourceName extends TaskExtension  {
 
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootNamespace", RootNamespace);
         } catch (JCNativeException jcne) {

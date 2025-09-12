@@ -162,9 +162,13 @@ public class UrlParameterWriter extends UrlEncodedParameterWriter  {
     
     public java.lang.String GetRequestUrl(java.lang.String url, NetObject[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequestUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRequestUrl", url, toObjectFromArray(parameters));
+            retObjectGetRequestUrl = classInstance.Invoke("GetRequestUrl", url, toObjectFromArray(parameters));
+            return (java.lang.String)retObjectGetRequestUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRequestUrl != null ? retObjectGetRequestUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

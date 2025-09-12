@@ -172,10 +172,14 @@ public class Computer extends ServerComputer  {
     
     public Audio getAudio() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAudio = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Audio");
+            retObjectAudio = classInstance.Get("Audio");
+            JCObject val = (JCObject)retObjectAudio;
             return new Audio(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAudio != null ? retObjectAudio.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class Computer extends ServerComputer  {
 
     public Keyboard getKeyboard() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyboard = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Keyboard");
+            retObjectKeyboard = classInstance.Get("Keyboard");
+            JCObject val = (JCObject)retObjectKeyboard;
             return new Keyboard(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyboard != null ? retObjectKeyboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class Computer extends ServerComputer  {
 
     public Mouse getMouse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMouse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mouse");
+            retObjectMouse = classInstance.Get("Mouse");
+            JCObject val = (JCObject)retObjectMouse;
             return new Mouse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouse != null ? retObjectMouse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class Computer extends ServerComputer  {
 
     public Ports getPorts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPorts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Ports");
+            retObjectPorts = classInstance.Get("Ports");
+            JCObject val = (JCObject)retObjectPorts;
             return new Ports(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPorts != null ? retObjectPorts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class Computer extends ServerComputer  {
 
     public ClipboardProxy getClipboard() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipboard = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clipboard");
+            retObjectClipboard = classInstance.Get("Clipboard");
+            JCObject val = (JCObject)retObjectClipboard;
             return new ClipboardProxy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipboard != null ? retObjectClipboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +247,14 @@ public class Computer extends ServerComputer  {
 
     public Screen getScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Screen");
+            retObjectScreen = classInstance.Get("Screen");
+            JCObject val = (JCObject)retObjectScreen;
             return new Screen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScreen != null ? retObjectScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

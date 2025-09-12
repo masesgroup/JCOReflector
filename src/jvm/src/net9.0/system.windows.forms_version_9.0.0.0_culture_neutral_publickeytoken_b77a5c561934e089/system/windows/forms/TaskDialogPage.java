@@ -172,7 +172,7 @@ public class TaskDialogPage extends NetObject  {
     
     public void Navigate(TaskDialogPage page) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Navigate", page == null ? null : page.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,9 +186,13 @@ public class TaskDialogPage extends NetObject  {
     
     public boolean getAllowCancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCancel = null;
         try {
-            return (boolean)classInstance.Get("AllowCancel");
+            retObjectAllowCancel = classInstance.Get("AllowCancel");
+            return (boolean)retObjectAllowCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCancel != null ? retObjectAllowCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setAllowCancel(boolean AllowCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowCancel", AllowCancel);
         } catch (JCNativeException jcne) {
@@ -206,9 +210,13 @@ public class TaskDialogPage extends NetObject  {
 
     public boolean getAllowMinimize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowMinimize = null;
         try {
-            return (boolean)classInstance.Get("AllowMinimize");
+            retObjectAllowMinimize = classInstance.Get("AllowMinimize");
+            return (boolean)retObjectAllowMinimize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowMinimize != null ? retObjectAllowMinimize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +224,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setAllowMinimize(boolean AllowMinimize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowMinimize", AllowMinimize);
         } catch (JCNativeException jcne) {
@@ -226,9 +234,13 @@ public class TaskDialogPage extends NetObject  {
 
     public boolean getEnableLinks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableLinks = null;
         try {
-            return (boolean)classInstance.Get("EnableLinks");
+            retObjectEnableLinks = classInstance.Get("EnableLinks");
+            return (boolean)retObjectEnableLinks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableLinks != null ? retObjectEnableLinks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setEnableLinks(boolean EnableLinks) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableLinks", EnableLinks);
         } catch (JCNativeException jcne) {
@@ -246,9 +258,13 @@ public class TaskDialogPage extends NetObject  {
 
     public boolean getRightToLeftLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftLayout = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftLayout");
+            retObjectRightToLeftLayout = classInstance.Get("RightToLeftLayout");
+            return (boolean)retObjectRightToLeftLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftLayout != null ? retObjectRightToLeftLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +272,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setRightToLeftLayout(boolean RightToLeftLayout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftLayout", RightToLeftLayout);
         } catch (JCNativeException jcne) {
@@ -266,9 +282,13 @@ public class TaskDialogPage extends NetObject  {
 
     public boolean getSizeToContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeToContent = null;
         try {
-            return (boolean)classInstance.Get("SizeToContent");
+            retObjectSizeToContent = classInstance.Get("SizeToContent");
+            return (boolean)retObjectSizeToContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSizeToContent != null ? retObjectSizeToContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +296,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setSizeToContent(boolean SizeToContent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeToContent", SizeToContent);
         } catch (JCNativeException jcne) {
@@ -286,9 +306,13 @@ public class TaskDialogPage extends NetObject  {
 
     public java.lang.String getCaption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +320,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setCaption(java.lang.String Caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -306,9 +330,13 @@ public class TaskDialogPage extends NetObject  {
 
     public java.lang.String getHeading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeading = null;
         try {
-            return (java.lang.String)classInstance.Get("Heading");
+            retObjectHeading = classInstance.Get("Heading");
+            return (java.lang.String)retObjectHeading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeading != null ? retObjectHeading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +344,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setHeading(java.lang.String Heading) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Heading", Heading);
         } catch (JCNativeException jcne) {
@@ -326,9 +354,13 @@ public class TaskDialogPage extends NetObject  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +368,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -346,10 +378,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialog getBoundDialog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoundDialog = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundDialog");
+            retObjectBoundDialog = classInstance.Get("BoundDialog");
+            JCObject val = (JCObject)retObjectBoundDialog;
             return new TaskDialog(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoundDialog != null ? retObjectBoundDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +393,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setBoundDialog(TaskDialog BoundDialog) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BoundDialog", BoundDialog == null ? null : BoundDialog.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,10 +403,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogButton getDefaultButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultButton");
+            retObjectDefaultButton = classInstance.Get("DefaultButton");
+            JCObject val = (JCObject)retObjectDefaultButton;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultButton != null ? retObjectDefaultButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +418,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setDefaultButton(TaskDialogButton DefaultButton) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultButton", DefaultButton == null ? null : DefaultButton.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -388,10 +428,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogButtonCollection getButtons() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtons = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Buttons");
+            retObjectButtons = classInstance.Get("Buttons");
+            JCObject val = (JCObject)retObjectButtons;
             return new TaskDialogButtonCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtons != null ? retObjectButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +443,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setButtons(TaskDialogButtonCollection Buttons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Buttons", Buttons == null ? null : Buttons.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,10 +453,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogExpander getExpander() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpander = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expander");
+            retObjectExpander = classInstance.Get("Expander");
+            JCObject val = (JCObject)retObjectExpander;
             return new TaskDialogExpander(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpander != null ? retObjectExpander.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,7 +468,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setExpander(TaskDialogExpander Expander) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expander", Expander == null ? null : Expander.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -430,10 +478,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogFootnote getFootnote() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFootnote = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Footnote");
+            retObjectFootnote = classInstance.Get("Footnote");
+            JCObject val = (JCObject)retObjectFootnote;
             return new TaskDialogFootnote(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFootnote != null ? retObjectFootnote.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +493,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setFootnote(TaskDialogFootnote Footnote) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Footnote", Footnote == null ? null : Footnote.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -451,10 +503,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogIcon getIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIcon = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Icon");
+            retObjectIcon = classInstance.Get("Icon");
+            JCObject val = (JCObject)retObjectIcon;
             return new TaskDialogIcon(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIcon != null ? retObjectIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +518,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setIcon(TaskDialogIcon Icon) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Icon", Icon == null ? null : Icon.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -472,10 +528,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogProgressBar getProgressBar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProgressBar = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProgressBar");
+            retObjectProgressBar = classInstance.Get("ProgressBar");
+            JCObject val = (JCObject)retObjectProgressBar;
             return new TaskDialogProgressBar(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProgressBar != null ? retObjectProgressBar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,7 +543,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setProgressBar(TaskDialogProgressBar ProgressBar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProgressBar", ProgressBar == null ? null : ProgressBar.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -493,10 +553,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogRadioButtonCollection getRadioButtons() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRadioButtons = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RadioButtons");
+            retObjectRadioButtons = classInstance.Get("RadioButtons");
+            JCObject val = (JCObject)retObjectRadioButtons;
             return new TaskDialogRadioButtonCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRadioButtons != null ? retObjectRadioButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,7 +568,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setRadioButtons(TaskDialogRadioButtonCollection RadioButtons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RadioButtons", RadioButtons == null ? null : RadioButtons.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -514,10 +578,14 @@ public class TaskDialogPage extends NetObject  {
 
     public TaskDialogVerificationCheckBox getVerification() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerification = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verification");
+            retObjectVerification = classInstance.Get("Verification");
+            JCObject val = (JCObject)retObjectVerification;
             return new TaskDialogVerificationCheckBox(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerification != null ? retObjectVerification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,7 +593,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void setVerification(TaskDialogVerificationCheckBox Verification) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verification", Verification == null ? null : Verification.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -540,7 +608,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void addCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Created", handler);
         } catch (JCNativeException jcne) {
@@ -550,7 +618,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void removeCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Created", handler);
         } catch (JCNativeException jcne) {
@@ -560,7 +628,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void addDestroyed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Destroyed", handler);
         } catch (JCNativeException jcne) {
@@ -570,7 +638,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void removeDestroyed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Destroyed", handler);
         } catch (JCNativeException jcne) {
@@ -580,7 +648,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void addHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HelpRequest", handler);
         } catch (JCNativeException jcne) {
@@ -590,7 +658,7 @@ public class TaskDialogPage extends NetObject  {
 
     public void removeHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HelpRequest", handler);
         } catch (JCNativeException jcne) {

@@ -171,10 +171,14 @@ public class ToolStripItemClickedEventArgs extends EventArgs  {
     
     public ToolStripItem getClickedItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClickedItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClickedItem");
+            retObjectClickedItem = classInstance.Get("ClickedItem");
+            JCObject val = (JCObject)retObjectClickedItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClickedItem != null ? retObjectClickedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

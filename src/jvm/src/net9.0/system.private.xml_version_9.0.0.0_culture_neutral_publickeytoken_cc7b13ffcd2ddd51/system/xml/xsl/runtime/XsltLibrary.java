@@ -157,9 +157,13 @@ public class XsltLibrary extends NetObject  {
     
     public boolean ElementAvailable(XmlQualifiedName name) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementAvailable = null;
         try {
-            return (boolean)classInstance.Invoke("ElementAvailable", name == null ? null : name.getJCOInstance());
+            retObjectElementAvailable = classInstance.Invoke("ElementAvailable", name == null ? null : name.getJCOInstance());
+            return (boolean)retObjectElementAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectElementAvailable != null ? retObjectElementAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class XsltLibrary extends NetObject  {
 
     public boolean FunctionAvailable(XmlQualifiedName name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunctionAvailable = null;
         try {
-            return (boolean)classInstance.Invoke("FunctionAvailable", name == null ? null : name.getJCOInstance());
+            retObjectFunctionAvailable = classInstance.Invoke("FunctionAvailable", name == null ? null : name.getJCOInstance());
+            return (boolean)retObjectFunctionAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFunctionAvailable != null ? retObjectFunctionAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class XsltLibrary extends NetObject  {
 
     public boolean IsSameNodeSort(XPathNavigator nav1, XPathNavigator nav2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSameNodeSort = null;
         try {
-            return (boolean)classInstance.Invoke("IsSameNodeSort", nav1 == null ? null : nav1.getJCOInstance(), nav2 == null ? null : nav2.getJCOInstance());
+            retObjectIsSameNodeSort = classInstance.Invoke("IsSameNodeSort", nav1 == null ? null : nav1.getJCOInstance(), nav2 == null ? null : nav2.getJCOInstance());
+            return (boolean)retObjectIsSameNodeSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSameNodeSort != null ? retObjectIsSameNodeSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,19 @@ public class XsltLibrary extends NetObject  {
 
     public double RegisterDecimalFormatter(java.lang.String formatPicture, java.lang.String infinitySymbol, java.lang.String nanSymbol, java.lang.String characters) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegisterDecimalFormatter = null;
         try {
-            return (double)classInstance.Invoke("RegisterDecimalFormatter", formatPicture, infinitySymbol, nanSymbol, characters);
+            retObjectRegisterDecimalFormatter = classInstance.Invoke("RegisterDecimalFormatter", formatPicture, infinitySymbol, nanSymbol, characters);
+            return (double)retObjectRegisterDecimalFormatter;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRegisterDecimalFormatterNumber = (java.lang.Number)retObjectRegisterDecimalFormatter;
+                return retObjectRegisterDecimalFormatterNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormatter != null ? retObjectRegisterDecimalFormatter.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +219,19 @@ public class XsltLibrary extends NetObject  {
 
     public int CheckScriptNamespace(java.lang.String nsUri) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckScriptNamespace = null;
         try {
-            return (int)classInstance.Invoke("CheckScriptNamespace", nsUri);
+            retObjectCheckScriptNamespace = classInstance.Invoke("CheckScriptNamespace", nsUri);
+            return (int)retObjectCheckScriptNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCheckScriptNamespaceNumber = (java.lang.Number)retObjectCheckScriptNamespace;
+                return retObjectCheckScriptNamespaceNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCheckScriptNamespace != null ? retObjectCheckScriptNamespace.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +239,19 @@ public class XsltLibrary extends NetObject  {
 
     public int LangToLcid(java.lang.String lang, boolean forwardCompatibility) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLangToLcid = null;
         try {
-            return (int)classInstance.Invoke("LangToLcid", lang, forwardCompatibility);
+            retObjectLangToLcid = classInstance.Invoke("LangToLcid", lang, forwardCompatibility);
+            return (int)retObjectLangToLcid;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLangToLcidNumber = (java.lang.Number)retObjectLangToLcid;
+                return retObjectLangToLcidNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLangToLcid != null ? retObjectLangToLcid.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +259,19 @@ public class XsltLibrary extends NetObject  {
 
     public int RegisterDecimalFormat(XmlQualifiedName name, java.lang.String infinitySymbol, java.lang.String nanSymbol, java.lang.String characters) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegisterDecimalFormat = null;
         try {
-            return (int)classInstance.Invoke("RegisterDecimalFormat", name == null ? null : name.getJCOInstance(), infinitySymbol, nanSymbol, characters);
+            retObjectRegisterDecimalFormat = classInstance.Invoke("RegisterDecimalFormat", name == null ? null : name.getJCOInstance(), infinitySymbol, nanSymbol, characters);
+            return (int)retObjectRegisterDecimalFormat;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRegisterDecimalFormatNumber = (java.lang.Number)retObjectRegisterDecimalFormat;
+                return retObjectRegisterDecimalFormatNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRegisterDecimalFormat != null ? retObjectRegisterDecimalFormat.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +279,13 @@ public class XsltLibrary extends NetObject  {
 
     public java.lang.String FormatNumberDynamic(double value, java.lang.String formatPicture, XmlQualifiedName decimalFormatName, java.lang.String errorMessageName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatNumberDynamic = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatNumberDynamic", value, formatPicture, decimalFormatName == null ? null : decimalFormatName.getJCOInstance(), errorMessageName);
+            retObjectFormatNumberDynamic = classInstance.Invoke("FormatNumberDynamic", value, formatPicture, decimalFormatName == null ? null : decimalFormatName.getJCOInstance(), errorMessageName);
+            return (java.lang.String)retObjectFormatNumberDynamic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatNumberDynamic != null ? retObjectFormatNumberDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +293,13 @@ public class XsltLibrary extends NetObject  {
 
     public java.lang.String FormatNumberStatic(double value, double decimalFormatterIndex) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatNumberStatic = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatNumberStatic", value, decimalFormatterIndex);
+            retObjectFormatNumberStatic = classInstance.Invoke("FormatNumberStatic", value, decimalFormatterIndex);
+            return (java.lang.String)retObjectFormatNumberStatic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatNumberStatic != null ? retObjectFormatNumberStatic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,10 +162,14 @@ public class XmlAttribute extends XmlNode  {
     
     public XmlNode AppendChild(XmlNode newChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendChild = null;
         try {
-            JCObject objAppendChild = (JCObject)classInstance.Invoke("AppendChild", newChild == null ? null : newChild.getJCOInstance());
+            retObjectAppendChild = classInstance.Invoke("AppendChild", newChild == null ? null : newChild.getJCOInstance());
+            JCObject objAppendChild = (JCObject)retObjectAppendChild;
             return new XmlNode(objAppendChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendChild != null ? retObjectAppendChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class XmlAttribute extends XmlNode  {
 
     public XmlNode CloneNode(boolean deep) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneNode = null;
         try {
-            JCObject objCloneNode = (JCObject)classInstance.Invoke("CloneNode", deep);
+            retObjectCloneNode = classInstance.Invoke("CloneNode", deep);
+            JCObject objCloneNode = (JCObject)retObjectCloneNode;
             return new XmlNode(objCloneNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneNode != null ? retObjectCloneNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class XmlAttribute extends XmlNode  {
 
     public XmlNode InsertAfter(XmlNode newChild, XmlNode refChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertAfter = null;
         try {
-            JCObject objInsertAfter = (JCObject)classInstance.Invoke("InsertAfter", newChild == null ? null : newChild.getJCOInstance(), refChild == null ? null : refChild.getJCOInstance());
+            retObjectInsertAfter = classInstance.Invoke("InsertAfter", newChild == null ? null : newChild.getJCOInstance(), refChild == null ? null : refChild.getJCOInstance());
+            JCObject objInsertAfter = (JCObject)retObjectInsertAfter;
             return new XmlNode(objInsertAfter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertAfter != null ? retObjectInsertAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class XmlAttribute extends XmlNode  {
 
     public XmlNode InsertBefore(XmlNode newChild, XmlNode refChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertBefore = null;
         try {
-            JCObject objInsertBefore = (JCObject)classInstance.Invoke("InsertBefore", newChild == null ? null : newChild.getJCOInstance(), refChild == null ? null : refChild.getJCOInstance());
+            retObjectInsertBefore = classInstance.Invoke("InsertBefore", newChild == null ? null : newChild.getJCOInstance(), refChild == null ? null : refChild.getJCOInstance());
+            JCObject objInsertBefore = (JCObject)retObjectInsertBefore;
             return new XmlNode(objInsertBefore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertBefore != null ? retObjectInsertBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class XmlAttribute extends XmlNode  {
 
     public XmlNode PrependChild(XmlNode newChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrependChild = null;
         try {
-            JCObject objPrependChild = (JCObject)classInstance.Invoke("PrependChild", newChild == null ? null : newChild.getJCOInstance());
+            retObjectPrependChild = classInstance.Invoke("PrependChild", newChild == null ? null : newChild.getJCOInstance());
+            JCObject objPrependChild = (JCObject)retObjectPrependChild;
             return new XmlNode(objPrependChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrependChild != null ? retObjectPrependChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +237,14 @@ public class XmlAttribute extends XmlNode  {
 
     public XmlNode RemoveChild(XmlNode oldChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveChild = null;
         try {
-            JCObject objRemoveChild = (JCObject)classInstance.Invoke("RemoveChild", oldChild == null ? null : oldChild.getJCOInstance());
+            retObjectRemoveChild = classInstance.Invoke("RemoveChild", oldChild == null ? null : oldChild.getJCOInstance());
+            JCObject objRemoveChild = (JCObject)retObjectRemoveChild;
             return new XmlNode(objRemoveChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveChild != null ? retObjectRemoveChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class XmlAttribute extends XmlNode  {
 
     public XmlNode ReplaceChild(XmlNode newChild, XmlNode oldChild) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplaceChild = null;
         try {
-            JCObject objReplaceChild = (JCObject)classInstance.Invoke("ReplaceChild", newChild == null ? null : newChild.getJCOInstance(), oldChild == null ? null : oldChild.getJCOInstance());
+            retObjectReplaceChild = classInstance.Invoke("ReplaceChild", newChild == null ? null : newChild.getJCOInstance(), oldChild == null ? null : oldChild.getJCOInstance());
+            JCObject objReplaceChild = (JCObject)retObjectReplaceChild;
             return new XmlNode(objReplaceChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplaceChild != null ? retObjectReplaceChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +267,7 @@ public class XmlAttribute extends XmlNode  {
 
     public void WriteContentTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteContentTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +277,7 @@ public class XmlAttribute extends XmlNode  {
 
     public void WriteTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,9 +291,13 @@ public class XmlAttribute extends XmlNode  {
     
     public boolean getSpecified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpecified = null;
         try {
-            return (boolean)classInstance.Get("Specified");
+            retObjectSpecified = classInstance.Get("Specified");
+            return (boolean)retObjectSpecified;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSpecified != null ? retObjectSpecified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +305,14 @@ public class XmlAttribute extends XmlNode  {
 
     public XmlElement getOwnerElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerElement");
+            retObjectOwnerElement = classInstance.Get("OwnerElement");
+            JCObject val = (JCObject)retObjectOwnerElement;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerElement != null ? retObjectOwnerElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

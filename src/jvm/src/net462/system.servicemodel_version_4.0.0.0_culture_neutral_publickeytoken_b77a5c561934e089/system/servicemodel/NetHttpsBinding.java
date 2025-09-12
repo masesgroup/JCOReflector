@@ -198,9 +198,13 @@ public class NetHttpsBinding extends HttpBindingBase  {
     
     public boolean ShouldSerializeReliableSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeReliableSession = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeReliableSession");
+            retObjectShouldSerializeReliableSession = classInstance.Invoke("ShouldSerializeReliableSession");
+            return (boolean)retObjectShouldSerializeReliableSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeReliableSession != null ? retObjectShouldSerializeReliableSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +212,13 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public boolean ShouldSerializeSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeSecurity = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeSecurity");
+            retObjectShouldSerializeSecurity = classInstance.Invoke("ShouldSerializeSecurity");
+            return (boolean)retObjectShouldSerializeSecurity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeSecurity != null ? retObjectShouldSerializeSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +226,14 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public BindingElementCollection CreateBindingElements() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBindingElements = null;
         try {
-            JCObject objCreateBindingElements = (JCObject)classInstance.Invoke("CreateBindingElements");
+            retObjectCreateBindingElements = classInstance.Invoke("CreateBindingElements");
+            JCObject objCreateBindingElements = (JCObject)retObjectCreateBindingElements;
             return new BindingElementCollection(objCreateBindingElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +245,14 @@ public class NetHttpsBinding extends HttpBindingBase  {
     
     public BasicHttpsSecurity getSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Security");
+            retObjectSecurity = classInstance.Get("Security");
+            JCObject val = (JCObject)retObjectSecurity;
             return new BasicHttpsSecurity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurity != null ? retObjectSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public void setSecurity(BasicHttpsSecurity Security) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Security", Security == null ? null : Security.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,10 +270,14 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public WebSocketTransportSettings getWebSocketSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebSocketSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebSocketSettings");
+            retObjectWebSocketSettings = classInstance.Get("WebSocketSettings");
+            JCObject val = (JCObject)retObjectWebSocketSettings;
             return new WebSocketTransportSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebSocketSettings != null ? retObjectWebSocketSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +285,14 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public NetHttpMessageEncoding getMessageEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageEncoding");
+            retObjectMessageEncoding = classInstance.Get("MessageEncoding");
+            JCObject val = (JCObject)retObjectMessageEncoding;
             return new NetHttpMessageEncoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageEncoding != null ? retObjectMessageEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public void setMessageEncoding(NetHttpMessageEncoding MessageEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageEncoding", MessageEncoding == null ? null : MessageEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +310,14 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public OptionalReliableSession getReliableSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReliableSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReliableSession");
+            retObjectReliableSession = classInstance.Get("ReliableSession");
+            JCObject val = (JCObject)retObjectReliableSession;
             return new OptionalReliableSession(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReliableSession != null ? retObjectReliableSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class NetHttpsBinding extends HttpBindingBase  {
 
     public void setReliableSession(OptionalReliableSession ReliableSession) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReliableSession", ReliableSession == null ? null : ReliableSession.getJCOInstance());
         } catch (JCNativeException jcne) {

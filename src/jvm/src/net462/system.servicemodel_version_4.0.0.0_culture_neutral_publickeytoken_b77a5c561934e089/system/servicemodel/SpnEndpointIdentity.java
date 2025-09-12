@@ -182,10 +182,14 @@ public class SpnEndpointIdentity extends EndpointIdentity  {
     
     public static TimeSpan getSpnLookupTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpnLookupTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("SpnLookupTime");
+            retObjectSpnLookupTime = classType.Get("SpnLookupTime");
+            JCObject val = (JCObject)retObjectSpnLookupTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpnLookupTime != null ? retObjectSpnLookupTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class SpnEndpointIdentity extends EndpointIdentity  {
 
     public static void setSpnLookupTime(TimeSpan SpnLookupTime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SpnLookupTime", SpnLookupTime == null ? null : SpnLookupTime.getJCOInstance());
         } catch (JCNativeException jcne) {

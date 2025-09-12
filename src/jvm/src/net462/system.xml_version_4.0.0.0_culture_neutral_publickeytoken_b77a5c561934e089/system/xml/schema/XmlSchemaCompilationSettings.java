@@ -165,9 +165,13 @@ public class XmlSchemaCompilationSettings extends NetObject  {
     
     public boolean getEnableUpaCheck() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableUpaCheck = null;
         try {
-            return (boolean)classInstance.Get("EnableUpaCheck");
+            retObjectEnableUpaCheck = classInstance.Get("EnableUpaCheck");
+            return (boolean)retObjectEnableUpaCheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableUpaCheck != null ? retObjectEnableUpaCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class XmlSchemaCompilationSettings extends NetObject  {
 
     public void setEnableUpaCheck(boolean EnableUpaCheck) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableUpaCheck", EnableUpaCheck);
         } catch (JCNativeException jcne) {

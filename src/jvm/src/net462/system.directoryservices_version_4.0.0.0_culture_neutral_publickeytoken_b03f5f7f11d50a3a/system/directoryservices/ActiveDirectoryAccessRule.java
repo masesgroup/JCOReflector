@@ -225,10 +225,14 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
     
     public ActiveDirectoryRights getActiveDirectoryRights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveDirectoryRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveDirectoryRights");
+            retObjectActiveDirectoryRights = classInstance.Get("ActiveDirectoryRights");
+            JCObject val = (JCObject)retObjectActiveDirectoryRights;
             return new ActiveDirectoryRights(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveDirectoryRights != null ? retObjectActiveDirectoryRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +240,14 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
 
     public ActiveDirectorySecurityInheritance getInheritanceType() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritanceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritanceType");
+            retObjectInheritanceType = classInstance.Get("InheritanceType");
+            JCObject val = (JCObject)retObjectInheritanceType;
             return new ActiveDirectorySecurityInheritance(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritanceType != null ? retObjectInheritanceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

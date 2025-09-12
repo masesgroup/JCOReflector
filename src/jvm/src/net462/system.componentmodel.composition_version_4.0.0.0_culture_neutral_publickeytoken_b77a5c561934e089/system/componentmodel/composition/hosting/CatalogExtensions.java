@@ -155,10 +155,14 @@ public class CatalogExtensions extends NetObject  {
     
     public static CompositionService CreateCompositionService(ComposablePartCatalog composablePartCatalog) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.composition.ChangeRejectedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ImportCardinalityMismatchException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCompositionService = null;
         try {
-            JCObject objCreateCompositionService = (JCObject)classType.Invoke("CreateCompositionService", composablePartCatalog == null ? null : composablePartCatalog.getJCOInstance());
+            retObjectCreateCompositionService = classType.Invoke("CreateCompositionService", composablePartCatalog == null ? null : composablePartCatalog.getJCOInstance());
+            JCObject objCreateCompositionService = (JCObject)retObjectCreateCompositionService;
             return new CompositionService(objCreateCompositionService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCompositionService != null ? retObjectCreateCompositionService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

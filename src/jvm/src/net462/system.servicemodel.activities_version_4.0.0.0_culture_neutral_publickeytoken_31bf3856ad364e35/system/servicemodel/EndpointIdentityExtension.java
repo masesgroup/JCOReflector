@@ -175,10 +175,14 @@ public class EndpointIdentityExtension extends MarkupExtension  {
     
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideValue = null;
         try {
-            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectProvideValue = classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objProvideValue = (JCObject)retObjectProvideValue;
             return new NetObject(objProvideValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvideValue != null ? retObjectProvideValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class EndpointIdentityExtension extends MarkupExtension  {
     
     public NetObject getClaimResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimResource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClaimResource");
+            retObjectClaimResource = classInstance.Get("ClaimResource");
+            JCObject val = (JCObject)retObjectClaimResource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimResource != null ? retObjectClaimResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class EndpointIdentityExtension extends MarkupExtension  {
 
     public void setClaimResource(NetObject ClaimResource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClaimResource", ClaimResource == null ? null : ClaimResource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,9 +219,13 @@ public class EndpointIdentityExtension extends MarkupExtension  {
 
     public java.lang.String getClaimRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimRight = null;
         try {
-            return (java.lang.String)classInstance.Get("ClaimRight");
+            retObjectClaimRight = classInstance.Get("ClaimRight");
+            return (java.lang.String)retObjectClaimRight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClaimRight != null ? retObjectClaimRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class EndpointIdentityExtension extends MarkupExtension  {
 
     public void setClaimRight(java.lang.String ClaimRight) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClaimRight", ClaimRight);
         } catch (JCNativeException jcne) {
@@ -231,9 +243,13 @@ public class EndpointIdentityExtension extends MarkupExtension  {
 
     public java.lang.String getClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("ClaimType");
+            retObjectClaimType = classInstance.Get("ClaimType");
+            return (java.lang.String)retObjectClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClaimType != null ? retObjectClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +257,7 @@ public class EndpointIdentityExtension extends MarkupExtension  {
 
     public void setClaimType(java.lang.String ClaimType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClaimType", ClaimType);
         } catch (JCNativeException jcne) {

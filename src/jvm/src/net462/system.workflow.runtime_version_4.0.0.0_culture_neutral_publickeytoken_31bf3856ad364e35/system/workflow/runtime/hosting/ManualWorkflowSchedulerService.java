@@ -184,9 +184,13 @@ public class ManualWorkflowSchedulerService extends WorkflowSchedulerService  {
     
     public boolean RunWorkflow(Guid workflowInstanceId) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.SystemException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRunWorkflow = null;
         try {
-            return (boolean)classInstance.Invoke("RunWorkflow", workflowInstanceId == null ? null : workflowInstanceId.getJCOInstance());
+            retObjectRunWorkflow = classInstance.Invoke("RunWorkflow", workflowInstanceId == null ? null : workflowInstanceId.getJCOInstance());
+            return (boolean)retObjectRunWorkflow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRunWorkflow != null ? retObjectRunWorkflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

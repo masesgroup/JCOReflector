@@ -170,9 +170,13 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
     
     public java.lang.String getCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            return (java.lang.String)retObjectCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public java.lang.String getCheckId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckId = null;
         try {
-            return (java.lang.String)classInstance.Get("CheckId");
+            retObjectCheckId = classInstance.Get("CheckId");
+            return (java.lang.String)retObjectCheckId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCheckId != null ? retObjectCheckId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public java.lang.String getJustification() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJustification = null;
         try {
-            return (java.lang.String)classInstance.Get("Justification");
+            retObjectJustification = classInstance.Get("Justification");
+            return (java.lang.String)retObjectJustification;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectJustification != null ? retObjectJustification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public void setJustification(java.lang.String Justification) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Justification", Justification);
         } catch (JCNativeException jcne) {
@@ -210,9 +222,13 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public java.lang.String getMessageId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageId = null;
         try {
-            return (java.lang.String)classInstance.Get("MessageId");
+            retObjectMessageId = classInstance.Get("MessageId");
+            return (java.lang.String)retObjectMessageId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageId != null ? retObjectMessageId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +236,7 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public void setMessageId(java.lang.String MessageId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageId", MessageId);
         } catch (JCNativeException jcne) {
@@ -230,9 +246,13 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public java.lang.String getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            return (java.lang.String)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            return (java.lang.String)retObjectScope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +260,7 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public void setScope(java.lang.String Scope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scope", Scope);
         } catch (JCNativeException jcne) {
@@ -250,9 +270,13 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public java.lang.String getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +284,7 @@ public class UnconditionalSuppressMessageAttribute extends Attribute  {
 
     public void setTarget(java.lang.String Target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {

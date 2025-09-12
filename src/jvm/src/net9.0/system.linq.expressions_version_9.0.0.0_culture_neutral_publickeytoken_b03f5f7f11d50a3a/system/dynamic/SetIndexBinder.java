@@ -156,10 +156,14 @@ public class SetIndexBinder extends DynamicMetaObjectBinder  {
     
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBind = null;
         try {
-            JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            retObjectBind = classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objBind = (JCObject)retObjectBind;
             return new DynamicMetaObject(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class SetIndexBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackSetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject value, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackSetIndex = null;
         try {
-            JCObject objFallbackSetIndex = (JCObject)classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            retObjectFallbackSetIndex = classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackSetIndex = (JCObject)retObjectFallbackSetIndex;
             return new DynamicMetaObject(objFallbackSetIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackSetIndex != null ? retObjectFallbackSetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class SetIndexBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackSetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackSetIndex = null;
         try {
-            JCObject objFallbackSetIndex = (JCObject)classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            retObjectFallbackSetIndex = classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            JCObject objFallbackSetIndex = (JCObject)retObjectFallbackSetIndex;
             return new DynamicMetaObject(objFallbackSetIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackSetIndex != null ? retObjectFallbackSetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class SetIndexBinder extends DynamicMetaObjectBinder  {
     
     public CallInfo getCallInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallInfo");
+            retObjectCallInfo = classInstance.Get("CallInfo");
+            JCObject val = (JCObject)retObjectCallInfo;
             return new CallInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallInfo != null ? retObjectCallInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

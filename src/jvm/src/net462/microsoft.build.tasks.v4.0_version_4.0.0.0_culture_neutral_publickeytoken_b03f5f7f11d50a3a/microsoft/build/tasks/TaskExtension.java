@@ -159,10 +159,14 @@ public class TaskExtension extends Task  {
     
     public TaskLoggingHelper getLog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Log");
+            retObjectLog = classInstance.Get("Log");
+            JCObject val = (JCObject)retObjectLog;
             return new TaskLoggingHelper(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

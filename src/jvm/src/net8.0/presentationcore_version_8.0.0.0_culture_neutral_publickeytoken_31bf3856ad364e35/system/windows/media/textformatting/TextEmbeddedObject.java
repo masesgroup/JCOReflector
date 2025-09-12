@@ -159,10 +159,14 @@ public class TextEmbeddedObject extends TextRun  {
     
     public TextEmbeddedObjectMetrics Format(double remainingParagraphWidth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            JCObject objFormat = (JCObject)classInstance.Invoke("Format", remainingParagraphWidth);
+            retObjectFormat = classInstance.Invoke("Format", remainingParagraphWidth);
+            JCObject objFormat = (JCObject)retObjectFormat;
             return new TextEmbeddedObjectMetrics(objFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class TextEmbeddedObject extends TextRun  {
 
     public Rect ComputeBoundingBox(boolean rightToLeft, boolean sideways) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComputeBoundingBox = null;
         try {
-            JCObject objComputeBoundingBox = (JCObject)classInstance.Invoke("ComputeBoundingBox", rightToLeft, sideways);
+            retObjectComputeBoundingBox = classInstance.Invoke("ComputeBoundingBox", rightToLeft, sideways);
+            JCObject objComputeBoundingBox = (JCObject)retObjectComputeBoundingBox;
             return new Rect(objComputeBoundingBox);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeBoundingBox != null ? retObjectComputeBoundingBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class TextEmbeddedObject extends TextRun  {
 
     public void Draw(DrawingContext drawingContext, Point origin, boolean rightToLeft, boolean sideways) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", drawingContext == null ? null : drawingContext.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), rightToLeft, sideways);
         } catch (JCNativeException jcne) {
@@ -195,9 +203,13 @@ public class TextEmbeddedObject extends TextRun  {
     
     public boolean getHasFixedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFixedSize = null;
         try {
-            return (boolean)classInstance.Get("HasFixedSize");
+            retObjectHasFixedSize = classInstance.Get("HasFixedSize");
+            return (boolean)retObjectHasFixedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasFixedSize != null ? retObjectHasFixedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class TextEmbeddedObject extends TextRun  {
 
     public LineBreakCondition getBreakAfter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakAfter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BreakAfter");
+            retObjectBreakAfter = classInstance.Get("BreakAfter");
+            JCObject val = (JCObject)retObjectBreakAfter;
             return new LineBreakCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreakAfter != null ? retObjectBreakAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class TextEmbeddedObject extends TextRun  {
 
     public LineBreakCondition getBreakBefore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakBefore = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BreakBefore");
+            retObjectBreakBefore = classInstance.Get("BreakBefore");
+            JCObject val = (JCObject)retObjectBreakBefore;
             return new LineBreakCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreakBefore != null ? retObjectBreakBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

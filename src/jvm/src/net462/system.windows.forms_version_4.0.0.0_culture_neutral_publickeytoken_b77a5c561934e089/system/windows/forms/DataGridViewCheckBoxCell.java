@@ -176,10 +176,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
     
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.MulticastNotSupportedException, system.RankException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public NetObject GetEditingCellFormattedValue(DataGridViewDataErrorContexts context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditingCellFormattedValue = null;
         try {
-            JCObject objGetEditingCellFormattedValue = (JCObject)classInstance.Invoke("GetEditingCellFormattedValue", context == null ? null : context.getJCOInstance());
+            retObjectGetEditingCellFormattedValue = classInstance.Invoke("GetEditingCellFormattedValue", context == null ? null : context.getJCOInstance());
+            JCObject objGetEditingCellFormattedValue = (JCObject)retObjectGetEditingCellFormattedValue;
             return new NetObject(objGetEditingCellFormattedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditingCellFormattedValue != null ? retObjectGetEditingCellFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public NetObject ParseFormattedValue(NetObject formattedValue, DataGridViewCellStyle cellStyle, TypeConverter formattedValueTypeConverter, TypeConverter valueTypeConverter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseFormattedValue = null;
         try {
-            JCObject objParseFormattedValue = (JCObject)classInstance.Invoke("ParseFormattedValue", formattedValue == null ? null : formattedValue.getJCOInstance(), cellStyle == null ? null : cellStyle.getJCOInstance(), formattedValueTypeConverter == null ? null : formattedValueTypeConverter.getJCOInstance(), valueTypeConverter == null ? null : valueTypeConverter.getJCOInstance());
+            retObjectParseFormattedValue = classInstance.Invoke("ParseFormattedValue", formattedValue == null ? null : formattedValue.getJCOInstance(), cellStyle == null ? null : cellStyle.getJCOInstance(), formattedValueTypeConverter == null ? null : formattedValueTypeConverter.getJCOInstance(), valueTypeConverter == null ? null : valueTypeConverter.getJCOInstance());
+            JCObject objParseFormattedValue = (JCObject)retObjectParseFormattedValue;
             return new NetObject(objParseFormattedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseFormattedValue != null ? retObjectParseFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void PrepareEditingCellForEdit(boolean selectAll) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrepareEditingCellForEdit", selectAll);
         } catch (JCNativeException jcne) {
@@ -223,9 +235,13 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
     
     public boolean getEditingCellValueChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingCellValueChanged = null;
         try {
-            return (boolean)classInstance.Get("EditingCellValueChanged");
+            retObjectEditingCellValueChanged = classInstance.Get("EditingCellValueChanged");
+            return (boolean)retObjectEditingCellValueChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEditingCellValueChanged != null ? retObjectEditingCellValueChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +249,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void setEditingCellValueChanged(boolean EditingCellValueChanged) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingCellValueChanged", EditingCellValueChanged);
         } catch (JCNativeException jcne) {
@@ -243,9 +259,13 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public boolean getThreeState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreeState = null;
         try {
-            return (boolean)classInstance.Get("ThreeState");
+            retObjectThreeState = classInstance.Get("ThreeState");
+            return (boolean)retObjectThreeState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectThreeState != null ? retObjectThreeState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +273,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void setThreeState(boolean ThreeState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThreeState", ThreeState);
         } catch (JCNativeException jcne) {
@@ -263,10 +283,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public NetObject getEditingCellFormattedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditingCellFormattedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditingCellFormattedValue");
+            retObjectEditingCellFormattedValue = classInstance.Get("EditingCellFormattedValue");
+            JCObject val = (JCObject)retObjectEditingCellFormattedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditingCellFormattedValue != null ? retObjectEditingCellFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +298,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void setEditingCellFormattedValue(NetObject EditingCellFormattedValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditingCellFormattedValue", EditingCellFormattedValue == null ? null : EditingCellFormattedValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +308,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public NetObject getFalseValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFalseValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FalseValue");
+            retObjectFalseValue = classInstance.Get("FalseValue");
+            JCObject val = (JCObject)retObjectFalseValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFalseValue != null ? retObjectFalseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void setFalseValue(NetObject FalseValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FalseValue", FalseValue == null ? null : FalseValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +333,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public NetObject getIndeterminateValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndeterminateValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IndeterminateValue");
+            retObjectIndeterminateValue = classInstance.Get("IndeterminateValue");
+            JCObject val = (JCObject)retObjectIndeterminateValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndeterminateValue != null ? retObjectIndeterminateValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +348,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void setIndeterminateValue(NetObject IndeterminateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndeterminateValue", IndeterminateValue == null ? null : IndeterminateValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,10 +358,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public NetObject getTrueValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrueValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrueValue");
+            retObjectTrueValue = classInstance.Get("TrueValue");
+            JCObject val = (JCObject)retObjectTrueValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrueValue != null ? retObjectTrueValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +373,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void setTrueValue(NetObject TrueValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrueValue", TrueValue == null ? null : TrueValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,10 +383,14 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public FlatStyle getFlatStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlatStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlatStyle");
+            retObjectFlatStyle = classInstance.Get("FlatStyle");
+            JCObject val = (JCObject)retObjectFlatStyle;
             return new FlatStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlatStyle != null ? retObjectFlatStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +398,7 @@ public class DataGridViewCheckBoxCell extends DataGridViewCell  {
 
     public void setFlatStyle(FlatStyle FlatStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlatStyle", FlatStyle == null ? null : FlatStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

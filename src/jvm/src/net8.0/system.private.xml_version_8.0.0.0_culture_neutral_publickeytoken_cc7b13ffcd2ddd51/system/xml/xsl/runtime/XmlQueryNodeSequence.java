@@ -193,10 +193,14 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
     
     public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq, XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrReuse = null;
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), navigator == null ? null : navigator.getJCOInstance());
+            retObjectCreateOrReuse = classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), navigator == null ? null : navigator.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)retObjectCreateOrReuse;
             return new XmlQueryNodeSequence(objCreateOrReuse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrReuse != null ? retObjectCreateOrReuse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +208,14 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
 
     public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrReuse = null;
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
+            retObjectCreateOrReuse = classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)retObjectCreateOrReuse;
             return new XmlQueryNodeSequence(objCreateOrReuse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrReuse != null ? retObjectCreateOrReuse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
 
     public void AddClone(XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClone", navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,9 +237,13 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
     
     public boolean getIsDocOrderDistinct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDocOrderDistinct = null;
         try {
-            return (boolean)classInstance.Get("IsDocOrderDistinct");
+            retObjectIsDocOrderDistinct = classInstance.Get("IsDocOrderDistinct");
+            return (boolean)retObjectIsDocOrderDistinct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDocOrderDistinct != null ? retObjectIsDocOrderDistinct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +251,7 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
 
     public void setIsDocOrderDistinct(boolean IsDocOrderDistinct) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDocOrderDistinct", IsDocOrderDistinct);
         } catch (JCNativeException jcne) {

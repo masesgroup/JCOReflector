@@ -169,10 +169,14 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public java.lang.String getAll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAll = null;
         try {
-            return (java.lang.String)classInstance.Get("All");
+            retObjectAll = classInstance.Get("All");
+            return (java.lang.String)retObjectAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAll(java.lang.String All) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("All", All);
         } catch (JCNativeException jcne) {
@@ -204,9 +212,13 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getChangeAccessControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeAccessControl = null;
         try {
-            return (java.lang.String)classInstance.Get("ChangeAccessControl");
+            retObjectChangeAccessControl = classInstance.Get("ChangeAccessControl");
+            return (java.lang.String)retObjectChangeAccessControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectChangeAccessControl != null ? retObjectChangeAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setChangeAccessControl(java.lang.String ChangeAccessControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChangeAccessControl", ChangeAccessControl);
         } catch (JCNativeException jcne) {
@@ -224,9 +236,13 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getCreate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            return (java.lang.String)classInstance.Get("Create");
+            retObjectCreate = classInstance.Get("Create");
+            return (java.lang.String)retObjectCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setCreate(java.lang.String Create) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Create", Create);
         } catch (JCNativeException jcne) {
@@ -244,9 +260,13 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (java.lang.String)classInstance.Get("Read");
+            retObjectRead = classInstance.Get("Read");
+            return (java.lang.String)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +274,7 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setRead(java.lang.String Read) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Read", Read);
         } catch (JCNativeException jcne) {
@@ -264,9 +284,13 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getViewAccessControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewAccessControl = null;
         try {
-            return (java.lang.String)classInstance.Get("ViewAccessControl");
+            retObjectViewAccessControl = classInstance.Get("ViewAccessControl");
+            return (java.lang.String)retObjectViewAccessControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectViewAccessControl != null ? retObjectViewAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +298,7 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setViewAccessControl(java.lang.String ViewAccessControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewAccessControl", ViewAccessControl);
         } catch (JCNativeException jcne) {
@@ -284,9 +308,13 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getViewAndModify() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewAndModify = null;
         try {
-            return (java.lang.String)classInstance.Get("ViewAndModify");
+            retObjectViewAndModify = classInstance.Get("ViewAndModify");
+            return (java.lang.String)retObjectViewAndModify;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectViewAndModify != null ? retObjectViewAndModify.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +322,7 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setViewAndModify(java.lang.String ViewAndModify) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewAndModify", ViewAndModify);
         } catch (JCNativeException jcne) {
@@ -304,9 +332,13 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getWrite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrite = null;
         try {
-            return (java.lang.String)classInstance.Get("Write");
+            retObjectWrite = classInstance.Get("Write");
+            return (java.lang.String)retObjectWrite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrite != null ? retObjectWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +346,7 @@ public class RegistryPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setWrite(java.lang.String Write) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Write", Write);
         } catch (JCNativeException jcne) {

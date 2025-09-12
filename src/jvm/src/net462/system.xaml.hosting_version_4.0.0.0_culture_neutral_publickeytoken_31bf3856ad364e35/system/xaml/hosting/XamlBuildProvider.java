@@ -165,10 +165,14 @@ public class XamlBuildProvider extends BuildProvider  {
     
     public NetType GetGeneratedType(CompilerResults results) throws Throwable, system.web.HttpException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeneratedType = null;
         try {
-            JCObject objGetGeneratedType = (JCObject)classInstance.Invoke("GetGeneratedType", results == null ? null : results.getJCOInstance());
+            retObjectGetGeneratedType = classInstance.Invoke("GetGeneratedType", results == null ? null : results.getJCOInstance());
+            JCObject objGetGeneratedType = (JCObject)retObjectGetGeneratedType;
             return new NetType(objGetGeneratedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeneratedType != null ? retObjectGetGeneratedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class XamlBuildProvider extends BuildProvider  {
 
     public BuildProviderResultFlags GetResultFlags(CompilerResults results) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResultFlags = null;
         try {
-            JCObject objGetResultFlags = (JCObject)classInstance.Invoke("GetResultFlags", results == null ? null : results.getJCOInstance());
+            retObjectGetResultFlags = classInstance.Invoke("GetResultFlags", results == null ? null : results.getJCOInstance());
+            JCObject objGetResultFlags = (JCObject)retObjectGetResultFlags;
             return new BuildProviderResultFlags(objGetResultFlags);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResultFlags != null ? retObjectGetResultFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class XamlBuildProvider extends BuildProvider  {
 
     public void GenerateCode(AssemblyBuilder assemblyBuilder) throws Throwable, system.web.HttpException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCode", assemblyBuilder == null ? null : assemblyBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {

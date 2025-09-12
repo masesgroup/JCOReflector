@@ -175,9 +175,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
     
     public boolean getIsClientConnected() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClientConnected = null;
         try {
-            return (boolean)classInstance.Get("IsClientConnected");
+            retObjectIsClientConnected = classInstance.Get("IsClientConnected");
+            return (boolean)retObjectIsClientConnected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClientConnected != null ? retObjectIsClientConnected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public boolean getIsDebuggingEnabled() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDebuggingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsDebuggingEnabled");
+            retObjectIsDebuggingEnabled = classInstance.Get("IsDebuggingEnabled");
+            return (boolean)retObjectIsDebuggingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDebuggingEnabled != null ? retObjectIsDebuggingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +203,19 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public static int getConnectionCount() throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnectionCount = null;
         try {
-            return (int)classType.Get("ConnectionCount");
+            retObjectConnectionCount = classType.Get("ConnectionCount");
+            return (int)retObjectConnectionCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectConnectionCountNumber = (java.lang.Number)retObjectConnectionCount;
+                return retObjectConnectionCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectConnectionCount != null ? retObjectConnectionCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +223,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public IDictionary getItems() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +238,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public NameValueCollection getQueryString() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryString = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueryString");
+            retObjectQueryString = classInstance.Get("QueryString");
+            JCObject val = (JCObject)retObjectQueryString;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueryString != null ? retObjectQueryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +253,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public NameValueCollection getServerVariables() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerVariables = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServerVariables");
+            retObjectServerVariables = classInstance.Get("ServerVariables");
+            JCObject val = (JCObject)retObjectServerVariables;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServerVariables != null ? retObjectServerVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +268,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public DateTime getTimestamp() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            JCObject val = (JCObject)retObjectTimestamp;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +283,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public WindowsIdentity getLogonUserIdentity() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogonUserIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogonUserIdentity");
+            retObjectLogonUserIdentity = classInstance.Get("LogonUserIdentity");
+            JCObject val = (JCObject)retObjectLogonUserIdentity;
             return new WindowsIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogonUserIdentity != null ? retObjectLogonUserIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +298,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getAnonymousID() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnonymousID = null;
         try {
-            return (java.lang.String)classInstance.Get("AnonymousID");
+            retObjectAnonymousID = classInstance.Get("AnonymousID");
+            return (java.lang.String)retObjectAnonymousID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnonymousID != null ? retObjectAnonymousID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +312,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getApplicationPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationPath = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationPath");
+            retObjectApplicationPath = classInstance.Get("ApplicationPath");
+            return (java.lang.String)retObjectApplicationPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationPath != null ? retObjectApplicationPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +326,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getFilePath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilePath = null;
         try {
-            return (java.lang.String)classInstance.Get("FilePath");
+            retObjectFilePath = classInstance.Get("FilePath");
+            return (java.lang.String)retObjectFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilePath != null ? retObjectFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +340,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getPath() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +354,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getPathInfo() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathInfo = null;
         try {
-            return (java.lang.String)classInstance.Get("PathInfo");
+            retObjectPathInfo = classInstance.Get("PathInfo");
+            return (java.lang.String)retObjectPathInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathInfo != null ? retObjectPathInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +368,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getRawUrl() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("RawUrl");
+            retObjectRawUrl = classInstance.Get("RawUrl");
+            return (java.lang.String)retObjectRawUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRawUrl != null ? retObjectRawUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +382,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getUserAgent() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserAgent = null;
         try {
-            return (java.lang.String)classInstance.Get("UserAgent");
+            retObjectUserAgent = classInstance.Get("UserAgent");
+            return (java.lang.String)retObjectUserAgent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserAgent != null ? retObjectUserAgent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +396,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getUserHostAddress() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserHostAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("UserHostAddress");
+            retObjectUserHostAddress = classInstance.Get("UserHostAddress");
+            return (java.lang.String)retObjectUserHostAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserHostAddress != null ? retObjectUserHostAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +410,13 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String getUserHostName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserHostName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserHostName");
+            retObjectUserHostName = classInstance.Get("UserHostName");
+            return (java.lang.String)retObjectUserHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserHostName != null ? retObjectUserHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +424,12 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public java.lang.String[] getUserLanguages() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserLanguages = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("UserLanguages");
+            retObjectUserLanguages = classInstance.Get("UserLanguages");
+            JCObject resultingObjects = (JCObject)retObjectUserLanguages;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -362,6 +438,8 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 				resultingArray[indexUserLanguages] = (java.lang.String)resultingArrayList.get(indexUserLanguages);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectUserLanguages != null ? retObjectUserLanguages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +447,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public Uri getUrlReferrer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlReferrer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UrlReferrer");
+            retObjectUrlReferrer = classInstance.Get("UrlReferrer");
+            JCObject val = (JCObject)retObjectUrlReferrer;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUrlReferrer != null ? retObjectUrlReferrer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +462,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public Cache getCache() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cache");
+            retObjectCache = classInstance.Get("Cache");
+            JCObject val = (JCObject)retObjectCache;
             return new Cache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCache != null ? retObjectCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,10 +477,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public HttpApplicationStateBase getApplication() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Application");
+            retObjectApplication = classInstance.Get("Application");
+            JCObject val = (JCObject)retObjectApplication;
             return new HttpApplicationStateBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplication != null ? retObjectApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +492,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public HttpClientCertificate getClientCertificate() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificate");
+            retObjectClientCertificate = classInstance.Get("ClientCertificate");
+            JCObject val = (JCObject)retObjectClientCertificate;
             return new HttpClientCertificate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCertificate != null ? retObjectClientCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,10 +507,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public HttpCookieCollection getCookies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookies = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cookies");
+            retObjectCookies = classInstance.Get("Cookies");
+            JCObject val = (JCObject)retObjectCookies;
             return new HttpCookieCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCookies != null ? retObjectCookies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +522,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public HttpServerUtilityBase getServer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            JCObject val = (JCObject)retObjectServer;
             return new HttpServerUtilityBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +537,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public ProfileBase getProfile() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfile = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Profile");
+            retObjectProfile = classInstance.Get("Profile");
+            JCObject val = (JCObject)retObjectProfile;
             return new ProfileBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProfile != null ? retObjectProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +552,14 @@ public class AspNetWebSocketContext extends WebSocketContext  {
 
     public UnvalidatedRequestValuesBase getUnvalidated() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnvalidated = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Unvalidated");
+            retObjectUnvalidated = classInstance.Get("Unvalidated");
+            JCObject val = (JCObject)retObjectUnvalidated;
             return new UnvalidatedRequestValuesBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnvalidated != null ? retObjectUnvalidated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

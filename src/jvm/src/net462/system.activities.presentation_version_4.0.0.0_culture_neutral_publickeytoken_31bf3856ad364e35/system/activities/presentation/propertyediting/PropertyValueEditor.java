@@ -174,10 +174,14 @@ public class PropertyValueEditor extends NetObject  {
     
     public static EditorAttribute CreateEditorAttribute(PropertyValueEditor editor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEditorAttribute = null;
         try {
-            JCObject objCreateEditorAttribute = (JCObject)classType.Invoke("CreateEditorAttribute", editor == null ? null : editor.getJCOInstance());
+            retObjectCreateEditorAttribute = classType.Invoke("CreateEditorAttribute", editor == null ? null : editor.getJCOInstance());
+            JCObject objCreateEditorAttribute = (JCObject)retObjectCreateEditorAttribute;
             return new EditorAttribute(objCreateEditorAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEditorAttribute != null ? retObjectCreateEditorAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class PropertyValueEditor extends NetObject  {
 
     public static EditorAttribute CreateEditorAttribute(NetType propertyValueEditorType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEditorAttribute = null;
         try {
-            JCObject objCreateEditorAttribute = (JCObject)classType.Invoke("CreateEditorAttribute", propertyValueEditorType == null ? null : propertyValueEditorType.getJCOInstance());
+            retObjectCreateEditorAttribute = classType.Invoke("CreateEditorAttribute", propertyValueEditorType == null ? null : propertyValueEditorType.getJCOInstance());
+            JCObject objCreateEditorAttribute = (JCObject)retObjectCreateEditorAttribute;
             return new EditorAttribute(objCreateEditorAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEditorAttribute != null ? retObjectCreateEditorAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class PropertyValueEditor extends NetObject  {
     
     public DataTemplate getInlineEditorTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInlineEditorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InlineEditorTemplate");
+            retObjectInlineEditorTemplate = classInstance.Get("InlineEditorTemplate");
+            JCObject val = (JCObject)retObjectInlineEditorTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInlineEditorTemplate != null ? retObjectInlineEditorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class PropertyValueEditor extends NetObject  {
 
     public void setInlineEditorTemplate(DataTemplate InlineEditorTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InlineEditorTemplate", InlineEditorTemplate == null ? null : InlineEditorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

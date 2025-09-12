@@ -159,10 +159,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
     
     public Task CommitAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommitAsync = null;
         try {
-            JCObject objCommitAsync = (JCObject)classInstance.Invoke("CommitAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCommitAsync = classInstance.Invoke("CommitAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCommitAsync = (JCObject)retObjectCommitAsync;
             return new Task(objCommitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommitAsync != null ? retObjectCommitAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public Task ReleaseAsync(java.lang.String savepointName, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReleaseAsync = null;
         try {
-            JCObject objReleaseAsync = (JCObject)classInstance.Invoke("ReleaseAsync", savepointName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectReleaseAsync = classInstance.Invoke("ReleaseAsync", savepointName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReleaseAsync = (JCObject)retObjectReleaseAsync;
             return new Task(objReleaseAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReleaseAsync != null ? retObjectReleaseAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public Task RollbackAsync(java.lang.String savepointName, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRollbackAsync = null;
         try {
-            JCObject objRollbackAsync = (JCObject)classInstance.Invoke("RollbackAsync", savepointName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectRollbackAsync = classInstance.Invoke("RollbackAsync", savepointName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objRollbackAsync = (JCObject)retObjectRollbackAsync;
             return new Task(objRollbackAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRollbackAsync != null ? retObjectRollbackAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public Task RollbackAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRollbackAsync = null;
         try {
-            JCObject objRollbackAsync = (JCObject)classInstance.Invoke("RollbackAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectRollbackAsync = classInstance.Invoke("RollbackAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objRollbackAsync = (JCObject)retObjectRollbackAsync;
             return new Task(objRollbackAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRollbackAsync != null ? retObjectRollbackAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public Task SaveAsync(java.lang.String savepointName, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveAsync = null;
         try {
-            JCObject objSaveAsync = (JCObject)classInstance.Invoke("SaveAsync", savepointName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectSaveAsync = classInstance.Invoke("SaveAsync", savepointName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSaveAsync = (JCObject)retObjectSaveAsync;
             return new Task(objSaveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSaveAsync != null ? retObjectSaveAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public ValueTask DisposeAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +249,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public void Commit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -235,7 +259,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -245,7 +269,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public void Release(java.lang.String savepointName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Release", savepointName);
         } catch (JCNativeException jcne) {
@@ -255,7 +279,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public void Rollback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback");
         } catch (JCNativeException jcne) {
@@ -265,7 +289,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public void Rollback(java.lang.String savepointName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", savepointName);
         } catch (JCNativeException jcne) {
@@ -275,7 +299,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public void Save(java.lang.String savepointName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", savepointName);
         } catch (JCNativeException jcne) {
@@ -286,7 +310,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -302,9 +326,13 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
     
     public boolean getSupportsSavepoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsSavepoints = null;
         try {
-            return (boolean)classInstance.Get("SupportsSavepoints");
+            retObjectSupportsSavepoints = classInstance.Get("SupportsSavepoints");
+            return (boolean)retObjectSupportsSavepoints;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsSavepoints != null ? retObjectSupportsSavepoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +340,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public DbConnection getConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new DbConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +355,14 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
 
     public IsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsolationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
+            retObjectIsolationLevel = classInstance.Get("IsolationLevel");
+            JCObject val = (JCObject)retObjectIsolationLevel;
             return new IsolationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsolationLevel != null ? retObjectIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

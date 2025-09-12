@@ -143,7 +143,7 @@ public class IServiceContractGenerationExtensionImplementation extends NetObject
     
     public void GenerateContract(ServiceContractGenerationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateContract", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

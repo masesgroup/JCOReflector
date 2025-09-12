@@ -154,9 +154,13 @@ public class WebPartDisplayMode extends NetObject  {
     
     public boolean IsEnabled(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Invoke("IsEnabled", webPartManager == null ? null : webPartManager.getJCOInstance());
+            retObjectIsEnabled = classInstance.Invoke("IsEnabled", webPartManager == null ? null : webPartManager.getJCOInstance());
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class WebPartDisplayMode extends NetObject  {
     
     public boolean getAllowPageDesign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPageDesign = null;
         try {
-            return (boolean)classInstance.Get("AllowPageDesign");
+            retObjectAllowPageDesign = classInstance.Get("AllowPageDesign");
+            return (boolean)retObjectAllowPageDesign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPageDesign != null ? retObjectAllowPageDesign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class WebPartDisplayMode extends NetObject  {
 
     public boolean getAssociatedWithToolZone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedWithToolZone = null;
         try {
-            return (boolean)classInstance.Get("AssociatedWithToolZone");
+            retObjectAssociatedWithToolZone = classInstance.Get("AssociatedWithToolZone");
+            return (boolean)retObjectAssociatedWithToolZone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAssociatedWithToolZone != null ? retObjectAssociatedWithToolZone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class WebPartDisplayMode extends NetObject  {
 
     public boolean getRequiresPersonalization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresPersonalization = null;
         try {
-            return (boolean)classInstance.Get("RequiresPersonalization");
+            retObjectRequiresPersonalization = classInstance.Get("RequiresPersonalization");
+            return (boolean)retObjectRequiresPersonalization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresPersonalization != null ? retObjectRequiresPersonalization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class WebPartDisplayMode extends NetObject  {
 
     public boolean getShowHiddenWebParts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHiddenWebParts = null;
         try {
-            return (boolean)classInstance.Get("ShowHiddenWebParts");
+            retObjectShowHiddenWebParts = classInstance.Get("ShowHiddenWebParts");
+            return (boolean)retObjectShowHiddenWebParts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHiddenWebParts != null ? retObjectShowHiddenWebParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class WebPartDisplayMode extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

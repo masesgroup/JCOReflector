@@ -170,10 +170,14 @@ public class ContractClassForAttribute extends Attribute  {
     
     public NetType getTypeContractsAreFor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeContractsAreFor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeContractsAreFor");
+            retObjectTypeContractsAreFor = classInstance.Get("TypeContractsAreFor");
+            JCObject val = (JCObject)retObjectTypeContractsAreFor;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeContractsAreFor != null ? retObjectTypeContractsAreFor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

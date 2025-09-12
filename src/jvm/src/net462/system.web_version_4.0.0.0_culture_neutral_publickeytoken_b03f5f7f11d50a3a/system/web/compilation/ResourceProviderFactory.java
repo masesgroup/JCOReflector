@@ -155,10 +155,14 @@ public class ResourceProviderFactory extends NetObject  {
     
     public IResourceProvider CreateGlobalResourceProvider(java.lang.String classKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateGlobalResourceProvider = null;
         try {
-            JCObject objCreateGlobalResourceProvider = (JCObject)classInstance.Invoke("CreateGlobalResourceProvider", classKey);
+            retObjectCreateGlobalResourceProvider = classInstance.Invoke("CreateGlobalResourceProvider", classKey);
+            JCObject objCreateGlobalResourceProvider = (JCObject)retObjectCreateGlobalResourceProvider;
             return new IResourceProviderImplementation(objCreateGlobalResourceProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateGlobalResourceProvider != null ? retObjectCreateGlobalResourceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ResourceProviderFactory extends NetObject  {
 
     public IResourceProvider CreateLocalResourceProvider(java.lang.String virtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateLocalResourceProvider = null;
         try {
-            JCObject objCreateLocalResourceProvider = (JCObject)classInstance.Invoke("CreateLocalResourceProvider", virtualPath);
+            retObjectCreateLocalResourceProvider = classInstance.Invoke("CreateLocalResourceProvider", virtualPath);
+            JCObject objCreateLocalResourceProvider = (JCObject)retObjectCreateLocalResourceProvider;
             return new IResourceProviderImplementation(objCreateLocalResourceProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateLocalResourceProvider != null ? retObjectCreateLocalResourceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

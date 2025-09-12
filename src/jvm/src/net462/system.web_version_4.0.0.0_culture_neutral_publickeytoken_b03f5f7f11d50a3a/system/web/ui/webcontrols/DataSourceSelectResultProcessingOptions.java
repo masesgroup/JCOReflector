@@ -165,9 +165,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
     
     public boolean getAutoPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoPage = null;
         try {
-            return (boolean)classInstance.Get("AutoPage");
+            retObjectAutoPage = classInstance.Get("AutoPage");
+            return (boolean)retObjectAutoPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoPage != null ? retObjectAutoPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
 
     public void setAutoPage(boolean AutoPage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoPage", AutoPage);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
 
     public boolean getAutoSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSort = null;
         try {
-            return (boolean)classInstance.Get("AutoSort");
+            retObjectAutoSort = classInstance.Get("AutoSort");
+            return (boolean)retObjectAutoSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoSort != null ? retObjectAutoSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
 
     public void setAutoSort(boolean AutoSort) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSort", AutoSort);
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
 
     public NetType getModelType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelType");
+            retObjectModelType = classInstance.Get("ModelType");
+            JCObject val = (JCObject)retObjectModelType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelType != null ? retObjectModelType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class DataSourceSelectResultProcessingOptions extends NetObject  {
 
     public void setModelType(NetType ModelType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelType", ModelType == null ? null : ModelType.getJCOInstance());
         } catch (JCNativeException jcne) {

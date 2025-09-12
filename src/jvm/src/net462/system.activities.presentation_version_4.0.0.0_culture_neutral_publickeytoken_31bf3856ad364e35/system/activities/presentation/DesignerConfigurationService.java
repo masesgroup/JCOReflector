@@ -160,9 +160,13 @@ public class DesignerConfigurationService extends NetObject  {
     
     public boolean getAnnotationEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotationEnabled = null;
         try {
-            return (boolean)classInstance.Get("AnnotationEnabled");
+            retObjectAnnotationEnabled = classInstance.Get("AnnotationEnabled");
+            return (boolean)retObjectAnnotationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAnnotationEnabled != null ? retObjectAnnotationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setAnnotationEnabled(boolean AnnotationEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnnotationEnabled", AnnotationEnabled);
         } catch (JCNativeException jcne) {
@@ -180,9 +184,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getAutoConnectEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoConnectEnabled = null;
         try {
-            return (boolean)classInstance.Get("AutoConnectEnabled");
+            retObjectAutoConnectEnabled = classInstance.Get("AutoConnectEnabled");
+            return (boolean)retObjectAutoConnectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoConnectEnabled != null ? retObjectAutoConnectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setAutoConnectEnabled(boolean AutoConnectEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoConnectEnabled", AutoConnectEnabled);
         } catch (JCNativeException jcne) {
@@ -200,9 +208,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getAutoSplitEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSplitEnabled = null;
         try {
-            return (boolean)classInstance.Get("AutoSplitEnabled");
+            retObjectAutoSplitEnabled = classInstance.Get("AutoSplitEnabled");
+            return (boolean)retObjectAutoSplitEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoSplitEnabled != null ? retObjectAutoSplitEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setAutoSplitEnabled(boolean AutoSplitEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSplitEnabled", AutoSplitEnabled);
         } catch (JCNativeException jcne) {
@@ -220,9 +232,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getAutoSurroundWithSequenceEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSurroundWithSequenceEnabled = null;
         try {
-            return (boolean)classInstance.Get("AutoSurroundWithSequenceEnabled");
+            retObjectAutoSurroundWithSequenceEnabled = classInstance.Get("AutoSurroundWithSequenceEnabled");
+            return (boolean)retObjectAutoSurroundWithSequenceEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoSurroundWithSequenceEnabled != null ? retObjectAutoSurroundWithSequenceEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +246,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setAutoSurroundWithSequenceEnabled(boolean AutoSurroundWithSequenceEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSurroundWithSequenceEnabled", AutoSurroundWithSequenceEnabled);
         } catch (JCNativeException jcne) {
@@ -240,9 +256,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getBackgroundValidationEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundValidationEnabled = null;
         try {
-            return (boolean)classInstance.Get("BackgroundValidationEnabled");
+            retObjectBackgroundValidationEnabled = classInstance.Get("BackgroundValidationEnabled");
+            return (boolean)retObjectBackgroundValidationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBackgroundValidationEnabled != null ? retObjectBackgroundValidationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setBackgroundValidationEnabled(boolean BackgroundValidationEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundValidationEnabled", BackgroundValidationEnabled);
         } catch (JCNativeException jcne) {
@@ -260,9 +280,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getLoadingFromUntrustedSourceEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadingFromUntrustedSourceEnabled = null;
         try {
-            return (boolean)classInstance.Get("LoadingFromUntrustedSourceEnabled");
+            retObjectLoadingFromUntrustedSourceEnabled = classInstance.Get("LoadingFromUntrustedSourceEnabled");
+            return (boolean)retObjectLoadingFromUntrustedSourceEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLoadingFromUntrustedSourceEnabled != null ? retObjectLoadingFromUntrustedSourceEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +294,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setLoadingFromUntrustedSourceEnabled(boolean LoadingFromUntrustedSourceEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoadingFromUntrustedSourceEnabled", LoadingFromUntrustedSourceEnabled);
         } catch (JCNativeException jcne) {
@@ -280,9 +304,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getMultipleItemsContextMenuEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultipleItemsContextMenuEnabled = null;
         try {
-            return (boolean)classInstance.Get("MultipleItemsContextMenuEnabled");
+            retObjectMultipleItemsContextMenuEnabled = classInstance.Get("MultipleItemsContextMenuEnabled");
+            return (boolean)retObjectMultipleItemsContextMenuEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultipleItemsContextMenuEnabled != null ? retObjectMultipleItemsContextMenuEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +318,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setMultipleItemsContextMenuEnabled(boolean MultipleItemsContextMenuEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MultipleItemsContextMenuEnabled", MultipleItemsContextMenuEnabled);
         } catch (JCNativeException jcne) {
@@ -300,9 +328,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getMultipleItemsDragDropEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultipleItemsDragDropEnabled = null;
         try {
-            return (boolean)classInstance.Get("MultipleItemsDragDropEnabled");
+            retObjectMultipleItemsDragDropEnabled = classInstance.Get("MultipleItemsDragDropEnabled");
+            return (boolean)retObjectMultipleItemsDragDropEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultipleItemsDragDropEnabled != null ? retObjectMultipleItemsDragDropEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +342,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setMultipleItemsDragDropEnabled(boolean MultipleItemsDragDropEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MultipleItemsDragDropEnabled", MultipleItemsDragDropEnabled);
         } catch (JCNativeException jcne) {
@@ -320,9 +352,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getNamespaceConversionEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceConversionEnabled = null;
         try {
-            return (boolean)classInstance.Get("NamespaceConversionEnabled");
+            retObjectNamespaceConversionEnabled = classInstance.Get("NamespaceConversionEnabled");
+            return (boolean)retObjectNamespaceConversionEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNamespaceConversionEnabled != null ? retObjectNamespaceConversionEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +366,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setNamespaceConversionEnabled(boolean NamespaceConversionEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NamespaceConversionEnabled", NamespaceConversionEnabled);
         } catch (JCNativeException jcne) {
@@ -340,9 +376,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getPanModeEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPanModeEnabled = null;
         try {
-            return (boolean)classInstance.Get("PanModeEnabled");
+            retObjectPanModeEnabled = classInstance.Get("PanModeEnabled");
+            return (boolean)retObjectPanModeEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPanModeEnabled != null ? retObjectPanModeEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +390,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setPanModeEnabled(boolean PanModeEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PanModeEnabled", PanModeEnabled);
         } catch (JCNativeException jcne) {
@@ -360,9 +400,13 @@ public class DesignerConfigurationService extends NetObject  {
 
     public boolean getRubberBandSelectionEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRubberBandSelectionEnabled = null;
         try {
-            return (boolean)classInstance.Get("RubberBandSelectionEnabled");
+            retObjectRubberBandSelectionEnabled = classInstance.Get("RubberBandSelectionEnabled");
+            return (boolean)retObjectRubberBandSelectionEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRubberBandSelectionEnabled != null ? retObjectRubberBandSelectionEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +414,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setRubberBandSelectionEnabled(boolean RubberBandSelectionEnabled) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RubberBandSelectionEnabled", RubberBandSelectionEnabled);
         } catch (JCNativeException jcne) {
@@ -380,10 +424,14 @@ public class DesignerConfigurationService extends NetObject  {
 
     public FrameworkName getTargetFrameworkName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetFrameworkName");
+            retObjectTargetFrameworkName = classInstance.Get("TargetFrameworkName");
+            JCObject val = (JCObject)retObjectTargetFrameworkName;
             return new FrameworkName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetFrameworkName != null ? retObjectTargetFrameworkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +439,7 @@ public class DesignerConfigurationService extends NetObject  {
 
     public void setTargetFrameworkName(FrameworkName TargetFrameworkName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkName", TargetFrameworkName == null ? null : TargetFrameworkName.getJCOInstance());
         } catch (JCNativeException jcne) {

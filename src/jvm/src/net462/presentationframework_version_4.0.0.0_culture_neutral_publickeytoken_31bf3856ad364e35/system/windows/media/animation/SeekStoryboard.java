@@ -164,9 +164,13 @@ public class SeekStoryboard extends ControllableStoryboardAction  {
     
     public boolean ShouldSerializeOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeOffset = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeOffset");
+            retObjectShouldSerializeOffset = classInstance.Invoke("ShouldSerializeOffset");
+            return (boolean)retObjectShouldSerializeOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeOffset != null ? retObjectShouldSerializeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class SeekStoryboard extends ControllableStoryboardAction  {
     
     public TimeSpan getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            JCObject val = (JCObject)retObjectOffset;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class SeekStoryboard extends ControllableStoryboardAction  {
 
     public void setOffset(TimeSpan Offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset == null ? null : Offset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +207,14 @@ public class SeekStoryboard extends ControllableStoryboardAction  {
 
     public TimeSeekOrigin getOrigin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Origin");
+            retObjectOrigin = classInstance.Get("Origin");
+            JCObject val = (JCObject)retObjectOrigin;
             return new TimeSeekOrigin(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrigin != null ? retObjectOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class SeekStoryboard extends ControllableStoryboardAction  {
 
     public void setOrigin(TimeSeekOrigin Origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Origin", Origin == null ? null : Origin.getJCOInstance());
         } catch (JCNativeException jcne) {

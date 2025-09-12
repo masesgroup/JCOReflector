@@ -160,10 +160,14 @@ public class CompilerType extends NetObject  {
     
     public CompilerParameters getCompilerParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompilerParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompilerParameters");
+            retObjectCompilerParameters = classInstance.Get("CompilerParameters");
+            JCObject val = (JCObject)retObjectCompilerParameters;
             return new CompilerParameters(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompilerParameters != null ? retObjectCompilerParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class CompilerType extends NetObject  {
 
     public NetType getCodeDomProviderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeDomProviderType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeDomProviderType");
+            retObjectCodeDomProviderType = classInstance.Get("CodeDomProviderType");
+            JCObject val = (JCObject)retObjectCodeDomProviderType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeDomProviderType != null ? retObjectCodeDomProviderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

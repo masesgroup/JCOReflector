@@ -157,9 +157,13 @@ public class CoreCompatibilityPreferences extends NetObject  {
     
     public static boolean getIsAltKeyRequiredInAccessKeyDefaultScope() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAltKeyRequiredInAccessKeyDefaultScope = null;
         try {
-            return (boolean)classType.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
+            retObjectIsAltKeyRequiredInAccessKeyDefaultScope = classType.Get("IsAltKeyRequiredInAccessKeyDefaultScope");
+            return (boolean)retObjectIsAltKeyRequiredInAccessKeyDefaultScope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAltKeyRequiredInAccessKeyDefaultScope != null ? retObjectIsAltKeyRequiredInAccessKeyDefaultScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class CoreCompatibilityPreferences extends NetObject  {
 
     public static void setIsAltKeyRequiredInAccessKeyDefaultScope(boolean IsAltKeyRequiredInAccessKeyDefaultScope) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
         } catch (JCNativeException jcne) {

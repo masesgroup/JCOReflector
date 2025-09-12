@@ -157,9 +157,13 @@ public class ScopingExtensions extends NetObject  {
     
     public static boolean ContainsPartMetadataWithKey(ComposablePartDefinition part, java.lang.String key) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContainsPartMetadataWithKey = null;
         try {
-            return (boolean)classType.Invoke("ContainsPartMetadataWithKey", part == null ? null : part.getJCOInstance(), key);
+            retObjectContainsPartMetadataWithKey = classType.Invoke("ContainsPartMetadataWithKey", part == null ? null : part.getJCOInstance(), key);
+            return (boolean)retObjectContainsPartMetadataWithKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsPartMetadataWithKey != null ? retObjectContainsPartMetadataWithKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class ScopingExtensions extends NetObject  {
 
     public static boolean Exports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExports = null;
         try {
-            return (boolean)classType.Invoke("Exports", part == null ? null : part.getJCOInstance(), contractName);
+            retObjectExports = classType.Invoke("Exports", part == null ? null : part.getJCOInstance(), contractName);
+            return (boolean)retObjectExports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExports != null ? retObjectExports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class ScopingExtensions extends NetObject  {
 
     public static boolean Imports(ComposablePartDefinition part, java.lang.String contractName) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImports = null;
         try {
-            return (boolean)classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractName);
+            retObjectImports = classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractName);
+            return (boolean)retObjectImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class ScopingExtensions extends NetObject  {
 
     public static boolean Imports(ComposablePartDefinition part, java.lang.String contractName, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImports = null;
         try {
-            return (boolean)classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractName, importCardinality == null ? null : importCardinality.getJCOInstance());
+            retObjectImports = classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), contractName, importCardinality == null ? null : importCardinality.getJCOInstance());
+            return (boolean)retObjectImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -144,9 +144,13 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
     
     public boolean OnCompilerError(IJSVsaError error) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnCompilerError = null;
         try {
-            return (boolean)classInstance.Invoke("OnCompilerError", error == null ? null : error.getJCOInstance());
+            retObjectOnCompilerError = classInstance.Invoke("OnCompilerError", error == null ? null : error.getJCOInstance());
+            return (boolean)retObjectOnCompilerError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnCompilerError != null ? retObjectOnCompilerError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,10 +158,14 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
 
     public NetObject GetEventSourceInstance(java.lang.String itemName, java.lang.String eventSourceName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEventSourceInstance = null;
         try {
-            JCObject objGetEventSourceInstance = (JCObject)classInstance.Invoke("GetEventSourceInstance", itemName, eventSourceName);
+            retObjectGetEventSourceInstance = classInstance.Invoke("GetEventSourceInstance", itemName, eventSourceName);
+            JCObject objGetEventSourceInstance = (JCObject)retObjectGetEventSourceInstance;
             return new NetObject(objGetEventSourceInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventSourceInstance != null ? retObjectGetEventSourceInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +173,14 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
 
     public NetObject GetGlobalInstance(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlobalInstance = null;
         try {
-            JCObject objGetGlobalInstance = (JCObject)classInstance.Invoke("GetGlobalInstance", name);
+            retObjectGetGlobalInstance = classInstance.Invoke("GetGlobalInstance", name);
+            JCObject objGetGlobalInstance = (JCObject)retObjectGetGlobalInstance;
             return new NetObject(objGetGlobalInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalInstance != null ? retObjectGetGlobalInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +188,7 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
 
     public void GetCompiledState(JCORefOut pe, JCORefOut debugInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetCompiledState", pe.getJCRefOut(), debugInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -186,7 +198,7 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
 
     public void Notify(java.lang.String notify, NetObject info) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Notify", notify, info == null ? null : info.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -156,10 +156,12 @@ public class TokenBinding extends NetObject  {
     
     public byte[] GetRawTokenBindingId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRawTokenBindingId = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRawTokenBindingId");
+            retObjectGetRawTokenBindingId = classInstance.Invoke("GetRawTokenBindingId");
+            JCObject resultingObjects = (JCObject)retObjectGetRawTokenBindingId;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -168,6 +170,8 @@ public class TokenBinding extends NetObject  {
 				resultingArray[indexGetRawTokenBindingId] = (byte)resultingArrayList.get(indexGetRawTokenBindingId);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetRawTokenBindingId != null ? retObjectGetRawTokenBindingId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class TokenBinding extends NetObject  {
     
     public TokenBindingType getBindingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingType");
+            retObjectBindingType = classInstance.Get("BindingType");
+            JCObject val = (JCObject)retObjectBindingType;
             return new TokenBindingType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingType != null ? retObjectBindingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class TokenBinding extends NetObject  {
 
     public void setBindingType(TokenBindingType BindingType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingType", BindingType == null ? null : BindingType.getJCOInstance());
         } catch (JCNativeException jcne) {

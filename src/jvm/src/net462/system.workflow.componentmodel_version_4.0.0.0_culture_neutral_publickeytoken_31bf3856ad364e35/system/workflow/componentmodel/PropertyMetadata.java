@@ -255,16 +255,20 @@ public class PropertyMetadata extends NetObject  {
     
     public Attribute[] GetAttributes() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAttributes");
+            retObjectGetAttributes = classInstance.Invoke("GetAttributes");
+            JCObject resultingObjects = (JCObject)retObjectGetAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributes != null ? retObjectGetAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,16 +276,20 @@ public class PropertyMetadata extends NetObject  {
 
     public Attribute[] GetAttributes(NetType attributeType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAttributes", attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetAttributes = classInstance.Invoke("GetAttributes", attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributes != null ? retObjectGetAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +301,13 @@ public class PropertyMetadata extends NetObject  {
     
     public boolean getIsMetaProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMetaProperty = null;
         try {
-            return (boolean)classInstance.Get("IsMetaProperty");
+            retObjectIsMetaProperty = classInstance.Get("IsMetaProperty");
+            return (boolean)retObjectIsMetaProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMetaProperty != null ? retObjectIsMetaProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +315,13 @@ public class PropertyMetadata extends NetObject  {
 
     public boolean getIsNonSerialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNonSerialized = null;
         try {
-            return (boolean)classInstance.Get("IsNonSerialized");
+            retObjectIsNonSerialized = classInstance.Get("IsNonSerialized");
+            return (boolean)retObjectIsNonSerialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNonSerialized != null ? retObjectIsNonSerialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +329,13 @@ public class PropertyMetadata extends NetObject  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +343,14 @@ public class PropertyMetadata extends NetObject  {
 
     public NetObject getDefaultValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
+            retObjectDefaultValue = classInstance.Get("DefaultValue");
+            JCObject val = (JCObject)retObjectDefaultValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +358,7 @@ public class PropertyMetadata extends NetObject  {
 
     public void setDefaultValue(NetObject DefaultValue) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultValue", DefaultValue == null ? null : DefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +368,14 @@ public class PropertyMetadata extends NetObject  {
 
     public DependencyPropertyOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new DependencyPropertyOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +383,7 @@ public class PropertyMetadata extends NetObject  {
 
     public void setOptions(DependencyPropertyOptions Options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,9 +393,13 @@ public class PropertyMetadata extends NetObject  {
 
     public GetValueOverride getGetValueOverride() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueOverride = null;
         try {
-            return (GetValueOverride)classInstance.Get("GetValueOverride");
+            retObjectGetValueOverride = classInstance.Get("GetValueOverride");
+            return (GetValueOverride)retObjectGetValueOverride;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into GetValueOverride", retObjectGetValueOverride != null ? retObjectGetValueOverride.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,7 +407,7 @@ public class PropertyMetadata extends NetObject  {
 
     public void setGetValueOverride(GetValueOverride GetValueOverride) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GetValueOverride", GetValueOverride);
         } catch (JCNativeException jcne) {
@@ -385,9 +417,13 @@ public class PropertyMetadata extends NetObject  {
 
     public SetValueOverride getSetValueOverride() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetValueOverride = null;
         try {
-            return (SetValueOverride)classInstance.Get("SetValueOverride");
+            retObjectSetValueOverride = classInstance.Get("SetValueOverride");
+            return (SetValueOverride)retObjectSetValueOverride;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into SetValueOverride", retObjectSetValueOverride != null ? retObjectSetValueOverride.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +431,7 @@ public class PropertyMetadata extends NetObject  {
 
     public void setSetValueOverride(SetValueOverride SetValueOverride) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SetValueOverride", SetValueOverride);
         } catch (JCNativeException jcne) {

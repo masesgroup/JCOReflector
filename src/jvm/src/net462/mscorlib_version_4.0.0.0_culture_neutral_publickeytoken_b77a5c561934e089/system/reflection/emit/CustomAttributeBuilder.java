@@ -204,7 +204,7 @@ public class CustomAttributeBuilder extends NetObject  {
      */
     @Deprecated 
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_CustomAttributeBuilder to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_CustomAttributeBuilder to obtain the full interface.");
     }
 
 

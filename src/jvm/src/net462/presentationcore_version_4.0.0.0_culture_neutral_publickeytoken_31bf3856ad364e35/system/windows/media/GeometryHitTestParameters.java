@@ -171,10 +171,14 @@ public class GeometryHitTestParameters extends HitTestParameters  {
     
     public Geometry getHitGeometry() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitGeometry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HitGeometry");
+            retObjectHitGeometry = classInstance.Get("HitGeometry");
+            JCObject val = (JCObject)retObjectHitGeometry;
             return new Geometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitGeometry != null ? retObjectHitGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

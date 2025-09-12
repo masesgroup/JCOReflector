@@ -161,10 +161,14 @@ public class ObjectReadyEventArgs extends ManagementEventArgs  {
     
     public ManagementBaseObject getNewObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewObject");
+            retObjectNewObject = classInstance.Get("NewObject");
+            JCObject val = (JCObject)retObjectNewObject;
             return new ManagementBaseObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewObject != null ? retObjectNewObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -142,7 +142,7 @@ public class IAddChildImplementation extends NetObject implements IAddChild {
     
     public void AddChild(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddChild", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IAddChildImplementation extends NetObject implements IAddChild {
 
     public void AddText(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddText", text);
         } catch (JCNativeException jcne) {

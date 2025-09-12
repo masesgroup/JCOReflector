@@ -177,9 +177,13 @@ public class ServiceProviderSingleSignOnDescriptor extends SingleSignOnDescripto
     
     public boolean getAuthenticationRequestsSigned() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationRequestsSigned = null;
         try {
-            return (boolean)classInstance.Get("AuthenticationRequestsSigned");
+            retObjectAuthenticationRequestsSigned = classInstance.Get("AuthenticationRequestsSigned");
+            return (boolean)retObjectAuthenticationRequestsSigned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAuthenticationRequestsSigned != null ? retObjectAuthenticationRequestsSigned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class ServiceProviderSingleSignOnDescriptor extends SingleSignOnDescripto
 
     public void setAuthenticationRequestsSigned(boolean AuthenticationRequestsSigned) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationRequestsSigned", AuthenticationRequestsSigned);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class ServiceProviderSingleSignOnDescriptor extends SingleSignOnDescripto
 
     public boolean getWantAssertionsSigned() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWantAssertionsSigned = null;
         try {
-            return (boolean)classInstance.Get("WantAssertionsSigned");
+            retObjectWantAssertionsSigned = classInstance.Get("WantAssertionsSigned");
+            return (boolean)retObjectWantAssertionsSigned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWantAssertionsSigned != null ? retObjectWantAssertionsSigned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class ServiceProviderSingleSignOnDescriptor extends SingleSignOnDescripto
 
     public void setWantAssertionsSigned(boolean WantAssertionsSigned) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WantAssertionsSigned", WantAssertionsSigned);
         } catch (JCNativeException jcne) {
@@ -217,10 +225,14 @@ public class ServiceProviderSingleSignOnDescriptor extends SingleSignOnDescripto
 
     public IndexedProtocolEndpointDictionary getAssertionConsumerServices() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssertionConsumerServices = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssertionConsumerServices");
+            retObjectAssertionConsumerServices = classInstance.Get("AssertionConsumerServices");
+            JCObject val = (JCObject)retObjectAssertionConsumerServices;
             return new IndexedProtocolEndpointDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssertionConsumerServices != null ? retObjectAssertionConsumerServices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

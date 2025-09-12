@@ -178,9 +178,13 @@ public class CodeTypeParameter extends CodeObject  {
     
     public boolean getHasConstructorConstraint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasConstructorConstraint = null;
         try {
-            return (boolean)classInstance.Get("HasConstructorConstraint");
+            retObjectHasConstructorConstraint = classInstance.Get("HasConstructorConstraint");
+            return (boolean)retObjectHasConstructorConstraint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasConstructorConstraint != null ? retObjectHasConstructorConstraint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class CodeTypeParameter extends CodeObject  {
 
     public void setHasConstructorConstraint(boolean HasConstructorConstraint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasConstructorConstraint", HasConstructorConstraint);
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class CodeTypeParameter extends CodeObject  {
 
     public CodeAttributeDeclarationCollection getCustomAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomAttributes");
+            retObjectCustomAttributes = classInstance.Get("CustomAttributes");
+            JCObject val = (JCObject)retObjectCustomAttributes;
             return new CodeAttributeDeclarationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomAttributes != null ? retObjectCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +217,14 @@ public class CodeTypeParameter extends CodeObject  {
 
     public CodeTypeReferenceCollection getConstraints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstraints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Constraints");
+            retObjectConstraints = classInstance.Get("Constraints");
+            JCObject val = (JCObject)retObjectConstraints;
             return new CodeTypeReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstraints != null ? retObjectConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +232,13 @@ public class CodeTypeParameter extends CodeObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +246,7 @@ public class CodeTypeParameter extends CodeObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

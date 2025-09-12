@@ -170,9 +170,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
     
     public boolean ShouldSerializeBindings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeBindings = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeBindings");
+            retObjectShouldSerializeBindings = classInstance.Invoke("ShouldSerializeBindings");
+            return (boolean)retObjectShouldSerializeBindings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeBindings != null ? retObjectShouldSerializeBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public boolean ShouldSerializeValidationRules() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeValidationRules = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeValidationRules");
+            retObjectShouldSerializeValidationRules = classInstance.Invoke("ShouldSerializeValidationRules");
+            return (boolean)retObjectShouldSerializeValidationRules;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeValidationRules != null ? retObjectShouldSerializeValidationRules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -203,7 +211,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -212,9 +220,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
     
     public boolean getNotifyOnSourceUpdated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotifyOnSourceUpdated = null;
         try {
-            return (boolean)classInstance.Get("NotifyOnSourceUpdated");
+            retObjectNotifyOnSourceUpdated = classInstance.Get("NotifyOnSourceUpdated");
+            return (boolean)retObjectNotifyOnSourceUpdated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNotifyOnSourceUpdated != null ? retObjectNotifyOnSourceUpdated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setNotifyOnSourceUpdated(boolean NotifyOnSourceUpdated) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotifyOnSourceUpdated", NotifyOnSourceUpdated);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public boolean getNotifyOnTargetUpdated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotifyOnTargetUpdated = null;
         try {
-            return (boolean)classInstance.Get("NotifyOnTargetUpdated");
+            retObjectNotifyOnTargetUpdated = classInstance.Get("NotifyOnTargetUpdated");
+            return (boolean)retObjectNotifyOnTargetUpdated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNotifyOnTargetUpdated != null ? retObjectNotifyOnTargetUpdated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setNotifyOnTargetUpdated(boolean NotifyOnTargetUpdated) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotifyOnTargetUpdated", NotifyOnTargetUpdated);
         } catch (JCNativeException jcne) {
@@ -252,9 +268,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public boolean getNotifyOnValidationError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotifyOnValidationError = null;
         try {
-            return (boolean)classInstance.Get("NotifyOnValidationError");
+            retObjectNotifyOnValidationError = classInstance.Get("NotifyOnValidationError");
+            return (boolean)retObjectNotifyOnValidationError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNotifyOnValidationError != null ? retObjectNotifyOnValidationError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setNotifyOnValidationError(boolean NotifyOnValidationError) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotifyOnValidationError", NotifyOnValidationError);
         } catch (JCNativeException jcne) {
@@ -272,9 +292,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public boolean getValidatesOnDataErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatesOnDataErrors = null;
         try {
-            return (boolean)classInstance.Get("ValidatesOnDataErrors");
+            retObjectValidatesOnDataErrors = classInstance.Get("ValidatesOnDataErrors");
+            return (boolean)retObjectValidatesOnDataErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidatesOnDataErrors != null ? retObjectValidatesOnDataErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +306,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setValidatesOnDataErrors(boolean ValidatesOnDataErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatesOnDataErrors", ValidatesOnDataErrors);
         } catch (JCNativeException jcne) {
@@ -292,9 +316,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public boolean getValidatesOnExceptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatesOnExceptions = null;
         try {
-            return (boolean)classInstance.Get("ValidatesOnExceptions");
+            retObjectValidatesOnExceptions = classInstance.Get("ValidatesOnExceptions");
+            return (boolean)retObjectValidatesOnExceptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidatesOnExceptions != null ? retObjectValidatesOnExceptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +330,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setValidatesOnExceptions(boolean ValidatesOnExceptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatesOnExceptions", ValidatesOnExceptions);
         } catch (JCNativeException jcne) {
@@ -312,9 +340,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public boolean getValidatesOnNotifyDataErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatesOnNotifyDataErrors = null;
         try {
-            return (boolean)classInstance.Get("ValidatesOnNotifyDataErrors");
+            retObjectValidatesOnNotifyDataErrors = classInstance.Get("ValidatesOnNotifyDataErrors");
+            return (boolean)retObjectValidatesOnNotifyDataErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidatesOnNotifyDataErrors != null ? retObjectValidatesOnNotifyDataErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +354,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setValidatesOnNotifyDataErrors(boolean ValidatesOnNotifyDataErrors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatesOnNotifyDataErrors", ValidatesOnNotifyDataErrors);
         } catch (JCNativeException jcne) {
@@ -332,10 +364,14 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public CultureInfo getConverterCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverterCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConverterCulture");
+            retObjectConverterCulture = classInstance.Get("ConverterCulture");
+            JCObject val = (JCObject)retObjectConverterCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverterCulture != null ? retObjectConverterCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +379,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setConverterCulture(CultureInfo ConverterCulture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConverterCulture", ConverterCulture == null ? null : ConverterCulture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -353,10 +389,14 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public NetObject getConverterParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverterParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConverterParameter");
+            retObjectConverterParameter = classInstance.Get("ConverterParameter");
+            JCObject val = (JCObject)retObjectConverterParameter;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverterParameter != null ? retObjectConverterParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +404,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setConverterParameter(NetObject ConverterParameter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConverterParameter", ConverterParameter == null ? null : ConverterParameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -374,10 +414,14 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public BindingMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new BindingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,7 +429,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setMode(BindingMode Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -395,10 +439,14 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public IMultiValueConverter getConverter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Converter");
+            retObjectConverter = classInstance.Get("Converter");
+            JCObject val = (JCObject)retObjectConverter;
             return new IMultiValueConverterImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverter != null ? retObjectConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +454,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setConverter(IMultiValueConverter Converter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Converter", Converter == null ? null : Converter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -416,9 +464,13 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public UpdateSourceExceptionFilterCallback getUpdateSourceExceptionFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateSourceExceptionFilter = null;
         try {
-            return (UpdateSourceExceptionFilterCallback)classInstance.Get("UpdateSourceExceptionFilter");
+            retObjectUpdateSourceExceptionFilter = classInstance.Get("UpdateSourceExceptionFilter");
+            return (UpdateSourceExceptionFilterCallback)retObjectUpdateSourceExceptionFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into UpdateSourceExceptionFilterCallback", retObjectUpdateSourceExceptionFilter != null ? retObjectUpdateSourceExceptionFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,7 +478,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setUpdateSourceExceptionFilter(UpdateSourceExceptionFilterCallback UpdateSourceExceptionFilter) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateSourceExceptionFilter", UpdateSourceExceptionFilter);
         } catch (JCNativeException jcne) {
@@ -436,10 +488,14 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public UpdateSourceTrigger getUpdateSourceTrigger() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateSourceTrigger = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateSourceTrigger");
+            retObjectUpdateSourceTrigger = classInstance.Get("UpdateSourceTrigger");
+            JCObject val = (JCObject)retObjectUpdateSourceTrigger;
             return new UpdateSourceTrigger(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateSourceTrigger != null ? retObjectUpdateSourceTrigger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,7 +503,7 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
 
     public void setUpdateSourceTrigger(UpdateSourceTrigger UpdateSourceTrigger) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateSourceTrigger", UpdateSourceTrigger == null ? null : UpdateSourceTrigger.getJCOInstance());
         } catch (JCNativeException jcne) {

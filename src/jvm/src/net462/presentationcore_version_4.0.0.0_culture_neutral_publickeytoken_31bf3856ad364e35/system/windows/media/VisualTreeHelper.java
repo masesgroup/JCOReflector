@@ -176,9 +176,19 @@ public class VisualTreeHelper extends NetObject  {
     
     public static double GetOpacity(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOpacity = null;
         try {
-            return (double)classType.Invoke("GetOpacity", reference == null ? null : reference.getJCOInstance());
+            retObjectGetOpacity = classType.Invoke("GetOpacity", reference == null ? null : reference.getJCOInstance());
+            return (double)retObjectGetOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOpacityNumber = (java.lang.Number)retObjectGetOpacity;
+                return retObjectGetOpacityNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetOpacity != null ? retObjectGetOpacity.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +196,19 @@ public class VisualTreeHelper extends NetObject  {
 
     public static int GetChildrenCount(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChildrenCount = null;
         try {
-            return (int)classType.Invoke("GetChildrenCount", reference == null ? null : reference.getJCOInstance());
+            retObjectGetChildrenCount = classType.Invoke("GetChildrenCount", reference == null ? null : reference.getJCOInstance());
+            return (int)retObjectGetChildrenCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetChildrenCountNumber = (java.lang.Number)retObjectGetChildrenCount;
+                return retObjectGetChildrenCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetChildrenCount != null ? retObjectGetChildrenCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +216,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static DependencyObject GetChild(DependencyObject reference, int childIndex) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChild = null;
         try {
-            JCObject objGetChild = (JCObject)classType.Invoke("GetChild", reference == null ? null : reference.getJCOInstance(), childIndex);
+            retObjectGetChild = classType.Invoke("GetChild", reference == null ? null : reference.getJCOInstance(), childIndex);
+            JCObject objGetChild = (JCObject)retObjectGetChild;
             return new DependencyObject(objGetChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChild != null ? retObjectGetChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +231,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static DependencyObject GetParent(DependencyObject reference) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetParent = null;
         try {
-            JCObject objGetParent = (JCObject)classType.Invoke("GetParent", reference == null ? null : reference.getJCOInstance());
+            retObjectGetParent = classType.Invoke("GetParent", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetParent = (JCObject)retObjectGetParent;
             return new DependencyObject(objGetParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParent != null ? retObjectGetParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +246,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static DpiScale GetDpi(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDpi = null;
         try {
-            JCObject objGetDpi = (JCObject)classType.Invoke("GetDpi", visual == null ? null : visual.getJCOInstance());
+            retObjectGetDpi = classType.Invoke("GetDpi", visual == null ? null : visual.getJCOInstance());
+            JCObject objGetDpi = (JCObject)retObjectGetDpi;
             return new DpiScale(objGetDpi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDpi != null ? retObjectGetDpi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +261,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Brush GetOpacityMask(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOpacityMask = null;
         try {
-            JCObject objGetOpacityMask = (JCObject)classType.Invoke("GetOpacityMask", reference == null ? null : reference.getJCOInstance());
+            retObjectGetOpacityMask = classType.Invoke("GetOpacityMask", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetOpacityMask = (JCObject)retObjectGetOpacityMask;
             return new Brush(objGetOpacityMask);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOpacityMask != null ? retObjectGetOpacityMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +276,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static CacheMode GetCacheMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCacheMode = null;
         try {
-            JCObject objGetCacheMode = (JCObject)classType.Invoke("GetCacheMode", reference == null ? null : reference.getJCOInstance());
+            retObjectGetCacheMode = classType.Invoke("GetCacheMode", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetCacheMode = (JCObject)retObjectGetCacheMode;
             return new CacheMode(objGetCacheMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCacheMode != null ? retObjectGetCacheMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +291,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static DoubleCollection GetXSnappingGuidelines(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXSnappingGuidelines = null;
         try {
-            JCObject objGetXSnappingGuidelines = (JCObject)classType.Invoke("GetXSnappingGuidelines", reference == null ? null : reference.getJCOInstance());
+            retObjectGetXSnappingGuidelines = classType.Invoke("GetXSnappingGuidelines", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetXSnappingGuidelines = (JCObject)retObjectGetXSnappingGuidelines;
             return new DoubleCollection(objGetXSnappingGuidelines);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXSnappingGuidelines != null ? retObjectGetXSnappingGuidelines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +306,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static DoubleCollection GetYSnappingGuidelines(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetYSnappingGuidelines = null;
         try {
-            JCObject objGetYSnappingGuidelines = (JCObject)classType.Invoke("GetYSnappingGuidelines", reference == null ? null : reference.getJCOInstance());
+            retObjectGetYSnappingGuidelines = classType.Invoke("GetYSnappingGuidelines", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetYSnappingGuidelines = (JCObject)retObjectGetYSnappingGuidelines;
             return new DoubleCollection(objGetYSnappingGuidelines);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetYSnappingGuidelines != null ? retObjectGetYSnappingGuidelines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +321,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static DrawingGroup GetDrawing(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDrawing = null;
         try {
-            JCObject objGetDrawing = (JCObject)classType.Invoke("GetDrawing", reference == null ? null : reference.getJCOInstance());
+            retObjectGetDrawing = classType.Invoke("GetDrawing", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetDrawing = (JCObject)retObjectGetDrawing;
             return new DrawingGroup(objGetDrawing);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDrawing != null ? retObjectGetDrawing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +336,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static EdgeMode GetEdgeMode(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEdgeMode = null;
         try {
-            JCObject objGetEdgeMode = (JCObject)classType.Invoke("GetEdgeMode", reference == null ? null : reference.getJCOInstance());
+            retObjectGetEdgeMode = classType.Invoke("GetEdgeMode", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetEdgeMode = (JCObject)retObjectGetEdgeMode;
             return new EdgeMode(objGetEdgeMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdgeMode != null ? retObjectGetEdgeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +351,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static BitmapEffect GetBitmapEffect(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBitmapEffect = null;
         try {
-            JCObject objGetBitmapEffect = (JCObject)classType.Invoke("GetBitmapEffect", reference == null ? null : reference.getJCOInstance());
+            retObjectGetBitmapEffect = classType.Invoke("GetBitmapEffect", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetBitmapEffect = (JCObject)retObjectGetBitmapEffect;
             return new BitmapEffect(objGetBitmapEffect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBitmapEffect != null ? retObjectGetBitmapEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +366,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static BitmapEffectInput GetBitmapEffectInput(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBitmapEffectInput = null;
         try {
-            JCObject objGetBitmapEffectInput = (JCObject)classType.Invoke("GetBitmapEffectInput", reference == null ? null : reference.getJCOInstance());
+            retObjectGetBitmapEffectInput = classType.Invoke("GetBitmapEffectInput", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetBitmapEffectInput = (JCObject)retObjectGetBitmapEffectInput;
             return new BitmapEffectInput(objGetBitmapEffectInput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBitmapEffectInput != null ? retObjectGetBitmapEffectInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +381,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Effect GetEffect(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEffect = null;
         try {
-            JCObject objGetEffect = (JCObject)classType.Invoke("GetEffect", reference == null ? null : reference.getJCOInstance());
+            retObjectGetEffect = classType.Invoke("GetEffect", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetEffect = (JCObject)retObjectGetEffect;
             return new Effect(objGetEffect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEffect != null ? retObjectGetEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +396,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Geometry GetClip(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetClip = null;
         try {
-            JCObject objGetClip = (JCObject)classType.Invoke("GetClip", reference == null ? null : reference.getJCOInstance());
+            retObjectGetClip = classType.Invoke("GetClip", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetClip = (JCObject)retObjectGetClip;
             return new Geometry(objGetClip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClip != null ? retObjectGetClip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +411,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static HitTestResult HitTest(Visual reference, Point point) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classType.Invoke("HitTest", reference == null ? null : reference.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classType.Invoke("HitTest", reference == null ? null : reference.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new HitTestResult(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +426,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Rect3D GetContentBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContentBounds = null;
         try {
-            JCObject objGetContentBounds = (JCObject)classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
+            retObjectGetContentBounds = classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetContentBounds = (JCObject)retObjectGetContentBounds;
             return new Rect3D(objGetContentBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentBounds != null ? retObjectGetContentBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,10 +441,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Rect3D GetDescendantBounds(Visual3D reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDescendantBounds = null;
         try {
-            JCObject objGetDescendantBounds = (JCObject)classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
+            retObjectGetDescendantBounds = classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetDescendantBounds = (JCObject)retObjectGetDescendantBounds;
             return new Rect3D(objGetDescendantBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDescendantBounds != null ? retObjectGetDescendantBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +456,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Transform GetTransform(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTransform = null;
         try {
-            JCObject objGetTransform = (JCObject)classType.Invoke("GetTransform", reference == null ? null : reference.getJCOInstance());
+            retObjectGetTransform = classType.Invoke("GetTransform", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetTransform = (JCObject)retObjectGetTransform;
             return new Transform(objGetTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTransform != null ? retObjectGetTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +471,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Rect GetContentBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetContentBounds = null;
         try {
-            JCObject objGetContentBounds = (JCObject)classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
+            retObjectGetContentBounds = classType.Invoke("GetContentBounds", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetContentBounds = (JCObject)retObjectGetContentBounds;
             return new Rect(objGetContentBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentBounds != null ? retObjectGetContentBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +486,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Rect GetDescendantBounds(Visual reference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDescendantBounds = null;
         try {
-            JCObject objGetDescendantBounds = (JCObject)classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
+            retObjectGetDescendantBounds = classType.Invoke("GetDescendantBounds", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetDescendantBounds = (JCObject)retObjectGetDescendantBounds;
             return new Rect(objGetDescendantBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDescendantBounds != null ? retObjectGetDescendantBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +501,14 @@ public class VisualTreeHelper extends NetObject  {
 
     public static Vector GetOffset(Visual reference) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOffset = null;
         try {
-            JCObject objGetOffset = (JCObject)classType.Invoke("GetOffset", reference == null ? null : reference.getJCOInstance());
+            retObjectGetOffset = classType.Invoke("GetOffset", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetOffset = (JCObject)retObjectGetOffset;
             return new Vector(objGetOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOffset != null ? retObjectGetOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +516,7 @@ public class VisualTreeHelper extends NetObject  {
 
     public static void HitTest(Visual3D reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters3D hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.ArithmeticException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("HitTest", reference == null ? null : reference.getJCOInstance(), filterCallback, resultCallback, hitTestParameters == null ? null : hitTestParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,7 +526,7 @@ public class VisualTreeHelper extends NetObject  {
 
     public static void HitTest(Visual reference, HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("HitTest", reference == null ? null : reference.getJCOInstance(), filterCallback, resultCallback, hitTestParameters == null ? null : hitTestParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -436,7 +536,7 @@ public class VisualTreeHelper extends NetObject  {
 
     public static void SetRootDpi(Visual visual, DpiScale dpiInfo) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetRootDpi", visual == null ? null : visual.getJCOInstance(), dpiInfo == null ? null : dpiInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

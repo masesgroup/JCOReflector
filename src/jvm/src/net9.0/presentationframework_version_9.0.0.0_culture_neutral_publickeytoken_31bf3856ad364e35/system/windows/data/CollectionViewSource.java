@@ -174,9 +174,13 @@ public class CollectionViewSource extends DependencyObject implements system.com
     
     public static boolean IsDefaultView(ICollectionView view) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefaultView = null;
         try {
-            return (boolean)classType.Invoke("IsDefaultView", view == null ? null : view.getJCOInstance());
+            retObjectIsDefaultView = classType.Invoke("IsDefaultView", view == null ? null : view.getJCOInstance());
+            return (boolean)retObjectIsDefaultView;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultView != null ? retObjectIsDefaultView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public static ICollectionView GetDefaultView(NetObject source) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.MulticastNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDefaultView = null;
         try {
-            JCObject objGetDefaultView = (JCObject)classType.Invoke("GetDefaultView", source == null ? null : source.getJCOInstance());
+            retObjectGetDefaultView = classType.Invoke("GetDefaultView", source == null ? null : source.getJCOInstance());
+            JCObject objGetDefaultView = (JCObject)retObjectGetDefaultView;
             return new ICollectionViewImplementation(objGetDefaultView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultView != null ? retObjectGetDefaultView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public IDisposable DeferRefresh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeferRefresh = null;
         try {
-            JCObject objDeferRefresh = (JCObject)classInstance.Invoke("DeferRefresh");
+            retObjectDeferRefresh = classInstance.Invoke("DeferRefresh");
+            JCObject objDeferRefresh = (JCObject)retObjectDeferRefresh;
             return new IDisposableImplementation(objDeferRefresh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeferRefresh != null ? retObjectDeferRefresh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
      */
     @Deprecated 
     public void BeginInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -219,7 +231,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
      */
     @Deprecated 
     public void EndInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -228,7 +240,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
      */
     @Deprecated 
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 
@@ -237,9 +249,13 @@ public class CollectionViewSource extends DependencyObject implements system.com
     
     public boolean getCanChangeLiveFiltering() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveFiltering = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveFiltering");
+            retObjectCanChangeLiveFiltering = classInstance.Get("CanChangeLiveFiltering");
+            return (boolean)retObjectCanChangeLiveFiltering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveFiltering != null ? retObjectCanChangeLiveFiltering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setCanChangeLiveFiltering(boolean CanChangeLiveFiltering) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanChangeLiveFiltering", CanChangeLiveFiltering);
         } catch (JCNativeException jcne) {
@@ -257,9 +273,13 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public boolean getCanChangeLiveGrouping() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveGrouping = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveGrouping");
+            retObjectCanChangeLiveGrouping = classInstance.Get("CanChangeLiveGrouping");
+            return (boolean)retObjectCanChangeLiveGrouping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveGrouping != null ? retObjectCanChangeLiveGrouping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +287,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setCanChangeLiveGrouping(boolean CanChangeLiveGrouping) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanChangeLiveGrouping", CanChangeLiveGrouping);
         } catch (JCNativeException jcne) {
@@ -277,9 +297,13 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public boolean getCanChangeLiveSorting() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveSorting = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveSorting");
+            retObjectCanChangeLiveSorting = classInstance.Get("CanChangeLiveSorting");
+            return (boolean)retObjectCanChangeLiveSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveSorting != null ? retObjectCanChangeLiveSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +311,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setCanChangeLiveSorting(boolean CanChangeLiveSorting) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanChangeLiveSorting", CanChangeLiveSorting);
         } catch (JCNativeException jcne) {
@@ -297,9 +321,13 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public boolean getIsLiveFilteringRequested() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiveFilteringRequested = null;
         try {
-            return (boolean)classInstance.Get("IsLiveFilteringRequested");
+            retObjectIsLiveFilteringRequested = classInstance.Get("IsLiveFilteringRequested");
+            return (boolean)retObjectIsLiveFilteringRequested;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLiveFilteringRequested != null ? retObjectIsLiveFilteringRequested.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +335,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setIsLiveFilteringRequested(boolean IsLiveFilteringRequested) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsLiveFilteringRequested", IsLiveFilteringRequested);
         } catch (JCNativeException jcne) {
@@ -317,9 +345,13 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public boolean getIsLiveGroupingRequested() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiveGroupingRequested = null;
         try {
-            return (boolean)classInstance.Get("IsLiveGroupingRequested");
+            retObjectIsLiveGroupingRequested = classInstance.Get("IsLiveGroupingRequested");
+            return (boolean)retObjectIsLiveGroupingRequested;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLiveGroupingRequested != null ? retObjectIsLiveGroupingRequested.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +359,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setIsLiveGroupingRequested(boolean IsLiveGroupingRequested) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsLiveGroupingRequested", IsLiveGroupingRequested);
         } catch (JCNativeException jcne) {
@@ -337,9 +369,13 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public boolean getIsLiveSortingRequested() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiveSortingRequested = null;
         try {
-            return (boolean)classInstance.Get("IsLiveSortingRequested");
+            retObjectIsLiveSortingRequested = classInstance.Get("IsLiveSortingRequested");
+            return (boolean)retObjectIsLiveSortingRequested;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLiveSortingRequested != null ? retObjectIsLiveSortingRequested.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +383,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setIsLiveSortingRequested(boolean IsLiveSortingRequested) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsLiveSortingRequested", IsLiveSortingRequested);
         } catch (JCNativeException jcne) {
@@ -357,10 +393,14 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public ICollectionView getView() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("View");
+            retObjectView = classInstance.Get("View");
+            JCObject val = (JCObject)retObjectView;
             return new ICollectionViewImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectView != null ? retObjectView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,10 +408,14 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public SortDescriptionCollection getSortDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortDescriptions");
+            retObjectSortDescriptions = classInstance.Get("SortDescriptions");
+            JCObject val = (JCObject)retObjectSortDescriptions;
             return new SortDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDescriptions != null ? retObjectSortDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,10 +423,14 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            JCObject val = (JCObject)retObjectCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +438,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setCulture(CultureInfo Culture) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture == null ? null : Culture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,10 +448,14 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public NetObject getSource() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +463,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setSource(NetObject Source) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -421,10 +473,14 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public NetType getCollectionViewType() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollectionViewType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CollectionViewType");
+            retObjectCollectionViewType = classInstance.Get("CollectionViewType");
+            JCObject val = (JCObject)retObjectCollectionViewType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollectionViewType != null ? retObjectCollectionViewType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +488,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void setCollectionViewType(NetType CollectionViewType) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CollectionViewType", CollectionViewType == null ? null : CollectionViewType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -447,7 +503,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void addFilter(FilterEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Filter", handler);
         } catch (JCNativeException jcne) {
@@ -457,7 +513,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
 
     public void removeFilter(FilterEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Filter", handler);
         } catch (JCNativeException jcne) {

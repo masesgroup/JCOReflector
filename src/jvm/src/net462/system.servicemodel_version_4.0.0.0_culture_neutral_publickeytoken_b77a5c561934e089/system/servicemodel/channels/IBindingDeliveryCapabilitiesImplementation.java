@@ -146,9 +146,13 @@ public class IBindingDeliveryCapabilitiesImplementation extends NetObject implem
     
     public boolean getAssuresOrderedDelivery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssuresOrderedDelivery = null;
         try {
-            return (boolean)classInstance.Get("AssuresOrderedDelivery");
+            retObjectAssuresOrderedDelivery = classInstance.Get("AssuresOrderedDelivery");
+            return (boolean)retObjectAssuresOrderedDelivery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAssuresOrderedDelivery != null ? retObjectAssuresOrderedDelivery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class IBindingDeliveryCapabilitiesImplementation extends NetObject implem
 
     public boolean getQueuedDelivery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueuedDelivery = null;
         try {
-            return (boolean)classInstance.Get("QueuedDelivery");
+            retObjectQueuedDelivery = classInstance.Get("QueuedDelivery");
+            return (boolean)retObjectQueuedDelivery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectQueuedDelivery != null ? retObjectQueuedDelivery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

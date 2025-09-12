@@ -168,9 +168,13 @@ public class GenericPrincipal extends ClaimsPrincipal  {
     
     public boolean IsInRole(java.lang.String role) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsInRole", role);
+            retObjectIsInRole = classInstance.Invoke("IsInRole", role);
+            return (boolean)retObjectIsInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInRole != null ? retObjectIsInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

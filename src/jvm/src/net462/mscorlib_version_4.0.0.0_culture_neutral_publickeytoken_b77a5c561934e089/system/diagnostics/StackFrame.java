@@ -212,9 +212,19 @@ public class StackFrame extends NetObject  {
     
     public int GetFileColumnNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileColumnNumber = null;
         try {
-            return (int)classInstance.Invoke("GetFileColumnNumber");
+            retObjectGetFileColumnNumber = classInstance.Invoke("GetFileColumnNumber");
+            return (int)retObjectGetFileColumnNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFileColumnNumberNumber = (java.lang.Number)retObjectGetFileColumnNumber;
+                return retObjectGetFileColumnNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFileColumnNumber != null ? retObjectGetFileColumnNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +232,19 @@ public class StackFrame extends NetObject  {
 
     public int GetFileLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileLineNumber = null;
         try {
-            return (int)classInstance.Invoke("GetFileLineNumber");
+            retObjectGetFileLineNumber = classInstance.Invoke("GetFileLineNumber");
+            return (int)retObjectGetFileLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFileLineNumberNumber = (java.lang.Number)retObjectGetFileLineNumber;
+                return retObjectGetFileLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFileLineNumber != null ? retObjectGetFileLineNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +252,19 @@ public class StackFrame extends NetObject  {
 
     public int GetILOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetILOffset = null;
         try {
-            return (int)classInstance.Invoke("GetILOffset");
+            retObjectGetILOffset = classInstance.Invoke("GetILOffset");
+            return (int)retObjectGetILOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetILOffsetNumber = (java.lang.Number)retObjectGetILOffset;
+                return retObjectGetILOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetILOffset != null ? retObjectGetILOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +272,19 @@ public class StackFrame extends NetObject  {
 
     public int GetNativeOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNativeOffset = null;
         try {
-            return (int)classInstance.Invoke("GetNativeOffset");
+            retObjectGetNativeOffset = classInstance.Invoke("GetNativeOffset");
+            return (int)retObjectGetNativeOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNativeOffsetNumber = (java.lang.Number)retObjectGetNativeOffset;
+                return retObjectGetNativeOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNativeOffset != null ? retObjectGetNativeOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +292,14 @@ public class StackFrame extends NetObject  {
 
     public MethodBase GetMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethod = null;
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod");
+            retObjectGetMethod = classInstance.Invoke("GetMethod");
+            JCObject objGetMethod = (JCObject)retObjectGetMethod;
             return new MethodBase(objGetMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethod != null ? retObjectGetMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +307,13 @@ public class StackFrame extends NetObject  {
 
     public java.lang.String GetFileName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFileName");
+            retObjectGetFileName = classInstance.Invoke("GetFileName");
+            return (java.lang.String)retObjectGetFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFileName != null ? retObjectGetFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

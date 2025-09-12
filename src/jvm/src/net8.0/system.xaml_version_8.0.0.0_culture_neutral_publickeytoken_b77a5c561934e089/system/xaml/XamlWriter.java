@@ -159,7 +159,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
     
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
 
     public void WriteEndMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndMember");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
 
     public void WriteEndObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndObject");
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
 
     public void WriteGetObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteGetObject");
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
 
     public void WriteNamespace(NamespaceDeclaration namespaceDeclaration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNamespace", namespaceDeclaration == null ? null : namespaceDeclaration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +209,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
 
     public void WriteStartMember(XamlMember xamlMember) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartMember", xamlMember == null ? null : xamlMember.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,7 +219,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
 
     public void WriteStartObject(XamlType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartObject", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,7 +229,7 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
 
     public void WriteValue(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,13 +243,13 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -265,10 +265,14 @@ public class XamlWriter extends NetObject implements system.IDisposable, AutoClo
     
     public XamlSchemaContext getSchemaContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaContext");
+            retObjectSchemaContext = classInstance.Get("SchemaContext");
+            JCObject val = (JCObject)retObjectSchemaContext;
             return new XamlSchemaContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaContext != null ? retObjectSchemaContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

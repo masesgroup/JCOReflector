@@ -147,9 +147,13 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
     
     public boolean getNormalized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNormalized = null;
         try {
-            return (boolean)classInstance.Get("Normalized");
+            retObjectNormalized = classInstance.Get("Normalized");
+            return (boolean)retObjectNormalized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNormalized != null ? retObjectNormalized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
 
     public void setNormalized(boolean Normalized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Normalized", Normalized);
         } catch (JCNativeException jcne) {
@@ -167,10 +171,14 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
 
     public WhitespaceHandling getWhitespaceHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWhitespaceHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WhitespaceHandling");
+            retObjectWhitespaceHandling = classInstance.Get("WhitespaceHandling");
+            JCObject val = (JCObject)retObjectWhitespaceHandling;
             return new WhitespaceHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhitespaceHandling != null ? retObjectWhitespaceHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
 
     public void setWhitespaceHandling(WhitespaceHandling WhitespaceHandling) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WhitespaceHandling", WhitespaceHandling == null ? null : WhitespaceHandling.getJCOInstance());
         } catch (JCNativeException jcne) {

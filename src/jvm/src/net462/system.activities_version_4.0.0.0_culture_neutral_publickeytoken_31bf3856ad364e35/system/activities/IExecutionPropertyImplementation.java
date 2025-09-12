@@ -142,7 +142,7 @@ public class IExecutionPropertyImplementation extends NetObject implements IExec
     
     public void CleanupWorkflowThread() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CleanupWorkflowThread");
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IExecutionPropertyImplementation extends NetObject implements IExec
 
     public void SetupWorkflowThread() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetupWorkflowThread");
         } catch (JCNativeException jcne) {

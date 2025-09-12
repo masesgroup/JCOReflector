@@ -145,7 +145,7 @@ public class IStyleSheetImplementation extends NetObject implements IStyleSheet 
     
     public void CreateStyleRule(Style style, IUrlResolutionService urlResolver, java.lang.String selector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateStyleRule", style == null ? null : style.getJCOInstance(), urlResolver == null ? null : urlResolver.getJCOInstance(), selector);
         } catch (JCNativeException jcne) {
@@ -155,7 +155,7 @@ public class IStyleSheetImplementation extends NetObject implements IStyleSheet 
 
     public void RegisterStyle(Style style, IUrlResolutionService urlResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterStyle", style == null ? null : style.getJCOInstance(), urlResolver == null ? null : urlResolver.getJCOInstance());
         } catch (JCNativeException jcne) {

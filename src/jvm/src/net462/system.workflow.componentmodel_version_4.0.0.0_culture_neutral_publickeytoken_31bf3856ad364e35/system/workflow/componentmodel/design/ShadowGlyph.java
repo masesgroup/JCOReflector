@@ -164,10 +164,14 @@ public class ShadowGlyph extends DesignerGlyph  {
     
     public Rectangle GetBounds(ActivityDesigner designer, boolean activated) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", designer == null ? null : designer.getJCOInstance(), activated);
+            retObjectGetBounds = classInstance.Invoke("GetBounds", designer == null ? null : designer.getJCOInstance(), activated);
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

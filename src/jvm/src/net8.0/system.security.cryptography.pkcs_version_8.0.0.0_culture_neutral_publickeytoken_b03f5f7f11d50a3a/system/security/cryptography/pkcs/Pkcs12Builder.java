@@ -164,10 +164,12 @@ public class Pkcs12Builder extends NetObject  {
     
     public byte[] Encode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncode = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode");
+            retObjectEncode = classInstance.Invoke("Encode");
+            JCObject resultingObjects = (JCObject)retObjectEncode;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -176,6 +178,8 @@ public class Pkcs12Builder extends NetObject  {
 				resultingArray[indexEncode] = (byte)resultingArrayList.get(indexEncode);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class Pkcs12Builder extends NetObject  {
 
     public void AddSafeContentsEncrypted(Pkcs12SafeContents safeContents, byte[] passwordBytes, PbeParameters pbeParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSafeContentsEncrypted", safeContents == null ? null : safeContents.getJCOInstance(), passwordBytes, pbeParameters == null ? null : pbeParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,7 +197,7 @@ public class Pkcs12Builder extends NetObject  {
 
     public void AddSafeContentsEncrypted(Pkcs12SafeContents dupParam0, JCORefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSafeContentsEncrypted", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +207,7 @@ public class Pkcs12Builder extends NetObject  {
 
     public void AddSafeContentsEncrypted(Pkcs12SafeContents safeContents, java.lang.String password, PbeParameters pbeParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSafeContentsEncrypted", safeContents == null ? null : safeContents.getJCOInstance(), password, pbeParameters == null ? null : pbeParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +217,7 @@ public class Pkcs12Builder extends NetObject  {
 
     public void AddSafeContentsUnencrypted(Pkcs12SafeContents safeContents) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OverflowException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSafeContentsUnencrypted", safeContents == null ? null : safeContents.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +227,7 @@ public class Pkcs12Builder extends NetObject  {
 
     public void SealWithMac(java.lang.String password, HashAlgorithmName hashAlgorithm, int iterationCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.formats.asn1.AsnContentException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SealWithMac", password, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), iterationCount);
         } catch (JCNativeException jcne) {
@@ -233,7 +237,7 @@ public class Pkcs12Builder extends NetObject  {
 
     public void SealWithoutIntegrity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SealWithoutIntegrity");
         } catch (JCNativeException jcne) {
@@ -247,9 +251,13 @@ public class Pkcs12Builder extends NetObject  {
     
     public boolean getIsSealed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSealed = null;
         try {
-            return (boolean)classInstance.Get("IsSealed");
+            retObjectIsSealed = classInstance.Get("IsSealed");
+            return (boolean)retObjectIsSealed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSealed != null ? retObjectIsSealed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

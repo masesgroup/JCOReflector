@@ -175,9 +175,13 @@ public class ImplicitResourceKey extends NetObject  {
     
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            return (java.lang.String)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class ImplicitResourceKey extends NetObject  {
 
     public void setFilter(java.lang.String Filter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filter", Filter);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,13 @@ public class ImplicitResourceKey extends NetObject  {
 
     public java.lang.String getKeyPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyPrefix");
+            retObjectKeyPrefix = classInstance.Get("KeyPrefix");
+            return (java.lang.String)retObjectKeyPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyPrefix != null ? retObjectKeyPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class ImplicitResourceKey extends NetObject  {
 
     public void setKeyPrefix(java.lang.String KeyPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyPrefix", KeyPrefix);
         } catch (JCNativeException jcne) {
@@ -215,9 +223,13 @@ public class ImplicitResourceKey extends NetObject  {
 
     public java.lang.String getProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("Property");
+            retObjectProperty = classInstance.Get("Property");
+            return (java.lang.String)retObjectProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class ImplicitResourceKey extends NetObject  {
 
     public void setProperty(java.lang.String Property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Property", Property);
         } catch (JCNativeException jcne) {

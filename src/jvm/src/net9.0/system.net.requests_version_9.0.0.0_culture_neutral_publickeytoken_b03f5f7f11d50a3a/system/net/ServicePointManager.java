@@ -162,10 +162,14 @@ public class ServicePointManager extends NetObject  {
     
     public static ServicePoint FindServicePoint(java.lang.String uriString, IWebProxy proxy) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindServicePoint = null;
         try {
-            JCObject objFindServicePoint = (JCObject)classType.Invoke("FindServicePoint", uriString, proxy == null ? null : proxy.getJCOInstance());
+            retObjectFindServicePoint = classType.Invoke("FindServicePoint", uriString, proxy == null ? null : proxy.getJCOInstance());
+            JCObject objFindServicePoint = (JCObject)retObjectFindServicePoint;
             return new ServicePoint(objFindServicePoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindServicePoint != null ? retObjectFindServicePoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ServicePointManager extends NetObject  {
 
     public static ServicePoint FindServicePoint(Uri address, IWebProxy proxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.FormatException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindServicePoint = null;
         try {
-            JCObject objFindServicePoint = (JCObject)classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance(), proxy == null ? null : proxy.getJCOInstance());
+            retObjectFindServicePoint = classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance(), proxy == null ? null : proxy.getJCOInstance());
+            JCObject objFindServicePoint = (JCObject)retObjectFindServicePoint;
             return new ServicePoint(objFindServicePoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindServicePoint != null ? retObjectFindServicePoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class ServicePointManager extends NetObject  {
 
     public static ServicePoint FindServicePoint(Uri address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindServicePoint = null;
         try {
-            JCObject objFindServicePoint = (JCObject)classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance());
+            retObjectFindServicePoint = classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance());
+            JCObject objFindServicePoint = (JCObject)retObjectFindServicePoint;
             return new ServicePoint(objFindServicePoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindServicePoint != null ? retObjectFindServicePoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +207,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void SetTcpKeepAlive(boolean enabled, int keepAliveTime, int keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTcpKeepAlive", enabled, keepAliveTime, keepAliveInterval);
         } catch (JCNativeException jcne) {
@@ -209,9 +221,13 @@ public class ServicePointManager extends NetObject  {
     
     public static boolean getCheckCertificateRevocationList() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckCertificateRevocationList = null;
         try {
-            return (boolean)classType.Get("CheckCertificateRevocationList");
+            retObjectCheckCertificateRevocationList = classType.Get("CheckCertificateRevocationList");
+            return (boolean)retObjectCheckCertificateRevocationList;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckCertificateRevocationList != null ? retObjectCheckCertificateRevocationList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setCheckCertificateRevocationList(boolean CheckCertificateRevocationList) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CheckCertificateRevocationList", CheckCertificateRevocationList);
         } catch (JCNativeException jcne) {
@@ -229,9 +245,13 @@ public class ServicePointManager extends NetObject  {
 
     public static boolean getEnableDnsRoundRobin() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnableDnsRoundRobin = null;
         try {
-            return (boolean)classType.Get("EnableDnsRoundRobin");
+            retObjectEnableDnsRoundRobin = classType.Get("EnableDnsRoundRobin");
+            return (boolean)retObjectEnableDnsRoundRobin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableDnsRoundRobin != null ? retObjectEnableDnsRoundRobin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +259,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setEnableDnsRoundRobin(boolean EnableDnsRoundRobin) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("EnableDnsRoundRobin", EnableDnsRoundRobin);
         } catch (JCNativeException jcne) {
@@ -249,9 +269,13 @@ public class ServicePointManager extends NetObject  {
 
     public static boolean getExpect100Continue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExpect100Continue = null;
         try {
-            return (boolean)classType.Get("Expect100Continue");
+            retObjectExpect100Continue = classType.Get("Expect100Continue");
+            return (boolean)retObjectExpect100Continue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExpect100Continue != null ? retObjectExpect100Continue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +283,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setExpect100Continue(boolean Expect100Continue) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Expect100Continue", Expect100Continue);
         } catch (JCNativeException jcne) {
@@ -269,9 +293,13 @@ public class ServicePointManager extends NetObject  {
 
     public static boolean getReusePort() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReusePort = null;
         try {
-            return (boolean)classType.Get("ReusePort");
+            retObjectReusePort = classType.Get("ReusePort");
+            return (boolean)retObjectReusePort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReusePort != null ? retObjectReusePort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +307,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setReusePort(boolean ReusePort) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ReusePort", ReusePort);
         } catch (JCNativeException jcne) {
@@ -289,9 +317,13 @@ public class ServicePointManager extends NetObject  {
 
     public static boolean getUseNagleAlgorithm() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUseNagleAlgorithm = null;
         try {
-            return (boolean)classType.Get("UseNagleAlgorithm");
+            retObjectUseNagleAlgorithm = classType.Get("UseNagleAlgorithm");
+            return (boolean)retObjectUseNagleAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseNagleAlgorithm != null ? retObjectUseNagleAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +331,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setUseNagleAlgorithm(boolean UseNagleAlgorithm) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("UseNagleAlgorithm", UseNagleAlgorithm);
         } catch (JCNativeException jcne) {
@@ -309,9 +341,19 @@ public class ServicePointManager extends NetObject  {
 
     public static int getDefaultConnectionLimit() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultConnectionLimit = null;
         try {
-            return (int)classType.Get("DefaultConnectionLimit");
+            retObjectDefaultConnectionLimit = classType.Get("DefaultConnectionLimit");
+            return (int)retObjectDefaultConnectionLimit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultConnectionLimitNumber = (java.lang.Number)retObjectDefaultConnectionLimit;
+                return retObjectDefaultConnectionLimitNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultConnectionLimit != null ? retObjectDefaultConnectionLimit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +361,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setDefaultConnectionLimit(int DefaultConnectionLimit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultConnectionLimit", DefaultConnectionLimit);
         } catch (JCNativeException jcne) {
@@ -329,9 +371,19 @@ public class ServicePointManager extends NetObject  {
 
     public static int getDnsRefreshTimeout() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDnsRefreshTimeout = null;
         try {
-            return (int)classType.Get("DnsRefreshTimeout");
+            retObjectDnsRefreshTimeout = classType.Get("DnsRefreshTimeout");
+            return (int)retObjectDnsRefreshTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDnsRefreshTimeoutNumber = (java.lang.Number)retObjectDnsRefreshTimeout;
+                return retObjectDnsRefreshTimeoutNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDnsRefreshTimeout != null ? retObjectDnsRefreshTimeout.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +391,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setDnsRefreshTimeout(int DnsRefreshTimeout) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DnsRefreshTimeout", DnsRefreshTimeout);
         } catch (JCNativeException jcne) {
@@ -349,9 +401,19 @@ public class ServicePointManager extends NetObject  {
 
     public static int getMaxServicePointIdleTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxServicePointIdleTime = null;
         try {
-            return (int)classType.Get("MaxServicePointIdleTime");
+            retObjectMaxServicePointIdleTime = classType.Get("MaxServicePointIdleTime");
+            return (int)retObjectMaxServicePointIdleTime;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxServicePointIdleTimeNumber = (java.lang.Number)retObjectMaxServicePointIdleTime;
+                return retObjectMaxServicePointIdleTimeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxServicePointIdleTime != null ? retObjectMaxServicePointIdleTime.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +421,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setMaxServicePointIdleTime(int MaxServicePointIdleTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("MaxServicePointIdleTime", MaxServicePointIdleTime);
         } catch (JCNativeException jcne) {
@@ -369,9 +431,19 @@ public class ServicePointManager extends NetObject  {
 
     public static int getMaxServicePoints() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxServicePoints = null;
         try {
-            return (int)classType.Get("MaxServicePoints");
+            retObjectMaxServicePoints = classType.Get("MaxServicePoints");
+            return (int)retObjectMaxServicePoints;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxServicePointsNumber = (java.lang.Number)retObjectMaxServicePoints;
+                return retObjectMaxServicePointsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxServicePoints != null ? retObjectMaxServicePoints.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,7 +451,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setMaxServicePoints(int MaxServicePoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("MaxServicePoints", MaxServicePoints);
         } catch (JCNativeException jcne) {
@@ -389,10 +461,14 @@ public class ServicePointManager extends NetObject  {
 
     public static EncryptionPolicy getEncryptionPolicy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncryptionPolicy = null;
         try {
-            JCObject val = (JCObject)classType.Get("EncryptionPolicy");
+            retObjectEncryptionPolicy = classType.Get("EncryptionPolicy");
+            JCObject val = (JCObject)retObjectEncryptionPolicy;
             return new EncryptionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionPolicy != null ? retObjectEncryptionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,9 +476,13 @@ public class ServicePointManager extends NetObject  {
 
     public static RemoteCertificateValidationCallback getServerCertificateValidationCallback() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectServerCertificateValidationCallback = null;
         try {
-            return (RemoteCertificateValidationCallback)classType.Get("ServerCertificateValidationCallback");
+            retObjectServerCertificateValidationCallback = classType.Get("ServerCertificateValidationCallback");
+            return (RemoteCertificateValidationCallback)retObjectServerCertificateValidationCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into RemoteCertificateValidationCallback", retObjectServerCertificateValidationCallback != null ? retObjectServerCertificateValidationCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,7 +490,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setServerCertificateValidationCallback(RemoteCertificateValidationCallback ServerCertificateValidationCallback) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ServerCertificateValidationCallback", ServerCertificateValidationCallback);
         } catch (JCNativeException jcne) {
@@ -420,10 +500,14 @@ public class ServicePointManager extends NetObject  {
 
     public static SecurityProtocolType getSecurityProtocol() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecurityProtocol = null;
         try {
-            JCObject val = (JCObject)classType.Get("SecurityProtocol");
+            retObjectSecurityProtocol = classType.Get("SecurityProtocol");
+            JCObject val = (JCObject)retObjectSecurityProtocol;
             return new SecurityProtocolType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityProtocol != null ? retObjectSecurityProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,7 +515,7 @@ public class ServicePointManager extends NetObject  {
 
     public static void setSecurityProtocol(SecurityProtocolType SecurityProtocol) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SecurityProtocol", SecurityProtocol == null ? null : SecurityProtocol.getJCOInstance());
         } catch (JCNativeException jcne) {

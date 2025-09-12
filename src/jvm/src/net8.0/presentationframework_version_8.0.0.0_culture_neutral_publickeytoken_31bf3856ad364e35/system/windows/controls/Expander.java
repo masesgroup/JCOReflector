@@ -164,7 +164,7 @@ public class Expander extends HeaderedContentControl  {
     
     public void OnApplyTemplate() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -178,9 +178,13 @@ public class Expander extends HeaderedContentControl  {
     
     public boolean getIsExpanded() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExpanded = null;
         try {
-            return (boolean)classInstance.Get("IsExpanded");
+            retObjectIsExpanded = classInstance.Get("IsExpanded");
+            return (boolean)retObjectIsExpanded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExpanded != null ? retObjectIsExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class Expander extends HeaderedContentControl  {
 
     public void setIsExpanded(boolean IsExpanded) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsExpanded", IsExpanded);
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class Expander extends HeaderedContentControl  {
 
     public ExpandDirection getExpandDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpandDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpandDirection");
+            retObjectExpandDirection = classInstance.Get("ExpandDirection");
+            JCObject val = (JCObject)retObjectExpandDirection;
             return new ExpandDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpandDirection != null ? retObjectExpandDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class Expander extends HeaderedContentControl  {
 
     public void setExpandDirection(ExpandDirection ExpandDirection) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpandDirection", ExpandDirection == null ? null : ExpandDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,7 +232,7 @@ public class Expander extends HeaderedContentControl  {
 
     public void addCollapsed(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Collapsed", handler);
         } catch (JCNativeException jcne) {
@@ -234,7 +242,7 @@ public class Expander extends HeaderedContentControl  {
 
     public void removeCollapsed(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Collapsed", handler);
         } catch (JCNativeException jcne) {
@@ -244,7 +252,7 @@ public class Expander extends HeaderedContentControl  {
 
     public void addExpanded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Expanded", handler);
         } catch (JCNativeException jcne) {
@@ -254,7 +262,7 @@ public class Expander extends HeaderedContentControl  {
 
     public void removeExpanded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Expanded", handler);
         } catch (JCNativeException jcne) {

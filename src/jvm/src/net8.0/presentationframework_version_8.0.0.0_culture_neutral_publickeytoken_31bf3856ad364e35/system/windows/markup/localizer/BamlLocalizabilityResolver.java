@@ -155,9 +155,13 @@ public class BamlLocalizabilityResolver extends NetObject  {
     
     public java.lang.String ResolveAssemblyFromClass(java.lang.String className) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveAssemblyFromClass = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResolveAssemblyFromClass", className);
+            retObjectResolveAssemblyFromClass = classInstance.Invoke("ResolveAssemblyFromClass", className);
+            return (java.lang.String)retObjectResolveAssemblyFromClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResolveAssemblyFromClass != null ? retObjectResolveAssemblyFromClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class BamlLocalizabilityResolver extends NetObject  {
 
     public java.lang.String ResolveFormattingTagToClass(java.lang.String formattingTag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveFormattingTagToClass = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResolveFormattingTagToClass", formattingTag);
+            retObjectResolveFormattingTagToClass = classInstance.Invoke("ResolveFormattingTagToClass", formattingTag);
+            return (java.lang.String)retObjectResolveFormattingTagToClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResolveFormattingTagToClass != null ? retObjectResolveFormattingTagToClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +183,14 @@ public class BamlLocalizabilityResolver extends NetObject  {
 
     public LocalizabilityAttribute GetPropertyLocalizability(java.lang.String assembly, java.lang.String className, java.lang.String property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyLocalizability = null;
         try {
-            JCObject objGetPropertyLocalizability = (JCObject)classInstance.Invoke("GetPropertyLocalizability", assembly, className, property);
+            retObjectGetPropertyLocalizability = classInstance.Invoke("GetPropertyLocalizability", assembly, className, property);
+            JCObject objGetPropertyLocalizability = (JCObject)retObjectGetPropertyLocalizability;
             return new LocalizabilityAttribute(objGetPropertyLocalizability);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyLocalizability != null ? retObjectGetPropertyLocalizability.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +198,14 @@ public class BamlLocalizabilityResolver extends NetObject  {
 
     public ElementLocalizability GetElementLocalizability(java.lang.String assembly, java.lang.String className) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementLocalizability = null;
         try {
-            JCObject objGetElementLocalizability = (JCObject)classInstance.Invoke("GetElementLocalizability", assembly, className);
+            retObjectGetElementLocalizability = classInstance.Invoke("GetElementLocalizability", assembly, className);
+            JCObject objGetElementLocalizability = (JCObject)retObjectGetElementLocalizability;
             return new ElementLocalizability(objGetElementLocalizability);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementLocalizability != null ? retObjectGetElementLocalizability.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

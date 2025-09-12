@@ -152,10 +152,14 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
     
     public IAsyncResult BeginCloseOutputSession(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginCloseOutputSession = null;
         try {
-            JCObject objBeginCloseOutputSession = (JCObject)classInstance.Invoke("BeginCloseOutputSession", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginCloseOutputSession = classInstance.Invoke("BeginCloseOutputSession", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginCloseOutputSession = (JCObject)retObjectBeginCloseOutputSession;
             return new IAsyncResultImplementation(objBeginCloseOutputSession);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginCloseOutputSession != null ? retObjectBeginCloseOutputSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
 
     public IAsyncResult BeginCloseOutputSession(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginCloseOutputSession = null;
         try {
-            JCObject objBeginCloseOutputSession = (JCObject)classInstance.Invoke("BeginCloseOutputSession", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginCloseOutputSession = classInstance.Invoke("BeginCloseOutputSession", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginCloseOutputSession = (JCObject)retObjectBeginCloseOutputSession;
             return new IAsyncResultImplementation(objBeginCloseOutputSession);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginCloseOutputSession != null ? retObjectBeginCloseOutputSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +182,7 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
 
     public void CloseOutputSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseOutputSession");
         } catch (JCNativeException jcne) {
@@ -184,7 +192,7 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
 
     public void CloseOutputSession(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseOutputSession", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +202,7 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
 
     public void EndCloseOutputSession(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCloseOutputSession", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
     
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

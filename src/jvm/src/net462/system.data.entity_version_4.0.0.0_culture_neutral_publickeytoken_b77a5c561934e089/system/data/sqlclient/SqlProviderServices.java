@@ -161,10 +161,14 @@ public class SqlProviderServices extends DbProviderServices  {
     
     public static SqlProviderServices getSingletonInstance() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingletonInstance = null;
         try {
-            JCObject val = (JCObject)classType.Get("SingletonInstance");
+            retObjectSingletonInstance = classType.Get("SingletonInstance");
+            JCObject val = (JCObject)retObjectSingletonInstance;
             return new SqlProviderServices(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingletonInstance != null ? retObjectSingletonInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -142,7 +142,7 @@ public class IJsonOnDeserializedImplementation extends NetObject implements IJso
     
     public void OnDeserialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDeserialized");
         } catch (JCNativeException jcne) {

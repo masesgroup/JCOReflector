@@ -155,10 +155,12 @@ public class CharArrayType extends NetObject  {
     
     public static char[] FromObject(NetObject Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromObject = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            retObjectFromObject = classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectFromObject;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -167,6 +169,8 @@ public class CharArrayType extends NetObject  {
 				resultingArray[indexFromObject] = (char)resultingArrayList.get(indexFromObject);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectFromObject != null ? retObjectFromObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,12 @@ public class CharArrayType extends NetObject  {
 
     public static char[] FromString(java.lang.String Value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromString = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromString", Value);
+            retObjectFromString = classType.Invoke("FromString", Value);
+            JCObject resultingObjects = (JCObject)retObjectFromString;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -186,6 +192,8 @@ public class CharArrayType extends NetObject  {
 				resultingArray[indexFromString] = (char)resultingArrayList.get(indexFromString);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectFromString != null ? retObjectFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

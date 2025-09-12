@@ -142,10 +142,14 @@ public class ICustomTypeProviderImplementation extends NetObject implements ICus
     
     public NetType GetCustomType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomType = null;
         try {
-            JCObject objGetCustomType = (JCObject)classInstance.Invoke("GetCustomType");
+            retObjectGetCustomType = classInstance.Invoke("GetCustomType");
+            JCObject objGetCustomType = (JCObject)retObjectGetCustomType;
             return new NetType(objGetCustomType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomType != null ? retObjectGetCustomType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

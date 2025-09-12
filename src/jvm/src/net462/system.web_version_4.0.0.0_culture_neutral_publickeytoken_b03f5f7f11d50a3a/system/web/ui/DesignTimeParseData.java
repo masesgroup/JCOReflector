@@ -184,9 +184,13 @@ public class DesignTimeParseData extends NetObject  {
     
     public boolean getShouldApplyTheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldApplyTheme = null;
         try {
-            return (boolean)classInstance.Get("ShouldApplyTheme");
+            retObjectShouldApplyTheme = classInstance.Get("ShouldApplyTheme");
+            return (boolean)retObjectShouldApplyTheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldApplyTheme != null ? retObjectShouldApplyTheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class DesignTimeParseData extends NetObject  {
 
     public void setShouldApplyTheme(boolean ShouldApplyTheme) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldApplyTheme", ShouldApplyTheme);
         } catch (JCNativeException jcne) {
@@ -204,10 +208,14 @@ public class DesignTimeParseData extends NetObject  {
 
     public ICollection getUserControlRegisterEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserControlRegisterEntries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserControlRegisterEntries");
+            retObjectUserControlRegisterEntries = classInstance.Get("UserControlRegisterEntries");
+            JCObject val = (JCObject)retObjectUserControlRegisterEntries;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserControlRegisterEntries != null ? retObjectUserControlRegisterEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +223,14 @@ public class DesignTimeParseData extends NetObject  {
 
     public IDesignerHost getDesignerHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerHost = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerHost");
+            retObjectDesignerHost = classInstance.Get("DesignerHost");
+            JCObject val = (JCObject)retObjectDesignerHost;
             return new IDesignerHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerHost != null ? retObjectDesignerHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +238,13 @@ public class DesignTimeParseData extends NetObject  {
 
     public EventHandler getDataBindingHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataBindingHandler = null;
         try {
-            return (EventHandler)classInstance.Get("DataBindingHandler");
+            retObjectDataBindingHandler = classInstance.Get("DataBindingHandler");
+            return (EventHandler)retObjectDataBindingHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler", retObjectDataBindingHandler != null ? retObjectDataBindingHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class DesignTimeParseData extends NetObject  {
 
     public void setDataBindingHandler(EventHandler DataBindingHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataBindingHandler", DataBindingHandler);
         } catch (JCNativeException jcne) {
@@ -246,9 +262,13 @@ public class DesignTimeParseData extends NetObject  {
 
     public java.lang.String getDocumentUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentUrl");
+            retObjectDocumentUrl = classInstance.Get("DocumentUrl");
+            return (java.lang.String)retObjectDocumentUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentUrl != null ? retObjectDocumentUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +276,7 @@ public class DesignTimeParseData extends NetObject  {
 
     public void setDocumentUrl(java.lang.String DocumentUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentUrl", DocumentUrl);
         } catch (JCNativeException jcne) {
@@ -266,9 +286,13 @@ public class DesignTimeParseData extends NetObject  {
 
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            return (java.lang.String)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +300,13 @@ public class DesignTimeParseData extends NetObject  {
 
     public java.lang.String getParseText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseText = null;
         try {
-            return (java.lang.String)classInstance.Get("ParseText");
+            retObjectParseText = classInstance.Get("ParseText");
+            return (java.lang.String)retObjectParseText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParseText != null ? retObjectParseText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

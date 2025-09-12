@@ -226,7 +226,7 @@ public class Binding extends NetObject  {
     
     public void ReadValue() throws Throwable, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidCastException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadValue");
         } catch (JCNativeException jcne) {
@@ -236,7 +236,7 @@ public class Binding extends NetObject  {
 
     public void WriteValue() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidCastException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue");
         } catch (JCNativeException jcne) {
@@ -250,9 +250,13 @@ public class Binding extends NetObject  {
     
     public boolean getFormattingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormattingEnabled = null;
         try {
-            return (boolean)classInstance.Get("FormattingEnabled");
+            retObjectFormattingEnabled = classInstance.Get("FormattingEnabled");
+            return (boolean)retObjectFormattingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFormattingEnabled != null ? retObjectFormattingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +264,7 @@ public class Binding extends NetObject  {
 
     public void setFormattingEnabled(boolean FormattingEnabled) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidCastException, system.ArgumentException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormattingEnabled", FormattingEnabled);
         } catch (JCNativeException jcne) {
@@ -270,9 +274,13 @@ public class Binding extends NetObject  {
 
     public boolean getIsBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBinding = null;
         try {
-            return (boolean)classInstance.Get("IsBinding");
+            retObjectIsBinding = classInstance.Get("IsBinding");
+            return (boolean)retObjectIsBinding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBinding != null ? retObjectIsBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +288,7 @@ public class Binding extends NetObject  {
 
     public void setIsBinding(boolean IsBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBinding", IsBinding);
         } catch (JCNativeException jcne) {
@@ -290,10 +298,14 @@ public class Binding extends NetObject  {
 
     public IFormatProvider getFormatInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatInfo");
+            retObjectFormatInfo = classInstance.Get("FormatInfo");
+            JCObject val = (JCObject)retObjectFormatInfo;
             return new IFormatProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatInfo != null ? retObjectFormatInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +313,7 @@ public class Binding extends NetObject  {
 
     public void setFormatInfo(IFormatProvider FormatInfo) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidCastException, system.ArgumentException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatInfo", FormatInfo == null ? null : FormatInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,10 +323,14 @@ public class Binding extends NetObject  {
 
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +338,14 @@ public class Binding extends NetObject  {
 
     public NetObject getDataSourceNullValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceNullValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceNullValue");
+            retObjectDataSourceNullValue = classInstance.Get("DataSourceNullValue");
+            JCObject val = (JCObject)retObjectDataSourceNullValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSourceNullValue != null ? retObjectDataSourceNullValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +353,7 @@ public class Binding extends NetObject  {
 
     public void setDataSourceNullValue(NetObject DataSourceNullValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.TypeLoadException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSourceNullValue", DataSourceNullValue == null ? null : DataSourceNullValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,10 +363,14 @@ public class Binding extends NetObject  {
 
     public NetObject getNullValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NullValue");
+            retObjectNullValue = classInstance.Get("NullValue");
+            JCObject val = (JCObject)retObjectNullValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNullValue != null ? retObjectNullValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +378,7 @@ public class Binding extends NetObject  {
 
     public void setNullValue(NetObject NullValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullValue", NullValue == null ? null : NullValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -364,9 +388,13 @@ public class Binding extends NetObject  {
 
     public java.lang.String getFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatString");
+            retObjectFormatString = classInstance.Get("FormatString");
+            return (java.lang.String)retObjectFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatString != null ? retObjectFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,7 +402,7 @@ public class Binding extends NetObject  {
 
     public void setFormatString(java.lang.String FormatString) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidCastException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatString", FormatString);
         } catch (JCNativeException jcne) {
@@ -384,9 +412,13 @@ public class Binding extends NetObject  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +426,14 @@ public class Binding extends NetObject  {
 
     public BindingManagerBase getBindingManagerBase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingManagerBase = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingManagerBase");
+            retObjectBindingManagerBase = classInstance.Get("BindingManagerBase");
+            JCObject val = (JCObject)retObjectBindingManagerBase;
             return new BindingManagerBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingManagerBase != null ? retObjectBindingManagerBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,7 +441,7 @@ public class Binding extends NetObject  {
 
     public void setBindingManagerBase(BindingManagerBase BindingManagerBase) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.NotSupportedException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingManagerBase", BindingManagerBase == null ? null : BindingManagerBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -415,10 +451,14 @@ public class Binding extends NetObject  {
 
     public BindingMemberInfo getBindingMemberInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingMemberInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingMemberInfo");
+            retObjectBindingMemberInfo = classInstance.Get("BindingMemberInfo");
+            JCObject val = (JCObject)retObjectBindingMemberInfo;
             return new BindingMemberInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingMemberInfo != null ? retObjectBindingMemberInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +466,14 @@ public class Binding extends NetObject  {
 
     public Control getControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Control");
+            retObjectControl = classInstance.Get("Control");
+            JCObject val = (JCObject)retObjectControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControl != null ? retObjectControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,10 +481,14 @@ public class Binding extends NetObject  {
 
     public ControlUpdateMode getControlUpdateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlUpdateMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlUpdateMode");
+            retObjectControlUpdateMode = classInstance.Get("ControlUpdateMode");
+            JCObject val = (JCObject)retObjectControlUpdateMode;
             return new ControlUpdateMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlUpdateMode != null ? retObjectControlUpdateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,7 +496,7 @@ public class Binding extends NetObject  {
 
     public void setControlUpdateMode(ControlUpdateMode ControlUpdateMode) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidCastException, system.ArgumentException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlUpdateMode", ControlUpdateMode == null ? null : ControlUpdateMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -458,10 +506,14 @@ public class Binding extends NetObject  {
 
     public DataSourceUpdateMode getDataSourceUpdateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceUpdateMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceUpdateMode");
+            retObjectDataSourceUpdateMode = classInstance.Get("DataSourceUpdateMode");
+            JCObject val = (JCObject)retObjectDataSourceUpdateMode;
             return new DataSourceUpdateMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSourceUpdateMode != null ? retObjectDataSourceUpdateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +521,7 @@ public class Binding extends NetObject  {
 
     public void setDataSourceUpdateMode(DataSourceUpdateMode DataSourceUpdateMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSourceUpdateMode", DataSourceUpdateMode == null ? null : DataSourceUpdateMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -479,10 +531,14 @@ public class Binding extends NetObject  {
 
     public IBindableComponent getBindableComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindableComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindableComponent");
+            retObjectBindableComponent = classInstance.Get("BindableComponent");
+            JCObject val = (JCObject)retObjectBindableComponent;
             return new IBindableComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindableComponent != null ? retObjectBindableComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +546,7 @@ public class Binding extends NetObject  {
 
     public void setBindableComponent(IBindableComponent BindableComponent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindableComponent", BindableComponent == null ? null : BindableComponent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -505,7 +561,7 @@ public class Binding extends NetObject  {
 
     public void addBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BindingComplete", handler);
         } catch (JCNativeException jcne) {
@@ -515,7 +571,7 @@ public class Binding extends NetObject  {
 
     public void removeBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BindingComplete", handler);
         } catch (JCNativeException jcne) {
@@ -525,7 +581,7 @@ public class Binding extends NetObject  {
 
     public void addFormat(ConvertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Format", handler);
         } catch (JCNativeException jcne) {
@@ -535,7 +591,7 @@ public class Binding extends NetObject  {
 
     public void removeFormat(ConvertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Format", handler);
         } catch (JCNativeException jcne) {
@@ -545,7 +601,7 @@ public class Binding extends NetObject  {
 
     public void addParse(ConvertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Parse", handler);
         } catch (JCNativeException jcne) {
@@ -555,7 +611,7 @@ public class Binding extends NetObject  {
 
     public void removeParse(ConvertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Parse", handler);
         } catch (JCNativeException jcne) {

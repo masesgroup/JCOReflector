@@ -171,10 +171,14 @@ public class ConfigurationCollectionAttribute extends Attribute  {
     
     public ConfigurationElementCollectionType getCollectionType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollectionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CollectionType");
+            retObjectCollectionType = classInstance.Get("CollectionType");
+            JCObject val = (JCObject)retObjectCollectionType;
             return new ConfigurationElementCollectionType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollectionType != null ? retObjectCollectionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public void setCollectionType(ConfigurationElementCollectionType CollectionType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CollectionType", CollectionType == null ? null : CollectionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,9 +196,13 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public java.lang.String getAddItemName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddItemName = null;
         try {
-            return (java.lang.String)classInstance.Get("AddItemName");
+            retObjectAddItemName = classInstance.Get("AddItemName");
+            return (java.lang.String)retObjectAddItemName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAddItemName != null ? retObjectAddItemName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public void setAddItemName(java.lang.String AddItemName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddItemName", AddItemName);
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public java.lang.String getClearItemsName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClearItemsName = null;
         try {
-            return (java.lang.String)classInstance.Get("ClearItemsName");
+            retObjectClearItemsName = classInstance.Get("ClearItemsName");
+            return (java.lang.String)retObjectClearItemsName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClearItemsName != null ? retObjectClearItemsName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public void setClearItemsName(java.lang.String ClearItemsName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClearItemsName", ClearItemsName);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public java.lang.String getRemoveItemName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveItemName = null;
         try {
-            return (java.lang.String)classInstance.Get("RemoveItemName");
+            retObjectRemoveItemName = classInstance.Get("RemoveItemName");
+            return (java.lang.String)retObjectRemoveItemName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRemoveItemName != null ? retObjectRemoveItemName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public void setRemoveItemName(java.lang.String RemoveItemName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemoveItemName", RemoveItemName);
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class ConfigurationCollectionAttribute extends Attribute  {
 
     public NetType getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            JCObject val = (JCObject)retObjectItemType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

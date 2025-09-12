@@ -157,10 +157,14 @@ public class JavaScriptEncoder extends TextEncoder  {
     
     public static JavaScriptEncoder Create(TextEncoderSettings settings) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new JavaScriptEncoder(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class JavaScriptEncoder extends TextEncoder  {
 
     public static JavaScriptEncoder Create(UnicodeRange... allowedRanges) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", (java.lang.Object)toObjectFromArray(allowedRanges));
+            retObjectCreate = classType.Invoke("Create", (java.lang.Object)toObjectFromArray(allowedRanges));
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new JavaScriptEncoder(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class JavaScriptEncoder extends TextEncoder  {
     
     public static JavaScriptEncoder getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new JavaScriptEncoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class JavaScriptEncoder extends TextEncoder  {
 
     public static JavaScriptEncoder getUnsafeRelaxedJsonEscaping() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeRelaxedJsonEscaping = null;
         try {
-            JCObject val = (JCObject)classType.Get("UnsafeRelaxedJsonEscaping");
+            retObjectUnsafeRelaxedJsonEscaping = classType.Get("UnsafeRelaxedJsonEscaping");
+            JCObject val = (JCObject)retObjectUnsafeRelaxedJsonEscaping;
             return new JavaScriptEncoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnsafeRelaxedJsonEscaping != null ? retObjectUnsafeRelaxedJsonEscaping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -154,9 +154,19 @@ public class Base64Url extends NetObject  {
     
     public static int GetEncodedLength(int bytesLength) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEncodedLength = null;
         try {
-            return (int)classType.Invoke("GetEncodedLength", bytesLength);
+            retObjectGetEncodedLength = classType.Invoke("GetEncodedLength", bytesLength);
+            return (int)retObjectGetEncodedLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEncodedLengthNumber = (java.lang.Number)retObjectGetEncodedLength;
+                return retObjectGetEncodedLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetEncodedLength != null ? retObjectGetEncodedLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +174,19 @@ public class Base64Url extends NetObject  {
 
     public static int GetMaxDecodedLength(int base64Length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMaxDecodedLength = null;
         try {
-            return (int)classType.Invoke("GetMaxDecodedLength", base64Length);
+            retObjectGetMaxDecodedLength = classType.Invoke("GetMaxDecodedLength", base64Length);
+            return (int)retObjectGetMaxDecodedLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetMaxDecodedLengthNumber = (java.lang.Number)retObjectGetMaxDecodedLength;
+                return retObjectGetMaxDecodedLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetMaxDecodedLength != null ? retObjectGetMaxDecodedLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

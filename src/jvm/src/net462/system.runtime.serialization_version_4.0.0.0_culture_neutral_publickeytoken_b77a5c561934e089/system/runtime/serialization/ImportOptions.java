@@ -168,9 +168,13 @@ public class ImportOptions extends NetObject  {
     
     public boolean getEnableDataBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableDataBinding = null;
         try {
-            return (boolean)classInstance.Get("EnableDataBinding");
+            retObjectEnableDataBinding = classInstance.Get("EnableDataBinding");
+            return (boolean)retObjectEnableDataBinding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableDataBinding != null ? retObjectEnableDataBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class ImportOptions extends NetObject  {
 
     public void setEnableDataBinding(boolean EnableDataBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableDataBinding", EnableDataBinding);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class ImportOptions extends NetObject  {
 
     public boolean getGenerateInternal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateInternal = null;
         try {
-            return (boolean)classInstance.Get("GenerateInternal");
+            retObjectGenerateInternal = classInstance.Get("GenerateInternal");
+            return (boolean)retObjectGenerateInternal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGenerateInternal != null ? retObjectGenerateInternal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ImportOptions extends NetObject  {
 
     public void setGenerateInternal(boolean GenerateInternal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateInternal", GenerateInternal);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class ImportOptions extends NetObject  {
 
     public boolean getGenerateSerializable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateSerializable = null;
         try {
-            return (boolean)classInstance.Get("GenerateSerializable");
+            retObjectGenerateSerializable = classInstance.Get("GenerateSerializable");
+            return (boolean)retObjectGenerateSerializable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGenerateSerializable != null ? retObjectGenerateSerializable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ImportOptions extends NetObject  {
 
     public void setGenerateSerializable(boolean GenerateSerializable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateSerializable", GenerateSerializable);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class ImportOptions extends NetObject  {
 
     public boolean getImportXmlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportXmlType = null;
         try {
-            return (boolean)classInstance.Get("ImportXmlType");
+            retObjectImportXmlType = classInstance.Get("ImportXmlType");
+            return (boolean)retObjectImportXmlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectImportXmlType != null ? retObjectImportXmlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class ImportOptions extends NetObject  {
 
     public void setImportXmlType(boolean ImportXmlType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImportXmlType", ImportXmlType);
         } catch (JCNativeException jcne) {
@@ -248,10 +264,14 @@ public class ImportOptions extends NetObject  {
 
     public CodeDomProvider getCodeProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeProvider");
+            retObjectCodeProvider = classInstance.Get("CodeProvider");
+            JCObject val = (JCObject)retObjectCodeProvider;
             return new CodeDomProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeProvider != null ? retObjectCodeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class ImportOptions extends NetObject  {
 
     public void setCodeProvider(CodeDomProvider CodeProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodeProvider", CodeProvider == null ? null : CodeProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +289,14 @@ public class ImportOptions extends NetObject  {
 
     public IDataContractSurrogate getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractSurrogate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractSurrogate");
+            retObjectDataContractSurrogate = classInstance.Get("DataContractSurrogate");
+            JCObject val = (JCObject)retObjectDataContractSurrogate;
             return new IDataContractSurrogateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractSurrogate != null ? retObjectDataContractSurrogate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class ImportOptions extends NetObject  {
 
     public void setDataContractSurrogate(IDataContractSurrogate DataContractSurrogate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataContractSurrogate", DataContractSurrogate == null ? null : DataContractSurrogate.getJCOInstance());
         } catch (JCNativeException jcne) {

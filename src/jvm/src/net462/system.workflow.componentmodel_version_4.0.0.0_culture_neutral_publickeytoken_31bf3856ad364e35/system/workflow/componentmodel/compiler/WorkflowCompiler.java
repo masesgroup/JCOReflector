@@ -163,10 +163,14 @@ public class WorkflowCompiler extends NetObject  {
     
     public WorkflowCompilerResults Compile(WorkflowCompilerParameters parameters, java.lang.String... files) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.MissingMethodException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.collections.generic.KeyNotFoundException, system.componentmodel.design.serialization.CodeDomSerializerException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.text.regularexpressions.RegexMatchTimeoutException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompile = null;
         try {
-            JCObject objCompile = (JCObject)classInstance.Invoke("Compile", parameters == null ? null : parameters.getJCOInstance(), files);
+            retObjectCompile = classInstance.Invoke("Compile", parameters == null ? null : parameters.getJCOInstance(), files);
+            JCObject objCompile = (JCObject)retObjectCompile;
             return new WorkflowCompilerResults(objCompile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompile != null ? retObjectCompile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class WorkflowCompiler extends NetObject  {
 
     public WorkflowCompilerResults Compile(WorkflowCompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.MissingMethodException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.collections.generic.KeyNotFoundException, system.componentmodel.design.serialization.CodeDomSerializerException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.text.regularexpressions.RegexMatchTimeoutException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompile = null;
         try {
-            JCObject objCompile = (JCObject)classInstance.Invoke("Compile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCompile = classInstance.Invoke("Compile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCompile = (JCObject)retObjectCompile;
             return new WorkflowCompilerResults(objCompile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompile != null ? retObjectCompile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

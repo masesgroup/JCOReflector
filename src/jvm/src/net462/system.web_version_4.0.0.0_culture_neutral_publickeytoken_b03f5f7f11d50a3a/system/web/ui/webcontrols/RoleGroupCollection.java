@@ -165,9 +165,13 @@ public class RoleGroupCollection extends CollectionBase  {
     
     public boolean Contains(RoleGroup group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", group == null ? null : group.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", group == null ? null : group.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,19 @@ public class RoleGroupCollection extends CollectionBase  {
 
     public int IndexOf(RoleGroup group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", group == null ? null : group.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", group == null ? null : group.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +199,14 @@ public class RoleGroupCollection extends CollectionBase  {
 
     public RoleGroup GetMatchingRoleGroup(IPrincipal user) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMatchingRoleGroup = null;
         try {
-            JCObject objGetMatchingRoleGroup = (JCObject)classInstance.Invoke("GetMatchingRoleGroup", user == null ? null : user.getJCOInstance());
+            retObjectGetMatchingRoleGroup = classInstance.Invoke("GetMatchingRoleGroup", user == null ? null : user.getJCOInstance());
+            JCObject objGetMatchingRoleGroup = (JCObject)retObjectGetMatchingRoleGroup;
             return new RoleGroup(objGetMatchingRoleGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMatchingRoleGroup != null ? retObjectGetMatchingRoleGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +214,7 @@ public class RoleGroupCollection extends CollectionBase  {
 
     public void Add(RoleGroup group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", group == null ? null : group.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +224,7 @@ public class RoleGroupCollection extends CollectionBase  {
 
     public void CopyTo(RoleGroup[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -216,7 +234,7 @@ public class RoleGroupCollection extends CollectionBase  {
 
     public void Insert(int index, RoleGroup group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, group == null ? null : group.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +244,7 @@ public class RoleGroupCollection extends CollectionBase  {
 
     public void Remove(RoleGroup group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", group == null ? null : group.getJCOInstance());
         } catch (JCNativeException jcne) {

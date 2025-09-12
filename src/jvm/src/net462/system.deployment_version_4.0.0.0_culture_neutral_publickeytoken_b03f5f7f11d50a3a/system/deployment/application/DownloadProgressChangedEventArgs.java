@@ -161,9 +161,19 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
     
     public long getBytesDownloaded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesDownloaded = null;
         try {
-            return (long)classInstance.Get("BytesDownloaded");
+            retObjectBytesDownloaded = classInstance.Get("BytesDownloaded");
+            return (long)retObjectBytesDownloaded;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesDownloadedNumber = (java.lang.Number)retObjectBytesDownloaded;
+                return retObjectBytesDownloadedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesDownloaded != null ? retObjectBytesDownloaded.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +181,19 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
 
     public long getTotalBytesToDownload() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalBytesToDownload = null;
         try {
-            return (long)classInstance.Get("TotalBytesToDownload");
+            retObjectTotalBytesToDownload = classInstance.Get("TotalBytesToDownload");
+            return (long)retObjectTotalBytesToDownload;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTotalBytesToDownloadNumber = (java.lang.Number)retObjectTotalBytesToDownload;
+                return retObjectTotalBytesToDownloadNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalBytesToDownload != null ? retObjectTotalBytesToDownload.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +201,14 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
 
     public DeploymentProgressState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new DeploymentProgressState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

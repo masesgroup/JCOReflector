@@ -170,10 +170,14 @@ public class MonthChangedEventArgs extends NetObject  {
     
     public DateTime getNewDate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewDate");
+            retObjectNewDate = classInstance.Get("NewDate");
+            JCObject val = (JCObject)retObjectNewDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewDate != null ? retObjectNewDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class MonthChangedEventArgs extends NetObject  {
 
     public DateTime getPreviousDate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousDate");
+            retObjectPreviousDate = classInstance.Get("PreviousDate");
+            JCObject val = (JCObject)retObjectPreviousDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousDate != null ? retObjectPreviousDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

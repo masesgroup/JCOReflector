@@ -153,9 +153,13 @@ public class Localization extends NetObject  {
     
     public static java.lang.String GetAttributes(NetObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAttributes = null;
         try {
-            return (java.lang.String)classType.Invoke("GetAttributes", element == null ? null : element.getJCOInstance());
+            retObjectGetAttributes = classType.Invoke("GetAttributes", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttributes != null ? retObjectGetAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class Localization extends NetObject  {
 
     public static java.lang.String GetComments(NetObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetComments = null;
         try {
-            return (java.lang.String)classType.Invoke("GetComments", element == null ? null : element.getJCOInstance());
+            retObjectGetComments = classType.Invoke("GetComments", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetComments;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetComments != null ? retObjectGetComments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +181,7 @@ public class Localization extends NetObject  {
 
     public static void SetAttributes(NetObject element, java.lang.String attributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAttributes", element == null ? null : element.getJCOInstance(), attributes);
         } catch (JCNativeException jcne) {
@@ -183,7 +191,7 @@ public class Localization extends NetObject  {
 
     public static void SetComments(NetObject element, java.lang.String comments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetComments", element == null ? null : element.getJCOInstance(), comments);
         } catch (JCNativeException jcne) {

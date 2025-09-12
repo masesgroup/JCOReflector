@@ -170,9 +170,13 @@ public class ExtensibleModelBinderAttribute extends Attribute  {
     
     public boolean getSuppressPrefixCheck() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressPrefixCheck = null;
         try {
-            return (boolean)classInstance.Get("SuppressPrefixCheck");
+            retObjectSuppressPrefixCheck = classInstance.Get("SuppressPrefixCheck");
+            return (boolean)retObjectSuppressPrefixCheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressPrefixCheck != null ? retObjectSuppressPrefixCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class ExtensibleModelBinderAttribute extends Attribute  {
 
     public void setSuppressPrefixCheck(boolean SuppressPrefixCheck) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuppressPrefixCheck", SuppressPrefixCheck);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class ExtensibleModelBinderAttribute extends Attribute  {
 
     public NetType getBinderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinderType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BinderType");
+            retObjectBinderType = classInstance.Get("BinderType");
+            JCObject val = (JCObject)retObjectBinderType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinderType != null ? retObjectBinderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class ExtensibleModelBinderAttribute extends Attribute  {
 
     public void setBinderType(NetType BinderType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BinderType", BinderType == null ? null : BinderType.getJCOInstance());
         } catch (JCNativeException jcne) {

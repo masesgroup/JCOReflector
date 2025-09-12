@@ -156,9 +156,13 @@ public class LocationReferenceEnvironment extends NetObject  {
     
     public boolean IsVisible(LocationReference locationReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", locationReference == null ? null : locationReference.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", locationReference == null ? null : locationReference.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class LocationReferenceEnvironment extends NetObject  {
 
     public boolean TryGetLocationReference(java.lang.String name, JCORefOut<LocationReference> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetLocationReference = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetLocationReference", name, result.getJCRefOut());
+            retObjectTryGetLocationReference = classInstance.Invoke("TryGetLocationReference", name, result.getJCRefOut());
+            return (boolean)retObjectTryGetLocationReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetLocationReference != null ? retObjectTryGetLocationReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class LocationReferenceEnvironment extends NetObject  {
     
     public Activity getRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Root");
+            retObjectRoot = classInstance.Get("Root");
+            JCObject val = (JCObject)retObjectRoot;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoot != null ? retObjectRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class LocationReferenceEnvironment extends NetObject  {
 
     public LocationReferenceEnvironment getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new LocationReferenceEnvironment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class LocationReferenceEnvironment extends NetObject  {
 
     public void setParent(LocationReferenceEnvironment Parent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
         } catch (JCNativeException jcne) {

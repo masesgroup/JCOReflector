@@ -157,10 +157,14 @@ public class EndpointIdentity extends NetObject  {
     
     public static EndpointIdentity CreateDnsIdentity(java.lang.String dnsName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDnsIdentity = null;
         try {
-            JCObject objCreateDnsIdentity = (JCObject)classType.Invoke("CreateDnsIdentity", dnsName);
+            retObjectCreateDnsIdentity = classType.Invoke("CreateDnsIdentity", dnsName);
+            JCObject objCreateDnsIdentity = (JCObject)retObjectCreateDnsIdentity;
             return new EndpointIdentity(objCreateDnsIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDnsIdentity != null ? retObjectCreateDnsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class EndpointIdentity extends NetObject  {
 
     public static EndpointIdentity CreateIdentity(Claim identity) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIdentity = null;
         try {
-            JCObject objCreateIdentity = (JCObject)classType.Invoke("CreateIdentity", identity == null ? null : identity.getJCOInstance());
+            retObjectCreateIdentity = classType.Invoke("CreateIdentity", identity == null ? null : identity.getJCOInstance());
+            JCObject objCreateIdentity = (JCObject)retObjectCreateIdentity;
             return new EndpointIdentity(objCreateIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIdentity != null ? retObjectCreateIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class EndpointIdentity extends NetObject  {
 
     public static EndpointIdentity CreateRsaIdentity(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRsaIdentity = null;
         try {
-            JCObject objCreateRsaIdentity = (JCObject)classType.Invoke("CreateRsaIdentity", certificate == null ? null : certificate.getJCOInstance());
+            retObjectCreateRsaIdentity = classType.Invoke("CreateRsaIdentity", certificate == null ? null : certificate.getJCOInstance());
+            JCObject objCreateRsaIdentity = (JCObject)retObjectCreateRsaIdentity;
             return new EndpointIdentity(objCreateRsaIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRsaIdentity != null ? retObjectCreateRsaIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class EndpointIdentity extends NetObject  {
 
     public static EndpointIdentity CreateRsaIdentity(java.lang.String publicKey) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRsaIdentity = null;
         try {
-            JCObject objCreateRsaIdentity = (JCObject)classType.Invoke("CreateRsaIdentity", publicKey);
+            retObjectCreateRsaIdentity = classType.Invoke("CreateRsaIdentity", publicKey);
+            JCObject objCreateRsaIdentity = (JCObject)retObjectCreateRsaIdentity;
             return new EndpointIdentity(objCreateRsaIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRsaIdentity != null ? retObjectCreateRsaIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class EndpointIdentity extends NetObject  {
 
     public static EndpointIdentity CreateSpnIdentity(java.lang.String spnName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSpnIdentity = null;
         try {
-            JCObject objCreateSpnIdentity = (JCObject)classType.Invoke("CreateSpnIdentity", spnName);
+            retObjectCreateSpnIdentity = classType.Invoke("CreateSpnIdentity", spnName);
+            JCObject objCreateSpnIdentity = (JCObject)retObjectCreateSpnIdentity;
             return new EndpointIdentity(objCreateSpnIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSpnIdentity != null ? retObjectCreateSpnIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class EndpointIdentity extends NetObject  {
 
     public static EndpointIdentity CreateUpnIdentity(java.lang.String upnName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpnIdentity = null;
         try {
-            JCObject objCreateUpnIdentity = (JCObject)classType.Invoke("CreateUpnIdentity", upnName);
+            retObjectCreateUpnIdentity = classType.Invoke("CreateUpnIdentity", upnName);
+            JCObject objCreateUpnIdentity = (JCObject)retObjectCreateUpnIdentity;
             return new EndpointIdentity(objCreateUpnIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpnIdentity != null ? retObjectCreateUpnIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class EndpointIdentity extends NetObject  {
 
     public static EndpointIdentity CreateX509CertificateIdentity(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateX509CertificateIdentity = null;
         try {
-            JCObject objCreateX509CertificateIdentity = (JCObject)classType.Invoke("CreateX509CertificateIdentity", certificate == null ? null : certificate.getJCOInstance());
+            retObjectCreateX509CertificateIdentity = classType.Invoke("CreateX509CertificateIdentity", certificate == null ? null : certificate.getJCOInstance());
+            JCObject objCreateX509CertificateIdentity = (JCObject)retObjectCreateX509CertificateIdentity;
             return new EndpointIdentity(objCreateX509CertificateIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateX509CertificateIdentity != null ? retObjectCreateX509CertificateIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class EndpointIdentity extends NetObject  {
 
     public static EndpointIdentity CreateX509CertificateIdentity(X509Certificate2 primaryCertificate, X509Certificate2Collection supportingCertificates) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateX509CertificateIdentity = null;
         try {
-            JCObject objCreateX509CertificateIdentity = (JCObject)classType.Invoke("CreateX509CertificateIdentity", primaryCertificate == null ? null : primaryCertificate.getJCOInstance(), supportingCertificates == null ? null : supportingCertificates.getJCOInstance());
+            retObjectCreateX509CertificateIdentity = classType.Invoke("CreateX509CertificateIdentity", primaryCertificate == null ? null : primaryCertificate.getJCOInstance(), supportingCertificates == null ? null : supportingCertificates.getJCOInstance());
+            JCObject objCreateX509CertificateIdentity = (JCObject)retObjectCreateX509CertificateIdentity;
             return new EndpointIdentity(objCreateX509CertificateIdentity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateX509CertificateIdentity != null ? retObjectCreateX509CertificateIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class EndpointIdentity extends NetObject  {
     
     public Claim getIdentityClaim() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentityClaim = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityClaim");
+            retObjectIdentityClaim = classInstance.Get("IdentityClaim");
+            JCObject val = (JCObject)retObjectIdentityClaim;
             return new Claim(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityClaim != null ? retObjectIdentityClaim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

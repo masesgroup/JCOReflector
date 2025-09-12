@@ -159,9 +159,13 @@ public class AppDomainSetup extends NetObject  {
     
     public java.lang.String getApplicationBase() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationBase = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationBase");
+            retObjectApplicationBase = classInstance.Get("ApplicationBase");
+            return (java.lang.String)retObjectApplicationBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationBase != null ? retObjectApplicationBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getTargetFrameworkName() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkName");
+            retObjectTargetFrameworkName = classInstance.Get("TargetFrameworkName");
+            return (java.lang.String)retObjectTargetFrameworkName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkName != null ? retObjectTargetFrameworkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

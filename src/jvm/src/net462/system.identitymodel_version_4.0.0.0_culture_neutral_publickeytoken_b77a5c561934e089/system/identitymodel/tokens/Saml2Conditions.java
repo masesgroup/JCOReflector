@@ -166,9 +166,13 @@ public class Saml2Conditions extends NetObject  {
     
     public boolean getOneTimeUse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOneTimeUse = null;
         try {
-            return (boolean)classInstance.Get("OneTimeUse");
+            retObjectOneTimeUse = classInstance.Get("OneTimeUse");
+            return (boolean)retObjectOneTimeUse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOneTimeUse != null ? retObjectOneTimeUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class Saml2Conditions extends NetObject  {
 
     public void setOneTimeUse(boolean OneTimeUse) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OneTimeUse", OneTimeUse);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class Saml2Conditions extends NetObject  {
 
     public Saml2ProxyRestriction getProxyRestriction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyRestriction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProxyRestriction");
+            retObjectProxyRestriction = classInstance.Get("ProxyRestriction");
+            JCObject val = (JCObject)retObjectProxyRestriction;
             return new Saml2ProxyRestriction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxyRestriction != null ? retObjectProxyRestriction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class Saml2Conditions extends NetObject  {
 
     public void setProxyRestriction(Saml2ProxyRestriction ProxyRestriction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProxyRestriction", ProxyRestriction == null ? null : ProxyRestriction.getJCOInstance());
         } catch (JCNativeException jcne) {

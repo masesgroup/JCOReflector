@@ -179,10 +179,14 @@ public class Metafile extends Image  {
     
     public MetafileHeader GetMetafileHeader() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetafileHeader = null;
         try {
-            JCObject objGetMetafileHeader = (JCObject)classInstance.Invoke("GetMetafileHeader");
+            retObjectGetMetafileHeader = classInstance.Invoke("GetMetafileHeader");
+            JCObject objGetMetafileHeader = (JCObject)retObjectGetMetafileHeader;
             return new MetafileHeader(objGetMetafileHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetafileHeader != null ? retObjectGetMetafileHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class Metafile extends Image  {
 
     public static MetafileHeader GetMetafileHeader(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMetafileHeader = null;
         try {
-            JCObject objGetMetafileHeader = (JCObject)classType.Invoke("GetMetafileHeader", stream == null ? null : stream.getJCOInstance());
+            retObjectGetMetafileHeader = classType.Invoke("GetMetafileHeader", stream == null ? null : stream.getJCOInstance());
+            JCObject objGetMetafileHeader = (JCObject)retObjectGetMetafileHeader;
             return new MetafileHeader(objGetMetafileHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetafileHeader != null ? retObjectGetMetafileHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class Metafile extends Image  {
 
     public static MetafileHeader GetMetafileHeader(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMetafileHeader = null;
         try {
-            JCObject objGetMetafileHeader = (JCObject)classType.Invoke("GetMetafileHeader", fileName);
+            retObjectGetMetafileHeader = classType.Invoke("GetMetafileHeader", fileName);
+            JCObject objGetMetafileHeader = (JCObject)retObjectGetMetafileHeader;
             return new MetafileHeader(objGetMetafileHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetafileHeader != null ? retObjectGetMetafileHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class Metafile extends Image  {
 
     public void PlayRecord(EmfPlusRecordType recordType, int flags, int dataSize, byte[] data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PlayRecord", recordType == null ? null : recordType.getJCOInstance(), flags, dataSize, data);
         } catch (JCNativeException jcne) {
@@ -222,7 +234,7 @@ public class Metafile extends Image  {
 
     public void PlayRecord(EmfPlusRecordType dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PlayRecord", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut());
         } catch (JCNativeException jcne) {

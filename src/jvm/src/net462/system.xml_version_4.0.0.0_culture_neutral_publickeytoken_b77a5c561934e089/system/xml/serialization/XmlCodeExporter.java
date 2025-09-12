@@ -215,7 +215,7 @@ public class XmlCodeExporter extends CodeExporter  {
     
     public void AddMappingMetadata(CodeAttributeDeclarationCollection metadata, XmlMemberMapping member, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMappingMetadata", metadata == null ? null : metadata.getJCOInstance(), member == null ? null : member.getJCOInstance(), ns);
         } catch (JCNativeException jcne) {
@@ -225,7 +225,7 @@ public class XmlCodeExporter extends CodeExporter  {
 
     public void AddMappingMetadata(CodeAttributeDeclarationCollection metadata, XmlMemberMapping member, java.lang.String ns, boolean forceUseMemberName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMappingMetadata", metadata == null ? null : metadata.getJCOInstance(), member == null ? null : member.getJCOInstance(), ns, forceUseMemberName);
         } catch (JCNativeException jcne) {
@@ -235,7 +235,7 @@ public class XmlCodeExporter extends CodeExporter  {
 
     public void AddMappingMetadata(CodeAttributeDeclarationCollection metadata, XmlTypeMapping mapping, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMappingMetadata", metadata == null ? null : metadata.getJCOInstance(), mapping == null ? null : mapping.getJCOInstance(), ns);
         } catch (JCNativeException jcne) {
@@ -245,7 +245,7 @@ public class XmlCodeExporter extends CodeExporter  {
 
     public void ExportMembersMapping(XmlMembersMapping xmlMembersMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportMembersMapping", xmlMembersMapping == null ? null : xmlMembersMapping.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +255,7 @@ public class XmlCodeExporter extends CodeExporter  {
 
     public void ExportTypeMapping(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportTypeMapping", xmlTypeMapping == null ? null : xmlTypeMapping.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -156,10 +156,14 @@ public class ModelValidator extends NetObject  {
     
     public static ModelValidator GetModelValidator(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetModelValidator = null;
         try {
-            JCObject objGetModelValidator = (JCObject)classType.Invoke("GetModelValidator", metadata == null ? null : metadata.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectGetModelValidator = classType.Invoke("GetModelValidator", metadata == null ? null : metadata.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetModelValidator = (JCObject)retObjectGetModelValidator;
             return new ModelValidator(objGetModelValidator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModelValidator != null ? retObjectGetModelValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class ModelValidator extends NetObject  {
     
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequired = null;
         try {
-            return (boolean)classInstance.Get("IsRequired");
+            retObjectIsRequired = classInstance.Get("IsRequired");
+            return (boolean)retObjectIsRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRequired != null ? retObjectIsRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,10 +158,14 @@ public class BindingManagerBase extends NetObject  {
     
     public PropertyDescriptorCollection GetItemProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemProperties = null;
         try {
-            JCObject objGetItemProperties = (JCObject)classInstance.Invoke("GetItemProperties");
+            retObjectGetItemProperties = classInstance.Invoke("GetItemProperties");
+            JCObject objGetItemProperties = (JCObject)retObjectGetItemProperties;
             return new PropertyDescriptorCollection(objGetItemProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemProperties != null ? retObjectGetItemProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void AddNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNew");
         } catch (JCNativeException jcne) {
@@ -179,7 +183,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void CancelCurrentEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelCurrentEdit");
         } catch (JCNativeException jcne) {
@@ -189,7 +193,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void EndCurrentEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCurrentEdit");
         } catch (JCNativeException jcne) {
@@ -199,7 +203,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void ResumeBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResumeBinding");
         } catch (JCNativeException jcne) {
@@ -219,7 +223,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void SuspendBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendBinding");
         } catch (JCNativeException jcne) {
@@ -233,9 +237,13 @@ public class BindingManagerBase extends NetObject  {
     
     public boolean getIsBindingSuspended() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBindingSuspended = null;
         try {
-            return (boolean)classInstance.Get("IsBindingSuspended");
+            retObjectIsBindingSuspended = classInstance.Get("IsBindingSuspended");
+            return (boolean)retObjectIsBindingSuspended;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBindingSuspended != null ? retObjectIsBindingSuspended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +251,19 @@ public class BindingManagerBase extends NetObject  {
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCountNumber = (java.lang.Number)retObjectCount;
+                return retObjectCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +271,19 @@ public class BindingManagerBase extends NetObject  {
 
     public int getPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPosition = null;
         try {
-            return (int)classInstance.Get("Position");
+            retObjectPosition = classInstance.Get("Position");
+            return (int)retObjectPosition;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPositionNumber = (java.lang.Number)retObjectPosition;
+                return retObjectPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPosition != null ? retObjectPosition.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +291,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void setPosition(int Position) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Position", Position);
         } catch (JCNativeException jcne) {
@@ -273,10 +301,14 @@ public class BindingManagerBase extends NetObject  {
 
     public NetObject getCurrent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            retObjectCurrent = classInstance.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +316,14 @@ public class BindingManagerBase extends NetObject  {
 
     public BindingsCollection getBindings() throws Throwable, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bindings");
+            retObjectBindings = classInstance.Get("Bindings");
+            JCObject val = (JCObject)retObjectBindings;
             return new BindingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindings != null ? retObjectBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +336,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void addCurrentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -310,7 +346,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void removeCurrentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -320,7 +356,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void addCurrentItemChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentItemChanged", handler);
         } catch (JCNativeException jcne) {
@@ -330,7 +366,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void removeCurrentItemChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentItemChanged", handler);
         } catch (JCNativeException jcne) {
@@ -340,7 +376,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void addPositionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PositionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -350,7 +386,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void removePositionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PositionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -360,7 +396,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void addBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BindingComplete", handler);
         } catch (JCNativeException jcne) {
@@ -370,7 +406,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void removeBindingComplete(BindingCompleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BindingComplete", handler);
         } catch (JCNativeException jcne) {
@@ -380,7 +416,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void addDataError(BindingManagerDataErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataError", handler);
         } catch (JCNativeException jcne) {
@@ -390,7 +426,7 @@ public class BindingManagerBase extends NetObject  {
 
     public void removeDataError(BindingManagerDataErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataError", handler);
         } catch (JCNativeException jcne) {

@@ -189,10 +189,14 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
     
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +204,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public void SetKeyDerivation(boolean requireDerivedKeys) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetKeyDerivation", requireDerivedKeys);
         } catch (JCNativeException jcne) {
@@ -214,7 +218,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -223,9 +227,13 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
     
     public boolean getAllowSerializedSigningTokenOnReply() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSerializedSigningTokenOnReply = null;
         try {
-            return (boolean)classInstance.Get("AllowSerializedSigningTokenOnReply");
+            retObjectAllowSerializedSigningTokenOnReply = classInstance.Get("AllowSerializedSigningTokenOnReply");
+            return (boolean)retObjectAllowSerializedSigningTokenOnReply;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSerializedSigningTokenOnReply != null ? retObjectAllowSerializedSigningTokenOnReply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +241,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public void setAllowSerializedSigningTokenOnReply(boolean AllowSerializedSigningTokenOnReply) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSerializedSigningTokenOnReply", AllowSerializedSigningTokenOnReply);
         } catch (JCNativeException jcne) {
@@ -243,9 +251,13 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public boolean getRequireSignatureConfirmation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireSignatureConfirmation = null;
         try {
-            return (boolean)classInstance.Get("RequireSignatureConfirmation");
+            retObjectRequireSignatureConfirmation = classInstance.Get("RequireSignatureConfirmation");
+            return (boolean)retObjectRequireSignatureConfirmation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireSignatureConfirmation != null ? retObjectRequireSignatureConfirmation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +265,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public void setRequireSignatureConfirmation(boolean RequireSignatureConfirmation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireSignatureConfirmation", RequireSignatureConfirmation);
         } catch (JCNativeException jcne) {
@@ -263,10 +275,14 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public MessageProtectionOrder getMessageProtectionOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageProtectionOrder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageProtectionOrder");
+            retObjectMessageProtectionOrder = classInstance.Get("MessageProtectionOrder");
+            JCObject val = (JCObject)retObjectMessageProtectionOrder;
             return new MessageProtectionOrder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageProtectionOrder != null ? retObjectMessageProtectionOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +290,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public void setMessageProtectionOrder(MessageProtectionOrder MessageProtectionOrder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageProtectionOrder", MessageProtectionOrder == null ? null : MessageProtectionOrder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +300,14 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public SecurityTokenParameters getInitiatorTokenParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitiatorTokenParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitiatorTokenParameters");
+            retObjectInitiatorTokenParameters = classInstance.Get("InitiatorTokenParameters");
+            JCObject val = (JCObject)retObjectInitiatorTokenParameters;
             return new SecurityTokenParameters(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitiatorTokenParameters != null ? retObjectInitiatorTokenParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +315,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public void setInitiatorTokenParameters(SecurityTokenParameters InitiatorTokenParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitiatorTokenParameters", InitiatorTokenParameters == null ? null : InitiatorTokenParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +325,14 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public SecurityTokenParameters getRecipientTokenParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecipientTokenParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RecipientTokenParameters");
+            retObjectRecipientTokenParameters = classInstance.Get("RecipientTokenParameters");
+            JCObject val = (JCObject)retObjectRecipientTokenParameters;
             return new SecurityTokenParameters(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecipientTokenParameters != null ? retObjectRecipientTokenParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +340,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
 
     public void setRecipientTokenParameters(SecurityTokenParameters RecipientTokenParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RecipientTokenParameters", RecipientTokenParameters == null ? null : RecipientTokenParameters.getJCOInstance());
         } catch (JCNativeException jcne) {

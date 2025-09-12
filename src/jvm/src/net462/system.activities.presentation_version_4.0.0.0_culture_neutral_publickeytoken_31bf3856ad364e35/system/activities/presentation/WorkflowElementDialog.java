@@ -161,9 +161,13 @@ public class WorkflowElementDialog extends ContentControl  {
     
     public boolean ShowOkCancel() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowOkCancel = null;
         try {
-            return (boolean)classInstance.Invoke("ShowOkCancel");
+            retObjectShowOkCancel = classInstance.Invoke("ShowOkCancel");
+            return (boolean)retObjectShowOkCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShowOkCancel != null ? retObjectShowOkCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void Show() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show");
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class WorkflowElementDialog extends ContentControl  {
     
     public boolean getEnableMaximizeButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableMaximizeButton = null;
         try {
-            return (boolean)classInstance.Get("EnableMaximizeButton");
+            retObjectEnableMaximizeButton = classInstance.Get("EnableMaximizeButton");
+            return (boolean)retObjectEnableMaximizeButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableMaximizeButton != null ? retObjectEnableMaximizeButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setEnableMaximizeButton(boolean EnableMaximizeButton) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableMaximizeButton", EnableMaximizeButton);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public boolean getEnableMinimizeButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableMinimizeButton = null;
         try {
-            return (boolean)classInstance.Get("EnableMinimizeButton");
+            retObjectEnableMinimizeButton = classInstance.Get("EnableMinimizeButton");
+            return (boolean)retObjectEnableMinimizeButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableMinimizeButton != null ? retObjectEnableMinimizeButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setEnableMinimizeButton(boolean EnableMinimizeButton) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableMinimizeButton", EnableMinimizeButton);
         } catch (JCNativeException jcne) {
@@ -225,10 +237,14 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public EditingContext getContext() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new EditingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setContext(EditingContext Context) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +262,14 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public ModelItem getModelItem() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelItem");
+            retObjectModelItem = classInstance.Get("ModelItem");
+            JCObject val = (JCObject)retObjectModelItem;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelItem != null ? retObjectModelItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setModelItem(ModelItem ModelItem) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelItem", ModelItem == null ? null : ModelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,9 +287,13 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpKeyword = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpKeyword");
+            retObjectHelpKeyword = classInstance.Get("HelpKeyword");
+            return (java.lang.String)retObjectHelpKeyword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpKeyword != null ? retObjectHelpKeyword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +301,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setHelpKeyword(java.lang.String HelpKeyword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpKeyword", HelpKeyword);
         } catch (JCNativeException jcne) {
@@ -287,9 +311,13 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public java.lang.String getTitle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -307,10 +335,14 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public DependencyObject getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +350,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setOwner(DependencyObject Owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -328,10 +360,14 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public ResizeMode getWindowResizeMode() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowResizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowResizeMode");
+            retObjectWindowResizeMode = classInstance.Get("WindowResizeMode");
+            JCObject val = (JCObject)retObjectWindowResizeMode;
             return new ResizeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowResizeMode != null ? retObjectWindowResizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +375,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setWindowResizeMode(ResizeMode WindowResizeMode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowResizeMode", WindowResizeMode == null ? null : WindowResizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,10 +385,14 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public SizeToContent getWindowSizeToContent() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowSizeToContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowSizeToContent");
+            retObjectWindowSizeToContent = classInstance.Get("WindowSizeToContent");
+            JCObject val = (JCObject)retObjectWindowSizeToContent;
             return new SizeToContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowSizeToContent != null ? retObjectWindowSizeToContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +400,7 @@ public class WorkflowElementDialog extends ContentControl  {
 
     public void setWindowSizeToContent(SizeToContent WindowSizeToContent) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowSizeToContent", WindowSizeToContent == null ? null : WindowSizeToContent.getJCOInstance());
         } catch (JCNativeException jcne) {

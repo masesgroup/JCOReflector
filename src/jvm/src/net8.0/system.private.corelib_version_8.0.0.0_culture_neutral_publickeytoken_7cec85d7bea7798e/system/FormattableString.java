@@ -158,10 +158,14 @@ public class FormattableString extends NetObject implements system.IFormattable 
     
     public NetObject GetArgument(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArgument = null;
         try {
-            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
+            retObjectGetArgument = classInstance.Invoke("GetArgument", index);
+            JCObject objGetArgument = (JCObject)retObjectGetArgument;
             return new NetObject(objGetArgument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArgument != null ? retObjectGetArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,16 +173,20 @@ public class FormattableString extends NetObject implements system.IFormattable 
 
     public NetObject[] GetArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArguments = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetArguments");
+            retObjectGetArguments = classInstance.Invoke("GetArguments");
+            JCObject resultingObjects = (JCObject)retObjectGetArguments;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArguments != null ? retObjectGetArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class FormattableString extends NetObject implements system.IFormattable 
 
     public static java.lang.String CurrentCulture(FormattableString formattable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentCulture = null;
         try {
-            return (java.lang.String)classType.Invoke("CurrentCulture", formattable == null ? null : formattable.getJCOInstance());
+            retObjectCurrentCulture = classType.Invoke("CurrentCulture", formattable == null ? null : formattable.getJCOInstance());
+            return (java.lang.String)retObjectCurrentCulture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCurrentCulture != null ? retObjectCurrentCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class FormattableString extends NetObject implements system.IFormattable 
 
     public static java.lang.String Invariant(FormattableString formattable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvariant = null;
         try {
-            return (java.lang.String)classType.Invoke("Invariant", formattable == null ? null : formattable.getJCOInstance());
+            retObjectInvariant = classType.Invoke("Invariant", formattable == null ? null : formattable.getJCOInstance());
+            return (java.lang.String)retObjectInvariant;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectInvariant != null ? retObjectInvariant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class FormattableString extends NetObject implements system.IFormattable 
 
     public java.lang.String ToString(IFormatProvider formatProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", formatProvider == null ? null : formatProvider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +240,7 @@ public class FormattableString extends NetObject implements system.IFormattable 
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -229,9 +249,19 @@ public class FormattableString extends NetObject implements system.IFormattable 
     
     public int getArgumentCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentCount = null;
         try {
-            return (int)classInstance.Get("ArgumentCount");
+            retObjectArgumentCount = classInstance.Get("ArgumentCount");
+            return (int)retObjectArgumentCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectArgumentCountNumber = (java.lang.Number)retObjectArgumentCount;
+                return retObjectArgumentCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectArgumentCount != null ? retObjectArgumentCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +269,13 @@ public class FormattableString extends NetObject implements system.IFormattable 
 
     public java.lang.String getFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            return (java.lang.String)retObjectFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

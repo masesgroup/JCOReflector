@@ -188,10 +188,14 @@ public class CodeAttachEventStatement extends CodeStatement  {
     
     public CodeEventReferenceExpression getEvent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Event");
+            retObjectEvent = classInstance.Get("Event");
+            JCObject val = (JCObject)retObjectEvent;
             return new CodeEventReferenceExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvent != null ? retObjectEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class CodeAttachEventStatement extends CodeStatement  {
 
     public void setEvent(CodeEventReferenceExpression Event) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Event", Event == null ? null : Event.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class CodeAttachEventStatement extends CodeStatement  {
 
     public CodeExpression getListener() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListener = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Listener");
+            retObjectListener = classInstance.Get("Listener");
+            JCObject val = (JCObject)retObjectListener;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListener != null ? retObjectListener.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class CodeAttachEventStatement extends CodeStatement  {
 
     public void setListener(CodeExpression Listener) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Listener", Listener == null ? null : Listener.getJCOInstance());
         } catch (JCNativeException jcne) {

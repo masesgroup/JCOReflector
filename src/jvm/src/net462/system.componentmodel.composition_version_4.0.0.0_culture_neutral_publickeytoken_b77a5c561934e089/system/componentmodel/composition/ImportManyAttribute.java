@@ -198,9 +198,13 @@ public class ImportManyAttribute extends Attribute  {
     
     public boolean getAllowRecomposition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowRecomposition = null;
         try {
-            return (boolean)classInstance.Get("AllowRecomposition");
+            retObjectAllowRecomposition = classInstance.Get("AllowRecomposition");
+            return (boolean)retObjectAllowRecomposition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowRecomposition != null ? retObjectAllowRecomposition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +212,7 @@ public class ImportManyAttribute extends Attribute  {
 
     public void setAllowRecomposition(boolean AllowRecomposition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowRecomposition", AllowRecomposition);
         } catch (JCNativeException jcne) {
@@ -218,10 +222,14 @@ public class ImportManyAttribute extends Attribute  {
 
     public CreationPolicy getRequiredCreationPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiredCreationPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequiredCreationPolicy");
+            retObjectRequiredCreationPolicy = classInstance.Get("RequiredCreationPolicy");
+            JCObject val = (JCObject)retObjectRequiredCreationPolicy;
             return new CreationPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequiredCreationPolicy != null ? retObjectRequiredCreationPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +237,7 @@ public class ImportManyAttribute extends Attribute  {
 
     public void setRequiredCreationPolicy(CreationPolicy RequiredCreationPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequiredCreationPolicy", RequiredCreationPolicy == null ? null : RequiredCreationPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,10 +247,14 @@ public class ImportManyAttribute extends Attribute  {
 
     public ImportSource getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new ImportSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +262,7 @@ public class ImportManyAttribute extends Attribute  {
 
     public void setSource(ImportSource Source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,9 +272,13 @@ public class ImportManyAttribute extends Attribute  {
 
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractName = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractName");
+            retObjectContractName = classInstance.Get("ContractName");
+            return (java.lang.String)retObjectContractName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractName != null ? retObjectContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +286,7 @@ public class ImportManyAttribute extends Attribute  {
 
     public void setContractName(java.lang.String ContractName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContractName", ContractName);
         } catch (JCNativeException jcne) {
@@ -280,10 +296,14 @@ public class ImportManyAttribute extends Attribute  {
 
     public NetType getContractType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContractType");
+            retObjectContractType = classInstance.Get("ContractType");
+            JCObject val = (JCObject)retObjectContractType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContractType != null ? retObjectContractType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +311,7 @@ public class ImportManyAttribute extends Attribute  {
 
     public void setContractType(NetType ContractType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContractType", ContractType == null ? null : ContractType.getJCOInstance());
         } catch (JCNativeException jcne) {

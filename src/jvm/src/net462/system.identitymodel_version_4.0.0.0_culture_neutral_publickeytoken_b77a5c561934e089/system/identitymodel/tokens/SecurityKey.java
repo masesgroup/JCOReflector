@@ -153,9 +153,13 @@ public class SecurityKey extends NetObject  {
     
     public boolean IsAsymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsymmetricAlgorithm = null;
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+            retObjectIsAsymmetricAlgorithm = classInstance.Invoke("IsAsymmetricAlgorithm", algorithm);
+            return (boolean)retObjectIsAsymmetricAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAsymmetricAlgorithm != null ? retObjectIsAsymmetricAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class SecurityKey extends NetObject  {
 
     public boolean IsSupportedAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedAlgorithm = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+            retObjectIsSupportedAlgorithm = classInstance.Invoke("IsSupportedAlgorithm", algorithm);
+            return (boolean)retObjectIsSupportedAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupportedAlgorithm != null ? retObjectIsSupportedAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +181,13 @@ public class SecurityKey extends NetObject  {
 
     public boolean IsSymmetricAlgorithm(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSymmetricAlgorithm = null;
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
+            retObjectIsSymmetricAlgorithm = classInstance.Invoke("IsSymmetricAlgorithm", algorithm);
+            return (boolean)retObjectIsSymmetricAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSymmetricAlgorithm != null ? retObjectIsSymmetricAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +195,12 @@ public class SecurityKey extends NetObject  {
 
     public byte[] DecryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", algorithm, keyData);
+            retObjectDecryptKey = classInstance.Invoke("DecryptKey", algorithm, keyData);
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -195,6 +209,8 @@ public class SecurityKey extends NetObject  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,12 @@ public class SecurityKey extends NetObject  {
 
     public byte[] DecryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", dupParam0, dupParam1.getJCRefOut());
+            retObjectDecryptKey = classInstance.Invoke("DecryptKey", dupParam0, dupParam1.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -214,6 +232,8 @@ public class SecurityKey extends NetObject  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,12 @@ public class SecurityKey extends NetObject  {
 
     public byte[] EncryptKey(java.lang.String algorithm, byte[] keyData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", algorithm, keyData);
+            retObjectEncryptKey = classInstance.Invoke("EncryptKey", algorithm, keyData);
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -233,6 +255,8 @@ public class SecurityKey extends NetObject  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +264,12 @@ public class SecurityKey extends NetObject  {
 
     public byte[] EncryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", dupParam0, dupParam1.getJCRefOut());
+            retObjectEncryptKey = classInstance.Invoke("EncryptKey", dupParam0, dupParam1.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -252,6 +278,8 @@ public class SecurityKey extends NetObject  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +291,19 @@ public class SecurityKey extends NetObject  {
     
     public int getKeySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySize = null;
         try {
-            return (int)classInstance.Get("KeySize");
+            retObjectKeySize = classInstance.Get("KeySize");
+            return (int)retObjectKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeySizeNumber = (java.lang.Number)retObjectKeySize;
+                return retObjectKeySizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -142,7 +142,7 @@ public class IISAPIRuntimeImplementation extends NetObject implements IISAPIRunt
     
     public void DoGCCollect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoGCCollect");
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IISAPIRuntimeImplementation extends NetObject implements IISAPIRunt
 
     public void StartProcessing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartProcessing");
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class IISAPIRuntimeImplementation extends NetObject implements IISAPIRunt
 
     public void StopProcessing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopProcessing");
         } catch (JCNativeException jcne) {

@@ -178,10 +178,14 @@ public class XmlSerializerImportOptions extends NetObject  {
     
     public CodeCompileUnit getCodeCompileUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeCompileUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeCompileUnit");
+            retObjectCodeCompileUnit = classInstance.Get("CodeCompileUnit");
+            JCObject val = (JCObject)retObjectCodeCompileUnit;
             return new CodeCompileUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeCompileUnit != null ? retObjectCodeCompileUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class XmlSerializerImportOptions extends NetObject  {
 
     public CodeDomProvider getCodeProvider() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeProvider");
+            retObjectCodeProvider = classInstance.Get("CodeProvider");
+            JCObject val = (JCObject)retObjectCodeProvider;
             return new CodeDomProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeProvider != null ? retObjectCodeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class XmlSerializerImportOptions extends NetObject  {
 
     public void setCodeProvider(CodeDomProvider CodeProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodeProvider", CodeProvider == null ? null : CodeProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,9 +218,13 @@ public class XmlSerializerImportOptions extends NetObject  {
 
     public java.lang.String getClrNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClrNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ClrNamespace");
+            retObjectClrNamespace = classInstance.Get("ClrNamespace");
+            return (java.lang.String)retObjectClrNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClrNamespace != null ? retObjectClrNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class XmlSerializerImportOptions extends NetObject  {
 
     public void setClrNamespace(java.lang.String ClrNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClrNamespace", ClrNamespace);
         } catch (JCNativeException jcne) {
@@ -230,10 +242,14 @@ public class XmlSerializerImportOptions extends NetObject  {
 
     public WebReferenceOptions getWebReferenceOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebReferenceOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebReferenceOptions");
+            retObjectWebReferenceOptions = classInstance.Get("WebReferenceOptions");
+            JCObject val = (JCObject)retObjectWebReferenceOptions;
             return new WebReferenceOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebReferenceOptions != null ? retObjectWebReferenceOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +257,7 @@ public class XmlSerializerImportOptions extends NetObject  {
 
     public void setWebReferenceOptions(WebReferenceOptions WebReferenceOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WebReferenceOptions", WebReferenceOptions == null ? null : WebReferenceOptions.getJCOInstance());
         } catch (JCNativeException jcne) {

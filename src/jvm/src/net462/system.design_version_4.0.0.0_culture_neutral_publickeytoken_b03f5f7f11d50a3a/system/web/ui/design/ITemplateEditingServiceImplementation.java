@@ -147,9 +147,13 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
     
     public java.lang.String GetContainingTemplateName(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContainingTemplateName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetContainingTemplateName", control == null ? null : control.getJCOInstance());
+            retObjectGetContainingTemplateName = classInstance.Invoke("GetContainingTemplateName", control == null ? null : control.getJCOInstance());
+            return (java.lang.String)retObjectGetContainingTemplateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetContainingTemplateName != null ? retObjectGetContainingTemplateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
 
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFrame = null;
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", designer == null ? null : designer.getJCOInstance(), frameName, templateNames);
+            retObjectCreateFrame = classInstance.Invoke("CreateFrame", designer == null ? null : designer.getJCOInstance(), frameName, templateNames);
+            JCObject objCreateFrame = (JCObject)retObjectCreateFrame;
             return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFrame != null ? retObjectCreateFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +176,14 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
 
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFrame = null;
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            retObjectCreateFrame = classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            JCObject objCreateFrame = (JCObject)retObjectCreateFrame;
             return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFrame != null ? retObjectCreateFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +191,14 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
 
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames, Style controlStyle, Style[] templateStyles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFrame = null;
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", designer == null ? null : designer.getJCOInstance(), frameName, templateNames, controlStyle == null ? null : controlStyle.getJCOInstance(), toObjectFromArray(templateStyles));
+            retObjectCreateFrame = classInstance.Invoke("CreateFrame", designer == null ? null : designer.getJCOInstance(), frameName, templateNames, controlStyle == null ? null : controlStyle.getJCOInstance(), toObjectFromArray(templateStyles));
+            JCObject objCreateFrame = (JCObject)retObjectCreateFrame;
             return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFrame != null ? retObjectCreateFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +206,14 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
 
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFrame = null;
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
+            retObjectCreateFrame = classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
+            JCObject objCreateFrame = (JCObject)retObjectCreateFrame;
             return new ITemplateEditingFrameImplementation(objCreateFrame);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFrame != null ? retObjectCreateFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +225,13 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
     
     public boolean getSupportsNestedTemplateEditing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsNestedTemplateEditing = null;
         try {
-            return (boolean)classInstance.Get("SupportsNestedTemplateEditing");
+            retObjectSupportsNestedTemplateEditing = classInstance.Get("SupportsNestedTemplateEditing");
+            return (boolean)retObjectSupportsNestedTemplateEditing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsNestedTemplateEditing != null ? retObjectSupportsNestedTemplateEditing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

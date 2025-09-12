@@ -198,7 +198,7 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
      */
     @Deprecated 
     public boolean MustCommit(ICollection items) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
     }
 
     /**
@@ -207,7 +207,7 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
      */
     @Deprecated 
     public void Commit(Transaction transaction, ICollection items) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
     }
 
     /**
@@ -216,7 +216,7 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
      */
     @Deprecated 
     public void Complete(boolean succeeded, ICollection items) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
     }
 
 
@@ -225,9 +225,13 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
     
     public boolean getEnableRetries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableRetries = null;
         try {
-            return (boolean)classInstance.Get("EnableRetries");
+            retObjectEnableRetries = classInstance.Get("EnableRetries");
+            return (boolean)retObjectEnableRetries;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableRetries != null ? retObjectEnableRetries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +239,7 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
 
     public void setEnableRetries(boolean EnableRetries) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableRetries", EnableRetries);
         } catch (JCNativeException jcne) {
@@ -245,10 +249,14 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
 
     public Guid getServiceInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceInstanceId");
+            retObjectServiceInstanceId = classInstance.Get("ServiceInstanceId");
+            JCObject val = (JCObject)retObjectServiceInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceInstanceId != null ? retObjectServiceInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +264,14 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
 
     public TimeSpan getLoadingInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadingInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoadingInterval");
+            retObjectLoadingInterval = classInstance.Get("LoadingInterval");
+            JCObject val = (JCObject)retObjectLoadingInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadingInterval != null ? retObjectLoadingInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -163,10 +163,14 @@ public class HostSecurityPolicyResolver extends NetObject  {
     
     public HostSecurityPolicyResults ResolvePolicy(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvePolicy = null;
         try {
-            JCObject objResolvePolicy = (JCObject)classInstance.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolvePolicy = classInstance.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolvePolicy = (JCObject)retObjectResolvePolicy;
             return new HostSecurityPolicyResults(objResolvePolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvePolicy != null ? retObjectResolvePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

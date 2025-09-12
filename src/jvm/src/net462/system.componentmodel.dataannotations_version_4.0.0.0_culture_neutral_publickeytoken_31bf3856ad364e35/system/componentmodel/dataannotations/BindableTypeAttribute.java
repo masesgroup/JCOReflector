@@ -166,9 +166,13 @@ public class BindableTypeAttribute extends Attribute  {
     
     public boolean getIsBindable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBindable = null;
         try {
-            return (boolean)classInstance.Get("IsBindable");
+            retObjectIsBindable = classInstance.Get("IsBindable");
+            return (boolean)retObjectIsBindable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBindable != null ? retObjectIsBindable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class BindableTypeAttribute extends Attribute  {
 
     public void setIsBindable(boolean IsBindable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBindable", IsBindable);
         } catch (JCNativeException jcne) {

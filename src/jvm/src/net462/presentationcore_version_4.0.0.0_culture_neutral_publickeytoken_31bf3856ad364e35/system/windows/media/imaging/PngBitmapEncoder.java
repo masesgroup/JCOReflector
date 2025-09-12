@@ -167,10 +167,14 @@ public class PngBitmapEncoder extends BitmapEncoder  {
     
     public PngInterlaceOption getInterlace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterlace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Interlace");
+            retObjectInterlace = classInstance.Get("Interlace");
+            JCObject val = (JCObject)retObjectInterlace;
             return new PngInterlaceOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterlace != null ? retObjectInterlace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class PngBitmapEncoder extends BitmapEncoder  {
 
     public void setInterlace(PngInterlaceOption Interlace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Interlace", Interlace == null ? null : Interlace.getJCOInstance());
         } catch (JCNativeException jcne) {

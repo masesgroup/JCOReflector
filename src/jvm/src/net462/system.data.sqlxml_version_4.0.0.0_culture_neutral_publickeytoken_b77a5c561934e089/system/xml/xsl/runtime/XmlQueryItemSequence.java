@@ -183,10 +183,14 @@ public class XmlQueryItemSequence extends NetObjectEnumerable  {
     
     public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrReuse = null;
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
+            retObjectCreateOrReuse = classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)retObjectCreateOrReuse;
             return new XmlQueryItemSequence(objCreateOrReuse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrReuse != null ? retObjectCreateOrReuse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +198,14 @@ public class XmlQueryItemSequence extends NetObjectEnumerable  {
 
     public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq, XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOrReuse = null;
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), item == null ? null : item.getJCOInstance());
+            retObjectCreateOrReuse = classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), item == null ? null : item.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)retObjectCreateOrReuse;
             return new XmlQueryItemSequence(objCreateOrReuse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOrReuse != null ? retObjectCreateOrReuse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class XmlQueryItemSequence extends NetObjectEnumerable  {
 
     public void AddClone(XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClone", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {

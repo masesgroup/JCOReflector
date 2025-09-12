@@ -168,7 +168,7 @@ public class SiteMapPath extends CompositeControl  {
     
     public void DataBind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -182,9 +182,13 @@ public class SiteMapPath extends CompositeControl  {
     
     public boolean getRenderCurrentNodeAsLink() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderCurrentNodeAsLink = null;
         try {
-            return (boolean)classInstance.Get("RenderCurrentNodeAsLink");
+            retObjectRenderCurrentNodeAsLink = classInstance.Get("RenderCurrentNodeAsLink");
+            return (boolean)retObjectRenderCurrentNodeAsLink;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderCurrentNodeAsLink != null ? retObjectRenderCurrentNodeAsLink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +196,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setRenderCurrentNodeAsLink(boolean RenderCurrentNodeAsLink) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderCurrentNodeAsLink", RenderCurrentNodeAsLink);
         } catch (JCNativeException jcne) {
@@ -202,9 +206,13 @@ public class SiteMapPath extends CompositeControl  {
 
     public boolean getShowToolTips() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowToolTips = null;
         try {
-            return (boolean)classInstance.Get("ShowToolTips");
+            retObjectShowToolTips = classInstance.Get("ShowToolTips");
+            return (boolean)retObjectShowToolTips;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowToolTips != null ? retObjectShowToolTips.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setShowToolTips(boolean ShowToolTips) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowToolTips", ShowToolTips);
         } catch (JCNativeException jcne) {
@@ -222,9 +230,19 @@ public class SiteMapPath extends CompositeControl  {
 
     public int getParentLevelsDisplayed() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentLevelsDisplayed = null;
         try {
-            return (int)classInstance.Get("ParentLevelsDisplayed");
+            retObjectParentLevelsDisplayed = classInstance.Get("ParentLevelsDisplayed");
+            return (int)retObjectParentLevelsDisplayed;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectParentLevelsDisplayedNumber = (java.lang.Number)retObjectParentLevelsDisplayed;
+                return retObjectParentLevelsDisplayedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectParentLevelsDisplayed != null ? retObjectParentLevelsDisplayed.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +250,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setParentLevelsDisplayed(int ParentLevelsDisplayed) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParentLevelsDisplayed", ParentLevelsDisplayed);
         } catch (JCNativeException jcne) {
@@ -242,9 +260,13 @@ public class SiteMapPath extends CompositeControl  {
 
     public java.lang.String getPathSeparator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("PathSeparator");
+            retObjectPathSeparator = classInstance.Get("PathSeparator");
+            return (java.lang.String)retObjectPathSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathSeparator != null ? retObjectPathSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +274,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setPathSeparator(java.lang.String PathSeparator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathSeparator", PathSeparator);
         } catch (JCNativeException jcne) {
@@ -262,9 +284,13 @@ public class SiteMapPath extends CompositeControl  {
 
     public java.lang.String getSiteMapProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSiteMapProvider = null;
         try {
-            return (java.lang.String)classInstance.Get("SiteMapProvider");
+            retObjectSiteMapProvider = classInstance.Get("SiteMapProvider");
+            return (java.lang.String)retObjectSiteMapProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSiteMapProvider != null ? retObjectSiteMapProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +298,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setSiteMapProvider(java.lang.String SiteMapProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SiteMapProvider", SiteMapProvider);
         } catch (JCNativeException jcne) {
@@ -282,9 +308,13 @@ public class SiteMapPath extends CompositeControl  {
 
     public java.lang.String getSkipLinkText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipLinkText = null;
         try {
-            return (java.lang.String)classInstance.Get("SkipLinkText");
+            retObjectSkipLinkText = classInstance.Get("SkipLinkText");
+            return (java.lang.String)retObjectSkipLinkText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSkipLinkText != null ? retObjectSkipLinkText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +322,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setSkipLinkText(java.lang.String SkipLinkText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipLinkText", SkipLinkText);
         } catch (JCNativeException jcne) {
@@ -302,10 +332,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public SiteMapProvider getProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new SiteMapProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +347,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setProvider(SiteMapProvider Provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Provider", Provider == null ? null : Provider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,10 +357,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public ITemplate getCurrentNodeTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentNodeTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentNodeTemplate");
+            retObjectCurrentNodeTemplate = classInstance.Get("CurrentNodeTemplate");
+            JCObject val = (JCObject)retObjectCurrentNodeTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentNodeTemplate != null ? retObjectCurrentNodeTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +372,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setCurrentNodeTemplate(ITemplate CurrentNodeTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentNodeTemplate", CurrentNodeTemplate == null ? null : CurrentNodeTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +382,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public ITemplate getNodeTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeTemplate");
+            retObjectNodeTemplate = classInstance.Get("NodeTemplate");
+            JCObject val = (JCObject)retObjectNodeTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodeTemplate != null ? retObjectNodeTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +397,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setNodeTemplate(ITemplate NodeTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NodeTemplate", NodeTemplate == null ? null : NodeTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,10 +407,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public ITemplate getPathSeparatorTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathSeparatorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PathSeparatorTemplate");
+            retObjectPathSeparatorTemplate = classInstance.Get("PathSeparatorTemplate");
+            JCObject val = (JCObject)retObjectPathSeparatorTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathSeparatorTemplate != null ? retObjectPathSeparatorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +422,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setPathSeparatorTemplate(ITemplate PathSeparatorTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathSeparatorTemplate", PathSeparatorTemplate == null ? null : PathSeparatorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +432,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public ITemplate getRootNodeTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNodeTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootNodeTemplate");
+            retObjectRootNodeTemplate = classInstance.Get("RootNodeTemplate");
+            JCObject val = (JCObject)retObjectRootNodeTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootNodeTemplate != null ? retObjectRootNodeTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +447,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setRootNodeTemplate(ITemplate RootNodeTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootNodeTemplate", RootNodeTemplate == null ? null : RootNodeTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,10 +457,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public PathDirection getPathDirection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PathDirection");
+            retObjectPathDirection = classInstance.Get("PathDirection");
+            JCObject val = (JCObject)retObjectPathDirection;
             return new PathDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathDirection != null ? retObjectPathDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +472,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void setPathDirection(PathDirection PathDirection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathDirection", PathDirection == null ? null : PathDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -428,10 +482,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public Style getCurrentNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentNodeStyle");
+            retObjectCurrentNodeStyle = classInstance.Get("CurrentNodeStyle");
+            JCObject val = (JCObject)retObjectCurrentNodeStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentNodeStyle != null ? retObjectCurrentNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +497,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public Style getNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeStyle");
+            retObjectNodeStyle = classInstance.Get("NodeStyle");
+            JCObject val = (JCObject)retObjectNodeStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodeStyle != null ? retObjectNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +512,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public Style getPathSeparatorStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathSeparatorStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PathSeparatorStyle");
+            retObjectPathSeparatorStyle = classInstance.Get("PathSeparatorStyle");
+            JCObject val = (JCObject)retObjectPathSeparatorStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathSeparatorStyle != null ? retObjectPathSeparatorStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +527,14 @@ public class SiteMapPath extends CompositeControl  {
 
     public Style getRootNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootNodeStyle");
+            retObjectRootNodeStyle = classInstance.Get("RootNodeStyle");
+            JCObject val = (JCObject)retObjectRootNodeStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootNodeStyle != null ? retObjectRootNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,7 +547,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void addItemCreated(SiteMapNodeItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -487,7 +557,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void removeItemCreated(SiteMapNodeItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -497,7 +567,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void addItemDataBound(SiteMapNodeItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -507,7 +577,7 @@ public class SiteMapPath extends CompositeControl  {
 
     public void removeItemDataBound(SiteMapNodeItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class Instance extends NetObject  {
     
     public boolean getPublished() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublished = null;
         try {
-            return (boolean)classInstance.Get("Published");
+            retObjectPublished = classInstance.Get("Published");
+            return (boolean)retObjectPublished;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPublished != null ? retObjectPublished.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class Instance extends NetObject  {
 
     public void setPublished(boolean Published) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.management.ManagementException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Published", Published);
         } catch (JCNativeException jcne) {

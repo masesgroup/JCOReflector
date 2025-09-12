@@ -156,9 +156,13 @@ public class ModelMetadata extends NetObject  {
     
     public java.lang.String GetDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDisplayName");
+            retObjectGetDisplayName = classInstance.Invoke("GetDisplayName");
+            return (java.lang.String)retObjectGetDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDisplayName != null ? retObjectGetDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class ModelMetadata extends NetObject  {
     
     public boolean getConvertEmptyStringToNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertEmptyStringToNull = null;
         try {
-            return (boolean)classInstance.Get("ConvertEmptyStringToNull");
+            retObjectConvertEmptyStringToNull = classInstance.Get("ConvertEmptyStringToNull");
+            return (boolean)retObjectConvertEmptyStringToNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConvertEmptyStringToNull != null ? retObjectConvertEmptyStringToNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConvertEmptyStringToNull", ConvertEmptyStringToNull);
         } catch (JCNativeException jcne) {
@@ -190,9 +198,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getHideSurroundingHtml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHideSurroundingHtml = null;
         try {
-            return (boolean)classInstance.Get("HideSurroundingHtml");
+            retObjectHideSurroundingHtml = classInstance.Get("HideSurroundingHtml");
+            return (boolean)retObjectHideSurroundingHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHideSurroundingHtml != null ? retObjectHideSurroundingHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setHideSurroundingHtml(boolean HideSurroundingHtml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HideSurroundingHtml", HideSurroundingHtml);
         } catch (JCNativeException jcne) {
@@ -210,9 +222,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getIsComplexType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsComplexType = null;
         try {
-            return (boolean)classInstance.Get("IsComplexType");
+            retObjectIsComplexType = classInstance.Get("IsComplexType");
+            return (boolean)retObjectIsComplexType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsComplexType != null ? retObjectIsComplexType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +236,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getIsNullableValueType() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNullableValueType = null;
         try {
-            return (boolean)classInstance.Get("IsNullableValueType");
+            retObjectIsNullableValueType = classInstance.Get("IsNullableValueType");
+            return (boolean)retObjectIsNullableValueType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNullableValueType != null ? retObjectIsNullableValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +250,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +264,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
         } catch (JCNativeException jcne) {
@@ -250,9 +274,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getIsRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRequired = null;
         try {
-            return (boolean)classInstance.Get("IsRequired");
+            retObjectIsRequired = classInstance.Get("IsRequired");
+            return (boolean)retObjectIsRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRequired != null ? retObjectIsRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +288,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setIsRequired(boolean IsRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsRequired", IsRequired);
         } catch (JCNativeException jcne) {
@@ -270,9 +298,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getRequestValidationEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestValidationEnabled = null;
         try {
-            return (boolean)classInstance.Get("RequestValidationEnabled");
+            retObjectRequestValidationEnabled = classInstance.Get("RequestValidationEnabled");
+            return (boolean)retObjectRequestValidationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequestValidationEnabled != null ? retObjectRequestValidationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +312,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setRequestValidationEnabled(boolean RequestValidationEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestValidationEnabled", RequestValidationEnabled);
         } catch (JCNativeException jcne) {
@@ -290,9 +322,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getShowForDisplay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowForDisplay = null;
         try {
-            return (boolean)classInstance.Get("ShowForDisplay");
+            retObjectShowForDisplay = classInstance.Get("ShowForDisplay");
+            return (boolean)retObjectShowForDisplay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowForDisplay != null ? retObjectShowForDisplay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +336,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setShowForDisplay(boolean ShowForDisplay) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowForDisplay", ShowForDisplay);
         } catch (JCNativeException jcne) {
@@ -310,9 +346,13 @@ public class ModelMetadata extends NetObject  {
 
     public boolean getShowForEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowForEdit = null;
         try {
-            return (boolean)classInstance.Get("ShowForEdit");
+            retObjectShowForEdit = classInstance.Get("ShowForEdit");
+            return (boolean)retObjectShowForEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowForEdit != null ? retObjectShowForEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +360,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setShowForEdit(boolean ShowForEdit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowForEdit", ShowForEdit);
         } catch (JCNativeException jcne) {
@@ -330,9 +370,19 @@ public class ModelMetadata extends NetObject  {
 
     public int getOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrder = null;
         try {
-            return (int)classInstance.Get("Order");
+            retObjectOrder = classInstance.Get("Order");
+            return (int)retObjectOrder;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOrderNumber = (java.lang.Number)retObjectOrder;
+                return retObjectOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOrder != null ? retObjectOrder.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +390,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setOrder(int Order) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Order", Order);
         } catch (JCNativeException jcne) {
@@ -350,10 +400,14 @@ public class ModelMetadata extends NetObject  {
 
     public NetObject getModel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Model");
+            retObjectModel = classInstance.Get("Model");
+            JCObject val = (JCObject)retObjectModel;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModel != null ? retObjectModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +415,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setModel(NetObject Model) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Model", Model == null ? null : Model.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,9 +425,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getDataTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("DataTypeName");
+            retObjectDataTypeName = classInstance.Get("DataTypeName");
+            return (java.lang.String)retObjectDataTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataTypeName != null ? retObjectDataTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +439,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setDataTypeName(java.lang.String DataTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataTypeName", DataTypeName);
         } catch (JCNativeException jcne) {
@@ -391,9 +449,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +463,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -411,9 +473,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getDisplayFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayFormatString");
+            retObjectDisplayFormatString = classInstance.Get("DisplayFormatString");
+            return (java.lang.String)retObjectDisplayFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayFormatString != null ? retObjectDisplayFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +487,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setDisplayFormatString(java.lang.String DisplayFormatString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayFormatString", DisplayFormatString);
         } catch (JCNativeException jcne) {
@@ -431,9 +497,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +511,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -451,9 +521,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getEditFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("EditFormatString");
+            retObjectEditFormatString = classInstance.Get("EditFormatString");
+            return (java.lang.String)retObjectEditFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEditFormatString != null ? retObjectEditFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +535,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setEditFormatString(java.lang.String EditFormatString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditFormatString", EditFormatString);
         } catch (JCNativeException jcne) {
@@ -471,9 +545,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getNullDisplayText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullDisplayText = null;
         try {
-            return (java.lang.String)classInstance.Get("NullDisplayText");
+            retObjectNullDisplayText = classInstance.Get("NullDisplayText");
+            return (java.lang.String)retObjectNullDisplayText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNullDisplayText != null ? retObjectNullDisplayText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +559,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setNullDisplayText(java.lang.String NullDisplayText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullDisplayText", NullDisplayText);
         } catch (JCNativeException jcne) {
@@ -491,9 +569,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,9 +583,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getShortDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShortDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("ShortDisplayName");
+            retObjectShortDisplayName = classInstance.Get("ShortDisplayName");
+            return (java.lang.String)retObjectShortDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShortDisplayName != null ? retObjectShortDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +597,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setShortDisplayName(java.lang.String ShortDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShortDisplayName", ShortDisplayName);
         } catch (JCNativeException jcne) {
@@ -521,9 +607,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getSimpleDisplayText() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSimpleDisplayText = null;
         try {
-            return (java.lang.String)classInstance.Get("SimpleDisplayText");
+            retObjectSimpleDisplayText = classInstance.Get("SimpleDisplayText");
+            return (java.lang.String)retObjectSimpleDisplayText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSimpleDisplayText != null ? retObjectSimpleDisplayText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,7 +621,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setSimpleDisplayText(java.lang.String SimpleDisplayText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SimpleDisplayText", SimpleDisplayText);
         } catch (JCNativeException jcne) {
@@ -541,9 +631,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getTemplateHint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplateHint = null;
         try {
-            return (java.lang.String)classInstance.Get("TemplateHint");
+            retObjectTemplateHint = classInstance.Get("TemplateHint");
+            return (java.lang.String)retObjectTemplateHint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTemplateHint != null ? retObjectTemplateHint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,7 +645,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setTemplateHint(java.lang.String TemplateHint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TemplateHint", TemplateHint);
         } catch (JCNativeException jcne) {
@@ -561,9 +655,13 @@ public class ModelMetadata extends NetObject  {
 
     public java.lang.String getWatermark() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWatermark = null;
         try {
-            return (java.lang.String)classInstance.Get("Watermark");
+            retObjectWatermark = classInstance.Get("Watermark");
+            return (java.lang.String)retObjectWatermark;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWatermark != null ? retObjectWatermark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,7 +669,7 @@ public class ModelMetadata extends NetObject  {
 
     public void setWatermark(java.lang.String Watermark) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Watermark", Watermark);
         } catch (JCNativeException jcne) {
@@ -581,10 +679,14 @@ public class ModelMetadata extends NetObject  {
 
     public NetType getContainerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainerType");
+            retObjectContainerType = classInstance.Get("ContainerType");
+            JCObject val = (JCObject)retObjectContainerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerType != null ? retObjectContainerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,10 +694,14 @@ public class ModelMetadata extends NetObject  {
 
     public NetType getModelType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelType");
+            retObjectModelType = classInstance.Get("ModelType");
+            JCObject val = (JCObject)retObjectModelType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelType != null ? retObjectModelType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

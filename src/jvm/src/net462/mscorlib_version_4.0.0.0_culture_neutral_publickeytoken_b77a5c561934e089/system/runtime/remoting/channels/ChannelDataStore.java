@@ -169,10 +169,12 @@ public class ChannelDataStore extends NetObject  {
     
     public java.lang.String[] getChannelUris() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelUris = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ChannelUris");
+            retObjectChannelUris = classInstance.Get("ChannelUris");
+            JCObject resultingObjects = (JCObject)retObjectChannelUris;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -181,6 +183,8 @@ public class ChannelDataStore extends NetObject  {
 				resultingArray[indexChannelUris] = (java.lang.String)resultingArrayList.get(indexChannelUris);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectChannelUris != null ? retObjectChannelUris.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class ChannelDataStore extends NetObject  {
 
     public void setChannelUris(java.lang.String[] ChannelUris) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChannelUris", ChannelUris);
         } catch (JCNativeException jcne) {

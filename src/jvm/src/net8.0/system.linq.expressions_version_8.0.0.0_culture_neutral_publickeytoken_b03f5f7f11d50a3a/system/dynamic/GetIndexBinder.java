@@ -156,10 +156,14 @@ public class GetIndexBinder extends DynamicMetaObjectBinder  {
     
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBind = null;
         try {
-            JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            retObjectBind = classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objBind = (JCObject)retObjectBind;
             return new DynamicMetaObject(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class GetIndexBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackGetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackGetIndex = null;
         try {
-            JCObject objFallbackGetIndex = (JCObject)classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            retObjectFallbackGetIndex = classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackGetIndex = (JCObject)retObjectFallbackGetIndex;
             return new DynamicMetaObject(objFallbackGetIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackGetIndex != null ? retObjectFallbackGetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class GetIndexBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackGetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackGetIndex = null;
         try {
-            JCObject objFallbackGetIndex = (JCObject)classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes));
+            retObjectFallbackGetIndex = classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes));
+            JCObject objFallbackGetIndex = (JCObject)retObjectFallbackGetIndex;
             return new DynamicMetaObject(objFallbackGetIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackGetIndex != null ? retObjectFallbackGetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class GetIndexBinder extends DynamicMetaObjectBinder  {
     
     public CallInfo getCallInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallInfo");
+            retObjectCallInfo = classInstance.Get("CallInfo");
+            JCObject val = (JCObject)retObjectCallInfo;
             return new CallInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallInfo != null ? retObjectCallInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

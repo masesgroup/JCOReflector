@@ -190,10 +190,12 @@ public class EnvelopedCms extends NetObject  {
     
     public byte[] Encode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncode = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode");
+            retObjectEncode = classInstance.Invoke("Encode");
+            JCObject resultingObjects = (JCObject)retObjectEncode;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -202,6 +204,8 @@ public class EnvelopedCms extends NetObject  {
 				resultingArray[indexEncode] = (byte)resultingArrayList.get(indexEncode);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +213,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Decode(byte[] encodedMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decode", (java.lang.Object)encodedMessage);
         } catch (JCNativeException jcne) {
@@ -219,7 +223,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Decode(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decode", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -229,7 +233,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Decrypt() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt");
         } catch (JCNativeException jcne) {
@@ -239,7 +243,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Decrypt(RecipientInfo recipientInfo, AsymmetricAlgorithm privateKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", recipientInfo == null ? null : recipientInfo.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +253,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Decrypt(RecipientInfo recipientInfo, X509Certificate2Collection extraStore) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", recipientInfo == null ? null : recipientInfo.getJCOInstance(), extraStore == null ? null : extraStore.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,7 +263,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Decrypt(RecipientInfo recipientInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", recipientInfo == null ? null : recipientInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,7 +273,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Decrypt(X509Certificate2Collection extraStore) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", extraStore == null ? null : extraStore.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,7 +283,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Encrypt(CmsRecipient recipient) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Encrypt", recipient == null ? null : recipient.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,7 +293,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void Encrypt(CmsRecipientCollection recipients) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Encrypt", recipients == null ? null : recipients.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,9 +307,19 @@ public class EnvelopedCms extends NetObject  {
     
     public int getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (int)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (int)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +327,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void setVersion(int Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {
@@ -323,10 +337,14 @@ public class EnvelopedCms extends NetObject  {
 
     public CryptographicAttributeObjectCollection getUnprotectedAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnprotectedAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnprotectedAttributes");
+            retObjectUnprotectedAttributes = classInstance.Get("UnprotectedAttributes");
+            JCObject val = (JCObject)retObjectUnprotectedAttributes;
             return new CryptographicAttributeObjectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnprotectedAttributes != null ? retObjectUnprotectedAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +352,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void setUnprotectedAttributes(CryptographicAttributeObjectCollection UnprotectedAttributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnprotectedAttributes", UnprotectedAttributes == null ? null : UnprotectedAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +362,14 @@ public class EnvelopedCms extends NetObject  {
 
     public AlgorithmIdentifier getContentEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentEncryptionAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentEncryptionAlgorithm");
+            retObjectContentEncryptionAlgorithm = classInstance.Get("ContentEncryptionAlgorithm");
+            JCObject val = (JCObject)retObjectContentEncryptionAlgorithm;
             return new AlgorithmIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentEncryptionAlgorithm != null ? retObjectContentEncryptionAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +377,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void setContentEncryptionAlgorithm(AlgorithmIdentifier ContentEncryptionAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentEncryptionAlgorithm", ContentEncryptionAlgorithm == null ? null : ContentEncryptionAlgorithm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,10 +387,14 @@ public class EnvelopedCms extends NetObject  {
 
     public ContentInfo getContentInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentInfo");
+            retObjectContentInfo = classInstance.Get("ContentInfo");
+            JCObject val = (JCObject)retObjectContentInfo;
             return new ContentInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentInfo != null ? retObjectContentInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +402,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void setContentInfo(ContentInfo ContentInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentInfo", ContentInfo == null ? null : ContentInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +412,14 @@ public class EnvelopedCms extends NetObject  {
 
     public RecipientInfoCollection getRecipientInfos() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecipientInfos = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RecipientInfos");
+            retObjectRecipientInfos = classInstance.Get("RecipientInfos");
+            JCObject val = (JCObject)retObjectRecipientInfos;
             return new RecipientInfoCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecipientInfos != null ? retObjectRecipientInfos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +427,14 @@ public class EnvelopedCms extends NetObject  {
 
     public X509Certificate2Collection getCertificates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Certificates");
+            retObjectCertificates = classInstance.Get("Certificates");
+            JCObject val = (JCObject)retObjectCertificates;
             return new X509Certificate2Collection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificates != null ? retObjectCertificates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,7 +442,7 @@ public class EnvelopedCms extends NetObject  {
 
     public void setCertificates(X509Certificate2Collection Certificates) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Certificates", Certificates == null ? null : Certificates.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -179,9 +179,13 @@ public class FileReference extends BaseReference  {
     
     public boolean getIsDataFile() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDataFile = null;
         try {
-            return (boolean)classInstance.Get("IsDataFile");
+            retObjectIsDataFile = classInstance.Get("IsDataFile");
+            return (boolean)retObjectIsDataFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDataFile != null ? retObjectIsDataFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class FileReference extends BaseReference  {
 
     public void setIsDataFile(boolean IsDataFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDataFile", IsDataFile);
         } catch (JCNativeException jcne) {
@@ -199,16 +203,20 @@ public class FileReference extends BaseReference  {
 
     public final ComClass[] getComClasses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComClasses = null;
         try {
             ArrayList<ComClass> resultingArrayList = new ArrayList<ComClass>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ComClasses");
+            retObjectComClasses = classInstance.Get("ComClasses");
+            JCObject resultingObjects = (JCObject)retObjectComClasses;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ComClass(resultingObject));
             }
             ComClass[] resultingArray = new ComClass[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComClasses != null ? retObjectComClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,16 +224,20 @@ public class FileReference extends BaseReference  {
 
     public final ComClass[] getXmlComClasses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlComClasses = null;
         try {
             ArrayList<ComClass> resultingArrayList = new ArrayList<ComClass>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlComClasses");
+            retObjectXmlComClasses = classInstance.Get("XmlComClasses");
+            JCObject resultingObjects = (JCObject)retObjectXmlComClasses;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ComClass(resultingObject));
             }
             ComClass[] resultingArray = new ComClass[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlComClasses != null ? retObjectXmlComClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class FileReference extends BaseReference  {
 
     public void setXmlComClasses(ComClass[] XmlComClasses) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlComClasses", toObjectFromArray(XmlComClasses));
         } catch (JCNativeException jcne) {
@@ -243,16 +255,20 @@ public class FileReference extends BaseReference  {
 
     public final ProxyStub[] getProxyStubs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyStubs = null;
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ProxyStubs");
+            retObjectProxyStubs = classInstance.Get("ProxyStubs");
+            JCObject resultingObjects = (JCObject)retObjectProxyStubs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxyStubs != null ? retObjectProxyStubs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,16 +276,20 @@ public class FileReference extends BaseReference  {
 
     public final ProxyStub[] getXmlProxyStubs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlProxyStubs = null;
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlProxyStubs");
+            retObjectXmlProxyStubs = classInstance.Get("XmlProxyStubs");
+            JCObject resultingObjects = (JCObject)retObjectXmlProxyStubs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlProxyStubs != null ? retObjectXmlProxyStubs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +297,7 @@ public class FileReference extends BaseReference  {
 
     public void setXmlProxyStubs(ProxyStub[] XmlProxyStubs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlProxyStubs", toObjectFromArray(XmlProxyStubs));
         } catch (JCNativeException jcne) {
@@ -287,16 +307,20 @@ public class FileReference extends BaseReference  {
 
     public final TypeLib[] getTypeLibs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeLibs = null;
         try {
             ArrayList<TypeLib> resultingArrayList = new ArrayList<TypeLib>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibs");
+            retObjectTypeLibs = classInstance.Get("TypeLibs");
+            JCObject resultingObjects = (JCObject)retObjectTypeLibs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TypeLib(resultingObject));
             }
             TypeLib[] resultingArray = new TypeLib[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeLibs != null ? retObjectTypeLibs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,16 +328,20 @@ public class FileReference extends BaseReference  {
 
     public final TypeLib[] getXmlTypeLibs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlTypeLibs = null;
         try {
             ArrayList<TypeLib> resultingArrayList = new ArrayList<TypeLib>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlTypeLibs");
+            retObjectXmlTypeLibs = classInstance.Get("XmlTypeLibs");
+            JCObject resultingObjects = (JCObject)retObjectXmlTypeLibs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TypeLib(resultingObject));
             }
             TypeLib[] resultingArray = new TypeLib[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlTypeLibs != null ? retObjectXmlTypeLibs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +349,7 @@ public class FileReference extends BaseReference  {
 
     public void setXmlTypeLibs(TypeLib[] XmlTypeLibs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlTypeLibs", toObjectFromArray(XmlTypeLibs));
         } catch (JCNativeException jcne) {
@@ -331,9 +359,13 @@ public class FileReference extends BaseReference  {
 
     public java.lang.String getXmlWriteableType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlWriteableType = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlWriteableType");
+            retObjectXmlWriteableType = classInstance.Get("XmlWriteableType");
+            return (java.lang.String)retObjectXmlWriteableType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlWriteableType != null ? retObjectXmlWriteableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +373,7 @@ public class FileReference extends BaseReference  {
 
     public void setXmlWriteableType(java.lang.String XmlWriteableType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlWriteableType", XmlWriteableType);
         } catch (JCNativeException jcne) {

@@ -177,10 +177,14 @@ public class EncryptingCredentials extends NetObject  {
     
     public SecurityKey getSecurityKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityKey");
+            retObjectSecurityKey = classInstance.Get("SecurityKey");
+            JCObject val = (JCObject)retObjectSecurityKey;
             return new SecurityKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityKey != null ? retObjectSecurityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class EncryptingCredentials extends NetObject  {
 
     public void setSecurityKey(SecurityKey SecurityKey) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityKey", SecurityKey == null ? null : SecurityKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class EncryptingCredentials extends NetObject  {
 
     public SecurityKeyIdentifier getSecurityKeyIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityKeyIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityKeyIdentifier");
+            retObjectSecurityKeyIdentifier = classInstance.Get("SecurityKeyIdentifier");
+            JCObject val = (JCObject)retObjectSecurityKeyIdentifier;
             return new SecurityKeyIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityKeyIdentifier != null ? retObjectSecurityKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class EncryptingCredentials extends NetObject  {
 
     public void setSecurityKeyIdentifier(SecurityKeyIdentifier SecurityKeyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityKeyIdentifier", SecurityKeyIdentifier == null ? null : SecurityKeyIdentifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,9 +227,13 @@ public class EncryptingCredentials extends NetObject  {
 
     public java.lang.String getAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("Algorithm");
+            retObjectAlgorithm = classInstance.Get("Algorithm");
+            return (java.lang.String)retObjectAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlgorithm != null ? retObjectAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class EncryptingCredentials extends NetObject  {
 
     public void setAlgorithm(java.lang.String Algorithm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Algorithm", Algorithm);
         } catch (JCNativeException jcne) {

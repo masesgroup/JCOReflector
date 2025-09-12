@@ -177,9 +177,19 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
     
     public int GetLocalPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalPort = null;
         try {
-            return (int)classInstance.Invoke("GetLocalPort");
+            retObjectGetLocalPort = classInstance.Invoke("GetLocalPort");
+            return (int)retObjectGetLocalPort;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLocalPortNumber = (java.lang.Number)retObjectGetLocalPort;
+                return retObjectGetLocalPortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLocalPort != null ? retObjectGetLocalPort.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +197,19 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public int GetRemotePort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemotePort = null;
         try {
-            return (int)classInstance.Invoke("GetRemotePort");
+            retObjectGetRemotePort = classInstance.Invoke("GetRemotePort");
+            return (int)retObjectGetRemotePort;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRemotePortNumber = (java.lang.Number)retObjectGetRemotePort;
+                return retObjectGetRemotePortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRemotePort != null ? retObjectGetRemotePort.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +217,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetAppPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAppPath");
+            retObjectGetAppPath = classInstance.Invoke("GetAppPath");
+            return (java.lang.String)retObjectGetAppPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAppPath != null ? retObjectGetAppPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +231,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetAppPathTranslated() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppPathTranslated = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAppPathTranslated");
+            retObjectGetAppPathTranslated = classInstance.Invoke("GetAppPathTranslated");
+            return (java.lang.String)retObjectGetAppPathTranslated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAppPathTranslated != null ? retObjectGetAppPathTranslated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +245,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetFilePath() throws Throwable, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilePath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFilePath");
+            retObjectGetFilePath = classInstance.Invoke("GetFilePath");
+            return (java.lang.String)retObjectGetFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilePath != null ? retObjectGetFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +259,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetFilePathTranslated() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilePathTranslated = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFilePathTranslated");
+            retObjectGetFilePathTranslated = classInstance.Invoke("GetFilePathTranslated");
+            return (java.lang.String)retObjectGetFilePathTranslated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFilePathTranslated != null ? retObjectGetFilePathTranslated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +273,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetHttpVerbName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHttpVerbName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHttpVerbName");
+            retObjectGetHttpVerbName = classInstance.Invoke("GetHttpVerbName");
+            return (java.lang.String)retObjectGetHttpVerbName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHttpVerbName != null ? retObjectGetHttpVerbName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +287,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetHttpVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHttpVersion = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHttpVersion");
+            retObjectGetHttpVersion = classInstance.Invoke("GetHttpVersion");
+            return (java.lang.String)retObjectGetHttpVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHttpVersion != null ? retObjectGetHttpVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +301,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetLocalAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalAddress = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLocalAddress");
+            retObjectGetLocalAddress = classInstance.Invoke("GetLocalAddress");
+            return (java.lang.String)retObjectGetLocalAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLocalAddress != null ? retObjectGetLocalAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +315,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetPathInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPathInfo = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPathInfo");
+            retObjectGetPathInfo = classInstance.Invoke("GetPathInfo");
+            return (java.lang.String)retObjectGetPathInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPathInfo != null ? retObjectGetPathInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +329,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetQueryString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetQueryString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetQueryString");
+            retObjectGetQueryString = classInstance.Invoke("GetQueryString");
+            return (java.lang.String)retObjectGetQueryString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetQueryString != null ? retObjectGetQueryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +343,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetRawUrl() throws Throwable, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRawUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRawUrl");
+            retObjectGetRawUrl = classInstance.Invoke("GetRawUrl");
+            return (java.lang.String)retObjectGetRawUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRawUrl != null ? retObjectGetRawUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +357,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetRemoteAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemoteAddress = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRemoteAddress");
+            retObjectGetRemoteAddress = classInstance.Invoke("GetRemoteAddress");
+            return (java.lang.String)retObjectGetRemoteAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRemoteAddress != null ? retObjectGetRemoteAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +371,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetServerVariable(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServerVariable = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetServerVariable", name);
+            retObjectGetServerVariable = classInstance.Invoke("GetServerVariable", name);
+            return (java.lang.String)retObjectGetServerVariable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetServerVariable != null ? retObjectGetServerVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +385,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String GetUriPath() throws Throwable, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUriPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUriPath");
+            retObjectGetUriPath = classInstance.Invoke("GetUriPath");
+            return (java.lang.String)retObjectGetUriPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUriPath != null ? retObjectGetUriPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +399,13 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public java.lang.String MapPath(java.lang.String path) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MapPath", path);
+            retObjectMapPath = classInstance.Invoke("MapPath", path);
+            return (java.lang.String)retObjectMapPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapPath != null ? retObjectMapPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +413,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void EndOfRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOfRequest");
         } catch (JCNativeException jcne) {
@@ -347,7 +423,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void FlushResponse(boolean finalFlush) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FlushResponse", finalFlush);
         } catch (JCNativeException jcne) {
@@ -357,7 +433,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void SendKnownResponseHeader(int index, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendKnownResponseHeader", index, value);
         } catch (JCNativeException jcne) {
@@ -367,7 +443,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void SendResponseFromFile(java.lang.String filename, long offset, long length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendResponseFromFile", filename, offset, length);
         } catch (JCNativeException jcne) {
@@ -377,7 +453,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void SendResponseFromMemory(byte[] data, int length) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendResponseFromMemory", data, length);
         } catch (JCNativeException jcne) {
@@ -387,7 +463,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void SendResponseFromMemory(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendResponseFromMemory", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -397,7 +473,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void SendStatus(int statusCode, java.lang.String statusDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendStatus", statusCode, statusDescription);
         } catch (JCNativeException jcne) {
@@ -407,7 +483,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
 
     public void SendUnknownResponseHeader(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendUnknownResponseHeader", name, value);
         } catch (JCNativeException jcne) {

@@ -157,9 +157,19 @@ public class UdpStatistics extends NetObject  {
     
     public int getUdpListeners() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUdpListeners = null;
         try {
-            return (int)classInstance.Get("UdpListeners");
+            retObjectUdpListeners = classInstance.Get("UdpListeners");
+            return (int)retObjectUdpListeners;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUdpListenersNumber = (java.lang.Number)retObjectUdpListeners;
+                return retObjectUdpListenersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectUdpListeners != null ? retObjectUdpListeners.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +177,19 @@ public class UdpStatistics extends NetObject  {
 
     public long getDatagramsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatagramsReceived = null;
         try {
-            return (long)classInstance.Get("DatagramsReceived");
+            retObjectDatagramsReceived = classInstance.Get("DatagramsReceived");
+            return (long)retObjectDatagramsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDatagramsReceivedNumber = (java.lang.Number)retObjectDatagramsReceived;
+                return retObjectDatagramsReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDatagramsReceived != null ? retObjectDatagramsReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +197,19 @@ public class UdpStatistics extends NetObject  {
 
     public long getDatagramsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatagramsSent = null;
         try {
-            return (long)classInstance.Get("DatagramsSent");
+            retObjectDatagramsSent = classInstance.Get("DatagramsSent");
+            return (long)retObjectDatagramsSent;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDatagramsSentNumber = (java.lang.Number)retObjectDatagramsSent;
+                return retObjectDatagramsSentNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDatagramsSent != null ? retObjectDatagramsSent.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +217,19 @@ public class UdpStatistics extends NetObject  {
 
     public long getIncomingDatagramsDiscarded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingDatagramsDiscarded = null;
         try {
-            return (long)classInstance.Get("IncomingDatagramsDiscarded");
+            retObjectIncomingDatagramsDiscarded = classInstance.Get("IncomingDatagramsDiscarded");
+            return (long)retObjectIncomingDatagramsDiscarded;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncomingDatagramsDiscardedNumber = (java.lang.Number)retObjectIncomingDatagramsDiscarded;
+                return retObjectIncomingDatagramsDiscardedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectIncomingDatagramsDiscarded != null ? retObjectIncomingDatagramsDiscarded.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +237,19 @@ public class UdpStatistics extends NetObject  {
 
     public long getIncomingDatagramsWithErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingDatagramsWithErrors = null;
         try {
-            return (long)classInstance.Get("IncomingDatagramsWithErrors");
+            retObjectIncomingDatagramsWithErrors = classInstance.Get("IncomingDatagramsWithErrors");
+            return (long)retObjectIncomingDatagramsWithErrors;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncomingDatagramsWithErrorsNumber = (java.lang.Number)retObjectIncomingDatagramsWithErrors;
+                return retObjectIncomingDatagramsWithErrorsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectIncomingDatagramsWithErrors != null ? retObjectIncomingDatagramsWithErrors.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -145,9 +145,13 @@ public class ICertificatePolicyImplementation extends NetObject implements ICert
     
     public boolean CheckValidationResult(ServicePoint srvPoint, X509Certificate certificate, WebRequest request, int certificateProblem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckValidationResult = null;
         try {
-            return (boolean)classInstance.Invoke("CheckValidationResult", srvPoint == null ? null : srvPoint.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance(), request == null ? null : request.getJCOInstance(), certificateProblem);
+            retObjectCheckValidationResult = classInstance.Invoke("CheckValidationResult", srvPoint == null ? null : srvPoint.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance(), request == null ? null : request.getJCOInstance(), certificateProblem);
+            return (boolean)retObjectCheckValidationResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckValidationResult != null ? retObjectCheckValidationResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

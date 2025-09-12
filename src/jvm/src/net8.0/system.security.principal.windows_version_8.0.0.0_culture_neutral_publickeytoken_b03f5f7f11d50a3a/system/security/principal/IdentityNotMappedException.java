@@ -173,7 +173,7 @@ public class IdentityNotMappedException extends SystemException {
     
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", serializationInfo == null ? null : serializationInfo.getJCOInstance(), streamingContext == null ? null : streamingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +187,14 @@ public class IdentityNotMappedException extends SystemException {
     
     public IdentityReferenceCollection getUnmappedIdentities() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnmappedIdentities = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnmappedIdentities");
+            retObjectUnmappedIdentities = classInstance.Get("UnmappedIdentities");
+            JCObject val = (JCObject)retObjectUnmappedIdentities;
             return new IdentityReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnmappedIdentities != null ? retObjectUnmappedIdentities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

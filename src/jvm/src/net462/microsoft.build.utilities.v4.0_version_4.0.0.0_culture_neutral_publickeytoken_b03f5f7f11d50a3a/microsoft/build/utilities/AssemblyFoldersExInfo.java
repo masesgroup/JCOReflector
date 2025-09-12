@@ -172,10 +172,14 @@ public class AssemblyFoldersExInfo extends NetObject  {
     
     public RegistryHive getHive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHive = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Hive");
+            retObjectHive = classInstance.Get("Hive");
+            JCObject val = (JCObject)retObjectHive;
             return new RegistryHive(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHive != null ? retObjectHive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public void setHive(RegistryHive Hive) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Hive", Hive == null ? null : Hive.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +197,14 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public RegistryView getView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("View");
+            retObjectView = classInstance.Get("View");
+            JCObject val = (JCObject)retObjectView;
             return new RegistryView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectView != null ? retObjectView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public void setView(RegistryView View) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("View", View == null ? null : View.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public java.lang.String getDirectoryPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryPath = null;
         try {
-            return (java.lang.String)classInstance.Get("DirectoryPath");
+            retObjectDirectoryPath = classInstance.Get("DirectoryPath");
+            return (java.lang.String)retObjectDirectoryPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDirectoryPath != null ? retObjectDirectoryPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public void setDirectoryPath(java.lang.String DirectoryPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DirectoryPath", DirectoryPath);
         } catch (JCNativeException jcne) {
@@ -234,9 +246,13 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public java.lang.String getKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            return (java.lang.String)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            return (java.lang.String)retObjectKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public void setKey(java.lang.String Key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Key", Key);
         } catch (JCNativeException jcne) {
@@ -254,10 +270,14 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public Version getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetFrameworkVersion");
+            retObjectTargetFrameworkVersion = classInstance.Get("TargetFrameworkVersion");
+            JCObject val = (JCObject)retObjectTargetFrameworkVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetFrameworkVersion != null ? retObjectTargetFrameworkVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class AssemblyFoldersExInfo extends NetObject  {
 
     public void setTargetFrameworkVersion(Version TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkVersion", TargetFrameworkVersion == null ? null : TargetFrameworkVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

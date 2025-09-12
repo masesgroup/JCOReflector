@@ -155,10 +155,14 @@ public class ComposablePart extends NetObject  {
     
     public NetObject GetExportedValue(ExportDefinition definition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExportedValue = null;
         try {
-            JCObject objGetExportedValue = (JCObject)classInstance.Invoke("GetExportedValue", definition == null ? null : definition.getJCOInstance());
+            retObjectGetExportedValue = classInstance.Invoke("GetExportedValue", definition == null ? null : definition.getJCOInstance());
+            JCObject objGetExportedValue = (JCObject)retObjectGetExportedValue;
             return new NetObject(objGetExportedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportedValue != null ? retObjectGetExportedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class ComposablePart extends NetObject  {
 
     public void Activate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Activate");
         } catch (JCNativeException jcne) {

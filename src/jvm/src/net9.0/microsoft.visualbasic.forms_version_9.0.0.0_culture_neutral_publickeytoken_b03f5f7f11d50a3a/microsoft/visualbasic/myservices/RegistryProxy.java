@@ -157,10 +157,14 @@ public class RegistryProxy extends NetObject  {
     
     public NetObject GetValue(java.lang.String keyName, java.lang.String valueName, NetObject defaultValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", keyName, valueName, defaultValue == null ? null : defaultValue.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", keyName, valueName, defaultValue == null ? null : defaultValue.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class RegistryProxy extends NetObject  {
 
     public void SetValue(java.lang.String keyName, java.lang.String valueName, NetObject value, RegistryValueKind valueKind) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.UnauthorizedAccessException, system.RankException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", keyName, valueName, value == null ? null : value.getJCOInstance(), valueKind == null ? null : valueKind.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +182,7 @@ public class RegistryProxy extends NetObject  {
 
     public void SetValue(java.lang.String keyName, java.lang.String valueName, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.io.IOException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", keyName, valueName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class RegistryProxy extends NetObject  {
     
     public RegistryKey getClassesRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassesRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClassesRoot");
+            retObjectClassesRoot = classInstance.Get("ClassesRoot");
+            JCObject val = (JCObject)retObjectClassesRoot;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClassesRoot != null ? retObjectClassesRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class RegistryProxy extends NetObject  {
 
     public RegistryKey getCurrentConfig() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentConfig = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentConfig");
+            retObjectCurrentConfig = classInstance.Get("CurrentConfig");
+            JCObject val = (JCObject)retObjectCurrentConfig;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentConfig != null ? retObjectCurrentConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +226,14 @@ public class RegistryProxy extends NetObject  {
 
     public RegistryKey getCurrentUser() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentUser");
+            retObjectCurrentUser = classInstance.Get("CurrentUser");
+            JCObject val = (JCObject)retObjectCurrentUser;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentUser != null ? retObjectCurrentUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +241,14 @@ public class RegistryProxy extends NetObject  {
 
     public RegistryKey getLocalMachine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalMachine = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalMachine");
+            retObjectLocalMachine = classInstance.Get("LocalMachine");
+            JCObject val = (JCObject)retObjectLocalMachine;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalMachine != null ? retObjectLocalMachine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +256,14 @@ public class RegistryProxy extends NetObject  {
 
     public RegistryKey getPerformanceData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPerformanceData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PerformanceData");
+            retObjectPerformanceData = classInstance.Get("PerformanceData");
+            JCObject val = (JCObject)retObjectPerformanceData;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPerformanceData != null ? retObjectPerformanceData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +271,14 @@ public class RegistryProxy extends NetObject  {
 
     public RegistryKey getUsers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Users");
+            retObjectUsers = classInstance.Get("Users");
+            JCObject val = (JCObject)retObjectUsers;
             return new RegistryKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUsers != null ? retObjectUsers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

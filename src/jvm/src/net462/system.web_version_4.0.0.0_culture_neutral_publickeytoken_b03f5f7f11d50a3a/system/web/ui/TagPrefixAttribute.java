@@ -170,9 +170,13 @@ public class TagPrefixAttribute extends Attribute  {
     
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceName");
+            retObjectNamespaceName = classInstance.Get("NamespaceName");
+            return (java.lang.String)retObjectNamespaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceName != null ? retObjectNamespaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class TagPrefixAttribute extends Attribute  {
 
     public java.lang.String getTagPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("TagPrefix");
+            retObjectTagPrefix = classInstance.Get("TagPrefix");
+            return (java.lang.String)retObjectTagPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTagPrefix != null ? retObjectTagPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

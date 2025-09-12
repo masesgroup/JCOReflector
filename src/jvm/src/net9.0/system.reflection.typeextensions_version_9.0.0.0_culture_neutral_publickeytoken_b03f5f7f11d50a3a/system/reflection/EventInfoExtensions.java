@@ -155,10 +155,14 @@ public class EventInfoExtensions extends NetObject  {
     
     public static MethodInfo GetAddMethod(EventInfo eventInfo, boolean nonPublic) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAddMethod = null;
         try {
-            JCObject objGetAddMethod = (JCObject)classType.Invoke("GetAddMethod", eventInfo == null ? null : eventInfo.getJCOInstance(), nonPublic);
+            retObjectGetAddMethod = classType.Invoke("GetAddMethod", eventInfo == null ? null : eventInfo.getJCOInstance(), nonPublic);
+            JCObject objGetAddMethod = (JCObject)retObjectGetAddMethod;
             return new MethodInfo(objGetAddMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAddMethod != null ? retObjectGetAddMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class EventInfoExtensions extends NetObject  {
 
     public static MethodInfo GetAddMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAddMethod = null;
         try {
-            JCObject objGetAddMethod = (JCObject)classType.Invoke("GetAddMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            retObjectGetAddMethod = classType.Invoke("GetAddMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            JCObject objGetAddMethod = (JCObject)retObjectGetAddMethod;
             return new MethodInfo(objGetAddMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAddMethod != null ? retObjectGetAddMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class EventInfoExtensions extends NetObject  {
 
     public static MethodInfo GetRaiseMethod(EventInfo eventInfo, boolean nonPublic) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRaiseMethod = null;
         try {
-            JCObject objGetRaiseMethod = (JCObject)classType.Invoke("GetRaiseMethod", eventInfo == null ? null : eventInfo.getJCOInstance(), nonPublic);
+            retObjectGetRaiseMethod = classType.Invoke("GetRaiseMethod", eventInfo == null ? null : eventInfo.getJCOInstance(), nonPublic);
+            JCObject objGetRaiseMethod = (JCObject)retObjectGetRaiseMethod;
             return new MethodInfo(objGetRaiseMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRaiseMethod != null ? retObjectGetRaiseMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class EventInfoExtensions extends NetObject  {
 
     public static MethodInfo GetRaiseMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRaiseMethod = null;
         try {
-            JCObject objGetRaiseMethod = (JCObject)classType.Invoke("GetRaiseMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            retObjectGetRaiseMethod = classType.Invoke("GetRaiseMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            JCObject objGetRaiseMethod = (JCObject)retObjectGetRaiseMethod;
             return new MethodInfo(objGetRaiseMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRaiseMethod != null ? retObjectGetRaiseMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class EventInfoExtensions extends NetObject  {
 
     public static MethodInfo GetRemoveMethod(EventInfo eventInfo, boolean nonPublic) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRemoveMethod = null;
         try {
-            JCObject objGetRemoveMethod = (JCObject)classType.Invoke("GetRemoveMethod", eventInfo == null ? null : eventInfo.getJCOInstance(), nonPublic);
+            retObjectGetRemoveMethod = classType.Invoke("GetRemoveMethod", eventInfo == null ? null : eventInfo.getJCOInstance(), nonPublic);
+            JCObject objGetRemoveMethod = (JCObject)retObjectGetRemoveMethod;
             return new MethodInfo(objGetRemoveMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRemoveMethod != null ? retObjectGetRemoveMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class EventInfoExtensions extends NetObject  {
 
     public static MethodInfo GetRemoveMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRemoveMethod = null;
         try {
-            JCObject objGetRemoveMethod = (JCObject)classType.Invoke("GetRemoveMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            retObjectGetRemoveMethod = classType.Invoke("GetRemoveMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            JCObject objGetRemoveMethod = (JCObject)retObjectGetRemoveMethod;
             return new MethodInfo(objGetRemoveMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRemoveMethod != null ? retObjectGetRemoveMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,10 +160,14 @@ public class TextAnchor extends NetObject  {
     
     public ContentPosition getBoundingEnd() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoundingEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundingEnd");
+            retObjectBoundingEnd = classInstance.Get("BoundingEnd");
+            JCObject val = (JCObject)retObjectBoundingEnd;
             return new ContentPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoundingEnd != null ? retObjectBoundingEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class TextAnchor extends NetObject  {
 
     public ContentPosition getBoundingStart() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoundingStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundingStart");
+            retObjectBoundingStart = classInstance.Get("BoundingStart");
+            JCObject val = (JCObject)retObjectBoundingStart;
             return new ContentPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoundingStart != null ? retObjectBoundingStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,9 +158,13 @@ public class ColorBuilder extends NetObject  {
     
     public static java.lang.String BuildColor(IComponent component, Control owner, java.lang.String initialColor) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBuildColor = null;
         try {
-            return (java.lang.String)classType.Invoke("BuildColor", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialColor);
+            retObjectBuildColor = classType.Invoke("BuildColor", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), initialColor);
+            return (java.lang.String)retObjectBuildColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBuildColor != null ? retObjectBuildColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

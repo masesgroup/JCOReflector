@@ -147,9 +147,13 @@ public class IExpressionsAccessorImplementation extends NetObject implements IEx
     
     public boolean getHasExpressions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasExpressions = null;
         try {
-            return (boolean)classInstance.Get("HasExpressions");
+            retObjectHasExpressions = classInstance.Get("HasExpressions");
+            return (boolean)retObjectHasExpressions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasExpressions != null ? retObjectHasExpressions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IExpressionsAccessorImplementation extends NetObject implements IEx
 
     public ExpressionBindingCollection getExpressions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expressions");
+            retObjectExpressions = classInstance.Get("Expressions");
+            JCObject val = (JCObject)retObjectExpressions;
             return new ExpressionBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpressions != null ? retObjectExpressions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

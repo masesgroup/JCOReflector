@@ -178,10 +178,14 @@ public class EventDrivenActivity extends SequenceActivity  {
     
     public IEventActivity getEventActivity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventActivity");
+            retObjectEventActivity = classInstance.Get("EventActivity");
+            JCObject val = (JCObject)retObjectEventActivity;
             return new IEventActivityImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventActivity != null ? retObjectEventActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

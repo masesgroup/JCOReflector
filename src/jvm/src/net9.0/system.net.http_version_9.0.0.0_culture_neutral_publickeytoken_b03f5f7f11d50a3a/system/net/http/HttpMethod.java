@@ -166,9 +166,13 @@ public class HttpMethod extends NetObject  {
     
     public boolean Equals(HttpMethod other) throws Throwable, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class HttpMethod extends NetObject  {
     
     public static HttpMethod getConnect() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnect = null;
         try {
-            JCObject val = (JCObject)classType.Get("Connect");
+            retObjectConnect = classType.Get("Connect");
+            JCObject val = (JCObject)retObjectConnect;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnect != null ? retObjectConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getDelete() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDelete = null;
         try {
-            JCObject val = (JCObject)classType.Get("Delete");
+            retObjectDelete = classType.Get("Delete");
+            JCObject val = (JCObject)retObjectDelete;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelete != null ? retObjectDelete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getGet() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject val = (JCObject)classType.Get("Get");
+            retObjectGet = classType.Get("Get");
+            JCObject val = (JCObject)retObjectGet;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getHead() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHead = null;
         try {
-            JCObject val = (JCObject)classType.Get("Head");
+            retObjectHead = classType.Get("Head");
+            JCObject val = (JCObject)retObjectHead;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHead != null ? retObjectHead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getOptions() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classType.Get("Options");
+            retObjectOptions = classType.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +259,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getPatch() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPatch = null;
         try {
-            JCObject val = (JCObject)classType.Get("Patch");
+            retObjectPatch = classType.Get("Patch");
+            JCObject val = (JCObject)retObjectPatch;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatch != null ? retObjectPatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +274,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getPost() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPost = null;
         try {
-            JCObject val = (JCObject)classType.Get("Post");
+            retObjectPost = classType.Get("Post");
+            JCObject val = (JCObject)retObjectPost;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPost != null ? retObjectPost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +289,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getPut() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPut = null;
         try {
-            JCObject val = (JCObject)classType.Get("Put");
+            retObjectPut = classType.Get("Put");
+            JCObject val = (JCObject)retObjectPut;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPut != null ? retObjectPut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +304,14 @@ public class HttpMethod extends NetObject  {
 
     public static HttpMethod getTrace() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrace = null;
         try {
-            JCObject val = (JCObject)classType.Get("Trace");
+            retObjectTrace = classType.Get("Trace");
+            JCObject val = (JCObject)retObjectTrace;
             return new HttpMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrace != null ? retObjectTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +319,13 @@ public class HttpMethod extends NetObject  {
 
     public java.lang.String getMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("Method");
+            retObjectMethod = classInstance.Get("Method");
+            return (java.lang.String)retObjectMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethod != null ? retObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

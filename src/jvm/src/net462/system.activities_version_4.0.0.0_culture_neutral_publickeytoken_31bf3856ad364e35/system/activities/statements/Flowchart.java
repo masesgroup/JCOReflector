@@ -167,9 +167,13 @@ public class Flowchart extends NativeActivity  {
     
     public boolean getValidateUnconnectedNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateUnconnectedNodes = null;
         try {
-            return (boolean)classInstance.Get("ValidateUnconnectedNodes");
+            retObjectValidateUnconnectedNodes = classInstance.Get("ValidateUnconnectedNodes");
+            return (boolean)retObjectValidateUnconnectedNodes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateUnconnectedNodes != null ? retObjectValidateUnconnectedNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class Flowchart extends NativeActivity  {
 
     public void setValidateUnconnectedNodes(boolean ValidateUnconnectedNodes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateUnconnectedNodes", ValidateUnconnectedNodes);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class Flowchart extends NativeActivity  {
 
     public FlowNode getStartNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartNode");
+            retObjectStartNode = classInstance.Get("StartNode");
+            JCObject val = (JCObject)retObjectStartNode;
             return new FlowNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNode != null ? retObjectStartNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class Flowchart extends NativeActivity  {
 
     public void setStartNode(FlowNode StartNode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartNode", StartNode == null ? null : StartNode.getJCOInstance());
         } catch (JCNativeException jcne) {

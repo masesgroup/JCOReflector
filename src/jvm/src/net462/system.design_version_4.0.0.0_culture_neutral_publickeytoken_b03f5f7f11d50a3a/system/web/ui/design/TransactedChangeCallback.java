@@ -171,8 +171,8 @@ public class TransactedChangeCallback extends JCDelegate implements IJCEventEmit
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -185,9 +185,13 @@ public class TransactedChangeCallback extends JCDelegate implements IJCEventEmit
 
     public boolean DynamicInvoke(NetObject context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            return (boolean)classInstance.Invoke("DynamicInvoke", context == null ? null : context.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectDynamicInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

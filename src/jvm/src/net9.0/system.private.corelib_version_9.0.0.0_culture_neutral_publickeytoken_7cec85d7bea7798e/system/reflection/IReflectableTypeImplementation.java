@@ -143,10 +143,14 @@ public class IReflectableTypeImplementation extends NetObject implements IReflec
     
     public TypeInfo GetTypeInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeInfo = null;
         try {
-            JCObject objGetTypeInfo = (JCObject)classInstance.Invoke("GetTypeInfo");
+            retObjectGetTypeInfo = classInstance.Invoke("GetTypeInfo");
+            JCObject objGetTypeInfo = (JCObject)retObjectGetTypeInfo;
             return new TypeInfo(objGetTypeInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeInfo != null ? retObjectGetTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

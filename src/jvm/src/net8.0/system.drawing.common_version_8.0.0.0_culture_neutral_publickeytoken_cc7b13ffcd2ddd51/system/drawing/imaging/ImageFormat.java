@@ -171,10 +171,14 @@ public class ImageFormat extends NetObject  {
     
     public static ImageFormat getBmp() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBmp = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bmp");
+            retObjectBmp = classType.Get("Bmp");
+            JCObject val = (JCObject)retObjectBmp;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBmp != null ? retObjectBmp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getEmf() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmf = null;
         try {
-            JCObject val = (JCObject)classType.Get("Emf");
+            retObjectEmf = classType.Get("Emf");
+            JCObject val = (JCObject)retObjectEmf;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmf != null ? retObjectEmf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getExif() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExif = null;
         try {
-            JCObject val = (JCObject)classType.Get("Exif");
+            retObjectExif = classType.Get("Exif");
+            JCObject val = (JCObject)retObjectExif;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExif != null ? retObjectExif.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getGif() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGif = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gif");
+            retObjectGif = classType.Get("Gif");
+            JCObject val = (JCObject)retObjectGif;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGif != null ? retObjectGif.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +231,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getHeif() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHeif = null;
         try {
-            JCObject val = (JCObject)classType.Get("Heif");
+            retObjectHeif = classType.Get("Heif");
+            JCObject val = (JCObject)retObjectHeif;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeif != null ? retObjectHeif.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +246,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getIcon() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIcon = null;
         try {
-            JCObject val = (JCObject)classType.Get("Icon");
+            retObjectIcon = classType.Get("Icon");
+            JCObject val = (JCObject)retObjectIcon;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIcon != null ? retObjectIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +261,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getJpeg() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJpeg = null;
         try {
-            JCObject val = (JCObject)classType.Get("Jpeg");
+            retObjectJpeg = classType.Get("Jpeg");
+            JCObject val = (JCObject)retObjectJpeg;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJpeg != null ? retObjectJpeg.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +276,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getMemoryBmp() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMemoryBmp = null;
         try {
-            JCObject val = (JCObject)classType.Get("MemoryBmp");
+            retObjectMemoryBmp = classType.Get("MemoryBmp");
+            JCObject val = (JCObject)retObjectMemoryBmp;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemoryBmp != null ? retObjectMemoryBmp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +291,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getPng() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPng = null;
         try {
-            JCObject val = (JCObject)classType.Get("Png");
+            retObjectPng = classType.Get("Png");
+            JCObject val = (JCObject)retObjectPng;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPng != null ? retObjectPng.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +306,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getTiff() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTiff = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tiff");
+            retObjectTiff = classType.Get("Tiff");
+            JCObject val = (JCObject)retObjectTiff;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTiff != null ? retObjectTiff.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +321,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getWebp() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWebp = null;
         try {
-            JCObject val = (JCObject)classType.Get("Webp");
+            retObjectWebp = classType.Get("Webp");
+            JCObject val = (JCObject)retObjectWebp;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebp != null ? retObjectWebp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +336,14 @@ public class ImageFormat extends NetObject  {
 
     public static ImageFormat getWmf() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWmf = null;
         try {
-            JCObject val = (JCObject)classType.Get("Wmf");
+            retObjectWmf = classType.Get("Wmf");
+            JCObject val = (JCObject)retObjectWmf;
             return new ImageFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWmf != null ? retObjectWmf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +351,14 @@ public class ImageFormat extends NetObject  {
 
     public Guid getGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Guid");
+            retObjectGuid = classInstance.Get("Guid");
+            JCObject val = (JCObject)retObjectGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGuid != null ? retObjectGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

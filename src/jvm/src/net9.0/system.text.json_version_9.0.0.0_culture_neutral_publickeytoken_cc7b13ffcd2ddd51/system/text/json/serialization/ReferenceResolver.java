@@ -153,10 +153,14 @@ public class ReferenceResolver extends NetObject  {
     
     public NetObject ResolveReference(java.lang.String referenceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveReference = null;
         try {
-            JCObject objResolveReference = (JCObject)classInstance.Invoke("ResolveReference", referenceId);
+            retObjectResolveReference = classInstance.Invoke("ResolveReference", referenceId);
+            JCObject objResolveReference = (JCObject)retObjectResolveReference;
             return new NetObject(objResolveReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveReference != null ? retObjectResolveReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class ReferenceResolver extends NetObject  {
 
     public java.lang.String GetReference(NetObject value, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> alreadyExists) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReference = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetReference", value == null ? null : value.getJCOInstance(), alreadyExists.getJCRefOut());
+            retObjectGetReference = classInstance.Invoke("GetReference", value == null ? null : value.getJCOInstance(), alreadyExists.getJCRefOut());
+            return (java.lang.String)retObjectGetReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetReference != null ? retObjectGetReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +182,7 @@ public class ReferenceResolver extends NetObject  {
 
     public void AddReference(java.lang.String referenceId, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddReference", referenceId, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -181,7 +181,7 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
      */
     @Deprecated 
     public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
     /**
@@ -190,7 +190,7 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
      */
     @Deprecated 
     public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
     /**
@@ -199,7 +199,7 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
     /**
@@ -208,7 +208,7 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
      */
     @Deprecated 
     public void Validate(ServiceEndpoint endpoint) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
 
@@ -217,9 +217,13 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
     
     public boolean getAsynchronousSendEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsynchronousSendEnabled = null;
         try {
-            return (boolean)classInstance.Get("AsynchronousSendEnabled");
+            retObjectAsynchronousSendEnabled = classInstance.Get("AsynchronousSendEnabled");
+            return (boolean)retObjectAsynchronousSendEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsynchronousSendEnabled != null ? retObjectAsynchronousSendEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +231,7 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
 
     public void setAsynchronousSendEnabled(boolean AsynchronousSendEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsynchronousSendEnabled", AsynchronousSendEnabled);
         } catch (JCNativeException jcne) {
@@ -237,9 +241,19 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
 
     public int getMaxPendingReceives() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPendingReceives = null;
         try {
-            return (int)classInstance.Get("MaxPendingReceives");
+            retObjectMaxPendingReceives = classInstance.Get("MaxPendingReceives");
+            return (int)retObjectMaxPendingReceives;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPendingReceivesNumber = (java.lang.Number)retObjectMaxPendingReceives;
+                return retObjectMaxPendingReceivesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPendingReceives != null ? retObjectMaxPendingReceives.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +261,7 @@ public class DispatcherSynchronizationBehavior extends NetObject implements syst
 
     public void setMaxPendingReceives(int MaxPendingReceives) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPendingReceives", MaxPendingReceives);
         } catch (JCNativeException jcne) {

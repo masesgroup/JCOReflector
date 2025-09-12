@@ -160,9 +160,13 @@ public class Rfc3161TimestampToken extends NetObject  {
     
     public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifySignatureForSignerInfo = null;
         try {
-            return (boolean)classInstance.Invoke("VerifySignatureForSignerInfo", signerInfo == null ? null : signerInfo.getJCOInstance(), signerCertificate.getJCRefOut(), extraCandidates == null ? null : extraCandidates.getJCOInstance());
+            retObjectVerifySignatureForSignerInfo = classInstance.Invoke("VerifySignatureForSignerInfo", signerInfo == null ? null : signerInfo.getJCOInstance(), signerCertificate.getJCRefOut(), extraCandidates == null ? null : extraCandidates.getJCOInstance());
+            return (boolean)retObjectVerifySignatureForSignerInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifySignatureForSignerInfo != null ? retObjectVerifySignatureForSignerInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class Rfc3161TimestampToken extends NetObject  {
 
     public SignedCms AsSignedCms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsSignedCms = null;
         try {
-            JCObject objAsSignedCms = (JCObject)classInstance.Invoke("AsSignedCms");
+            retObjectAsSignedCms = classInstance.Invoke("AsSignedCms");
+            JCObject objAsSignedCms = (JCObject)retObjectAsSignedCms;
             return new SignedCms(objAsSignedCms);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsSignedCms != null ? retObjectAsSignedCms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class Rfc3161TimestampToken extends NetObject  {
     
     public Rfc3161TimestampTokenInfo getTokenInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenInfo");
+            retObjectTokenInfo = classInstance.Get("TokenInfo");
+            JCObject val = (JCObject)retObjectTokenInfo;
             return new Rfc3161TimestampTokenInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenInfo != null ? retObjectTokenInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +208,7 @@ public class Rfc3161TimestampToken extends NetObject  {
 
     public void setTokenInfo(Rfc3161TimestampTokenInfo TokenInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenInfo", TokenInfo == null ? null : TokenInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

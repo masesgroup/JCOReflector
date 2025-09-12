@@ -161,10 +161,14 @@ public class PageAdapter extends ControlAdapter  {
     
     public ICollection GetRadioButtonsByGroup(java.lang.String groupName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRadioButtonsByGroup = null;
         try {
-            JCObject objGetRadioButtonsByGroup = (JCObject)classInstance.Invoke("GetRadioButtonsByGroup", groupName);
+            retObjectGetRadioButtonsByGroup = classInstance.Invoke("GetRadioButtonsByGroup", groupName);
+            JCObject objGetRadioButtonsByGroup = (JCObject)retObjectGetRadioButtonsByGroup;
             return new ICollectionImplementation(objGetRadioButtonsByGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRadioButtonsByGroup != null ? retObjectGetRadioButtonsByGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class PageAdapter extends ControlAdapter  {
 
     public NameValueCollection DeterminePostBackMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeterminePostBackMode = null;
         try {
-            JCObject objDeterminePostBackMode = (JCObject)classInstance.Invoke("DeterminePostBackMode");
+            retObjectDeterminePostBackMode = classInstance.Invoke("DeterminePostBackMode");
+            JCObject objDeterminePostBackMode = (JCObject)retObjectDeterminePostBackMode;
             return new NameValueCollection(objDeterminePostBackMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeterminePostBackMode != null ? retObjectDeterminePostBackMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class PageAdapter extends ControlAdapter  {
 
     public NameValueCollection DeterminePostBackModeUnvalidated() throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.web.HttpException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeterminePostBackModeUnvalidated = null;
         try {
-            JCObject objDeterminePostBackModeUnvalidated = (JCObject)classInstance.Invoke("DeterminePostBackModeUnvalidated");
+            retObjectDeterminePostBackModeUnvalidated = classInstance.Invoke("DeterminePostBackModeUnvalidated");
+            JCObject objDeterminePostBackModeUnvalidated = (JCObject)retObjectDeterminePostBackModeUnvalidated;
             return new NameValueCollection(objDeterminePostBackModeUnvalidated);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeterminePostBackModeUnvalidated != null ? retObjectDeterminePostBackModeUnvalidated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class PageAdapter extends ControlAdapter  {
 
     public java.lang.String TransformText(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("TransformText", text);
+            retObjectTransformText = classInstance.Invoke("TransformText", text);
+            return (java.lang.String)retObjectTransformText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectTransformText != null ? retObjectTransformText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class PageAdapter extends ControlAdapter  {
 
     public PageStatePersister GetStatePersister() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStatePersister = null;
         try {
-            JCObject objGetStatePersister = (JCObject)classInstance.Invoke("GetStatePersister");
+            retObjectGetStatePersister = classInstance.Invoke("GetStatePersister");
+            JCObject objGetStatePersister = (JCObject)retObjectGetStatePersister;
             return new PageStatePersister(objGetStatePersister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStatePersister != null ? retObjectGetStatePersister.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +235,7 @@ public class PageAdapter extends ControlAdapter  {
 
     public void RegisterRadioButton(RadioButton radioButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterRadioButton", radioButton == null ? null : radioButton.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +245,7 @@ public class PageAdapter extends ControlAdapter  {
 
     public void RenderBeginHyperlink(HtmlTextWriter writer, java.lang.String targetUrl, boolean encodeUrl, java.lang.String softkeyLabel) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginHyperlink", writer == null ? null : writer.getJCOInstance(), targetUrl, encodeUrl, softkeyLabel);
         } catch (JCNativeException jcne) {
@@ -235,7 +255,7 @@ public class PageAdapter extends ControlAdapter  {
 
     public void RenderBeginHyperlink(HtmlTextWriter writer, java.lang.String targetUrl, boolean encodeUrl, java.lang.String softkeyLabel, java.lang.String accessKey) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.web.HttpException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginHyperlink", writer == null ? null : writer.getJCOInstance(), targetUrl, encodeUrl, softkeyLabel, accessKey);
         } catch (JCNativeException jcne) {
@@ -245,7 +265,7 @@ public class PageAdapter extends ControlAdapter  {
 
     public void RenderEndHyperlink(HtmlTextWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderEndHyperlink", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +275,7 @@ public class PageAdapter extends ControlAdapter  {
 
     public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.web.HttpRequestValidationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderPostBackEvent", writer == null ? null : writer.getJCOInstance(), target, argument, softkeyLabel, text);
         } catch (JCNativeException jcne) {
@@ -265,7 +285,7 @@ public class PageAdapter extends ControlAdapter  {
 
     public void RenderPostBackEvent(HtmlTextWriter writer, java.lang.String target, java.lang.String argument, java.lang.String softkeyLabel, java.lang.String text, java.lang.String postUrl, java.lang.String accessKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.threading.ThreadAbortException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderPostBackEvent", writer == null ? null : writer.getJCOInstance(), target, argument, softkeyLabel, text, postUrl, accessKey);
         } catch (JCNativeException jcne) {
@@ -279,10 +299,14 @@ public class PageAdapter extends ControlAdapter  {
     
     public StringCollection getCacheVaryByHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheVaryByHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheVaryByHeaders");
+            retObjectCacheVaryByHeaders = classInstance.Get("CacheVaryByHeaders");
+            JCObject val = (JCObject)retObjectCacheVaryByHeaders;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheVaryByHeaders != null ? retObjectCacheVaryByHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +314,14 @@ public class PageAdapter extends ControlAdapter  {
 
     public StringCollection getCacheVaryByParams() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheVaryByParams = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheVaryByParams");
+            retObjectCacheVaryByParams = classInstance.Get("CacheVaryByParams");
+            JCObject val = (JCObject)retObjectCacheVaryByParams;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheVaryByParams != null ? retObjectCacheVaryByParams.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -180,9 +180,13 @@ public class TypeFilterProviderAttribute extends Attribute  {
     
     public java.lang.String getTypeFilterProviderTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeFilterProviderTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeFilterProviderTypeName");
+            retObjectTypeFilterProviderTypeName = classInstance.Get("TypeFilterProviderTypeName");
+            return (java.lang.String)retObjectTypeFilterProviderTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeFilterProviderTypeName != null ? retObjectTypeFilterProviderTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

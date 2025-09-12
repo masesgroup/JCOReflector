@@ -169,9 +169,19 @@ public class CompositeDesignerAccessibleObject extends ActivityDesignerAccessibl
     
     public int GetChildCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildCount = null;
         try {
-            return (int)classInstance.Invoke("GetChildCount");
+            retObjectGetChildCount = classInstance.Invoke("GetChildCount");
+            return (int)retObjectGetChildCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetChildCountNumber = (java.lang.Number)retObjectGetChildCount;
+                return retObjectGetChildCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetChildCount != null ? retObjectGetChildCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +189,14 @@ public class CompositeDesignerAccessibleObject extends ActivityDesignerAccessibl
 
     public AccessibleObject GetChild(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChild = null;
         try {
-            JCObject objGetChild = (JCObject)classInstance.Invoke("GetChild", index);
+            retObjectGetChild = classInstance.Invoke("GetChild", index);
+            JCObject objGetChild = (JCObject)retObjectGetChild;
             return new AccessibleObject(objGetChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChild != null ? retObjectGetChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

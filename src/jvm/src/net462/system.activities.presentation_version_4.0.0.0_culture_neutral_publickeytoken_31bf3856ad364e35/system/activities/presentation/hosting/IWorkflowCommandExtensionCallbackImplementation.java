@@ -143,7 +143,7 @@ public class IWorkflowCommandExtensionCallbackImplementation extends NetObject i
     
     public void OnWorkflowCommandLoaded(CommandInfo commandInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnWorkflowCommandLoaded", commandInfo == null ? null : commandInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -142,7 +142,7 @@ public class IMessageCtrlImplementation extends NetObject implements IMessageCtr
     
     public void Cancel(int msToCancel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel", msToCancel);
         } catch (JCNativeException jcne) {

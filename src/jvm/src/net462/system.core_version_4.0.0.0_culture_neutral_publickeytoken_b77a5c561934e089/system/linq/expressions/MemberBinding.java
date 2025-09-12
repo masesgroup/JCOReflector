@@ -159,10 +159,14 @@ public class MemberBinding extends NetObject  {
     
     public MemberBindingType getBindingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingType");
+            retObjectBindingType = classInstance.Get("BindingType");
+            JCObject val = (JCObject)retObjectBindingType;
             return new MemberBindingType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingType != null ? retObjectBindingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class MemberBinding extends NetObject  {
 
     public MemberInfo getMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMember = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Member");
+            retObjectMember = classInstance.Get("Member");
+            JCObject val = (JCObject)retObjectMember;
             return new MemberInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMember != null ? retObjectMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

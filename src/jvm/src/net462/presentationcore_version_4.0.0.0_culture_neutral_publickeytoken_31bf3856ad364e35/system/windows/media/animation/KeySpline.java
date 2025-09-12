@@ -187,9 +187,19 @@ public class KeySpline extends Freezable implements system.IFormattable {
     
     public double GetSplineProgress(double linearProgress) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSplineProgress = null;
         try {
-            return (double)classInstance.Invoke("GetSplineProgress", linearProgress);
+            retObjectGetSplineProgress = classInstance.Invoke("GetSplineProgress", linearProgress);
+            return (double)retObjectGetSplineProgress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSplineProgressNumber = (java.lang.Number)retObjectGetSplineProgress;
+                return retObjectGetSplineProgressNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetSplineProgress != null ? retObjectGetSplineProgress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +207,13 @@ public class KeySpline extends Freezable implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", formatProvider == null ? null : formatProvider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +225,7 @@ public class KeySpline extends Freezable implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -220,10 +234,14 @@ public class KeySpline extends Freezable implements system.IFormattable {
     
     public Point getControlPoint1() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlPoint1 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlPoint1");
+            retObjectControlPoint1 = classInstance.Get("ControlPoint1");
+            JCObject val = (JCObject)retObjectControlPoint1;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlPoint1 != null ? retObjectControlPoint1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +249,7 @@ public class KeySpline extends Freezable implements system.IFormattable {
 
     public void setControlPoint1(Point ControlPoint1) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlPoint1", ControlPoint1 == null ? null : ControlPoint1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +259,14 @@ public class KeySpline extends Freezable implements system.IFormattable {
 
     public Point getControlPoint2() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlPoint2 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlPoint2");
+            retObjectControlPoint2 = classInstance.Get("ControlPoint2");
+            JCObject val = (JCObject)retObjectControlPoint2;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlPoint2 != null ? retObjectControlPoint2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +274,7 @@ public class KeySpline extends Freezable implements system.IFormattable {
 
     public void setControlPoint2(Point ControlPoint2) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlPoint2", ControlPoint2 == null ? null : ControlPoint2.getJCOInstance());
         } catch (JCNativeException jcne) {

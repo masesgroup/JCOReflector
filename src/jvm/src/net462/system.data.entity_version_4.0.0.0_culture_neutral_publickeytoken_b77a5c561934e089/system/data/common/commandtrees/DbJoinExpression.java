@@ -158,7 +158,7 @@ public class DbJoinExpression extends DbExpression  {
     
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,10 +172,14 @@ public class DbJoinExpression extends DbExpression  {
     
     public DbExpression getJoinCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJoinCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("JoinCondition");
+            retObjectJoinCondition = classInstance.Get("JoinCondition");
+            JCObject val = (JCObject)retObjectJoinCondition;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoinCondition != null ? retObjectJoinCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DbJoinExpression extends DbExpression  {
 
     public DbExpressionBinding getLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            JCObject val = (JCObject)retObjectLeft;
             return new DbExpressionBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class DbJoinExpression extends DbExpression  {
 
     public DbExpressionBinding getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            JCObject val = (JCObject)retObjectRight;
             return new DbExpressionBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

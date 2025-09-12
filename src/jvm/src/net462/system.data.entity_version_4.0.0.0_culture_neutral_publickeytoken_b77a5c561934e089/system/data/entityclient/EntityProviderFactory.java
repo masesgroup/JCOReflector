@@ -166,10 +166,14 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
     
     public DbCommand CreateCommand() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommand = null;
         try {
-            JCObject objCreateCommand = (JCObject)classInstance.Invoke("CreateCommand");
+            retObjectCreateCommand = classInstance.Invoke("CreateCommand");
+            JCObject objCreateCommand = (JCObject)retObjectCreateCommand;
             return new DbCommand(objCreateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommand != null ? retObjectCreateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
 
     public DbCommandBuilder CreateCommandBuilder() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommandBuilder = null;
         try {
-            JCObject objCreateCommandBuilder = (JCObject)classInstance.Invoke("CreateCommandBuilder");
+            retObjectCreateCommandBuilder = classInstance.Invoke("CreateCommandBuilder");
+            JCObject objCreateCommandBuilder = (JCObject)retObjectCreateCommandBuilder;
             return new DbCommandBuilder(objCreateCommandBuilder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommandBuilder != null ? retObjectCreateCommandBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
 
     public DbConnection CreateConnection() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.data.ProviderIncompatibleException, system.data.EntityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConnection = null;
         try {
-            JCObject objCreateConnection = (JCObject)classInstance.Invoke("CreateConnection");
+            retObjectCreateConnection = classInstance.Invoke("CreateConnection");
+            JCObject objCreateConnection = (JCObject)retObjectCreateConnection;
             return new DbConnection(objCreateConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConnection != null ? retObjectCreateConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
 
     public DbConnectionStringBuilder CreateConnectionStringBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConnectionStringBuilder = null;
         try {
-            JCObject objCreateConnectionStringBuilder = (JCObject)classInstance.Invoke("CreateConnectionStringBuilder");
+            retObjectCreateConnectionStringBuilder = classInstance.Invoke("CreateConnectionStringBuilder");
+            JCObject objCreateConnectionStringBuilder = (JCObject)retObjectCreateConnectionStringBuilder;
             return new DbConnectionStringBuilder(objCreateConnectionStringBuilder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConnectionStringBuilder != null ? retObjectCreateConnectionStringBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
 
     public DbDataAdapter CreateDataAdapter() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDataAdapter = null;
         try {
-            JCObject objCreateDataAdapter = (JCObject)classInstance.Invoke("CreateDataAdapter");
+            retObjectCreateDataAdapter = classInstance.Invoke("CreateDataAdapter");
+            JCObject objCreateDataAdapter = (JCObject)retObjectCreateDataAdapter;
             return new DbDataAdapter(objCreateDataAdapter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDataAdapter != null ? retObjectCreateDataAdapter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
 
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateParameter = null;
         try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            retObjectCreateParameter = classInstance.Invoke("CreateParameter");
+            JCObject objCreateParameter = (JCObject)retObjectCreateParameter;
             return new DbParameter(objCreateParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateParameter != null ? retObjectCreateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +256,14 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
 
     public CodeAccessPermission CreatePermission(PermissionState state) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission", state == null ? null : state.getJCOInstance());
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission", state == null ? null : state.getJCOInstance());
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new CodeAccessPermission(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +275,7 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 

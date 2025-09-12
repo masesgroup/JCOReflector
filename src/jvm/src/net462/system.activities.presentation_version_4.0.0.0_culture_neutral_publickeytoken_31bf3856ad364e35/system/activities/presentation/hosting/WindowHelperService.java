@@ -157,9 +157,13 @@ public class WindowHelperService extends NetObject  {
     
     public boolean TrySetWindowOwner(DependencyObject source, Window target) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetWindowOwner = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetWindowOwner", source == null ? null : source.getJCOInstance(), target == null ? null : target.getJCOInstance());
+            retObjectTrySetWindowOwner = classInstance.Invoke("TrySetWindowOwner", source == null ? null : source.getJCOInstance(), target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectTrySetWindowOwner;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetWindowOwner != null ? retObjectTrySetWindowOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

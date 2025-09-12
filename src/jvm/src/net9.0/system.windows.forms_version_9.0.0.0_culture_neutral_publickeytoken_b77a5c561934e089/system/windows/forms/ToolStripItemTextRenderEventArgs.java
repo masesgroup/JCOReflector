@@ -188,10 +188,14 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
     
     public Color getTextColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextColor");
+            retObjectTextColor = classInstance.Get("TextColor");
+            JCObject val = (JCObject)retObjectTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextColor != null ? retObjectTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public void setTextColor(Color TextColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextColor", TextColor == null ? null : TextColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public Font getTextFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextFont");
+            retObjectTextFont = classInstance.Get("TextFont");
+            JCObject val = (JCObject)retObjectTextFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextFont != null ? retObjectTextFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public void setTextFont(Font TextFont) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextFont", TextFont == null ? null : TextFont.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,10 +238,14 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public Rectangle getTextRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextRectangle");
+            retObjectTextRectangle = classInstance.Get("TextRectangle");
+            JCObject val = (JCObject)retObjectTextRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextRectangle != null ? retObjectTextRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public void setTextRectangle(Rectangle TextRectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextRectangle", TextRectangle == null ? null : TextRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,9 +263,13 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +277,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -271,10 +287,14 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public TextFormatFlags getTextFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextFormat");
+            retObjectTextFormat = classInstance.Get("TextFormat");
+            JCObject val = (JCObject)retObjectTextFormat;
             return new TextFormatFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextFormat != null ? retObjectTextFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +302,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public void setTextFormat(TextFormatFlags TextFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextFormat", TextFormat == null ? null : TextFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,10 +312,14 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public ToolStripTextDirection getTextDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDirection");
+            retObjectTextDirection = classInstance.Get("TextDirection");
+            JCObject val = (JCObject)retObjectTextDirection;
             return new ToolStripTextDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextDirection != null ? retObjectTextDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +327,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     public void setTextDirection(ToolStripTextDirection TextDirection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextDirection", TextDirection == null ? null : TextDirection.getJCOInstance());
         } catch (JCNativeException jcne) {

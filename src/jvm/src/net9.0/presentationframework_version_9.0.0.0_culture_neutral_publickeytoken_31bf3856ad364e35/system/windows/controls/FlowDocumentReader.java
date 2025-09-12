@@ -168,9 +168,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
     
     public boolean CanGoToPage(int pageNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoToPage = null;
         try {
-            return (boolean)classInstance.Invoke("CanGoToPage", pageNumber);
+            retObjectCanGoToPage = classInstance.Invoke("CanGoToPage", pageNumber);
+            return (boolean)retObjectCanGoToPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanGoToPage != null ? retObjectCanGoToPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void CancelPrint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelPrint");
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void DecreaseZoom() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DecreaseZoom");
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void Find() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.SecurityException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.ApplicationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Find");
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void IncreaseZoom() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IncreaseZoom");
         } catch (JCNativeException jcne) {
@@ -218,7 +222,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.ApplicationException, system.net.WebException, system.xml.XmlException, system.UriFormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -228,7 +232,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void Print() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Print");
         } catch (JCNativeException jcne) {
@@ -238,7 +242,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void SwitchViewingMode(FlowDocumentReaderViewingMode viewingMode) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SwitchViewingMode", viewingMode == null ? null : viewingMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,7 +256,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -261,7 +265,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -270,9 +274,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
     
     public boolean getCanDecreaseZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanDecreaseZoom = null;
         try {
-            return (boolean)classInstance.Get("CanDecreaseZoom");
+            retObjectCanDecreaseZoom = classInstance.Get("CanDecreaseZoom");
+            return (boolean)retObjectCanDecreaseZoom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanDecreaseZoom != null ? retObjectCanDecreaseZoom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +288,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getCanGoToNextPage() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoToNextPage = null;
         try {
-            return (boolean)classInstance.Get("CanGoToNextPage");
+            retObjectCanGoToNextPage = classInstance.Get("CanGoToNextPage");
+            return (boolean)retObjectCanGoToNextPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoToNextPage != null ? retObjectCanGoToNextPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +302,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getCanGoToPreviousPage() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoToPreviousPage = null;
         try {
-            return (boolean)classInstance.Get("CanGoToPreviousPage");
+            retObjectCanGoToPreviousPage = classInstance.Get("CanGoToPreviousPage");
+            return (boolean)retObjectCanGoToPreviousPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoToPreviousPage != null ? retObjectCanGoToPreviousPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +316,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getCanIncreaseZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanIncreaseZoom = null;
         try {
-            return (boolean)classInstance.Get("CanIncreaseZoom");
+            retObjectCanIncreaseZoom = classInstance.Get("CanIncreaseZoom");
+            return (boolean)retObjectCanIncreaseZoom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanIncreaseZoom != null ? retObjectCanIncreaseZoom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +330,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getIsFindEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFindEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsFindEnabled");
+            retObjectIsFindEnabled = classInstance.Get("IsFindEnabled");
+            return (boolean)retObjectIsFindEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFindEnabled != null ? retObjectIsFindEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +344,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setIsFindEnabled(boolean IsFindEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFindEnabled", IsFindEnabled);
         } catch (JCNativeException jcne) {
@@ -330,9 +354,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getIsInactiveSelectionHighlightEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInactiveSelectionHighlightEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsInactiveSelectionHighlightEnabled");
+            retObjectIsInactiveSelectionHighlightEnabled = classInstance.Get("IsInactiveSelectionHighlightEnabled");
+            return (boolean)retObjectIsInactiveSelectionHighlightEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInactiveSelectionHighlightEnabled != null ? retObjectIsInactiveSelectionHighlightEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +368,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setIsInactiveSelectionHighlightEnabled(boolean IsInactiveSelectionHighlightEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInactiveSelectionHighlightEnabled", IsInactiveSelectionHighlightEnabled);
         } catch (JCNativeException jcne) {
@@ -350,9 +378,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getIsPageViewEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPageViewEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsPageViewEnabled");
+            retObjectIsPageViewEnabled = classInstance.Get("IsPageViewEnabled");
+            return (boolean)retObjectIsPageViewEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPageViewEnabled != null ? retObjectIsPageViewEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +392,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setIsPageViewEnabled(boolean IsPageViewEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPageViewEnabled", IsPageViewEnabled);
         } catch (JCNativeException jcne) {
@@ -370,9 +402,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getIsPrintEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrintEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsPrintEnabled");
+            retObjectIsPrintEnabled = classInstance.Get("IsPrintEnabled");
+            return (boolean)retObjectIsPrintEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrintEnabled != null ? retObjectIsPrintEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +416,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setIsPrintEnabled(boolean IsPrintEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPrintEnabled", IsPrintEnabled);
         } catch (JCNativeException jcne) {
@@ -390,9 +426,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getIsScrollViewEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsScrollViewEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsScrollViewEnabled");
+            retObjectIsScrollViewEnabled = classInstance.Get("IsScrollViewEnabled");
+            return (boolean)retObjectIsScrollViewEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsScrollViewEnabled != null ? retObjectIsScrollViewEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +440,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setIsScrollViewEnabled(boolean IsScrollViewEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsScrollViewEnabled", IsScrollViewEnabled);
         } catch (JCNativeException jcne) {
@@ -410,9 +450,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getIsSelectionActive() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectionActive = null;
         try {
-            return (boolean)classInstance.Get("IsSelectionActive");
+            retObjectIsSelectionActive = classInstance.Get("IsSelectionActive");
+            return (boolean)retObjectIsSelectionActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionActive != null ? retObjectIsSelectionActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,9 +464,13 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public boolean getIsTwoPageViewEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTwoPageViewEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsTwoPageViewEnabled");
+            retObjectIsTwoPageViewEnabled = classInstance.Get("IsTwoPageViewEnabled");
+            return (boolean)retObjectIsTwoPageViewEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTwoPageViewEnabled != null ? retObjectIsTwoPageViewEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,7 +478,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setIsTwoPageViewEnabled(boolean IsTwoPageViewEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTwoPageViewEnabled", IsTwoPageViewEnabled);
         } catch (JCNativeException jcne) {
@@ -440,9 +488,19 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public double getMaxZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxZoom = null;
         try {
-            return (double)classInstance.Get("MaxZoom");
+            retObjectMaxZoom = classInstance.Get("MaxZoom");
+            return (double)retObjectMaxZoom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxZoomNumber = (java.lang.Number)retObjectMaxZoom;
+                return retObjectMaxZoomNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxZoom != null ? retObjectMaxZoom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,7 +508,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setMaxZoom(double MaxZoom) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxZoom", MaxZoom);
         } catch (JCNativeException jcne) {
@@ -460,9 +518,19 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public double getMinZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinZoom = null;
         try {
-            return (double)classInstance.Get("MinZoom");
+            retObjectMinZoom = classInstance.Get("MinZoom");
+            return (double)retObjectMinZoom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinZoomNumber = (java.lang.Number)retObjectMinZoom;
+                return retObjectMinZoomNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinZoom != null ? retObjectMinZoom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,7 +538,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setMinZoom(double MinZoom) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinZoom", MinZoom);
         } catch (JCNativeException jcne) {
@@ -480,9 +548,19 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public double getSelectionOpacity() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionOpacity = null;
         try {
-            return (double)classInstance.Get("SelectionOpacity");
+            retObjectSelectionOpacity = classInstance.Get("SelectionOpacity");
+            return (double)retObjectSelectionOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSelectionOpacityNumber = (java.lang.Number)retObjectSelectionOpacity;
+                return retObjectSelectionOpacityNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectSelectionOpacity != null ? retObjectSelectionOpacity.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +568,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setSelectionOpacity(double SelectionOpacity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionOpacity", SelectionOpacity);
         } catch (JCNativeException jcne) {
@@ -500,9 +578,19 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public double getZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoom = null;
         try {
-            return (double)classInstance.Get("Zoom");
+            retObjectZoom = classInstance.Get("Zoom");
+            return (double)retObjectZoom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectZoomNumber = (java.lang.Number)retObjectZoom;
+                return retObjectZoomNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZoom != null ? retObjectZoom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,7 +598,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setZoom(double Zoom) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Zoom", Zoom);
         } catch (JCNativeException jcne) {
@@ -520,9 +608,19 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public double getZoomIncrement() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoomIncrement = null;
         try {
-            return (double)classInstance.Get("ZoomIncrement");
+            retObjectZoomIncrement = classInstance.Get("ZoomIncrement");
+            return (double)retObjectZoomIncrement;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectZoomIncrementNumber = (java.lang.Number)retObjectZoomIncrement;
+                return retObjectZoomIncrementNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectZoomIncrement != null ? retObjectZoomIncrement.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,7 +628,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setZoomIncrement(double ZoomIncrement) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ZoomIncrement", ZoomIncrement);
         } catch (JCNativeException jcne) {
@@ -540,9 +638,19 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public int getPageCount() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageCount = null;
         try {
-            return (int)classInstance.Get("PageCount");
+            retObjectPageCount = classInstance.Get("PageCount");
+            return (int)retObjectPageCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageCountNumber = (java.lang.Number)retObjectPageCount;
+                return retObjectPageCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,9 +658,19 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public int getPageNumber() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageNumber = null;
         try {
-            return (int)classInstance.Get("PageNumber");
+            retObjectPageNumber = classInstance.Get("PageNumber");
+            return (int)retObjectPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageNumberNumber = (java.lang.Number)retObjectPageNumber;
+                return retObjectPageNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +678,14 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public FlowDocumentReaderViewingMode getViewingMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewingMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewingMode");
+            retObjectViewingMode = classInstance.Get("ViewingMode");
+            JCObject val = (JCObject)retObjectViewingMode;
             return new FlowDocumentReaderViewingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewingMode != null ? retObjectViewingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,7 +693,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setViewingMode(FlowDocumentReaderViewingMode ViewingMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewingMode", ViewingMode == null ? null : ViewingMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -581,10 +703,14 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public FlowDocument getDocument() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new FlowDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,7 +718,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setDocument(FlowDocument Document) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Document", Document == null ? null : Document.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -602,10 +728,14 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public TextSelection getSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Selection");
+            retObjectSelection = classInstance.Get("Selection");
+            JCObject val = (JCObject)retObjectSelection;
             return new TextSelection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelection != null ? retObjectSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,10 +743,14 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public Brush getSelectionBrush() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionBrush");
+            retObjectSelectionBrush = classInstance.Get("SelectionBrush");
+            JCObject val = (JCObject)retObjectSelectionBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionBrush != null ? retObjectSelectionBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,7 +758,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
 
     public void setSelectionBrush(Brush SelectionBrush) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionBrush", SelectionBrush == null ? null : SelectionBrush.getJCOInstance());
         } catch (JCNativeException jcne) {

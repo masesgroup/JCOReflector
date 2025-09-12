@@ -187,10 +187,14 @@ public class ConnectionOptions extends ManagementOptions  {
     
     public NetObject Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +206,13 @@ public class ConnectionOptions extends ManagementOptions  {
     
     public boolean getEnablePrivileges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePrivileges = null;
         try {
-            return (boolean)classInstance.Get("EnablePrivileges");
+            retObjectEnablePrivileges = classInstance.Get("EnablePrivileges");
+            return (boolean)retObjectEnablePrivileges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePrivileges != null ? retObjectEnablePrivileges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setEnablePrivileges(boolean EnablePrivileges) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePrivileges", EnablePrivileges);
         } catch (JCNativeException jcne) {
@@ -222,10 +230,14 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public AuthenticationLevel getAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Authentication");
+            retObjectAuthentication = classInstance.Get("Authentication");
+            JCObject val = (JCObject)retObjectAuthentication;
             return new AuthenticationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthentication != null ? retObjectAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setAuthentication(AuthenticationLevel Authentication) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Authentication", Authentication == null ? null : Authentication.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +255,14 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public ImpersonationLevel getImpersonation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Impersonation");
+            retObjectImpersonation = classInstance.Get("Impersonation");
+            JCObject val = (JCObject)retObjectImpersonation;
             return new ImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonation != null ? retObjectImpersonation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +270,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setImpersonation(ImpersonationLevel Impersonation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Impersonation", Impersonation == null ? null : Impersonation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,7 +280,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setSecurePassword(SecureString SecurePassword) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurePassword", SecurePassword == null ? null : SecurePassword.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,9 +290,13 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public java.lang.String getAuthority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthority = null;
         try {
-            return (java.lang.String)classInstance.Get("Authority");
+            retObjectAuthority = classInstance.Get("Authority");
+            return (java.lang.String)retObjectAuthority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthority != null ? retObjectAuthority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +304,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setAuthority(java.lang.String Authority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Authority", Authority);
         } catch (JCNativeException jcne) {
@@ -294,9 +314,13 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public java.lang.String getLocale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocale = null;
         try {
-            return (java.lang.String)classInstance.Get("Locale");
+            retObjectLocale = classInstance.Get("Locale");
+            return (java.lang.String)retObjectLocale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocale != null ? retObjectLocale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +328,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setLocale(java.lang.String Locale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Locale", Locale);
         } catch (JCNativeException jcne) {
@@ -314,7 +338,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setPassword(java.lang.String Password) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Password", Password);
         } catch (JCNativeException jcne) {
@@ -324,9 +348,13 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public java.lang.String getUsername() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsername = null;
         try {
-            return (java.lang.String)classInstance.Get("Username");
+            retObjectUsername = classInstance.Get("Username");
+            return (java.lang.String)retObjectUsername;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUsername != null ? retObjectUsername.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +362,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     public void setUsername(java.lang.String Username) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Username", Username);
         } catch (JCNativeException jcne) {

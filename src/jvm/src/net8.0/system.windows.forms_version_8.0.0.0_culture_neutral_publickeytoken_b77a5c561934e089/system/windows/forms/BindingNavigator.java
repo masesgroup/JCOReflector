@@ -197,9 +197,13 @@ public class BindingNavigator extends ToolStrip  {
     
     public boolean Validate() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Invoke("Validate");
+            retObjectValidate = classInstance.Invoke("Validate");
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +211,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void AddStandardItems() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddStandardItems");
         } catch (JCNativeException jcne) {
@@ -217,7 +221,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -227,7 +231,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void EndInit() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -241,9 +245,13 @@ public class BindingNavigator extends ToolStrip  {
     
     public java.lang.String getCountItemFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCountItemFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("CountItemFormat");
+            retObjectCountItemFormat = classInstance.Get("CountItemFormat");
+            return (java.lang.String)retObjectCountItemFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCountItemFormat != null ? retObjectCountItemFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +259,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setCountItemFormat(java.lang.String CountItemFormat) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CountItemFormat", CountItemFormat);
         } catch (JCNativeException jcne) {
@@ -261,10 +269,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public BindingSource getBindingSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingSource");
+            retObjectBindingSource = classInstance.Get("BindingSource");
+            JCObject val = (JCObject)retObjectBindingSource;
             return new BindingSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingSource != null ? retObjectBindingSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +284,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setBindingSource(BindingSource BindingSource) throws Throwable, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingSource", BindingSource == null ? null : BindingSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,10 +294,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getAddNewItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddNewItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddNewItem");
+            retObjectAddNewItem = classInstance.Get("AddNewItem");
+            JCObject val = (JCObject)retObjectAddNewItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNewItem != null ? retObjectAddNewItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +309,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setAddNewItem(ToolStripItem AddNewItem) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddNewItem", AddNewItem == null ? null : AddNewItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,10 +319,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getCountItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCountItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CountItem");
+            retObjectCountItem = classInstance.Get("CountItem");
+            JCObject val = (JCObject)retObjectCountItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCountItem != null ? retObjectCountItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +334,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setCountItem(ToolStripItem CountItem) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CountItem", CountItem == null ? null : CountItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,10 +344,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getDeleteItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteItem");
+            retObjectDeleteItem = classInstance.Get("DeleteItem");
+            JCObject val = (JCObject)retObjectDeleteItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteItem != null ? retObjectDeleteItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +359,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setDeleteItem(ToolStripItem DeleteItem) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteItem", DeleteItem == null ? null : DeleteItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -345,10 +369,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getMoveFirstItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveFirstItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MoveFirstItem");
+            retObjectMoveFirstItem = classInstance.Get("MoveFirstItem");
+            JCObject val = (JCObject)retObjectMoveFirstItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveFirstItem != null ? retObjectMoveFirstItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +384,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setMoveFirstItem(ToolStripItem MoveFirstItem) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MoveFirstItem", MoveFirstItem == null ? null : MoveFirstItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -366,10 +394,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getMoveLastItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveLastItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MoveLastItem");
+            retObjectMoveLastItem = classInstance.Get("MoveLastItem");
+            JCObject val = (JCObject)retObjectMoveLastItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveLastItem != null ? retObjectMoveLastItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +409,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setMoveLastItem(ToolStripItem MoveLastItem) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MoveLastItem", MoveLastItem == null ? null : MoveLastItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -387,10 +419,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getMoveNextItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveNextItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MoveNextItem");
+            retObjectMoveNextItem = classInstance.Get("MoveNextItem");
+            JCObject val = (JCObject)retObjectMoveNextItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMoveNextItem != null ? retObjectMoveNextItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +434,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setMoveNextItem(ToolStripItem MoveNextItem) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MoveNextItem", MoveNextItem == null ? null : MoveNextItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -408,10 +444,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getMovePreviousItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMovePreviousItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MovePreviousItem");
+            retObjectMovePreviousItem = classInstance.Get("MovePreviousItem");
+            JCObject val = (JCObject)retObjectMovePreviousItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMovePreviousItem != null ? retObjectMovePreviousItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +459,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setMovePreviousItem(ToolStripItem MovePreviousItem) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MovePreviousItem", MovePreviousItem == null ? null : MovePreviousItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -429,10 +469,14 @@ public class BindingNavigator extends ToolStrip  {
 
     public ToolStripItem getPositionItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositionItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PositionItem");
+            retObjectPositionItem = classInstance.Get("PositionItem");
+            JCObject val = (JCObject)retObjectPositionItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPositionItem != null ? retObjectPositionItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +484,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void setPositionItem(ToolStripItem PositionItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PositionItem", PositionItem == null ? null : PositionItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -455,7 +499,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void addRefreshItems(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RefreshItems", handler);
         } catch (JCNativeException jcne) {
@@ -465,7 +509,7 @@ public class BindingNavigator extends ToolStrip  {
 
     public void removeRefreshItems(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RefreshItems", handler);
         } catch (JCNativeException jcne) {

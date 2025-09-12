@@ -198,10 +198,14 @@ public class CodeCatchClause extends NetObject  {
     
     public CodeStatementCollection getStatements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Statements");
+            retObjectStatements = classInstance.Get("Statements");
+            JCObject val = (JCObject)retObjectStatements;
             return new CodeStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatements != null ? retObjectStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +213,14 @@ public class CodeCatchClause extends NetObject  {
 
     public CodeTypeReference getCatchExceptionType() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatchExceptionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CatchExceptionType");
+            retObjectCatchExceptionType = classInstance.Get("CatchExceptionType");
+            JCObject val = (JCObject)retObjectCatchExceptionType;
             return new CodeTypeReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatchExceptionType != null ? retObjectCatchExceptionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class CodeCatchClause extends NetObject  {
 
     public void setCatchExceptionType(CodeTypeReference CatchExceptionType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CatchExceptionType", CatchExceptionType == null ? null : CatchExceptionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,9 +238,13 @@ public class CodeCatchClause extends NetObject  {
 
     public java.lang.String getLocalName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalName = null;
         try {
-            return (java.lang.String)classInstance.Get("LocalName");
+            retObjectLocalName = classInstance.Get("LocalName");
+            return (java.lang.String)retObjectLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalName != null ? retObjectLocalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +252,7 @@ public class CodeCatchClause extends NetObject  {
 
     public void setLocalName(java.lang.String LocalName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalName", LocalName);
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class CngAlgorithmGroup extends NetObject  {
     
     public boolean Equals(CngAlgorithmGroup other) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class CngAlgorithmGroup extends NetObject  {
     
     public static CngAlgorithmGroup getDiffieHellman() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffieHellman = null;
         try {
-            JCObject val = (JCObject)classType.Get("DiffieHellman");
+            retObjectDiffieHellman = classType.Get("DiffieHellman");
+            JCObject val = (JCObject)retObjectDiffieHellman;
             return new CngAlgorithmGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffieHellman != null ? retObjectDiffieHellman.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class CngAlgorithmGroup extends NetObject  {
 
     public static CngAlgorithmGroup getDsa() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDsa = null;
         try {
-            JCObject val = (JCObject)classType.Get("Dsa");
+            retObjectDsa = classType.Get("Dsa");
+            JCObject val = (JCObject)retObjectDsa;
             return new CngAlgorithmGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDsa != null ? retObjectDsa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class CngAlgorithmGroup extends NetObject  {
 
     public static CngAlgorithmGroup getECDiffieHellman() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectECDiffieHellman = null;
         try {
-            JCObject val = (JCObject)classType.Get("ECDiffieHellman");
+            retObjectECDiffieHellman = classType.Get("ECDiffieHellman");
+            JCObject val = (JCObject)retObjectECDiffieHellman;
             return new CngAlgorithmGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectECDiffieHellman != null ? retObjectECDiffieHellman.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class CngAlgorithmGroup extends NetObject  {
 
     public static CngAlgorithmGroup getECDsa() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectECDsa = null;
         try {
-            JCObject val = (JCObject)classType.Get("ECDsa");
+            retObjectECDsa = classType.Get("ECDsa");
+            JCObject val = (JCObject)retObjectECDsa;
             return new CngAlgorithmGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectECDsa != null ? retObjectECDsa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class CngAlgorithmGroup extends NetObject  {
 
     public static CngAlgorithmGroup getRsa() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRsa = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rsa");
+            retObjectRsa = classType.Get("Rsa");
+            JCObject val = (JCObject)retObjectRsa;
             return new CngAlgorithmGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRsa != null ? retObjectRsa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +259,13 @@ public class CngAlgorithmGroup extends NetObject  {
 
     public java.lang.String getAlgorithmGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithmGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("AlgorithmGroup");
+            retObjectAlgorithmGroup = classInstance.Get("AlgorithmGroup");
+            return (java.lang.String)retObjectAlgorithmGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlgorithmGroup != null ? retObjectAlgorithmGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

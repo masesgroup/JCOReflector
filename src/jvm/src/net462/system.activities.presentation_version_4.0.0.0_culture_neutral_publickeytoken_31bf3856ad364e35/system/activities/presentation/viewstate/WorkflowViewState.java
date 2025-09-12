@@ -154,10 +154,14 @@ public class WorkflowViewState extends NetObject  {
     
     public static ViewStateManager GetViewStateManager(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetViewStateManager = null;
         try {
-            JCObject objGetViewStateManager = (JCObject)classType.Invoke("GetViewStateManager", instance == null ? null : instance.getJCOInstance());
+            retObjectGetViewStateManager = classType.Invoke("GetViewStateManager", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetViewStateManager = (JCObject)retObjectGetViewStateManager;
             return new ViewStateManager(objGetViewStateManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewStateManager != null ? retObjectGetViewStateManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class WorkflowViewState extends NetObject  {
 
     public static java.lang.String GetIdRef(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIdRef = null;
         try {
-            return (java.lang.String)classType.Invoke("GetIdRef", instance == null ? null : instance.getJCOInstance());
+            retObjectGetIdRef = classType.Invoke("GetIdRef", instance == null ? null : instance.getJCOInstance());
+            return (java.lang.String)retObjectGetIdRef;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetIdRef != null ? retObjectGetIdRef.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +183,7 @@ public class WorkflowViewState extends NetObject  {
 
     public static void SetIdRef(NetObject instance, java.lang.String idRef) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIdRef", instance == null ? null : instance.getJCOInstance(), idRef);
         } catch (JCNativeException jcne) {
@@ -185,7 +193,7 @@ public class WorkflowViewState extends NetObject  {
 
     public static void SetViewStateManager(NetObject instance, ViewStateManager viewStateManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetViewStateManager", instance == null ? null : instance.getJCOInstance(), viewStateManager == null ? null : viewStateManager.getJCOInstance());
         } catch (JCNativeException jcne) {

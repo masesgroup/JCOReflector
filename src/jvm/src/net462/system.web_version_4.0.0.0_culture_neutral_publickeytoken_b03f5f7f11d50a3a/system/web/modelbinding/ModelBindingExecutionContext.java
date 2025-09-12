@@ -171,10 +171,14 @@ public class ModelBindingExecutionContext extends NetObject  {
     
     public HttpContextBase getHttpContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpContext");
+            retObjectHttpContext = classInstance.Get("HttpContext");
+            JCObject val = (JCObject)retObjectHttpContext;
             return new HttpContextBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpContext != null ? retObjectHttpContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ModelBindingExecutionContext extends NetObject  {
 
     public ModelStateDictionary getModelState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelState");
+            retObjectModelState = classInstance.Get("ModelState");
+            JCObject val = (JCObject)retObjectModelState;
             return new ModelStateDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelState != null ? retObjectModelState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

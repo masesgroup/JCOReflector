@@ -171,9 +171,19 @@ public class ObjectAce extends QualifiedAce  {
     
     public static int MaxOpaqueLength(boolean isCallback) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxOpaqueLength = null;
         try {
-            return (int)classType.Invoke("MaxOpaqueLength", isCallback);
+            retObjectMaxOpaqueLength = classType.Invoke("MaxOpaqueLength", isCallback);
+            return (int)retObjectMaxOpaqueLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxOpaqueLengthNumber = (java.lang.Number)retObjectMaxOpaqueLength;
+                return retObjectMaxOpaqueLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxOpaqueLength != null ? retObjectMaxOpaqueLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +191,7 @@ public class ObjectAce extends QualifiedAce  {
 
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", binaryForm, offset);
         } catch (JCNativeException jcne) {
@@ -191,7 +201,7 @@ public class ObjectAce extends QualifiedAce  {
 
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.SystemException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -205,10 +215,14 @@ public class ObjectAce extends QualifiedAce  {
     
     public Guid getInheritedObjectAceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritedObjectAceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritedObjectAceType");
+            retObjectInheritedObjectAceType = classInstance.Get("InheritedObjectAceType");
+            JCObject val = (JCObject)retObjectInheritedObjectAceType;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritedObjectAceType != null ? retObjectInheritedObjectAceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +230,7 @@ public class ObjectAce extends QualifiedAce  {
 
     public void setInheritedObjectAceType(Guid InheritedObjectAceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InheritedObjectAceType", InheritedObjectAceType == null ? null : InheritedObjectAceType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +240,14 @@ public class ObjectAce extends QualifiedAce  {
 
     public Guid getObjectAceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectAceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectAceType");
+            retObjectObjectAceType = classInstance.Get("ObjectAceType");
+            JCObject val = (JCObject)retObjectObjectAceType;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectAceType != null ? retObjectObjectAceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +255,7 @@ public class ObjectAce extends QualifiedAce  {
 
     public void setObjectAceType(Guid ObjectAceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectAceType", ObjectAceType == null ? null : ObjectAceType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,10 +265,14 @@ public class ObjectAce extends QualifiedAce  {
 
     public ObjectAceFlags getObjectAceFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectAceFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectAceFlags");
+            retObjectObjectAceFlags = classInstance.Get("ObjectAceFlags");
+            JCObject val = (JCObject)retObjectObjectAceFlags;
             return new ObjectAceFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectAceFlags != null ? retObjectObjectAceFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +280,7 @@ public class ObjectAce extends QualifiedAce  {
 
     public void setObjectAceFlags(ObjectAceFlags ObjectAceFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectAceFlags", ObjectAceFlags == null ? null : ObjectAceFlags.getJCOInstance());
         } catch (JCNativeException jcne) {

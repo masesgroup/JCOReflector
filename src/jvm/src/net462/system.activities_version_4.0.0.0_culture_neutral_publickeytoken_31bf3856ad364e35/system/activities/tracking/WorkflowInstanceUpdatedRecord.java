@@ -182,9 +182,13 @@ public class WorkflowInstanceUpdatedRecord extends WorkflowInstanceRecord  {
     
     public boolean getIsSuccessful() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSuccessful = null;
         try {
-            return (boolean)classInstance.Get("IsSuccessful");
+            retObjectIsSuccessful = classInstance.Get("IsSuccessful");
+            return (boolean)retObjectIsSuccessful;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSuccessful != null ? retObjectIsSuccessful.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class WorkflowInstanceUpdatedRecord extends WorkflowInstanceRecord  {
 
     public WorkflowIdentity getOriginalDefinitionIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalDefinitionIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalDefinitionIdentity");
+            retObjectOriginalDefinitionIdentity = classInstance.Get("OriginalDefinitionIdentity");
+            JCObject val = (JCObject)retObjectOriginalDefinitionIdentity;
             return new WorkflowIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalDefinitionIdentity != null ? retObjectOriginalDefinitionIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class WorkflowInstanceUpdatedRecord extends WorkflowInstanceRecord  {
 
     public void setOriginalDefinitionIdentity(WorkflowIdentity OriginalDefinitionIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalDefinitionIdentity", OriginalDefinitionIdentity == null ? null : OriginalDefinitionIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {

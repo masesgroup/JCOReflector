@@ -182,7 +182,7 @@ public class HtmlInputReset extends HtmlInputButton  {
 
     public void addServerClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ServerClick", handler);
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class HtmlInputReset extends HtmlInputButton  {
 
     public void removeServerClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ServerClick", handler);
         } catch (JCNativeException jcne) {

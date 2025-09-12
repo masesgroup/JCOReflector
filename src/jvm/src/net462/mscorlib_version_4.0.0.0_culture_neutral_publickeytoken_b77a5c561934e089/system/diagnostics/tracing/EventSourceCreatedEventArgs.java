@@ -167,10 +167,14 @@ public class EventSourceCreatedEventArgs extends EventArgs  {
     
     public EventSource getEventSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventSource");
+            retObjectEventSource = classInstance.Get("EventSource");
+            JCObject val = (JCObject)retObjectEventSource;
             return new EventSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventSource != null ? retObjectEventSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class EventSourceCreatedEventArgs extends EventArgs  {
 
     public void setEventSource(EventSource EventSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventSource", EventSource == null ? null : EventSource.getJCOInstance());
         } catch (JCNativeException jcne) {

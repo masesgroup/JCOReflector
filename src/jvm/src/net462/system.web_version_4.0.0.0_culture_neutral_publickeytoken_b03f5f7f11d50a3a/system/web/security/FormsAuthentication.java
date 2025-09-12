@@ -168,9 +168,13 @@ public class FormsAuthentication extends NetObject  {
     
     public static boolean Authenticate(java.lang.String name, java.lang.String password) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.NullReferenceException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAuthenticate = null;
         try {
-            return (boolean)classType.Invoke("Authenticate", name, password);
+            retObjectAuthenticate = classType.Invoke("Authenticate", name, password);
+            return (boolean)retObjectAuthenticate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAuthenticate != null ? retObjectAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String Encrypt(FormsAuthenticationTicket ticket) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.OverflowException, system.threading.ThreadAbortException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MissingMethodException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            return (java.lang.String)classType.Invoke("Encrypt", ticket == null ? null : ticket.getJCOInstance());
+            retObjectEncrypt = classType.Invoke("Encrypt", ticket == null ? null : ticket.getJCOInstance());
+            return (java.lang.String)retObjectEncrypt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String GetRedirectUrl(java.lang.String userName, boolean createPersistentCookie) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.NullReferenceException, system.FormatException, system.OverflowException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRedirectUrl = null;
         try {
-            return (java.lang.String)classType.Invoke("GetRedirectUrl", userName, createPersistentCookie);
+            retObjectGetRedirectUrl = classType.Invoke("GetRedirectUrl", userName, createPersistentCookie);
+            return (java.lang.String)retObjectGetRedirectUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRedirectUrl != null ? retObjectGetRedirectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String HashPasswordForStoringInConfigFile(java.lang.String password, java.lang.String passwordFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashPasswordForStoringInConfigFile = null;
         try {
-            return (java.lang.String)classType.Invoke("HashPasswordForStoringInConfigFile", password, passwordFormat);
+            retObjectHashPasswordForStoringInConfigFile = classType.Invoke("HashPasswordForStoringInConfigFile", password, passwordFormat);
+            return (java.lang.String)retObjectHashPasswordForStoringInConfigFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHashPasswordForStoringInConfigFile != null ? retObjectHashPasswordForStoringInConfigFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static HttpCookie GetAuthCookie(java.lang.String userName, boolean createPersistentCookie) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.threading.ThreadAbortException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAuthCookie = null;
         try {
-            JCObject objGetAuthCookie = (JCObject)classType.Invoke("GetAuthCookie", userName, createPersistentCookie);
+            retObjectGetAuthCookie = classType.Invoke("GetAuthCookie", userName, createPersistentCookie);
+            JCObject objGetAuthCookie = (JCObject)retObjectGetAuthCookie;
             return new HttpCookie(objGetAuthCookie);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAuthCookie != null ? retObjectGetAuthCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static HttpCookie GetAuthCookie(java.lang.String userName, boolean createPersistentCookie, java.lang.String strCookiePath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.OverflowException, system.threading.ThreadAbortException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAuthCookie = null;
         try {
-            JCObject objGetAuthCookie = (JCObject)classType.Invoke("GetAuthCookie", userName, createPersistentCookie, strCookiePath);
+            retObjectGetAuthCookie = classType.Invoke("GetAuthCookie", userName, createPersistentCookie, strCookiePath);
+            JCObject objGetAuthCookie = (JCObject)retObjectGetAuthCookie;
             return new HttpCookie(objGetAuthCookie);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAuthCookie != null ? retObjectGetAuthCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +254,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static FormsAuthenticationTicket Decrypt(java.lang.String encryptedTicket) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.InvalidCastException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.io.EndOfStreamException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
-            JCObject objDecrypt = (JCObject)classType.Invoke("Decrypt", encryptedTicket);
+            retObjectDecrypt = classType.Invoke("Decrypt", encryptedTicket);
+            JCObject objDecrypt = (JCObject)retObjectDecrypt;
             return new FormsAuthenticationTicket(objDecrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +269,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static FormsAuthenticationTicket RenewTicketIfOld(FormsAuthenticationTicket tOld) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenewTicketIfOld = null;
         try {
-            JCObject objRenewTicketIfOld = (JCObject)classType.Invoke("RenewTicketIfOld", tOld == null ? null : tOld.getJCOInstance());
+            retObjectRenewTicketIfOld = classType.Invoke("RenewTicketIfOld", tOld == null ? null : tOld.getJCOInstance());
+            JCObject objRenewTicketIfOld = (JCObject)retObjectRenewTicketIfOld;
             return new FormsAuthenticationTicket(objRenewTicketIfOld);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenewTicketIfOld != null ? retObjectRenewTicketIfOld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +284,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void EnableFormsAuthentication(NameValueCollection configurationData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EnableFormsAuthentication", configurationData == null ? null : configurationData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,7 +294,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void Initialize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -272,7 +304,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void RedirectFromLoginPage(java.lang.String userName, boolean createPersistentCookie) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.UriFormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.web.HttpRequestValidationException, system.NotSupportedException, system.ApplicationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RedirectFromLoginPage", userName, createPersistentCookie);
         } catch (JCNativeException jcne) {
@@ -282,7 +314,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void RedirectFromLoginPage(java.lang.String userName, boolean createPersistentCookie, java.lang.String strCookiePath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.FormatException, system.OverflowException, system.UriFormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ApplicationException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RedirectFromLoginPage", userName, createPersistentCookie, strCookiePath);
         } catch (JCNativeException jcne) {
@@ -292,7 +324,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void RedirectToLoginPage() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpRequestValidationException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.ApplicationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RedirectToLoginPage");
         } catch (JCNativeException jcne) {
@@ -302,7 +334,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void RedirectToLoginPage(java.lang.String extraQueryString) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException, system.ApplicationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RedirectToLoginPage", extraQueryString);
         } catch (JCNativeException jcne) {
@@ -312,7 +344,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void SetAuthCookie(java.lang.String userName, boolean createPersistentCookie) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.ApplicationException, system.OverflowException, system.threading.ThreadAbortException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAuthCookie", userName, createPersistentCookie);
         } catch (JCNativeException jcne) {
@@ -322,7 +354,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void SetAuthCookie(java.lang.String userName, boolean createPersistentCookie, java.lang.String strCookiePath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAuthCookie", userName, createPersistentCookie, strCookiePath);
         } catch (JCNativeException jcne) {
@@ -332,7 +364,7 @@ public class FormsAuthentication extends NetObject  {
 
     public static void SignOut() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ApplicationException, system.OverflowException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SignOut");
         } catch (JCNativeException jcne) {
@@ -346,9 +378,13 @@ public class FormsAuthentication extends NetObject  {
     
     public static boolean getCookiesSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException, system.FormatException, system.ApplicationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCookiesSupported = null;
         try {
-            return (boolean)classType.Get("CookiesSupported");
+            retObjectCookiesSupported = classType.Get("CookiesSupported");
+            return (boolean)retObjectCookiesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCookiesSupported != null ? retObjectCookiesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +392,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static boolean getEnableCrossAppRedirects() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnableCrossAppRedirects = null;
         try {
-            return (boolean)classType.Get("EnableCrossAppRedirects");
+            retObjectEnableCrossAppRedirects = classType.Get("EnableCrossAppRedirects");
+            return (boolean)retObjectEnableCrossAppRedirects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableCrossAppRedirects != null ? retObjectEnableCrossAppRedirects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +406,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static boolean getIsEnabled() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classType.Get("IsEnabled");
+            retObjectIsEnabled = classType.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +420,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static boolean getRequireSSL() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRequireSSL = null;
         try {
-            return (boolean)classType.Get("RequireSSL");
+            retObjectRequireSSL = classType.Get("RequireSSL");
+            return (boolean)retObjectRequireSSL;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireSSL != null ? retObjectRequireSSL.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +434,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static boolean getSlidingExpiration() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSlidingExpiration = null;
         try {
-            return (boolean)classType.Get("SlidingExpiration");
+            retObjectSlidingExpiration = classType.Get("SlidingExpiration");
+            return (boolean)retObjectSlidingExpiration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSlidingExpiration != null ? retObjectSlidingExpiration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,9 +448,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String getCookieDomain() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCookieDomain = null;
         try {
-            return (java.lang.String)classType.Get("CookieDomain");
+            retObjectCookieDomain = classType.Get("CookieDomain");
+            return (java.lang.String)retObjectCookieDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCookieDomain != null ? retObjectCookieDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,9 +462,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String getDefaultUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultUrl = null;
         try {
-            return (java.lang.String)classType.Get("DefaultUrl");
+            retObjectDefaultUrl = classType.Get("DefaultUrl");
+            return (java.lang.String)retObjectDefaultUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultUrl != null ? retObjectDefaultUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,9 +476,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String getFormsCookieName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFormsCookieName = null;
         try {
-            return (java.lang.String)classType.Get("FormsCookieName");
+            retObjectFormsCookieName = classType.Get("FormsCookieName");
+            return (java.lang.String)retObjectFormsCookieName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormsCookieName != null ? retObjectFormsCookieName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,9 +490,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String getFormsCookiePath() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFormsCookiePath = null;
         try {
-            return (java.lang.String)classType.Get("FormsCookiePath");
+            retObjectFormsCookiePath = classType.Get("FormsCookiePath");
+            return (java.lang.String)retObjectFormsCookiePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormsCookiePath != null ? retObjectFormsCookiePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,9 +504,13 @@ public class FormsAuthentication extends NetObject  {
 
     public static java.lang.String getLoginUrl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoginUrl = null;
         try {
-            return (java.lang.String)classType.Get("LoginUrl");
+            retObjectLoginUrl = classType.Get("LoginUrl");
+            return (java.lang.String)retObjectLoginUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLoginUrl != null ? retObjectLoginUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +518,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static TimeSpan getTimeout() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            JCObject val = (JCObject)classType.Get("Timeout");
+            retObjectTimeout = classType.Get("Timeout");
+            JCObject val = (JCObject)retObjectTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,10 +533,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static TicketCompatibilityMode getTicketCompatibilityMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTicketCompatibilityMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("TicketCompatibilityMode");
+            retObjectTicketCompatibilityMode = classType.Get("TicketCompatibilityMode");
+            JCObject val = (JCObject)retObjectTicketCompatibilityMode;
             return new TicketCompatibilityMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTicketCompatibilityMode != null ? retObjectTicketCompatibilityMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,10 +548,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static HttpCookieMode getCookieMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCookieMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("CookieMode");
+            retObjectCookieMode = classType.Get("CookieMode");
+            JCObject val = (JCObject)retObjectCookieMode;
             return new HttpCookieMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCookieMode != null ? retObjectCookieMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +563,14 @@ public class FormsAuthentication extends NetObject  {
 
     public static SameSiteMode getCookieSameSite() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCookieSameSite = null;
         try {
-            JCObject val = (JCObject)classType.Get("CookieSameSite");
+            retObjectCookieSameSite = classType.Get("CookieSameSite");
+            JCObject val = (JCObject)retObjectCookieSameSite;
             return new SameSiteMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCookieSameSite != null ? retObjectCookieSameSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

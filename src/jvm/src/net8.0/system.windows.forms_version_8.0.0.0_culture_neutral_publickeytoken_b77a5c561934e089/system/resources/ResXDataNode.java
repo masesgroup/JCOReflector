@@ -184,10 +184,14 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
     
     public Point GetNodePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNodePosition = null;
         try {
-            JCObject objGetNodePosition = (JCObject)classInstance.Invoke("GetNodePosition");
+            retObjectGetNodePosition = classInstance.Invoke("GetNodePosition");
+            JCObject objGetNodePosition = (JCObject)retObjectGetNodePosition;
             return new Point(objGetNodePosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNodePosition != null ? retObjectGetNodePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +199,14 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public NetObject GetValue(ITypeResolutionService typeResolver) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.TypeLoadException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.FormatException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", typeResolver == null ? null : typeResolver.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", typeResolver == null ? null : typeResolver.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +214,14 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public NetObject GetValue(AssemblyName[] names) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.TypeLoadException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)toObjectFromArray(names));
+            retObjectGetValue = classInstance.Invoke("GetValue", (java.lang.Object)toObjectFromArray(names));
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +229,13 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public java.lang.String GetValueTypeName(ITypeResolutionService typeResolver) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetValueTypeName", typeResolver == null ? null : typeResolver.getJCOInstance());
+            retObjectGetValueTypeName = classInstance.Invoke("GetValueTypeName", typeResolver == null ? null : typeResolver.getJCOInstance());
+            return (java.lang.String)retObjectGetValueTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetValueTypeName != null ? retObjectGetValueTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +243,13 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public java.lang.String GetValueTypeName(AssemblyName[] names) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.TypeLoadException, system.FormatException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.RankException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetValueTypeName", (java.lang.Object)toObjectFromArray(names));
+            retObjectGetValueTypeName = classInstance.Invoke("GetValueTypeName", (java.lang.Object)toObjectFromArray(names));
+            return (java.lang.String)retObjectGetValueTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetValueTypeName != null ? retObjectGetValueTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +261,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -250,10 +270,14 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
     
     public ResXFileRef getFileRef() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileRef = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileRef");
+            retObjectFileRef = classInstance.Get("FileRef");
+            JCObject val = (JCObject)retObjectFileRef;
             return new ResXFileRef(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileRef != null ? retObjectFileRef.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +285,13 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public java.lang.String getComment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComment = null;
         try {
-            return (java.lang.String)classInstance.Get("Comment");
+            retObjectComment = classInstance.Get("Comment");
+            return (java.lang.String)retObjectComment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComment != null ? retObjectComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +299,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public void setComment(java.lang.String Comment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Comment", Comment);
         } catch (JCNativeException jcne) {
@@ -281,9 +309,13 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +323,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
 
     public void setName(java.lang.String Name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

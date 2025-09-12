@@ -159,10 +159,12 @@ public class X509SignatureGenerator extends NetObject  {
     
     public byte[] GetSignatureAlgorithmIdentifier(HashAlgorithmName hashAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSignatureAlgorithmIdentifier = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSignatureAlgorithmIdentifier", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectGetSignatureAlgorithmIdentifier = classInstance.Invoke("GetSignatureAlgorithmIdentifier", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetSignatureAlgorithmIdentifier;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -171,6 +173,8 @@ public class X509SignatureGenerator extends NetObject  {
 				resultingArray[indexGetSignatureAlgorithmIdentifier] = (byte)resultingArrayList.get(indexGetSignatureAlgorithmIdentifier);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSignatureAlgorithmIdentifier != null ? retObjectGetSignatureAlgorithmIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,12 @@ public class X509SignatureGenerator extends NetObject  {
 
     public byte[] SignData(byte[] data, HashAlgorithmName hashAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", data, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", data, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -190,6 +196,8 @@ public class X509SignatureGenerator extends NetObject  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,12 @@ public class X509SignatureGenerator extends NetObject  {
 
     public byte[] SignData(JCORefOut dupParam0, HashAlgorithmName dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -209,6 +219,8 @@ public class X509SignatureGenerator extends NetObject  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +228,14 @@ public class X509SignatureGenerator extends NetObject  {
 
     public static X509SignatureGenerator CreateForECDsa(ECDsa key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateForECDsa = null;
         try {
-            JCObject objCreateForECDsa = (JCObject)classType.Invoke("CreateForECDsa", key == null ? null : key.getJCOInstance());
+            retObjectCreateForECDsa = classType.Invoke("CreateForECDsa", key == null ? null : key.getJCOInstance());
+            JCObject objCreateForECDsa = (JCObject)retObjectCreateForECDsa;
             return new X509SignatureGenerator(objCreateForECDsa);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateForECDsa != null ? retObjectCreateForECDsa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +243,14 @@ public class X509SignatureGenerator extends NetObject  {
 
     public static X509SignatureGenerator CreateForRSA(RSA key, RSASignaturePadding signaturePadding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateForRSA = null;
         try {
-            JCObject objCreateForRSA = (JCObject)classType.Invoke("CreateForRSA", key == null ? null : key.getJCOInstance(), signaturePadding == null ? null : signaturePadding.getJCOInstance());
+            retObjectCreateForRSA = classType.Invoke("CreateForRSA", key == null ? null : key.getJCOInstance(), signaturePadding == null ? null : signaturePadding.getJCOInstance());
+            JCObject objCreateForRSA = (JCObject)retObjectCreateForRSA;
             return new X509SignatureGenerator(objCreateForRSA);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateForRSA != null ? retObjectCreateForRSA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +262,14 @@ public class X509SignatureGenerator extends NetObject  {
     
     public PublicKey getPublicKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PublicKey");
+            retObjectPublicKey = classInstance.Get("PublicKey");
+            JCObject val = (JCObject)retObjectPublicKey;
             return new PublicKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPublicKey != null ? retObjectPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

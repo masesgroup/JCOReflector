@@ -153,9 +153,13 @@ public class MimeMapping extends NetObject  {
     
     public static java.lang.String GetMimeMapping(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMimeMapping = null;
         try {
-            return (java.lang.String)classType.Invoke("GetMimeMapping", fileName);
+            retObjectGetMimeMapping = classType.Invoke("GetMimeMapping", fileName);
+            return (java.lang.String)retObjectGetMimeMapping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetMimeMapping != null ? retObjectGetMimeMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

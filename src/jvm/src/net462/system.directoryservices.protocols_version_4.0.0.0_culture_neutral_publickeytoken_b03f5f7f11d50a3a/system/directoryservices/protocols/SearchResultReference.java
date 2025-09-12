@@ -161,16 +161,20 @@ public class SearchResultReference extends NetObject  {
     
     public final DirectoryControl[] getControls() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.OutOfMemoryException, system.directoryservices.protocols.BerConversionException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControls = null;
         try {
             ArrayList<DirectoryControl> resultingArrayList = new ArrayList<DirectoryControl>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Controls");
+            retObjectControls = classInstance.Get("Controls");
+            JCObject resultingObjects = (JCObject)retObjectControls;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryControl(resultingObject));
             }
             DirectoryControl[] resultingArray = new DirectoryControl[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControls != null ? retObjectControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,16 +182,20 @@ public class SearchResultReference extends NetObject  {
 
     public final Uri[] getReference() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.security.SecurityException, system.MemberAccessException, system.InvalidOperationException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReference = null;
         try {
             ArrayList<Uri> resultingArrayList = new ArrayList<Uri>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Reference");
+            retObjectReference = classInstance.Get("Reference");
+            JCObject resultingObjects = (JCObject)retObjectReference;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Uri(resultingObject));
             }
             Uri[] resultingArray = new Uri[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReference != null ? retObjectReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -168,9 +168,13 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     
     public static boolean CanCreateFrom(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ApplicationException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanCreateFrom = null;
         try {
-            return (boolean)classType.Invoke("CanCreateFrom", certificate == null ? null : certificate.getJCOInstance());
+            retObjectCanCreateFrom = classType.Invoke("CanCreateFrom", certificate == null ? null : certificate.getJCOInstance());
+            return (boolean)retObjectCanCreateFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCreateFrom != null ? retObjectCanCreateFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public boolean Matches(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ApplicationException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public static boolean TryCreateFrom(X509Certificate2 certificate, JCORefOut<X509SubjectKeyIdentifierClause> keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ApplicationException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreateFrom = null;
         try {
-            return (boolean)classType.Invoke("TryCreateFrom", certificate == null ? null : certificate.getJCOInstance(), keyIdentifierClause.getJCRefOut());
+            retObjectTryCreateFrom = classType.Invoke("TryCreateFrom", certificate == null ? null : certificate.getJCOInstance(), keyIdentifierClause.getJCRefOut());
+            return (boolean)retObjectTryCreateFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreateFrom != null ? retObjectTryCreateFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,12 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     public byte[] GetX509SubjectKeyIdentifier() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetX509SubjectKeyIdentifier = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetX509SubjectKeyIdentifier");
+            retObjectGetX509SubjectKeyIdentifier = classInstance.Invoke("GetX509SubjectKeyIdentifier");
+            JCObject resultingObjects = (JCObject)retObjectGetX509SubjectKeyIdentifier;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -210,6 +224,8 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 				resultingArray[indexGetX509SubjectKeyIdentifier] = (byte)resultingArrayList.get(indexGetX509SubjectKeyIdentifier);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetX509SubjectKeyIdentifier != null ? retObjectGetX509SubjectKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

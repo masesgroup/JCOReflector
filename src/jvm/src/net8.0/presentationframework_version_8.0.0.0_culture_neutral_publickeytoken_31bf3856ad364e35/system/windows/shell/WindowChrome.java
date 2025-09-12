@@ -170,9 +170,13 @@ public class WindowChrome extends Freezable  {
     
     public static boolean GetIsHitTestVisibleInChrome(IInputElement inputElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsHitTestVisibleInChrome = null;
         try {
-            return (boolean)classType.Invoke("GetIsHitTestVisibleInChrome", inputElement == null ? null : inputElement.getJCOInstance());
+            retObjectGetIsHitTestVisibleInChrome = classType.Invoke("GetIsHitTestVisibleInChrome", inputElement == null ? null : inputElement.getJCOInstance());
+            return (boolean)retObjectGetIsHitTestVisibleInChrome;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsHitTestVisibleInChrome != null ? retObjectGetIsHitTestVisibleInChrome.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class WindowChrome extends Freezable  {
 
     public static ResizeGripDirection GetResizeGripDirection(IInputElement inputElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetResizeGripDirection = null;
         try {
-            JCObject objGetResizeGripDirection = (JCObject)classType.Invoke("GetResizeGripDirection", inputElement == null ? null : inputElement.getJCOInstance());
+            retObjectGetResizeGripDirection = classType.Invoke("GetResizeGripDirection", inputElement == null ? null : inputElement.getJCOInstance());
+            JCObject objGetResizeGripDirection = (JCObject)retObjectGetResizeGripDirection;
             return new ResizeGripDirection(objGetResizeGripDirection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResizeGripDirection != null ? retObjectGetResizeGripDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class WindowChrome extends Freezable  {
 
     public static WindowChrome GetWindowChrome(Window window) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWindowChrome = null;
         try {
-            JCObject objGetWindowChrome = (JCObject)classType.Invoke("GetWindowChrome", window == null ? null : window.getJCOInstance());
+            retObjectGetWindowChrome = classType.Invoke("GetWindowChrome", window == null ? null : window.getJCOInstance());
+            JCObject objGetWindowChrome = (JCObject)retObjectGetWindowChrome;
             return new WindowChrome(objGetWindowChrome);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWindowChrome != null ? retObjectGetWindowChrome.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class WindowChrome extends Freezable  {
 
     public static void SetIsHitTestVisibleInChrome(IInputElement inputElement, boolean hitTestVisible) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsHitTestVisibleInChrome", inputElement == null ? null : inputElement.getJCOInstance(), hitTestVisible);
         } catch (JCNativeException jcne) {
@@ -212,7 +224,7 @@ public class WindowChrome extends Freezable  {
 
     public static void SetResizeGripDirection(IInputElement inputElement, ResizeGripDirection direction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetResizeGripDirection", inputElement == null ? null : inputElement.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +234,7 @@ public class WindowChrome extends Freezable  {
 
     public static void SetWindowChrome(Window window, WindowChrome chrome) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetWindowChrome", window == null ? null : window.getJCOInstance(), chrome == null ? null : chrome.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,9 +248,13 @@ public class WindowChrome extends Freezable  {
     
     public boolean getUseAeroCaptionButtons() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAeroCaptionButtons = null;
         try {
-            return (boolean)classInstance.Get("UseAeroCaptionButtons");
+            retObjectUseAeroCaptionButtons = classInstance.Get("UseAeroCaptionButtons");
+            return (boolean)retObjectUseAeroCaptionButtons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAeroCaptionButtons != null ? retObjectUseAeroCaptionButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class WindowChrome extends Freezable  {
 
     public void setUseAeroCaptionButtons(boolean UseAeroCaptionButtons) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAeroCaptionButtons", UseAeroCaptionButtons);
         } catch (JCNativeException jcne) {
@@ -256,9 +272,19 @@ public class WindowChrome extends Freezable  {
 
     public double getCaptionHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionHeight = null;
         try {
-            return (double)classInstance.Get("CaptionHeight");
+            retObjectCaptionHeight = classInstance.Get("CaptionHeight");
+            return (double)retObjectCaptionHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaptionHeightNumber = (java.lang.Number)retObjectCaptionHeight;
+                return retObjectCaptionHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCaptionHeight != null ? retObjectCaptionHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +292,7 @@ public class WindowChrome extends Freezable  {
 
     public void setCaptionHeight(double CaptionHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionHeight", CaptionHeight);
         } catch (JCNativeException jcne) {
@@ -276,10 +302,14 @@ public class WindowChrome extends Freezable  {
 
     public CornerRadius getCornerRadius() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCornerRadius = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CornerRadius");
+            retObjectCornerRadius = classInstance.Get("CornerRadius");
+            JCObject val = (JCObject)retObjectCornerRadius;
             return new CornerRadius(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCornerRadius != null ? retObjectCornerRadius.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +317,7 @@ public class WindowChrome extends Freezable  {
 
     public void setCornerRadius(CornerRadius CornerRadius) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CornerRadius", CornerRadius == null ? null : CornerRadius.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,10 +327,14 @@ public class WindowChrome extends Freezable  {
 
     public NonClientFrameEdges getNonClientFrameEdges() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNonClientFrameEdges = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NonClientFrameEdges");
+            retObjectNonClientFrameEdges = classInstance.Get("NonClientFrameEdges");
+            JCObject val = (JCObject)retObjectNonClientFrameEdges;
             return new NonClientFrameEdges(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNonClientFrameEdges != null ? retObjectNonClientFrameEdges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +342,7 @@ public class WindowChrome extends Freezable  {
 
     public void setNonClientFrameEdges(NonClientFrameEdges NonClientFrameEdges) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NonClientFrameEdges", NonClientFrameEdges == null ? null : NonClientFrameEdges.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -318,10 +352,14 @@ public class WindowChrome extends Freezable  {
 
     public static Thickness getGlassFrameCompleteThickness() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGlassFrameCompleteThickness = null;
         try {
-            JCObject val = (JCObject)classType.Get("GlassFrameCompleteThickness");
+            retObjectGlassFrameCompleteThickness = classType.Get("GlassFrameCompleteThickness");
+            JCObject val = (JCObject)retObjectGlassFrameCompleteThickness;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlassFrameCompleteThickness != null ? retObjectGlassFrameCompleteThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +367,14 @@ public class WindowChrome extends Freezable  {
 
     public Thickness getGlassFrameThickness() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlassFrameThickness = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlassFrameThickness");
+            retObjectGlassFrameThickness = classInstance.Get("GlassFrameThickness");
+            JCObject val = (JCObject)retObjectGlassFrameThickness;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlassFrameThickness != null ? retObjectGlassFrameThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +382,7 @@ public class WindowChrome extends Freezable  {
 
     public void setGlassFrameThickness(Thickness GlassFrameThickness) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GlassFrameThickness", GlassFrameThickness == null ? null : GlassFrameThickness.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +392,14 @@ public class WindowChrome extends Freezable  {
 
     public Thickness getResizeBorderThickness() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResizeBorderThickness = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResizeBorderThickness");
+            retObjectResizeBorderThickness = classInstance.Get("ResizeBorderThickness");
+            JCObject val = (JCObject)retObjectResizeBorderThickness;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResizeBorderThickness != null ? retObjectResizeBorderThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +407,7 @@ public class WindowChrome extends Freezable  {
 
     public void setResizeBorderThickness(Thickness ResizeBorderThickness) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResizeBorderThickness", ResizeBorderThickness == null ? null : ResizeBorderThickness.getJCOInstance());
         } catch (JCNativeException jcne) {

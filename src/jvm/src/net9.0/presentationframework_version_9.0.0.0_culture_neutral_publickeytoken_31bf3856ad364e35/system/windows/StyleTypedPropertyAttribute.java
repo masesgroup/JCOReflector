@@ -166,9 +166,13 @@ public class StyleTypedPropertyAttribute extends Attribute  {
     
     public java.lang.String getProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("Property");
+            retObjectProperty = classInstance.Get("Property");
+            return (java.lang.String)retObjectProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class StyleTypedPropertyAttribute extends Attribute  {
 
     public void setProperty(java.lang.String Property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Property", Property);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class StyleTypedPropertyAttribute extends Attribute  {
 
     public NetType getStyleTargetType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyleTargetType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StyleTargetType");
+            retObjectStyleTargetType = classInstance.Get("StyleTargetType");
+            JCObject val = (JCObject)retObjectStyleTargetType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyleTargetType != null ? retObjectStyleTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class StyleTypedPropertyAttribute extends Attribute  {
 
     public void setStyleTargetType(NetType StyleTargetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StyleTargetType", StyleTargetType == null ? null : StyleTargetType.getJCOInstance());
         } catch (JCNativeException jcne) {

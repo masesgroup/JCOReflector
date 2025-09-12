@@ -143,7 +143,7 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
     
     public void Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
 
     public void StartListening(SynchronizedInputType inputType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartListening", inputType == null ? null : inputType.getJCOInstance());
         } catch (JCNativeException jcne) {

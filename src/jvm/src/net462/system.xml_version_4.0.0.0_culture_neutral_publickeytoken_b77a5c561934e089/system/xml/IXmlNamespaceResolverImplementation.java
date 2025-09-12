@@ -142,9 +142,13 @@ public class IXmlNamespaceResolverImplementation extends NetObject implements IX
     
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupNamespace", prefix);
+            retObjectLookupNamespace = classInstance.Invoke("LookupNamespace", prefix);
+            return (java.lang.String)retObjectLookupNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupNamespace != null ? retObjectLookupNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,13 @@ public class IXmlNamespaceResolverImplementation extends NetObject implements IX
 
     public java.lang.String LookupPrefix(java.lang.String namespaceName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupPrefix", namespaceName);
+            retObjectLookupPrefix = classInstance.Invoke("LookupPrefix", namespaceName);
+            return (java.lang.String)retObjectLookupPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupPrefix != null ? retObjectLookupPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,10 +171,14 @@ public class ThemeInfoAttribute extends Attribute  {
     
     public ResourceDictionaryLocation getGenericDictionaryLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenericDictionaryLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GenericDictionaryLocation");
+            retObjectGenericDictionaryLocation = classInstance.Get("GenericDictionaryLocation");
+            JCObject val = (JCObject)retObjectGenericDictionaryLocation;
             return new ResourceDictionaryLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericDictionaryLocation != null ? retObjectGenericDictionaryLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ThemeInfoAttribute extends Attribute  {
 
     public ResourceDictionaryLocation getThemeDictionaryLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThemeDictionaryLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThemeDictionaryLocation");
+            retObjectThemeDictionaryLocation = classInstance.Get("ThemeDictionaryLocation");
+            JCObject val = (JCObject)retObjectThemeDictionaryLocation;
             return new ResourceDictionaryLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThemeDictionaryLocation != null ? retObjectThemeDictionaryLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

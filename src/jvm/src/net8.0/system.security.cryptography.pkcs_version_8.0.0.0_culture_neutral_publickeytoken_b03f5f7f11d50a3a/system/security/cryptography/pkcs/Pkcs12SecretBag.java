@@ -157,10 +157,14 @@ public class Pkcs12SecretBag extends Pkcs12SafeBag  {
     
     public Oid GetSecretType() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSecretType = null;
         try {
-            JCObject objGetSecretType = (JCObject)classInstance.Invoke("GetSecretType");
+            retObjectGetSecretType = classInstance.Invoke("GetSecretType");
+            JCObject objGetSecretType = (JCObject)retObjectGetSecretType;
             return new Oid(objGetSecretType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSecretType != null ? retObjectGetSecretType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,10 +167,14 @@ public class SchemaImporterExtensionsSection extends ConfigurationSection  {
     
     public SchemaImporterExtensionElementCollection getSchemaImporterExtensions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaImporterExtensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaImporterExtensions");
+            retObjectSchemaImporterExtensions = classInstance.Get("SchemaImporterExtensions");
+            JCObject val = (JCObject)retObjectSchemaImporterExtensions;
             return new SchemaImporterExtensionElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaImporterExtensions != null ? retObjectSchemaImporterExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -175,10 +175,14 @@ public class QuicException extends IOException {
     
     public QuicError getQuicError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuicError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QuicError");
+            retObjectQuicError = classInstance.Get("QuicError");
+            JCObject val = (JCObject)retObjectQuicError;
             return new QuicError(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuicError != null ? retObjectQuicError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

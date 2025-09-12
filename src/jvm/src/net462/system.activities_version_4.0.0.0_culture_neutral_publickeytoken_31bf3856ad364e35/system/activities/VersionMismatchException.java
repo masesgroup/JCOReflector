@@ -202,7 +202,7 @@ public class VersionMismatchException extends NetException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,10 +216,14 @@ public class VersionMismatchException extends NetException {
     
     public WorkflowIdentity getActualVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActualVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActualVersion");
+            retObjectActualVersion = classInstance.Get("ActualVersion");
+            JCObject val = (JCObject)retObjectActualVersion;
             return new WorkflowIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActualVersion != null ? retObjectActualVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +231,7 @@ public class VersionMismatchException extends NetException {
 
     public void setActualVersion(WorkflowIdentity ActualVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActualVersion", ActualVersion == null ? null : ActualVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,10 +241,14 @@ public class VersionMismatchException extends NetException {
 
     public WorkflowIdentity getExpectedVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpectedVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpectedVersion");
+            retObjectExpectedVersion = classInstance.Get("ExpectedVersion");
+            JCObject val = (JCObject)retObjectExpectedVersion;
             return new WorkflowIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpectedVersion != null ? retObjectExpectedVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +256,7 @@ public class VersionMismatchException extends NetException {
 
     public void setExpectedVersion(WorkflowIdentity ExpectedVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpectedVersion", ExpectedVersion == null ? null : ExpectedVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

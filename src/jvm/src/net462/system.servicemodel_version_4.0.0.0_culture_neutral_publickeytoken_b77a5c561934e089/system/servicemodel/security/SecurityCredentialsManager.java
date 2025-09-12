@@ -154,10 +154,14 @@ public class SecurityCredentialsManager extends NetObject  {
     
     public SecurityTokenManager CreateSecurityTokenManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSecurityTokenManager = null;
         try {
-            JCObject objCreateSecurityTokenManager = (JCObject)classInstance.Invoke("CreateSecurityTokenManager");
+            retObjectCreateSecurityTokenManager = classInstance.Invoke("CreateSecurityTokenManager");
+            JCObject objCreateSecurityTokenManager = (JCObject)retObjectCreateSecurityTokenManager;
             return new SecurityTokenManager(objCreateSecurityTokenManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecurityTokenManager != null ? retObjectCreateSecurityTokenManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

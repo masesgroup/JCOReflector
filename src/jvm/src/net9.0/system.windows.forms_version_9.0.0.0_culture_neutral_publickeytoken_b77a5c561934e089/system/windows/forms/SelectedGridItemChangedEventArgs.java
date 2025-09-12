@@ -171,10 +171,14 @@ public class SelectedGridItemChangedEventArgs extends EventArgs  {
     
     public GridItem getNewSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewSelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewSelection");
+            retObjectNewSelection = classInstance.Get("NewSelection");
+            JCObject val = (JCObject)retObjectNewSelection;
             return new GridItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewSelection != null ? retObjectNewSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class SelectedGridItemChangedEventArgs extends EventArgs  {
 
     public GridItem getOldSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldSelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldSelection");
+            retObjectOldSelection = classInstance.Get("OldSelection");
+            JCObject val = (JCObject)retObjectOldSelection;
             return new GridItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldSelection != null ? retObjectOldSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

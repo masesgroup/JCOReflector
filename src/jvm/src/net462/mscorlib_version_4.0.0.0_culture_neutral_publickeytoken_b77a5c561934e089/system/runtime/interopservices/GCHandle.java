@@ -158,10 +158,14 @@ public class GCHandle extends ValueType  {
     
     public static GCHandle Alloc(NetObject value) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlloc = null;
         try {
-            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance());
+            retObjectAlloc = classType.Invoke("Alloc", value == null ? null : value.getJCOInstance());
+            JCObject objAlloc = (JCObject)retObjectAlloc;
             return new GCHandle(objAlloc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlloc != null ? retObjectAlloc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class GCHandle extends ValueType  {
 
     public static GCHandle Alloc(NetObject value, GCHandleType type) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlloc = null;
         try {
-            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectAlloc = classType.Invoke("Alloc", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objAlloc = (JCObject)retObjectAlloc;
             return new GCHandle(objAlloc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlloc != null ? retObjectAlloc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class GCHandle extends ValueType  {
 
     public void Free() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Free");
         } catch (JCNativeException jcne) {
@@ -194,9 +202,13 @@ public class GCHandle extends ValueType  {
     
     public boolean getIsAllocated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAllocated = null;
         try {
-            return (boolean)classInstance.Get("IsAllocated");
+            retObjectIsAllocated = classInstance.Get("IsAllocated");
+            return (boolean)retObjectIsAllocated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAllocated != null ? retObjectIsAllocated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class GCHandle extends ValueType  {
 
     public NetObject getTarget() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +231,7 @@ public class GCHandle extends ValueType  {
 
     public void setTarget(NetObject Target) throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -170,10 +170,14 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,19 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
     
     public int getKeySpec() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySpec = null;
         try {
-            return (int)classInstance.Get("KeySpec");
+            retObjectKeySpec = classInstance.Get("KeySpec");
+            return (int)retObjectKeySpec;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeySpecNumber = (java.lang.Number)retObjectKeySpec;
+                return retObjectKeySpecNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeySpec != null ? retObjectKeySpec.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +209,7 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public void setKeySpec(int KeySpec) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeySpec", KeySpec);
         } catch (JCNativeException jcne) {
@@ -205,9 +219,19 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public int getProviderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderType = null;
         try {
-            return (int)classInstance.Get("ProviderType");
+            retObjectProviderType = classInstance.Get("ProviderType");
+            return (int)retObjectProviderType;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProviderTypeNumber = (java.lang.Number)retObjectProviderType;
+                return retObjectProviderTypeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProviderType != null ? retObjectProviderType.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +239,7 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public void setProviderType(int ProviderType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProviderType", ProviderType);
         } catch (JCNativeException jcne) {
@@ -225,10 +249,14 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public KeyContainerPermissionFlags getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new KeyContainerPermissionFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +264,7 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public void setFlags(KeyContainerPermissionFlags Flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,9 +274,13 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public java.lang.String getKeyContainerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainerName");
+            retObjectKeyContainerName = classInstance.Get("KeyContainerName");
+            return (java.lang.String)retObjectKeyContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainerName != null ? retObjectKeyContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +288,7 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public void setKeyContainerName(java.lang.String KeyContainerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyContainerName", KeyContainerName);
         } catch (JCNativeException jcne) {
@@ -266,9 +298,13 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public java.lang.String getKeyStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyStore = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyStore");
+            retObjectKeyStore = classInstance.Get("KeyStore");
+            return (java.lang.String)retObjectKeyStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyStore != null ? retObjectKeyStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +312,7 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public void setKeyStore(java.lang.String KeyStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyStore", KeyStore);
         } catch (JCNativeException jcne) {
@@ -286,9 +322,13 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
+            retObjectProviderName = classInstance.Get("ProviderName");
+            return (java.lang.String)retObjectProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProviderName != null ? retObjectProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +336,7 @@ public class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
 
     public void setProviderName(java.lang.String ProviderName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProviderName", ProviderName);
         } catch (JCNativeException jcne) {

@@ -160,9 +160,19 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
     
     public long getBytesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesReceived = null;
         try {
-            return (long)classInstance.Get("BytesReceived");
+            retObjectBytesReceived = classInstance.Get("BytesReceived");
+            return (long)retObjectBytesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesReceivedNumber = (java.lang.Number)retObjectBytesReceived;
+                return retObjectBytesReceivedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesReceived != null ? retObjectBytesReceived.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +180,19 @@ public class DownloadProgressChangedEventArgs extends ProgressChangedEventArgs  
 
     public long getTotalBytesToReceive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalBytesToReceive = null;
         try {
-            return (long)classInstance.Get("TotalBytesToReceive");
+            retObjectTotalBytesToReceive = classInstance.Get("TotalBytesToReceive");
+            return (long)retObjectTotalBytesToReceive;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTotalBytesToReceiveNumber = (java.lang.Number)retObjectTotalBytesToReceive;
+                return retObjectTotalBytesToReceiveNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalBytesToReceive != null ? retObjectTotalBytesToReceive.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

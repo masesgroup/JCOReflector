@@ -171,10 +171,14 @@ public class PartCreationPolicyAttribute extends Attribute  {
     
     public CreationPolicy getCreationPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationPolicy");
+            retObjectCreationPolicy = classInstance.Get("CreationPolicy");
+            JCObject val = (JCObject)retObjectCreationPolicy;
             return new CreationPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreationPolicy != null ? retObjectCreationPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class PartCreationPolicyAttribute extends Attribute  {
 
     public void setCreationPolicy(CreationPolicy CreationPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreationPolicy", CreationPolicy == null ? null : CreationPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -157,10 +157,14 @@ public class XNamespace extends NetObject  {
     
     public XName GetName(java.lang.String localName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            JCObject objGetName = (JCObject)classInstance.Invoke("GetName", localName);
+            retObjectGetName = classInstance.Invoke("GetName", localName);
+            JCObject objGetName = (JCObject)retObjectGetName;
             return new XName(objGetName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class XNamespace extends NetObject  {
 
     public static XNamespace Get(java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classType.Invoke("Get", namespaceName);
+            retObjectGet = classType.Invoke("Get", namespaceName);
+            JCObject objGet = (JCObject)retObjectGet;
             return new XNamespace(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class XNamespace extends NetObject  {
     
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceName");
+            retObjectNamespaceName = classInstance.Get("NamespaceName");
+            return (java.lang.String)retObjectNamespaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceName != null ? retObjectNamespaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class XNamespace extends NetObject  {
 
     public static XNamespace getNone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNone = null;
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            retObjectNone = classType.Get("None");
+            JCObject val = (JCObject)retObjectNone;
             return new XNamespace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNone != null ? retObjectNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class XNamespace extends NetObject  {
 
     public static XNamespace getXml() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXml = null;
         try {
-            JCObject val = (JCObject)classType.Get("Xml");
+            retObjectXml = classType.Get("Xml");
+            JCObject val = (JCObject)retObjectXml;
             return new XNamespace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXml != null ? retObjectXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class XNamespace extends NetObject  {
 
     public static XNamespace getXmlns() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlns = null;
         try {
-            JCObject val = (JCObject)classType.Get("Xmlns");
+            retObjectXmlns = classType.Get("Xmlns");
+            JCObject val = (JCObject)retObjectXmlns;
             return new XNamespace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlns != null ? retObjectXmlns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

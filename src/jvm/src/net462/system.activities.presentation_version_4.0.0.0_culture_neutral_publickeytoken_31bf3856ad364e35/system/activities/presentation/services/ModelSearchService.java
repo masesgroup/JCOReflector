@@ -154,9 +154,13 @@ public class ModelSearchService extends NetObject  {
     
     public boolean NavigateTo(int location) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateTo = null;
         try {
-            return (boolean)classInstance.Invoke("NavigateTo", location);
+            retObjectNavigateTo = classInstance.Invoke("NavigateTo", location);
+            return (boolean)retObjectNavigateTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigateTo != null ? retObjectNavigateTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class ModelSearchService extends NetObject  {
 
     public boolean NavigateTo(int startLine, int startColumn, int endLine, int endColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateTo = null;
         try {
-            return (boolean)classInstance.Invoke("NavigateTo", startLine, startColumn, endLine, endColumn);
+            retObjectNavigateTo = classInstance.Invoke("NavigateTo", startLine, startColumn, endLine, endColumn);
+            return (boolean)retObjectNavigateTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigateTo != null ? retObjectNavigateTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +182,14 @@ public class ModelSearchService extends NetObject  {
 
     public TextImage GenerateTextImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateTextImage = null;
         try {
-            JCObject objGenerateTextImage = (JCObject)classInstance.Invoke("GenerateTextImage");
+            retObjectGenerateTextImage = classInstance.Invoke("GenerateTextImage");
+            JCObject objGenerateTextImage = (JCObject)retObjectGenerateTextImage;
             return new TextImage(objGenerateTextImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateTextImage != null ? retObjectGenerateTextImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

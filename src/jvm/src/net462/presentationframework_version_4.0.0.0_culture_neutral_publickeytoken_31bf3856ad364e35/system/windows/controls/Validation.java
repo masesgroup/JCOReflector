@@ -157,9 +157,13 @@ public class Validation extends NetObject  {
     
     public static boolean GetHasError(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHasError = null;
         try {
-            return (boolean)classType.Invoke("GetHasError", element == null ? null : element.getJCOInstance());
+            retObjectGetHasError = classType.Invoke("GetHasError", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetHasError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetHasError != null ? retObjectGetHasError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class Validation extends NetObject  {
 
     public static ControlTemplate GetErrorTemplate(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetErrorTemplate = null;
         try {
-            JCObject objGetErrorTemplate = (JCObject)classType.Invoke("GetErrorTemplate", element == null ? null : element.getJCOInstance());
+            retObjectGetErrorTemplate = classType.Invoke("GetErrorTemplate", element == null ? null : element.getJCOInstance());
+            JCObject objGetErrorTemplate = (JCObject)retObjectGetErrorTemplate;
             return new ControlTemplate(objGetErrorTemplate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetErrorTemplate != null ? retObjectGetErrorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class Validation extends NetObject  {
 
     public static DependencyObject GetValidationAdornerSite(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValidationAdornerSite = null;
         try {
-            JCObject objGetValidationAdornerSite = (JCObject)classType.Invoke("GetValidationAdornerSite", element == null ? null : element.getJCOInstance());
+            retObjectGetValidationAdornerSite = classType.Invoke("GetValidationAdornerSite", element == null ? null : element.getJCOInstance());
+            JCObject objGetValidationAdornerSite = (JCObject)retObjectGetValidationAdornerSite;
             return new DependencyObject(objGetValidationAdornerSite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidationAdornerSite != null ? retObjectGetValidationAdornerSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class Validation extends NetObject  {
 
     public static DependencyObject GetValidationAdornerSiteFor(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValidationAdornerSiteFor = null;
         try {
-            JCObject objGetValidationAdornerSiteFor = (JCObject)classType.Invoke("GetValidationAdornerSiteFor", element == null ? null : element.getJCOInstance());
+            retObjectGetValidationAdornerSiteFor = classType.Invoke("GetValidationAdornerSiteFor", element == null ? null : element.getJCOInstance());
+            JCObject objGetValidationAdornerSiteFor = (JCObject)retObjectGetValidationAdornerSiteFor;
             return new DependencyObject(objGetValidationAdornerSiteFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidationAdornerSiteFor != null ? retObjectGetValidationAdornerSiteFor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +216,7 @@ public class Validation extends NetObject  {
 
     public static void ClearInvalid(BindingExpressionBase bindingExpression) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearInvalid", bindingExpression == null ? null : bindingExpression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +226,7 @@ public class Validation extends NetObject  {
 
     public static void MarkInvalid(BindingExpressionBase bindingExpression, ValidationError validationError) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MarkInvalid", bindingExpression == null ? null : bindingExpression.getJCOInstance(), validationError == null ? null : validationError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +236,7 @@ public class Validation extends NetObject  {
 
     public static void SetErrorTemplate(DependencyObject element, ControlTemplate value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetErrorTemplate", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +246,7 @@ public class Validation extends NetObject  {
 
     public static void SetValidationAdornerSite(DependencyObject element, DependencyObject value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetValidationAdornerSite", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +256,7 @@ public class Validation extends NetObject  {
 
     public static void SetValidationAdornerSiteFor(DependencyObject element, DependencyObject value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetValidationAdornerSiteFor", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

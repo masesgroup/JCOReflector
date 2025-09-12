@@ -142,10 +142,12 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
     
     public int[] GetSupportedViews() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSupportedViews = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSupportedViews");
+            retObjectGetSupportedViews = classInstance.Invoke("GetSupportedViews");
+            JCObject resultingObjects = (JCObject)retObjectGetSupportedViews;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -154,6 +156,8 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
 				resultingArray[indexGetSupportedViews] = (int)resultingArrayList.get(indexGetSupportedViews);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGetSupportedViews != null ? retObjectGetSupportedViews.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,9 +165,13 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
 
     public java.lang.String GetViewName(int viewId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetViewName", viewId);
+            retObjectGetViewName = classInstance.Invoke("GetViewName", viewId);
+            return (java.lang.String)retObjectGetViewName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetViewName != null ? retObjectGetViewName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +179,7 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
 
     public void SetCurrentView(int viewId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCurrentView", viewId);
         } catch (JCNativeException jcne) {
@@ -185,9 +193,19 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
     
     public int getCurrentView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentView = null;
         try {
-            return (int)classInstance.Get("CurrentView");
+            retObjectCurrentView = classInstance.Get("CurrentView");
+            return (int)retObjectCurrentView;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentViewNumber = (java.lang.Number)retObjectCurrentView;
+                return retObjectCurrentViewNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentView != null ? retObjectCurrentView.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

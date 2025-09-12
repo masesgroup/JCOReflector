@@ -201,9 +201,13 @@ public class EventLog extends Component  {
     
     public static boolean Exists(java.lang.String logName, java.lang.String machineName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", logName, machineName);
+            retObjectExists = classType.Invoke("Exists", logName, machineName);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +215,13 @@ public class EventLog extends Component  {
 
     public static boolean Exists(java.lang.String logName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", logName);
+            retObjectExists = classType.Invoke("Exists", logName);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +229,13 @@ public class EventLog extends Component  {
 
     public static boolean SourceExists(java.lang.String source, java.lang.String machineName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSourceExists = null;
         try {
-            return (boolean)classType.Invoke("SourceExists", source, machineName);
+            retObjectSourceExists = classType.Invoke("SourceExists", source, machineName);
+            return (boolean)retObjectSourceExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSourceExists != null ? retObjectSourceExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +243,13 @@ public class EventLog extends Component  {
 
     public static boolean SourceExists(java.lang.String source) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.io.IOException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSourceExists = null;
         try {
-            return (boolean)classType.Invoke("SourceExists", source);
+            retObjectSourceExists = classType.Invoke("SourceExists", source);
+            return (boolean)retObjectSourceExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSourceExists != null ? retObjectSourceExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,16 +257,20 @@ public class EventLog extends Component  {
 
     public static EventLog[] GetEventLogs() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEventLogs = null;
         try {
             ArrayList<EventLog> resultingArrayList = new ArrayList<EventLog>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetEventLogs");
+            retObjectGetEventLogs = classType.Invoke("GetEventLogs");
+            JCObject resultingObjects = (JCObject)retObjectGetEventLogs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventLog(resultingObject));
             }
             EventLog[] resultingArray = new EventLog[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventLogs != null ? retObjectGetEventLogs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,16 +278,20 @@ public class EventLog extends Component  {
 
     public static EventLog[] GetEventLogs(java.lang.String machineName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.io.IOException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.RankException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEventLogs = null;
         try {
             ArrayList<EventLog> resultingArrayList = new ArrayList<EventLog>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetEventLogs", machineName);
+            retObjectGetEventLogs = classType.Invoke("GetEventLogs", machineName);
+            JCObject resultingObjects = (JCObject)retObjectGetEventLogs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventLog(resultingObject));
             }
             EventLog[] resultingArray = new EventLog[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventLogs != null ? retObjectGetEventLogs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,9 +299,13 @@ public class EventLog extends Component  {
 
     public static java.lang.String LogNameFromSourceName(java.lang.String source, java.lang.String machineName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.io.IOException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLogNameFromSourceName = null;
         try {
-            return (java.lang.String)classType.Invoke("LogNameFromSourceName", source, machineName);
+            retObjectLogNameFromSourceName = classType.Invoke("LogNameFromSourceName", source, machineName);
+            return (java.lang.String)retObjectLogNameFromSourceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLogNameFromSourceName != null ? retObjectLogNameFromSourceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +313,7 @@ public class EventLog extends Component  {
 
     public void BeginInit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -295,7 +323,7 @@ public class EventLog extends Component  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -305,7 +333,7 @@ public class EventLog extends Component  {
 
     public void Close() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -315,7 +343,7 @@ public class EventLog extends Component  {
 
     public static void CreateEventSource(EventSourceCreationData sourceData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.reflection.AmbiguousMatchException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CreateEventSource", sourceData == null ? null : sourceData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,7 +353,7 @@ public class EventLog extends Component  {
 
     public static void CreateEventSource(java.lang.String source, java.lang.String logName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.reflection.AmbiguousMatchException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CreateEventSource", source, logName, machineName);
         } catch (JCNativeException jcne) {
@@ -335,7 +363,7 @@ public class EventLog extends Component  {
 
     public static void CreateEventSource(java.lang.String source, java.lang.String logName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.reflection.AmbiguousMatchException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CreateEventSource", source, logName);
         } catch (JCNativeException jcne) {
@@ -345,7 +373,7 @@ public class EventLog extends Component  {
 
     public static void Delete(java.lang.String logName, java.lang.String machineName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.io.IOException, system.ArrayTypeMismatchException, system.RankException, system.security.SecurityException, system.componentmodel.Win32Exception, system.UnauthorizedAccessException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", logName, machineName);
         } catch (JCNativeException jcne) {
@@ -355,7 +383,7 @@ public class EventLog extends Component  {
 
     public static void Delete(java.lang.String logName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.componentmodel.Win32Exception, system.UnauthorizedAccessException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", logName);
         } catch (JCNativeException jcne) {
@@ -365,7 +393,7 @@ public class EventLog extends Component  {
 
     public static void DeleteEventSource(java.lang.String source, java.lang.String machineName) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.io.IOException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.UnauthorizedAccessException, system.runtime.interopservices.ExternalException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeleteEventSource", source, machineName);
         } catch (JCNativeException jcne) {
@@ -375,7 +403,7 @@ public class EventLog extends Component  {
 
     public static void DeleteEventSource(java.lang.String source) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.runtime.interopservices.ExternalException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DeleteEventSource", source);
         } catch (JCNativeException jcne) {
@@ -385,7 +413,7 @@ public class EventLog extends Component  {
 
     public void EndInit() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -395,7 +423,7 @@ public class EventLog extends Component  {
 
     public void ModifyOverflowPolicy(OverflowAction action, int retentionDays) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ModifyOverflowPolicy", action == null ? null : action.getJCOInstance(), retentionDays);
         } catch (JCNativeException jcne) {
@@ -405,7 +433,7 @@ public class EventLog extends Component  {
 
     public void RegisterDisplayName(java.lang.String resourceFile, long resourceId) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterDisplayName", resourceFile, resourceId);
         } catch (JCNativeException jcne) {
@@ -415,7 +443,7 @@ public class EventLog extends Component  {
 
     public void WriteEntry(java.lang.String message, EventLogEntryType type, int eventID, short category, byte[] rawData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message, type == null ? null : type.getJCOInstance(), eventID, category, rawData);
         } catch (JCNativeException jcne) {
@@ -425,7 +453,7 @@ public class EventLog extends Component  {
 
     public void WriteEntry(java.lang.String dupParam0, EventLogEntryType dupParam1, int dupParam2, short dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3, dupParam4.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -435,7 +463,7 @@ public class EventLog extends Component  {
 
     public void WriteEntry(java.lang.String message, EventLogEntryType type, int eventID, short category) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message, type == null ? null : type.getJCOInstance(), eventID, category);
         } catch (JCNativeException jcne) {
@@ -445,7 +473,7 @@ public class EventLog extends Component  {
 
     public void WriteEntry(java.lang.String message, EventLogEntryType type, int eventID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message, type == null ? null : type.getJCOInstance(), eventID);
         } catch (JCNativeException jcne) {
@@ -455,7 +483,7 @@ public class EventLog extends Component  {
 
     public void WriteEntry(java.lang.String message, EventLogEntryType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -465,7 +493,7 @@ public class EventLog extends Component  {
 
     public static void WriteEntry(java.lang.String source, java.lang.String message, EventLogEntryType type, int eventID, short category, byte[] rawData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEntry", source, message, type == null ? null : type.getJCOInstance(), eventID, category, rawData);
         } catch (JCNativeException jcne) {
@@ -475,7 +503,7 @@ public class EventLog extends Component  {
 
     public static void WriteEntry(java.lang.String dupParam0, java.lang.String dupParam1, EventLogEntryType dupParam2, int dupParam3, short dupParam4, JCORefOut dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEntry", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4, dupParam5.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -485,7 +513,7 @@ public class EventLog extends Component  {
 
     public static void WriteEntry(java.lang.String source, java.lang.String message, EventLogEntryType type, int eventID, short category) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEntry", source, message, type == null ? null : type.getJCOInstance(), eventID, category);
         } catch (JCNativeException jcne) {
@@ -495,7 +523,7 @@ public class EventLog extends Component  {
 
     public static void WriteEntry(java.lang.String source, java.lang.String message, EventLogEntryType type, int eventID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEntry", source, message, type == null ? null : type.getJCOInstance(), eventID);
         } catch (JCNativeException jcne) {
@@ -505,7 +533,7 @@ public class EventLog extends Component  {
 
     public static void WriteEntry(java.lang.String source, java.lang.String message, EventLogEntryType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEntry", source, message, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -515,7 +543,7 @@ public class EventLog extends Component  {
 
     public static void WriteEntry(java.lang.String source, java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEntry", source, message);
         } catch (JCNativeException jcne) {
@@ -525,7 +553,7 @@ public class EventLog extends Component  {
 
     public void WriteEntry(java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntry", message);
         } catch (JCNativeException jcne) {
@@ -535,7 +563,7 @@ public class EventLog extends Component  {
 
     public void WriteEvent(EventInstance instance, byte[] data, NetObject... values) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.io.IOException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEvent", instance == null ? null : instance.getJCOInstance(), data, toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -545,7 +573,7 @@ public class EventLog extends Component  {
 
     public void WriteEvent(EventInstance dupParam0, JCORefOut dupParam1, NetObject... dupParam2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.io.IOException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEvent", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2));
         } catch (JCNativeException jcne) {
@@ -555,7 +583,7 @@ public class EventLog extends Component  {
 
     public void WriteEvent(EventInstance instance, NetObject... values) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.ApplicationException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEvent", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -565,7 +593,7 @@ public class EventLog extends Component  {
 
     public static void WriteEvent(java.lang.String source, EventInstance instance, byte[] data, NetObject... values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEvent", source, instance == null ? null : instance.getJCOInstance(), data, toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -575,7 +603,7 @@ public class EventLog extends Component  {
 
     public static void WriteEvent(java.lang.String dupParam0, EventInstance dupParam1, JCORefOut dupParam2, NetObject... dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEvent", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), toObjectFromArray(dupParam3));
         } catch (JCNativeException jcne) {
@@ -585,7 +613,7 @@ public class EventLog extends Component  {
 
     public static void WriteEvent(java.lang.String source, EventInstance instance, NetObject... values) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteEvent", source, instance == null ? null : instance.getJCOInstance(), toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -599,9 +627,13 @@ public class EventLog extends Component  {
     
     public boolean getEnableRaisingEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableRaisingEvents = null;
         try {
-            return (boolean)classInstance.Get("EnableRaisingEvents");
+            retObjectEnableRaisingEvents = classInstance.Get("EnableRaisingEvents");
+            return (boolean)retObjectEnableRaisingEvents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableRaisingEvents != null ? retObjectEnableRaisingEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,7 +641,7 @@ public class EventLog extends Component  {
 
     public void setEnableRaisingEvents(boolean EnableRaisingEvents) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableRaisingEvents", EnableRaisingEvents);
         } catch (JCNativeException jcne) {
@@ -619,9 +651,19 @@ public class EventLog extends Component  {
 
     public int getMinimumRetentionDays() throws Throwable, system.security.SecurityException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ArgumentException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumRetentionDays = null;
         try {
-            return (int)classInstance.Get("MinimumRetentionDays");
+            retObjectMinimumRetentionDays = classInstance.Get("MinimumRetentionDays");
+            return (int)retObjectMinimumRetentionDays;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumRetentionDaysNumber = (java.lang.Number)retObjectMinimumRetentionDays;
+                return retObjectMinimumRetentionDaysNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumRetentionDays != null ? retObjectMinimumRetentionDays.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,9 +671,19 @@ public class EventLog extends Component  {
 
     public long getMaximumKilobytes() throws Throwable, system.security.SecurityException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ArgumentException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumKilobytes = null;
         try {
-            return (long)classInstance.Get("MaximumKilobytes");
+            retObjectMaximumKilobytes = classInstance.Get("MaximumKilobytes");
+            return (long)retObjectMaximumKilobytes;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumKilobytesNumber = (java.lang.Number)retObjectMaximumKilobytes;
+                return retObjectMaximumKilobytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumKilobytes != null ? retObjectMaximumKilobytes.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,7 +691,7 @@ public class EventLog extends Component  {
 
     public void setMaximumKilobytes(long MaximumKilobytes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumKilobytes", MaximumKilobytes);
         } catch (JCNativeException jcne) {
@@ -649,10 +701,14 @@ public class EventLog extends Component  {
 
     public ISynchronizeInvoke getSynchronizingObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSynchronizingObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SynchronizingObject");
+            retObjectSynchronizingObject = classInstance.Get("SynchronizingObject");
+            JCObject val = (JCObject)retObjectSynchronizingObject;
             return new ISynchronizeInvokeImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronizingObject != null ? retObjectSynchronizingObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,7 +716,7 @@ public class EventLog extends Component  {
 
     public void setSynchronizingObject(ISynchronizeInvoke SynchronizingObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SynchronizingObject", SynchronizingObject == null ? null : SynchronizingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -670,10 +726,14 @@ public class EventLog extends Component  {
 
     public EventLogEntryCollection getEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Entries");
+            retObjectEntries = classInstance.Get("Entries");
+            JCObject val = (JCObject)retObjectEntries;
             return new EventLogEntryCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntries != null ? retObjectEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,10 +741,14 @@ public class EventLog extends Component  {
 
     public OverflowAction getOverflowAction() throws Throwable, system.security.SecurityException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.ArgumentException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverflowAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverflowAction");
+            retObjectOverflowAction = classInstance.Get("OverflowAction");
+            JCObject val = (JCObject)retObjectOverflowAction;
             return new OverflowAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverflowAction != null ? retObjectOverflowAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -692,9 +756,13 @@ public class EventLog extends Component  {
 
     public java.lang.String getLog() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            return (java.lang.String)classInstance.Get("Log");
+            retObjectLog = classInstance.Get("Log");
+            return (java.lang.String)retObjectLog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,7 +770,7 @@ public class EventLog extends Component  {
 
     public void setLog(java.lang.String Log) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Log", Log);
         } catch (JCNativeException jcne) {
@@ -712,9 +780,13 @@ public class EventLog extends Component  {
 
     public java.lang.String getLogDisplayName() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("LogDisplayName");
+            retObjectLogDisplayName = classInstance.Get("LogDisplayName");
+            return (java.lang.String)retObjectLogDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogDisplayName != null ? retObjectLogDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -722,9 +794,13 @@ public class EventLog extends Component  {
 
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -732,7 +808,7 @@ public class EventLog extends Component  {
 
     public void setMachineName(java.lang.String MachineName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MachineName", MachineName);
         } catch (JCNativeException jcne) {
@@ -742,9 +818,13 @@ public class EventLog extends Component  {
 
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -752,7 +832,7 @@ public class EventLog extends Component  {
 
     public void setSource(java.lang.String Source) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.io.IOException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source);
         } catch (JCNativeException jcne) {
@@ -767,7 +847,7 @@ public class EventLog extends Component  {
 
     public void addEntryWritten(EntryWrittenEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EntryWritten", handler);
         } catch (JCNativeException jcne) {
@@ -777,7 +857,7 @@ public class EventLog extends Component  {
 
     public void removeEntryWritten(EntryWrittenEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EntryWritten", handler);
         } catch (JCNativeException jcne) {

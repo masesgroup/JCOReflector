@@ -153,7 +153,7 @@ public class PageStatePersister extends NetObject  {
     
     public void Load() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load");
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class PageStatePersister extends NetObject  {
 
     public void Save() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save");
         } catch (JCNativeException jcne) {
@@ -177,10 +177,14 @@ public class PageStatePersister extends NetObject  {
     
     public NetObject getControlState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlState");
+            retObjectControlState = classInstance.Get("ControlState");
+            JCObject val = (JCObject)retObjectControlState;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlState != null ? retObjectControlState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class PageStatePersister extends NetObject  {
 
     public void setControlState(NetObject ControlState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlState", ControlState == null ? null : ControlState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class PageStatePersister extends NetObject  {
 
     public NetObject getViewState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewState");
+            retObjectViewState = classInstance.Get("ViewState");
+            JCObject val = (JCObject)retObjectViewState;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewState != null ? retObjectViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class PageStatePersister extends NetObject  {
 
     public void setViewState(NetObject ViewState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewState", ViewState == null ? null : ViewState.getJCOInstance());
         } catch (JCNativeException jcne) {

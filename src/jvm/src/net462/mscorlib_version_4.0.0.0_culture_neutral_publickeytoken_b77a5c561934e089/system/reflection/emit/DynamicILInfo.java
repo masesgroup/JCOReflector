@@ -159,9 +159,19 @@ public class DynamicILInfo extends NetObject  {
     
     public int GetTokenFor(byte[] signature) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", (java.lang.Object)signature);
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", (java.lang.Object)signature);
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +179,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", (java.lang.Object)dupParam0.getJCRefOut());
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +199,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(DynamicMethod method) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +219,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(RuntimeFieldHandle field) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance());
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance());
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +239,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(RuntimeFieldHandle field, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +259,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(RuntimeMethodHandle method) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +279,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(RuntimeMethodHandle method, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +299,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(RuntimeTypeHandle type) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", type == null ? null : type.getJCOInstance());
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", type == null ? null : type.getJCOInstance());
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +319,19 @@ public class DynamicILInfo extends NetObject  {
 
     public int GetTokenFor(java.lang.String literal) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenFor = null;
         try {
-            return (int)classInstance.Invoke("GetTokenFor", literal);
+            retObjectGetTokenFor = classInstance.Invoke("GetTokenFor", literal);
+            return (int)retObjectGetTokenFor;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTokenForNumber = (java.lang.Number)retObjectGetTokenFor;
+                return retObjectGetTokenForNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTokenFor != null ? retObjectGetTokenFor.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +339,7 @@ public class DynamicILInfo extends NetObject  {
 
     public void SetCode(byte[] code, int maxStackSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCode", code, maxStackSize);
         } catch (JCNativeException jcne) {
@@ -259,7 +349,7 @@ public class DynamicILInfo extends NetObject  {
 
     public void SetCode(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCode", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -269,7 +359,7 @@ public class DynamicILInfo extends NetObject  {
 
     public void SetExceptions(byte[] exceptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetExceptions", (java.lang.Object)exceptions);
         } catch (JCNativeException jcne) {
@@ -279,7 +369,7 @@ public class DynamicILInfo extends NetObject  {
 
     public void SetExceptions(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetExceptions", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -289,7 +379,7 @@ public class DynamicILInfo extends NetObject  {
 
     public void SetLocalSignature(byte[] localSignature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocalSignature", (java.lang.Object)localSignature);
         } catch (JCNativeException jcne) {
@@ -299,7 +389,7 @@ public class DynamicILInfo extends NetObject  {
 
     public void SetLocalSignature(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocalSignature", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -313,10 +403,14 @@ public class DynamicILInfo extends NetObject  {
     
     public DynamicMethod getDynamicMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicMethod");
+            retObjectDynamicMethod = classInstance.Get("DynamicMethod");
+            JCObject val = (JCObject)retObjectDynamicMethod;
             return new DynamicMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicMethod != null ? retObjectDynamicMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

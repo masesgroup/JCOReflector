@@ -165,7 +165,7 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
      */
     @Deprecated 
     public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -174,7 +174,7 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
      */
     @Deprecated 
     public void RaisePostDataChangedEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
 
@@ -183,9 +183,13 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
     
     public boolean getShowCatalogIcons() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCatalogIcons = null;
         try {
-            return (boolean)classInstance.Get("ShowCatalogIcons");
+            retObjectShowCatalogIcons = classInstance.Get("ShowCatalogIcons");
+            return (boolean)retObjectShowCatalogIcons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowCatalogIcons != null ? retObjectShowCatalogIcons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public void setShowCatalogIcons(boolean ShowCatalogIcons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowCatalogIcons", ShowCatalogIcons);
         } catch (JCNativeException jcne) {
@@ -203,9 +207,13 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public java.lang.String getSelectedCatalogPartID() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedCatalogPartID = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedCatalogPartID");
+            retObjectSelectedCatalogPartID = classInstance.Get("SelectedCatalogPartID");
+            return (java.lang.String)retObjectSelectedCatalogPartID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedCatalogPartID != null ? retObjectSelectedCatalogPartID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public void setSelectedCatalogPartID(java.lang.String SelectedCatalogPartID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedCatalogPartID", SelectedCatalogPartID);
         } catch (JCNativeException jcne) {
@@ -223,9 +231,13 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public java.lang.String getSelectTargetZoneText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectTargetZoneText = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectTargetZoneText");
+            retObjectSelectTargetZoneText = classInstance.Get("SelectTargetZoneText");
+            return (java.lang.String)retObjectSelectTargetZoneText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectTargetZoneText != null ? retObjectSelectTargetZoneText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public void setSelectTargetZoneText(java.lang.String SelectTargetZoneText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectTargetZoneText", SelectTargetZoneText);
         } catch (JCNativeException jcne) {
@@ -243,10 +255,14 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public Style getPartLinkStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartLinkStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartLinkStyle");
+            retObjectPartLinkStyle = classInstance.Get("PartLinkStyle");
+            JCObject val = (JCObject)retObjectPartLinkStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartLinkStyle != null ? retObjectPartLinkStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +270,14 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public Style getSelectedPartLinkStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedPartLinkStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedPartLinkStyle");
+            retObjectSelectedPartLinkStyle = classInstance.Get("SelectedPartLinkStyle");
+            JCObject val = (JCObject)retObjectSelectedPartLinkStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedPartLinkStyle != null ? retObjectSelectedPartLinkStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +285,14 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public CatalogPartChrome getCatalogPartChrome() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatalogPartChrome = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CatalogPartChrome");
+            retObjectCatalogPartChrome = classInstance.Get("CatalogPartChrome");
+            JCObject val = (JCObject)retObjectCatalogPartChrome;
             return new CatalogPartChrome(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatalogPartChrome != null ? retObjectCatalogPartChrome.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +300,14 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public CatalogPartCollection getCatalogParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatalogParts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CatalogParts");
+            retObjectCatalogParts = classInstance.Get("CatalogParts");
+            JCObject val = (JCObject)retObjectCatalogParts;
             return new CatalogPartCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatalogParts != null ? retObjectCatalogParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +315,14 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public WebPartVerb getAddVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddVerb");
+            retObjectAddVerb = classInstance.Get("AddVerb");
+            JCObject val = (JCObject)retObjectAddVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddVerb != null ? retObjectAddVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +330,14 @@ public class CatalogZoneBase extends ToolZone implements system.web.ui.IPostBack
 
     public WebPartVerb getCloseVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CloseVerb");
+            retObjectCloseVerb = classInstance.Get("CloseVerb");
+            JCObject val = (JCObject)retObjectCloseVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseVerb != null ? retObjectCloseVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

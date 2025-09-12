@@ -187,7 +187,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
+            throw new java.lang.UnsupportedOperationException(
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
@@ -201,16 +201,20 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
 
     public CustomPopupPlacement[] DynamicInvoke(Size popupSize, Size targetSize, Point offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
             ArrayList<CustomPopupPlacement> resultingArrayList = new ArrayList<CustomPopupPlacement>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DynamicInvoke", popupSize == null ? null : popupSize.getJCOInstance(), targetSize == null ? null : targetSize.getJCOInstance(), offset == null ? null : offset.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", popupSize == null ? null : popupSize.getJCOInstance(), targetSize == null ? null : targetSize.getJCOInstance(), offset == null ? null : offset.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDynamicInvoke;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new CustomPopupPlacement(resultingObject));
             }
             CustomPopupPlacement[] resultingArray = new CustomPopupPlacement[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

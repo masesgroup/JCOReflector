@@ -169,10 +169,14 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public java.lang.String getAccept() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccept = null;
         try {
-            return (java.lang.String)classInstance.Get("Accept");
+            retObjectAccept = classInstance.Get("Accept");
+            return (java.lang.String)retObjectAccept;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccept != null ? retObjectAccept.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAccept(java.lang.String Accept) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Accept", Accept);
         } catch (JCNativeException jcne) {
@@ -204,9 +212,13 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getAcceptPattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptPattern = null;
         try {
-            return (java.lang.String)classInstance.Get("AcceptPattern");
+            retObjectAcceptPattern = classInstance.Get("AcceptPattern");
+            return (java.lang.String)retObjectAcceptPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAcceptPattern != null ? retObjectAcceptPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAcceptPattern(java.lang.String AcceptPattern) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptPattern", AcceptPattern);
         } catch (JCNativeException jcne) {
@@ -224,9 +236,13 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getConnect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnect = null;
         try {
-            return (java.lang.String)classInstance.Get("Connect");
+            retObjectConnect = classInstance.Get("Connect");
+            return (java.lang.String)retObjectConnect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnect != null ? retObjectConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setConnect(java.lang.String Connect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connect", Connect);
         } catch (JCNativeException jcne) {
@@ -244,9 +260,13 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public java.lang.String getConnectPattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectPattern = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectPattern");
+            retObjectConnectPattern = classInstance.Get("ConnectPattern");
+            return (java.lang.String)retObjectConnectPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectPattern != null ? retObjectConnectPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +274,7 @@ public class WebPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setConnectPattern(java.lang.String ConnectPattern) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectPattern", ConnectPattern);
         } catch (JCNativeException jcne) {

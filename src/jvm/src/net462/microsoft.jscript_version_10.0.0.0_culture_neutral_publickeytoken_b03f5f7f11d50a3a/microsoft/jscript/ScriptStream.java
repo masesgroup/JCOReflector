@@ -161,7 +161,7 @@ public class ScriptStream extends NetObject  {
     
     public static void PrintStackTrace() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrintStackTrace");
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class ScriptStream extends NetObject  {
 
     public static void PrintStackTrace(NetException e) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrintStackTrace", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class ScriptStream extends NetObject  {
 
     public static void Write(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", str);
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class ScriptStream extends NetObject  {
 
     public static void WriteLine(java.lang.String str) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", str);
         } catch (JCNativeException jcne) {

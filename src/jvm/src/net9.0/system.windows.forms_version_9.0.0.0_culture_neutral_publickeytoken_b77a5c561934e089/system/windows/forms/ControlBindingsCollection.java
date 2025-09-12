@@ -172,10 +172,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
     
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString, IFormatProvider formatInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.io.FileLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance(), formatString, formatInfo == null ? null : formatInfo.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance(), formatString, formatInfo == null ? null : formatInfo.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new system.windows.forms.Binding(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance(), formatString);
+            retObjectAdd = classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance(), formatString);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new system.windows.forms.Binding(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new system.windows.forms.Binding(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, updateMode == null ? null : updateMode.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new system.windows.forms.Binding(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled);
+            retObjectAdd = classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new system.windows.forms.Binding(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +247,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMemberException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            retObjectAdd = classInstance.Invoke("Add", propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new system.windows.forms.Binding(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +262,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public void AddNewControlBindingsCollection(system.windows.forms.Binding binding) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", binding == null ? null : binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +272,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public void ClearNewControlBindingsCollection() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -258,7 +282,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public void RemoveNewControlBindingsCollection(system.windows.forms.Binding binding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", binding == null ? null : binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,7 +292,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public void RemoveAtNewControlBindingsCollection(int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -282,10 +306,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
     
     public Control getControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Control");
+            retObjectControl = classInstance.Get("Control");
+            JCObject val = (JCObject)retObjectControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControl != null ? retObjectControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +321,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public DataSourceUpdateMode getDefaultDataSourceUpdateMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultDataSourceUpdateMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultDataSourceUpdateMode");
+            retObjectDefaultDataSourceUpdateMode = classInstance.Get("DefaultDataSourceUpdateMode");
+            JCObject val = (JCObject)retObjectDefaultDataSourceUpdateMode;
             return new DataSourceUpdateMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultDataSourceUpdateMode != null ? retObjectDefaultDataSourceUpdateMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +336,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public void setDefaultDataSourceUpdateMode(DataSourceUpdateMode DefaultDataSourceUpdateMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultDataSourceUpdateMode", DefaultDataSourceUpdateMode == null ? null : DefaultDataSourceUpdateMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -314,10 +346,14 @@ public class ControlBindingsCollection extends BindingsCollection  {
 
     public IBindableComponent getBindableComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindableComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindableComponent");
+            retObjectBindableComponent = classInstance.Get("BindableComponent");
+            JCObject val = (JCObject)retObjectBindableComponent;
             return new IBindableComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindableComponent != null ? retObjectBindableComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

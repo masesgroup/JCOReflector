@@ -151,10 +151,12 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
     
     public int[] GetRuntimeId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeId = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRuntimeId");
+            retObjectGetRuntimeId = classInstance.Invoke("GetRuntimeId");
+            JCObject resultingObjects = (JCObject)retObjectGetRuntimeId;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -163,6 +165,8 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 				resultingArray[indexGetRuntimeId] = (int)resultingArrayList.get(indexGetRuntimeId);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGetRuntimeId != null ? retObjectGetRuntimeId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public NetObject GetPatternProvider(int patternId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPatternProvider = null;
         try {
-            JCObject objGetPatternProvider = (JCObject)classInstance.Invoke("GetPatternProvider", patternId);
+            retObjectGetPatternProvider = classInstance.Invoke("GetPatternProvider", patternId);
+            JCObject objGetPatternProvider = (JCObject)retObjectGetPatternProvider;
             return new NetObject(objGetPatternProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPatternProvider != null ? retObjectGetPatternProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public NetObject GetPropertyValue(int propertyId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", propertyId);
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", propertyId);
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public IRawElementProviderFragment ElementProviderFromPoint(double x, double y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementProviderFromPoint = null;
         try {
-            JCObject objElementProviderFromPoint = (JCObject)classInstance.Invoke("ElementProviderFromPoint", x, y);
+            retObjectElementProviderFromPoint = classInstance.Invoke("ElementProviderFromPoint", x, y);
+            JCObject objElementProviderFromPoint = (JCObject)retObjectElementProviderFromPoint;
             return new IRawElementProviderFragmentImplementation(objElementProviderFromPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementProviderFromPoint != null ? retObjectElementProviderFromPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public IRawElementProviderFragment GetFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFocus = null;
         try {
-            JCObject objGetFocus = (JCObject)classInstance.Invoke("GetFocus");
+            retObjectGetFocus = classInstance.Invoke("GetFocus");
+            JCObject objGetFocus = (JCObject)retObjectGetFocus;
             return new IRawElementProviderFragmentImplementation(objGetFocus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFocus != null ? retObjectGetFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public IRawElementProviderFragment Navigate(NavigateDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            JCObject objNavigate = (JCObject)classInstance.Invoke("Navigate", direction == null ? null : direction.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", direction == null ? null : direction.getJCOInstance());
+            JCObject objNavigate = (JCObject)retObjectNavigate;
             return new IRawElementProviderFragmentImplementation(objNavigate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,16 +249,20 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public IRawElementProviderSimple[] GetEmbeddedFragmentRoots() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEmbeddedFragmentRoots = null;
         try {
             ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEmbeddedFragmentRoots");
+            retObjectGetEmbeddedFragmentRoots = classInstance.Invoke("GetEmbeddedFragmentRoots");
+            JCObject resultingObjects = (JCObject)retObjectGetEmbeddedFragmentRoots;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
             }
             IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEmbeddedFragmentRoots != null ? retObjectGetEmbeddedFragmentRoots.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +270,7 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public void SetFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFocus");
         } catch (JCNativeException jcne) {
@@ -256,10 +284,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
     
     public IRawElementProviderFragmentRoot getFragmentRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FragmentRoot");
+            retObjectFragmentRoot = classInstance.Get("FragmentRoot");
+            JCObject val = (JCObject)retObjectFragmentRoot;
             return new IRawElementProviderFragmentRootImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFragmentRoot != null ? retObjectFragmentRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +299,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostRawElementProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostRawElementProvider");
+            retObjectHostRawElementProvider = classInstance.Get("HostRawElementProvider");
+            JCObject val = (JCObject)retObjectHostRawElementProvider;
             return new IRawElementProviderSimpleImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostRawElementProvider != null ? retObjectHostRawElementProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +314,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public ProviderOptions getProviderOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderOptions");
+            retObjectProviderOptions = classInstance.Get("ProviderOptions");
+            JCObject val = (JCObject)retObjectProviderOptions;
             return new ProviderOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviderOptions != null ? retObjectProviderOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +329,14 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
 
     public Rect getBoundingRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoundingRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundingRectangle");
+            retObjectBoundingRectangle = classInstance.Get("BoundingRectangle");
+            JCObject val = (JCObject)retObjectBoundingRectangle;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoundingRectangle != null ? retObjectBoundingRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

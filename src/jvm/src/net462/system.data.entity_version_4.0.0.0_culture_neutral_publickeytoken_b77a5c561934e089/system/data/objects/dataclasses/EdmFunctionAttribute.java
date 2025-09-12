@@ -170,9 +170,13 @@ public class EdmFunctionAttribute extends Attribute  {
     
     public java.lang.String getFunctionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunctionName = null;
         try {
-            return (java.lang.String)classInstance.Get("FunctionName");
+            retObjectFunctionName = classInstance.Get("FunctionName");
+            return (java.lang.String)retObjectFunctionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFunctionName != null ? retObjectFunctionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class EdmFunctionAttribute extends Attribute  {
 
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceName");
+            retObjectNamespaceName = classInstance.Get("NamespaceName");
+            return (java.lang.String)retObjectNamespaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceName != null ? retObjectNamespaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

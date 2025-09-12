@@ -171,10 +171,14 @@ public class ToolBarButtonClickEventArgs extends EventArgs  {
     
     public ToolBarButton getButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Button");
+            retObjectButton = classInstance.Get("Button");
+            JCObject val = (JCObject)retObjectButton;
             return new ToolBarButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButton != null ? retObjectButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class ToolBarButtonClickEventArgs extends EventArgs  {
 
     public void setButton(ToolBarButton Button) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Button", Button == null ? null : Button.getJCOInstance());
         } catch (JCNativeException jcne) {

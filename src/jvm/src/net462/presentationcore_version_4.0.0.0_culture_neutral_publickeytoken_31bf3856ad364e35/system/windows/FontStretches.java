@@ -158,10 +158,14 @@ public class FontStretches extends NetObject  {
     
     public static FontStretch getCondensed() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCondensed = null;
         try {
-            JCObject val = (JCObject)classType.Get("Condensed");
+            retObjectCondensed = classType.Get("Condensed");
+            JCObject val = (JCObject)retObjectCondensed;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCondensed != null ? retObjectCondensed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getExpanded() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExpanded = null;
         try {
-            JCObject val = (JCObject)classType.Get("Expanded");
+            retObjectExpanded = classType.Get("Expanded");
+            JCObject val = (JCObject)retObjectExpanded;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpanded != null ? retObjectExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getExtraCondensed() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtraCondensed = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExtraCondensed");
+            retObjectExtraCondensed = classType.Get("ExtraCondensed");
+            JCObject val = (JCObject)retObjectExtraCondensed;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraCondensed != null ? retObjectExtraCondensed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getExtraExpanded() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtraExpanded = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExtraExpanded");
+            retObjectExtraExpanded = classType.Get("ExtraExpanded");
+            JCObject val = (JCObject)retObjectExtraExpanded;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraExpanded != null ? retObjectExtraExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getMedium() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMedium = null;
         try {
-            JCObject val = (JCObject)classType.Get("Medium");
+            retObjectMedium = classType.Get("Medium");
+            JCObject val = (JCObject)retObjectMedium;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMedium != null ? retObjectMedium.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getNormal() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNormal = null;
         try {
-            JCObject val = (JCObject)classType.Get("Normal");
+            retObjectNormal = classType.Get("Normal");
+            JCObject val = (JCObject)retObjectNormal;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNormal != null ? retObjectNormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getSemiCondensed() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSemiCondensed = null;
         try {
-            JCObject val = (JCObject)classType.Get("SemiCondensed");
+            retObjectSemiCondensed = classType.Get("SemiCondensed");
+            JCObject val = (JCObject)retObjectSemiCondensed;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSemiCondensed != null ? retObjectSemiCondensed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getSemiExpanded() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSemiExpanded = null;
         try {
-            JCObject val = (JCObject)classType.Get("SemiExpanded");
+            retObjectSemiExpanded = classType.Get("SemiExpanded");
+            JCObject val = (JCObject)retObjectSemiExpanded;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSemiExpanded != null ? retObjectSemiExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getUltraCondensed() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUltraCondensed = null;
         try {
-            JCObject val = (JCObject)classType.Get("UltraCondensed");
+            retObjectUltraCondensed = classType.Get("UltraCondensed");
+            JCObject val = (JCObject)retObjectUltraCondensed;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUltraCondensed != null ? retObjectUltraCondensed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class FontStretches extends NetObject  {
 
     public static FontStretch getUltraExpanded() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUltraExpanded = null;
         try {
-            JCObject val = (JCObject)classType.Get("UltraExpanded");
+            retObjectUltraExpanded = classType.Get("UltraExpanded");
+            JCObject val = (JCObject)retObjectUltraExpanded;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUltraExpanded != null ? retObjectUltraExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

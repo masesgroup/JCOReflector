@@ -144,10 +144,14 @@ public class MemberInfoInitializerImplementation extends NetObject implements Me
     
     public COMMemberInfo GetCOMMemberInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCOMMemberInfo = null;
         try {
-            JCObject objGetCOMMemberInfo = (JCObject)classInstance.Invoke("GetCOMMemberInfo");
+            retObjectGetCOMMemberInfo = classInstance.Invoke("GetCOMMemberInfo");
+            JCObject objGetCOMMemberInfo = (JCObject)retObjectGetCOMMemberInfo;
             return new COMMemberInfoImplementation(objGetCOMMemberInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCOMMemberInfo != null ? retObjectGetCOMMemberInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class MemberInfoInitializerImplementation extends NetObject implements Me
 
     public void Initialize(java.lang.String name, COMMemberInfo dispatch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, dispatch == null ? null : dispatch.getJCOInstance());
         } catch (JCNativeException jcne) {

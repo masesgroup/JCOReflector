@@ -239,9 +239,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
     
     public java.lang.String PeekChars(int numberOfChars) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekChars = null;
         try {
-            return (java.lang.String)classInstance.Invoke("PeekChars", numberOfChars);
+            retObjectPeekChars = classInstance.Invoke("PeekChars", numberOfChars);
+            return (java.lang.String)retObjectPeekChars;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectPeekChars != null ? retObjectPeekChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +253,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadLine() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadLine = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadLine");
+            retObjectReadLine = classInstance.Invoke("ReadLine");
+            return (java.lang.String)retObjectReadLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadLine != null ? retObjectReadLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +267,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadToEnd() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToEnd = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadToEnd");
+            retObjectReadToEnd = classInstance.Invoke("ReadToEnd");
+            return (java.lang.String)retObjectReadToEnd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadToEnd != null ? retObjectReadToEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +281,12 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public java.lang.String[] ReadFields() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.text.regularexpressions.RegexParseException, microsoft.visualbasic.fileio.MalformedLineException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadFields = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadFields");
+            retObjectReadFields = classInstance.Invoke("ReadFields");
+            JCObject resultingObjects = (JCObject)retObjectReadFields;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -281,6 +295,8 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 				resultingArray[indexReadFields] = (java.lang.String)resultingArrayList.get(indexReadFields);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReadFields != null ? retObjectReadFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +304,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -298,7 +314,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -308,7 +324,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void SetDelimiters(java.lang.String... delimiters) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDelimiters", (java.lang.Object)delimiters);
         } catch (JCNativeException jcne) {
@@ -318,7 +334,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void SetDelimiters(JCORefOut dupParam0) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDelimiters", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -328,7 +344,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void SetFieldWidths(int... fieldWidths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFieldWidths", (java.lang.Object)fieldWidths);
         } catch (JCNativeException jcne) {
@@ -338,7 +354,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void SetFieldWidths(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFieldWidths", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -349,7 +365,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -365,9 +381,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
     
     public boolean getEndOfData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndOfData = null;
         try {
-            return (boolean)classInstance.Get("EndOfData");
+            retObjectEndOfData = classInstance.Get("EndOfData");
+            return (boolean)retObjectEndOfData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEndOfData != null ? retObjectEndOfData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,9 +395,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public boolean getHasFieldsEnclosedInQuotes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFieldsEnclosedInQuotes = null;
         try {
-            return (boolean)classInstance.Get("HasFieldsEnclosedInQuotes");
+            retObjectHasFieldsEnclosedInQuotes = classInstance.Get("HasFieldsEnclosedInQuotes");
+            return (boolean)retObjectHasFieldsEnclosedInQuotes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasFieldsEnclosedInQuotes != null ? retObjectHasFieldsEnclosedInQuotes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,7 +409,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void setHasFieldsEnclosedInQuotes(boolean HasFieldsEnclosedInQuotes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasFieldsEnclosedInQuotes", HasFieldsEnclosedInQuotes);
         } catch (JCNativeException jcne) {
@@ -395,9 +419,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public boolean getTrimWhiteSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrimWhiteSpace = null;
         try {
-            return (boolean)classInstance.Get("TrimWhiteSpace");
+            retObjectTrimWhiteSpace = classInstance.Get("TrimWhiteSpace");
+            return (boolean)retObjectTrimWhiteSpace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrimWhiteSpace != null ? retObjectTrimWhiteSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,7 +433,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void setTrimWhiteSpace(boolean TrimWhiteSpace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrimWhiteSpace", TrimWhiteSpace);
         } catch (JCNativeException jcne) {
@@ -415,10 +443,12 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public int[] getFieldWidths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldWidths = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("FieldWidths");
+            retObjectFieldWidths = classInstance.Get("FieldWidths");
+            JCObject resultingObjects = (JCObject)retObjectFieldWidths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -427,6 +457,8 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 				resultingArray[indexFieldWidths] = (int)resultingArrayList.get(indexFieldWidths);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectFieldWidths != null ? retObjectFieldWidths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,7 +466,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void setFieldWidths(int[] FieldWidths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldWidths", FieldWidths);
         } catch (JCNativeException jcne) {
@@ -444,9 +476,19 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public long getErrorLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorLineNumber = null;
         try {
-            return (long)classInstance.Get("ErrorLineNumber");
+            retObjectErrorLineNumber = classInstance.Get("ErrorLineNumber");
+            return (long)retObjectErrorLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectErrorLineNumberNumber = (java.lang.Number)retObjectErrorLineNumber;
+                return retObjectErrorLineNumberNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectErrorLineNumber != null ? retObjectErrorLineNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,9 +496,19 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public long getLineNumber() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (long)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (long)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumberNumber = (java.lang.Number)retObjectLineNumber;
+                return retObjectLineNumberNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +516,14 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public FieldType getTextFieldType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextFieldType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextFieldType");
+            retObjectTextFieldType = classInstance.Get("TextFieldType");
+            JCObject val = (JCObject)retObjectTextFieldType;
             return new FieldType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextFieldType != null ? retObjectTextFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +531,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void setTextFieldType(FieldType TextFieldType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextFieldType", TextFieldType == null ? null : TextFieldType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -485,9 +541,13 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public java.lang.String getErrorLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorLine = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorLine");
+            retObjectErrorLine = classInstance.Get("ErrorLine");
+            return (java.lang.String)retObjectErrorLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorLine != null ? retObjectErrorLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,10 +555,12 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public java.lang.String[] getCommentTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommentTokens = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CommentTokens");
+            retObjectCommentTokens = classInstance.Get("CommentTokens");
+            JCObject resultingObjects = (JCObject)retObjectCommentTokens;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -507,6 +569,8 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 				resultingArray[indexCommentTokens] = (java.lang.String)resultingArrayList.get(indexCommentTokens);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCommentTokens != null ? retObjectCommentTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,7 +578,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void setCommentTokens(java.lang.String[] CommentTokens) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommentTokens", CommentTokens);
         } catch (JCNativeException jcne) {
@@ -524,10 +588,12 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public java.lang.String[] getDelimiters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelimiters = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Delimiters");
+            retObjectDelimiters = classInstance.Get("Delimiters");
+            JCObject resultingObjects = (JCObject)retObjectDelimiters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -536,6 +602,8 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 				resultingArray[indexDelimiters] = (java.lang.String)resultingArrayList.get(indexDelimiters);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectDelimiters != null ? retObjectDelimiters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +611,7 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
 
     public void setDelimiters(java.lang.String[] Delimiters) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delimiters", Delimiters);
         } catch (JCNativeException jcne) {

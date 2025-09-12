@@ -165,9 +165,13 @@ public class TypeResolvingOptions extends NetObject  {
     
     public boolean getBrowseTypeDirectly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBrowseTypeDirectly = null;
         try {
-            return (boolean)classInstance.Get("BrowseTypeDirectly");
+            retObjectBrowseTypeDirectly = classInstance.Get("BrowseTypeDirectly");
+            return (boolean)retObjectBrowseTypeDirectly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBrowseTypeDirectly != null ? retObjectBrowseTypeDirectly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class TypeResolvingOptions extends NetObject  {
 
     public void setBrowseTypeDirectly(boolean BrowseTypeDirectly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BrowseTypeDirectly", BrowseTypeDirectly);
         } catch (JCNativeException jcne) {

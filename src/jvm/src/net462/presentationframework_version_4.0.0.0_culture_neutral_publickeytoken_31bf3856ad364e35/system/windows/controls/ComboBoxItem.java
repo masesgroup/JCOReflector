@@ -166,9 +166,13 @@ public class ComboBoxItem extends ListBoxItem  {
     
     public boolean getIsHighlighted() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHighlighted = null;
         try {
-            return (boolean)classInstance.Get("IsHighlighted");
+            retObjectIsHighlighted = classInstance.Get("IsHighlighted");
+            return (boolean)retObjectIsHighlighted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHighlighted != null ? retObjectIsHighlighted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ComboBoxItem extends ListBoxItem  {
 
     public void setIsHighlighted(boolean IsHighlighted) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsHighlighted", IsHighlighted);
         } catch (JCNativeException jcne) {

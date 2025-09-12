@@ -156,10 +156,14 @@ public class ReceiveContent extends NetObject  {
     
     public static ReceiveMessageContent Create(OutArgument message) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", message == null ? null : message.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", message == null ? null : message.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new ReceiveMessageContent(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ReceiveContent extends NetObject  {
 
     public static ReceiveMessageContent Create(OutArgument message, NetType declaredMessageType) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", message == null ? null : message.getJCOInstance(), declaredMessageType == null ? null : declaredMessageType.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", message == null ? null : message.getJCOInstance(), declaredMessageType == null ? null : declaredMessageType.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new ReceiveMessageContent(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

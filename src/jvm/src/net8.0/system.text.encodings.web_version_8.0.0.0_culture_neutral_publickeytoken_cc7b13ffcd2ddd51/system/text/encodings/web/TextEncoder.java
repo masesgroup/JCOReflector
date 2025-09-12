@@ -155,9 +155,13 @@ public class TextEncoder extends NetObject  {
     
     public boolean WillEncode(int unicodeScalar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWillEncode = null;
         try {
-            return (boolean)classInstance.Invoke("WillEncode", unicodeScalar);
+            retObjectWillEncode = classInstance.Invoke("WillEncode", unicodeScalar);
+            return (boolean)retObjectWillEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWillEncode != null ? retObjectWillEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class TextEncoder extends NetObject  {
 
     public java.lang.String Encode(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Encode", value);
+            retObjectEncode = classInstance.Invoke("Encode", value);
+            return (java.lang.String)retObjectEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +183,7 @@ public class TextEncoder extends NetObject  {
 
     public void Encode(TextWriter output, char[] value, int startIndex, int characterCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Encode", output == null ? null : output.getJCOInstance(), value, startIndex, characterCount);
         } catch (JCNativeException jcne) {
@@ -185,7 +193,7 @@ public class TextEncoder extends NetObject  {
 
     public void Encode(TextWriter dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Encode", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class TextEncoder extends NetObject  {
 
     public void Encode(TextWriter output, java.lang.String value, int startIndex, int characterCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Encode", output == null ? null : output.getJCOInstance(), value, startIndex, characterCount);
         } catch (JCNativeException jcne) {
@@ -205,7 +213,7 @@ public class TextEncoder extends NetObject  {
 
     public void Encode(TextWriter output, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Encode", output == null ? null : output.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -219,9 +227,19 @@ public class TextEncoder extends NetObject  {
     
     public int getMaxOutputCharactersPerInputCharacter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxOutputCharactersPerInputCharacter = null;
         try {
-            return (int)classInstance.Get("MaxOutputCharactersPerInputCharacter");
+            retObjectMaxOutputCharactersPerInputCharacter = classInstance.Get("MaxOutputCharactersPerInputCharacter");
+            return (int)retObjectMaxOutputCharactersPerInputCharacter;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxOutputCharactersPerInputCharacterNumber = (java.lang.Number)retObjectMaxOutputCharactersPerInputCharacter;
+                return retObjectMaxOutputCharactersPerInputCharacterNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxOutputCharactersPerInputCharacter != null ? retObjectMaxOutputCharactersPerInputCharacter.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

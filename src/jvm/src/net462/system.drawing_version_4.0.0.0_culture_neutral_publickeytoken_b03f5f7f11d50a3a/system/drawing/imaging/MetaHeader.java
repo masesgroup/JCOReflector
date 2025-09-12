@@ -165,9 +165,19 @@ public class MetaHeader extends NetObject  {
     
     public short getHeaderSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderSize = null;
         try {
-            return (short)classInstance.Get("HeaderSize");
+            retObjectHeaderSize = classInstance.Get("HeaderSize");
+            return (short)retObjectHeaderSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHeaderSizeNumber = (java.lang.Number)retObjectHeaderSize;
+                return retObjectHeaderSizeNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectHeaderSize != null ? retObjectHeaderSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +185,7 @@ public class MetaHeader extends NetObject  {
 
     public void setHeaderSize(short HeaderSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderSize", HeaderSize);
         } catch (JCNativeException jcne) {
@@ -185,9 +195,19 @@ public class MetaHeader extends NetObject  {
 
     public short getNoObjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoObjects = null;
         try {
-            return (short)classInstance.Get("NoObjects");
+            retObjectNoObjects = classInstance.Get("NoObjects");
+            return (short)retObjectNoObjects;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNoObjectsNumber = (java.lang.Number)retObjectNoObjects;
+                return retObjectNoObjectsNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectNoObjects != null ? retObjectNoObjects.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +215,7 @@ public class MetaHeader extends NetObject  {
 
     public void setNoObjects(short NoObjects) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoObjects", NoObjects);
         } catch (JCNativeException jcne) {
@@ -205,9 +225,19 @@ public class MetaHeader extends NetObject  {
 
     public short getNoParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoParameters = null;
         try {
-            return (short)classInstance.Get("NoParameters");
+            retObjectNoParameters = classInstance.Get("NoParameters");
+            return (short)retObjectNoParameters;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNoParametersNumber = (java.lang.Number)retObjectNoParameters;
+                return retObjectNoParametersNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectNoParameters != null ? retObjectNoParameters.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +245,7 @@ public class MetaHeader extends NetObject  {
 
     public void setNoParameters(short NoParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoParameters", NoParameters);
         } catch (JCNativeException jcne) {
@@ -225,9 +255,19 @@ public class MetaHeader extends NetObject  {
 
     public short getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (short)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (short)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTypeNumber = (java.lang.Number)retObjectType;
+                return retObjectTypeNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectType != null ? retObjectType.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +275,7 @@ public class MetaHeader extends NetObject  {
 
     public void setType(short Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type);
         } catch (JCNativeException jcne) {
@@ -245,9 +285,19 @@ public class MetaHeader extends NetObject  {
 
     public short getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (short)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (short)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +305,7 @@ public class MetaHeader extends NetObject  {
 
     public void setVersion(short Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {
@@ -265,9 +315,19 @@ public class MetaHeader extends NetObject  {
 
     public int getMaxRecord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxRecord = null;
         try {
-            return (int)classInstance.Get("MaxRecord");
+            retObjectMaxRecord = classInstance.Get("MaxRecord");
+            return (int)retObjectMaxRecord;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxRecordNumber = (java.lang.Number)retObjectMaxRecord;
+                return retObjectMaxRecordNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRecord != null ? retObjectMaxRecord.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +335,7 @@ public class MetaHeader extends NetObject  {
 
     public void setMaxRecord(int MaxRecord) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxRecord", MaxRecord);
         } catch (JCNativeException jcne) {
@@ -285,9 +345,19 @@ public class MetaHeader extends NetObject  {
 
     public int getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeNumber = (java.lang.Number)retObjectSize;
+                return retObjectSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +365,7 @@ public class MetaHeader extends NetObject  {
 
     public void setSize(int Size) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size);
         } catch (JCNativeException jcne) {

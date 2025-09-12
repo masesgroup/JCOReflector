@@ -172,9 +172,13 @@ public class TextCompositionEventArgs extends InputEventArgs  {
     
     public java.lang.String getControlText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlText = null;
         try {
-            return (java.lang.String)classInstance.Get("ControlText");
+            retObjectControlText = classInstance.Get("ControlText");
+            return (java.lang.String)retObjectControlText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectControlText != null ? retObjectControlText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class TextCompositionEventArgs extends InputEventArgs  {
 
     public java.lang.String getSystemText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemText = null;
         try {
-            return (java.lang.String)classInstance.Get("SystemText");
+            retObjectSystemText = classInstance.Get("SystemText");
+            return (java.lang.String)retObjectSystemText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemText != null ? retObjectSystemText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class TextCompositionEventArgs extends InputEventArgs  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class TextCompositionEventArgs extends InputEventArgs  {
 
     public TextComposition getTextComposition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextComposition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextComposition");
+            retObjectTextComposition = classInstance.Get("TextComposition");
+            JCObject val = (JCObject)retObjectTextComposition;
             return new TextComposition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextComposition != null ? retObjectTextComposition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

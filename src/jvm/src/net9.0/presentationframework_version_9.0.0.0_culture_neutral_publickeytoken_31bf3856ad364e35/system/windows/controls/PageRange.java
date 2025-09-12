@@ -177,9 +177,13 @@ public class PageRange extends ValueType  {
     
     public boolean Equals(PageRange pageRange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", pageRange == null ? null : pageRange.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", pageRange == null ? null : pageRange.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,19 @@ public class PageRange extends ValueType  {
     
     public int getPageFrom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageFrom = null;
         try {
-            return (int)classInstance.Get("PageFrom");
+            retObjectPageFrom = classInstance.Get("PageFrom");
+            return (int)retObjectPageFrom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageFromNumber = (java.lang.Number)retObjectPageFrom;
+                return retObjectPageFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageFrom != null ? retObjectPageFrom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +215,7 @@ public class PageRange extends ValueType  {
 
     public void setPageFrom(int PageFrom) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageFrom", PageFrom);
         } catch (JCNativeException jcne) {
@@ -211,9 +225,19 @@ public class PageRange extends ValueType  {
 
     public int getPageTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageTo = null;
         try {
-            return (int)classInstance.Get("PageTo");
+            retObjectPageTo = classInstance.Get("PageTo");
+            return (int)retObjectPageTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageToNumber = (java.lang.Number)retObjectPageTo;
+                return retObjectPageToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageTo != null ? retObjectPageTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +245,7 @@ public class PageRange extends ValueType  {
 
     public void setPageTo(int PageTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageTo", PageTo);
         } catch (JCNativeException jcne) {

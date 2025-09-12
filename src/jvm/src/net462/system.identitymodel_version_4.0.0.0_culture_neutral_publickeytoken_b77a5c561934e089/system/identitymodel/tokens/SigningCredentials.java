@@ -181,10 +181,14 @@ public class SigningCredentials extends NetObject  {
     
     public SecurityKey getSigningKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningKey");
+            retObjectSigningKey = classInstance.Get("SigningKey");
+            JCObject val = (JCObject)retObjectSigningKey;
             return new SecurityKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningKey != null ? retObjectSigningKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class SigningCredentials extends NetObject  {
 
     public SecurityKeyIdentifier getSigningKeyIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningKeyIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningKeyIdentifier");
+            retObjectSigningKeyIdentifier = classInstance.Get("SigningKeyIdentifier");
+            JCObject val = (JCObject)retObjectSigningKeyIdentifier;
             return new SecurityKeyIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningKeyIdentifier != null ? retObjectSigningKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,13 @@ public class SigningCredentials extends NetObject  {
 
     public java.lang.String getDigestAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigestAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DigestAlgorithm");
+            retObjectDigestAlgorithm = classInstance.Get("DigestAlgorithm");
+            return (java.lang.String)retObjectDigestAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDigestAlgorithm != null ? retObjectDigestAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class SigningCredentials extends NetObject  {
 
     public java.lang.String getSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("SignatureAlgorithm");
+            retObjectSignatureAlgorithm = classInstance.Get("SignatureAlgorithm");
+            return (java.lang.String)retObjectSignatureAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignatureAlgorithm != null ? retObjectSignatureAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

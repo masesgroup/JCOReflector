@@ -166,9 +166,13 @@ public class SaveWorkflowCommand extends InstancePersistenceCommand  {
     
     public boolean getCompleteInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompleteInstance = null;
         try {
-            return (boolean)classInstance.Get("CompleteInstance");
+            retObjectCompleteInstance = classInstance.Get("CompleteInstance");
+            return (boolean)retObjectCompleteInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCompleteInstance != null ? retObjectCompleteInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SaveWorkflowCommand extends InstancePersistenceCommand  {
 
     public void setCompleteInstance(boolean CompleteInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompleteInstance", CompleteInstance);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class SaveWorkflowCommand extends InstancePersistenceCommand  {
 
     public boolean getUnlockInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnlockInstance = null;
         try {
-            return (boolean)classInstance.Get("UnlockInstance");
+            retObjectUnlockInstance = classInstance.Get("UnlockInstance");
+            return (boolean)retObjectUnlockInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnlockInstance != null ? retObjectUnlockInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class SaveWorkflowCommand extends InstancePersistenceCommand  {
 
     public void setUnlockInstance(boolean UnlockInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnlockInstance", UnlockInstance);
         } catch (JCNativeException jcne) {

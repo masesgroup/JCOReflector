@@ -168,9 +168,13 @@ public class Receive extends Activity  {
     
     public boolean ShouldSerializeCorrelatesOn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeCorrelatesOn = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeCorrelatesOn");
+            retObjectShouldSerializeCorrelatesOn = classInstance.Invoke("ShouldSerializeCorrelatesOn");
+            return (boolean)retObjectShouldSerializeCorrelatesOn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeCorrelatesOn != null ? retObjectShouldSerializeCorrelatesOn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class Receive extends Activity  {
 
     public static Receive FromOperationDescription(OperationDescription operation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.OverflowException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromOperationDescription = null;
         try {
-            JCObject objFromOperationDescription = (JCObject)classType.Invoke("FromOperationDescription", operation == null ? null : operation.getJCOInstance());
+            retObjectFromOperationDescription = classType.Invoke("FromOperationDescription", operation == null ? null : operation.getJCOInstance());
+            JCObject objFromOperationDescription = (JCObject)retObjectFromOperationDescription;
             return new Receive(objFromOperationDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromOperationDescription != null ? retObjectFromOperationDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class Receive extends Activity  {
     
     public boolean getCanCreateInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateInstance = null;
         try {
-            return (boolean)classInstance.Get("CanCreateInstance");
+            retObjectCanCreateInstance = classInstance.Get("CanCreateInstance");
+            return (boolean)retObjectCanCreateInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateInstance != null ? retObjectCanCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +215,7 @@ public class Receive extends Activity  {
 
     public void setCanCreateInstance(boolean CanCreateInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanCreateInstance", CanCreateInstance);
         } catch (JCNativeException jcne) {
@@ -213,10 +225,14 @@ public class Receive extends Activity  {
 
     public ReceiveContent getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            JCObject val = (JCObject)retObjectContent;
             return new ReceiveContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +240,7 @@ public class Receive extends Activity  {
 
     public void setContent(ReceiveContent Content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +250,14 @@ public class Receive extends Activity  {
 
     public SerializerOption getSerializerOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializerOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SerializerOption");
+            retObjectSerializerOption = classInstance.Get("SerializerOption");
+            JCObject val = (JCObject)retObjectSerializerOption;
             return new SerializerOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializerOption != null ? retObjectSerializerOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +265,7 @@ public class Receive extends Activity  {
 
     public void setSerializerOption(SerializerOption SerializerOption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializerOption", SerializerOption == null ? null : SerializerOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,10 +275,14 @@ public class Receive extends Activity  {
 
     public MessageQuerySet getCorrelatesOn() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelatesOn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CorrelatesOn");
+            retObjectCorrelatesOn = classInstance.Get("CorrelatesOn");
+            JCObject val = (JCObject)retObjectCorrelatesOn;
             return new MessageQuerySet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelatesOn != null ? retObjectCorrelatesOn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +290,7 @@ public class Receive extends Activity  {
 
     public void setCorrelatesOn(MessageQuerySet CorrelatesOn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CorrelatesOn", CorrelatesOn == null ? null : CorrelatesOn.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,9 +300,13 @@ public class Receive extends Activity  {
 
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +314,7 @@ public class Receive extends Activity  {
 
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Action", Action);
         } catch (JCNativeException jcne) {
@@ -296,9 +324,13 @@ public class Receive extends Activity  {
 
     public java.lang.String getOperationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationName = null;
         try {
-            return (java.lang.String)classInstance.Get("OperationName");
+            retObjectOperationName = classInstance.Get("OperationName");
+            return (java.lang.String)retObjectOperationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOperationName != null ? retObjectOperationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +338,7 @@ public class Receive extends Activity  {
 
     public void setOperationName(java.lang.String OperationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OperationName", OperationName);
         } catch (JCNativeException jcne) {
@@ -316,10 +348,14 @@ public class Receive extends Activity  {
 
     public XName getServiceContractName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceContractName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContractName");
+            retObjectServiceContractName = classInstance.Get("ServiceContractName");
+            JCObject val = (JCObject)retObjectServiceContractName;
             return new XName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceContractName != null ? retObjectServiceContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +363,7 @@ public class Receive extends Activity  {
 
     public void setServiceContractName(XName ServiceContractName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceContractName", ServiceContractName == null ? null : ServiceContractName.getJCOInstance());
         } catch (JCNativeException jcne) {

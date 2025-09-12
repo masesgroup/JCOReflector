@@ -168,10 +168,14 @@ public class WebUtilityElement extends ConfigurationElement  {
     
     public UnicodeDecodingConformance getUnicodeDecodingConformance() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnicodeDecodingConformance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnicodeDecodingConformance");
+            retObjectUnicodeDecodingConformance = classInstance.Get("UnicodeDecodingConformance");
+            JCObject val = (JCObject)retObjectUnicodeDecodingConformance;
             return new UnicodeDecodingConformance(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnicodeDecodingConformance != null ? retObjectUnicodeDecodingConformance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class WebUtilityElement extends ConfigurationElement  {
 
     public void setUnicodeDecodingConformance(UnicodeDecodingConformance UnicodeDecodingConformance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnicodeDecodingConformance", UnicodeDecodingConformance == null ? null : UnicodeDecodingConformance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class WebUtilityElement extends ConfigurationElement  {
 
     public UnicodeEncodingConformance getUnicodeEncodingConformance() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnicodeEncodingConformance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnicodeEncodingConformance");
+            retObjectUnicodeEncodingConformance = classInstance.Get("UnicodeEncodingConformance");
+            JCObject val = (JCObject)retObjectUnicodeEncodingConformance;
             return new UnicodeEncodingConformance(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnicodeEncodingConformance != null ? retObjectUnicodeEncodingConformance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class WebUtilityElement extends ConfigurationElement  {
 
     public void setUnicodeEncodingConformance(UnicodeEncodingConformance UnicodeEncodingConformance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnicodeEncodingConformance", UnicodeEncodingConformance == null ? null : UnicodeEncodingConformance.getJCOInstance());
         } catch (JCNativeException jcne) {

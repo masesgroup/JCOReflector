@@ -171,10 +171,14 @@ public class UIPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class UIPermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public UIPermissionClipboard getClipboard() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipboard = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clipboard");
+            retObjectClipboard = classInstance.Get("Clipboard");
+            JCObject val = (JCObject)retObjectClipboard;
             return new UIPermissionClipboard(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipboard != null ? retObjectClipboard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class UIPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setClipboard(UIPermissionClipboard Clipboard) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clipboard", Clipboard == null ? null : Clipboard.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,10 +215,14 @@ public class UIPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public UIPermissionWindow getWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Window");
+            retObjectWindow = classInstance.Get("Window");
+            JCObject val = (JCObject)retObjectWindow;
             return new UIPermissionWindow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindow != null ? retObjectWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class UIPermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setWindow(UIPermissionWindow Window) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Window", Window == null ? null : Window.getJCOInstance());
         } catch (JCNativeException jcne) {

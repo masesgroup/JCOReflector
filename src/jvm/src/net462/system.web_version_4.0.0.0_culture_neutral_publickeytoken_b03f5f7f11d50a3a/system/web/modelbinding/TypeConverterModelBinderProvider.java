@@ -166,10 +166,14 @@ public class TypeConverterModelBinderProvider extends ModelBinderProvider  {
     
     public IModelBinder GetBinder(ModelBindingExecutionContext modelBindingExecutionContext, ModelBindingContext bindingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBinder = null;
         try {
-            JCObject objGetBinder = (JCObject)classInstance.Invoke("GetBinder", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance(), bindingContext == null ? null : bindingContext.getJCOInstance());
+            retObjectGetBinder = classInstance.Invoke("GetBinder", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance(), bindingContext == null ? null : bindingContext.getJCOInstance());
+            JCObject objGetBinder = (JCObject)retObjectGetBinder;
             return new IModelBinderImplementation(objGetBinder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBinder != null ? retObjectGetBinder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

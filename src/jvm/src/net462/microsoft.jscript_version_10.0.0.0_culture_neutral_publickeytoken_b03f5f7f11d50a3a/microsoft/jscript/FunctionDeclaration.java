@@ -160,10 +160,14 @@ public class FunctionDeclaration extends AST  {
     
     public static Closure JScriptFunctionDeclaration(RuntimeTypeHandle handle, java.lang.String name, java.lang.String method_name, java.lang.String[] formal_parameters, JSLocalField[] fields, boolean must_save_stack_locals, boolean hasArgumentsObject, java.lang.String text, NetObject declaringObject, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptFunctionDeclaration = null;
         try {
-            JCObject objJScriptFunctionDeclaration = (JCObject)classType.Invoke("JScriptFunctionDeclaration", handle == null ? null : handle.getJCOInstance(), name, method_name, formal_parameters, toObjectFromArray(fields), must_save_stack_locals, hasArgumentsObject, text, declaringObject == null ? null : declaringObject.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            retObjectJScriptFunctionDeclaration = classType.Invoke("JScriptFunctionDeclaration", handle == null ? null : handle.getJCOInstance(), name, method_name, formal_parameters, toObjectFromArray(fields), must_save_stack_locals, hasArgumentsObject, text, declaringObject == null ? null : declaringObject.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            JCObject objJScriptFunctionDeclaration = (JCObject)retObjectJScriptFunctionDeclaration;
             return new Closure(objJScriptFunctionDeclaration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptFunctionDeclaration != null ? retObjectJScriptFunctionDeclaration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class FunctionDeclaration extends AST  {
 
     public static Closure JScriptFunctionDeclaration(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, NetObject dupParam8, VsaEngine dupParam9) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptFunctionDeclaration = null;
         try {
-            JCObject objJScriptFunctionDeclaration = (JCObject)classType.Invoke("JScriptFunctionDeclaration", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), toObjectFromArray(dupParam4), dupParam5, dupParam6, dupParam7, dupParam8 == null ? null : dupParam8.getJCOInstance(), dupParam9 == null ? null : dupParam9.getJCOInstance());
+            retObjectJScriptFunctionDeclaration = classType.Invoke("JScriptFunctionDeclaration", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), toObjectFromArray(dupParam4), dupParam5, dupParam6, dupParam7, dupParam8 == null ? null : dupParam8.getJCOInstance(), dupParam9 == null ? null : dupParam9.getJCOInstance());
+            JCObject objJScriptFunctionDeclaration = (JCObject)retObjectJScriptFunctionDeclaration;
             return new Closure(objJScriptFunctionDeclaration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptFunctionDeclaration != null ? retObjectJScriptFunctionDeclaration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

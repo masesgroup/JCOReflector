@@ -158,10 +158,14 @@ public class Utils extends NetObject  {
     
     public static Array CopyArray(Array arySrc, Array aryDest) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopyArray = null;
         try {
-            JCObject objCopyArray = (JCObject)classType.Invoke("CopyArray", arySrc == null ? null : arySrc.getJCOInstance(), aryDest == null ? null : aryDest.getJCOInstance());
+            retObjectCopyArray = classType.Invoke("CopyArray", arySrc == null ? null : arySrc.getJCOInstance(), aryDest == null ? null : aryDest.getJCOInstance());
+            JCObject objCopyArray = (JCObject)retObjectCopyArray;
             return new Array(objCopyArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyArray != null ? retObjectCopyArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class Utils extends NetObject  {
 
     public static NetObject SetCultureInfo(CultureInfo Culture) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetCultureInfo = null;
         try {
-            JCObject objSetCultureInfo = (JCObject)classType.Invoke("SetCultureInfo", Culture == null ? null : Culture.getJCOInstance());
+            retObjectSetCultureInfo = classType.Invoke("SetCultureInfo", Culture == null ? null : Culture.getJCOInstance());
+            JCObject objSetCultureInfo = (JCObject)retObjectSetCultureInfo;
             return new NetObject(objSetCultureInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetCultureInfo != null ? retObjectSetCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class Utils extends NetObject  {
 
     public static java.lang.String GetResourceString(java.lang.String ResourceKey, java.lang.String... Args) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetResourceString = null;
         try {
-            return (java.lang.String)classType.Invoke("GetResourceString", ResourceKey, Args);
+            retObjectGetResourceString = classType.Invoke("GetResourceString", ResourceKey, Args);
+            return (java.lang.String)retObjectGetResourceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResourceString != null ? retObjectGetResourceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class Utils extends NetObject  {
 
     public static java.lang.String GetResourceString(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetResourceString = null;
         try {
-            return (java.lang.String)classType.Invoke("GetResourceString", dupParam0, dupParam1.getJCRefOut());
+            retObjectGetResourceString = classType.Invoke("GetResourceString", dupParam0, dupParam1.getJCRefOut());
+            return (java.lang.String)retObjectGetResourceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResourceString != null ? retObjectGetResourceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class Utils extends NetObject  {
 
     public static java.lang.String MethodToString(MethodBase Method) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMethodToString = null;
         try {
-            return (java.lang.String)classType.Invoke("MethodToString", Method == null ? null : Method.getJCOInstance());
+            retObjectMethodToString = classType.Invoke("MethodToString", Method == null ? null : Method.getJCOInstance());
+            return (java.lang.String)retObjectMethodToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMethodToString != null ? retObjectMethodToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +230,7 @@ public class Utils extends NetObject  {
 
     public static void ThrowException(int hr) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ThrowException", hr);
         } catch (JCNativeException jcne) {

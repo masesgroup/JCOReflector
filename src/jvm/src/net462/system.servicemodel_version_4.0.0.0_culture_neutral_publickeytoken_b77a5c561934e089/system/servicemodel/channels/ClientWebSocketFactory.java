@@ -156,10 +156,14 @@ public class ClientWebSocketFactory extends NetObject  {
     
     public WebSocket CreateWebSocket(Stream connection, WebSocketTransportSettings settings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWebSocket = null;
         try {
-            JCObject objCreateWebSocket = (JCObject)classInstance.Invoke("CreateWebSocket", connection == null ? null : connection.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreateWebSocket = classInstance.Invoke("CreateWebSocket", connection == null ? null : connection.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreateWebSocket = (JCObject)retObjectCreateWebSocket;
             return new WebSocket(objCreateWebSocket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWebSocket != null ? retObjectCreateWebSocket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class ClientWebSocketFactory extends NetObject  {
     
     public java.lang.String getWebSocketVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebSocketVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("WebSocketVersion");
+            retObjectWebSocketVersion = classInstance.Get("WebSocketVersion");
+            return (java.lang.String)retObjectWebSocketVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWebSocketVersion != null ? retObjectWebSocketVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

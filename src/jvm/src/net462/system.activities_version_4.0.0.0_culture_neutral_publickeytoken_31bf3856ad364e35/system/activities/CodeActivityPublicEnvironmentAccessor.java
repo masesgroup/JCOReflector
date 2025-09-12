@@ -160,9 +160,13 @@ public class CodeActivityPublicEnvironmentAccessor extends ValueType  {
     
     public boolean TryGetAccessToPublicLocation(LocationReference publicLocation, ArgumentDirection accessDirection, JCORefOut<LocationReference> equivalentLocation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetAccessToPublicLocation = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetAccessToPublicLocation", publicLocation == null ? null : publicLocation.getJCOInstance(), accessDirection == null ? null : accessDirection.getJCOInstance(), equivalentLocation.getJCRefOut());
+            retObjectTryGetAccessToPublicLocation = classInstance.Invoke("TryGetAccessToPublicLocation", publicLocation == null ? null : publicLocation.getJCOInstance(), accessDirection == null ? null : accessDirection.getJCOInstance(), equivalentLocation.getJCRefOut());
+            return (boolean)retObjectTryGetAccessToPublicLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetAccessToPublicLocation != null ? retObjectTryGetAccessToPublicLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class CodeActivityPublicEnvironmentAccessor extends ValueType  {
 
     public boolean TryGetReferenceToPublicLocation(LocationReference publicReference, JCORefOut<LocationReference> equivalentReference) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetReferenceToPublicLocation = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetReferenceToPublicLocation", publicReference == null ? null : publicReference.getJCOInstance(), equivalentReference.getJCRefOut());
+            retObjectTryGetReferenceToPublicLocation = classInstance.Invoke("TryGetReferenceToPublicLocation", publicReference == null ? null : publicReference.getJCOInstance(), equivalentReference.getJCRefOut());
+            return (boolean)retObjectTryGetReferenceToPublicLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetReferenceToPublicLocation != null ? retObjectTryGetReferenceToPublicLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class CodeActivityPublicEnvironmentAccessor extends ValueType  {
 
     public static CodeActivityPublicEnvironmentAccessor Create(CodeActivityMetadata metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", metadata == null ? null : metadata.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", metadata == null ? null : metadata.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new CodeActivityPublicEnvironmentAccessor(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class CodeActivityPublicEnvironmentAccessor extends ValueType  {
     
     public CodeActivityMetadata getActivityMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityMetadata");
+            retObjectActivityMetadata = classInstance.Get("ActivityMetadata");
+            JCObject val = (JCObject)retObjectActivityMetadata;
             return new CodeActivityMetadata(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityMetadata != null ? retObjectActivityMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

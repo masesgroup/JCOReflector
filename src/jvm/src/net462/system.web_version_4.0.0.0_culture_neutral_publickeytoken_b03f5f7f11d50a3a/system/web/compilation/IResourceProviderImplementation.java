@@ -145,10 +145,14 @@ public class IResourceProviderImplementation extends NetObject implements IResou
     
     public NetObject GetObject(java.lang.String resourceKey, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", resourceKey, culture == null ? null : culture.getJCOInstance());
+            retObjectGetObject = classInstance.Invoke("GetObject", resourceKey, culture == null ? null : culture.getJCOInstance());
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class IResourceProviderImplementation extends NetObject implements IResou
     
     public IResourceReader getResourceReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceReader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceReader");
+            retObjectResourceReader = classInstance.Get("ResourceReader");
+            JCObject val = (JCObject)retObjectResourceReader;
             return new IResourceReaderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceReader != null ? retObjectResourceReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,10 +167,14 @@ public class InputScope extends NetObject  {
     
     public IList getNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Names");
+            retObjectNames = classInstance.Get("Names");
+            JCObject val = (JCObject)retObjectNames;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNames != null ? retObjectNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class InputScope extends NetObject  {
 
     public IList getPhraseList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPhraseList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PhraseList");
+            retObjectPhraseList = classInstance.Get("PhraseList");
+            JCObject val = (JCObject)retObjectPhraseList;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPhraseList != null ? retObjectPhraseList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class InputScope extends NetObject  {
 
     public java.lang.String getRegularExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegularExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("RegularExpression");
+            retObjectRegularExpression = classInstance.Get("RegularExpression");
+            return (java.lang.String)retObjectRegularExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRegularExpression != null ? retObjectRegularExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +211,7 @@ public class InputScope extends NetObject  {
 
     public void setRegularExpression(java.lang.String RegularExpression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RegularExpression", RegularExpression);
         } catch (JCNativeException jcne) {
@@ -209,9 +221,13 @@ public class InputScope extends NetObject  {
 
     public java.lang.String getSrgsMarkup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSrgsMarkup = null;
         try {
-            return (java.lang.String)classInstance.Get("SrgsMarkup");
+            retObjectSrgsMarkup = classInstance.Get("SrgsMarkup");
+            return (java.lang.String)retObjectSrgsMarkup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSrgsMarkup != null ? retObjectSrgsMarkup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class InputScope extends NetObject  {
 
     public void setSrgsMarkup(java.lang.String SrgsMarkup) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SrgsMarkup", SrgsMarkup);
         } catch (JCNativeException jcne) {

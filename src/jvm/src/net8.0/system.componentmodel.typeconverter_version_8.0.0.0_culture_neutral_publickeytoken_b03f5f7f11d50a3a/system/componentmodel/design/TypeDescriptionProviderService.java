@@ -154,10 +154,14 @@ public class TypeDescriptionProviderService extends NetObject  {
     
     public TypeDescriptionProvider GetProvider(NetObject instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProvider = null;
         try {
-            JCObject objGetProvider = (JCObject)classInstance.Invoke("GetProvider", instance == null ? null : instance.getJCOInstance());
+            retObjectGetProvider = classInstance.Invoke("GetProvider", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetProvider = (JCObject)retObjectGetProvider;
             return new TypeDescriptionProvider(objGetProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProvider != null ? retObjectGetProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class TypeDescriptionProviderService extends NetObject  {
 
     public TypeDescriptionProvider GetProvider(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProvider = null;
         try {
-            JCObject objGetProvider = (JCObject)classInstance.Invoke("GetProvider", type == null ? null : type.getJCOInstance());
+            retObjectGetProvider = classInstance.Invoke("GetProvider", type == null ? null : type.getJCOInstance());
+            JCObject objGetProvider = (JCObject)retObjectGetProvider;
             return new TypeDescriptionProvider(objGetProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProvider != null ? retObjectGetProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

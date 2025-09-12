@@ -166,7 +166,7 @@ public class MasterPage extends UserControl  {
     
     public void InstantiateInContentPlaceHolder(Control contentPlaceHolder, ITemplate template) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InstantiateInContentPlaceHolder", contentPlaceHolder == null ? null : contentPlaceHolder.getJCOInstance(), template == null ? null : template.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,9 +180,13 @@ public class MasterPage extends UserControl  {
     
     public java.lang.String getMasterPageFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMasterPageFile = null;
         try {
-            return (java.lang.String)classInstance.Get("MasterPageFile");
+            retObjectMasterPageFile = classInstance.Get("MasterPageFile");
+            return (java.lang.String)retObjectMasterPageFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMasterPageFile != null ? retObjectMasterPageFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class MasterPage extends UserControl  {
 
     public void setMasterPageFile(java.lang.String MasterPageFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MasterPageFile", MasterPageFile);
         } catch (JCNativeException jcne) {
@@ -200,10 +204,14 @@ public class MasterPage extends UserControl  {
 
     public MasterPage getMaster() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.NotImplementedException, system.web.HttpParseException, system.web.HttpCompileException, system.MulticastNotSupportedException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaster = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Master");
+            retObjectMaster = classInstance.Get("Master");
+            JCObject val = (JCObject)retObjectMaster;
             return new MasterPage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaster != null ? retObjectMaster.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

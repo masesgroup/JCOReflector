@@ -158,10 +158,14 @@ public class Pkcs12CertBag extends Pkcs12SafeBag  {
     
     public Oid GetCertificateType() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCertificateType = null;
         try {
-            JCObject objGetCertificateType = (JCObject)classInstance.Invoke("GetCertificateType");
+            retObjectGetCertificateType = classInstance.Invoke("GetCertificateType");
+            JCObject objGetCertificateType = (JCObject)retObjectGetCertificateType;
             return new Oid(objGetCertificateType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCertificateType != null ? retObjectGetCertificateType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class Pkcs12CertBag extends Pkcs12SafeBag  {
 
     public X509Certificate2 GetCertificate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCertificate = null;
         try {
-            JCObject objGetCertificate = (JCObject)classInstance.Invoke("GetCertificate");
+            retObjectGetCertificate = classInstance.Invoke("GetCertificate");
+            JCObject objGetCertificate = (JCObject)retObjectGetCertificate;
             return new X509Certificate2(objGetCertificate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCertificate != null ? retObjectGetCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class Pkcs12CertBag extends Pkcs12SafeBag  {
     
     public boolean getIsX509Certificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsX509Certificate = null;
         try {
-            return (boolean)classInstance.Get("IsX509Certificate");
+            retObjectIsX509Certificate = classInstance.Get("IsX509Certificate");
+            return (boolean)retObjectIsX509Certificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsX509Certificate != null ? retObjectIsX509Certificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

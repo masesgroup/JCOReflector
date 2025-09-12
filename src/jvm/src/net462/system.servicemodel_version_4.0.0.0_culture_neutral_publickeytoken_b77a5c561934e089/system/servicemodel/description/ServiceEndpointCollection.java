@@ -158,10 +158,14 @@ public class ServiceEndpointCollection extends NetObjectEnumerable  {
     
     public ServiceEndpoint Find(NetType contractType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", contractType == null ? null : contractType.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", contractType == null ? null : contractType.getJCOInstance());
+            JCObject objFind = (JCObject)retObjectFind;
             return new ServiceEndpoint(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class ServiceEndpointCollection extends NetObjectEnumerable  {
 
     public ServiceEndpoint Find(NetType contractType, XmlQualifiedName bindingName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", contractType == null ? null : contractType.getJCOInstance(), bindingName == null ? null : bindingName.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", contractType == null ? null : contractType.getJCOInstance(), bindingName == null ? null : bindingName.getJCOInstance());
+            JCObject objFind = (JCObject)retObjectFind;
             return new ServiceEndpoint(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ServiceEndpointCollection extends NetObjectEnumerable  {
 
     public ServiceEndpoint Find(Uri address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", address == null ? null : address.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", address == null ? null : address.getJCOInstance());
+            JCObject objFind = (JCObject)retObjectFind;
             return new ServiceEndpoint(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class ServiceEndpointCollection extends NetObjectEnumerable  {
 
     public ServiceEndpoint Find(XmlQualifiedName contractName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", contractName == null ? null : contractName.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", contractName == null ? null : contractName.getJCOInstance());
+            JCObject objFind = (JCObject)retObjectFind;
             return new ServiceEndpoint(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class ServiceEndpointCollection extends NetObjectEnumerable  {
 
     public ServiceEndpoint Find(XmlQualifiedName contractName, XmlQualifiedName bindingName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", contractName == null ? null : contractName.getJCOInstance(), bindingName == null ? null : bindingName.getJCOInstance());
+            retObjectFind = classInstance.Invoke("Find", contractName == null ? null : contractName.getJCOInstance(), bindingName == null ? null : bindingName.getJCOInstance());
+            JCObject objFind = (JCObject)retObjectFind;
             return new ServiceEndpoint(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

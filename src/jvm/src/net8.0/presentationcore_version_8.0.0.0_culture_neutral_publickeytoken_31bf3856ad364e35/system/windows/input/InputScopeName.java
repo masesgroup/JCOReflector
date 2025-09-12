@@ -172,7 +172,7 @@ public class InputScopeName extends NetObject  {
     
     public void AddChild(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddChild", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class InputScopeName extends NetObject  {
 
     public void AddText(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddText", name);
         } catch (JCNativeException jcne) {
@@ -196,10 +196,14 @@ public class InputScopeName extends NetObject  {
     
     public InputScopeNameValue getNameValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameValue");
+            retObjectNameValue = classInstance.Get("NameValue");
+            JCObject val = (JCObject)retObjectNameValue;
             return new InputScopeNameValue(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameValue != null ? retObjectNameValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +211,7 @@ public class InputScopeName extends NetObject  {
 
     public void setNameValue(InputScopeNameValue NameValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameValue", NameValue == null ? null : NameValue.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -169,7 +169,7 @@ public class SecurityBindingElementImporter extends NetObject implements system.
      */
     @Deprecated 
     public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
     }
 
 
@@ -178,9 +178,19 @@ public class SecurityBindingElementImporter extends NetObject implements system.
     
     public int getMaxPolicyRedirections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPolicyRedirections = null;
         try {
-            return (int)classInstance.Get("MaxPolicyRedirections");
+            retObjectMaxPolicyRedirections = classInstance.Get("MaxPolicyRedirections");
+            return (int)retObjectMaxPolicyRedirections;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPolicyRedirectionsNumber = (java.lang.Number)retObjectMaxPolicyRedirections;
+                return retObjectMaxPolicyRedirectionsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPolicyRedirections != null ? retObjectMaxPolicyRedirections.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

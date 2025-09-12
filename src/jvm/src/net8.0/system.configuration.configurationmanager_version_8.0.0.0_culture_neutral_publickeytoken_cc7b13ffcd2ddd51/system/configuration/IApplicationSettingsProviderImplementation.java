@@ -146,10 +146,14 @@ public class IApplicationSettingsProviderImplementation extends NetObject implem
     
     public SettingsPropertyValue GetPreviousVersion(SettingsContext context, SettingsProperty property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreviousVersion = null;
         try {
-            JCObject objGetPreviousVersion = (JCObject)classInstance.Invoke("GetPreviousVersion", context == null ? null : context.getJCOInstance(), property == null ? null : property.getJCOInstance());
+            retObjectGetPreviousVersion = classInstance.Invoke("GetPreviousVersion", context == null ? null : context.getJCOInstance(), property == null ? null : property.getJCOInstance());
+            JCObject objGetPreviousVersion = (JCObject)retObjectGetPreviousVersion;
             return new SettingsPropertyValue(objGetPreviousVersion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreviousVersion != null ? retObjectGetPreviousVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class IApplicationSettingsProviderImplementation extends NetObject implem
 
     public void Reset(SettingsContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +171,7 @@ public class IApplicationSettingsProviderImplementation extends NetObject implem
 
     public void Upgrade(SettingsContext context, SettingsPropertyCollection properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Upgrade", context == null ? null : context.getJCOInstance(), properties == null ? null : properties.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -143,9 +143,13 @@ public class IContainerControlImplementation extends NetObject implements IConta
     
     public boolean ActivateControl(Control active) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivateControl = null;
         try {
-            return (boolean)classInstance.Invoke("ActivateControl", active == null ? null : active.getJCOInstance());
+            retObjectActivateControl = classInstance.Invoke("ActivateControl", active == null ? null : active.getJCOInstance());
+            return (boolean)retObjectActivateControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectActivateControl != null ? retObjectActivateControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IContainerControlImplementation extends NetObject implements IConta
     
     public Control getActiveControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveControl");
+            retObjectActiveControl = classInstance.Get("ActiveControl");
+            JCObject val = (JCObject)retObjectActiveControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveControl != null ? retObjectActiveControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +176,7 @@ public class IContainerControlImplementation extends NetObject implements IConta
 
     public void setActiveControl(Control ActiveControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveControl", ActiveControl == null ? null : ActiveControl.getJCOInstance());
         } catch (JCNativeException jcne) {

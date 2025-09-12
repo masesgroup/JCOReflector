@@ -163,7 +163,7 @@ public class WorkflowRuntimeServiceElementCollection extends ConfigurationElemen
     
     public void Add(WorkflowRuntimeServiceElement serviceSettings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", serviceSettings == null ? null : serviceSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

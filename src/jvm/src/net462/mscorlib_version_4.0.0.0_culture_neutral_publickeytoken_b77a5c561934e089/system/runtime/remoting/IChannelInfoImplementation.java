@@ -146,16 +146,20 @@ public class IChannelInfoImplementation extends NetObject implements IChannelInf
     
     public final NetObject[] getChannelData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelData = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ChannelData");
+            retObjectChannelData = classInstance.Get("ChannelData");
+            JCObject resultingObjects = (JCObject)retObjectChannelData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelData != null ? retObjectChannelData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +167,7 @@ public class IChannelInfoImplementation extends NetObject implements IChannelInf
 
     public void setChannelData(NetObject[] ChannelData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChannelData", toObjectFromArray(ChannelData));
         } catch (JCNativeException jcne) {

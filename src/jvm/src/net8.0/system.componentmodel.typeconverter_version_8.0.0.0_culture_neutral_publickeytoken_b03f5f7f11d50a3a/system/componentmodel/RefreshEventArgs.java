@@ -180,10 +180,14 @@ public class RefreshEventArgs extends EventArgs  {
     
     public NetObject getComponentChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentChanged = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ComponentChanged");
+            retObjectComponentChanged = classInstance.Get("ComponentChanged");
+            JCObject val = (JCObject)retObjectComponentChanged;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponentChanged != null ? retObjectComponentChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class RefreshEventArgs extends EventArgs  {
 
     public NetType getTypeChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeChanged = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeChanged");
+            retObjectTypeChanged = classInstance.Get("TypeChanged");
+            JCObject val = (JCObject)retObjectTypeChanged;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeChanged != null ? retObjectTypeChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

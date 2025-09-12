@@ -170,7 +170,7 @@ public class MenuItem extends HeaderedItemsControl  {
     
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -184,9 +184,13 @@ public class MenuItem extends HeaderedItemsControl  {
     
     public boolean getIsCheckable() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCheckable = null;
         try {
-            return (boolean)classInstance.Get("IsCheckable");
+            retObjectIsCheckable = classInstance.Get("IsCheckable");
+            return (boolean)retObjectIsCheckable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCheckable != null ? retObjectIsCheckable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setIsCheckable(boolean IsCheckable) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsCheckable", IsCheckable);
         } catch (JCNativeException jcne) {
@@ -204,9 +208,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public boolean getIsChecked() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsChecked = null;
         try {
-            return (boolean)classInstance.Get("IsChecked");
+            retObjectIsChecked = classInstance.Get("IsChecked");
+            return (boolean)retObjectIsChecked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsChecked != null ? retObjectIsChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +222,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setIsChecked(boolean IsChecked) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsChecked", IsChecked);
         } catch (JCNativeException jcne) {
@@ -224,9 +232,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public boolean getIsHighlighted() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHighlighted = null;
         try {
-            return (boolean)classInstance.Get("IsHighlighted");
+            retObjectIsHighlighted = classInstance.Get("IsHighlighted");
+            return (boolean)retObjectIsHighlighted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHighlighted != null ? retObjectIsHighlighted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +246,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setIsHighlighted(boolean IsHighlighted) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsHighlighted", IsHighlighted);
         } catch (JCNativeException jcne) {
@@ -244,9 +256,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public boolean getIsPressed() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPressed = null;
         try {
-            return (boolean)classInstance.Get("IsPressed");
+            retObjectIsPressed = classInstance.Get("IsPressed");
+            return (boolean)retObjectIsPressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPressed != null ? retObjectIsPressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +270,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setIsPressed(boolean IsPressed) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPressed", IsPressed);
         } catch (JCNativeException jcne) {
@@ -264,9 +280,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public boolean getIsSubmenuOpen() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSubmenuOpen = null;
         try {
-            return (boolean)classInstance.Get("IsSubmenuOpen");
+            retObjectIsSubmenuOpen = classInstance.Get("IsSubmenuOpen");
+            return (boolean)retObjectIsSubmenuOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSubmenuOpen != null ? retObjectIsSubmenuOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +294,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setIsSubmenuOpen(boolean IsSubmenuOpen) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSubmenuOpen", IsSubmenuOpen);
         } catch (JCNativeException jcne) {
@@ -284,9 +304,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public boolean getIsSuspendingPopupAnimation() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSuspendingPopupAnimation = null;
         try {
-            return (boolean)classInstance.Get("IsSuspendingPopupAnimation");
+            retObjectIsSuspendingPopupAnimation = classInstance.Get("IsSuspendingPopupAnimation");
+            return (boolean)retObjectIsSuspendingPopupAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSuspendingPopupAnimation != null ? retObjectIsSuspendingPopupAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +318,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setIsSuspendingPopupAnimation(boolean IsSuspendingPopupAnimation) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSuspendingPopupAnimation", IsSuspendingPopupAnimation);
         } catch (JCNativeException jcne) {
@@ -304,9 +328,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public boolean getStaysOpenOnClick() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaysOpenOnClick = null;
         try {
-            return (boolean)classInstance.Get("StaysOpenOnClick");
+            retObjectStaysOpenOnClick = classInstance.Get("StaysOpenOnClick");
+            return (boolean)retObjectStaysOpenOnClick;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStaysOpenOnClick != null ? retObjectStaysOpenOnClick.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +342,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setStaysOpenOnClick(boolean StaysOpenOnClick) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaysOpenOnClick", StaysOpenOnClick);
         } catch (JCNativeException jcne) {
@@ -324,9 +352,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public boolean getUsesItemContainerTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesItemContainerTemplate = null;
         try {
-            return (boolean)classInstance.Get("UsesItemContainerTemplate");
+            retObjectUsesItemContainerTemplate = classInstance.Get("UsesItemContainerTemplate");
+            return (boolean)retObjectUsesItemContainerTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesItemContainerTemplate != null ? retObjectUsesItemContainerTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +366,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setUsesItemContainerTemplate(boolean UsesItemContainerTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsesItemContainerTemplate", UsesItemContainerTemplate);
         } catch (JCNativeException jcne) {
@@ -344,10 +376,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public NetObject getCommandParameter() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandParameter");
+            retObjectCommandParameter = classInstance.Get("CommandParameter");
+            JCObject val = (JCObject)retObjectCommandParameter;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandParameter != null ? retObjectCommandParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +391,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setCommandParameter(NetObject CommandParameter) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandParameter", CommandParameter == null ? null : CommandParameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,10 +401,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public NetObject getIcon() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIcon = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Icon");
+            retObjectIcon = classInstance.Get("Icon");
+            JCObject val = (JCObject)retObjectIcon;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIcon != null ? retObjectIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +416,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setIcon(NetObject Icon) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Icon", Icon == null ? null : Icon.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,9 +426,13 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public java.lang.String getInputGestureText() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputGestureText = null;
         try {
-            return (java.lang.String)classInstance.Get("InputGestureText");
+            retObjectInputGestureText = classInstance.Get("InputGestureText");
+            return (java.lang.String)retObjectInputGestureText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInputGestureText != null ? retObjectInputGestureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +440,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setInputGestureText(java.lang.String InputGestureText) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InputGestureText", InputGestureText);
         } catch (JCNativeException jcne) {
@@ -406,10 +450,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public ItemContainerTemplateSelector getItemContainerTemplateSelector() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerTemplateSelector");
+            retObjectItemContainerTemplateSelector = classInstance.Get("ItemContainerTemplateSelector");
+            JCObject val = (JCObject)retObjectItemContainerTemplateSelector;
             return new ItemContainerTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerTemplateSelector != null ? retObjectItemContainerTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,7 +465,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setItemContainerTemplateSelector(ItemContainerTemplateSelector ItemContainerTemplateSelector) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemContainerTemplateSelector", ItemContainerTemplateSelector == null ? null : ItemContainerTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -427,10 +475,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public MenuItemRole getRole() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Role");
+            retObjectRole = classInstance.Get("Role");
+            JCObject val = (JCObject)retObjectRole;
             return new MenuItemRole(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRole != null ? retObjectRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +490,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public IInputElement getCommandTarget() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandTarget");
+            retObjectCommandTarget = classInstance.Get("CommandTarget");
+            JCObject val = (JCObject)retObjectCommandTarget;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandTarget != null ? retObjectCommandTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,7 +505,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setCommandTarget(IInputElement CommandTarget) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandTarget", CommandTarget == null ? null : CommandTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -459,10 +515,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public ICommand getCommand() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,7 +530,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void setCommand(ICommand Command) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -480,10 +540,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public static ResourceKey getSeparatorStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSeparatorStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SeparatorStyleKey");
+            retObjectSeparatorStyleKey = classType.Get("SeparatorStyleKey");
+            JCObject val = (JCObject)retObjectSeparatorStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorStyleKey != null ? retObjectSeparatorStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,10 +555,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public static ResourceKey getSubmenuHeaderTemplateKey() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubmenuHeaderTemplateKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SubmenuHeaderTemplateKey");
+            retObjectSubmenuHeaderTemplateKey = classType.Get("SubmenuHeaderTemplateKey");
+            JCObject val = (JCObject)retObjectSubmenuHeaderTemplateKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubmenuHeaderTemplateKey != null ? retObjectSubmenuHeaderTemplateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,10 +570,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public static ResourceKey getSubmenuItemTemplateKey() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubmenuItemTemplateKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SubmenuItemTemplateKey");
+            retObjectSubmenuItemTemplateKey = classType.Get("SubmenuItemTemplateKey");
+            JCObject val = (JCObject)retObjectSubmenuItemTemplateKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubmenuItemTemplateKey != null ? retObjectSubmenuItemTemplateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,10 +585,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public static ResourceKey getTopLevelHeaderTemplateKey() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTopLevelHeaderTemplateKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("TopLevelHeaderTemplateKey");
+            retObjectTopLevelHeaderTemplateKey = classType.Get("TopLevelHeaderTemplateKey");
+            JCObject val = (JCObject)retObjectTopLevelHeaderTemplateKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopLevelHeaderTemplateKey != null ? retObjectTopLevelHeaderTemplateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,10 +600,14 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public static ResourceKey getTopLevelItemTemplateKey() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTopLevelItemTemplateKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("TopLevelItemTemplateKey");
+            retObjectTopLevelItemTemplateKey = classType.Get("TopLevelItemTemplateKey");
+            JCObject val = (JCObject)retObjectTopLevelItemTemplateKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopLevelItemTemplateKey != null ? retObjectTopLevelItemTemplateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,7 +620,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void addChecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Checked", handler);
         } catch (JCNativeException jcne) {
@@ -550,7 +630,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void removeChecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Checked", handler);
         } catch (JCNativeException jcne) {
@@ -560,7 +640,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void addClick(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -570,7 +650,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void removeClick(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -580,7 +660,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void addSubmenuClosed(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SubmenuClosed", handler);
         } catch (JCNativeException jcne) {
@@ -590,7 +670,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void removeSubmenuClosed(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SubmenuClosed", handler);
         } catch (JCNativeException jcne) {
@@ -600,7 +680,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void addSubmenuOpened(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SubmenuOpened", handler);
         } catch (JCNativeException jcne) {
@@ -610,7 +690,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void removeSubmenuOpened(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SubmenuOpened", handler);
         } catch (JCNativeException jcne) {
@@ -620,7 +700,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void addUnchecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unchecked", handler);
         } catch (JCNativeException jcne) {
@@ -630,7 +710,7 @@ public class MenuItem extends HeaderedItemsControl  {
 
     public void removeUnchecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unchecked", handler);
         } catch (JCNativeException jcne) {

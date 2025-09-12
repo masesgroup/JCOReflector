@@ -161,10 +161,14 @@ public class SocketsHttpConnectionContext extends NetObject  {
     
     public DnsEndPoint getDnsEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DnsEndPoint");
+            retObjectDnsEndPoint = classInstance.Get("DnsEndPoint");
+            JCObject val = (JCObject)retObjectDnsEndPoint;
             return new DnsEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDnsEndPoint != null ? retObjectDnsEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class SocketsHttpConnectionContext extends NetObject  {
 
     public HttpRequestMessage getInitialRequestMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialRequestMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialRequestMessage");
+            retObjectInitialRequestMessage = classInstance.Get("InitialRequestMessage");
+            JCObject val = (JCObject)retObjectInitialRequestMessage;
             return new HttpRequestMessage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialRequestMessage != null ? retObjectInitialRequestMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

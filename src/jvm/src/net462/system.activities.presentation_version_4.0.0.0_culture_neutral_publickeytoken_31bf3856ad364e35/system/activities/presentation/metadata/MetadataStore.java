@@ -154,7 +154,7 @@ public class MetadataStore extends NetObject  {
     
     public static void AddAttributeTable(AttributeTable table) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddAttributeTable", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {

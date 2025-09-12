@@ -166,10 +166,14 @@ public class Rule extends RuleSchema  {
     
     public BaseProperty GetProperty(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", propertyName);
+            retObjectGetProperty = classInstance.Invoke("GetProperty", propertyName);
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new BaseProperty(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class Rule extends RuleSchema  {
 
     public OrderedDictionary GetPropertiesByCategory() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertiesByCategory = null;
         try {
-            JCObject objGetPropertiesByCategory = (JCObject)classInstance.Invoke("GetPropertiesByCategory");
+            retObjectGetPropertiesByCategory = classInstance.Invoke("GetPropertiesByCategory");
+            JCObject objGetPropertiesByCategory = (JCObject)retObjectGetPropertiesByCategory;
             return new OrderedDictionary(objGetPropertiesByCategory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertiesByCategory != null ? retObjectGetPropertiesByCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class Rule extends RuleSchema  {
 
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -198,7 +206,7 @@ public class Rule extends RuleSchema  {
 
     public void EndInit() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class Rule extends RuleSchema  {
     
     public boolean getPropertyPagesHidden() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyPagesHidden = null;
         try {
-            return (boolean)classInstance.Get("PropertyPagesHidden");
+            retObjectPropertyPagesHidden = classInstance.Get("PropertyPagesHidden");
+            return (boolean)retObjectPropertyPagesHidden;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPropertyPagesHidden != null ? retObjectPropertyPagesHidden.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class Rule extends RuleSchema  {
 
     public void setPropertyPagesHidden(boolean PropertyPagesHidden) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyPagesHidden", PropertyPagesHidden);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class Rule extends RuleSchema  {
 
     public boolean getShowOnlyRuleProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowOnlyRuleProperties = null;
         try {
-            return (boolean)classInstance.Get("ShowOnlyRuleProperties");
+            retObjectShowOnlyRuleProperties = classInstance.Get("ShowOnlyRuleProperties");
+            return (boolean)retObjectShowOnlyRuleProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowOnlyRuleProperties != null ? retObjectShowOnlyRuleProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class Rule extends RuleSchema  {
 
     public void setShowOnlyRuleProperties(boolean ShowOnlyRuleProperties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowOnlyRuleProperties", ShowOnlyRuleProperties);
         } catch (JCNativeException jcne) {
@@ -252,9 +268,13 @@ public class Rule extends RuleSchema  {
 
     public boolean getSupportsFileBatching() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsFileBatching = null;
         try {
-            return (boolean)classInstance.Get("SupportsFileBatching");
+            retObjectSupportsFileBatching = classInstance.Get("SupportsFileBatching");
+            return (boolean)retObjectSupportsFileBatching;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsFileBatching != null ? retObjectSupportsFileBatching.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class Rule extends RuleSchema  {
 
     public void setSupportsFileBatching(boolean SupportsFileBatching) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportsFileBatching", SupportsFileBatching);
         } catch (JCNativeException jcne) {
@@ -272,9 +292,19 @@ public class Rule extends RuleSchema  {
 
     public int getOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrder = null;
         try {
-            return (int)classInstance.Get("Order");
+            retObjectOrder = classInstance.Get("Order");
+            return (int)retObjectOrder;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOrderNumber = (java.lang.Number)retObjectOrder;
+                return retObjectOrderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOrder != null ? retObjectOrder.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +312,7 @@ public class Rule extends RuleSchema  {
 
     public void setOrder(int Order) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Order", Order);
         } catch (JCNativeException jcne) {
@@ -292,10 +322,14 @@ public class Rule extends RuleSchema  {
 
     public DataSource getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new DataSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +337,7 @@ public class Rule extends RuleSchema  {
 
     public void setDataSource(DataSource DataSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -313,10 +347,14 @@ public class Rule extends RuleSchema  {
 
     public RuleOverrideMode getOverrideMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverrideMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverrideMode");
+            retObjectOverrideMode = classInstance.Get("OverrideMode");
+            JCObject val = (JCObject)retObjectOverrideMode;
             return new RuleOverrideMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverrideMode != null ? retObjectOverrideMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +362,7 @@ public class Rule extends RuleSchema  {
 
     public void setOverrideMode(RuleOverrideMode OverrideMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverrideMode", OverrideMode == null ? null : OverrideMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -334,9 +372,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getAdditionalInputs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalInputs = null;
         try {
-            return (java.lang.String)classInstance.Get("AdditionalInputs");
+            retObjectAdditionalInputs = classInstance.Get("AdditionalInputs");
+            return (java.lang.String)retObjectAdditionalInputs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAdditionalInputs != null ? retObjectAdditionalInputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +386,7 @@ public class Rule extends RuleSchema  {
 
     public void setAdditionalInputs(java.lang.String AdditionalInputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdditionalInputs", AdditionalInputs);
         } catch (JCNativeException jcne) {
@@ -354,9 +396,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getCommandLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLine = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandLine");
+            retObjectCommandLine = classInstance.Get("CommandLine");
+            return (java.lang.String)retObjectCommandLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandLine != null ? retObjectCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +410,7 @@ public class Rule extends RuleSchema  {
 
     public void setCommandLine(java.lang.String CommandLine) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandLine", CommandLine);
         } catch (JCNativeException jcne) {
@@ -374,9 +420,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +434,7 @@ public class Rule extends RuleSchema  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -394,9 +444,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +458,7 @@ public class Rule extends RuleSchema  {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -414,9 +468,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getExecutionDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecutionDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("ExecutionDescription");
+            retObjectExecutionDescription = classInstance.Get("ExecutionDescription");
+            return (java.lang.String)retObjectExecutionDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExecutionDescription != null ? retObjectExecutionDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +482,7 @@ public class Rule extends RuleSchema  {
 
     public void setExecutionDescription(java.lang.String ExecutionDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExecutionDescription", ExecutionDescription);
         } catch (JCNativeException jcne) {
@@ -434,9 +492,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getFileExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("FileExtension");
+            retObjectFileExtension = classInstance.Get("FileExtension");
+            return (java.lang.String)retObjectFileExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileExtension != null ? retObjectFileExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +506,7 @@ public class Rule extends RuleSchema  {
 
     public void setFileExtension(java.lang.String FileExtension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileExtension", FileExtension);
         } catch (JCNativeException jcne) {
@@ -454,9 +516,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getHelpString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpString = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpString");
+            retObjectHelpString = classInstance.Get("HelpString");
+            return (java.lang.String)retObjectHelpString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpString != null ? retObjectHelpString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +530,7 @@ public class Rule extends RuleSchema  {
 
     public void setHelpString(java.lang.String HelpString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpString", HelpString);
         } catch (JCNativeException jcne) {
@@ -474,9 +540,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,7 +554,7 @@ public class Rule extends RuleSchema  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -494,9 +564,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getOutputs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputs = null;
         try {
-            return (java.lang.String)classInstance.Get("Outputs");
+            retObjectOutputs = classInstance.Get("Outputs");
+            return (java.lang.String)retObjectOutputs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputs != null ? retObjectOutputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,7 +578,7 @@ public class Rule extends RuleSchema  {
 
     public void setOutputs(java.lang.String Outputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Outputs", Outputs);
         } catch (JCNativeException jcne) {
@@ -514,9 +588,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getPageTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageTemplate = null;
         try {
-            return (java.lang.String)classInstance.Get("PageTemplate");
+            retObjectPageTemplate = classInstance.Get("PageTemplate");
+            return (java.lang.String)retObjectPageTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPageTemplate != null ? retObjectPageTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,7 +602,7 @@ public class Rule extends RuleSchema  {
 
     public void setPageTemplate(java.lang.String PageTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageTemplate", PageTemplate);
         } catch (JCNativeException jcne) {
@@ -534,9 +612,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("Separator");
+            retObjectSeparator = classInstance.Get("Separator");
+            return (java.lang.String)retObjectSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSeparator != null ? retObjectSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -544,7 +626,7 @@ public class Rule extends RuleSchema  {
 
     public void setSeparator(java.lang.String Separator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Separator", Separator);
         } catch (JCNativeException jcne) {
@@ -554,9 +636,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getSwitchPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSwitchPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("SwitchPrefix");
+            retObjectSwitchPrefix = classInstance.Get("SwitchPrefix");
+            return (java.lang.String)retObjectSwitchPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSwitchPrefix != null ? retObjectSwitchPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,7 +650,7 @@ public class Rule extends RuleSchema  {
 
     public void setSwitchPrefix(java.lang.String SwitchPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SwitchPrefix", SwitchPrefix);
         } catch (JCNativeException jcne) {
@@ -574,9 +660,13 @@ public class Rule extends RuleSchema  {
 
     public java.lang.String getToolName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolName = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolName");
+            retObjectToolName = classInstance.Get("ToolName");
+            return (java.lang.String)retObjectToolName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolName != null ? retObjectToolName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -584,7 +674,7 @@ public class Rule extends RuleSchema  {
 
     public void setToolName(java.lang.String ToolName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolName", ToolName);
         } catch (JCNativeException jcne) {

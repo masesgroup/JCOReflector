@@ -157,9 +157,13 @@ public class KeyboardNavigation extends NetObject  {
     
     public static boolean GetAcceptsReturn(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAcceptsReturn = null;
         try {
-            return (boolean)classType.Invoke("GetAcceptsReturn", element == null ? null : element.getJCOInstance());
+            retObjectGetAcceptsReturn = classType.Invoke("GetAcceptsReturn", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetAcceptsReturn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetAcceptsReturn != null ? retObjectGetAcceptsReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class KeyboardNavigation extends NetObject  {
 
     public static boolean GetIsTabStop(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsTabStop = null;
         try {
-            return (boolean)classType.Invoke("GetIsTabStop", element == null ? null : element.getJCOInstance());
+            retObjectGetIsTabStop = classType.Invoke("GetIsTabStop", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsTabStop != null ? retObjectGetIsTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,19 @@ public class KeyboardNavigation extends NetObject  {
 
     public static int GetTabIndex(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTabIndex = null;
         try {
-            return (int)classType.Invoke("GetTabIndex", element == null ? null : element.getJCOInstance());
+            retObjectGetTabIndex = classType.Invoke("GetTabIndex", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetTabIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTabIndexNumber = (java.lang.Number)retObjectGetTabIndex;
+                return retObjectGetTabIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTabIndex != null ? retObjectGetTabIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +205,14 @@ public class KeyboardNavigation extends NetObject  {
 
     public static KeyboardNavigationMode GetControlTabNavigation(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetControlTabNavigation = null;
         try {
-            JCObject objGetControlTabNavigation = (JCObject)classType.Invoke("GetControlTabNavigation", element == null ? null : element.getJCOInstance());
+            retObjectGetControlTabNavigation = classType.Invoke("GetControlTabNavigation", element == null ? null : element.getJCOInstance());
+            JCObject objGetControlTabNavigation = (JCObject)retObjectGetControlTabNavigation;
             return new KeyboardNavigationMode(objGetControlTabNavigation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetControlTabNavigation != null ? retObjectGetControlTabNavigation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +220,14 @@ public class KeyboardNavigation extends NetObject  {
 
     public static KeyboardNavigationMode GetDirectionalNavigation(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectionalNavigation = null;
         try {
-            JCObject objGetDirectionalNavigation = (JCObject)classType.Invoke("GetDirectionalNavigation", element == null ? null : element.getJCOInstance());
+            retObjectGetDirectionalNavigation = classType.Invoke("GetDirectionalNavigation", element == null ? null : element.getJCOInstance());
+            JCObject objGetDirectionalNavigation = (JCObject)retObjectGetDirectionalNavigation;
             return new KeyboardNavigationMode(objGetDirectionalNavigation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectionalNavigation != null ? retObjectGetDirectionalNavigation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +235,14 @@ public class KeyboardNavigation extends NetObject  {
 
     public static KeyboardNavigationMode GetTabNavigation(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTabNavigation = null;
         try {
-            JCObject objGetTabNavigation = (JCObject)classType.Invoke("GetTabNavigation", element == null ? null : element.getJCOInstance());
+            retObjectGetTabNavigation = classType.Invoke("GetTabNavigation", element == null ? null : element.getJCOInstance());
+            JCObject objGetTabNavigation = (JCObject)retObjectGetTabNavigation;
             return new KeyboardNavigationMode(objGetTabNavigation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTabNavigation != null ? retObjectGetTabNavigation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +250,7 @@ public class KeyboardNavigation extends NetObject  {
 
     public static void SetAcceptsReturn(DependencyObject element, boolean enabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAcceptsReturn", element == null ? null : element.getJCOInstance(), enabled);
         } catch (JCNativeException jcne) {
@@ -230,7 +260,7 @@ public class KeyboardNavigation extends NetObject  {
 
     public static void SetControlTabNavigation(DependencyObject element, KeyboardNavigationMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetControlTabNavigation", element == null ? null : element.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +270,7 @@ public class KeyboardNavigation extends NetObject  {
 
     public static void SetDirectionalNavigation(DependencyObject element, KeyboardNavigationMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetDirectionalNavigation", element == null ? null : element.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +280,7 @@ public class KeyboardNavigation extends NetObject  {
 
     public static void SetIsTabStop(DependencyObject element, boolean isTabStop) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsTabStop", element == null ? null : element.getJCOInstance(), isTabStop);
         } catch (JCNativeException jcne) {
@@ -260,7 +290,7 @@ public class KeyboardNavigation extends NetObject  {
 
     public static void SetTabIndex(DependencyObject element, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTabIndex", element == null ? null : element.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -270,7 +300,7 @@ public class KeyboardNavigation extends NetObject  {
 
     public static void SetTabNavigation(DependencyObject element, KeyboardNavigationMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTabNavigation", element == null ? null : element.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {

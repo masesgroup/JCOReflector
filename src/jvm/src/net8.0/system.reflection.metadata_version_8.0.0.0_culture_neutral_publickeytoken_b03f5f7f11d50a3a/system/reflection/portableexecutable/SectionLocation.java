@@ -170,9 +170,19 @@ public class SectionLocation extends ValueType  {
     
     public int getPointerToRawData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointerToRawData = null;
         try {
-            return (int)classInstance.Get("PointerToRawData");
+            retObjectPointerToRawData = classInstance.Get("PointerToRawData");
+            return (int)retObjectPointerToRawData;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPointerToRawDataNumber = (java.lang.Number)retObjectPointerToRawData;
+                return retObjectPointerToRawDataNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPointerToRawData != null ? retObjectPointerToRawData.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +190,19 @@ public class SectionLocation extends ValueType  {
 
     public int getRelativeVirtualAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelativeVirtualAddress = null;
         try {
-            return (int)classInstance.Get("RelativeVirtualAddress");
+            retObjectRelativeVirtualAddress = classInstance.Get("RelativeVirtualAddress");
+            return (int)retObjectRelativeVirtualAddress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRelativeVirtualAddressNumber = (java.lang.Number)retObjectRelativeVirtualAddress;
+                return retObjectRelativeVirtualAddressNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRelativeVirtualAddress != null ? retObjectRelativeVirtualAddress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

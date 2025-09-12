@@ -144,9 +144,13 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
     
     public boolean Reload() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReload = null;
         try {
-            return (boolean)classInstance.Invoke("Reload");
+            retObjectReload = classInstance.Invoke("Reload");
+            return (boolean)retObjectReload;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReload != null ? retObjectReload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
 
     public void AddLoadDependency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLoadDependency");
         } catch (JCNativeException jcne) {
@@ -164,7 +168,7 @@ public class IDesignerLoaderServiceImplementation extends NetObject implements I
 
     public void DependentLoadComplete(boolean successful, ICollection errorCollection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DependentLoadComplete", successful, errorCollection == null ? null : errorCollection.getJCOInstance());
         } catch (JCNativeException jcne) {

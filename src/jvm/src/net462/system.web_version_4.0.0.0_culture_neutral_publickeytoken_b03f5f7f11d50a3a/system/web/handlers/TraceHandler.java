@@ -166,7 +166,7 @@ public class TraceHandler extends NetObject  {
      */
     @Deprecated 
     public void ProcessRequest(HttpContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
     }
 
 

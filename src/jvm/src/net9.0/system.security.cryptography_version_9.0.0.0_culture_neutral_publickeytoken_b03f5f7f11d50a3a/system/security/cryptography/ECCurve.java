@@ -158,10 +158,14 @@ public class ECCurve extends ValueType  {
     
     public static ECCurve CreateFromFriendlyName(java.lang.String oidFriendlyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFriendlyName = null;
         try {
-            JCObject objCreateFromFriendlyName = (JCObject)classType.Invoke("CreateFromFriendlyName", oidFriendlyName);
+            retObjectCreateFromFriendlyName = classType.Invoke("CreateFromFriendlyName", oidFriendlyName);
+            JCObject objCreateFromFriendlyName = (JCObject)retObjectCreateFromFriendlyName;
             return new ECCurve(objCreateFromFriendlyName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFriendlyName != null ? retObjectCreateFromFriendlyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class ECCurve extends ValueType  {
 
     public static ECCurve CreateFromOid(Oid curveOid) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromOid = null;
         try {
-            JCObject objCreateFromOid = (JCObject)classType.Invoke("CreateFromOid", curveOid == null ? null : curveOid.getJCOInstance());
+            retObjectCreateFromOid = classType.Invoke("CreateFromOid", curveOid == null ? null : curveOid.getJCOInstance());
+            JCObject objCreateFromOid = (JCObject)retObjectCreateFromOid;
             return new ECCurve(objCreateFromOid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromOid != null ? retObjectCreateFromOid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ECCurve extends ValueType  {
 
     public static ECCurve CreateFromValue(java.lang.String oidValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromValue = null;
         try {
-            JCObject objCreateFromValue = (JCObject)classType.Invoke("CreateFromValue", oidValue);
+            retObjectCreateFromValue = classType.Invoke("CreateFromValue", oidValue);
+            JCObject objCreateFromValue = (JCObject)retObjectCreateFromValue;
             return new ECCurve(objCreateFromValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromValue != null ? retObjectCreateFromValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +203,7 @@ public class ECCurve extends ValueType  {
 
     public void Validate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate");
         } catch (JCNativeException jcne) {
@@ -205,9 +217,13 @@ public class ECCurve extends ValueType  {
     
     public boolean getIsCharacteristic2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCharacteristic2 = null;
         try {
-            return (boolean)classInstance.Get("IsCharacteristic2");
+            retObjectIsCharacteristic2 = classInstance.Get("IsCharacteristic2");
+            return (boolean)retObjectIsCharacteristic2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCharacteristic2 != null ? retObjectIsCharacteristic2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +231,13 @@ public class ECCurve extends ValueType  {
 
     public boolean getIsExplicit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExplicit = null;
         try {
-            return (boolean)classInstance.Get("IsExplicit");
+            retObjectIsExplicit = classInstance.Get("IsExplicit");
+            return (boolean)retObjectIsExplicit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExplicit != null ? retObjectIsExplicit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +245,13 @@ public class ECCurve extends ValueType  {
 
     public boolean getIsNamed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNamed = null;
         try {
-            return (boolean)classInstance.Get("IsNamed");
+            retObjectIsNamed = classInstance.Get("IsNamed");
+            return (boolean)retObjectIsNamed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNamed != null ? retObjectIsNamed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +259,13 @@ public class ECCurve extends ValueType  {
 
     public boolean getIsPrime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrime = null;
         try {
-            return (boolean)classInstance.Get("IsPrime");
+            retObjectIsPrime = classInstance.Get("IsPrime");
+            return (boolean)retObjectIsPrime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrime != null ? retObjectIsPrime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +273,14 @@ public class ECCurve extends ValueType  {
 
     public Oid getOid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Oid");
+            retObjectOid = classInstance.Get("Oid");
+            JCObject val = (JCObject)retObjectOid;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOid != null ? retObjectOid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +288,7 @@ public class ECCurve extends ValueType  {
 
     public void setOid(Oid Oid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Oid", Oid == null ? null : Oid.getJCOInstance());
         } catch (JCNativeException jcne) {

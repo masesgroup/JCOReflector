@@ -175,9 +175,13 @@ public class CompilerError extends NetObject  {
     
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWarning = null;
         try {
-            return (boolean)classInstance.Get("IsWarning");
+            retObjectIsWarning = classInstance.Get("IsWarning");
+            return (boolean)retObjectIsWarning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWarning != null ? retObjectIsWarning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class CompilerError extends NetObject  {
 
     public void setIsWarning(boolean IsWarning) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsWarning", IsWarning);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,19 @@ public class CompilerError extends NetObject  {
 
     public int getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            return (int)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            return (int)retObjectColumn;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnNumber = (java.lang.Number)retObjectColumn;
+                return retObjectColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +219,7 @@ public class CompilerError extends NetObject  {
 
     public void setColumn(int Column) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Column", Column);
         } catch (JCNativeException jcne) {
@@ -215,9 +229,19 @@ public class CompilerError extends NetObject  {
 
     public int getLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLine = null;
         try {
-            return (int)classInstance.Get("Line");
+            retObjectLine = classInstance.Get("Line");
+            return (int)retObjectLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLineNumber = (java.lang.Number)retObjectLine;
+                return retObjectLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLine != null ? retObjectLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +249,7 @@ public class CompilerError extends NetObject  {
 
     public void setLine(int Line) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Line", Line);
         } catch (JCNativeException jcne) {
@@ -235,9 +259,13 @@ public class CompilerError extends NetObject  {
 
     public java.lang.String getErrorNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorNumber = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorNumber");
+            retObjectErrorNumber = classInstance.Get("ErrorNumber");
+            return (java.lang.String)retObjectErrorNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorNumber != null ? retObjectErrorNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +273,7 @@ public class CompilerError extends NetObject  {
 
     public void setErrorNumber(java.lang.String ErrorNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorNumber", ErrorNumber);
         } catch (JCNativeException jcne) {
@@ -255,9 +283,13 @@ public class CompilerError extends NetObject  {
 
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorText = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorText");
+            retObjectErrorText = classInstance.Get("ErrorText");
+            return (java.lang.String)retObjectErrorText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorText != null ? retObjectErrorText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +297,7 @@ public class CompilerError extends NetObject  {
 
     public void setErrorText(java.lang.String ErrorText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorText", ErrorText);
         } catch (JCNativeException jcne) {
@@ -275,9 +307,13 @@ public class CompilerError extends NetObject  {
 
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +321,7 @@ public class CompilerError extends NetObject  {
 
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileName", FileName);
         } catch (JCNativeException jcne) {

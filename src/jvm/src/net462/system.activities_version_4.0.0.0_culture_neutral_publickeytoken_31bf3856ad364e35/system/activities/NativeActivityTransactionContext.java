@@ -157,7 +157,7 @@ public class NativeActivityTransactionContext extends NativeActivityContext  {
     
     public void SetRuntimeTransaction(Transaction transaction) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.xml.XmlException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRuntimeTransaction", transaction == null ? null : transaction.getJCOInstance());
         } catch (JCNativeException jcne) {

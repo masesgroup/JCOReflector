@@ -162,10 +162,14 @@ public class SignatureVerificationEventArgs extends EventArgs  {
     
     public PackageDigitalSignature getSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Signature");
+            retObjectSignature = classInstance.Get("Signature");
+            JCObject val = (JCObject)retObjectSignature;
             return new PackageDigitalSignature(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignature != null ? retObjectSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class SignatureVerificationEventArgs extends EventArgs  {
 
     public VerifyResult getVerifyResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerifyResult");
+            retObjectVerifyResult = classInstance.Get("VerifyResult");
+            JCObject val = (JCObject)retObjectVerifyResult;
             return new VerifyResult(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerifyResult != null ? retObjectVerifyResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

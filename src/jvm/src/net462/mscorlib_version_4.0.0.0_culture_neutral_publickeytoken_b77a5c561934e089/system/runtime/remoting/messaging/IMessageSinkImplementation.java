@@ -148,10 +148,14 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
     
     public IMessage SyncProcessMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncProcessMessage = null;
         try {
-            JCObject objSyncProcessMessage = (JCObject)classInstance.Invoke("SyncProcessMessage", msg == null ? null : msg.getJCOInstance());
+            retObjectSyncProcessMessage = classInstance.Invoke("SyncProcessMessage", msg == null ? null : msg.getJCOInstance());
+            JCObject objSyncProcessMessage = (JCObject)retObjectSyncProcessMessage;
             return new IMessageImplementation(objSyncProcessMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncProcessMessage != null ? retObjectSyncProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
 
     public IMessageCtrl AsyncProcessMessage(IMessage msg, IMessageSink replySink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncProcessMessage = null;
         try {
-            JCObject objAsyncProcessMessage = (JCObject)classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            retObjectAsyncProcessMessage = classInstance.Invoke("AsyncProcessMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            JCObject objAsyncProcessMessage = (JCObject)retObjectAsyncProcessMessage;
             return new IMessageCtrlImplementation(objAsyncProcessMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncProcessMessage != null ? retObjectAsyncProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +182,14 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
     
     public IMessageSink getNextSink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextSink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextSink");
+            retObjectNextSink = classInstance.Get("NextSink");
+            JCObject val = (JCObject)retObjectNextSink;
             return new IMessageSinkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextSink != null ? retObjectNextSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

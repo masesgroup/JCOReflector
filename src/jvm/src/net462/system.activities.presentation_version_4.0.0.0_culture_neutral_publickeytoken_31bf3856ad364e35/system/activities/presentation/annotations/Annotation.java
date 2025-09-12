@@ -153,9 +153,13 @@ public class Annotation extends NetObject  {
     
     public static java.lang.String GetAnnotationText(NetObject instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAnnotationText = null;
         try {
-            return (java.lang.String)classType.Invoke("GetAnnotationText", instance == null ? null : instance.getJCOInstance());
+            retObjectGetAnnotationText = classType.Invoke("GetAnnotationText", instance == null ? null : instance.getJCOInstance());
+            return (java.lang.String)retObjectGetAnnotationText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAnnotationText != null ? retObjectGetAnnotationText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +167,7 @@ public class Annotation extends NetObject  {
 
     public static void SetAnnotationText(NetObject instance, java.lang.String annotationText) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAnnotationText", instance == null ? null : instance.getJCOInstance(), annotationText);
         } catch (JCNativeException jcne) {

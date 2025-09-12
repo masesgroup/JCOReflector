@@ -162,7 +162,7 @@ public class FontEmbeddingManager extends NetObject  {
     
     public void RecordUsage(GlyphRun glyphRun) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RecordUsage", glyphRun == null ? null : glyphRun.getJCOInstance());
         } catch (JCNativeException jcne) {

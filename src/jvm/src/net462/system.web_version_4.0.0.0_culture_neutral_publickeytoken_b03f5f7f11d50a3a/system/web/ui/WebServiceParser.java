@@ -157,10 +157,14 @@ public class WebServiceParser extends SimpleWebHandlerParser  {
     
     public static NetType GetCompiledType(java.lang.String inputFile, HttpContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledType = null;
         try {
-            JCObject objGetCompiledType = (JCObject)classType.Invoke("GetCompiledType", inputFile, context == null ? null : context.getJCOInstance());
+            retObjectGetCompiledType = classType.Invoke("GetCompiledType", inputFile, context == null ? null : context.getJCOInstance());
+            JCObject objGetCompiledType = (JCObject)retObjectGetCompiledType;
             return new NetType(objGetCompiledType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompiledType != null ? retObjectGetCompiledType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

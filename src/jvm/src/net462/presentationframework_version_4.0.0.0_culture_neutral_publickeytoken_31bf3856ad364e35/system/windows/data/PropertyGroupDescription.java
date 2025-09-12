@@ -198,9 +198,13 @@ public class PropertyGroupDescription extends GroupDescription  {
     
     public boolean NamesMatch(NetObject groupName, NetObject itemName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamesMatch = null;
         try {
-            return (boolean)classInstance.Invoke("NamesMatch", groupName == null ? null : groupName.getJCOInstance(), itemName == null ? null : itemName.getJCOInstance());
+            retObjectNamesMatch = classInstance.Invoke("NamesMatch", groupName == null ? null : groupName.getJCOInstance(), itemName == null ? null : itemName.getJCOInstance());
+            return (boolean)retObjectNamesMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNamesMatch != null ? retObjectNamesMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +212,14 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public NetObject GroupNameFromItem(NetObject item, int level, CultureInfo culture) throws Throwable, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupNameFromItem = null;
         try {
-            JCObject objGroupNameFromItem = (JCObject)classInstance.Invoke("GroupNameFromItem", item == null ? null : item.getJCOInstance(), level, culture == null ? null : culture.getJCOInstance());
+            retObjectGroupNameFromItem = classInstance.Invoke("GroupNameFromItem", item == null ? null : item.getJCOInstance(), level, culture == null ? null : culture.getJCOInstance());
+            JCObject objGroupNameFromItem = (JCObject)retObjectGroupNameFromItem;
             return new NetObject(objGroupNameFromItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupNameFromItem != null ? retObjectGroupNameFromItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +231,14 @@ public class PropertyGroupDescription extends GroupDescription  {
     
     public static IComparer getCompareNameAscending() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareNameAscending = null;
         try {
-            JCObject val = (JCObject)classType.Get("CompareNameAscending");
+            retObjectCompareNameAscending = classType.Get("CompareNameAscending");
+            JCObject val = (JCObject)retObjectCompareNameAscending;
             return new IComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareNameAscending != null ? retObjectCompareNameAscending.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +246,14 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public static IComparer getCompareNameDescending() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompareNameDescending = null;
         try {
-            JCObject val = (JCObject)classType.Get("CompareNameDescending");
+            retObjectCompareNameDescending = classType.Get("CompareNameDescending");
+            JCObject val = (JCObject)retObjectCompareNameDescending;
             return new IComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareNameDescending != null ? retObjectCompareNameDescending.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +261,13 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public void setPropertyName(java.lang.String PropertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyName", PropertyName);
         } catch (JCNativeException jcne) {
@@ -265,10 +285,14 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public StringComparison getStringComparison() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringComparison = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StringComparison");
+            retObjectStringComparison = classInstance.Get("StringComparison");
+            JCObject val = (JCObject)retObjectStringComparison;
             return new StringComparison(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringComparison != null ? retObjectStringComparison.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public void setStringComparison(StringComparison StringComparison) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringComparison", StringComparison == null ? null : StringComparison.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +310,14 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public IValueConverter getConverter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Converter");
+            retObjectConverter = classInstance.Get("Converter");
+            JCObject val = (JCObject)retObjectConverter;
             return new IValueConverterImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverter != null ? retObjectConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class PropertyGroupDescription extends GroupDescription  {
 
     public void setConverter(IValueConverter Converter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Converter", Converter == null ? null : Converter.getJCOInstance());
         } catch (JCNativeException jcne) {

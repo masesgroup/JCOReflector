@@ -204,10 +204,14 @@ public class DesignSurface extends NetObject implements AutoCloseable {
     
     public INestedContainer CreateNestedContainer(IComponent owningComponent, java.lang.String containerName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNestedContainer = null;
         try {
-            JCObject objCreateNestedContainer = (JCObject)classInstance.Invoke("CreateNestedContainer", owningComponent == null ? null : owningComponent.getJCOInstance(), containerName);
+            retObjectCreateNestedContainer = classInstance.Invoke("CreateNestedContainer", owningComponent == null ? null : owningComponent.getJCOInstance(), containerName);
+            JCObject objCreateNestedContainer = (JCObject)retObjectCreateNestedContainer;
             return new INestedContainerImplementation(objCreateNestedContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNestedContainer != null ? retObjectCreateNestedContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +219,14 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public INestedContainer CreateNestedContainer(IComponent owningComponent) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNestedContainer = null;
         try {
-            JCObject objCreateNestedContainer = (JCObject)classInstance.Invoke("CreateNestedContainer", owningComponent == null ? null : owningComponent.getJCOInstance());
+            retObjectCreateNestedContainer = classInstance.Invoke("CreateNestedContainer", owningComponent == null ? null : owningComponent.getJCOInstance());
+            JCObject objCreateNestedContainer = (JCObject)retObjectCreateNestedContainer;
             return new INestedContainerImplementation(objCreateNestedContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNestedContainer != null ? retObjectCreateNestedContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +234,14 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +249,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void BeginLoad(DesignerLoader loader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginLoad", loader == null ? null : loader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,7 +259,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void BeginLoad(NetType rootComponentType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginLoad", rootComponentType == null ? null : rootComponentType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,7 +269,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.design.ExceptionCollection {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -267,7 +279,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -278,7 +290,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -294,9 +306,13 @@ public class DesignSurface extends NetObject implements AutoCloseable {
     
     public boolean getDtelLoading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDtelLoading = null;
         try {
-            return (boolean)classInstance.Get("DtelLoading");
+            retObjectDtelLoading = classInstance.Get("DtelLoading");
+            return (boolean)retObjectDtelLoading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDtelLoading != null ? retObjectDtelLoading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +320,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void setDtelLoading(boolean DtelLoading) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DtelLoading", DtelLoading);
         } catch (JCNativeException jcne) {
@@ -314,9 +330,13 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public boolean getIsLoaded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoaded = null;
         try {
-            return (boolean)classInstance.Get("IsLoaded");
+            retObjectIsLoaded = classInstance.Get("IsLoaded");
+            return (boolean)retObjectIsLoaded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoaded != null ? retObjectIsLoaded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +344,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void setIsLoaded(boolean IsLoaded) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsLoaded", IsLoaded);
         } catch (JCNativeException jcne) {
@@ -334,10 +354,14 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public ICollection getLoadErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadErrors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoadErrors");
+            retObjectLoadErrors = classInstance.Get("LoadErrors");
+            JCObject val = (JCObject)retObjectLoadErrors;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadErrors != null ? retObjectLoadErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +369,14 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public IContainer getComponentContainer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ComponentContainer");
+            retObjectComponentContainer = classInstance.Get("ComponentContainer");
+            JCObject val = (JCObject)retObjectComponentContainer;
             return new IContainerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponentContainer != null ? retObjectComponentContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +384,14 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public NetObject getView() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("View");
+            retObjectView = classInstance.Get("View");
+            JCObject val = (JCObject)retObjectView;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectView != null ? retObjectView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +404,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void addLoaded(LoadedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Loaded", handler);
         } catch (JCNativeException jcne) {
@@ -382,7 +414,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void removeLoaded(LoadedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Loaded", handler);
         } catch (JCNativeException jcne) {
@@ -392,7 +424,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -402,7 +434,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -412,7 +444,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void addFlushed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Flushed", handler);
         } catch (JCNativeException jcne) {
@@ -422,7 +454,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void removeFlushed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Flushed", handler);
         } catch (JCNativeException jcne) {
@@ -432,7 +464,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void addLoading(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Loading", handler);
         } catch (JCNativeException jcne) {
@@ -442,7 +474,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void removeLoading(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Loading", handler);
         } catch (JCNativeException jcne) {
@@ -452,7 +484,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void addUnloaded(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unloaded", handler);
         } catch (JCNativeException jcne) {
@@ -462,7 +494,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void removeUnloaded(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unloaded", handler);
         } catch (JCNativeException jcne) {
@@ -472,7 +504,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void addUnloading(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unloading", handler);
         } catch (JCNativeException jcne) {
@@ -482,7 +514,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void removeUnloading(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unloading", handler);
         } catch (JCNativeException jcne) {
@@ -492,7 +524,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void addViewActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ViewActivated", handler);
         } catch (JCNativeException jcne) {
@@ -502,7 +534,7 @@ public class DesignSurface extends NetObject implements AutoCloseable {
 
     public void removeViewActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ViewActivated", handler);
         } catch (JCNativeException jcne) {

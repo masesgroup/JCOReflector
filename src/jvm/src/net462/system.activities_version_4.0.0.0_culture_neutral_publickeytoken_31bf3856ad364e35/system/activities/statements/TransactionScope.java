@@ -164,9 +164,13 @@ public class TransactionScope extends NativeActivity  {
     
     public boolean ShouldSerializeIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeIsolationLevel = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeIsolationLevel");
+            retObjectShouldSerializeIsolationLevel = classInstance.Invoke("ShouldSerializeIsolationLevel");
+            return (boolean)retObjectShouldSerializeIsolationLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeIsolationLevel != null ? retObjectShouldSerializeIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class TransactionScope extends NativeActivity  {
 
     public boolean ShouldSerializeTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTimeout = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTimeout");
+            retObjectShouldSerializeTimeout = classInstance.Invoke("ShouldSerializeTimeout");
+            return (boolean)retObjectShouldSerializeTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTimeout != null ? retObjectShouldSerializeTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class TransactionScope extends NativeActivity  {
     
     public boolean getAbortInstanceOnTransactionFailure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbortInstanceOnTransactionFailure = null;
         try {
-            return (boolean)classInstance.Get("AbortInstanceOnTransactionFailure");
+            retObjectAbortInstanceOnTransactionFailure = classInstance.Get("AbortInstanceOnTransactionFailure");
+            return (boolean)retObjectAbortInstanceOnTransactionFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAbortInstanceOnTransactionFailure != null ? retObjectAbortInstanceOnTransactionFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +210,7 @@ public class TransactionScope extends NativeActivity  {
 
     public void setAbortInstanceOnTransactionFailure(boolean AbortInstanceOnTransactionFailure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AbortInstanceOnTransactionFailure", AbortInstanceOnTransactionFailure);
         } catch (JCNativeException jcne) {
@@ -208,10 +220,14 @@ public class TransactionScope extends NativeActivity  {
 
     public Activity getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class TransactionScope extends NativeActivity  {
 
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +245,14 @@ public class TransactionScope extends NativeActivity  {
 
     public IsolationLevel getIsolationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsolationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IsolationLevel");
+            retObjectIsolationLevel = classInstance.Get("IsolationLevel");
+            JCObject val = (JCObject)retObjectIsolationLevel;
             return new IsolationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsolationLevel != null ? retObjectIsolationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +260,7 @@ public class TransactionScope extends NativeActivity  {
 
     public void setIsolationLevel(IsolationLevel IsolationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsolationLevel", IsolationLevel == null ? null : IsolationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

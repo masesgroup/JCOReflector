@@ -170,10 +170,14 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
     
     public ProtectionLevel getMsmqProtectionLevel() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqProtectionLevel");
+            retObjectMsmqProtectionLevel = classInstance.Get("MsmqProtectionLevel");
+            JCObject val = (JCObject)retObjectMsmqProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqProtectionLevel != null ? retObjectMsmqProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
 
     public void setMsmqProtectionLevel(ProtectionLevel MsmqProtectionLevel) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqProtectionLevel", MsmqProtectionLevel == null ? null : MsmqProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
 
     public MsmqAuthenticationMode getMsmqAuthenticationMode() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqAuthenticationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqAuthenticationMode");
+            retObjectMsmqAuthenticationMode = classInstance.Get("MsmqAuthenticationMode");
+            JCObject val = (JCObject)retObjectMsmqAuthenticationMode;
             return new MsmqAuthenticationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqAuthenticationMode != null ? retObjectMsmqAuthenticationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
 
     public void setMsmqAuthenticationMode(MsmqAuthenticationMode MsmqAuthenticationMode) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqAuthenticationMode", MsmqAuthenticationMode == null ? null : MsmqAuthenticationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,10 +220,14 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
 
     public MsmqEncryptionAlgorithm getMsmqEncryptionAlgorithm() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqEncryptionAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqEncryptionAlgorithm");
+            retObjectMsmqEncryptionAlgorithm = classInstance.Get("MsmqEncryptionAlgorithm");
+            JCObject val = (JCObject)retObjectMsmqEncryptionAlgorithm;
             return new MsmqEncryptionAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqEncryptionAlgorithm != null ? retObjectMsmqEncryptionAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
 
     public void setMsmqEncryptionAlgorithm(MsmqEncryptionAlgorithm MsmqEncryptionAlgorithm) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqEncryptionAlgorithm", MsmqEncryptionAlgorithm == null ? null : MsmqEncryptionAlgorithm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +245,14 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
 
     public MsmqSecureHashAlgorithm getMsmqSecureHashAlgorithm() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMsmqSecureHashAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MsmqSecureHashAlgorithm");
+            retObjectMsmqSecureHashAlgorithm = classInstance.Get("MsmqSecureHashAlgorithm");
+            JCObject val = (JCObject)retObjectMsmqSecureHashAlgorithm;
             return new MsmqSecureHashAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMsmqSecureHashAlgorithm != null ? retObjectMsmqSecureHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class MsmqTransportSecurityElement extends ServiceModelConfigurationEleme
 
     public void setMsmqSecureHashAlgorithm(MsmqSecureHashAlgorithm MsmqSecureHashAlgorithm) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MsmqSecureHashAlgorithm", MsmqSecureHashAlgorithm == null ? null : MsmqSecureHashAlgorithm.getJCOInstance());
         } catch (JCNativeException jcne) {

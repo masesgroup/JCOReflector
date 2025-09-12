@@ -161,10 +161,14 @@ public class SerialPinChangedEventArgs extends EventArgs  {
     
     public SerialPinChange getEventType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventType");
+            retObjectEventType = classInstance.Get("EventType");
+            JCObject val = (JCObject)retObjectEventType;
             return new SerialPinChange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventType != null ? retObjectEventType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

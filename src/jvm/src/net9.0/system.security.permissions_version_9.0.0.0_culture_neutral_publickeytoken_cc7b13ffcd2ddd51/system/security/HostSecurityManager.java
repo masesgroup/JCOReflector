@@ -169,10 +169,14 @@ public class HostSecurityManager extends NetObject  {
     
     public PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvePolicy = null;
         try {
-            JCObject objResolvePolicy = (JCObject)classInstance.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            retObjectResolvePolicy = classInstance.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolvePolicy = (JCObject)retObjectResolvePolicy;
             return new PermissionSet(objResolvePolicy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvePolicy != null ? retObjectResolvePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class HostSecurityManager extends NetObject  {
 
     public ApplicationTrust DetermineApplicationTrust(Evidence applicationEvidence, Evidence activatorEvidence, TrustManagerContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetermineApplicationTrust = null;
         try {
-            JCObject objDetermineApplicationTrust = (JCObject)classInstance.Invoke("DetermineApplicationTrust", applicationEvidence == null ? null : applicationEvidence.getJCOInstance(), activatorEvidence == null ? null : activatorEvidence.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectDetermineApplicationTrust = classInstance.Invoke("DetermineApplicationTrust", applicationEvidence == null ? null : applicationEvidence.getJCOInstance(), activatorEvidence == null ? null : activatorEvidence.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objDetermineApplicationTrust = (JCObject)retObjectDetermineApplicationTrust;
             return new ApplicationTrust(objDetermineApplicationTrust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDetermineApplicationTrust != null ? retObjectDetermineApplicationTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class HostSecurityManager extends NetObject  {
 
     public Evidence ProvideAppDomainEvidence(Evidence inputEvidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideAppDomainEvidence = null;
         try {
-            JCObject objProvideAppDomainEvidence = (JCObject)classInstance.Invoke("ProvideAppDomainEvidence", inputEvidence == null ? null : inputEvidence.getJCOInstance());
+            retObjectProvideAppDomainEvidence = classInstance.Invoke("ProvideAppDomainEvidence", inputEvidence == null ? null : inputEvidence.getJCOInstance());
+            JCObject objProvideAppDomainEvidence = (JCObject)retObjectProvideAppDomainEvidence;
             return new Evidence(objProvideAppDomainEvidence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvideAppDomainEvidence != null ? retObjectProvideAppDomainEvidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class HostSecurityManager extends NetObject  {
 
     public Evidence ProvideAssemblyEvidence(Assembly loadedAssembly, Evidence inputEvidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideAssemblyEvidence = null;
         try {
-            JCObject objProvideAssemblyEvidence = (JCObject)classInstance.Invoke("ProvideAssemblyEvidence", loadedAssembly == null ? null : loadedAssembly.getJCOInstance(), inputEvidence == null ? null : inputEvidence.getJCOInstance());
+            retObjectProvideAssemblyEvidence = classInstance.Invoke("ProvideAssemblyEvidence", loadedAssembly == null ? null : loadedAssembly.getJCOInstance(), inputEvidence == null ? null : inputEvidence.getJCOInstance());
+            JCObject objProvideAssemblyEvidence = (JCObject)retObjectProvideAssemblyEvidence;
             return new Evidence(objProvideAssemblyEvidence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvideAssemblyEvidence != null ? retObjectProvideAssemblyEvidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class HostSecurityManager extends NetObject  {
 
     public EvidenceBase GenerateAppDomainEvidence(NetType evidenceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateAppDomainEvidence = null;
         try {
-            JCObject objGenerateAppDomainEvidence = (JCObject)classInstance.Invoke("GenerateAppDomainEvidence", evidenceType == null ? null : evidenceType.getJCOInstance());
+            retObjectGenerateAppDomainEvidence = classInstance.Invoke("GenerateAppDomainEvidence", evidenceType == null ? null : evidenceType.getJCOInstance());
+            JCObject objGenerateAppDomainEvidence = (JCObject)retObjectGenerateAppDomainEvidence;
             return new EvidenceBase(objGenerateAppDomainEvidence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateAppDomainEvidence != null ? retObjectGenerateAppDomainEvidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class HostSecurityManager extends NetObject  {
 
     public EvidenceBase GenerateAssemblyEvidence(NetType evidenceType, Assembly assembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateAssemblyEvidence = null;
         try {
-            JCObject objGenerateAssemblyEvidence = (JCObject)classInstance.Invoke("GenerateAssemblyEvidence", evidenceType == null ? null : evidenceType.getJCOInstance(), assembly == null ? null : assembly.getJCOInstance());
+            retObjectGenerateAssemblyEvidence = classInstance.Invoke("GenerateAssemblyEvidence", evidenceType == null ? null : evidenceType.getJCOInstance(), assembly == null ? null : assembly.getJCOInstance());
+            JCObject objGenerateAssemblyEvidence = (JCObject)retObjectGenerateAssemblyEvidence;
             return new EvidenceBase(objGenerateAssemblyEvidence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateAssemblyEvidence != null ? retObjectGenerateAssemblyEvidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,16 +259,20 @@ public class HostSecurityManager extends NetObject  {
 
     public NetType[] GetHostSuppliedAppDomainEvidenceTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHostSuppliedAppDomainEvidenceTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetHostSuppliedAppDomainEvidenceTypes");
+            retObjectGetHostSuppliedAppDomainEvidenceTypes = classInstance.Invoke("GetHostSuppliedAppDomainEvidenceTypes");
+            JCObject resultingObjects = (JCObject)retObjectGetHostSuppliedAppDomainEvidenceTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostSuppliedAppDomainEvidenceTypes != null ? retObjectGetHostSuppliedAppDomainEvidenceTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,16 +280,20 @@ public class HostSecurityManager extends NetObject  {
 
     public NetType[] GetHostSuppliedAssemblyEvidenceTypes(Assembly assembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHostSuppliedAssemblyEvidenceTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetHostSuppliedAssemblyEvidenceTypes", assembly == null ? null : assembly.getJCOInstance());
+            retObjectGetHostSuppliedAssemblyEvidenceTypes = classInstance.Invoke("GetHostSuppliedAssemblyEvidenceTypes", assembly == null ? null : assembly.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetHostSuppliedAssemblyEvidenceTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostSuppliedAssemblyEvidenceTypes != null ? retObjectGetHostSuppliedAssemblyEvidenceTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +305,14 @@ public class HostSecurityManager extends NetObject  {
     
     public HostSecurityManagerOptions getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new HostSecurityManagerOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +320,14 @@ public class HostSecurityManager extends NetObject  {
 
     public PolicyLevel getDomainPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomainPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DomainPolicy");
+            retObjectDomainPolicy = classInstance.Get("DomainPolicy");
+            JCObject val = (JCObject)retObjectDomainPolicy;
             return new PolicyLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDomainPolicy != null ? retObjectDomainPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

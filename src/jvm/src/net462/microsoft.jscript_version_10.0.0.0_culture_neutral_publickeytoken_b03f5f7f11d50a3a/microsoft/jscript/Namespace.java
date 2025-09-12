@@ -157,10 +157,14 @@ public class Namespace extends NetObject  {
     
     public static Namespace GetNamespace(java.lang.String name, VsaEngine engine) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNamespace = null;
         try {
-            JCObject objGetNamespace = (JCObject)classType.Invoke("GetNamespace", name, engine == null ? null : engine.getJCOInstance());
+            retObjectGetNamespace = classType.Invoke("GetNamespace", name, engine == null ? null : engine.getJCOInstance());
+            JCObject objGetNamespace = (JCObject)retObjectGetNamespace;
             return new Namespace(objGetNamespace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespace != null ? retObjectGetNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

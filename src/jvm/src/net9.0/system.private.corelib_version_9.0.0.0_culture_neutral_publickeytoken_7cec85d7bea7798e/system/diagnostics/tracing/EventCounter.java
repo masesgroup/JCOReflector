@@ -168,7 +168,7 @@ public class EventCounter extends DiagnosticCounter  {
     
     public void WriteMetric(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteMetric", value);
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class EventCounter extends DiagnosticCounter  {
 
     public void WriteMetric(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteMetric", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -178,10 +178,14 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
     
     public Task FlushAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlushAsync = null;
         try {
-            JCObject objFlushAsync = (JCObject)classInstance.Invoke("FlushAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectFlushAsync = classInstance.Invoke("FlushAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFlushAsync = (JCObject)retObjectFlushAsync;
             return new Task(objFlushAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlushAsync != null ? retObjectFlushAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public ValueTask DisposeAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -210,7 +218,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void Flush() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -220,7 +228,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void Reset() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -230,7 +238,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void Reset(Stream utf8Json) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset", utf8Json == null ? null : utf8Json.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +248,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteBoolean(java.lang.String propertyName, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBoolean", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -250,7 +258,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteBoolean(JsonEncodedText propertyName, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBoolean", propertyName == null ? null : propertyName.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -260,7 +268,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteBooleanValue(boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBooleanValue", value);
         } catch (JCNativeException jcne) {
@@ -270,7 +278,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteCommentValue(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCommentValue", value);
         } catch (JCNativeException jcne) {
@@ -280,7 +288,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteEndArray() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndArray");
         } catch (JCNativeException jcne) {
@@ -290,7 +298,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteEndObject() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndObject");
         } catch (JCNativeException jcne) {
@@ -300,7 +308,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNull(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNull", propertyName);
         } catch (JCNativeException jcne) {
@@ -310,7 +318,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNull(JsonEncodedText propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNull", propertyName == null ? null : propertyName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,7 +328,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNullValue() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNullValue");
         } catch (JCNativeException jcne) {
@@ -330,7 +338,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(java.lang.String propertyName, double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -340,7 +348,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(java.lang.String propertyName, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -350,7 +358,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(java.lang.String propertyName, long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -360,7 +368,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(java.lang.String propertyName, Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,7 +378,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(java.lang.String propertyName, Decimal value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -380,7 +388,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(java.lang.String propertyName, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,7 +398,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(java.lang.String propertyName, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,7 +408,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(JsonEncodedText propertyName, double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName == null ? null : propertyName.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -410,7 +418,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(JsonEncodedText propertyName, int value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName == null ? null : propertyName.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -420,7 +428,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(JsonEncodedText propertyName, long value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName == null ? null : propertyName.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -430,7 +438,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(JsonEncodedText propertyName, Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -440,7 +448,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(JsonEncodedText propertyName, Decimal value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,7 +458,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(JsonEncodedText propertyName, UInt32 value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -460,7 +468,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumber(JsonEncodedText propertyName, UInt64 value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumber", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -470,7 +478,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumberValue(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumberValue", value);
         } catch (JCNativeException jcne) {
@@ -480,7 +488,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumberValue(int value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumberValue", value);
         } catch (JCNativeException jcne) {
@@ -490,7 +498,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumberValue(long value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumberValue", value);
         } catch (JCNativeException jcne) {
@@ -500,7 +508,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumberValue(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumberValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -510,7 +518,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumberValue(Decimal value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumberValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -520,7 +528,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumberValue(UInt32 value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumberValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -530,7 +538,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteNumberValue(UInt64 value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNumberValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -540,7 +548,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WritePropertyName(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WritePropertyName", propertyName);
         } catch (JCNativeException jcne) {
@@ -550,7 +558,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WritePropertyName(JsonEncodedText propertyName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WritePropertyName", propertyName == null ? null : propertyName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -560,7 +568,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteRawValue(java.lang.String json, boolean skipInputValidation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.text.json.JsonException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRawValue", json, skipInputValidation);
         } catch (JCNativeException jcne) {
@@ -570,7 +578,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartArray() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartArray");
         } catch (JCNativeException jcne) {
@@ -580,7 +588,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartArray(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartArray", propertyName);
         } catch (JCNativeException jcne) {
@@ -590,7 +598,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartArray(JsonEncodedText propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartArray", propertyName == null ? null : propertyName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -600,7 +608,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartObject() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartObject");
         } catch (JCNativeException jcne) {
@@ -610,7 +618,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartObject(java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartObject", propertyName);
         } catch (JCNativeException jcne) {
@@ -620,7 +628,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartObject(JsonEncodedText propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartObject", propertyName == null ? null : propertyName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -630,7 +638,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(java.lang.String propertyName, DateTime value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -640,7 +648,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(java.lang.String propertyName, DateTimeOffset value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -650,7 +658,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(java.lang.String propertyName, Guid value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -660,7 +668,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(java.lang.String propertyName, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName, value);
         } catch (JCNativeException jcne) {
@@ -670,7 +678,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(java.lang.String propertyName, JsonEncodedText value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -680,7 +688,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(JsonEncodedText propertyName, DateTime value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -690,7 +698,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(JsonEncodedText propertyName, DateTimeOffset value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -700,7 +708,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(JsonEncodedText propertyName, Guid value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -710,7 +718,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(JsonEncodedText propertyName, java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName == null ? null : propertyName.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -720,7 +728,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(JsonEncodedText propertyName, JsonEncodedText value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", propertyName == null ? null : propertyName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -730,7 +738,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStringValue(DateTime value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStringValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -740,7 +748,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStringValue(DateTimeOffset value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStringValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -750,7 +758,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStringValue(Guid value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStringValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -760,7 +768,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStringValue(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStringValue", value);
         } catch (JCNativeException jcne) {
@@ -770,7 +778,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void WriteStringValue(JsonEncodedText value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStringValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -781,7 +789,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -797,9 +805,19 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
     
     public int getBytesPending() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesPending = null;
         try {
-            return (int)classInstance.Get("BytesPending");
+            retObjectBytesPending = classInstance.Get("BytesPending");
+            return (int)retObjectBytesPending;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesPendingNumber = (java.lang.Number)retObjectBytesPending;
+                return retObjectBytesPendingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBytesPending != null ? retObjectBytesPending.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -807,7 +825,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void setBytesPending(int BytesPending) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BytesPending", BytesPending);
         } catch (JCNativeException jcne) {
@@ -817,9 +835,19 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public int getCurrentDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentDepth = null;
         try {
-            return (int)classInstance.Get("CurrentDepth");
+            retObjectCurrentDepth = classInstance.Get("CurrentDepth");
+            return (int)retObjectCurrentDepth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentDepthNumber = (java.lang.Number)retObjectCurrentDepth;
+                return retObjectCurrentDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -827,9 +855,19 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public long getBytesCommitted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesCommitted = null;
         try {
-            return (long)classInstance.Get("BytesCommitted");
+            retObjectBytesCommitted = classInstance.Get("BytesCommitted");
+            return (long)retObjectBytesCommitted;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBytesCommittedNumber = (java.lang.Number)retObjectBytesCommitted;
+                return retObjectBytesCommittedNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBytesCommitted != null ? retObjectBytesCommitted.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -837,7 +875,7 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public void setBytesCommitted(long BytesCommitted) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BytesCommitted", BytesCommitted);
         } catch (JCNativeException jcne) {
@@ -847,10 +885,14 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
 
     public JsonWriterOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new JsonWriterOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

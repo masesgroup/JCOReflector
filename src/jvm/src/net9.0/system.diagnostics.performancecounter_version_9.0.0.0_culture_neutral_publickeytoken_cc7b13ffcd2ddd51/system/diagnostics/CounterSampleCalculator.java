@@ -155,10 +155,14 @@ public class CounterSampleCalculator extends NetObject  {
     
     public static Single ComputeCounterValue(CounterSample oldSample, CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComputeCounterValue = null;
         try {
-            JCObject objComputeCounterValue = (JCObject)classType.Invoke("ComputeCounterValue", oldSample == null ? null : oldSample.getJCOInstance(), newSample == null ? null : newSample.getJCOInstance());
+            retObjectComputeCounterValue = classType.Invoke("ComputeCounterValue", oldSample == null ? null : oldSample.getJCOInstance(), newSample == null ? null : newSample.getJCOInstance());
+            JCObject objComputeCounterValue = (JCObject)retObjectComputeCounterValue;
             return new Single(objComputeCounterValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeCounterValue != null ? retObjectComputeCounterValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class CounterSampleCalculator extends NetObject  {
 
     public static Single ComputeCounterValue(CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComputeCounterValue = null;
         try {
-            JCObject objComputeCounterValue = (JCObject)classType.Invoke("ComputeCounterValue", newSample == null ? null : newSample.getJCOInstance());
+            retObjectComputeCounterValue = classType.Invoke("ComputeCounterValue", newSample == null ? null : newSample.getJCOInstance());
+            JCObject objComputeCounterValue = (JCObject)retObjectComputeCounterValue;
             return new Single(objComputeCounterValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeCounterValue != null ? retObjectComputeCounterValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

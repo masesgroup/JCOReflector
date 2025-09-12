@@ -156,9 +156,13 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
     
     public boolean EndTryReceiveRequest(IAsyncResult result, JCORefOut<RequestContext> context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndTryReceiveRequest = null;
         try {
-            return (boolean)classInstance.Invoke("EndTryReceiveRequest", result == null ? null : result.getJCOInstance(), context.getJCRefOut());
+            retObjectEndTryReceiveRequest = classInstance.Invoke("EndTryReceiveRequest", result == null ? null : result.getJCOInstance(), context.getJCRefOut());
+            return (boolean)retObjectEndTryReceiveRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndTryReceiveRequest != null ? retObjectEndTryReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public boolean EndWaitForRequest(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndWaitForRequest = null;
         try {
-            return (boolean)classInstance.Invoke("EndWaitForRequest", result == null ? null : result.getJCOInstance());
+            retObjectEndWaitForRequest = classInstance.Invoke("EndWaitForRequest", result == null ? null : result.getJCOInstance());
+            return (boolean)retObjectEndWaitForRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndWaitForRequest != null ? retObjectEndWaitForRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public boolean TryReceiveRequest(TimeSpan timeout, JCORefOut<RequestContext> context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReceiveRequest = null;
         try {
-            return (boolean)classInstance.Invoke("TryReceiveRequest", timeout == null ? null : timeout.getJCOInstance(), context.getJCRefOut());
+            retObjectTryReceiveRequest = classInstance.Invoke("TryReceiveRequest", timeout == null ? null : timeout.getJCOInstance(), context.getJCRefOut());
+            return (boolean)retObjectTryReceiveRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReceiveRequest != null ? retObjectTryReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public boolean WaitForRequest(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForRequest = null;
         try {
-            return (boolean)classInstance.Invoke("WaitForRequest", timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitForRequest = classInstance.Invoke("WaitForRequest", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWaitForRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitForRequest != null ? retObjectWaitForRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +212,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +227,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +242,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +257,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +272,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginReceiveRequest(AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceiveRequest = null;
         try {
-            JCObject objBeginReceiveRequest = (JCObject)classInstance.Invoke("BeginReceiveRequest", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReceiveRequest = classInstance.Invoke("BeginReceiveRequest", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceiveRequest = (JCObject)retObjectBeginReceiveRequest;
             return new IAsyncResultImplementation(objBeginReceiveRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceiveRequest != null ? retObjectBeginReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +287,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceiveRequest = null;
         try {
-            JCObject objBeginReceiveRequest = (JCObject)classInstance.Invoke("BeginReceiveRequest", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReceiveRequest = classInstance.Invoke("BeginReceiveRequest", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceiveRequest = (JCObject)retObjectBeginReceiveRequest;
             return new IAsyncResultImplementation(objBeginReceiveRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceiveRequest != null ? retObjectBeginReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +302,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginTryReceiveRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTryReceiveRequest = null;
         try {
-            JCObject objBeginTryReceiveRequest = (JCObject)classInstance.Invoke("BeginTryReceiveRequest", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTryReceiveRequest = classInstance.Invoke("BeginTryReceiveRequest", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTryReceiveRequest = (JCObject)retObjectBeginTryReceiveRequest;
             return new IAsyncResultImplementation(objBeginTryReceiveRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTryReceiveRequest != null ? retObjectBeginTryReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +317,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public IAsyncResult BeginWaitForRequest(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWaitForRequest = null;
         try {
-            JCObject objBeginWaitForRequest = (JCObject)classInstance.Invoke("BeginWaitForRequest", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWaitForRequest = classInstance.Invoke("BeginWaitForRequest", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWaitForRequest = (JCObject)retObjectBeginWaitForRequest;
             return new IAsyncResultImplementation(objBeginWaitForRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWaitForRequest != null ? retObjectBeginWaitForRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +332,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public RequestContext EndReceiveRequest(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndReceiveRequest = null;
         try {
-            JCObject objEndReceiveRequest = (JCObject)classInstance.Invoke("EndReceiveRequest", result == null ? null : result.getJCOInstance());
+            retObjectEndReceiveRequest = classInstance.Invoke("EndReceiveRequest", result == null ? null : result.getJCOInstance());
+            JCObject objEndReceiveRequest = (JCObject)retObjectEndReceiveRequest;
             return new RequestContext(objEndReceiveRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndReceiveRequest != null ? retObjectEndReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +347,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public RequestContext ReceiveRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveRequest = null;
         try {
-            JCObject objReceiveRequest = (JCObject)classInstance.Invoke("ReceiveRequest");
+            retObjectReceiveRequest = classInstance.Invoke("ReceiveRequest");
+            JCObject objReceiveRequest = (JCObject)retObjectReceiveRequest;
             return new RequestContext(objReceiveRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveRequest != null ? retObjectReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +362,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public RequestContext ReceiveRequest(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveRequest = null;
         try {
-            JCObject objReceiveRequest = (JCObject)classInstance.Invoke("ReceiveRequest", timeout == null ? null : timeout.getJCOInstance());
+            retObjectReceiveRequest = classInstance.Invoke("ReceiveRequest", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objReceiveRequest = (JCObject)retObjectReceiveRequest;
             return new RequestContext(objReceiveRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveRequest != null ? retObjectReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +377,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -327,7 +387,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -337,7 +397,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void Close(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,7 +407,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void EndClose(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -357,7 +417,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void EndOpen(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,7 +427,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void Open() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {
@@ -377,7 +437,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void Open(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,10 +451,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
     
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new CommunicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +466,14 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public EndpointAddress getLocalAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalAddress");
+            retObjectLocalAddress = classInstance.Get("LocalAddress");
+            JCObject val = (JCObject)retObjectLocalAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalAddress != null ? retObjectLocalAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +486,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -428,7 +496,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -438,7 +506,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -448,7 +516,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -458,7 +526,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void addFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -468,7 +536,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void removeFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -478,7 +546,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void addOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -488,7 +556,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void removeOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -498,7 +566,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void addOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {
@@ -508,7 +576,7 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     public void removeOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {

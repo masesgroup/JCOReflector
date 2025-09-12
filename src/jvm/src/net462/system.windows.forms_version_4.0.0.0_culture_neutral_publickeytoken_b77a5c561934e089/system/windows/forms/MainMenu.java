@@ -189,10 +189,14 @@ public class MainMenu extends Menu  {
     
     public Form GetForm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetForm = null;
         try {
-            JCObject objGetForm = (JCObject)classInstance.Invoke("GetForm");
+            retObjectGetForm = classInstance.Invoke("GetForm");
+            JCObject objGetForm = (JCObject)retObjectGetForm;
             return new Form(objGetForm);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetForm != null ? retObjectGetForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +204,14 @@ public class MainMenu extends Menu  {
 
     public MainMenu CloneMenu() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneMenu = null;
         try {
-            JCObject objCloneMenu = (JCObject)classInstance.Invoke("CloneMenu");
+            retObjectCloneMenu = classInstance.Invoke("CloneMenu");
+            JCObject objCloneMenu = (JCObject)retObjectCloneMenu;
             return new MainMenu(objCloneMenu);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneMenu != null ? retObjectCloneMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +223,14 @@ public class MainMenu extends Menu  {
     
     public RightToLeft getRightToLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RightToLeft");
+            retObjectRightToLeft = classInstance.Get("RightToLeft");
+            JCObject val = (JCObject)retObjectRightToLeft;
             return new RightToLeft(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightToLeft != null ? retObjectRightToLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class MainMenu extends Menu  {
 
     public void setRightToLeft(RightToLeft RightToLeft) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeft", RightToLeft == null ? null : RightToLeft.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +253,7 @@ public class MainMenu extends Menu  {
 
     public void addCollapse(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Collapse", handler);
         } catch (JCNativeException jcne) {
@@ -251,7 +263,7 @@ public class MainMenu extends Menu  {
 
     public void removeCollapse(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Collapse", handler);
         } catch (JCNativeException jcne) {

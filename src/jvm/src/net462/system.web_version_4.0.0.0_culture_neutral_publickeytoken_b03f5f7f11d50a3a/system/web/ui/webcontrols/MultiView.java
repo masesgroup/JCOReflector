@@ -165,10 +165,14 @@ public class MultiView extends Control  {
     
     public View GetActiveView() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetActiveView = null;
         try {
-            JCObject objGetActiveView = (JCObject)classInstance.Invoke("GetActiveView");
+            retObjectGetActiveView = classInstance.Invoke("GetActiveView");
+            JCObject objGetActiveView = (JCObject)retObjectGetActiveView;
             return new View(objGetActiveView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetActiveView != null ? retObjectGetActiveView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class MultiView extends Control  {
 
     public void SetActiveView(View view) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetActiveView", view == null ? null : view.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,9 +194,19 @@ public class MultiView extends Control  {
     
     public int getActiveViewIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveViewIndex = null;
         try {
-            return (int)classInstance.Get("ActiveViewIndex");
+            retObjectActiveViewIndex = classInstance.Get("ActiveViewIndex");
+            return (int)retObjectActiveViewIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectActiveViewIndexNumber = (java.lang.Number)retObjectActiveViewIndex;
+                return retObjectActiveViewIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectActiveViewIndex != null ? retObjectActiveViewIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +214,7 @@ public class MultiView extends Control  {
 
     public void setActiveViewIndex(int ActiveViewIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveViewIndex", ActiveViewIndex);
         } catch (JCNativeException jcne) {
@@ -210,10 +224,14 @@ public class MultiView extends Control  {
 
     public ViewCollection getViews() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViews = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Views");
+            retObjectViews = classInstance.Get("Views");
+            JCObject val = (JCObject)retObjectViews;
             return new ViewCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViews != null ? retObjectViews.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +244,7 @@ public class MultiView extends Control  {
 
     public void addActiveViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ActiveViewChanged", handler);
         } catch (JCNativeException jcne) {
@@ -236,7 +254,7 @@ public class MultiView extends Control  {
 
     public void removeActiveViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ActiveViewChanged", handler);
         } catch (JCNativeException jcne) {

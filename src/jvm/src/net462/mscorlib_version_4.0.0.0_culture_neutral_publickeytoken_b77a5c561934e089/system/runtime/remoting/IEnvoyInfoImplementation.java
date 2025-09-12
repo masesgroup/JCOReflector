@@ -148,10 +148,14 @@ public class IEnvoyInfoImplementation extends NetObject implements IEnvoyInfo {
     
     public IMessageSink getEnvoySinks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvoySinks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EnvoySinks");
+            retObjectEnvoySinks = classInstance.Get("EnvoySinks");
+            JCObject val = (JCObject)retObjectEnvoySinks;
             return new IMessageSinkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvoySinks != null ? retObjectEnvoySinks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,7 +163,7 @@ public class IEnvoyInfoImplementation extends NetObject implements IEnvoyInfo {
 
     public void setEnvoySinks(IMessageSink EnvoySinks) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnvoySinks", EnvoySinks == null ? null : EnvoySinks.getJCOInstance());
         } catch (JCNativeException jcne) {

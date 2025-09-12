@@ -166,10 +166,14 @@ public class Endpoint extends NetObject  {
     
     public EndpointAddress GetAddress() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAddress = null;
         try {
-            JCObject objGetAddress = (JCObject)classInstance.Invoke("GetAddress");
+            retObjectGetAddress = classInstance.Invoke("GetAddress");
+            JCObject objGetAddress = (JCObject)retObjectGetAddress;
             return new EndpointAddress(objGetAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAddress != null ? retObjectGetAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class Endpoint extends NetObject  {
 
     public EndpointAddress GetAddress(ServiceHostBase host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAddress = null;
         try {
-            JCObject objGetAddress = (JCObject)classInstance.Invoke("GetAddress", host == null ? null : host.getJCOInstance());
+            retObjectGetAddress = classInstance.Invoke("GetAddress", host == null ? null : host.getJCOInstance());
+            JCObject objGetAddress = (JCObject)retObjectGetAddress;
             return new EndpointAddress(objGetAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAddress != null ? retObjectGetAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class Endpoint extends NetObject  {
     
     public system.servicemodel.channels.Binding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +215,7 @@ public class Endpoint extends NetObject  {
 
     public void setBinding(system.servicemodel.channels.Binding Binding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +225,14 @@ public class Endpoint extends NetObject  {
 
     public EndpointIdentity getIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            retObjectIdentity = classInstance.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new EndpointIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +240,7 @@ public class Endpoint extends NetObject  {
 
     public void setIdentity(EndpointIdentity Identity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Identity", Identity == null ? null : Identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,9 +250,13 @@ public class Endpoint extends NetObject  {
 
     public java.lang.String getBehaviorConfigurationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBehaviorConfigurationName = null;
         try {
-            return (java.lang.String)classInstance.Get("BehaviorConfigurationName");
+            retObjectBehaviorConfigurationName = classInstance.Get("BehaviorConfigurationName");
+            return (java.lang.String)retObjectBehaviorConfigurationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBehaviorConfigurationName != null ? retObjectBehaviorConfigurationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class Endpoint extends NetObject  {
 
     public void setBehaviorConfigurationName(java.lang.String BehaviorConfigurationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BehaviorConfigurationName", BehaviorConfigurationName);
         } catch (JCNativeException jcne) {
@@ -254,9 +274,13 @@ public class Endpoint extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +288,7 @@ public class Endpoint extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -274,10 +298,14 @@ public class Endpoint extends NetObject  {
 
     public Uri getAddressUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressUri");
+            retObjectAddressUri = classInstance.Get("AddressUri");
+            JCObject val = (JCObject)retObjectAddressUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressUri != null ? retObjectAddressUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +313,7 @@ public class Endpoint extends NetObject  {
 
     public void setAddressUri(Uri AddressUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddressUri", AddressUri == null ? null : AddressUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -295,10 +323,14 @@ public class Endpoint extends NetObject  {
 
     public Uri getListenUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenUri");
+            retObjectListenUri = classInstance.Get("ListenUri");
+            JCObject val = (JCObject)retObjectListenUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenUri != null ? retObjectListenUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +338,7 @@ public class Endpoint extends NetObject  {
 
     public void setListenUri(Uri ListenUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenUri", ListenUri == null ? null : ListenUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,10 +348,14 @@ public class Endpoint extends NetObject  {
 
     public XName getServiceContractName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceContractName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContractName");
+            retObjectServiceContractName = classInstance.Get("ServiceContractName");
+            JCObject val = (JCObject)retObjectServiceContractName;
             return new XName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceContractName != null ? retObjectServiceContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +363,7 @@ public class Endpoint extends NetObject  {
 
     public void setServiceContractName(XName ServiceContractName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceContractName", ServiceContractName == null ? null : ServiceContractName.getJCOInstance());
         } catch (JCNativeException jcne) {

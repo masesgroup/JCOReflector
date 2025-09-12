@@ -156,9 +156,13 @@ public class GenericSecurityDescriptor extends NetObject  {
     
     public static boolean IsSddlConversionSupported() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSddlConversionSupported = null;
         try {
-            return (boolean)classType.Invoke("IsSddlConversionSupported");
+            retObjectIsSddlConversionSupported = classType.Invoke("IsSddlConversionSupported");
+            return (boolean)retObjectIsSddlConversionSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSddlConversionSupported != null ? retObjectIsSddlConversionSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public java.lang.String GetSddlForm(AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSddlForm = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSddlForm", includeSections == null ? null : includeSections.getJCOInstance());
+            retObjectGetSddlForm = classInstance.Invoke("GetSddlForm", includeSections == null ? null : includeSections.getJCOInstance());
+            return (java.lang.String)retObjectGetSddlForm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSddlForm != null ? retObjectGetSddlForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", binaryForm, offset);
         } catch (JCNativeException jcne) {
@@ -186,7 +194,7 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -200,9 +208,19 @@ public class GenericSecurityDescriptor extends NetObject  {
     
     public static byte getRevision() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRevision = null;
         try {
-            return (byte)classType.Get("Revision");
+            retObjectRevision = classType.Get("Revision");
+            return (byte)retObjectRevision;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRevisionNumber = (java.lang.Number)retObjectRevision;
+                return retObjectRevisionNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectRevision != null ? retObjectRevision.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +228,19 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public int getBinaryLength() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinaryLength = null;
         try {
-            return (int)classInstance.Get("BinaryLength");
+            retObjectBinaryLength = classInstance.Get("BinaryLength");
+            return (int)retObjectBinaryLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBinaryLengthNumber = (java.lang.Number)retObjectBinaryLength;
+                return retObjectBinaryLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinaryLength != null ? retObjectBinaryLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +248,14 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public ControlFlags getControlFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlFlags");
+            retObjectControlFlags = classInstance.Get("ControlFlags");
+            JCObject val = (JCObject)retObjectControlFlags;
             return new ControlFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlFlags != null ? retObjectControlFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +263,14 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public SecurityIdentifier getGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Group");
+            retObjectGroup = classInstance.Get("Group");
+            JCObject val = (JCObject)retObjectGroup;
             return new SecurityIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroup != null ? retObjectGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +278,7 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public void setGroup(SecurityIdentifier Group) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Group", Group == null ? null : Group.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +288,14 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public SecurityIdentifier getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new SecurityIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +303,7 @@ public class GenericSecurityDescriptor extends NetObject  {
 
     public void setOwner(SecurityIdentifier Owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -171,10 +171,14 @@ public class DataGridViewBindingCompleteEventArgs extends EventArgs  {
     
     public ListChangedType getListChangedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListChangedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListChangedType");
+            retObjectListChangedType = classInstance.Get("ListChangedType");
+            JCObject val = (JCObject)retObjectListChangedType;
             return new ListChangedType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListChangedType != null ? retObjectListChangedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

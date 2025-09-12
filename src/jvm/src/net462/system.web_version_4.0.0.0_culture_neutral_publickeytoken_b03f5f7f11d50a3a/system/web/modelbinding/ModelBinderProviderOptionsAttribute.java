@@ -166,9 +166,13 @@ public class ModelBinderProviderOptionsAttribute extends Attribute  {
     
     public boolean getFrontOfList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrontOfList = null;
         try {
-            return (boolean)classInstance.Get("FrontOfList");
+            retObjectFrontOfList = classInstance.Get("FrontOfList");
+            return (boolean)retObjectFrontOfList;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFrontOfList != null ? retObjectFrontOfList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ModelBinderProviderOptionsAttribute extends Attribute  {
 
     public void setFrontOfList(boolean FrontOfList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FrontOfList", FrontOfList);
         } catch (JCNativeException jcne) {

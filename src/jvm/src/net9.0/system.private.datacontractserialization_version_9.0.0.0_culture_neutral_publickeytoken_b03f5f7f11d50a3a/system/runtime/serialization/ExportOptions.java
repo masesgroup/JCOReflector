@@ -167,10 +167,14 @@ public class ExportOptions extends NetObject  {
     
     public ISerializationSurrogateProvider getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractSurrogate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractSurrogate");
+            retObjectDataContractSurrogate = classInstance.Get("DataContractSurrogate");
+            JCObject val = (JCObject)retObjectDataContractSurrogate;
             return new ISerializationSurrogateProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractSurrogate != null ? retObjectDataContractSurrogate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class ExportOptions extends NetObject  {
 
     public void setDataContractSurrogate(ISerializationSurrogateProvider DataContractSurrogate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataContractSurrogate", DataContractSurrogate == null ? null : DataContractSurrogate.getJCOInstance());
         } catch (JCNativeException jcne) {

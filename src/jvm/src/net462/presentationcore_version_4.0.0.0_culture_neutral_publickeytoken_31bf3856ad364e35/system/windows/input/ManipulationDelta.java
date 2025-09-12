@@ -170,9 +170,19 @@ public class ManipulationDelta extends NetObject  {
     
     public double getRotation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRotation = null;
         try {
-            return (double)classInstance.Get("Rotation");
+            retObjectRotation = classInstance.Get("Rotation");
+            return (double)retObjectRotation;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRotationNumber = (java.lang.Number)retObjectRotation;
+                return retObjectRotationNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRotation != null ? retObjectRotation.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +190,7 @@ public class ManipulationDelta extends NetObject  {
 
     public void setRotation(double Rotation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rotation", Rotation);
         } catch (JCNativeException jcne) {
@@ -190,10 +200,14 @@ public class ManipulationDelta extends NetObject  {
 
     public Vector getExpansion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpansion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expansion");
+            retObjectExpansion = classInstance.Get("Expansion");
+            JCObject val = (JCObject)retObjectExpansion;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpansion != null ? retObjectExpansion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +215,7 @@ public class ManipulationDelta extends NetObject  {
 
     public void setExpansion(Vector Expansion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expansion", Expansion == null ? null : Expansion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +225,14 @@ public class ManipulationDelta extends NetObject  {
 
     public Vector getScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            JCObject val = (JCObject)retObjectScale;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScale != null ? retObjectScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +240,7 @@ public class ManipulationDelta extends NetObject  {
 
     public void setScale(Vector Scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scale", Scale == null ? null : Scale.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +250,14 @@ public class ManipulationDelta extends NetObject  {
 
     public Vector getTranslation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTranslation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Translation");
+            retObjectTranslation = classInstance.Get("Translation");
+            JCObject val = (JCObject)retObjectTranslation;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranslation != null ? retObjectTranslation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +265,7 @@ public class ManipulationDelta extends NetObject  {
 
     public void setTranslation(Vector Translation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Translation", Translation == null ? null : Translation.getJCOInstance());
         } catch (JCNativeException jcne) {

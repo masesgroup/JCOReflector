@@ -174,10 +174,14 @@ public class WebControlToolboxItem extends ToolboxItem  {
     
     public NetObject GetToolAttributeValue(IDesignerHost host, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolAttributeValue = null;
         try {
-            JCObject objGetToolAttributeValue = (JCObject)classInstance.Invoke("GetToolAttributeValue", host == null ? null : host.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetToolAttributeValue = classInstance.Invoke("GetToolAttributeValue", host == null ? null : host.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject objGetToolAttributeValue = (JCObject)retObjectGetToolAttributeValue;
             return new NetObject(objGetToolAttributeValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolAttributeValue != null ? retObjectGetToolAttributeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class WebControlToolboxItem extends ToolboxItem  {
 
     public java.lang.String GetToolHtml(IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetToolHtml", host == null ? null : host.getJCOInstance());
+            retObjectGetToolHtml = classInstance.Invoke("GetToolHtml", host == null ? null : host.getJCOInstance());
+            return (java.lang.String)retObjectGetToolHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetToolHtml != null ? retObjectGetToolHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class WebControlToolboxItem extends ToolboxItem  {
 
     public NetType GetToolType(IDesignerHost host) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolType = null;
         try {
-            JCObject objGetToolType = (JCObject)classInstance.Invoke("GetToolType", host == null ? null : host.getJCOInstance());
+            retObjectGetToolType = classInstance.Invoke("GetToolType", host == null ? null : host.getJCOInstance());
+            JCObject objGetToolType = (JCObject)retObjectGetToolType;
             return new NetType(objGetToolType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolType != null ? retObjectGetToolType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class WebControlToolboxItem extends ToolboxItem  {
 
     public void Initialize(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {

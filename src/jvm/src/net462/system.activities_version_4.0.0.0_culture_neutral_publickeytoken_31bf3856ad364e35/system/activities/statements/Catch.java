@@ -157,10 +157,14 @@ public class Catch extends NetObject  {
     
     public NetType getExceptionType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExceptionType");
+            retObjectExceptionType = classInstance.Get("ExceptionType");
+            JCObject val = (JCObject)retObjectExceptionType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptionType != null ? retObjectExceptionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

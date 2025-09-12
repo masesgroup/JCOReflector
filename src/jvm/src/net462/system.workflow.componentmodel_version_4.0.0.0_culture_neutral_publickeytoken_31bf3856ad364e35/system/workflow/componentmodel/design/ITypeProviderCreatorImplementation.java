@@ -148,10 +148,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
     
     public ITypeResolutionService GetTypeResolutionService(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeResolutionService = null;
         try {
-            JCObject objGetTypeResolutionService = (JCObject)classInstance.Invoke("GetTypeResolutionService", obj == null ? null : obj.getJCOInstance());
+            retObjectGetTypeResolutionService = classInstance.Invoke("GetTypeResolutionService", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetTypeResolutionService = (JCObject)retObjectGetTypeResolutionService;
             return new ITypeResolutionServiceImplementation(objGetTypeResolutionService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeResolutionService != null ? retObjectGetTypeResolutionService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
 
     public Assembly GetLocalAssembly(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalAssembly = null;
         try {
-            JCObject objGetLocalAssembly = (JCObject)classInstance.Invoke("GetLocalAssembly", obj == null ? null : obj.getJCOInstance());
+            retObjectGetLocalAssembly = classInstance.Invoke("GetLocalAssembly", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetLocalAssembly = (JCObject)retObjectGetLocalAssembly;
             return new Assembly(objGetLocalAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalAssembly != null ? retObjectGetLocalAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +178,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
 
     public Assembly GetTransientAssembly(AssemblyName assemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTransientAssembly = null;
         try {
-            JCObject objGetTransientAssembly = (JCObject)classInstance.Invoke("GetTransientAssembly", assemblyName == null ? null : assemblyName.getJCOInstance());
+            retObjectGetTransientAssembly = classInstance.Invoke("GetTransientAssembly", assemblyName == null ? null : assemblyName.getJCOInstance());
+            JCObject objGetTransientAssembly = (JCObject)retObjectGetTransientAssembly;
             return new Assembly(objGetTransientAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTransientAssembly != null ? retObjectGetTransientAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +193,14 @@ public class ITypeProviderCreatorImplementation extends NetObject implements ITy
 
     public ITypeProvider GetTypeProvider(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeProvider = null;
         try {
-            JCObject objGetTypeProvider = (JCObject)classInstance.Invoke("GetTypeProvider", obj == null ? null : obj.getJCOInstance());
+            retObjectGetTypeProvider = classInstance.Invoke("GetTypeProvider", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetTypeProvider = (JCObject)retObjectGetTypeProvider;
             return new ITypeProviderImplementation(objGetTypeProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeProvider != null ? retObjectGetTypeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

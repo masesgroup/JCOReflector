@@ -183,10 +183,14 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
     
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationInstant = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationInstant");
+            retObjectAuthenticationInstant = classInstance.Get("AuthenticationInstant");
+            JCObject val = (JCObject)retObjectAuthenticationInstant;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationInstant != null ? retObjectAuthenticationInstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
 
     public void setAuthenticationInstant(DateTime AuthenticationInstant) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationInstant", AuthenticationInstant == null ? null : AuthenticationInstant.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +208,14 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
 
     public Saml2AuthenticationContext getAuthenticationContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationContext");
+            retObjectAuthenticationContext = classInstance.Get("AuthenticationContext");
+            JCObject val = (JCObject)retObjectAuthenticationContext;
             return new Saml2AuthenticationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationContext != null ? retObjectAuthenticationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
 
     public void setAuthenticationContext(Saml2AuthenticationContext AuthenticationContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationContext", AuthenticationContext == null ? null : AuthenticationContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,10 +233,14 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
 
     public Saml2SubjectLocality getSubjectLocality() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectLocality = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubjectLocality");
+            retObjectSubjectLocality = classInstance.Get("SubjectLocality");
+            JCObject val = (JCObject)retObjectSubjectLocality;
             return new Saml2SubjectLocality(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectLocality != null ? retObjectSubjectLocality.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
 
     public void setSubjectLocality(Saml2SubjectLocality SubjectLocality) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubjectLocality", SubjectLocality == null ? null : SubjectLocality.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,9 +258,13 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
 
     public java.lang.String getSessionIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionIndex = null;
         try {
-            return (java.lang.String)classInstance.Get("SessionIndex");
+            retObjectSessionIndex = classInstance.Get("SessionIndex");
+            return (java.lang.String)retObjectSessionIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSessionIndex != null ? retObjectSessionIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +272,7 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
 
     public void setSessionIndex(java.lang.String SessionIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionIndex", SessionIndex);
         } catch (JCNativeException jcne) {

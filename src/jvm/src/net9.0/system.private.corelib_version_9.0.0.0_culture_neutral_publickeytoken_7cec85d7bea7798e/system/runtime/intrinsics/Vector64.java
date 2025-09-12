@@ -157,9 +157,13 @@ public class Vector64 extends NetObject  {
     
     public static boolean getIsHardwareAccelerated() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsHardwareAccelerated = null;
         try {
-            return (boolean)classType.Get("IsHardwareAccelerated");
+            retObjectIsHardwareAccelerated = classType.Get("IsHardwareAccelerated");
+            return (boolean)retObjectIsHardwareAccelerated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHardwareAccelerated != null ? retObjectIsHardwareAccelerated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

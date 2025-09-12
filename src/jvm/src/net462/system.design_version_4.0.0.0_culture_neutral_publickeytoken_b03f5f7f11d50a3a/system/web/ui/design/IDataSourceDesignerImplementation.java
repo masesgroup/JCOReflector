@@ -144,10 +144,12 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
     
     public java.lang.String[] GetViewNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViewNames");
+            retObjectGetViewNames = classInstance.Invoke("GetViewNames");
+            JCObject resultingObjects = (JCObject)retObjectGetViewNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -156,6 +158,8 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 				resultingArray[indexGetViewNames] = (java.lang.String)resultingArrayList.get(indexGetViewNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetViewNames != null ? retObjectGetViewNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public DesignerDataSourceView GetView(java.lang.String viewName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewName);
+            retObjectGetView = classInstance.Invoke("GetView", viewName);
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DesignerDataSourceView(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +182,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void Configure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Configure");
         } catch (JCNativeException jcne) {
@@ -184,7 +192,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void RefreshSchema(boolean preferSilent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshSchema", preferSilent);
         } catch (JCNativeException jcne) {
@@ -194,7 +202,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void ResumeDataSourceEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResumeDataSourceEvents");
         } catch (JCNativeException jcne) {
@@ -204,7 +212,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void SuppressDataSourceEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuppressDataSourceEvents");
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
     
     public boolean getCanConfigure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConfigure = null;
         try {
-            return (boolean)classInstance.Get("CanConfigure");
+            retObjectCanConfigure = classInstance.Get("CanConfigure");
+            return (boolean)retObjectCanConfigure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanConfigure != null ? retObjectCanConfigure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +240,13 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public boolean getCanRefreshSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRefreshSchema = null;
         try {
-            return (boolean)classInstance.Get("CanRefreshSchema");
+            retObjectCanRefreshSchema = classInstance.Get("CanRefreshSchema");
+            return (boolean)retObjectCanRefreshSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRefreshSchema != null ? retObjectCanRefreshSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +259,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -253,7 +269,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -263,7 +279,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void addSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SchemaRefreshed", handler);
         } catch (JCNativeException jcne) {
@@ -273,7 +289,7 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
 
     public void removeSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SchemaRefreshed", handler);
         } catch (JCNativeException jcne) {

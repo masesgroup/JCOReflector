@@ -158,10 +158,14 @@ public class SessionSecurityTokenCache extends NetObject  {
     
     public SessionSecurityToken Get(SessionSecurityTokenCacheKey key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", key == null ? null : key.getJCOInstance());
+            retObjectGet = classInstance.Invoke("Get", key == null ? null : key.getJCOInstance());
+            JCObject objGet = (JCObject)retObjectGet;
             return new SessionSecurityToken(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class SessionSecurityTokenCache extends NetObject  {
 
     public void AddOrUpdate(SessionSecurityTokenCacheKey key, SessionSecurityToken value, DateTime expiryTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOrUpdate", key == null ? null : key.getJCOInstance(), value == null ? null : value.getJCOInstance(), expiryTime == null ? null : expiryTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +183,7 @@ public class SessionSecurityTokenCache extends NetObject  {
 
     public void LoadCustomConfiguration(XmlNodeList nodelist) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadCustomConfiguration", nodelist == null ? null : nodelist.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +193,7 @@ public class SessionSecurityTokenCache extends NetObject  {
 
     public void Remove(SessionSecurityTokenCacheKey key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +203,7 @@ public class SessionSecurityTokenCache extends NetObject  {
 
     public void RemoveAll(java.lang.String endpointId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll", endpointId);
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class SessionSecurityTokenCache extends NetObject  {
 
     public void RemoveAll(java.lang.String endpointId, UniqueId contextId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll", endpointId, contextId == null ? null : contextId.getJCOInstance());
         } catch (JCNativeException jcne) {

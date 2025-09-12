@@ -166,10 +166,14 @@ public class PeerTransportSecuritySettings extends NetObject  {
     
     public PeerTransportCredentialType getCredentialType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentialType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CredentialType");
+            retObjectCredentialType = classInstance.Get("CredentialType");
+            JCObject val = (JCObject)retObjectCredentialType;
             return new PeerTransportCredentialType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentialType != null ? retObjectCredentialType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class PeerTransportSecuritySettings extends NetObject  {
 
     public void setCredentialType(PeerTransportCredentialType CredentialType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CredentialType", CredentialType == null ? null : CredentialType.getJCOInstance());
         } catch (JCNativeException jcne) {

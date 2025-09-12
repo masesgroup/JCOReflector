@@ -159,10 +159,14 @@ public class ModelChangedEventArgs extends EventArgs  {
     
     public ModelChangeInfo getModelChangeInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelChangeInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelChangeInfo");
+            retObjectModelChangeInfo = classInstance.Get("ModelChangeInfo");
+            JCObject val = (JCObject)retObjectModelChangeInfo;
             return new ModelChangeInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelChangeInfo != null ? retObjectModelChangeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

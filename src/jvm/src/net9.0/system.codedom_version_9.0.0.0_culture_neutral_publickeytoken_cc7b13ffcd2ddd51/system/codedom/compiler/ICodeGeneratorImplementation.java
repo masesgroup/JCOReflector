@@ -151,9 +151,13 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
     
     public boolean IsValidIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidIdentifier = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidIdentifier", value);
+            retObjectIsValidIdentifier = classInstance.Invoke("IsValidIdentifier", value);
+            return (boolean)retObjectIsValidIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidIdentifier != null ? retObjectIsValidIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,9 +165,13 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public boolean Supports(GeneratorSupport supports) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupports = null;
         try {
-            return (boolean)classInstance.Invoke("Supports", supports == null ? null : supports.getJCOInstance());
+            retObjectSupports = classInstance.Invoke("Supports", supports == null ? null : supports.getJCOInstance());
+            return (boolean)retObjectSupports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupports != null ? retObjectSupports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +179,13 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public java.lang.String CreateEscapedIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEscapedIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateEscapedIdentifier", value);
+            retObjectCreateEscapedIdentifier = classInstance.Invoke("CreateEscapedIdentifier", value);
+            return (java.lang.String)retObjectCreateEscapedIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateEscapedIdentifier != null ? retObjectCreateEscapedIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +193,13 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public java.lang.String CreateValidIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateValidIdentifier = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateValidIdentifier", value);
+            retObjectCreateValidIdentifier = classInstance.Invoke("CreateValidIdentifier", value);
+            return (java.lang.String)retObjectCreateValidIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateValidIdentifier != null ? retObjectCreateValidIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +207,13 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public java.lang.String GetTypeOutput(CodeTypeReference type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeOutput = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTypeOutput", type == null ? null : type.getJCOInstance());
+            retObjectGetTypeOutput = classInstance.Invoke("GetTypeOutput", type == null ? null : type.getJCOInstance());
+            return (java.lang.String)retObjectGetTypeOutput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTypeOutput != null ? retObjectGetTypeOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +221,7 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCodeFromCompileUnit", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +231,7 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCodeFromExpression", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +241,7 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public void GenerateCodeFromNamespace(CodeNamespace e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCodeFromNamespace", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +251,7 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCodeFromStatement", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +261,7 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCodeFromType", e == null ? null : e.getJCOInstance(), w == null ? null : w.getJCOInstance(), o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,7 +271,7 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
 
     public void ValidateIdentifier(java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateIdentifier", value);
         } catch (JCNativeException jcne) {

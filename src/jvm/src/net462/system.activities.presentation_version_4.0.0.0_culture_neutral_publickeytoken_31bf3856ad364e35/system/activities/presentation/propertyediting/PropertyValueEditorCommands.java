@@ -158,10 +158,14 @@ public class PropertyValueEditorCommands extends NetObject  {
     
     public static RoutedCommand getAbortTransaction() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbortTransaction = null;
         try {
-            JCObject val = (JCObject)classType.Get("AbortTransaction");
+            retObjectAbortTransaction = classType.Get("AbortTransaction");
+            JCObject val = (JCObject)retObjectAbortTransaction;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbortTransaction != null ? retObjectAbortTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class PropertyValueEditorCommands extends NetObject  {
 
     public static RoutedCommand getBeginTransaction() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginTransaction = null;
         try {
-            JCObject val = (JCObject)classType.Get("BeginTransaction");
+            retObjectBeginTransaction = classType.Get("BeginTransaction");
+            JCObject val = (JCObject)retObjectBeginTransaction;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransaction != null ? retObjectBeginTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class PropertyValueEditorCommands extends NetObject  {
 
     public static RoutedCommand getCommitTransaction() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCommitTransaction = null;
         try {
-            JCObject val = (JCObject)classType.Get("CommitTransaction");
+            retObjectCommitTransaction = classType.Get("CommitTransaction");
+            JCObject val = (JCObject)retObjectCommitTransaction;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommitTransaction != null ? retObjectCommitTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class PropertyValueEditorCommands extends NetObject  {
 
     public static RoutedCommand getFinishEditing() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFinishEditing = null;
         try {
-            JCObject val = (JCObject)classType.Get("FinishEditing");
+            retObjectFinishEditing = classType.Get("FinishEditing");
+            JCObject val = (JCObject)retObjectFinishEditing;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinishEditing != null ? retObjectFinishEditing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class PropertyValueEditorCommands extends NetObject  {
 
     public static RoutedCommand getShowDialogEditor() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowDialogEditor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShowDialogEditor");
+            retObjectShowDialogEditor = classType.Get("ShowDialogEditor");
+            JCObject val = (JCObject)retObjectShowDialogEditor;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialogEditor != null ? retObjectShowDialogEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class PropertyValueEditorCommands extends NetObject  {
 
     public static RoutedCommand getShowExtendedPinnedEditor() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowExtendedPinnedEditor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShowExtendedPinnedEditor");
+            retObjectShowExtendedPinnedEditor = classType.Get("ShowExtendedPinnedEditor");
+            JCObject val = (JCObject)retObjectShowExtendedPinnedEditor;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowExtendedPinnedEditor != null ? retObjectShowExtendedPinnedEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class PropertyValueEditorCommands extends NetObject  {
 
     public static RoutedCommand getShowExtendedPopupEditor() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowExtendedPopupEditor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShowExtendedPopupEditor");
+            retObjectShowExtendedPopupEditor = classType.Get("ShowExtendedPopupEditor");
+            JCObject val = (JCObject)retObjectShowExtendedPopupEditor;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowExtendedPopupEditor != null ? retObjectShowExtendedPopupEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class PropertyValueEditorCommands extends NetObject  {
 
     public static RoutedCommand getShowInlineEditor() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowInlineEditor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShowInlineEditor");
+            retObjectShowInlineEditor = classType.Get("ShowInlineEditor");
+            JCObject val = (JCObject)retObjectShowInlineEditor;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowInlineEditor != null ? retObjectShowInlineEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

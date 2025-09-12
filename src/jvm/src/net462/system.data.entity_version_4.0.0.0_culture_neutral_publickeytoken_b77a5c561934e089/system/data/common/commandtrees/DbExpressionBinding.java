@@ -162,10 +162,14 @@ public class DbExpressionBinding extends NetObject  {
     
     public DbExpression getExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            JCObject val = (JCObject)retObjectExpression;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class DbExpressionBinding extends NetObject  {
 
     public DbVariableReferenceExpression getVariable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Variable");
+            retObjectVariable = classInstance.Get("Variable");
+            JCObject val = (JCObject)retObjectVariable;
             return new DbVariableReferenceExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariable != null ? retObjectVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class DbExpressionBinding extends NetObject  {
 
     public TypeUsage getVariableType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariableType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VariableType");
+            retObjectVariableType = classInstance.Get("VariableType");
+            JCObject val = (JCObject)retObjectVariableType;
             return new TypeUsage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariableType != null ? retObjectVariableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class DbExpressionBinding extends NetObject  {
 
     public java.lang.String getVariableName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariableName = null;
         try {
-            return (java.lang.String)classInstance.Get("VariableName");
+            retObjectVariableName = classInstance.Get("VariableName");
+            return (java.lang.String)retObjectVariableName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVariableName != null ? retObjectVariableName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,7 +165,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
     
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.InvalidCastException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
      */
     @Deprecated 
     public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -188,7 +188,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
      */
     @Deprecated 
     public void Clear() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -197,7 +197,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
      */
     @Deprecated 
     public void ClearItemValue(NetObject item, DependencyProperty dp) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -206,7 +206,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
      */
     @Deprecated 
     public void ClearValue(DependencyProperty dp) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -215,7 +215,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
      */
     @Deprecated 
     public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
 

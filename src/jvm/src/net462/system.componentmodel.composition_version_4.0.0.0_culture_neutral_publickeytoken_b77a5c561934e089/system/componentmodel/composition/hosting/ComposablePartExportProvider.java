@@ -184,7 +184,7 @@ public class ComposablePartExportProvider extends ExportProvider implements Auto
     
     public void Compose(CompositionBatch batch) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Compose", batch == null ? null : batch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class ComposablePartExportProvider extends ExportProvider implements Auto
 
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class ComposablePartExportProvider extends ExportProvider implements Auto
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -221,10 +221,14 @@ public class ComposablePartExportProvider extends ExportProvider implements Auto
     
     public ExportProvider getSourceProvider() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceProvider");
+            retObjectSourceProvider = classInstance.Get("SourceProvider");
+            JCObject val = (JCObject)retObjectSourceProvider;
             return new ExportProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceProvider != null ? retObjectSourceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +236,7 @@ public class ComposablePartExportProvider extends ExportProvider implements Auto
 
     public void setSourceProvider(ExportProvider SourceProvider) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceProvider", SourceProvider == null ? null : SourceProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

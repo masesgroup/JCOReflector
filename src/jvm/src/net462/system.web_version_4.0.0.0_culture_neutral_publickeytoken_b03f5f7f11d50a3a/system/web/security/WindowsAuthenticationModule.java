@@ -163,7 +163,7 @@ public class WindowsAuthenticationModule extends NetObject  {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class WindowsAuthenticationModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class WindowsAuthenticationModule extends NetObject  {
 
     public void addAuthenticate(WindowsAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class WindowsAuthenticationModule extends NetObject  {
 
     public void removeAuthenticate(WindowsAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {

@@ -158,10 +158,14 @@ public class UnicodeRanges extends NetObject  {
     
     public static UnicodeRange getAll() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAll = null;
         try {
-            JCObject val = (JCObject)classType.Get("All");
+            retObjectAll = classType.Get("All");
+            JCObject val = (JCObject)retObjectAll;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getAlphabeticPresentationForms() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlphabeticPresentationForms = null;
         try {
-            JCObject val = (JCObject)classType.Get("AlphabeticPresentationForms");
+            retObjectAlphabeticPresentationForms = classType.Get("AlphabeticPresentationForms");
+            JCObject val = (JCObject)retObjectAlphabeticPresentationForms;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlphabeticPresentationForms != null ? retObjectAlphabeticPresentationForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArabic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArabic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Arabic");
+            retObjectArabic = classType.Get("Arabic");
+            JCObject val = (JCObject)retObjectArabic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArabic != null ? retObjectArabic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArabicExtendedA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArabicExtendedA = null;
         try {
-            JCObject val = (JCObject)classType.Get("ArabicExtendedA");
+            retObjectArabicExtendedA = classType.Get("ArabicExtendedA");
+            JCObject val = (JCObject)retObjectArabicExtendedA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArabicExtendedA != null ? retObjectArabicExtendedA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArabicExtendedB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArabicExtendedB = null;
         try {
-            JCObject val = (JCObject)classType.Get("ArabicExtendedB");
+            retObjectArabicExtendedB = classType.Get("ArabicExtendedB");
+            JCObject val = (JCObject)retObjectArabicExtendedB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArabicExtendedB != null ? retObjectArabicExtendedB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArabicPresentationFormsA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArabicPresentationFormsA = null;
         try {
-            JCObject val = (JCObject)classType.Get("ArabicPresentationFormsA");
+            retObjectArabicPresentationFormsA = classType.Get("ArabicPresentationFormsA");
+            JCObject val = (JCObject)retObjectArabicPresentationFormsA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArabicPresentationFormsA != null ? retObjectArabicPresentationFormsA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArabicPresentationFormsB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArabicPresentationFormsB = null;
         try {
-            JCObject val = (JCObject)classType.Get("ArabicPresentationFormsB");
+            retObjectArabicPresentationFormsB = classType.Get("ArabicPresentationFormsB");
+            JCObject val = (JCObject)retObjectArabicPresentationFormsB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArabicPresentationFormsB != null ? retObjectArabicPresentationFormsB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArabicSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArabicSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("ArabicSupplement");
+            retObjectArabicSupplement = classType.Get("ArabicSupplement");
+            JCObject val = (JCObject)retObjectArabicSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArabicSupplement != null ? retObjectArabicSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArmenian() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArmenian = null;
         try {
-            JCObject val = (JCObject)classType.Get("Armenian");
+            retObjectArmenian = classType.Get("Armenian");
+            JCObject val = (JCObject)retObjectArmenian;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArmenian != null ? retObjectArmenian.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getArrows() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArrows = null;
         try {
-            JCObject val = (JCObject)classType.Get("Arrows");
+            retObjectArrows = classType.Get("Arrows");
+            JCObject val = (JCObject)retObjectArrows;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrows != null ? retObjectArrows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBalinese() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBalinese = null;
         try {
-            JCObject val = (JCObject)classType.Get("Balinese");
+            retObjectBalinese = classType.Get("Balinese");
+            JCObject val = (JCObject)retObjectBalinese;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBalinese != null ? retObjectBalinese.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBamum() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBamum = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bamum");
+            retObjectBamum = classType.Get("Bamum");
+            JCObject val = (JCObject)retObjectBamum;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBamum != null ? retObjectBamum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBasicLatin() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasicLatin = null;
         try {
-            JCObject val = (JCObject)classType.Get("BasicLatin");
+            retObjectBasicLatin = classType.Get("BasicLatin");
+            JCObject val = (JCObject)retObjectBasicLatin;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasicLatin != null ? retObjectBasicLatin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBatak() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBatak = null;
         try {
-            JCObject val = (JCObject)classType.Get("Batak");
+            retObjectBatak = classType.Get("Batak");
+            JCObject val = (JCObject)retObjectBatak;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBatak != null ? retObjectBatak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBengali() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBengali = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bengali");
+            retObjectBengali = classType.Get("Bengali");
+            JCObject val = (JCObject)retObjectBengali;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBengali != null ? retObjectBengali.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBlockElements() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlockElements = null;
         try {
-            JCObject val = (JCObject)classType.Get("BlockElements");
+            retObjectBlockElements = classType.Get("BlockElements");
+            JCObject val = (JCObject)retObjectBlockElements;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlockElements != null ? retObjectBlockElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBopomofo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBopomofo = null;
         try {
-            JCObject val = (JCObject)classType.Get("Bopomofo");
+            retObjectBopomofo = classType.Get("Bopomofo");
+            JCObject val = (JCObject)retObjectBopomofo;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBopomofo != null ? retObjectBopomofo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +413,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBopomofoExtended() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBopomofoExtended = null;
         try {
-            JCObject val = (JCObject)classType.Get("BopomofoExtended");
+            retObjectBopomofoExtended = classType.Get("BopomofoExtended");
+            JCObject val = (JCObject)retObjectBopomofoExtended;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBopomofoExtended != null ? retObjectBopomofoExtended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +428,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBoxDrawing() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBoxDrawing = null;
         try {
-            JCObject val = (JCObject)classType.Get("BoxDrawing");
+            retObjectBoxDrawing = classType.Get("BoxDrawing");
+            JCObject val = (JCObject)retObjectBoxDrawing;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoxDrawing != null ? retObjectBoxDrawing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +443,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBraillePatterns() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBraillePatterns = null;
         try {
-            JCObject val = (JCObject)classType.Get("BraillePatterns");
+            retObjectBraillePatterns = classType.Get("BraillePatterns");
+            JCObject val = (JCObject)retObjectBraillePatterns;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBraillePatterns != null ? retObjectBraillePatterns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +458,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBuginese() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBuginese = null;
         try {
-            JCObject val = (JCObject)classType.Get("Buginese");
+            retObjectBuginese = classType.Get("Buginese");
+            JCObject val = (JCObject)retObjectBuginese;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuginese != null ? retObjectBuginese.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +473,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getBuhid() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBuhid = null;
         try {
-            JCObject val = (JCObject)classType.Get("Buhid");
+            retObjectBuhid = classType.Get("Buhid");
+            JCObject val = (JCObject)retObjectBuhid;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuhid != null ? retObjectBuhid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +488,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCham() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCham = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cham");
+            retObjectCham = classType.Get("Cham");
+            JCObject val = (JCObject)retObjectCham;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCham != null ? retObjectCham.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +503,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCherokee() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCherokee = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cherokee");
+            retObjectCherokee = classType.Get("Cherokee");
+            JCObject val = (JCObject)retObjectCherokee;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCherokee != null ? retObjectCherokee.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +518,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCherokeeSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCherokeeSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("CherokeeSupplement");
+            retObjectCherokeeSupplement = classType.Get("CherokeeSupplement");
+            JCObject val = (JCObject)retObjectCherokeeSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCherokeeSupplement != null ? retObjectCherokeeSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +533,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkCompatibility() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkCompatibility = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkCompatibility");
+            retObjectCjkCompatibility = classType.Get("CjkCompatibility");
+            JCObject val = (JCObject)retObjectCjkCompatibility;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkCompatibility != null ? retObjectCjkCompatibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +548,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkCompatibilityForms() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkCompatibilityForms = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkCompatibilityForms");
+            retObjectCjkCompatibilityForms = classType.Get("CjkCompatibilityForms");
+            JCObject val = (JCObject)retObjectCjkCompatibilityForms;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkCompatibilityForms != null ? retObjectCjkCompatibilityForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +563,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkCompatibilityIdeographs() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkCompatibilityIdeographs = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkCompatibilityIdeographs");
+            retObjectCjkCompatibilityIdeographs = classType.Get("CjkCompatibilityIdeographs");
+            JCObject val = (JCObject)retObjectCjkCompatibilityIdeographs;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkCompatibilityIdeographs != null ? retObjectCjkCompatibilityIdeographs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +578,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkRadicalsSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkRadicalsSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkRadicalsSupplement");
+            retObjectCjkRadicalsSupplement = classType.Get("CjkRadicalsSupplement");
+            JCObject val = (JCObject)retObjectCjkRadicalsSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkRadicalsSupplement != null ? retObjectCjkRadicalsSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +593,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkStrokes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkStrokes = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkStrokes");
+            retObjectCjkStrokes = classType.Get("CjkStrokes");
+            JCObject val = (JCObject)retObjectCjkStrokes;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkStrokes != null ? retObjectCjkStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +608,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkSymbolsandPunctuation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkSymbolsandPunctuation = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkSymbolsandPunctuation");
+            retObjectCjkSymbolsandPunctuation = classType.Get("CjkSymbolsandPunctuation");
+            JCObject val = (JCObject)retObjectCjkSymbolsandPunctuation;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkSymbolsandPunctuation != null ? retObjectCjkSymbolsandPunctuation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +623,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkUnifiedIdeographs() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkUnifiedIdeographs = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkUnifiedIdeographs");
+            retObjectCjkUnifiedIdeographs = classType.Get("CjkUnifiedIdeographs");
+            JCObject val = (JCObject)retObjectCjkUnifiedIdeographs;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkUnifiedIdeographs != null ? retObjectCjkUnifiedIdeographs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +638,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCjkUnifiedIdeographsExtensionA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCjkUnifiedIdeographsExtensionA = null;
         try {
-            JCObject val = (JCObject)classType.Get("CjkUnifiedIdeographsExtensionA");
+            retObjectCjkUnifiedIdeographsExtensionA = classType.Get("CjkUnifiedIdeographsExtensionA");
+            JCObject val = (JCObject)retObjectCjkUnifiedIdeographsExtensionA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCjkUnifiedIdeographsExtensionA != null ? retObjectCjkUnifiedIdeographsExtensionA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +653,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCombiningDiacriticalMarks() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombiningDiacriticalMarks = null;
         try {
-            JCObject val = (JCObject)classType.Get("CombiningDiacriticalMarks");
+            retObjectCombiningDiacriticalMarks = classType.Get("CombiningDiacriticalMarks");
+            JCObject val = (JCObject)retObjectCombiningDiacriticalMarks;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombiningDiacriticalMarks != null ? retObjectCombiningDiacriticalMarks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +668,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCombiningDiacriticalMarksExtended() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombiningDiacriticalMarksExtended = null;
         try {
-            JCObject val = (JCObject)classType.Get("CombiningDiacriticalMarksExtended");
+            retObjectCombiningDiacriticalMarksExtended = classType.Get("CombiningDiacriticalMarksExtended");
+            JCObject val = (JCObject)retObjectCombiningDiacriticalMarksExtended;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombiningDiacriticalMarksExtended != null ? retObjectCombiningDiacriticalMarksExtended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +683,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCombiningDiacriticalMarksforSymbols() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombiningDiacriticalMarksforSymbols = null;
         try {
-            JCObject val = (JCObject)classType.Get("CombiningDiacriticalMarksforSymbols");
+            retObjectCombiningDiacriticalMarksforSymbols = classType.Get("CombiningDiacriticalMarksforSymbols");
+            JCObject val = (JCObject)retObjectCombiningDiacriticalMarksforSymbols;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombiningDiacriticalMarksforSymbols != null ? retObjectCombiningDiacriticalMarksforSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,10 +698,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCombiningDiacriticalMarksSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombiningDiacriticalMarksSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("CombiningDiacriticalMarksSupplement");
+            retObjectCombiningDiacriticalMarksSupplement = classType.Get("CombiningDiacriticalMarksSupplement");
+            JCObject val = (JCObject)retObjectCombiningDiacriticalMarksSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombiningDiacriticalMarksSupplement != null ? retObjectCombiningDiacriticalMarksSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +713,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCombiningHalfMarks() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombiningHalfMarks = null;
         try {
-            JCObject val = (JCObject)classType.Get("CombiningHalfMarks");
+            retObjectCombiningHalfMarks = classType.Get("CombiningHalfMarks");
+            JCObject val = (JCObject)retObjectCombiningHalfMarks;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombiningHalfMarks != null ? retObjectCombiningHalfMarks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,10 +728,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCommonIndicNumberForms() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCommonIndicNumberForms = null;
         try {
-            JCObject val = (JCObject)classType.Get("CommonIndicNumberForms");
+            retObjectCommonIndicNumberForms = classType.Get("CommonIndicNumberForms");
+            JCObject val = (JCObject)retObjectCommonIndicNumberForms;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommonIndicNumberForms != null ? retObjectCommonIndicNumberForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,10 +743,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getControlPictures() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlPictures = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlPictures");
+            retObjectControlPictures = classType.Get("ControlPictures");
+            JCObject val = (JCObject)retObjectControlPictures;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlPictures != null ? retObjectControlPictures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,10 +758,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCoptic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCoptic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Coptic");
+            retObjectCoptic = classType.Get("Coptic");
+            JCObject val = (JCObject)retObjectCoptic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCoptic != null ? retObjectCoptic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,10 +773,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCurrencySymbols() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrencySymbols = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrencySymbols");
+            retObjectCurrencySymbols = classType.Get("CurrencySymbols");
+            JCObject val = (JCObject)retObjectCurrencySymbols;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrencySymbols != null ? retObjectCurrencySymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,10 +788,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCyrillic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCyrillic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cyrillic");
+            retObjectCyrillic = classType.Get("Cyrillic");
+            JCObject val = (JCObject)retObjectCyrillic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCyrillic != null ? retObjectCyrillic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,10 +803,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCyrillicExtendedA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCyrillicExtendedA = null;
         try {
-            JCObject val = (JCObject)classType.Get("CyrillicExtendedA");
+            retObjectCyrillicExtendedA = classType.Get("CyrillicExtendedA");
+            JCObject val = (JCObject)retObjectCyrillicExtendedA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCyrillicExtendedA != null ? retObjectCyrillicExtendedA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,10 +818,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCyrillicExtendedB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCyrillicExtendedB = null;
         try {
-            JCObject val = (JCObject)classType.Get("CyrillicExtendedB");
+            retObjectCyrillicExtendedB = classType.Get("CyrillicExtendedB");
+            JCObject val = (JCObject)retObjectCyrillicExtendedB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCyrillicExtendedB != null ? retObjectCyrillicExtendedB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,10 +833,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCyrillicExtendedC() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCyrillicExtendedC = null;
         try {
-            JCObject val = (JCObject)classType.Get("CyrillicExtendedC");
+            retObjectCyrillicExtendedC = classType.Get("CyrillicExtendedC");
+            JCObject val = (JCObject)retObjectCyrillicExtendedC;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCyrillicExtendedC != null ? retObjectCyrillicExtendedC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -664,10 +848,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getCyrillicSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCyrillicSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("CyrillicSupplement");
+            retObjectCyrillicSupplement = classType.Get("CyrillicSupplement");
+            JCObject val = (JCObject)retObjectCyrillicSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCyrillicSupplement != null ? retObjectCyrillicSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,10 +863,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getDevanagari() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDevanagari = null;
         try {
-            JCObject val = (JCObject)classType.Get("Devanagari");
+            retObjectDevanagari = classType.Get("Devanagari");
+            JCObject val = (JCObject)retObjectDevanagari;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDevanagari != null ? retObjectDevanagari.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,10 +878,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getDevanagariExtended() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDevanagariExtended = null;
         try {
-            JCObject val = (JCObject)classType.Get("DevanagariExtended");
+            retObjectDevanagariExtended = classType.Get("DevanagariExtended");
+            JCObject val = (JCObject)retObjectDevanagariExtended;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDevanagariExtended != null ? retObjectDevanagariExtended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,10 +893,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getDingbats() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDingbats = null;
         try {
-            JCObject val = (JCObject)classType.Get("Dingbats");
+            retObjectDingbats = classType.Get("Dingbats");
+            JCObject val = (JCObject)retObjectDingbats;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDingbats != null ? retObjectDingbats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,10 +908,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getEnclosedAlphanumerics() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnclosedAlphanumerics = null;
         try {
-            JCObject val = (JCObject)classType.Get("EnclosedAlphanumerics");
+            retObjectEnclosedAlphanumerics = classType.Get("EnclosedAlphanumerics");
+            JCObject val = (JCObject)retObjectEnclosedAlphanumerics;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnclosedAlphanumerics != null ? retObjectEnclosedAlphanumerics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -719,10 +923,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getEnclosedCjkLettersandMonths() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnclosedCjkLettersandMonths = null;
         try {
-            JCObject val = (JCObject)classType.Get("EnclosedCjkLettersandMonths");
+            retObjectEnclosedCjkLettersandMonths = classType.Get("EnclosedCjkLettersandMonths");
+            JCObject val = (JCObject)retObjectEnclosedCjkLettersandMonths;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnclosedCjkLettersandMonths != null ? retObjectEnclosedCjkLettersandMonths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -730,10 +938,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getEthiopic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEthiopic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Ethiopic");
+            retObjectEthiopic = classType.Get("Ethiopic");
+            JCObject val = (JCObject)retObjectEthiopic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEthiopic != null ? retObjectEthiopic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,10 +953,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getEthiopicExtended() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEthiopicExtended = null;
         try {
-            JCObject val = (JCObject)classType.Get("EthiopicExtended");
+            retObjectEthiopicExtended = classType.Get("EthiopicExtended");
+            JCObject val = (JCObject)retObjectEthiopicExtended;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEthiopicExtended != null ? retObjectEthiopicExtended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -752,10 +968,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getEthiopicExtendedA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEthiopicExtendedA = null;
         try {
-            JCObject val = (JCObject)classType.Get("EthiopicExtendedA");
+            retObjectEthiopicExtendedA = classType.Get("EthiopicExtendedA");
+            JCObject val = (JCObject)retObjectEthiopicExtendedA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEthiopicExtendedA != null ? retObjectEthiopicExtendedA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -763,10 +983,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getEthiopicSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEthiopicSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("EthiopicSupplement");
+            retObjectEthiopicSupplement = classType.Get("EthiopicSupplement");
+            JCObject val = (JCObject)retObjectEthiopicSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEthiopicSupplement != null ? retObjectEthiopicSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -774,10 +998,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGeneralPunctuation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeneralPunctuation = null;
         try {
-            JCObject val = (JCObject)classType.Get("GeneralPunctuation");
+            retObjectGeneralPunctuation = classType.Get("GeneralPunctuation");
+            JCObject val = (JCObject)retObjectGeneralPunctuation;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeneralPunctuation != null ? retObjectGeneralPunctuation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -785,10 +1013,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGeometricShapes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometricShapes = null;
         try {
-            JCObject val = (JCObject)classType.Get("GeometricShapes");
+            retObjectGeometricShapes = classType.Get("GeometricShapes");
+            JCObject val = (JCObject)retObjectGeometricShapes;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometricShapes != null ? retObjectGeometricShapes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,10 +1028,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGeorgian() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeorgian = null;
         try {
-            JCObject val = (JCObject)classType.Get("Georgian");
+            retObjectGeorgian = classType.Get("Georgian");
+            JCObject val = (JCObject)retObjectGeorgian;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeorgian != null ? retObjectGeorgian.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -807,10 +1043,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGeorgianExtended() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeorgianExtended = null;
         try {
-            JCObject val = (JCObject)classType.Get("GeorgianExtended");
+            retObjectGeorgianExtended = classType.Get("GeorgianExtended");
+            JCObject val = (JCObject)retObjectGeorgianExtended;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeorgianExtended != null ? retObjectGeorgianExtended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -818,10 +1058,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGeorgianSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeorgianSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("GeorgianSupplement");
+            retObjectGeorgianSupplement = classType.Get("GeorgianSupplement");
+            JCObject val = (JCObject)retObjectGeorgianSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeorgianSupplement != null ? retObjectGeorgianSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -829,10 +1073,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGlagolitic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGlagolitic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Glagolitic");
+            retObjectGlagolitic = classType.Get("Glagolitic");
+            JCObject val = (JCObject)retObjectGlagolitic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlagolitic != null ? retObjectGlagolitic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -840,10 +1088,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGreekandCoptic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreekandCoptic = null;
         try {
-            JCObject val = (JCObject)classType.Get("GreekandCoptic");
+            retObjectGreekandCoptic = classType.Get("GreekandCoptic");
+            JCObject val = (JCObject)retObjectGreekandCoptic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreekandCoptic != null ? retObjectGreekandCoptic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -851,10 +1103,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGreekExtended() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreekExtended = null;
         try {
-            JCObject val = (JCObject)classType.Get("GreekExtended");
+            retObjectGreekExtended = classType.Get("GreekExtended");
+            JCObject val = (JCObject)retObjectGreekExtended;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreekExtended != null ? retObjectGreekExtended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -862,10 +1118,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGujarati() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGujarati = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gujarati");
+            retObjectGujarati = classType.Get("Gujarati");
+            JCObject val = (JCObject)retObjectGujarati;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGujarati != null ? retObjectGujarati.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -873,10 +1133,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getGurmukhi() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGurmukhi = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gurmukhi");
+            retObjectGurmukhi = classType.Get("Gurmukhi");
+            JCObject val = (JCObject)retObjectGurmukhi;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGurmukhi != null ? retObjectGurmukhi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -884,10 +1148,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHalfwidthandFullwidthForms() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalfwidthandFullwidthForms = null;
         try {
-            JCObject val = (JCObject)classType.Get("HalfwidthandFullwidthForms");
+            retObjectHalfwidthandFullwidthForms = classType.Get("HalfwidthandFullwidthForms");
+            JCObject val = (JCObject)retObjectHalfwidthandFullwidthForms;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalfwidthandFullwidthForms != null ? retObjectHalfwidthandFullwidthForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -895,10 +1163,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHangulCompatibilityJamo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHangulCompatibilityJamo = null;
         try {
-            JCObject val = (JCObject)classType.Get("HangulCompatibilityJamo");
+            retObjectHangulCompatibilityJamo = classType.Get("HangulCompatibilityJamo");
+            JCObject val = (JCObject)retObjectHangulCompatibilityJamo;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHangulCompatibilityJamo != null ? retObjectHangulCompatibilityJamo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -906,10 +1178,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHangulJamo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHangulJamo = null;
         try {
-            JCObject val = (JCObject)classType.Get("HangulJamo");
+            retObjectHangulJamo = classType.Get("HangulJamo");
+            JCObject val = (JCObject)retObjectHangulJamo;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHangulJamo != null ? retObjectHangulJamo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -917,10 +1193,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHangulJamoExtendedA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHangulJamoExtendedA = null;
         try {
-            JCObject val = (JCObject)classType.Get("HangulJamoExtendedA");
+            retObjectHangulJamoExtendedA = classType.Get("HangulJamoExtendedA");
+            JCObject val = (JCObject)retObjectHangulJamoExtendedA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHangulJamoExtendedA != null ? retObjectHangulJamoExtendedA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -928,10 +1208,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHangulJamoExtendedB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHangulJamoExtendedB = null;
         try {
-            JCObject val = (JCObject)classType.Get("HangulJamoExtendedB");
+            retObjectHangulJamoExtendedB = classType.Get("HangulJamoExtendedB");
+            JCObject val = (JCObject)retObjectHangulJamoExtendedB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHangulJamoExtendedB != null ? retObjectHangulJamoExtendedB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -939,10 +1223,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHangulSyllables() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHangulSyllables = null;
         try {
-            JCObject val = (JCObject)classType.Get("HangulSyllables");
+            retObjectHangulSyllables = classType.Get("HangulSyllables");
+            JCObject val = (JCObject)retObjectHangulSyllables;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHangulSyllables != null ? retObjectHangulSyllables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -950,10 +1238,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHanunoo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHanunoo = null;
         try {
-            JCObject val = (JCObject)classType.Get("Hanunoo");
+            retObjectHanunoo = classType.Get("Hanunoo");
+            JCObject val = (JCObject)retObjectHanunoo;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHanunoo != null ? retObjectHanunoo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -961,10 +1253,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHebrew() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHebrew = null;
         try {
-            JCObject val = (JCObject)classType.Get("Hebrew");
+            retObjectHebrew = classType.Get("Hebrew");
+            JCObject val = (JCObject)retObjectHebrew;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHebrew != null ? retObjectHebrew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -972,10 +1268,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getHiragana() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHiragana = null;
         try {
-            JCObject val = (JCObject)classType.Get("Hiragana");
+            retObjectHiragana = classType.Get("Hiragana");
+            JCObject val = (JCObject)retObjectHiragana;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHiragana != null ? retObjectHiragana.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -983,10 +1283,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getIdeographicDescriptionCharacters() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdeographicDescriptionCharacters = null;
         try {
-            JCObject val = (JCObject)classType.Get("IdeographicDescriptionCharacters");
+            retObjectIdeographicDescriptionCharacters = classType.Get("IdeographicDescriptionCharacters");
+            JCObject val = (JCObject)retObjectIdeographicDescriptionCharacters;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdeographicDescriptionCharacters != null ? retObjectIdeographicDescriptionCharacters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -994,10 +1298,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getIpaExtensions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIpaExtensions = null;
         try {
-            JCObject val = (JCObject)classType.Get("IpaExtensions");
+            retObjectIpaExtensions = classType.Get("IpaExtensions");
+            JCObject val = (JCObject)retObjectIpaExtensions;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIpaExtensions != null ? retObjectIpaExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1005,10 +1313,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getJavanese() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJavanese = null;
         try {
-            JCObject val = (JCObject)classType.Get("Javanese");
+            retObjectJavanese = classType.Get("Javanese");
+            JCObject val = (JCObject)retObjectJavanese;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJavanese != null ? retObjectJavanese.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1016,10 +1328,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKanbun() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKanbun = null;
         try {
-            JCObject val = (JCObject)classType.Get("Kanbun");
+            retObjectKanbun = classType.Get("Kanbun");
+            JCObject val = (JCObject)retObjectKanbun;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKanbun != null ? retObjectKanbun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1027,10 +1343,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKangxiRadicals() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKangxiRadicals = null;
         try {
-            JCObject val = (JCObject)classType.Get("KangxiRadicals");
+            retObjectKangxiRadicals = classType.Get("KangxiRadicals");
+            JCObject val = (JCObject)retObjectKangxiRadicals;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKangxiRadicals != null ? retObjectKangxiRadicals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1038,10 +1358,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKannada() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKannada = null;
         try {
-            JCObject val = (JCObject)classType.Get("Kannada");
+            retObjectKannada = classType.Get("Kannada");
+            JCObject val = (JCObject)retObjectKannada;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKannada != null ? retObjectKannada.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1049,10 +1373,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKatakana() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKatakana = null;
         try {
-            JCObject val = (JCObject)classType.Get("Katakana");
+            retObjectKatakana = classType.Get("Katakana");
+            JCObject val = (JCObject)retObjectKatakana;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKatakana != null ? retObjectKatakana.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1060,10 +1388,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKatakanaPhoneticExtensions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKatakanaPhoneticExtensions = null;
         try {
-            JCObject val = (JCObject)classType.Get("KatakanaPhoneticExtensions");
+            retObjectKatakanaPhoneticExtensions = classType.Get("KatakanaPhoneticExtensions");
+            JCObject val = (JCObject)retObjectKatakanaPhoneticExtensions;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKatakanaPhoneticExtensions != null ? retObjectKatakanaPhoneticExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1071,10 +1403,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKayahLi() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKayahLi = null;
         try {
-            JCObject val = (JCObject)classType.Get("KayahLi");
+            retObjectKayahLi = classType.Get("KayahLi");
+            JCObject val = (JCObject)retObjectKayahLi;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKayahLi != null ? retObjectKayahLi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1082,10 +1418,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKhmer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKhmer = null;
         try {
-            JCObject val = (JCObject)classType.Get("Khmer");
+            retObjectKhmer = classType.Get("Khmer");
+            JCObject val = (JCObject)retObjectKhmer;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKhmer != null ? retObjectKhmer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1093,10 +1433,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getKhmerSymbols() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKhmerSymbols = null;
         try {
-            JCObject val = (JCObject)classType.Get("KhmerSymbols");
+            retObjectKhmerSymbols = classType.Get("KhmerSymbols");
+            JCObject val = (JCObject)retObjectKhmerSymbols;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKhmerSymbols != null ? retObjectKhmerSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1104,10 +1448,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLao() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLao = null;
         try {
-            JCObject val = (JCObject)classType.Get("Lao");
+            retObjectLao = classType.Get("Lao");
+            JCObject val = (JCObject)retObjectLao;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLao != null ? retObjectLao.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1115,10 +1463,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLatin1Supplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatin1Supplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("Latin1Supplement");
+            retObjectLatin1Supplement = classType.Get("Latin1Supplement");
+            JCObject val = (JCObject)retObjectLatin1Supplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatin1Supplement != null ? retObjectLatin1Supplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1126,10 +1478,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLatinExtendedA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatinExtendedA = null;
         try {
-            JCObject val = (JCObject)classType.Get("LatinExtendedA");
+            retObjectLatinExtendedA = classType.Get("LatinExtendedA");
+            JCObject val = (JCObject)retObjectLatinExtendedA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatinExtendedA != null ? retObjectLatinExtendedA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1137,10 +1493,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLatinExtendedAdditional() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatinExtendedAdditional = null;
         try {
-            JCObject val = (JCObject)classType.Get("LatinExtendedAdditional");
+            retObjectLatinExtendedAdditional = classType.Get("LatinExtendedAdditional");
+            JCObject val = (JCObject)retObjectLatinExtendedAdditional;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatinExtendedAdditional != null ? retObjectLatinExtendedAdditional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1148,10 +1508,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLatinExtendedB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatinExtendedB = null;
         try {
-            JCObject val = (JCObject)classType.Get("LatinExtendedB");
+            retObjectLatinExtendedB = classType.Get("LatinExtendedB");
+            JCObject val = (JCObject)retObjectLatinExtendedB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatinExtendedB != null ? retObjectLatinExtendedB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1159,10 +1523,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLatinExtendedC() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatinExtendedC = null;
         try {
-            JCObject val = (JCObject)classType.Get("LatinExtendedC");
+            retObjectLatinExtendedC = classType.Get("LatinExtendedC");
+            JCObject val = (JCObject)retObjectLatinExtendedC;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatinExtendedC != null ? retObjectLatinExtendedC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1170,10 +1538,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLatinExtendedD() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatinExtendedD = null;
         try {
-            JCObject val = (JCObject)classType.Get("LatinExtendedD");
+            retObjectLatinExtendedD = classType.Get("LatinExtendedD");
+            JCObject val = (JCObject)retObjectLatinExtendedD;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatinExtendedD != null ? retObjectLatinExtendedD.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1181,10 +1553,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLatinExtendedE() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatinExtendedE = null;
         try {
-            JCObject val = (JCObject)classType.Get("LatinExtendedE");
+            retObjectLatinExtendedE = classType.Get("LatinExtendedE");
+            JCObject val = (JCObject)retObjectLatinExtendedE;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatinExtendedE != null ? retObjectLatinExtendedE.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1192,10 +1568,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLepcha() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLepcha = null;
         try {
-            JCObject val = (JCObject)classType.Get("Lepcha");
+            retObjectLepcha = classType.Get("Lepcha");
+            JCObject val = (JCObject)retObjectLepcha;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLepcha != null ? retObjectLepcha.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1203,10 +1583,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLetterlikeSymbols() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLetterlikeSymbols = null;
         try {
-            JCObject val = (JCObject)classType.Get("LetterlikeSymbols");
+            retObjectLetterlikeSymbols = classType.Get("LetterlikeSymbols");
+            JCObject val = (JCObject)retObjectLetterlikeSymbols;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLetterlikeSymbols != null ? retObjectLetterlikeSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1214,10 +1598,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLimbu() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLimbu = null;
         try {
-            JCObject val = (JCObject)classType.Get("Limbu");
+            retObjectLimbu = classType.Get("Limbu");
+            JCObject val = (JCObject)retObjectLimbu;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLimbu != null ? retObjectLimbu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1225,10 +1613,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getLisu() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLisu = null;
         try {
-            JCObject val = (JCObject)classType.Get("Lisu");
+            retObjectLisu = classType.Get("Lisu");
+            JCObject val = (JCObject)retObjectLisu;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLisu != null ? retObjectLisu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1236,10 +1628,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMalayalam() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMalayalam = null;
         try {
-            JCObject val = (JCObject)classType.Get("Malayalam");
+            retObjectMalayalam = classType.Get("Malayalam");
+            JCObject val = (JCObject)retObjectMalayalam;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMalayalam != null ? retObjectMalayalam.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1247,10 +1643,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMandaic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMandaic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Mandaic");
+            retObjectMandaic = classType.Get("Mandaic");
+            JCObject val = (JCObject)retObjectMandaic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMandaic != null ? retObjectMandaic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1258,10 +1658,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMathematicalOperators() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMathematicalOperators = null;
         try {
-            JCObject val = (JCObject)classType.Get("MathematicalOperators");
+            retObjectMathematicalOperators = classType.Get("MathematicalOperators");
+            JCObject val = (JCObject)retObjectMathematicalOperators;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMathematicalOperators != null ? retObjectMathematicalOperators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1269,10 +1673,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMeeteiMayek() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeeteiMayek = null;
         try {
-            JCObject val = (JCObject)classType.Get("MeeteiMayek");
+            retObjectMeeteiMayek = classType.Get("MeeteiMayek");
+            JCObject val = (JCObject)retObjectMeeteiMayek;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeeteiMayek != null ? retObjectMeeteiMayek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1280,10 +1688,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMeeteiMayekExtensions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeeteiMayekExtensions = null;
         try {
-            JCObject val = (JCObject)classType.Get("MeeteiMayekExtensions");
+            retObjectMeeteiMayekExtensions = classType.Get("MeeteiMayekExtensions");
+            JCObject val = (JCObject)retObjectMeeteiMayekExtensions;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeeteiMayekExtensions != null ? retObjectMeeteiMayekExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1291,10 +1703,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMiscellaneousMathematicalSymbolsA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMiscellaneousMathematicalSymbolsA = null;
         try {
-            JCObject val = (JCObject)classType.Get("MiscellaneousMathematicalSymbolsA");
+            retObjectMiscellaneousMathematicalSymbolsA = classType.Get("MiscellaneousMathematicalSymbolsA");
+            JCObject val = (JCObject)retObjectMiscellaneousMathematicalSymbolsA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiscellaneousMathematicalSymbolsA != null ? retObjectMiscellaneousMathematicalSymbolsA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1302,10 +1718,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMiscellaneousMathematicalSymbolsB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMiscellaneousMathematicalSymbolsB = null;
         try {
-            JCObject val = (JCObject)classType.Get("MiscellaneousMathematicalSymbolsB");
+            retObjectMiscellaneousMathematicalSymbolsB = classType.Get("MiscellaneousMathematicalSymbolsB");
+            JCObject val = (JCObject)retObjectMiscellaneousMathematicalSymbolsB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiscellaneousMathematicalSymbolsB != null ? retObjectMiscellaneousMathematicalSymbolsB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1313,10 +1733,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMiscellaneousSymbols() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMiscellaneousSymbols = null;
         try {
-            JCObject val = (JCObject)classType.Get("MiscellaneousSymbols");
+            retObjectMiscellaneousSymbols = classType.Get("MiscellaneousSymbols");
+            JCObject val = (JCObject)retObjectMiscellaneousSymbols;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiscellaneousSymbols != null ? retObjectMiscellaneousSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1324,10 +1748,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMiscellaneousSymbolsandArrows() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMiscellaneousSymbolsandArrows = null;
         try {
-            JCObject val = (JCObject)classType.Get("MiscellaneousSymbolsandArrows");
+            retObjectMiscellaneousSymbolsandArrows = classType.Get("MiscellaneousSymbolsandArrows");
+            JCObject val = (JCObject)retObjectMiscellaneousSymbolsandArrows;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiscellaneousSymbolsandArrows != null ? retObjectMiscellaneousSymbolsandArrows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1335,10 +1763,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMiscellaneousTechnical() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMiscellaneousTechnical = null;
         try {
-            JCObject val = (JCObject)classType.Get("MiscellaneousTechnical");
+            retObjectMiscellaneousTechnical = classType.Get("MiscellaneousTechnical");
+            JCObject val = (JCObject)retObjectMiscellaneousTechnical;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiscellaneousTechnical != null ? retObjectMiscellaneousTechnical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1346,10 +1778,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getModifierToneLetters() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModifierToneLetters = null;
         try {
-            JCObject val = (JCObject)classType.Get("ModifierToneLetters");
+            retObjectModifierToneLetters = classType.Get("ModifierToneLetters");
+            JCObject val = (JCObject)retObjectModifierToneLetters;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifierToneLetters != null ? retObjectModifierToneLetters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1357,10 +1793,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMongolian() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMongolian = null;
         try {
-            JCObject val = (JCObject)classType.Get("Mongolian");
+            retObjectMongolian = classType.Get("Mongolian");
+            JCObject val = (JCObject)retObjectMongolian;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMongolian != null ? retObjectMongolian.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1368,10 +1808,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMyanmar() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMyanmar = null;
         try {
-            JCObject val = (JCObject)classType.Get("Myanmar");
+            retObjectMyanmar = classType.Get("Myanmar");
+            JCObject val = (JCObject)retObjectMyanmar;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMyanmar != null ? retObjectMyanmar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1379,10 +1823,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMyanmarExtendedA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMyanmarExtendedA = null;
         try {
-            JCObject val = (JCObject)classType.Get("MyanmarExtendedA");
+            retObjectMyanmarExtendedA = classType.Get("MyanmarExtendedA");
+            JCObject val = (JCObject)retObjectMyanmarExtendedA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMyanmarExtendedA != null ? retObjectMyanmarExtendedA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1390,10 +1838,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getMyanmarExtendedB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMyanmarExtendedB = null;
         try {
-            JCObject val = (JCObject)classType.Get("MyanmarExtendedB");
+            retObjectMyanmarExtendedB = classType.Get("MyanmarExtendedB");
+            JCObject val = (JCObject)retObjectMyanmarExtendedB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMyanmarExtendedB != null ? retObjectMyanmarExtendedB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1401,10 +1853,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getNewTaiLue() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewTaiLue = null;
         try {
-            JCObject val = (JCObject)classType.Get("NewTaiLue");
+            retObjectNewTaiLue = classType.Get("NewTaiLue");
+            JCObject val = (JCObject)retObjectNewTaiLue;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewTaiLue != null ? retObjectNewTaiLue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1412,10 +1868,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getNKo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNKo = null;
         try {
-            JCObject val = (JCObject)classType.Get("NKo");
+            retObjectNKo = classType.Get("NKo");
+            JCObject val = (JCObject)retObjectNKo;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNKo != null ? retObjectNKo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1423,10 +1883,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getNone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNone = null;
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            retObjectNone = classType.Get("None");
+            JCObject val = (JCObject)retObjectNone;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNone != null ? retObjectNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1434,10 +1898,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getNumberForms() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNumberForms = null;
         try {
-            JCObject val = (JCObject)classType.Get("NumberForms");
+            retObjectNumberForms = classType.Get("NumberForms");
+            JCObject val = (JCObject)retObjectNumberForms;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberForms != null ? retObjectNumberForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1445,10 +1913,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getOgham() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOgham = null;
         try {
-            JCObject val = (JCObject)classType.Get("Ogham");
+            retObjectOgham = classType.Get("Ogham");
+            JCObject val = (JCObject)retObjectOgham;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOgham != null ? retObjectOgham.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1456,10 +1928,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getOlChiki() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOlChiki = null;
         try {
-            JCObject val = (JCObject)classType.Get("OlChiki");
+            retObjectOlChiki = classType.Get("OlChiki");
+            JCObject val = (JCObject)retObjectOlChiki;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOlChiki != null ? retObjectOlChiki.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1467,10 +1943,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getOpticalCharacterRecognition() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpticalCharacterRecognition = null;
         try {
-            JCObject val = (JCObject)classType.Get("OpticalCharacterRecognition");
+            retObjectOpticalCharacterRecognition = classType.Get("OpticalCharacterRecognition");
+            JCObject val = (JCObject)retObjectOpticalCharacterRecognition;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpticalCharacterRecognition != null ? retObjectOpticalCharacterRecognition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1478,10 +1958,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getOriya() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOriya = null;
         try {
-            JCObject val = (JCObject)classType.Get("Oriya");
+            retObjectOriya = classType.Get("Oriya");
+            JCObject val = (JCObject)retObjectOriya;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriya != null ? retObjectOriya.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1489,10 +1973,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getPhagspa() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPhagspa = null;
         try {
-            JCObject val = (JCObject)classType.Get("Phagspa");
+            retObjectPhagspa = classType.Get("Phagspa");
+            JCObject val = (JCObject)retObjectPhagspa;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPhagspa != null ? retObjectPhagspa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1500,10 +1988,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getPhoneticExtensions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPhoneticExtensions = null;
         try {
-            JCObject val = (JCObject)classType.Get("PhoneticExtensions");
+            retObjectPhoneticExtensions = classType.Get("PhoneticExtensions");
+            JCObject val = (JCObject)retObjectPhoneticExtensions;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPhoneticExtensions != null ? retObjectPhoneticExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1511,10 +2003,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getPhoneticExtensionsSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPhoneticExtensionsSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("PhoneticExtensionsSupplement");
+            retObjectPhoneticExtensionsSupplement = classType.Get("PhoneticExtensionsSupplement");
+            JCObject val = (JCObject)retObjectPhoneticExtensionsSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPhoneticExtensionsSupplement != null ? retObjectPhoneticExtensionsSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1522,10 +2018,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getRejang() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRejang = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rejang");
+            retObjectRejang = classType.Get("Rejang");
+            JCObject val = (JCObject)retObjectRejang;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRejang != null ? retObjectRejang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1533,10 +2033,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getRunic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRunic = null;
         try {
-            JCObject val = (JCObject)classType.Get("Runic");
+            retObjectRunic = classType.Get("Runic");
+            JCObject val = (JCObject)retObjectRunic;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRunic != null ? retObjectRunic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1544,10 +2048,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSamaritan() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSamaritan = null;
         try {
-            JCObject val = (JCObject)classType.Get("Samaritan");
+            retObjectSamaritan = classType.Get("Samaritan");
+            JCObject val = (JCObject)retObjectSamaritan;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSamaritan != null ? retObjectSamaritan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1555,10 +2063,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSaurashtra() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSaurashtra = null;
         try {
-            JCObject val = (JCObject)classType.Get("Saurashtra");
+            retObjectSaurashtra = classType.Get("Saurashtra");
+            JCObject val = (JCObject)retObjectSaurashtra;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSaurashtra != null ? retObjectSaurashtra.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1566,10 +2078,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSinhala() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinhala = null;
         try {
-            JCObject val = (JCObject)classType.Get("Sinhala");
+            retObjectSinhala = classType.Get("Sinhala");
+            JCObject val = (JCObject)retObjectSinhala;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinhala != null ? retObjectSinhala.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1577,10 +2093,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSmallFormVariants() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallFormVariants = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallFormVariants");
+            retObjectSmallFormVariants = classType.Get("SmallFormVariants");
+            JCObject val = (JCObject)retObjectSmallFormVariants;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallFormVariants != null ? retObjectSmallFormVariants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1588,10 +2108,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSpacingModifierLetters() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpacingModifierLetters = null;
         try {
-            JCObject val = (JCObject)classType.Get("SpacingModifierLetters");
+            retObjectSpacingModifierLetters = classType.Get("SpacingModifierLetters");
+            JCObject val = (JCObject)retObjectSpacingModifierLetters;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpacingModifierLetters != null ? retObjectSpacingModifierLetters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1599,10 +2123,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSpecials() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpecials = null;
         try {
-            JCObject val = (JCObject)classType.Get("Specials");
+            retObjectSpecials = classType.Get("Specials");
+            JCObject val = (JCObject)retObjectSpecials;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpecials != null ? retObjectSpecials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1610,10 +2138,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSundanese() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSundanese = null;
         try {
-            JCObject val = (JCObject)classType.Get("Sundanese");
+            retObjectSundanese = classType.Get("Sundanese");
+            JCObject val = (JCObject)retObjectSundanese;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSundanese != null ? retObjectSundanese.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1621,10 +2153,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSundaneseSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSundaneseSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("SundaneseSupplement");
+            retObjectSundaneseSupplement = classType.Get("SundaneseSupplement");
+            JCObject val = (JCObject)retObjectSundaneseSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSundaneseSupplement != null ? retObjectSundaneseSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1632,10 +2168,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSuperscriptsandSubscripts() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSuperscriptsandSubscripts = null;
         try {
-            JCObject val = (JCObject)classType.Get("SuperscriptsandSubscripts");
+            retObjectSuperscriptsandSubscripts = classType.Get("SuperscriptsandSubscripts");
+            JCObject val = (JCObject)retObjectSuperscriptsandSubscripts;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuperscriptsandSubscripts != null ? retObjectSuperscriptsandSubscripts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1643,10 +2183,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSupplementalArrowsA() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupplementalArrowsA = null;
         try {
-            JCObject val = (JCObject)classType.Get("SupplementalArrowsA");
+            retObjectSupplementalArrowsA = classType.Get("SupplementalArrowsA");
+            JCObject val = (JCObject)retObjectSupplementalArrowsA;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupplementalArrowsA != null ? retObjectSupplementalArrowsA.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1654,10 +2198,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSupplementalArrowsB() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupplementalArrowsB = null;
         try {
-            JCObject val = (JCObject)classType.Get("SupplementalArrowsB");
+            retObjectSupplementalArrowsB = classType.Get("SupplementalArrowsB");
+            JCObject val = (JCObject)retObjectSupplementalArrowsB;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupplementalArrowsB != null ? retObjectSupplementalArrowsB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1665,10 +2213,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSupplementalMathematicalOperators() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupplementalMathematicalOperators = null;
         try {
-            JCObject val = (JCObject)classType.Get("SupplementalMathematicalOperators");
+            retObjectSupplementalMathematicalOperators = classType.Get("SupplementalMathematicalOperators");
+            JCObject val = (JCObject)retObjectSupplementalMathematicalOperators;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupplementalMathematicalOperators != null ? retObjectSupplementalMathematicalOperators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1676,10 +2228,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSupplementalPunctuation() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSupplementalPunctuation = null;
         try {
-            JCObject val = (JCObject)classType.Get("SupplementalPunctuation");
+            retObjectSupplementalPunctuation = classType.Get("SupplementalPunctuation");
+            JCObject val = (JCObject)retObjectSupplementalPunctuation;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupplementalPunctuation != null ? retObjectSupplementalPunctuation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1687,10 +2243,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSylotiNagri() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSylotiNagri = null;
         try {
-            JCObject val = (JCObject)classType.Get("SylotiNagri");
+            retObjectSylotiNagri = classType.Get("SylotiNagri");
+            JCObject val = (JCObject)retObjectSylotiNagri;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSylotiNagri != null ? retObjectSylotiNagri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1698,10 +2258,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSyriac() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSyriac = null;
         try {
-            JCObject val = (JCObject)classType.Get("Syriac");
+            retObjectSyriac = classType.Get("Syriac");
+            JCObject val = (JCObject)retObjectSyriac;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyriac != null ? retObjectSyriac.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1709,10 +2273,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getSyriacSupplement() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSyriacSupplement = null;
         try {
-            JCObject val = (JCObject)classType.Get("SyriacSupplement");
+            retObjectSyriacSupplement = classType.Get("SyriacSupplement");
+            JCObject val = (JCObject)retObjectSyriacSupplement;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyriacSupplement != null ? retObjectSyriacSupplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1720,10 +2288,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTagalog() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTagalog = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tagalog");
+            retObjectTagalog = classType.Get("Tagalog");
+            JCObject val = (JCObject)retObjectTagalog;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTagalog != null ? retObjectTagalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1731,10 +2303,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTagbanwa() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTagbanwa = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tagbanwa");
+            retObjectTagbanwa = classType.Get("Tagbanwa");
+            JCObject val = (JCObject)retObjectTagbanwa;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTagbanwa != null ? retObjectTagbanwa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1742,10 +2318,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTaiLe() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTaiLe = null;
         try {
-            JCObject val = (JCObject)classType.Get("TaiLe");
+            retObjectTaiLe = classType.Get("TaiLe");
+            JCObject val = (JCObject)retObjectTaiLe;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaiLe != null ? retObjectTaiLe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1753,10 +2333,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTaiTham() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTaiTham = null;
         try {
-            JCObject val = (JCObject)classType.Get("TaiTham");
+            retObjectTaiTham = classType.Get("TaiTham");
+            JCObject val = (JCObject)retObjectTaiTham;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaiTham != null ? retObjectTaiTham.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1764,10 +2348,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTaiViet() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTaiViet = null;
         try {
-            JCObject val = (JCObject)classType.Get("TaiViet");
+            retObjectTaiViet = classType.Get("TaiViet");
+            JCObject val = (JCObject)retObjectTaiViet;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaiViet != null ? retObjectTaiViet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1775,10 +2363,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTamil() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTamil = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tamil");
+            retObjectTamil = classType.Get("Tamil");
+            JCObject val = (JCObject)retObjectTamil;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTamil != null ? retObjectTamil.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1786,10 +2378,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTelugu() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTelugu = null;
         try {
-            JCObject val = (JCObject)classType.Get("Telugu");
+            retObjectTelugu = classType.Get("Telugu");
+            JCObject val = (JCObject)retObjectTelugu;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTelugu != null ? retObjectTelugu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1797,10 +2393,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getThaana() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThaana = null;
         try {
-            JCObject val = (JCObject)classType.Get("Thaana");
+            retObjectThaana = classType.Get("Thaana");
+            JCObject val = (JCObject)retObjectThaana;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThaana != null ? retObjectThaana.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1808,10 +2408,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getThai() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThai = null;
         try {
-            JCObject val = (JCObject)classType.Get("Thai");
+            retObjectThai = classType.Get("Thai");
+            JCObject val = (JCObject)retObjectThai;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThai != null ? retObjectThai.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1819,10 +2423,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTibetan() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTibetan = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tibetan");
+            retObjectTibetan = classType.Get("Tibetan");
+            JCObject val = (JCObject)retObjectTibetan;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTibetan != null ? retObjectTibetan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1830,10 +2438,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getTifinagh() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTifinagh = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tifinagh");
+            retObjectTifinagh = classType.Get("Tifinagh");
+            JCObject val = (JCObject)retObjectTifinagh;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTifinagh != null ? retObjectTifinagh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1841,10 +2453,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getUnifiedCanadianAboriginalSyllabics() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnifiedCanadianAboriginalSyllabics = null;
         try {
-            JCObject val = (JCObject)classType.Get("UnifiedCanadianAboriginalSyllabics");
+            retObjectUnifiedCanadianAboriginalSyllabics = classType.Get("UnifiedCanadianAboriginalSyllabics");
+            JCObject val = (JCObject)retObjectUnifiedCanadianAboriginalSyllabics;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnifiedCanadianAboriginalSyllabics != null ? retObjectUnifiedCanadianAboriginalSyllabics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1852,10 +2468,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getUnifiedCanadianAboriginalSyllabicsExtended() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnifiedCanadianAboriginalSyllabicsExtended = null;
         try {
-            JCObject val = (JCObject)classType.Get("UnifiedCanadianAboriginalSyllabicsExtended");
+            retObjectUnifiedCanadianAboriginalSyllabicsExtended = classType.Get("UnifiedCanadianAboriginalSyllabicsExtended");
+            JCObject val = (JCObject)retObjectUnifiedCanadianAboriginalSyllabicsExtended;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnifiedCanadianAboriginalSyllabicsExtended != null ? retObjectUnifiedCanadianAboriginalSyllabicsExtended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1863,10 +2483,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getVai() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVai = null;
         try {
-            JCObject val = (JCObject)classType.Get("Vai");
+            retObjectVai = classType.Get("Vai");
+            JCObject val = (JCObject)retObjectVai;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVai != null ? retObjectVai.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1874,10 +2498,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getVariationSelectors() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVariationSelectors = null;
         try {
-            JCObject val = (JCObject)classType.Get("VariationSelectors");
+            retObjectVariationSelectors = classType.Get("VariationSelectors");
+            JCObject val = (JCObject)retObjectVariationSelectors;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariationSelectors != null ? retObjectVariationSelectors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1885,10 +2513,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getVedicExtensions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVedicExtensions = null;
         try {
-            JCObject val = (JCObject)classType.Get("VedicExtensions");
+            retObjectVedicExtensions = classType.Get("VedicExtensions");
+            JCObject val = (JCObject)retObjectVedicExtensions;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVedicExtensions != null ? retObjectVedicExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1896,10 +2528,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getVerticalForms() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalForms = null;
         try {
-            JCObject val = (JCObject)classType.Get("VerticalForms");
+            retObjectVerticalForms = classType.Get("VerticalForms");
+            JCObject val = (JCObject)retObjectVerticalForms;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalForms != null ? retObjectVerticalForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1907,10 +2543,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getYijingHexagramSymbols() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYijingHexagramSymbols = null;
         try {
-            JCObject val = (JCObject)classType.Get("YijingHexagramSymbols");
+            retObjectYijingHexagramSymbols = classType.Get("YijingHexagramSymbols");
+            JCObject val = (JCObject)retObjectYijingHexagramSymbols;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYijingHexagramSymbols != null ? retObjectYijingHexagramSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1918,10 +2558,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getYiRadicals() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYiRadicals = null;
         try {
-            JCObject val = (JCObject)classType.Get("YiRadicals");
+            retObjectYiRadicals = classType.Get("YiRadicals");
+            JCObject val = (JCObject)retObjectYiRadicals;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYiRadicals != null ? retObjectYiRadicals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1929,10 +2573,14 @@ public class UnicodeRanges extends NetObject  {
 
     public static UnicodeRange getYiSyllables() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYiSyllables = null;
         try {
-            JCObject val = (JCObject)classType.Get("YiSyllables");
+            retObjectYiSyllables = classType.Get("YiSyllables");
+            JCObject val = (JCObject)retObjectYiSyllables;
             return new UnicodeRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYiSyllables != null ? retObjectYiSyllables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

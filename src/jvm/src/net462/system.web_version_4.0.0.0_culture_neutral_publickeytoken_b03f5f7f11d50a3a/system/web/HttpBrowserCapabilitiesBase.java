@@ -158,9 +158,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
     
     public boolean EvaluateFilter(java.lang.String filterName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateFilter = null;
         try {
-            return (boolean)classInstance.Invoke("EvaluateFilter", filterName);
+            retObjectEvaluateFilter = classInstance.Invoke("EvaluateFilter", filterName);
+            return (boolean)retObjectEvaluateFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEvaluateFilter != null ? retObjectEvaluateFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean IsBrowser(java.lang.String browserName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBrowser = null;
         try {
-            return (boolean)classInstance.Invoke("IsBrowser", browserName);
+            retObjectIsBrowser = classInstance.Invoke("IsBrowser", browserName);
+            return (boolean)retObjectIsBrowser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBrowser != null ? retObjectIsBrowser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int CompareFilters(java.lang.String filter1, java.lang.String filter2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareFilters = null;
         try {
-            return (int)classInstance.Invoke("CompareFilters", filter1, filter2);
+            retObjectCompareFilters = classInstance.Invoke("CompareFilters", filter1, filter2);
+            return (int)retObjectCompareFilters;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareFiltersNumber = (java.lang.Number)retObjectCompareFilters;
+                return retObjectCompareFiltersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareFilters != null ? retObjectCompareFilters.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,16 +206,20 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public Version[] GetClrVersions() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClrVersions = null;
         try {
             ArrayList<Version> resultingArrayList = new ArrayList<Version>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetClrVersions");
+            retObjectGetClrVersions = classInstance.Invoke("GetClrVersions");
+            JCObject resultingObjects = (JCObject)retObjectGetClrVersions;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Version(resultingObject));
             }
             Version[] resultingArray = new Version[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClrVersions != null ? retObjectGetClrVersions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +227,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public HtmlTextWriter CreateHtmlTextWriter(TextWriter w) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHtmlTextWriter = null;
         try {
-            JCObject objCreateHtmlTextWriter = (JCObject)classInstance.Invoke("CreateHtmlTextWriter", w == null ? null : w.getJCOInstance());
+            retObjectCreateHtmlTextWriter = classInstance.Invoke("CreateHtmlTextWriter", w == null ? null : w.getJCOInstance());
+            JCObject objCreateHtmlTextWriter = (JCObject)retObjectCreateHtmlTextWriter;
             return new HtmlTextWriter(objCreateHtmlTextWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHtmlTextWriter != null ? retObjectCreateHtmlTextWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +242,7 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public void AddBrowser(java.lang.String browserName) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBrowser", browserName);
         } catch (JCNativeException jcne) {
@@ -226,7 +252,7 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public void DisableOptimizedCacheKey() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisableOptimizedCacheKey");
         } catch (JCNativeException jcne) {
@@ -240,9 +266,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
     
     public boolean getActiveXControls() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveXControls = null;
         try {
-            return (boolean)classInstance.Get("ActiveXControls");
+            retObjectActiveXControls = classInstance.Get("ActiveXControls");
+            return (boolean)retObjectActiveXControls;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectActiveXControls != null ? retObjectActiveXControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +280,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getAOL() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAOL = null;
         try {
-            return (boolean)classInstance.Get("AOL");
+            retObjectAOL = classInstance.Get("AOL");
+            return (boolean)retObjectAOL;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAOL != null ? retObjectAOL.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +294,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getBackgroundSounds() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundSounds = null;
         try {
-            return (boolean)classInstance.Get("BackgroundSounds");
+            retObjectBackgroundSounds = classInstance.Get("BackgroundSounds");
+            return (boolean)retObjectBackgroundSounds;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBackgroundSounds != null ? retObjectBackgroundSounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +308,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getBeta() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeta = null;
         try {
-            return (boolean)classInstance.Get("Beta");
+            retObjectBeta = classInstance.Get("Beta");
+            return (boolean)retObjectBeta;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBeta != null ? retObjectBeta.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +322,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanCombineFormsInDeck() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCombineFormsInDeck = null;
         try {
-            return (boolean)classInstance.Get("CanCombineFormsInDeck");
+            retObjectCanCombineFormsInDeck = classInstance.Get("CanCombineFormsInDeck");
+            return (boolean)retObjectCanCombineFormsInDeck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCombineFormsInDeck != null ? retObjectCanCombineFormsInDeck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +336,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanInitiateVoiceCall() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanInitiateVoiceCall = null;
         try {
-            return (boolean)classInstance.Get("CanInitiateVoiceCall");
+            retObjectCanInitiateVoiceCall = classInstance.Get("CanInitiateVoiceCall");
+            return (boolean)retObjectCanInitiateVoiceCall;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanInitiateVoiceCall != null ? retObjectCanInitiateVoiceCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +350,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanRenderAfterInputOrSelectElement() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenderAfterInputOrSelectElement = null;
         try {
-            return (boolean)classInstance.Get("CanRenderAfterInputOrSelectElement");
+            retObjectCanRenderAfterInputOrSelectElement = classInstance.Get("CanRenderAfterInputOrSelectElement");
+            return (boolean)retObjectCanRenderAfterInputOrSelectElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenderAfterInputOrSelectElement != null ? retObjectCanRenderAfterInputOrSelectElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +364,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanRenderEmptySelects() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenderEmptySelects = null;
         try {
-            return (boolean)classInstance.Get("CanRenderEmptySelects");
+            retObjectCanRenderEmptySelects = classInstance.Get("CanRenderEmptySelects");
+            return (boolean)retObjectCanRenderEmptySelects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenderEmptySelects != null ? retObjectCanRenderEmptySelects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +378,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanRenderInputAndSelectElementsTogether() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenderInputAndSelectElementsTogether = null;
         try {
-            return (boolean)classInstance.Get("CanRenderInputAndSelectElementsTogether");
+            retObjectCanRenderInputAndSelectElementsTogether = classInstance.Get("CanRenderInputAndSelectElementsTogether");
+            return (boolean)retObjectCanRenderInputAndSelectElementsTogether;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenderInputAndSelectElementsTogether != null ? retObjectCanRenderInputAndSelectElementsTogether.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +392,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanRenderMixedSelects() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenderMixedSelects = null;
         try {
-            return (boolean)classInstance.Get("CanRenderMixedSelects");
+            retObjectCanRenderMixedSelects = classInstance.Get("CanRenderMixedSelects");
+            return (boolean)retObjectCanRenderMixedSelects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenderMixedSelects != null ? retObjectCanRenderMixedSelects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +406,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanRenderOneventAndPrevElementsTogether() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenderOneventAndPrevElementsTogether = null;
         try {
-            return (boolean)classInstance.Get("CanRenderOneventAndPrevElementsTogether");
+            retObjectCanRenderOneventAndPrevElementsTogether = classInstance.Get("CanRenderOneventAndPrevElementsTogether");
+            return (boolean)retObjectCanRenderOneventAndPrevElementsTogether;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenderOneventAndPrevElementsTogether != null ? retObjectCanRenderOneventAndPrevElementsTogether.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +420,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanRenderPostBackCards() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenderPostBackCards = null;
         try {
-            return (boolean)classInstance.Get("CanRenderPostBackCards");
+            retObjectCanRenderPostBackCards = classInstance.Get("CanRenderPostBackCards");
+            return (boolean)retObjectCanRenderPostBackCards;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenderPostBackCards != null ? retObjectCanRenderPostBackCards.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,9 +434,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanRenderSetvarZeroWithMultiSelectionList() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenderSetvarZeroWithMultiSelectionList = null;
         try {
-            return (boolean)classInstance.Get("CanRenderSetvarZeroWithMultiSelectionList");
+            retObjectCanRenderSetvarZeroWithMultiSelectionList = classInstance.Get("CanRenderSetvarZeroWithMultiSelectionList");
+            return (boolean)retObjectCanRenderSetvarZeroWithMultiSelectionList;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenderSetvarZeroWithMultiSelectionList != null ? retObjectCanRenderSetvarZeroWithMultiSelectionList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,9 +448,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCanSendMail() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanSendMail = null;
         try {
-            return (boolean)classInstance.Get("CanSendMail");
+            retObjectCanSendMail = classInstance.Get("CanSendMail");
+            return (boolean)retObjectCanSendMail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanSendMail != null ? retObjectCanSendMail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,9 +462,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCDF() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCDF = null;
         try {
-            return (boolean)classInstance.Get("CDF");
+            retObjectCDF = classInstance.Get("CDF");
+            return (boolean)retObjectCDF;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCDF != null ? retObjectCDF.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,9 +476,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCookies() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookies = null;
         try {
-            return (boolean)classInstance.Get("Cookies");
+            retObjectCookies = classInstance.Get("Cookies");
+            return (boolean)retObjectCookies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCookies != null ? retObjectCookies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,9 +490,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getCrawler() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCrawler = null;
         try {
-            return (boolean)classInstance.Get("Crawler");
+            retObjectCrawler = classInstance.Get("Crawler");
+            return (boolean)retObjectCrawler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCrawler != null ? retObjectCrawler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,9 +504,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getFrames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrames = null;
         try {
-            return (boolean)classInstance.Get("Frames");
+            retObjectFrames = classInstance.Get("Frames");
+            return (boolean)retObjectFrames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFrames != null ? retObjectFrames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,9 +518,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getHasBackButton() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasBackButton = null;
         try {
-            return (boolean)classInstance.Get("HasBackButton");
+            retObjectHasBackButton = classInstance.Get("HasBackButton");
+            return (boolean)retObjectHasBackButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasBackButton != null ? retObjectHasBackButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,9 +532,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getHidesRightAlignedMultiselectScrollbars() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHidesRightAlignedMultiselectScrollbars = null;
         try {
-            return (boolean)classInstance.Get("HidesRightAlignedMultiselectScrollbars");
+            retObjectHidesRightAlignedMultiselectScrollbars = classInstance.Get("HidesRightAlignedMultiselectScrollbars");
+            return (boolean)retObjectHidesRightAlignedMultiselectScrollbars;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHidesRightAlignedMultiselectScrollbars != null ? retObjectHidesRightAlignedMultiselectScrollbars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,9 +546,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getIsColor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsColor = null;
         try {
-            return (boolean)classInstance.Get("IsColor");
+            retObjectIsColor = classInstance.Get("IsColor");
+            return (boolean)retObjectIsColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsColor != null ? retObjectIsColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,9 +560,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getIsMobileDevice() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMobileDevice = null;
         try {
-            return (boolean)classInstance.Get("IsMobileDevice");
+            retObjectIsMobileDevice = classInstance.Get("IsMobileDevice");
+            return (boolean)retObjectIsMobileDevice;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMobileDevice != null ? retObjectIsMobileDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,9 +574,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getJavaApplets() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJavaApplets = null;
         try {
-            return (boolean)classInstance.Get("JavaApplets");
+            retObjectJavaApplets = classInstance.Get("JavaApplets");
+            return (boolean)retObjectJavaApplets;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectJavaApplets != null ? retObjectJavaApplets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,9 +588,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRendersBreakBeforeWmlSelectAndInput() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRendersBreakBeforeWmlSelectAndInput = null;
         try {
-            return (boolean)classInstance.Get("RendersBreakBeforeWmlSelectAndInput");
+            retObjectRendersBreakBeforeWmlSelectAndInput = classInstance.Get("RendersBreakBeforeWmlSelectAndInput");
+            return (boolean)retObjectRendersBreakBeforeWmlSelectAndInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRendersBreakBeforeWmlSelectAndInput != null ? retObjectRendersBreakBeforeWmlSelectAndInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,9 +602,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRendersBreaksAfterHtmlLists() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRendersBreaksAfterHtmlLists = null;
         try {
-            return (boolean)classInstance.Get("RendersBreaksAfterHtmlLists");
+            retObjectRendersBreaksAfterHtmlLists = classInstance.Get("RendersBreaksAfterHtmlLists");
+            return (boolean)retObjectRendersBreaksAfterHtmlLists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRendersBreaksAfterHtmlLists != null ? retObjectRendersBreaksAfterHtmlLists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,9 +616,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRendersBreaksAfterWmlAnchor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRendersBreaksAfterWmlAnchor = null;
         try {
-            return (boolean)classInstance.Get("RendersBreaksAfterWmlAnchor");
+            retObjectRendersBreaksAfterWmlAnchor = classInstance.Get("RendersBreaksAfterWmlAnchor");
+            return (boolean)retObjectRendersBreaksAfterWmlAnchor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRendersBreaksAfterWmlAnchor != null ? retObjectRendersBreaksAfterWmlAnchor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,9 +630,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRendersBreaksAfterWmlInput() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRendersBreaksAfterWmlInput = null;
         try {
-            return (boolean)classInstance.Get("RendersBreaksAfterWmlInput");
+            retObjectRendersBreaksAfterWmlInput = classInstance.Get("RendersBreaksAfterWmlInput");
+            return (boolean)retObjectRendersBreaksAfterWmlInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRendersBreaksAfterWmlInput != null ? retObjectRendersBreaksAfterWmlInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,9 +644,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRendersWmlDoAcceptsInline() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRendersWmlDoAcceptsInline = null;
         try {
-            return (boolean)classInstance.Get("RendersWmlDoAcceptsInline");
+            retObjectRendersWmlDoAcceptsInline = classInstance.Get("RendersWmlDoAcceptsInline");
+            return (boolean)retObjectRendersWmlDoAcceptsInline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRendersWmlDoAcceptsInline != null ? retObjectRendersWmlDoAcceptsInline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,9 +658,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRendersWmlSelectsAsMenuCards() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRendersWmlSelectsAsMenuCards = null;
         try {
-            return (boolean)classInstance.Get("RendersWmlSelectsAsMenuCards");
+            retObjectRendersWmlSelectsAsMenuCards = classInstance.Get("RendersWmlSelectsAsMenuCards");
+            return (boolean)retObjectRendersWmlSelectsAsMenuCards;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRendersWmlSelectsAsMenuCards != null ? retObjectRendersWmlSelectsAsMenuCards.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,9 +672,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresAttributeColonSubstitution() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresAttributeColonSubstitution = null;
         try {
-            return (boolean)classInstance.Get("RequiresAttributeColonSubstitution");
+            retObjectRequiresAttributeColonSubstitution = classInstance.Get("RequiresAttributeColonSubstitution");
+            return (boolean)retObjectRequiresAttributeColonSubstitution;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresAttributeColonSubstitution != null ? retObjectRequiresAttributeColonSubstitution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,9 +686,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresContentTypeMetaTag() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresContentTypeMetaTag = null;
         try {
-            return (boolean)classInstance.Get("RequiresContentTypeMetaTag");
+            retObjectRequiresContentTypeMetaTag = classInstance.Get("RequiresContentTypeMetaTag");
+            return (boolean)retObjectRequiresContentTypeMetaTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresContentTypeMetaTag != null ? retObjectRequiresContentTypeMetaTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,9 +700,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresControlStateInSession() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresControlStateInSession = null;
         try {
-            return (boolean)classInstance.Get("RequiresControlStateInSession");
+            retObjectRequiresControlStateInSession = classInstance.Get("RequiresControlStateInSession");
+            return (boolean)retObjectRequiresControlStateInSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresControlStateInSession != null ? retObjectRequiresControlStateInSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,9 +714,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresDBCSCharacter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresDBCSCharacter = null;
         try {
-            return (boolean)classInstance.Get("RequiresDBCSCharacter");
+            retObjectRequiresDBCSCharacter = classInstance.Get("RequiresDBCSCharacter");
+            return (boolean)retObjectRequiresDBCSCharacter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresDBCSCharacter != null ? retObjectRequiresDBCSCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,9 +728,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresHtmlAdaptiveErrorReporting() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresHtmlAdaptiveErrorReporting = null;
         try {
-            return (boolean)classInstance.Get("RequiresHtmlAdaptiveErrorReporting");
+            retObjectRequiresHtmlAdaptiveErrorReporting = classInstance.Get("RequiresHtmlAdaptiveErrorReporting");
+            return (boolean)retObjectRequiresHtmlAdaptiveErrorReporting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresHtmlAdaptiveErrorReporting != null ? retObjectRequiresHtmlAdaptiveErrorReporting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,9 +742,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresLeadingPageBreak() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresLeadingPageBreak = null;
         try {
-            return (boolean)classInstance.Get("RequiresLeadingPageBreak");
+            retObjectRequiresLeadingPageBreak = classInstance.Get("RequiresLeadingPageBreak");
+            return (boolean)retObjectRequiresLeadingPageBreak;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresLeadingPageBreak != null ? retObjectRequiresLeadingPageBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,9 +756,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresNoBreakInFormatting() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresNoBreakInFormatting = null;
         try {
-            return (boolean)classInstance.Get("RequiresNoBreakInFormatting");
+            retObjectRequiresNoBreakInFormatting = classInstance.Get("RequiresNoBreakInFormatting");
+            return (boolean)retObjectRequiresNoBreakInFormatting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresNoBreakInFormatting != null ? retObjectRequiresNoBreakInFormatting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,9 +770,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresOutputOptimization() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresOutputOptimization = null;
         try {
-            return (boolean)classInstance.Get("RequiresOutputOptimization");
+            retObjectRequiresOutputOptimization = classInstance.Get("RequiresOutputOptimization");
+            return (boolean)retObjectRequiresOutputOptimization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresOutputOptimization != null ? retObjectRequiresOutputOptimization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -610,9 +784,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresPhoneNumbersAsPlainText() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresPhoneNumbersAsPlainText = null;
         try {
-            return (boolean)classInstance.Get("RequiresPhoneNumbersAsPlainText");
+            retObjectRequiresPhoneNumbersAsPlainText = classInstance.Get("RequiresPhoneNumbersAsPlainText");
+            return (boolean)retObjectRequiresPhoneNumbersAsPlainText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresPhoneNumbersAsPlainText != null ? retObjectRequiresPhoneNumbersAsPlainText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,9 +798,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresSpecialViewStateEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresSpecialViewStateEncoding = null;
         try {
-            return (boolean)classInstance.Get("RequiresSpecialViewStateEncoding");
+            retObjectRequiresSpecialViewStateEncoding = classInstance.Get("RequiresSpecialViewStateEncoding");
+            return (boolean)retObjectRequiresSpecialViewStateEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresSpecialViewStateEncoding != null ? retObjectRequiresSpecialViewStateEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,9 +812,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresUniqueFilePathSuffix() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresUniqueFilePathSuffix = null;
         try {
-            return (boolean)classInstance.Get("RequiresUniqueFilePathSuffix");
+            retObjectRequiresUniqueFilePathSuffix = classInstance.Get("RequiresUniqueFilePathSuffix");
+            return (boolean)retObjectRequiresUniqueFilePathSuffix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresUniqueFilePathSuffix != null ? retObjectRequiresUniqueFilePathSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,9 +826,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresUniqueHtmlCheckboxNames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresUniqueHtmlCheckboxNames = null;
         try {
-            return (boolean)classInstance.Get("RequiresUniqueHtmlCheckboxNames");
+            retObjectRequiresUniqueHtmlCheckboxNames = classInstance.Get("RequiresUniqueHtmlCheckboxNames");
+            return (boolean)retObjectRequiresUniqueHtmlCheckboxNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresUniqueHtmlCheckboxNames != null ? retObjectRequiresUniqueHtmlCheckboxNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,9 +840,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresUniqueHtmlInputNames() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresUniqueHtmlInputNames = null;
         try {
-            return (boolean)classInstance.Get("RequiresUniqueHtmlInputNames");
+            retObjectRequiresUniqueHtmlInputNames = classInstance.Get("RequiresUniqueHtmlInputNames");
+            return (boolean)retObjectRequiresUniqueHtmlInputNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresUniqueHtmlInputNames != null ? retObjectRequiresUniqueHtmlInputNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,9 +854,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getRequiresUrlEncodedPostfieldValues() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresUrlEncodedPostfieldValues = null;
         try {
-            return (boolean)classInstance.Get("RequiresUrlEncodedPostfieldValues");
+            retObjectRequiresUrlEncodedPostfieldValues = classInstance.Get("RequiresUrlEncodedPostfieldValues");
+            return (boolean)retObjectRequiresUrlEncodedPostfieldValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresUrlEncodedPostfieldValues != null ? retObjectRequiresUrlEncodedPostfieldValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -670,9 +868,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsAccesskeyAttribute() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsAccesskeyAttribute = null;
         try {
-            return (boolean)classInstance.Get("SupportsAccesskeyAttribute");
+            retObjectSupportsAccesskeyAttribute = classInstance.Get("SupportsAccesskeyAttribute");
+            return (boolean)retObjectSupportsAccesskeyAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsAccesskeyAttribute != null ? retObjectSupportsAccesskeyAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,9 +882,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsBodyColor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsBodyColor = null;
         try {
-            return (boolean)classInstance.Get("SupportsBodyColor");
+            retObjectSupportsBodyColor = classInstance.Get("SupportsBodyColor");
+            return (boolean)retObjectSupportsBodyColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsBodyColor != null ? retObjectSupportsBodyColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,9 +896,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsBold() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsBold = null;
         try {
-            return (boolean)classInstance.Get("SupportsBold");
+            retObjectSupportsBold = classInstance.Get("SupportsBold");
+            return (boolean)retObjectSupportsBold;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsBold != null ? retObjectSupportsBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -700,9 +910,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsCacheControlMetaTag() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsCacheControlMetaTag = null;
         try {
-            return (boolean)classInstance.Get("SupportsCacheControlMetaTag");
+            retObjectSupportsCacheControlMetaTag = classInstance.Get("SupportsCacheControlMetaTag");
+            return (boolean)retObjectSupportsCacheControlMetaTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsCacheControlMetaTag != null ? retObjectSupportsCacheControlMetaTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -710,9 +924,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsCallback() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsCallback = null;
         try {
-            return (boolean)classInstance.Get("SupportsCallback");
+            retObjectSupportsCallback = classInstance.Get("SupportsCallback");
+            return (boolean)retObjectSupportsCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsCallback != null ? retObjectSupportsCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -720,9 +938,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsCss() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsCss = null;
         try {
-            return (boolean)classInstance.Get("SupportsCss");
+            retObjectSupportsCss = classInstance.Get("SupportsCss");
+            return (boolean)retObjectSupportsCss;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsCss != null ? retObjectSupportsCss.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -730,9 +952,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsDivAlign() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsDivAlign = null;
         try {
-            return (boolean)classInstance.Get("SupportsDivAlign");
+            retObjectSupportsDivAlign = classInstance.Get("SupportsDivAlign");
+            return (boolean)retObjectSupportsDivAlign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsDivAlign != null ? retObjectSupportsDivAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -740,9 +966,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsDivNoWrap() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsDivNoWrap = null;
         try {
-            return (boolean)classInstance.Get("SupportsDivNoWrap");
+            retObjectSupportsDivNoWrap = classInstance.Get("SupportsDivNoWrap");
+            return (boolean)retObjectSupportsDivNoWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsDivNoWrap != null ? retObjectSupportsDivNoWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,9 +980,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsEmptyStringInCookieValue() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsEmptyStringInCookieValue = null;
         try {
-            return (boolean)classInstance.Get("SupportsEmptyStringInCookieValue");
+            retObjectSupportsEmptyStringInCookieValue = classInstance.Get("SupportsEmptyStringInCookieValue");
+            return (boolean)retObjectSupportsEmptyStringInCookieValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsEmptyStringInCookieValue != null ? retObjectSupportsEmptyStringInCookieValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -760,9 +994,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsFontColor() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsFontColor = null;
         try {
-            return (boolean)classInstance.Get("SupportsFontColor");
+            retObjectSupportsFontColor = classInstance.Get("SupportsFontColor");
+            return (boolean)retObjectSupportsFontColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsFontColor != null ? retObjectSupportsFontColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -770,9 +1008,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsFontName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsFontName = null;
         try {
-            return (boolean)classInstance.Get("SupportsFontName");
+            retObjectSupportsFontName = classInstance.Get("SupportsFontName");
+            return (boolean)retObjectSupportsFontName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsFontName != null ? retObjectSupportsFontName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,9 +1022,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsFontSize() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsFontSize = null;
         try {
-            return (boolean)classInstance.Get("SupportsFontSize");
+            retObjectSupportsFontSize = classInstance.Get("SupportsFontSize");
+            return (boolean)retObjectSupportsFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsFontSize != null ? retObjectSupportsFontSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,9 +1036,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsImageSubmit() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsImageSubmit = null;
         try {
-            return (boolean)classInstance.Get("SupportsImageSubmit");
+            retObjectSupportsImageSubmit = classInstance.Get("SupportsImageSubmit");
+            return (boolean)retObjectSupportsImageSubmit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsImageSubmit != null ? retObjectSupportsImageSubmit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -800,9 +1050,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsIModeSymbols() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsIModeSymbols = null;
         try {
-            return (boolean)classInstance.Get("SupportsIModeSymbols");
+            retObjectSupportsIModeSymbols = classInstance.Get("SupportsIModeSymbols");
+            return (boolean)retObjectSupportsIModeSymbols;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsIModeSymbols != null ? retObjectSupportsIModeSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -810,9 +1064,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsInputIStyle() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsInputIStyle = null;
         try {
-            return (boolean)classInstance.Get("SupportsInputIStyle");
+            retObjectSupportsInputIStyle = classInstance.Get("SupportsInputIStyle");
+            return (boolean)retObjectSupportsInputIStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsInputIStyle != null ? retObjectSupportsInputIStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,9 +1078,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsInputMode() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsInputMode = null;
         try {
-            return (boolean)classInstance.Get("SupportsInputMode");
+            retObjectSupportsInputMode = classInstance.Get("SupportsInputMode");
+            return (boolean)retObjectSupportsInputMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsInputMode != null ? retObjectSupportsInputMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -830,9 +1092,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsItalic() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsItalic = null;
         try {
-            return (boolean)classInstance.Get("SupportsItalic");
+            retObjectSupportsItalic = classInstance.Get("SupportsItalic");
+            return (boolean)retObjectSupportsItalic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsItalic != null ? retObjectSupportsItalic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -840,9 +1106,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsJPhoneMultiMediaAttributes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsJPhoneMultiMediaAttributes = null;
         try {
-            return (boolean)classInstance.Get("SupportsJPhoneMultiMediaAttributes");
+            retObjectSupportsJPhoneMultiMediaAttributes = classInstance.Get("SupportsJPhoneMultiMediaAttributes");
+            return (boolean)retObjectSupportsJPhoneMultiMediaAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsJPhoneMultiMediaAttributes != null ? retObjectSupportsJPhoneMultiMediaAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -850,9 +1120,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsJPhoneSymbols() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsJPhoneSymbols = null;
         try {
-            return (boolean)classInstance.Get("SupportsJPhoneSymbols");
+            retObjectSupportsJPhoneSymbols = classInstance.Get("SupportsJPhoneSymbols");
+            return (boolean)retObjectSupportsJPhoneSymbols;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsJPhoneSymbols != null ? retObjectSupportsJPhoneSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -860,9 +1134,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsQueryStringInFormAction() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsQueryStringInFormAction = null;
         try {
-            return (boolean)classInstance.Get("SupportsQueryStringInFormAction");
+            retObjectSupportsQueryStringInFormAction = classInstance.Get("SupportsQueryStringInFormAction");
+            return (boolean)retObjectSupportsQueryStringInFormAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsQueryStringInFormAction != null ? retObjectSupportsQueryStringInFormAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -870,9 +1148,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsRedirectWithCookie() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsRedirectWithCookie = null;
         try {
-            return (boolean)classInstance.Get("SupportsRedirectWithCookie");
+            retObjectSupportsRedirectWithCookie = classInstance.Get("SupportsRedirectWithCookie");
+            return (boolean)retObjectSupportsRedirectWithCookie;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsRedirectWithCookie != null ? retObjectSupportsRedirectWithCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -880,9 +1162,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsSelectMultiple() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsSelectMultiple = null;
         try {
-            return (boolean)classInstance.Get("SupportsSelectMultiple");
+            retObjectSupportsSelectMultiple = classInstance.Get("SupportsSelectMultiple");
+            return (boolean)retObjectSupportsSelectMultiple;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsSelectMultiple != null ? retObjectSupportsSelectMultiple.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -890,9 +1176,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsUncheck() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsUncheck = null;
         try {
-            return (boolean)classInstance.Get("SupportsUncheck");
+            retObjectSupportsUncheck = classInstance.Get("SupportsUncheck");
+            return (boolean)retObjectSupportsUncheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsUncheck != null ? retObjectSupportsUncheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -900,9 +1190,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getSupportsXmlHttp() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsXmlHttp = null;
         try {
-            return (boolean)classInstance.Get("SupportsXmlHttp");
+            retObjectSupportsXmlHttp = classInstance.Get("SupportsXmlHttp");
+            return (boolean)retObjectSupportsXmlHttp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsXmlHttp != null ? retObjectSupportsXmlHttp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -910,9 +1204,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getTables() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTables = null;
         try {
-            return (boolean)classInstance.Get("Tables");
+            retObjectTables = classInstance.Get("Tables");
+            return (boolean)retObjectTables;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTables != null ? retObjectTables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -920,9 +1218,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getUseOptimizedCacheKey() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseOptimizedCacheKey = null;
         try {
-            return (boolean)classInstance.Get("UseOptimizedCacheKey");
+            retObjectUseOptimizedCacheKey = classInstance.Get("UseOptimizedCacheKey");
+            return (boolean)retObjectUseOptimizedCacheKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseOptimizedCacheKey != null ? retObjectUseOptimizedCacheKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -930,9 +1232,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getVBScript() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVBScript = null;
         try {
-            return (boolean)classInstance.Get("VBScript");
+            retObjectVBScript = classInstance.Get("VBScript");
+            return (boolean)retObjectVBScript;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVBScript != null ? retObjectVBScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -940,9 +1246,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getWin16() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWin16 = null;
         try {
-            return (boolean)classInstance.Get("Win16");
+            retObjectWin16 = classInstance.Get("Win16");
+            return (boolean)retObjectWin16;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWin16 != null ? retObjectWin16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -950,9 +1260,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public boolean getWin32() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWin32 = null;
         try {
-            return (boolean)classInstance.Get("Win32");
+            retObjectWin32 = classInstance.Get("Win32");
+            return (boolean)retObjectWin32;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWin32 != null ? retObjectWin32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -960,9 +1274,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public double getGatewayMinorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGatewayMinorVersion = null;
         try {
-            return (double)classInstance.Get("GatewayMinorVersion");
+            retObjectGatewayMinorVersion = classInstance.Get("GatewayMinorVersion");
+            return (double)retObjectGatewayMinorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGatewayMinorVersionNumber = (java.lang.Number)retObjectGatewayMinorVersion;
+                return retObjectGatewayMinorVersionNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGatewayMinorVersion != null ? retObjectGatewayMinorVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -970,9 +1294,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public double getMinorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorVersion = null;
         try {
-            return (double)classInstance.Get("MinorVersion");
+            retObjectMinorVersion = classInstance.Get("MinorVersion");
+            return (double)retObjectMinorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinorVersionNumber = (java.lang.Number)retObjectMinorVersion;
+                return retObjectMinorVersionNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -980,9 +1314,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getDefaultSubmitButtonLimit() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSubmitButtonLimit = null;
         try {
-            return (int)classInstance.Get("DefaultSubmitButtonLimit");
+            retObjectDefaultSubmitButtonLimit = classInstance.Get("DefaultSubmitButtonLimit");
+            return (int)retObjectDefaultSubmitButtonLimit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultSubmitButtonLimitNumber = (java.lang.Number)retObjectDefaultSubmitButtonLimit;
+                return retObjectDefaultSubmitButtonLimitNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultSubmitButtonLimit != null ? retObjectDefaultSubmitButtonLimit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -990,9 +1334,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getGatewayMajorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGatewayMajorVersion = null;
         try {
-            return (int)classInstance.Get("GatewayMajorVersion");
+            retObjectGatewayMajorVersion = classInstance.Get("GatewayMajorVersion");
+            return (int)retObjectGatewayMajorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGatewayMajorVersionNumber = (java.lang.Number)retObjectGatewayMajorVersion;
+                return retObjectGatewayMajorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGatewayMajorVersion != null ? retObjectGatewayMajorVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1000,9 +1354,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getMajorVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorVersion = null;
         try {
-            return (int)classInstance.Get("MajorVersion");
+            retObjectMajorVersion = classInstance.Get("MajorVersion");
+            return (int)retObjectMajorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMajorVersionNumber = (java.lang.Number)retObjectMajorVersion;
+                return retObjectMajorVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1010,9 +1374,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getMaximumHrefLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumHrefLength = null;
         try {
-            return (int)classInstance.Get("MaximumHrefLength");
+            retObjectMaximumHrefLength = classInstance.Get("MaximumHrefLength");
+            return (int)retObjectMaximumHrefLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumHrefLengthNumber = (java.lang.Number)retObjectMaximumHrefLength;
+                return retObjectMaximumHrefLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumHrefLength != null ? retObjectMaximumHrefLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1020,9 +1394,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getMaximumRenderedPageSize() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumRenderedPageSize = null;
         try {
-            return (int)classInstance.Get("MaximumRenderedPageSize");
+            retObjectMaximumRenderedPageSize = classInstance.Get("MaximumRenderedPageSize");
+            return (int)retObjectMaximumRenderedPageSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumRenderedPageSizeNumber = (java.lang.Number)retObjectMaximumRenderedPageSize;
+                return retObjectMaximumRenderedPageSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumRenderedPageSize != null ? retObjectMaximumRenderedPageSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1030,9 +1414,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getMaximumSoftkeyLabelLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumSoftkeyLabelLength = null;
         try {
-            return (int)classInstance.Get("MaximumSoftkeyLabelLength");
+            retObjectMaximumSoftkeyLabelLength = classInstance.Get("MaximumSoftkeyLabelLength");
+            return (int)retObjectMaximumSoftkeyLabelLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumSoftkeyLabelLengthNumber = (java.lang.Number)retObjectMaximumSoftkeyLabelLength;
+                return retObjectMaximumSoftkeyLabelLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumSoftkeyLabelLength != null ? retObjectMaximumSoftkeyLabelLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1040,9 +1434,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getNumberOfSoftkeys() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfSoftkeys = null;
         try {
-            return (int)classInstance.Get("NumberOfSoftkeys");
+            retObjectNumberOfSoftkeys = classInstance.Get("NumberOfSoftkeys");
+            return (int)retObjectNumberOfSoftkeys;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfSoftkeysNumber = (java.lang.Number)retObjectNumberOfSoftkeys;
+                return retObjectNumberOfSoftkeysNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfSoftkeys != null ? retObjectNumberOfSoftkeys.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1050,9 +1454,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getScreenBitDepth() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreenBitDepth = null;
         try {
-            return (int)classInstance.Get("ScreenBitDepth");
+            retObjectScreenBitDepth = classInstance.Get("ScreenBitDepth");
+            return (int)retObjectScreenBitDepth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScreenBitDepthNumber = (java.lang.Number)retObjectScreenBitDepth;
+                return retObjectScreenBitDepthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenBitDepth != null ? retObjectScreenBitDepth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1060,9 +1474,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getScreenCharactersHeight() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreenCharactersHeight = null;
         try {
-            return (int)classInstance.Get("ScreenCharactersHeight");
+            retObjectScreenCharactersHeight = classInstance.Get("ScreenCharactersHeight");
+            return (int)retObjectScreenCharactersHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScreenCharactersHeightNumber = (java.lang.Number)retObjectScreenCharactersHeight;
+                return retObjectScreenCharactersHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenCharactersHeight != null ? retObjectScreenCharactersHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1070,9 +1494,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getScreenCharactersWidth() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreenCharactersWidth = null;
         try {
-            return (int)classInstance.Get("ScreenCharactersWidth");
+            retObjectScreenCharactersWidth = classInstance.Get("ScreenCharactersWidth");
+            return (int)retObjectScreenCharactersWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScreenCharactersWidthNumber = (java.lang.Number)retObjectScreenCharactersWidth;
+                return retObjectScreenCharactersWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenCharactersWidth != null ? retObjectScreenCharactersWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1080,9 +1514,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getScreenPixelsHeight() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreenPixelsHeight = null;
         try {
-            return (int)classInstance.Get("ScreenPixelsHeight");
+            retObjectScreenPixelsHeight = classInstance.Get("ScreenPixelsHeight");
+            return (int)retObjectScreenPixelsHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScreenPixelsHeightNumber = (java.lang.Number)retObjectScreenPixelsHeight;
+                return retObjectScreenPixelsHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenPixelsHeight != null ? retObjectScreenPixelsHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1090,9 +1534,19 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public int getScreenPixelsWidth() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreenPixelsWidth = null;
         try {
-            return (int)classInstance.Get("ScreenPixelsWidth");
+            retObjectScreenPixelsWidth = classInstance.Get("ScreenPixelsWidth");
+            return (int)retObjectScreenPixelsWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectScreenPixelsWidthNumber = (java.lang.Number)retObjectScreenPixelsWidth;
+                return retObjectScreenPixelsWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectScreenPixelsWidth != null ? retObjectScreenPixelsWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1100,10 +1554,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public NetArrayList getBrowsers() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBrowsers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Browsers");
+            retObjectBrowsers = classInstance.Get("Browsers");
+            JCObject val = (JCObject)retObjectBrowsers;
             return new NetArrayList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBrowsers != null ? retObjectBrowsers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1111,10 +1569,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public IDictionary getAdapters() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdapters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Adapters");
+            retObjectAdapters = classInstance.Get("Adapters");
+            JCObject val = (JCObject)retObjectAdapters;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdapters != null ? retObjectAdapters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1122,10 +1584,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public IDictionary getCapabilities() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapabilities = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Capabilities");
+            retObjectCapabilities = classInstance.Get("Capabilities");
+            JCObject val = (JCObject)retObjectCapabilities;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCapabilities != null ? retObjectCapabilities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1133,7 +1599,7 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public void setCapabilities(IDictionary Capabilities) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Capabilities", Capabilities == null ? null : Capabilities.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1143,9 +1609,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getBrowser() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBrowser = null;
         try {
-            return (java.lang.String)classInstance.Get("Browser");
+            retObjectBrowser = classInstance.Get("Browser");
+            return (java.lang.String)retObjectBrowser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBrowser != null ? retObjectBrowser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1153,9 +1623,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getGatewayVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGatewayVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("GatewayVersion");
+            retObjectGatewayVersion = classInstance.Get("GatewayVersion");
+            return (java.lang.String)retObjectGatewayVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGatewayVersion != null ? retObjectGatewayVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1163,9 +1637,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getHtmlTextWriter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlTextWriter = null;
         try {
-            return (java.lang.String)classInstance.Get("HtmlTextWriter");
+            retObjectHtmlTextWriter = classInstance.Get("HtmlTextWriter");
+            return (java.lang.String)retObjectHtmlTextWriter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHtmlTextWriter != null ? retObjectHtmlTextWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1173,7 +1651,7 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public void setHtmlTextWriter(java.lang.String HtmlTextWriter) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HtmlTextWriter", HtmlTextWriter);
         } catch (JCNativeException jcne) {
@@ -1183,9 +1661,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getId() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1193,9 +1675,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getInputType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputType = null;
         try {
-            return (java.lang.String)classInstance.Get("InputType");
+            retObjectInputType = classInstance.Get("InputType");
+            return (java.lang.String)retObjectInputType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInputType != null ? retObjectInputType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1203,9 +1689,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getMinorVersionString() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorVersionString = null;
         try {
-            return (java.lang.String)classInstance.Get("MinorVersionString");
+            retObjectMinorVersionString = classInstance.Get("MinorVersionString");
+            return (java.lang.String)retObjectMinorVersionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMinorVersionString != null ? retObjectMinorVersionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1213,9 +1703,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getMobileDeviceManufacturer() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMobileDeviceManufacturer = null;
         try {
-            return (java.lang.String)classInstance.Get("MobileDeviceManufacturer");
+            retObjectMobileDeviceManufacturer = classInstance.Get("MobileDeviceManufacturer");
+            return (java.lang.String)retObjectMobileDeviceManufacturer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMobileDeviceManufacturer != null ? retObjectMobileDeviceManufacturer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1223,9 +1717,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getMobileDeviceModel() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMobileDeviceModel = null;
         try {
-            return (java.lang.String)classInstance.Get("MobileDeviceModel");
+            retObjectMobileDeviceModel = classInstance.Get("MobileDeviceModel");
+            return (java.lang.String)retObjectMobileDeviceModel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMobileDeviceModel != null ? retObjectMobileDeviceModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1233,9 +1731,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getPlatform() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlatform = null;
         try {
-            return (java.lang.String)classInstance.Get("Platform");
+            retObjectPlatform = classInstance.Get("Platform");
+            return (java.lang.String)retObjectPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPlatform != null ? retObjectPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1243,9 +1745,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getPreferredImageMime() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredImageMime = null;
         try {
-            return (java.lang.String)classInstance.Get("PreferredImageMime");
+            retObjectPreferredImageMime = classInstance.Get("PreferredImageMime");
+            return (java.lang.String)retObjectPreferredImageMime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreferredImageMime != null ? retObjectPreferredImageMime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1253,9 +1759,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getPreferredRenderingMime() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredRenderingMime = null;
         try {
-            return (java.lang.String)classInstance.Get("PreferredRenderingMime");
+            retObjectPreferredRenderingMime = classInstance.Get("PreferredRenderingMime");
+            return (java.lang.String)retObjectPreferredRenderingMime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreferredRenderingMime != null ? retObjectPreferredRenderingMime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1263,9 +1773,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getPreferredRenderingType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredRenderingType = null;
         try {
-            return (java.lang.String)classInstance.Get("PreferredRenderingType");
+            retObjectPreferredRenderingType = classInstance.Get("PreferredRenderingType");
+            return (java.lang.String)retObjectPreferredRenderingType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreferredRenderingType != null ? retObjectPreferredRenderingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1273,9 +1787,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getPreferredRequestEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredRequestEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("PreferredRequestEncoding");
+            retObjectPreferredRequestEncoding = classInstance.Get("PreferredRequestEncoding");
+            return (java.lang.String)retObjectPreferredRequestEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreferredRequestEncoding != null ? retObjectPreferredRequestEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1283,9 +1801,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getPreferredResponseEncoding() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredResponseEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("PreferredResponseEncoding");
+            retObjectPreferredResponseEncoding = classInstance.Get("PreferredResponseEncoding");
+            return (java.lang.String)retObjectPreferredResponseEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreferredResponseEncoding != null ? retObjectPreferredResponseEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1293,9 +1815,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getRequiredMetaTagNameValue() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiredMetaTagNameValue = null;
         try {
-            return (java.lang.String)classInstance.Get("RequiredMetaTagNameValue");
+            retObjectRequiredMetaTagNameValue = classInstance.Get("RequiredMetaTagNameValue");
+            return (java.lang.String)retObjectRequiredMetaTagNameValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequiredMetaTagNameValue != null ? retObjectRequiredMetaTagNameValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1303,9 +1829,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (java.lang.String)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (java.lang.String)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1313,9 +1843,13 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public java.lang.String getVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1323,10 +1857,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public NetType getTagWriter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagWriter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TagWriter");
+            retObjectTagWriter = classInstance.Get("TagWriter");
+            JCObject val = (JCObject)retObjectTagWriter;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTagWriter != null ? retObjectTagWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1334,10 +1872,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public Version getClrVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClrVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClrVersion");
+            retObjectClrVersion = classInstance.Get("ClrVersion");
+            JCObject val = (JCObject)retObjectClrVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClrVersion != null ? retObjectClrVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1345,10 +1887,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public Version getEcmaScriptVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEcmaScriptVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EcmaScriptVersion");
+            retObjectEcmaScriptVersion = classInstance.Get("EcmaScriptVersion");
+            JCObject val = (JCObject)retObjectEcmaScriptVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEcmaScriptVersion != null ? retObjectEcmaScriptVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1356,10 +1902,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public Version getJScriptVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJScriptVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("JScriptVersion");
+            retObjectJScriptVersion = classInstance.Get("JScriptVersion");
+            JCObject val = (JCObject)retObjectJScriptVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptVersion != null ? retObjectJScriptVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1367,10 +1917,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public Version getMSDomVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMSDomVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MSDomVersion");
+            retObjectMSDomVersion = classInstance.Get("MSDomVersion");
+            JCObject val = (JCObject)retObjectMSDomVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMSDomVersion != null ? retObjectMSDomVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1378,10 +1932,14 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
 
     public Version getW3CDomVersion() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectW3CDomVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("W3CDomVersion");
+            retObjectW3CDomVersion = classInstance.Get("W3CDomVersion");
+            JCObject val = (JCObject)retObjectW3CDomVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectW3CDomVersion != null ? retObjectW3CDomVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

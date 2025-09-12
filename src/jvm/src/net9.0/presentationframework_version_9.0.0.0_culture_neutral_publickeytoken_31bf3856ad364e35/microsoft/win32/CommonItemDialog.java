@@ -154,7 +154,7 @@ public class CommonItemDialog extends CommonDialog  {
     
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -168,9 +168,13 @@ public class CommonItemDialog extends CommonDialog  {
     
     public boolean getAddToRecent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddToRecent = null;
         try {
-            return (boolean)classInstance.Get("AddToRecent");
+            retObjectAddToRecent = classInstance.Get("AddToRecent");
+            return (boolean)retObjectAddToRecent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAddToRecent != null ? retObjectAddToRecent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setAddToRecent(boolean AddToRecent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddToRecent", AddToRecent);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class CommonItemDialog extends CommonDialog  {
 
     public boolean getDereferenceLinks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDereferenceLinks = null;
         try {
-            return (boolean)classInstance.Get("DereferenceLinks");
+            retObjectDereferenceLinks = classInstance.Get("DereferenceLinks");
+            return (boolean)retObjectDereferenceLinks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDereferenceLinks != null ? retObjectDereferenceLinks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setDereferenceLinks(boolean DereferenceLinks) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DereferenceLinks", DereferenceLinks);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class CommonItemDialog extends CommonDialog  {
 
     public boolean getShowHiddenItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHiddenItems = null;
         try {
-            return (boolean)classInstance.Get("ShowHiddenItems");
+            retObjectShowHiddenItems = classInstance.Get("ShowHiddenItems");
+            return (boolean)retObjectShowHiddenItems;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHiddenItems != null ? retObjectShowHiddenItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setShowHiddenItems(boolean ShowHiddenItems) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHiddenItems", ShowHiddenItems);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class CommonItemDialog extends CommonDialog  {
 
     public boolean getValidateNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateNames = null;
         try {
-            return (boolean)classInstance.Get("ValidateNames");
+            retObjectValidateNames = classInstance.Get("ValidateNames");
+            return (boolean)retObjectValidateNames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateNames != null ? retObjectValidateNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setValidateNames(boolean ValidateNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateNames", ValidateNames);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,13 @@ public class CommonItemDialog extends CommonDialog  {
 
     public java.lang.String getDefaultDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultDirectory");
+            retObjectDefaultDirectory = classInstance.Get("DefaultDirectory");
+            return (java.lang.String)retObjectDefaultDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultDirectory != null ? retObjectDefaultDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setDefaultDirectory(java.lang.String DefaultDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultDirectory", DefaultDirectory);
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class CommonItemDialog extends CommonDialog  {
 
     public java.lang.String getInitialDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("InitialDirectory");
+            retObjectInitialDirectory = classInstance.Get("InitialDirectory");
+            return (java.lang.String)retObjectInitialDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInitialDirectory != null ? retObjectInitialDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setInitialDirectory(java.lang.String InitialDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialDirectory", InitialDirectory);
         } catch (JCNativeException jcne) {
@@ -288,9 +312,13 @@ public class CommonItemDialog extends CommonDialog  {
 
     public java.lang.String getRootDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("RootDirectory");
+            retObjectRootDirectory = classInstance.Get("RootDirectory");
+            return (java.lang.String)retObjectRootDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootDirectory != null ? retObjectRootDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +326,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setRootDirectory(java.lang.String RootDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootDirectory", RootDirectory);
         } catch (JCNativeException jcne) {
@@ -308,9 +336,13 @@ public class CommonItemDialog extends CommonDialog  {
 
     public java.lang.String getTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +350,7 @@ public class CommonItemDialog extends CommonDialog  {
 
     public void setTitle(java.lang.String Title) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {

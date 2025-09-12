@@ -166,10 +166,14 @@ public class TrackingDataItem extends NetObject  {
     
     public NetObject getData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Data");
+            retObjectData = classInstance.Get("Data");
+            JCObject val = (JCObject)retObjectData;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class TrackingDataItem extends NetObject  {
 
     public void setData(NetObject Data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Data", Data == null ? null : Data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class TrackingDataItem extends NetObject  {
 
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldName = null;
         try {
-            return (java.lang.String)classInstance.Get("FieldName");
+            retObjectFieldName = classInstance.Get("FieldName");
+            return (java.lang.String)retObjectFieldName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFieldName != null ? retObjectFieldName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class TrackingDataItem extends NetObject  {
 
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldName", FieldName);
         } catch (JCNativeException jcne) {
@@ -207,10 +215,14 @@ public class TrackingDataItem extends NetObject  {
 
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
+            retObjectAnnotations = classInstance.Get("Annotations");
+            JCObject val = (JCObject)retObjectAnnotations;
             return new TrackingAnnotationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotations != null ? retObjectAnnotations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -190,9 +190,13 @@ public class DataGrid extends MultiSelector  {
     
     public boolean BeginEdit() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginEdit = null;
         try {
-            return (boolean)classInstance.Invoke("BeginEdit");
+            retObjectBeginEdit = classInstance.Invoke("BeginEdit");
+            return (boolean)retObjectBeginEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBeginEdit != null ? retObjectBeginEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean BeginEdit(RoutedEventArgs editingEventArgs) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginEdit = null;
         try {
-            return (boolean)classInstance.Invoke("BeginEdit", editingEventArgs == null ? null : editingEventArgs.getJCOInstance());
+            retObjectBeginEdit = classInstance.Invoke("BeginEdit", editingEventArgs == null ? null : editingEventArgs.getJCOInstance());
+            return (boolean)retObjectBeginEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBeginEdit != null ? retObjectBeginEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +218,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean CancelEdit() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelEdit = null;
         try {
-            return (boolean)classInstance.Invoke("CancelEdit");
+            retObjectCancelEdit = classInstance.Invoke("CancelEdit");
+            return (boolean)retObjectCancelEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCancelEdit != null ? retObjectCancelEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +232,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean CancelEdit(DataGridEditingUnit editingUnit) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelEdit = null;
         try {
-            return (boolean)classInstance.Invoke("CancelEdit", editingUnit == null ? null : editingUnit.getJCOInstance());
+            retObjectCancelEdit = classInstance.Invoke("CancelEdit", editingUnit == null ? null : editingUnit.getJCOInstance());
+            return (boolean)retObjectCancelEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCancelEdit != null ? retObjectCancelEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +246,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean CommitEdit() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommitEdit = null;
         try {
-            return (boolean)classInstance.Invoke("CommitEdit");
+            retObjectCommitEdit = classInstance.Invoke("CommitEdit");
+            return (boolean)retObjectCommitEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCommitEdit != null ? retObjectCommitEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +260,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean CommitEdit(DataGridEditingUnit editingUnit, boolean exitEditingMode) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommitEdit = null;
         try {
-            return (boolean)classInstance.Invoke("CommitEdit", editingUnit == null ? null : editingUnit.getJCOInstance(), exitEditingMode);
+            retObjectCommitEdit = classInstance.Invoke("CommitEdit", editingUnit == null ? null : editingUnit.getJCOInstance(), exitEditingMode);
+            return (boolean)retObjectCommitEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCommitEdit != null ? retObjectCommitEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +274,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridColumn ColumnFromDisplayIndex(int displayIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnFromDisplayIndex = null;
         try {
-            JCObject objColumnFromDisplayIndex = (JCObject)classInstance.Invoke("ColumnFromDisplayIndex", displayIndex);
+            retObjectColumnFromDisplayIndex = classInstance.Invoke("ColumnFromDisplayIndex", displayIndex);
+            JCObject objColumnFromDisplayIndex = (JCObject)retObjectColumnFromDisplayIndex;
             return new DataGridColumn(objColumnFromDisplayIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnFromDisplayIndex != null ? retObjectColumnFromDisplayIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +289,14 @@ public class DataGrid extends MultiSelector  {
 
     public Visibility GetDetailsVisibilityForItem(NetObject item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDetailsVisibilityForItem = null;
         try {
-            JCObject objGetDetailsVisibilityForItem = (JCObject)classInstance.Invoke("GetDetailsVisibilityForItem", item == null ? null : item.getJCOInstance());
+            retObjectGetDetailsVisibilityForItem = classInstance.Invoke("GetDetailsVisibilityForItem", item == null ? null : item.getJCOInstance());
+            JCObject objGetDetailsVisibilityForItem = (JCObject)retObjectGetDetailsVisibilityForItem;
             return new Visibility(objGetDetailsVisibilityForItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDetailsVisibilityForItem != null ? retObjectGetDetailsVisibilityForItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +304,7 @@ public class DataGrid extends MultiSelector  {
 
     public void ClearDetailsVisibilityForItem(NetObject item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearDetailsVisibilityForItem", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,7 +314,7 @@ public class DataGrid extends MultiSelector  {
 
     public void OnApplyTemplate() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -292,7 +324,7 @@ public class DataGrid extends MultiSelector  {
 
     public void ScrollIntoView(NetObject item, DataGridColumn column) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollIntoView", item == null ? null : item.getJCOInstance(), column == null ? null : column.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +334,7 @@ public class DataGrid extends MultiSelector  {
 
     public void ScrollIntoView(NetObject item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollIntoView", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +344,7 @@ public class DataGrid extends MultiSelector  {
 
     public void SelectAllCells() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectAllCells");
         } catch (JCNativeException jcne) {
@@ -322,7 +354,7 @@ public class DataGrid extends MultiSelector  {
 
     public void SetDetailsVisibilityForItem(NetObject item, Visibility detailsVisibility) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDetailsVisibilityForItem", item == null ? null : item.getJCOInstance(), detailsVisibility == null ? null : detailsVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +364,7 @@ public class DataGrid extends MultiSelector  {
 
     public void UnselectAllCells() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnselectAllCells");
         } catch (JCNativeException jcne) {
@@ -346,9 +378,13 @@ public class DataGrid extends MultiSelector  {
     
     public boolean getAreRowDetailsFrozen() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreRowDetailsFrozen = null;
         try {
-            return (boolean)classInstance.Get("AreRowDetailsFrozen");
+            retObjectAreRowDetailsFrozen = classInstance.Get("AreRowDetailsFrozen");
+            return (boolean)retObjectAreRowDetailsFrozen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreRowDetailsFrozen != null ? retObjectAreRowDetailsFrozen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +392,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setAreRowDetailsFrozen(boolean AreRowDetailsFrozen) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AreRowDetailsFrozen", AreRowDetailsFrozen);
         } catch (JCNativeException jcne) {
@@ -366,9 +402,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getAutoGenerateColumns() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateColumns = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateColumns");
+            retObjectAutoGenerateColumns = classInstance.Get("AutoGenerateColumns");
+            return (boolean)retObjectAutoGenerateColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateColumns != null ? retObjectAutoGenerateColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +416,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setAutoGenerateColumns(boolean AutoGenerateColumns) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateColumns", AutoGenerateColumns);
         } catch (JCNativeException jcne) {
@@ -386,9 +426,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getCanUserAddRows() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUserAddRows = null;
         try {
-            return (boolean)classInstance.Get("CanUserAddRows");
+            retObjectCanUserAddRows = classInstance.Get("CanUserAddRows");
+            return (boolean)retObjectCanUserAddRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUserAddRows != null ? retObjectCanUserAddRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +440,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCanUserAddRows(boolean CanUserAddRows) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanUserAddRows", CanUserAddRows);
         } catch (JCNativeException jcne) {
@@ -406,9 +450,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getCanUserDeleteRows() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUserDeleteRows = null;
         try {
-            return (boolean)classInstance.Get("CanUserDeleteRows");
+            retObjectCanUserDeleteRows = classInstance.Get("CanUserDeleteRows");
+            return (boolean)retObjectCanUserDeleteRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUserDeleteRows != null ? retObjectCanUserDeleteRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +464,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCanUserDeleteRows(boolean CanUserDeleteRows) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanUserDeleteRows", CanUserDeleteRows);
         } catch (JCNativeException jcne) {
@@ -426,9 +474,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getCanUserReorderColumns() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUserReorderColumns = null;
         try {
-            return (boolean)classInstance.Get("CanUserReorderColumns");
+            retObjectCanUserReorderColumns = classInstance.Get("CanUserReorderColumns");
+            return (boolean)retObjectCanUserReorderColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUserReorderColumns != null ? retObjectCanUserReorderColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +488,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCanUserReorderColumns(boolean CanUserReorderColumns) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanUserReorderColumns", CanUserReorderColumns);
         } catch (JCNativeException jcne) {
@@ -446,9 +498,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getCanUserResizeColumns() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUserResizeColumns = null;
         try {
-            return (boolean)classInstance.Get("CanUserResizeColumns");
+            retObjectCanUserResizeColumns = classInstance.Get("CanUserResizeColumns");
+            return (boolean)retObjectCanUserResizeColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUserResizeColumns != null ? retObjectCanUserResizeColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +512,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCanUserResizeColumns(boolean CanUserResizeColumns) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanUserResizeColumns", CanUserResizeColumns);
         } catch (JCNativeException jcne) {
@@ -466,9 +522,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getCanUserResizeRows() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUserResizeRows = null;
         try {
-            return (boolean)classInstance.Get("CanUserResizeRows");
+            retObjectCanUserResizeRows = classInstance.Get("CanUserResizeRows");
+            return (boolean)retObjectCanUserResizeRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUserResizeRows != null ? retObjectCanUserResizeRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +536,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCanUserResizeRows(boolean CanUserResizeRows) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanUserResizeRows", CanUserResizeRows);
         } catch (JCNativeException jcne) {
@@ -486,9 +546,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getCanUserSortColumns() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUserSortColumns = null;
         try {
-            return (boolean)classInstance.Get("CanUserSortColumns");
+            retObjectCanUserSortColumns = classInstance.Get("CanUserSortColumns");
+            return (boolean)retObjectCanUserSortColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUserSortColumns != null ? retObjectCanUserSortColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,7 +560,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCanUserSortColumns(boolean CanUserSortColumns) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanUserSortColumns", CanUserSortColumns);
         } catch (JCNativeException jcne) {
@@ -506,9 +570,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getEnableColumnVirtualization() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableColumnVirtualization = null;
         try {
-            return (boolean)classInstance.Get("EnableColumnVirtualization");
+            retObjectEnableColumnVirtualization = classInstance.Get("EnableColumnVirtualization");
+            return (boolean)retObjectEnableColumnVirtualization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableColumnVirtualization != null ? retObjectEnableColumnVirtualization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,7 +584,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setEnableColumnVirtualization(boolean EnableColumnVirtualization) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableColumnVirtualization", EnableColumnVirtualization);
         } catch (JCNativeException jcne) {
@@ -526,9 +594,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getEnableRowVirtualization() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableRowVirtualization = null;
         try {
-            return (boolean)classInstance.Get("EnableRowVirtualization");
+            retObjectEnableRowVirtualization = classInstance.Get("EnableRowVirtualization");
+            return (boolean)retObjectEnableRowVirtualization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableRowVirtualization != null ? retObjectEnableRowVirtualization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,7 +608,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setEnableRowVirtualization(boolean EnableRowVirtualization) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableRowVirtualization", EnableRowVirtualization);
         } catch (JCNativeException jcne) {
@@ -546,9 +618,13 @@ public class DataGrid extends MultiSelector  {
 
     public boolean getIsReadOnly() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,7 +632,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
         } catch (JCNativeException jcne) {
@@ -566,9 +642,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getCellsPanelHorizontalOffset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellsPanelHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("CellsPanelHorizontalOffset");
+            retObjectCellsPanelHorizontalOffset = classInstance.Get("CellsPanelHorizontalOffset");
+            return (double)retObjectCellsPanelHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCellsPanelHorizontalOffsetNumber = (java.lang.Number)retObjectCellsPanelHorizontalOffset;
+                return retObjectCellsPanelHorizontalOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCellsPanelHorizontalOffset != null ? retObjectCellsPanelHorizontalOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,7 +662,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCellsPanelHorizontalOffset(double CellsPanelHorizontalOffset) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellsPanelHorizontalOffset", CellsPanelHorizontalOffset);
         } catch (JCNativeException jcne) {
@@ -586,9 +672,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getColumnHeaderHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderHeight = null;
         try {
-            return (double)classInstance.Get("ColumnHeaderHeight");
+            retObjectColumnHeaderHeight = classInstance.Get("ColumnHeaderHeight");
+            return (double)retObjectColumnHeaderHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectColumnHeaderHeightNumber = (java.lang.Number)retObjectColumnHeaderHeight;
+                return retObjectColumnHeaderHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectColumnHeaderHeight != null ? retObjectColumnHeaderHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,7 +692,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setColumnHeaderHeight(double ColumnHeaderHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderHeight", ColumnHeaderHeight);
         } catch (JCNativeException jcne) {
@@ -606,9 +702,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getMaxColumnWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxColumnWidth = null;
         try {
-            return (double)classInstance.Get("MaxColumnWidth");
+            retObjectMaxColumnWidth = classInstance.Get("MaxColumnWidth");
+            return (double)retObjectMaxColumnWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxColumnWidthNumber = (java.lang.Number)retObjectMaxColumnWidth;
+                return retObjectMaxColumnWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMaxColumnWidth != null ? retObjectMaxColumnWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,7 +722,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setMaxColumnWidth(double MaxColumnWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxColumnWidth", MaxColumnWidth);
         } catch (JCNativeException jcne) {
@@ -626,9 +732,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getMinColumnWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinColumnWidth = null;
         try {
-            return (double)classInstance.Get("MinColumnWidth");
+            retObjectMinColumnWidth = classInstance.Get("MinColumnWidth");
+            return (double)retObjectMinColumnWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinColumnWidthNumber = (java.lang.Number)retObjectMinColumnWidth;
+                return retObjectMinColumnWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinColumnWidth != null ? retObjectMinColumnWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,7 +752,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setMinColumnWidth(double MinColumnWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinColumnWidth", MinColumnWidth);
         } catch (JCNativeException jcne) {
@@ -646,9 +762,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getMinRowHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinRowHeight = null;
         try {
-            return (double)classInstance.Get("MinRowHeight");
+            retObjectMinRowHeight = classInstance.Get("MinRowHeight");
+            return (double)retObjectMinRowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinRowHeightNumber = (java.lang.Number)retObjectMinRowHeight;
+                return retObjectMinRowHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMinRowHeight != null ? retObjectMinRowHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -656,7 +782,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setMinRowHeight(double MinRowHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinRowHeight", MinRowHeight);
         } catch (JCNativeException jcne) {
@@ -666,9 +792,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getNonFrozenColumnsViewportHorizontalOffset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNonFrozenColumnsViewportHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("NonFrozenColumnsViewportHorizontalOffset");
+            retObjectNonFrozenColumnsViewportHorizontalOffset = classInstance.Get("NonFrozenColumnsViewportHorizontalOffset");
+            return (double)retObjectNonFrozenColumnsViewportHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNonFrozenColumnsViewportHorizontalOffsetNumber = (java.lang.Number)retObjectNonFrozenColumnsViewportHorizontalOffset;
+                return retObjectNonFrozenColumnsViewportHorizontalOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectNonFrozenColumnsViewportHorizontalOffset != null ? retObjectNonFrozenColumnsViewportHorizontalOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -676,7 +812,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setNonFrozenColumnsViewportHorizontalOffset(double NonFrozenColumnsViewportHorizontalOffset) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NonFrozenColumnsViewportHorizontalOffset", NonFrozenColumnsViewportHorizontalOffset);
         } catch (JCNativeException jcne) {
@@ -686,9 +822,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getRowHeaderActualWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeaderActualWidth = null;
         try {
-            return (double)classInstance.Get("RowHeaderActualWidth");
+            retObjectRowHeaderActualWidth = classInstance.Get("RowHeaderActualWidth");
+            return (double)retObjectRowHeaderActualWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowHeaderActualWidthNumber = (java.lang.Number)retObjectRowHeaderActualWidth;
+                return retObjectRowHeaderActualWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRowHeaderActualWidth != null ? retObjectRowHeaderActualWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,7 +842,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowHeaderActualWidth(double RowHeaderActualWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeaderActualWidth", RowHeaderActualWidth);
         } catch (JCNativeException jcne) {
@@ -706,9 +852,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getRowHeaderWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeaderWidth = null;
         try {
-            return (double)classInstance.Get("RowHeaderWidth");
+            retObjectRowHeaderWidth = classInstance.Get("RowHeaderWidth");
+            return (double)retObjectRowHeaderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowHeaderWidthNumber = (java.lang.Number)retObjectRowHeaderWidth;
+                return retObjectRowHeaderWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRowHeaderWidth != null ? retObjectRowHeaderWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,7 +872,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowHeaderWidth(double RowHeaderWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeaderWidth", RowHeaderWidth);
         } catch (JCNativeException jcne) {
@@ -726,9 +882,19 @@ public class DataGrid extends MultiSelector  {
 
     public double getRowHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeight = null;
         try {
-            return (double)classInstance.Get("RowHeight");
+            retObjectRowHeight = classInstance.Get("RowHeight");
+            return (double)retObjectRowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRowHeightNumber = (java.lang.Number)retObjectRowHeight;
+                return retObjectRowHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRowHeight != null ? retObjectRowHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,7 +902,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowHeight(double RowHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeight", RowHeight);
         } catch (JCNativeException jcne) {
@@ -746,9 +912,19 @@ public class DataGrid extends MultiSelector  {
 
     public int getFrozenColumnCount() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrozenColumnCount = null;
         try {
-            return (int)classInstance.Get("FrozenColumnCount");
+            retObjectFrozenColumnCount = classInstance.Get("FrozenColumnCount");
+            return (int)retObjectFrozenColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFrozenColumnCountNumber = (java.lang.Number)retObjectFrozenColumnCount;
+                return retObjectFrozenColumnCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFrozenColumnCount != null ? retObjectFrozenColumnCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,7 +932,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setFrozenColumnCount(int FrozenColumnCount) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FrozenColumnCount", FrozenColumnCount);
         } catch (JCNativeException jcne) {
@@ -766,10 +942,14 @@ public class DataGrid extends MultiSelector  {
 
     public NetObject getCurrentItem() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentItem");
+            retObjectCurrentItem = classInstance.Get("CurrentItem");
+            JCObject val = (JCObject)retObjectCurrentItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentItem != null ? retObjectCurrentItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -777,7 +957,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCurrentItem(NetObject CurrentItem) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentItem", CurrentItem == null ? null : CurrentItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -787,10 +967,14 @@ public class DataGrid extends MultiSelector  {
 
     public static ComponentResourceKey getFocusBorderBrushKey() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFocusBorderBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("FocusBorderBrushKey");
+            retObjectFocusBorderBrushKey = classType.Get("FocusBorderBrushKey");
+            JCObject val = (JCObject)retObjectFocusBorderBrushKey;
             return new ComponentResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusBorderBrushKey != null ? retObjectFocusBorderBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,10 +982,14 @@ public class DataGrid extends MultiSelector  {
 
     public ControlTemplate getRowValidationErrorTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowValidationErrorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowValidationErrorTemplate");
+            retObjectRowValidationErrorTemplate = classInstance.Get("RowValidationErrorTemplate");
+            JCObject val = (JCObject)retObjectRowValidationErrorTemplate;
             return new ControlTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowValidationErrorTemplate != null ? retObjectRowValidationErrorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -809,7 +997,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowValidationErrorTemplate(ControlTemplate RowValidationErrorTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowValidationErrorTemplate", RowValidationErrorTemplate == null ? null : RowValidationErrorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -819,10 +1007,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridCellInfo getCurrentCell() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentCell = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCell");
+            retObjectCurrentCell = classInstance.Get("CurrentCell");
+            JCObject val = (JCObject)retObjectCurrentCell;
             return new DataGridCellInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCell != null ? retObjectCurrentCell.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -830,7 +1022,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCurrentCell(DataGridCellInfo CurrentCell) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentCell", CurrentCell == null ? null : CurrentCell.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -840,10 +1032,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridClipboardCopyMode getClipboardCopyMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipboardCopyMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClipboardCopyMode");
+            retObjectClipboardCopyMode = classInstance.Get("ClipboardCopyMode");
+            JCObject val = (JCObject)retObjectClipboardCopyMode;
             return new DataGridClipboardCopyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipboardCopyMode != null ? retObjectClipboardCopyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -851,7 +1047,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setClipboardCopyMode(DataGridClipboardCopyMode ClipboardCopyMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClipboardCopyMode", ClipboardCopyMode == null ? null : ClipboardCopyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -861,10 +1057,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridColumn getCurrentColumn() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentColumn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentColumn");
+            retObjectCurrentColumn = classInstance.Get("CurrentColumn");
+            JCObject val = (JCObject)retObjectCurrentColumn;
             return new DataGridColumn(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentColumn != null ? retObjectCurrentColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -872,7 +1072,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCurrentColumn(DataGridColumn CurrentColumn) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentColumn", CurrentColumn == null ? null : CurrentColumn.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -882,10 +1082,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridGridLinesVisibility getGridLinesVisibility() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridLinesVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridLinesVisibility");
+            retObjectGridLinesVisibility = classInstance.Get("GridLinesVisibility");
+            JCObject val = (JCObject)retObjectGridLinesVisibility;
             return new DataGridGridLinesVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridLinesVisibility != null ? retObjectGridLinesVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -893,7 +1097,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setGridLinesVisibility(DataGridGridLinesVisibility GridLinesVisibility) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridLinesVisibility", GridLinesVisibility == null ? null : GridLinesVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -903,10 +1107,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridHeadersVisibility getHeadersVisibility() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeadersVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeadersVisibility");
+            retObjectHeadersVisibility = classInstance.Get("HeadersVisibility");
+            JCObject val = (JCObject)retObjectHeadersVisibility;
             return new DataGridHeadersVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeadersVisibility != null ? retObjectHeadersVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -914,7 +1122,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setHeadersVisibility(DataGridHeadersVisibility HeadersVisibility) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeadersVisibility", HeadersVisibility == null ? null : HeadersVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -924,10 +1132,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridLength getColumnWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnWidth = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnWidth");
+            retObjectColumnWidth = classInstance.Get("ColumnWidth");
+            JCObject val = (JCObject)retObjectColumnWidth;
             return new DataGridLength(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnWidth != null ? retObjectColumnWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -935,7 +1147,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setColumnWidth(DataGridLength ColumnWidth) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnWidth", ColumnWidth == null ? null : ColumnWidth.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -945,10 +1157,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridRowDetailsVisibilityMode getRowDetailsVisibilityMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowDetailsVisibilityMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowDetailsVisibilityMode");
+            retObjectRowDetailsVisibilityMode = classInstance.Get("RowDetailsVisibilityMode");
+            JCObject val = (JCObject)retObjectRowDetailsVisibilityMode;
             return new DataGridRowDetailsVisibilityMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowDetailsVisibilityMode != null ? retObjectRowDetailsVisibilityMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -956,7 +1172,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowDetailsVisibilityMode(DataGridRowDetailsVisibilityMode RowDetailsVisibilityMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowDetailsVisibilityMode", RowDetailsVisibilityMode == null ? null : RowDetailsVisibilityMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -966,10 +1182,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridSelectionMode getSelectionMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionMode");
+            retObjectSelectionMode = classInstance.Get("SelectionMode");
+            JCObject val = (JCObject)retObjectSelectionMode;
             return new DataGridSelectionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionMode != null ? retObjectSelectionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -977,7 +1197,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setSelectionMode(DataGridSelectionMode SelectionMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionMode", SelectionMode == null ? null : SelectionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -987,10 +1207,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataGridSelectionUnit getSelectionUnit() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionUnit");
+            retObjectSelectionUnit = classInstance.Get("SelectionUnit");
+            JCObject val = (JCObject)retObjectSelectionUnit;
             return new DataGridSelectionUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionUnit != null ? retObjectSelectionUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -998,7 +1222,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setSelectionUnit(DataGridSelectionUnit SelectionUnit) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionUnit", SelectionUnit == null ? null : SelectionUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1008,10 +1232,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataTemplateSelector getRowDetailsTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowDetailsTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowDetailsTemplateSelector");
+            retObjectRowDetailsTemplateSelector = classInstance.Get("RowDetailsTemplateSelector");
+            JCObject val = (JCObject)retObjectRowDetailsTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowDetailsTemplateSelector != null ? retObjectRowDetailsTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1019,7 +1247,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowDetailsTemplateSelector(DataTemplateSelector RowDetailsTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowDetailsTemplateSelector", RowDetailsTemplateSelector == null ? null : RowDetailsTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1029,10 +1257,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataTemplateSelector getRowHeaderTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeaderTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowHeaderTemplateSelector");
+            retObjectRowHeaderTemplateSelector = classInstance.Get("RowHeaderTemplateSelector");
+            JCObject val = (JCObject)retObjectRowHeaderTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowHeaderTemplateSelector != null ? retObjectRowHeaderTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1040,7 +1272,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowHeaderTemplateSelector(DataTemplateSelector RowHeaderTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeaderTemplateSelector", RowHeaderTemplateSelector == null ? null : RowHeaderTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1050,10 +1282,14 @@ public class DataGrid extends MultiSelector  {
 
     public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalScrollBarVisibility");
+            retObjectHorizontalScrollBarVisibility = classInstance.Get("HorizontalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectHorizontalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScrollBarVisibility != null ? retObjectHorizontalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1061,7 +1297,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalScrollBarVisibility", HorizontalScrollBarVisibility == null ? null : HorizontalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1071,10 +1307,14 @@ public class DataGrid extends MultiSelector  {
 
     public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalScrollBarVisibility");
+            retObjectVerticalScrollBarVisibility = classInstance.Get("VerticalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectVerticalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScrollBarVisibility != null ? retObjectVerticalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1082,7 +1322,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalScrollBarVisibility", VerticalScrollBarVisibility == null ? null : VerticalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1092,10 +1332,14 @@ public class DataGrid extends MultiSelector  {
 
     public StyleSelector getRowStyleSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStyleSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStyleSelector");
+            retObjectRowStyleSelector = classInstance.Get("RowStyleSelector");
+            JCObject val = (JCObject)retObjectRowStyleSelector;
             return new StyleSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStyleSelector != null ? retObjectRowStyleSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1103,7 +1347,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowStyleSelector(StyleSelector RowStyleSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowStyleSelector", RowStyleSelector == null ? null : RowStyleSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1113,10 +1357,14 @@ public class DataGrid extends MultiSelector  {
 
     public static IValueConverter getHeadersVisibilityConverter() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHeadersVisibilityConverter = null;
         try {
-            JCObject val = (JCObject)classType.Get("HeadersVisibilityConverter");
+            retObjectHeadersVisibilityConverter = classType.Get("HeadersVisibilityConverter");
+            JCObject val = (JCObject)retObjectHeadersVisibilityConverter;
             return new IValueConverterImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeadersVisibilityConverter != null ? retObjectHeadersVisibilityConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1124,10 +1372,14 @@ public class DataGrid extends MultiSelector  {
 
     public static IValueConverter getRowDetailsScrollingConverter() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRowDetailsScrollingConverter = null;
         try {
-            JCObject val = (JCObject)classType.Get("RowDetailsScrollingConverter");
+            retObjectRowDetailsScrollingConverter = classType.Get("RowDetailsScrollingConverter");
+            JCObject val = (JCObject)retObjectRowDetailsScrollingConverter;
             return new IValueConverterImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowDetailsScrollingConverter != null ? retObjectRowDetailsScrollingConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1135,10 +1387,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataTemplate getRowDetailsTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowDetailsTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowDetailsTemplate");
+            retObjectRowDetailsTemplate = classInstance.Get("RowDetailsTemplate");
+            JCObject val = (JCObject)retObjectRowDetailsTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowDetailsTemplate != null ? retObjectRowDetailsTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1146,7 +1402,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowDetailsTemplate(DataTemplate RowDetailsTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowDetailsTemplate", RowDetailsTemplate == null ? null : RowDetailsTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1156,10 +1412,14 @@ public class DataGrid extends MultiSelector  {
 
     public DataTemplate getRowHeaderTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowHeaderTemplate");
+            retObjectRowHeaderTemplate = classInstance.Get("RowHeaderTemplate");
+            JCObject val = (JCObject)retObjectRowHeaderTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowHeaderTemplate != null ? retObjectRowHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1167,7 +1427,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowHeaderTemplate(DataTemplate RowHeaderTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeaderTemplate", RowHeaderTemplate == null ? null : RowHeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1177,10 +1437,14 @@ public class DataGrid extends MultiSelector  {
 
     public static RoutedUICommand getDeleteCommand() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("DeleteCommand");
+            retObjectDeleteCommand = classType.Get("DeleteCommand");
+            JCObject val = (JCObject)retObjectDeleteCommand;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteCommand != null ? retObjectDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1188,10 +1452,14 @@ public class DataGrid extends MultiSelector  {
 
     public static RoutedUICommand getSelectAllCommand() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectAllCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("SelectAllCommand");
+            retObjectSelectAllCommand = classType.Get("SelectAllCommand");
+            JCObject val = (JCObject)retObjectSelectAllCommand;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectAllCommand != null ? retObjectSelectAllCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1199,10 +1467,14 @@ public class DataGrid extends MultiSelector  {
 
     public Brush getAlternatingRowBackground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingRowBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingRowBackground");
+            retObjectAlternatingRowBackground = classInstance.Get("AlternatingRowBackground");
+            JCObject val = (JCObject)retObjectAlternatingRowBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingRowBackground != null ? retObjectAlternatingRowBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1210,7 +1482,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setAlternatingRowBackground(Brush AlternatingRowBackground) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternatingRowBackground", AlternatingRowBackground == null ? null : AlternatingRowBackground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1220,10 +1492,14 @@ public class DataGrid extends MultiSelector  {
 
     public Brush getHorizontalGridLinesBrush() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalGridLinesBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalGridLinesBrush");
+            retObjectHorizontalGridLinesBrush = classInstance.Get("HorizontalGridLinesBrush");
+            JCObject val = (JCObject)retObjectHorizontalGridLinesBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalGridLinesBrush != null ? retObjectHorizontalGridLinesBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1231,7 +1507,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setHorizontalGridLinesBrush(Brush HorizontalGridLinesBrush) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalGridLinesBrush", HorizontalGridLinesBrush == null ? null : HorizontalGridLinesBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1241,10 +1517,14 @@ public class DataGrid extends MultiSelector  {
 
     public Brush getRowBackground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowBackground");
+            retObjectRowBackground = classInstance.Get("RowBackground");
+            JCObject val = (JCObject)retObjectRowBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowBackground != null ? retObjectRowBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1252,7 +1532,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowBackground(Brush RowBackground) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowBackground", RowBackground == null ? null : RowBackground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1262,10 +1542,14 @@ public class DataGrid extends MultiSelector  {
 
     public Brush getVerticalGridLinesBrush() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalGridLinesBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalGridLinesBrush");
+            retObjectVerticalGridLinesBrush = classInstance.Get("VerticalGridLinesBrush");
+            JCObject val = (JCObject)retObjectVerticalGridLinesBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalGridLinesBrush != null ? retObjectVerticalGridLinesBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1273,7 +1557,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setVerticalGridLinesBrush(Brush VerticalGridLinesBrush) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalGridLinesBrush", VerticalGridLinesBrush == null ? null : VerticalGridLinesBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1283,10 +1567,14 @@ public class DataGrid extends MultiSelector  {
 
     public Style getCellStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellStyle");
+            retObjectCellStyle = classInstance.Get("CellStyle");
+            JCObject val = (JCObject)retObjectCellStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellStyle != null ? retObjectCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1294,7 +1582,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setCellStyle(Style CellStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellStyle", CellStyle == null ? null : CellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1304,10 +1592,14 @@ public class DataGrid extends MultiSelector  {
 
     public Style getColumnHeaderStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnHeaderStyle");
+            retObjectColumnHeaderStyle = classInstance.Get("ColumnHeaderStyle");
+            JCObject val = (JCObject)retObjectColumnHeaderStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnHeaderStyle != null ? retObjectColumnHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1315,7 +1607,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setColumnHeaderStyle(Style ColumnHeaderStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnHeaderStyle", ColumnHeaderStyle == null ? null : ColumnHeaderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1325,10 +1617,14 @@ public class DataGrid extends MultiSelector  {
 
     public Style getDragIndicatorStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDragIndicatorStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DragIndicatorStyle");
+            retObjectDragIndicatorStyle = classInstance.Get("DragIndicatorStyle");
+            JCObject val = (JCObject)retObjectDragIndicatorStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDragIndicatorStyle != null ? retObjectDragIndicatorStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1336,7 +1632,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setDragIndicatorStyle(Style DragIndicatorStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DragIndicatorStyle", DragIndicatorStyle == null ? null : DragIndicatorStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1346,10 +1642,14 @@ public class DataGrid extends MultiSelector  {
 
     public Style getDropLocationIndicatorStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropLocationIndicatorStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropLocationIndicatorStyle");
+            retObjectDropLocationIndicatorStyle = classInstance.Get("DropLocationIndicatorStyle");
+            JCObject val = (JCObject)retObjectDropLocationIndicatorStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropLocationIndicatorStyle != null ? retObjectDropLocationIndicatorStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1357,7 +1657,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setDropLocationIndicatorStyle(Style DropLocationIndicatorStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropLocationIndicatorStyle", DropLocationIndicatorStyle == null ? null : DropLocationIndicatorStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1367,10 +1667,14 @@ public class DataGrid extends MultiSelector  {
 
     public Style getRowHeaderStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowHeaderStyle");
+            retObjectRowHeaderStyle = classInstance.Get("RowHeaderStyle");
+            JCObject val = (JCObject)retObjectRowHeaderStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowHeaderStyle != null ? retObjectRowHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1378,7 +1682,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowHeaderStyle(Style RowHeaderStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeaderStyle", RowHeaderStyle == null ? null : RowHeaderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1388,10 +1692,14 @@ public class DataGrid extends MultiSelector  {
 
     public Style getRowStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStyle");
+            retObjectRowStyle = classInstance.Get("RowStyle");
+            JCObject val = (JCObject)retObjectRowStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStyle != null ? retObjectRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1399,7 +1707,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setRowStyle(Style RowStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowStyle", RowStyle == null ? null : RowStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1409,10 +1717,14 @@ public class DataGrid extends MultiSelector  {
 
     public Thickness getNewItemMargin() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewItemMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewItemMargin");
+            retObjectNewItemMargin = classInstance.Get("NewItemMargin");
+            JCObject val = (JCObject)retObjectNewItemMargin;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewItemMargin != null ? retObjectNewItemMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1420,7 +1732,7 @@ public class DataGrid extends MultiSelector  {
 
     public void setNewItemMargin(Thickness NewItemMargin) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewItemMargin", NewItemMargin == null ? null : NewItemMargin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1435,7 +1747,7 @@ public class DataGrid extends MultiSelector  {
 
     public void addAutoGeneratedColumns(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoGeneratedColumns", handler);
         } catch (JCNativeException jcne) {
@@ -1445,7 +1757,7 @@ public class DataGrid extends MultiSelector  {
 
     public void removeAutoGeneratedColumns(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoGeneratedColumns", handler);
         } catch (JCNativeException jcne) {
@@ -1455,7 +1767,7 @@ public class DataGrid extends MultiSelector  {
 
     public void addSorting(DataGridSortingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Sorting", handler);
         } catch (JCNativeException jcne) {
@@ -1465,7 +1777,7 @@ public class DataGrid extends MultiSelector  {
 
     public void removeSorting(DataGridSortingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Sorting", handler);
         } catch (JCNativeException jcne) {
@@ -1475,7 +1787,7 @@ public class DataGrid extends MultiSelector  {
 
     public void addInitializingNewItem(InitializingNewItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InitializingNewItem", handler);
         } catch (JCNativeException jcne) {
@@ -1485,7 +1797,7 @@ public class DataGrid extends MultiSelector  {
 
     public void removeInitializingNewItem(InitializingNewItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InitializingNewItem", handler);
         } catch (JCNativeException jcne) {
@@ -1495,7 +1807,7 @@ public class DataGrid extends MultiSelector  {
 
     public void addSelectedCellsChanged(SelectedCellsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedCellsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1505,7 +1817,7 @@ public class DataGrid extends MultiSelector  {
 
     public void removeSelectedCellsChanged(SelectedCellsChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedCellsChanged", handler);
         } catch (JCNativeException jcne) {

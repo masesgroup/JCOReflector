@@ -165,9 +165,13 @@ public class PageInstrumentationService extends NetObject  {
     
     public static boolean getIsEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classType.Get("IsEnabled");
+            retObjectIsEnabled = classType.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class PageInstrumentationService extends NetObject  {
 
     public static void setIsEnabled(boolean IsEnabled) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IsEnabled", IsEnabled);
         } catch (JCNativeException jcne) {

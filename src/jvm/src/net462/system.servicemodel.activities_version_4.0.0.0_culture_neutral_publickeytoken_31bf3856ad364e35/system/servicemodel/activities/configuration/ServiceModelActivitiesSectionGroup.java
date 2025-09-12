@@ -165,10 +165,14 @@ public class ServiceModelActivitiesSectionGroup extends ConfigurationSectionGrou
     
     public static ServiceModelActivitiesSectionGroup GetSectionGroup(Configuration config) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSectionGroup = null;
         try {
-            JCObject objGetSectionGroup = (JCObject)classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            retObjectGetSectionGroup = classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            JCObject objGetSectionGroup = (JCObject)retObjectGetSectionGroup;
             return new ServiceModelActivitiesSectionGroup(objGetSectionGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionGroup != null ? retObjectGetSectionGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class ServiceModelActivitiesSectionGroup extends ConfigurationSectionGrou
     
     public WorkflowHostingOptionsSection getWorkflowHostingOptionsSection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowHostingOptionsSection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowHostingOptionsSection");
+            retObjectWorkflowHostingOptionsSection = classInstance.Get("WorkflowHostingOptionsSection");
+            JCObject val = (JCObject)retObjectWorkflowHostingOptionsSection;
             return new WorkflowHostingOptionsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowHostingOptionsSection != null ? retObjectWorkflowHostingOptionsSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

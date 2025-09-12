@@ -173,9 +173,13 @@ public class XmlImplementation extends NetObject  {
     
     public boolean HasFeature(java.lang.String strFeature, java.lang.String strVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasFeature = null;
         try {
-            return (boolean)classInstance.Invoke("HasFeature", strFeature, strVersion);
+            retObjectHasFeature = classInstance.Invoke("HasFeature", strFeature, strVersion);
+            return (boolean)retObjectHasFeature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasFeature != null ? retObjectHasFeature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class XmlImplementation extends NetObject  {
 
     public XmlDocument CreateDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDocument = null;
         try {
-            JCObject objCreateDocument = (JCObject)classInstance.Invoke("CreateDocument");
+            retObjectCreateDocument = classInstance.Invoke("CreateDocument");
+            JCObject objCreateDocument = (JCObject)retObjectCreateDocument;
             return new XmlDocument(objCreateDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDocument != null ? retObjectCreateDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

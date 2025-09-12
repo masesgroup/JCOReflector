@@ -144,9 +144,13 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
     
     public boolean HandleError(NetException error) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandleError = null;
         try {
-            return (boolean)classInstance.Invoke("HandleError", error == null ? null : error.getJCOInstance());
+            retObjectHandleError = classInstance.Invoke("HandleError", error == null ? null : error.getJCOInstance());
+            return (boolean)retObjectHandleError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHandleError != null ? retObjectHandleError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
 
     public void ProvideFault(NetException error, MessageVersion version, JCORefOut<Message> fault) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProvideFault", error == null ? null : error.getJCOInstance(), version == null ? null : version.getJCOInstance(), fault.getJCRefOut());
         } catch (JCNativeException jcne) {

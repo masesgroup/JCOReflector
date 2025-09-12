@@ -160,10 +160,12 @@ public class PublicKeyInfo extends NetObject  {
     
     public byte[] getKeyValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("KeyValue");
+            retObjectKeyValue = classInstance.Get("KeyValue");
+            JCObject resultingObjects = (JCObject)retObjectKeyValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -172,6 +174,8 @@ public class PublicKeyInfo extends NetObject  {
 				resultingArray[indexKeyValue] = (byte)resultingArrayList.get(indexKeyValue);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectKeyValue != null ? retObjectKeyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class PublicKeyInfo extends NetObject  {
 
     public AlgorithmIdentifier getAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Algorithm");
+            retObjectAlgorithm = classInstance.Get("Algorithm");
+            JCObject val = (JCObject)retObjectAlgorithm;
             return new AlgorithmIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithm != null ? retObjectAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

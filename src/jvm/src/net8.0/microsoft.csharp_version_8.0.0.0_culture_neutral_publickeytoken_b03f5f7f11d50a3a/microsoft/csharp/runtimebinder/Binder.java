@@ -156,10 +156,14 @@ public class Binder extends NetObject  {
     
     public static CallSiteBinder Convert(CSharpBinderFlags flags, NetType type, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", flags == null ? null : flags.getJCOInstance(), type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", flags == null ? null : flags.getJCOInstance(), type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new CallSiteBinder(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class Binder extends NetObject  {
 
     public static CallSiteBinder IsEvent(CSharpBinderFlags flags, java.lang.String name, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEvent = null;
         try {
-            JCObject objIsEvent = (JCObject)classType.Invoke("IsEvent", flags == null ? null : flags.getJCOInstance(), name, context == null ? null : context.getJCOInstance());
+            retObjectIsEvent = classType.Invoke("IsEvent", flags == null ? null : flags.getJCOInstance(), name, context == null ? null : context.getJCOInstance());
+            JCObject objIsEvent = (JCObject)retObjectIsEvent;
             return new CallSiteBinder(objIsEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsEvent != null ? retObjectIsEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

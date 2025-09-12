@@ -166,10 +166,12 @@ public class SqlEnclaveAttestationParameters extends NetObject  {
     
     public byte[] GetInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInput = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInput");
+            retObjectGetInput = classInstance.Invoke("GetInput");
+            JCObject resultingObjects = (JCObject)retObjectGetInput;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -178,6 +180,8 @@ public class SqlEnclaveAttestationParameters extends NetObject  {
 				resultingArray[indexGetInput] = (byte)resultingArrayList.get(indexGetInput);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetInput != null ? retObjectGetInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,19 @@ public class SqlEnclaveAttestationParameters extends NetObject  {
     
     public int getProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocol = null;
         try {
-            return (int)classInstance.Get("Protocol");
+            retObjectProtocol = classInstance.Get("Protocol");
+            return (int)retObjectProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectProtocolNumber = (java.lang.Number)retObjectProtocol;
+                return retObjectProtocolNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectProtocol != null ? retObjectProtocol.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +213,14 @@ public class SqlEnclaveAttestationParameters extends NetObject  {
 
     public ECDiffieHellmanCng getClientDiffieHellmanKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientDiffieHellmanKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientDiffieHellmanKey");
+            retObjectClientDiffieHellmanKey = classInstance.Get("ClientDiffieHellmanKey");
+            JCObject val = (JCObject)retObjectClientDiffieHellmanKey;
             return new ECDiffieHellmanCng(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientDiffieHellmanKey != null ? retObjectClientDiffieHellmanKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

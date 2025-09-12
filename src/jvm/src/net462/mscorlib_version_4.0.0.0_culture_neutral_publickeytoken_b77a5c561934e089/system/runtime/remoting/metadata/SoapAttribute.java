@@ -166,9 +166,13 @@ public class SoapAttribute extends Attribute  {
     
     public boolean getEmbedded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmbedded = null;
         try {
-            return (boolean)classInstance.Get("Embedded");
+            retObjectEmbedded = classInstance.Get("Embedded");
+            return (boolean)retObjectEmbedded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEmbedded != null ? retObjectEmbedded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SoapAttribute extends Attribute  {
 
     public void setEmbedded(boolean Embedded) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Embedded", Embedded);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class SoapAttribute extends Attribute  {
 
     public boolean getUseAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAttribute = null;
         try {
-            return (boolean)classInstance.Get("UseAttribute");
+            retObjectUseAttribute = classInstance.Get("UseAttribute");
+            return (boolean)retObjectUseAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAttribute != null ? retObjectUseAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class SoapAttribute extends Attribute  {
 
     public void setUseAttribute(boolean UseAttribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAttribute", UseAttribute);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class SoapAttribute extends Attribute  {
 
     public java.lang.String getXmlNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlNamespace");
+            retObjectXmlNamespace = classInstance.Get("XmlNamespace");
+            return (java.lang.String)retObjectXmlNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlNamespace != null ? retObjectXmlNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class SoapAttribute extends Attribute  {
 
     public void setXmlNamespace(java.lang.String XmlNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlNamespace", XmlNamespace);
         } catch (JCNativeException jcne) {

@@ -161,7 +161,7 @@ public class ModelErrorCollection extends NetObjectEnumerable  {
     
     public void Add(NetException exception) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class ModelErrorCollection extends NetObjectEnumerable  {
 
     public void Add(java.lang.String errorMessage) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", errorMessage);
         } catch (JCNativeException jcne) {

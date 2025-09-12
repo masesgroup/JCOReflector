@@ -143,7 +143,7 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
     
     public void Complete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
 
     public void Fault(NetException exception) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Fault", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,10 +167,14 @@ public class IDataflowBlockImplementation extends NetObject implements IDataflow
     
     public Task getCompletion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompletion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Completion");
+            retObjectCompletion = classInstance.Get("Completion");
+            JCObject val = (JCObject)retObjectCompletion;
             return new Task(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompletion != null ? retObjectCompletion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

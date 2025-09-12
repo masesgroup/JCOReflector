@@ -166,10 +166,14 @@ public class EventRoute extends NetObject  {
     
     public NetObject PeekBranchNode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekBranchNode = null;
         try {
-            JCObject objPeekBranchNode = (JCObject)classInstance.Invoke("PeekBranchNode");
+            retObjectPeekBranchNode = classInstance.Invoke("PeekBranchNode");
+            JCObject objPeekBranchNode = (JCObject)retObjectPeekBranchNode;
             return new NetObject(objPeekBranchNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekBranchNode != null ? retObjectPeekBranchNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class EventRoute extends NetObject  {
 
     public NetObject PeekBranchSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekBranchSource = null;
         try {
-            JCObject objPeekBranchSource = (JCObject)classInstance.Invoke("PeekBranchSource");
+            retObjectPeekBranchSource = classInstance.Invoke("PeekBranchSource");
+            JCObject objPeekBranchSource = (JCObject)retObjectPeekBranchSource;
             return new NetObject(objPeekBranchSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekBranchSource != null ? retObjectPeekBranchSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class EventRoute extends NetObject  {
 
     public NetObject PopBranchNode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPopBranchNode = null;
         try {
-            JCObject objPopBranchNode = (JCObject)classInstance.Invoke("PopBranchNode");
+            retObjectPopBranchNode = classInstance.Invoke("PopBranchNode");
+            JCObject objPopBranchNode = (JCObject)retObjectPopBranchNode;
             return new NetObject(objPopBranchNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPopBranchNode != null ? retObjectPopBranchNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +211,7 @@ public class EventRoute extends NetObject  {
 
     public void PushBranchNode(NetObject node, NetObject source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushBranchNode", node == null ? null : node.getJCOInstance(), source == null ? null : source.getJCOInstance());
         } catch (JCNativeException jcne) {

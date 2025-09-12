@@ -156,10 +156,14 @@ public class VBMath extends NetObject  {
     
     public static Single Rnd() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRnd = null;
         try {
-            JCObject objRnd = (JCObject)classType.Invoke("Rnd");
+            retObjectRnd = classType.Invoke("Rnd");
+            JCObject objRnd = (JCObject)retObjectRnd;
             return new Single(objRnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRnd != null ? retObjectRnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class VBMath extends NetObject  {
 
     public static Single Rnd(Single Number) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRnd = null;
         try {
-            JCObject objRnd = (JCObject)classType.Invoke("Rnd", Number == null ? null : Number.getJCOInstance());
+            retObjectRnd = classType.Invoke("Rnd", Number == null ? null : Number.getJCOInstance());
+            JCObject objRnd = (JCObject)retObjectRnd;
             return new Single(objRnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRnd != null ? retObjectRnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class VBMath extends NetObject  {
 
     public static void Randomize() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidTimeZoneException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Randomize");
         } catch (JCNativeException jcne) {
@@ -188,7 +196,7 @@ public class VBMath extends NetObject  {
 
     public static void Randomize(double Number) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Randomize", Number);
         } catch (JCNativeException jcne) {

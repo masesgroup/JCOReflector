@@ -172,7 +172,7 @@ public class DirectoryServicesCOMException extends COMException {
     
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", serializationInfo == null ? null : serializationInfo.getJCOInstance(), streamingContext == null ? null : streamingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,9 +186,19 @@ public class DirectoryServicesCOMException extends COMException {
     
     public int getExtendedError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedError = null;
         try {
-            return (int)classInstance.Get("ExtendedError");
+            retObjectExtendedError = classInstance.Get("ExtendedError");
+            return (int)retObjectExtendedError;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExtendedErrorNumber = (java.lang.Number)retObjectExtendedError;
+                return retObjectExtendedErrorNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExtendedError != null ? retObjectExtendedError.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +206,13 @@ public class DirectoryServicesCOMException extends COMException {
 
     public java.lang.String getExtendedErrorMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ExtendedErrorMessage");
+            retObjectExtendedErrorMessage = classInstance.Get("ExtendedErrorMessage");
+            return (java.lang.String)retObjectExtendedErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExtendedErrorMessage != null ? retObjectExtendedErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

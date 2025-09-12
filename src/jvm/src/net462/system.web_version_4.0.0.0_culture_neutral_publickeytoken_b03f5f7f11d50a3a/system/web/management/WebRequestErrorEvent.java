@@ -162,10 +162,14 @@ public class WebRequestErrorEvent extends WebBaseErrorEvent  {
     
     public WebRequestInformation getRequestInformation() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestInformation");
+            retObjectRequestInformation = classInstance.Get("RequestInformation");
+            JCObject val = (JCObject)retObjectRequestInformation;
             return new WebRequestInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestInformation != null ? retObjectRequestInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class WebRequestErrorEvent extends WebBaseErrorEvent  {
 
     public WebThreadInformation getThreadInformation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThreadInformation");
+            retObjectThreadInformation = classInstance.Get("ThreadInformation");
+            JCObject val = (JCObject)retObjectThreadInformation;
             return new WebThreadInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThreadInformation != null ? retObjectThreadInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

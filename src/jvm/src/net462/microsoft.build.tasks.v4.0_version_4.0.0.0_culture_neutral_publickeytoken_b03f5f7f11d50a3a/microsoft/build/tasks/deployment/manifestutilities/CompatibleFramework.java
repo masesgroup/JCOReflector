@@ -165,9 +165,13 @@ public class CompatibleFramework extends NetObject  {
     
     public java.lang.String getProfile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfile = null;
         try {
-            return (java.lang.String)classInstance.Get("Profile");
+            retObjectProfile = classInstance.Get("Profile");
+            return (java.lang.String)retObjectProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProfile != null ? retObjectProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class CompatibleFramework extends NetObject  {
 
     public void setProfile(java.lang.String Profile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Profile", Profile);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class CompatibleFramework extends NetObject  {
 
     public java.lang.String getSupportedRuntime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedRuntime = null;
         try {
-            return (java.lang.String)classInstance.Get("SupportedRuntime");
+            retObjectSupportedRuntime = classInstance.Get("SupportedRuntime");
+            return (java.lang.String)retObjectSupportedRuntime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportedRuntime != null ? retObjectSupportedRuntime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class CompatibleFramework extends NetObject  {
 
     public void setSupportedRuntime(java.lang.String SupportedRuntime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportedRuntime", SupportedRuntime);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class CompatibleFramework extends NetObject  {
 
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class CompatibleFramework extends NetObject  {
 
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class CompatibleFramework extends NetObject  {
 
     public java.lang.String getXmlProfile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlProfile = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlProfile");
+            retObjectXmlProfile = classInstance.Get("XmlProfile");
+            return (java.lang.String)retObjectXmlProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlProfile != null ? retObjectXmlProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class CompatibleFramework extends NetObject  {
 
     public void setXmlProfile(java.lang.String XmlProfile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlProfile", XmlProfile);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class CompatibleFramework extends NetObject  {
 
     public java.lang.String getXmlSupportedRuntime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSupportedRuntime = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSupportedRuntime");
+            retObjectXmlSupportedRuntime = classInstance.Get("XmlSupportedRuntime");
+            return (java.lang.String)retObjectXmlSupportedRuntime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSupportedRuntime != null ? retObjectXmlSupportedRuntime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class CompatibleFramework extends NetObject  {
 
     public void setXmlSupportedRuntime(java.lang.String XmlSupportedRuntime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSupportedRuntime", XmlSupportedRuntime);
         } catch (JCNativeException jcne) {
@@ -265,9 +285,13 @@ public class CompatibleFramework extends NetObject  {
 
     public java.lang.String getXmlVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlVersion");
+            retObjectXmlVersion = classInstance.Get("XmlVersion");
+            return (java.lang.String)retObjectXmlVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlVersion != null ? retObjectXmlVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class CompatibleFramework extends NetObject  {
 
     public void setXmlVersion(java.lang.String XmlVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlVersion", XmlVersion);
         } catch (JCNativeException jcne) {

@@ -168,10 +168,14 @@ public class SoapRpcServiceAttribute extends Attribute  {
     
     public SoapBindingUse getUse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Use");
+            retObjectUse = classInstance.Get("Use");
+            JCObject val = (JCObject)retObjectUse;
             return new SoapBindingUse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUse != null ? retObjectUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class SoapRpcServiceAttribute extends Attribute  {
 
     public void setUse(SoapBindingUse Use) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Use", Use == null ? null : Use.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class SoapRpcServiceAttribute extends Attribute  {
 
     public SoapServiceRoutingStyle getRoutingStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoutingStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RoutingStyle");
+            retObjectRoutingStyle = classInstance.Get("RoutingStyle");
+            JCObject val = (JCObject)retObjectRoutingStyle;
             return new SoapServiceRoutingStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoutingStyle != null ? retObjectRoutingStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class SoapRpcServiceAttribute extends Attribute  {
 
     public void setRoutingStyle(SoapServiceRoutingStyle RoutingStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RoutingStyle", RoutingStyle == null ? null : RoutingStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -175,9 +175,13 @@ public class SortKey extends NetObject  {
     
     public boolean getReverseOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReverseOrder = null;
         try {
-            return (boolean)classInstance.Get("ReverseOrder");
+            retObjectReverseOrder = classInstance.Get("ReverseOrder");
+            return (boolean)retObjectReverseOrder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReverseOrder != null ? retObjectReverseOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class SortKey extends NetObject  {
 
     public void setReverseOrder(boolean ReverseOrder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReverseOrder", ReverseOrder);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,13 @@ public class SortKey extends NetObject  {
 
     public java.lang.String getAttributeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeName = null;
         try {
-            return (java.lang.String)classInstance.Get("AttributeName");
+            retObjectAttributeName = classInstance.Get("AttributeName");
+            return (java.lang.String)retObjectAttributeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAttributeName != null ? retObjectAttributeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class SortKey extends NetObject  {
 
     public void setAttributeName(java.lang.String AttributeName) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AttributeName", AttributeName);
         } catch (JCNativeException jcne) {
@@ -215,9 +223,13 @@ public class SortKey extends NetObject  {
 
     public java.lang.String getMatchingRule() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchingRule = null;
         try {
-            return (java.lang.String)classInstance.Get("MatchingRule");
+            retObjectMatchingRule = classInstance.Get("MatchingRule");
+            return (java.lang.String)retObjectMatchingRule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMatchingRule != null ? retObjectMatchingRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class SortKey extends NetObject  {
 
     public void setMatchingRule(java.lang.String MatchingRule) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchingRule", MatchingRule);
         } catch (JCNativeException jcne) {

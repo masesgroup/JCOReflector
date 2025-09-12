@@ -155,10 +155,14 @@ public class WaitHandleExtensions extends NetObject  {
     
     public static SafeWaitHandle GetSafeWaitHandle(WaitHandle waitHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSafeWaitHandle = null;
         try {
-            JCObject objGetSafeWaitHandle = (JCObject)classType.Invoke("GetSafeWaitHandle", waitHandle == null ? null : waitHandle.getJCOInstance());
+            retObjectGetSafeWaitHandle = classType.Invoke("GetSafeWaitHandle", waitHandle == null ? null : waitHandle.getJCOInstance());
+            JCObject objGetSafeWaitHandle = (JCObject)retObjectGetSafeWaitHandle;
             return new SafeWaitHandle(objGetSafeWaitHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSafeWaitHandle != null ? retObjectGetSafeWaitHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class WaitHandleExtensions extends NetObject  {
 
     public static void SetSafeWaitHandle(WaitHandle waitHandle, SafeWaitHandle value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSafeWaitHandle", waitHandle == null ? null : waitHandle.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

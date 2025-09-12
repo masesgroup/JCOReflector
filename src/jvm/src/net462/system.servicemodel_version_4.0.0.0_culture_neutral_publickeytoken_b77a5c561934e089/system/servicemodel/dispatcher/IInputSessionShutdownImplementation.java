@@ -144,7 +144,7 @@ public class IInputSessionShutdownImplementation extends NetObject implements II
     
     public void ChannelFaulted(IDuplexContextChannel channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ChannelFaulted", channel == null ? null : channel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IInputSessionShutdownImplementation extends NetObject implements II
 
     public void DoneReceiving(IDuplexContextChannel channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoneReceiving", channel == null ? null : channel.getJCOInstance());
         } catch (JCNativeException jcne) {

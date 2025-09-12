@@ -155,7 +155,7 @@ public class DesignerLoader extends NetObject  {
     
     public void BeginLoad(IDesignerLoaderHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginLoad", host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class DesignerLoader extends NetObject  {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class DesignerLoader extends NetObject  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -189,9 +189,13 @@ public class DesignerLoader extends NetObject  {
     
     public boolean getLoading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoading = null;
         try {
-            return (boolean)classInstance.Get("Loading");
+            retObjectLoading = classInstance.Get("Loading");
+            return (boolean)retObjectLoading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLoading != null ? retObjectLoading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

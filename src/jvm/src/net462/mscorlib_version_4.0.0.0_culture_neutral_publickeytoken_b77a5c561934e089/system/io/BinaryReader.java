@@ -193,9 +193,13 @@ public class BinaryReader extends NetObject implements AutoCloseable {
     
     public boolean ReadBoolean() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ReadBoolean");
+            retObjectReadBoolean = classInstance.Invoke("ReadBoolean");
+            return (boolean)retObjectReadBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadBoolean != null ? retObjectReadBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public byte ReadByte() throws Throwable, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadByte = null;
         try {
-            return (byte)classInstance.Invoke("ReadByte");
+            retObjectReadByte = classInstance.Invoke("ReadByte");
+            return (byte)retObjectReadByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
+                return retObjectReadByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +227,12 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public byte[] ReadBytes(int count) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadBytes", count);
+            retObjectReadBytes = classInstance.Invoke("ReadBytes", count);
+            JCObject resultingObjects = (JCObject)retObjectReadBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -225,6 +241,8 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 				resultingArray[indexReadBytes] = (byte)resultingArrayList.get(indexReadBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadBytes != null ? retObjectReadBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +250,13 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public char ReadChar() throws Throwable, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadChar = null;
         try {
-            return (char)classInstance.Invoke("ReadChar");
+            retObjectReadChar = classInstance.Invoke("ReadChar");
+            return (char)retObjectReadChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectReadChar != null ? retObjectReadChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +264,12 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public char[] ReadChars(int count) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadChars = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadChars", count);
+            retObjectReadChars = classInstance.Invoke("ReadChars", count);
+            JCObject resultingObjects = (JCObject)retObjectReadChars;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -254,6 +278,8 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 				resultingArray[indexReadChars] = (char)resultingArrayList.get(indexReadChars);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectReadChars != null ? retObjectReadChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +287,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public double ReadDouble() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDouble = null;
         try {
-            return (double)classInstance.Invoke("ReadDouble");
+            retObjectReadDouble = classInstance.Invoke("ReadDouble");
+            return (double)retObjectReadDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadDoubleNumber = (java.lang.Number)retObjectReadDouble;
+                return retObjectReadDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadDouble != null ? retObjectReadDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +307,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public short ReadInt16() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt16 = null;
         try {
-            return (short)classInstance.Invoke("ReadInt16");
+            retObjectReadInt16 = classInstance.Invoke("ReadInt16");
+            return (short)retObjectReadInt16;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt16Number = (java.lang.Number)retObjectReadInt16;
+                return retObjectReadInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectReadInt16 != null ? retObjectReadInt16.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +327,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public int PeekChar() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekChar = null;
         try {
-            return (int)classInstance.Invoke("PeekChar");
+            retObjectPeekChar = classInstance.Invoke("PeekChar");
+            return (int)retObjectPeekChar;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPeekCharNumber = (java.lang.Number)retObjectPeekChar;
+                return retObjectPeekCharNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPeekChar != null ? retObjectPeekChar.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +347,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public int Read() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +367,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public int Read(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", buffer, index, count);
+            retObjectRead = classInstance.Invoke("Read", buffer, index, count);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +387,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectRead = classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,9 +407,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public int Read(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (int)classInstance.Invoke("Read", buffer, index, count);
+            retObjectRead = classInstance.Invoke("Read", buffer, index, count);
+            return (int)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadNumber = (java.lang.Number)retObjectRead;
+                return retObjectReadNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,9 +427,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public int ReadInt32() throws Throwable, system.ObjectDisposedException, system.io.EndOfStreamException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt32 = null;
         try {
-            return (int)classInstance.Invoke("ReadInt32");
+            retObjectReadInt32 = classInstance.Invoke("ReadInt32");
+            return (int)retObjectReadInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt32Number = (java.lang.Number)retObjectReadInt32;
+                return retObjectReadInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadInt32 != null ? retObjectReadInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +447,19 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public long ReadInt64() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt64 = null;
         try {
-            return (long)classInstance.Invoke("ReadInt64");
+            retObjectReadInt64 = classInstance.Invoke("ReadInt64");
+            return (long)retObjectReadInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt64Number = (java.lang.Number)retObjectReadInt64;
+                return retObjectReadInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadInt64 != null ? retObjectReadInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +467,14 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public SByte ReadSByte() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSByte = null;
         try {
-            JCObject objReadSByte = (JCObject)classInstance.Invoke("ReadSByte");
+            retObjectReadSByte = classInstance.Invoke("ReadSByte");
+            JCObject objReadSByte = (JCObject)retObjectReadSByte;
             return new SByte(objReadSByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSByte != null ? retObjectReadSByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +482,14 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public Single ReadSingle() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSingle = null;
         try {
-            JCObject objReadSingle = (JCObject)classInstance.Invoke("ReadSingle");
+            retObjectReadSingle = classInstance.Invoke("ReadSingle");
+            JCObject objReadSingle = (JCObject)retObjectReadSingle;
             return new Single(objReadSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSingle != null ? retObjectReadSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +497,14 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public Decimal ReadDecimal() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException, system.ArgumentException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDecimal = null;
         try {
-            JCObject objReadDecimal = (JCObject)classInstance.Invoke("ReadDecimal");
+            retObjectReadDecimal = classInstance.Invoke("ReadDecimal");
+            JCObject objReadDecimal = (JCObject)retObjectReadDecimal;
             return new Decimal(objReadDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDecimal != null ? retObjectReadDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,9 +512,13 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public java.lang.String ReadString() throws Throwable, system.ObjectDisposedException, system.FormatException, system.io.EndOfStreamException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadString");
+            retObjectReadString = classInstance.Invoke("ReadString");
+            return (java.lang.String)retObjectReadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadString != null ? retObjectReadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +526,14 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public UInt16 ReadUInt16() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt16 = null;
         try {
-            JCObject objReadUInt16 = (JCObject)classInstance.Invoke("ReadUInt16");
+            retObjectReadUInt16 = classInstance.Invoke("ReadUInt16");
+            JCObject objReadUInt16 = (JCObject)retObjectReadUInt16;
             return new UInt16(objReadUInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt16 != null ? retObjectReadUInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +541,14 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public UInt32 ReadUInt32() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt32 = null;
         try {
-            JCObject objReadUInt32 = (JCObject)classInstance.Invoke("ReadUInt32");
+            retObjectReadUInt32 = classInstance.Invoke("ReadUInt32");
+            JCObject objReadUInt32 = (JCObject)retObjectReadUInt32;
             return new UInt32(objReadUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt32 != null ? retObjectReadUInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +556,14 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public UInt64 ReadUInt64() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.io.EndOfStreamException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt64 = null;
         try {
-            JCObject objReadUInt64 = (JCObject)classInstance.Invoke("ReadUInt64");
+            retObjectReadUInt64 = classInstance.Invoke("ReadUInt64");
+            JCObject objReadUInt64 = (JCObject)retObjectReadUInt64;
             return new UInt64(objReadUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt64 != null ? retObjectReadUInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,7 +571,7 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -437,7 +581,7 @@ public class BinaryReader extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -448,7 +592,7 @@ public class BinaryReader extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -464,10 +608,14 @@ public class BinaryReader extends NetObject implements AutoCloseable {
     
     public Stream getBaseStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseStream");
+            retObjectBaseStream = classInstance.Get("BaseStream");
+            JCObject val = (JCObject)retObjectBaseStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseStream != null ? retObjectBaseStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

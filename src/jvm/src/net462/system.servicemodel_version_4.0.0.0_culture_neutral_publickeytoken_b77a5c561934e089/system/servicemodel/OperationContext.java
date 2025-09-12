@@ -178,7 +178,7 @@ public class OperationContext extends NetObject  {
     
     public void SetTransactionComplete() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTransactionComplete");
         } catch (JCNativeException jcne) {
@@ -192,9 +192,13 @@ public class OperationContext extends NetObject  {
     
     public boolean getHasSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasSupportingTokens = null;
         try {
-            return (boolean)classInstance.Get("HasSupportingTokens");
+            retObjectHasSupportingTokens = classInstance.Get("HasSupportingTokens");
+            return (boolean)retObjectHasSupportingTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasSupportingTokens != null ? retObjectHasSupportingTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +206,13 @@ public class OperationContext extends NetObject  {
 
     public boolean getIsUserContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUserContext = null;
         try {
-            return (boolean)classInstance.Get("IsUserContext");
+            retObjectIsUserContext = classInstance.Get("IsUserContext");
+            return (boolean)retObjectIsUserContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsUserContext != null ? retObjectIsUserContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +220,14 @@ public class OperationContext extends NetObject  {
 
     public ClaimsPrincipal getClaimsPrincipal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimsPrincipal = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClaimsPrincipal");
+            retObjectClaimsPrincipal = classInstance.Get("ClaimsPrincipal");
+            JCObject val = (JCObject)retObjectClaimsPrincipal;
             return new ClaimsPrincipal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimsPrincipal != null ? retObjectClaimsPrincipal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class OperationContext extends NetObject  {
 
     public void setClaimsPrincipal(ClaimsPrincipal ClaimsPrincipal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClaimsPrincipal", ClaimsPrincipal == null ? null : ClaimsPrincipal.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +245,14 @@ public class OperationContext extends NetObject  {
 
     public MessageHeaders getIncomingMessageHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingMessageHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IncomingMessageHeaders");
+            retObjectIncomingMessageHeaders = classInstance.Get("IncomingMessageHeaders");
+            JCObject val = (JCObject)retObjectIncomingMessageHeaders;
             return new MessageHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncomingMessageHeaders != null ? retObjectIncomingMessageHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +260,14 @@ public class OperationContext extends NetObject  {
 
     public MessageHeaders getOutgoingMessageHeaders() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutgoingMessageHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutgoingMessageHeaders");
+            retObjectOutgoingMessageHeaders = classInstance.Get("OutgoingMessageHeaders");
+            JCObject val = (JCObject)retObjectOutgoingMessageHeaders;
             return new MessageHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutgoingMessageHeaders != null ? retObjectOutgoingMessageHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +275,14 @@ public class OperationContext extends NetObject  {
 
     public MessageProperties getIncomingMessageProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingMessageProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IncomingMessageProperties");
+            retObjectIncomingMessageProperties = classInstance.Get("IncomingMessageProperties");
+            JCObject val = (JCObject)retObjectIncomingMessageProperties;
             return new MessageProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncomingMessageProperties != null ? retObjectIncomingMessageProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +290,14 @@ public class OperationContext extends NetObject  {
 
     public MessageProperties getOutgoingMessageProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutgoingMessageProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutgoingMessageProperties");
+            retObjectOutgoingMessageProperties = classInstance.Get("OutgoingMessageProperties");
+            JCObject val = (JCObject)retObjectOutgoingMessageProperties;
             return new MessageProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutgoingMessageProperties != null ? retObjectOutgoingMessageProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +305,14 @@ public class OperationContext extends NetObject  {
 
     public MessageVersion getIncomingMessageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingMessageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IncomingMessageVersion");
+            retObjectIncomingMessageVersion = classInstance.Get("IncomingMessageVersion");
+            JCObject val = (JCObject)retObjectIncomingMessageVersion;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncomingMessageVersion != null ? retObjectIncomingMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +320,14 @@ public class OperationContext extends NetObject  {
 
     public RequestContext getRequestContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestContext");
+            retObjectRequestContext = classInstance.Get("RequestContext");
+            JCObject val = (JCObject)retObjectRequestContext;
             return new RequestContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestContext != null ? retObjectRequestContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +335,7 @@ public class OperationContext extends NetObject  {
 
     public void setRequestContext(RequestContext RequestContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestContext", RequestContext == null ? null : RequestContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +345,14 @@ public class OperationContext extends NetObject  {
 
     public EndpointDispatcher getEndpointDispatcher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointDispatcher = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointDispatcher");
+            retObjectEndpointDispatcher = classInstance.Get("EndpointDispatcher");
+            JCObject val = (JCObject)retObjectEndpointDispatcher;
             return new EndpointDispatcher(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointDispatcher != null ? retObjectEndpointDispatcher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +360,7 @@ public class OperationContext extends NetObject  {
 
     public void setEndpointDispatcher(EndpointDispatcher EndpointDispatcher) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndpointDispatcher", EndpointDispatcher == null ? null : EndpointDispatcher.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +370,14 @@ public class OperationContext extends NetObject  {
 
     public IContextChannel getChannel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Channel");
+            retObjectChannel = classInstance.Get("Channel");
+            JCObject val = (JCObject)retObjectChannel;
             return new IContextChannelImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannel != null ? retObjectChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +385,14 @@ public class OperationContext extends NetObject  {
 
     public InstanceContext getInstanceContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceContext");
+            retObjectInstanceContext = classInstance.Get("InstanceContext");
+            JCObject val = (JCObject)retObjectInstanceContext;
             return new InstanceContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceContext != null ? retObjectInstanceContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +400,14 @@ public class OperationContext extends NetObject  {
 
     public static OperationContext getCurrent() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new OperationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +415,7 @@ public class OperationContext extends NetObject  {
 
     public static void setCurrent(OperationContext Current) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -373,10 +425,14 @@ public class OperationContext extends NetObject  {
 
     public ServiceHostBase getHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHost = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Host");
+            retObjectHost = classInstance.Get("Host");
+            JCObject val = (JCObject)retObjectHost;
             return new ServiceHostBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHost != null ? retObjectHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +440,14 @@ public class OperationContext extends NetObject  {
 
     public ServiceSecurityContext getServiceSecurityContext() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceSecurityContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceSecurityContext");
+            retObjectServiceSecurityContext = classInstance.Get("ServiceSecurityContext");
+            JCObject val = (JCObject)retObjectServiceSecurityContext;
             return new ServiceSecurityContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceSecurityContext != null ? retObjectServiceSecurityContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,9 +455,13 @@ public class OperationContext extends NetObject  {
 
     public java.lang.String getSessionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionId = null;
         try {
-            return (java.lang.String)classInstance.Get("SessionId");
+            retObjectSessionId = classInstance.Get("SessionId");
+            return (java.lang.String)retObjectSessionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSessionId != null ? retObjectSessionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,7 +474,7 @@ public class OperationContext extends NetObject  {
 
     public void addOperationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OperationCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -420,7 +484,7 @@ public class OperationContext extends NetObject  {
 
     public void removeOperationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OperationCompleted", handler);
         } catch (JCNativeException jcne) {

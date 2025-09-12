@@ -144,7 +144,7 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
     
     public void UpdateProgress(long bytesDownloaded, long bytesTotal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateProgress", bytesDownloaded, bytesTotal);
         } catch (JCNativeException jcne) {
@@ -158,9 +158,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
     
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public java.lang.String getPublisherName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublisherName = null;
         try {
-            return (java.lang.String)classInstance.Get("PublisherName");
+            retObjectPublisherName = classInstance.Get("PublisherName");
+            return (java.lang.String)retObjectPublisherName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublisherName != null ? retObjectPublisherName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public void setPublisherName(java.lang.String PublisherName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PublisherName", PublisherName);
         } catch (JCNativeException jcne) {
@@ -198,10 +206,14 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public Uri getDeploymentPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentPath = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeploymentPath");
+            retObjectDeploymentPath = classInstance.Get("DeploymentPath");
+            JCObject val = (JCObject)retObjectDeploymentPath;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeploymentPath != null ? retObjectDeploymentPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public void setDeploymentPath(Uri DeploymentPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeploymentPath", DeploymentPath == null ? null : DeploymentPath.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,9 +231,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public DispatcherOperationCallback getRefreshCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRefreshCallback = null;
         try {
-            return (DispatcherOperationCallback)classInstance.Get("RefreshCallback");
+            retObjectRefreshCallback = classInstance.Get("RefreshCallback");
+            return (DispatcherOperationCallback)retObjectRefreshCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into DispatcherOperationCallback", retObjectRefreshCallback != null ? retObjectRefreshCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RefreshCallback", RefreshCallback);
         } catch (JCNativeException jcne) {
@@ -239,9 +255,13 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public DispatcherOperationCallback getStopCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStopCallback = null;
         try {
-            return (DispatcherOperationCallback)classInstance.Get("StopCallback");
+            retObjectStopCallback = classInstance.Get("StopCallback");
+            return (DispatcherOperationCallback)retObjectStopCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into DispatcherOperationCallback", retObjectStopCallback != null ? retObjectStopCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +269,7 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
 
     public void setStopCallback(DispatcherOperationCallback StopCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StopCallback", StopCallback);
         } catch (JCNativeException jcne) {

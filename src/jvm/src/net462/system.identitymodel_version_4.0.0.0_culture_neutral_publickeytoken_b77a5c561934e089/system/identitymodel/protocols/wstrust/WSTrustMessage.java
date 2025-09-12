@@ -163,9 +163,13 @@ public class WSTrustMessage extends OpenObject  {
     
     public boolean getAllowPostdating() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPostdating = null;
         try {
-            return (boolean)classInstance.Get("AllowPostdating");
+            retObjectAllowPostdating = classInstance.Get("AllowPostdating");
+            return (boolean)retObjectAllowPostdating;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPostdating != null ? retObjectAllowPostdating.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setAllowPostdating(boolean AllowPostdating) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPostdating", AllowPostdating);
         } catch (JCNativeException jcne) {
@@ -183,10 +187,14 @@ public class WSTrustMessage extends OpenObject  {
 
     public BinaryExchange getBinaryExchange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinaryExchange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BinaryExchange");
+            retObjectBinaryExchange = classInstance.Get("BinaryExchange");
+            JCObject val = (JCObject)retObjectBinaryExchange;
             return new BinaryExchange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinaryExchange != null ? retObjectBinaryExchange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setBinaryExchange(BinaryExchange BinaryExchange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BinaryExchange", BinaryExchange == null ? null : BinaryExchange.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +212,14 @@ public class WSTrustMessage extends OpenObject  {
 
     public EndpointReference getAppliesTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppliesTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AppliesTo");
+            retObjectAppliesTo = classInstance.Get("AppliesTo");
+            JCObject val = (JCObject)retObjectAppliesTo;
             return new EndpointReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppliesTo != null ? retObjectAppliesTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setAppliesTo(EndpointReference AppliesTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppliesTo", AppliesTo == null ? null : AppliesTo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,10 +237,14 @@ public class WSTrustMessage extends OpenObject  {
 
     public Entropy getEntropy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntropy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Entropy");
+            retObjectEntropy = classInstance.Get("Entropy");
+            JCObject val = (JCObject)retObjectEntropy;
             return new Entropy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntropy != null ? retObjectEntropy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setEntropy(Entropy Entropy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Entropy", Entropy == null ? null : Entropy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +262,14 @@ public class WSTrustMessage extends OpenObject  {
 
     public Lifetime getLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLifetime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Lifetime");
+            retObjectLifetime = classInstance.Get("Lifetime");
+            JCObject val = (JCObject)retObjectLifetime;
             return new Lifetime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLifetime != null ? retObjectLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setLifetime(Lifetime Lifetime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Lifetime", Lifetime == null ? null : Lifetime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +287,14 @@ public class WSTrustMessage extends OpenObject  {
 
     public UseKey getUseKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UseKey");
+            retObjectUseKey = classInstance.Get("UseKey");
+            JCObject val = (JCObject)retObjectUseKey;
             return new UseKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUseKey != null ? retObjectUseKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setUseKey(UseKey UseKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseKey", UseKey == null ? null : UseKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,9 +312,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getAuthenticationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationType = null;
         try {
-            return (java.lang.String)classInstance.Get("AuthenticationType");
+            retObjectAuthenticationType = classInstance.Get("AuthenticationType");
+            return (java.lang.String)retObjectAuthenticationType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthenticationType != null ? retObjectAuthenticationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +326,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setAuthenticationType(java.lang.String AuthenticationType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationType", AuthenticationType);
         } catch (JCNativeException jcne) {
@@ -308,9 +336,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getCanonicalizationAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanonicalizationAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("CanonicalizationAlgorithm");
+            retObjectCanonicalizationAlgorithm = classInstance.Get("CanonicalizationAlgorithm");
+            return (java.lang.String)retObjectCanonicalizationAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCanonicalizationAlgorithm != null ? retObjectCanonicalizationAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +350,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setCanonicalizationAlgorithm(java.lang.String CanonicalizationAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanonicalizationAlgorithm", CanonicalizationAlgorithm);
         } catch (JCNativeException jcne) {
@@ -328,9 +360,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            return (java.lang.String)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            return (java.lang.String)retObjectContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,7 +374,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setContext(java.lang.String Context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context);
         } catch (JCNativeException jcne) {
@@ -348,9 +384,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("EncryptionAlgorithm");
+            retObjectEncryptionAlgorithm = classInstance.Get("EncryptionAlgorithm");
+            return (java.lang.String)retObjectEncryptionAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncryptionAlgorithm != null ? retObjectEncryptionAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +398,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setEncryptionAlgorithm(java.lang.String EncryptionAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptionAlgorithm", EncryptionAlgorithm);
         } catch (JCNativeException jcne) {
@@ -368,9 +408,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getEncryptWith() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptWith = null;
         try {
-            return (java.lang.String)classInstance.Get("EncryptWith");
+            retObjectEncryptWith = classInstance.Get("EncryptWith");
+            return (java.lang.String)retObjectEncryptWith;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncryptWith != null ? retObjectEncryptWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +422,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setEncryptWith(java.lang.String EncryptWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptWith", EncryptWith);
         } catch (JCNativeException jcne) {
@@ -388,9 +432,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getKeyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyType = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyType");
+            retObjectKeyType = classInstance.Get("KeyType");
+            return (java.lang.String)retObjectKeyType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyType != null ? retObjectKeyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +446,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setKeyType(java.lang.String KeyType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyType", KeyType);
         } catch (JCNativeException jcne) {
@@ -408,9 +456,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getKeyWrapAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyWrapAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyWrapAlgorithm");
+            retObjectKeyWrapAlgorithm = classInstance.Get("KeyWrapAlgorithm");
+            return (java.lang.String)retObjectKeyWrapAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyWrapAlgorithm != null ? retObjectKeyWrapAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +470,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setKeyWrapAlgorithm(java.lang.String KeyWrapAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyWrapAlgorithm", KeyWrapAlgorithm);
         } catch (JCNativeException jcne) {
@@ -428,9 +480,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getReplyTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplyTo = null;
         try {
-            return (java.lang.String)classInstance.Get("ReplyTo");
+            retObjectReplyTo = classInstance.Get("ReplyTo");
+            return (java.lang.String)retObjectReplyTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReplyTo != null ? retObjectReplyTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +494,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setReplyTo(java.lang.String ReplyTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplyTo", ReplyTo);
         } catch (JCNativeException jcne) {
@@ -448,9 +504,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getRequestType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestType = null;
         try {
-            return (java.lang.String)classInstance.Get("RequestType");
+            retObjectRequestType = classInstance.Get("RequestType");
+            return (java.lang.String)retObjectRequestType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequestType != null ? retObjectRequestType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +518,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setRequestType(java.lang.String RequestType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestType", RequestType);
         } catch (JCNativeException jcne) {
@@ -468,9 +528,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("SignatureAlgorithm");
+            retObjectSignatureAlgorithm = classInstance.Get("SignatureAlgorithm");
+            return (java.lang.String)retObjectSignatureAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignatureAlgorithm != null ? retObjectSignatureAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +542,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setSignatureAlgorithm(java.lang.String SignatureAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SignatureAlgorithm", SignatureAlgorithm);
         } catch (JCNativeException jcne) {
@@ -488,9 +552,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getSignWith() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignWith = null;
         try {
-            return (java.lang.String)classInstance.Get("SignWith");
+            retObjectSignWith = classInstance.Get("SignWith");
+            return (java.lang.String)retObjectSignWith;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignWith != null ? retObjectSignWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +566,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setSignWith(java.lang.String SignWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SignWith", SignWith);
         } catch (JCNativeException jcne) {
@@ -508,9 +576,13 @@ public class WSTrustMessage extends OpenObject  {
 
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenType = null;
         try {
-            return (java.lang.String)classInstance.Get("TokenType");
+            retObjectTokenType = classInstance.Get("TokenType");
+            return (java.lang.String)retObjectTokenType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTokenType != null ? retObjectTokenType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +590,7 @@ public class WSTrustMessage extends OpenObject  {
 
     public void setTokenType(java.lang.String TokenType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenType", TokenType);
         } catch (JCNativeException jcne) {

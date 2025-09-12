@@ -164,9 +164,13 @@ public class XslTransformation extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.FormatException, system.security.SecurityException, system.xml.xsl.XsltException, system.TypeLoadException, system.InvalidCastException, system.MissingMethodException, system.io.EndOfStreamException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class XslTransformation extends TaskExtension  {
     
     public ITaskItem getXslCompiledDllPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXslCompiledDllPath = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XslCompiledDllPath");
+            retObjectXslCompiledDllPath = classInstance.Get("XslCompiledDllPath");
+            JCObject val = (JCObject)retObjectXslCompiledDllPath;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXslCompiledDllPath != null ? retObjectXslCompiledDllPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class XslTransformation extends TaskExtension  {
 
     public void setXslCompiledDllPath(ITaskItem XslCompiledDllPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XslCompiledDllPath", XslCompiledDllPath == null ? null : XslCompiledDllPath.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +207,14 @@ public class XslTransformation extends TaskExtension  {
 
     public ITaskItem getXslInputPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXslInputPath = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XslInputPath");
+            retObjectXslInputPath = classInstance.Get("XslInputPath");
+            JCObject val = (JCObject)retObjectXslInputPath;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXslInputPath != null ? retObjectXslInputPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class XslTransformation extends TaskExtension  {
 
     public void setXslInputPath(ITaskItem XslInputPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XslInputPath", XslInputPath == null ? null : XslInputPath.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,16 +232,20 @@ public class XslTransformation extends TaskExtension  {
 
     public final ITaskItem[] getOutputPaths() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPaths = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutputPaths");
+            retObjectOutputPaths = classInstance.Get("OutputPaths");
+            JCObject resultingObjects = (JCObject)retObjectOutputPaths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputPaths != null ? retObjectOutputPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class XslTransformation extends TaskExtension  {
 
     public void setOutputPaths(ITaskItem[] OutputPaths) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputPaths", toObjectFromArray(OutputPaths));
         } catch (JCNativeException jcne) {
@@ -247,16 +263,20 @@ public class XslTransformation extends TaskExtension  {
 
     public final ITaskItem[] getXmlInputPaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlInputPaths = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlInputPaths");
+            retObjectXmlInputPaths = classInstance.Get("XmlInputPaths");
+            JCObject resultingObjects = (JCObject)retObjectXmlInputPaths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlInputPaths != null ? retObjectXmlInputPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +284,7 @@ public class XslTransformation extends TaskExtension  {
 
     public void setXmlInputPaths(ITaskItem[] XmlInputPaths) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlInputPaths", toObjectFromArray(XmlInputPaths));
         } catch (JCNativeException jcne) {
@@ -274,9 +294,13 @@ public class XslTransformation extends TaskExtension  {
 
     public java.lang.String getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            return (java.lang.String)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            return (java.lang.String)retObjectParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +308,7 @@ public class XslTransformation extends TaskExtension  {
 
     public void setParameters(java.lang.String Parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parameters", Parameters);
         } catch (JCNativeException jcne) {
@@ -294,9 +318,13 @@ public class XslTransformation extends TaskExtension  {
 
     public java.lang.String getXmlContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlContent = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlContent");
+            retObjectXmlContent = classInstance.Get("XmlContent");
+            return (java.lang.String)retObjectXmlContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlContent != null ? retObjectXmlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +332,7 @@ public class XslTransformation extends TaskExtension  {
 
     public void setXmlContent(java.lang.String XmlContent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlContent", XmlContent);
         } catch (JCNativeException jcne) {
@@ -314,9 +342,13 @@ public class XslTransformation extends TaskExtension  {
 
     public java.lang.String getXslContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXslContent = null;
         try {
-            return (java.lang.String)classInstance.Get("XslContent");
+            retObjectXslContent = classInstance.Get("XslContent");
+            return (java.lang.String)retObjectXslContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXslContent != null ? retObjectXslContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +356,7 @@ public class XslTransformation extends TaskExtension  {
 
     public void setXslContent(java.lang.String XslContent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XslContent", XslContent);
         } catch (JCNativeException jcne) {

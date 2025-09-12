@@ -159,7 +159,7 @@ public class AttributeCallbackBuilder extends NetObject  {
     
     public void AddCustomAttributes(Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", (java.lang.Object)toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class AttributeCallbackBuilder extends NetObject  {
 
     public void AddCustomAttributes(MemberDescriptor descriptor, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", descriptor == null ? null : descriptor.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class AttributeCallbackBuilder extends NetObject  {
 
     public void AddCustomAttributes(MemberInfo member, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", member == null ? null : member.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class AttributeCallbackBuilder extends NetObject  {
 
     public void AddCustomAttributes(java.lang.String memberName, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", memberName, toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class AttributeCallbackBuilder extends NetObject  {
 
     public void AddCustomAttributes(DependencyProperty dp, Attribute... attributes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCustomAttributes", dp == null ? null : dp.getJCOInstance(), toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
@@ -213,10 +213,14 @@ public class AttributeCallbackBuilder extends NetObject  {
     
     public NetType getCallbackType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallbackType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallbackType");
+            retObjectCallbackType = classInstance.Get("CallbackType");
+            JCObject val = (JCObject)retObjectCallbackType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallbackType != null ? retObjectCallbackType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

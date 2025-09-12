@@ -157,10 +157,14 @@ public class ErrorObject extends JSObject  {
     
     public static NetException ToException(ErrorObject err) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToException = null;
         try {
-            JCObject objToException = (JCObject)classType.Invoke("ToException", err == null ? null : err.getJCOInstance());
+            retObjectToException = classType.Invoke("ToException", err == null ? null : err.getJCOInstance());
+            JCObject objToException = (JCObject)retObjectToException;
             return new NetException(objToException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToException != null ? retObjectToException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

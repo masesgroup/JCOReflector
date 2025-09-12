@@ -176,9 +176,13 @@ public class XsltSettings extends NetObject  {
     
     public boolean getEnableDocumentFunction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableDocumentFunction = null;
         try {
-            return (boolean)classInstance.Get("EnableDocumentFunction");
+            retObjectEnableDocumentFunction = classInstance.Get("EnableDocumentFunction");
+            return (boolean)retObjectEnableDocumentFunction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableDocumentFunction != null ? retObjectEnableDocumentFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class XsltSettings extends NetObject  {
 
     public void setEnableDocumentFunction(boolean EnableDocumentFunction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableDocumentFunction", EnableDocumentFunction);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class XsltSettings extends NetObject  {
 
     public boolean getEnableScript() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableScript = null;
         try {
-            return (boolean)classInstance.Get("EnableScript");
+            retObjectEnableScript = classInstance.Get("EnableScript");
+            return (boolean)retObjectEnableScript;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableScript != null ? retObjectEnableScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class XsltSettings extends NetObject  {
 
     public void setEnableScript(boolean EnableScript) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableScript", EnableScript);
         } catch (JCNativeException jcne) {
@@ -216,10 +224,14 @@ public class XsltSettings extends NetObject  {
 
     public static XsltSettings getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new XsltSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +239,14 @@ public class XsltSettings extends NetObject  {
 
     public static XsltSettings getTrustedXslt() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrustedXslt = null;
         try {
-            JCObject val = (JCObject)classType.Get("TrustedXslt");
+            retObjectTrustedXslt = classType.Get("TrustedXslt");
+            JCObject val = (JCObject)retObjectTrustedXslt;
             return new XsltSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustedXslt != null ? retObjectTrustedXslt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

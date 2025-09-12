@@ -158,10 +158,14 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     public static Activity RecompileVisualBasicReference(ActivityWithResult visualBasicReference, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRecompileVisualBasicReference = null;
         try {
-            JCObject objRecompileVisualBasicReference = (JCObject)classType.Invoke("RecompileVisualBasicReference", visualBasicReference == null ? null : visualBasicReference.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            retObjectRecompileVisualBasicReference = classType.Invoke("RecompileVisualBasicReference", visualBasicReference == null ? null : visualBasicReference.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            JCObject objRecompileVisualBasicReference = (JCObject)retObjectRecompileVisualBasicReference;
             return new Activity(objRecompileVisualBasicReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecompileVisualBasicReference != null ? retObjectRecompileVisualBasicReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class VisualBasicDesignerHelper extends NetObject  {
 
     public static Activity RecompileVisualBasicValue(ActivityWithResult visualBasicValue, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRecompileVisualBasicValue = null;
         try {
-            JCObject objRecompileVisualBasicValue = (JCObject)classType.Invoke("RecompileVisualBasicValue", visualBasicValue == null ? null : visualBasicValue.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            retObjectRecompileVisualBasicValue = classType.Invoke("RecompileVisualBasicValue", visualBasicValue == null ? null : visualBasicValue.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            JCObject objRecompileVisualBasicValue = (JCObject)retObjectRecompileVisualBasicValue;
             return new Activity(objRecompileVisualBasicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecompileVisualBasicValue != null ? retObjectRecompileVisualBasicValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     public static Constraint getNameShadowingConstraint() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNameShadowingConstraint = null;
         try {
-            JCObject val = (JCObject)classType.Get("NameShadowingConstraint");
+            retObjectNameShadowingConstraint = classType.Get("NameShadowingConstraint");
+            JCObject val = (JCObject)retObjectNameShadowingConstraint;
             return new Constraint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameShadowingConstraint != null ? retObjectNameShadowingConstraint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

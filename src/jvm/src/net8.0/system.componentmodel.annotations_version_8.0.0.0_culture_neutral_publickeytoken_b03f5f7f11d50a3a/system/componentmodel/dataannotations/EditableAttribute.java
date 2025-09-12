@@ -170,9 +170,13 @@ public class EditableAttribute extends Attribute  {
     
     public boolean getAllowEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowEdit = null;
         try {
-            return (boolean)classInstance.Get("AllowEdit");
+            retObjectAllowEdit = classInstance.Get("AllowEdit");
+            return (boolean)retObjectAllowEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowEdit != null ? retObjectAllowEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class EditableAttribute extends Attribute  {
 
     public boolean getAllowInitialValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowInitialValue = null;
         try {
-            return (boolean)classInstance.Get("AllowInitialValue");
+            retObjectAllowInitialValue = classInstance.Get("AllowInitialValue");
+            return (boolean)retObjectAllowInitialValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowInitialValue != null ? retObjectAllowInitialValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class EditableAttribute extends Attribute  {
 
     public void setAllowInitialValue(boolean AllowInitialValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowInitialValue", AllowInitialValue);
         } catch (JCNativeException jcne) {

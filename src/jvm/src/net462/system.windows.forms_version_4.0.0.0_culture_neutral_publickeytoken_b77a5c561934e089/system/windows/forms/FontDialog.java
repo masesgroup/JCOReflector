@@ -165,7 +165,7 @@ public class FontDialog extends CommonDialog  {
     
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -179,9 +179,13 @@ public class FontDialog extends CommonDialog  {
     
     public boolean getAllowScriptChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowScriptChange = null;
         try {
-            return (boolean)classInstance.Get("AllowScriptChange");
+            retObjectAllowScriptChange = classInstance.Get("AllowScriptChange");
+            return (boolean)retObjectAllowScriptChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowScriptChange != null ? retObjectAllowScriptChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setAllowScriptChange(boolean AllowScriptChange) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowScriptChange", AllowScriptChange);
         } catch (JCNativeException jcne) {
@@ -199,9 +203,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getAllowSimulations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSimulations = null;
         try {
-            return (boolean)classInstance.Get("AllowSimulations");
+            retObjectAllowSimulations = classInstance.Get("AllowSimulations");
+            return (boolean)retObjectAllowSimulations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSimulations != null ? retObjectAllowSimulations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setAllowSimulations(boolean AllowSimulations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSimulations", AllowSimulations);
         } catch (JCNativeException jcne) {
@@ -219,9 +227,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getAllowVectorFonts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowVectorFonts = null;
         try {
-            return (boolean)classInstance.Get("AllowVectorFonts");
+            retObjectAllowVectorFonts = classInstance.Get("AllowVectorFonts");
+            return (boolean)retObjectAllowVectorFonts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowVectorFonts != null ? retObjectAllowVectorFonts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setAllowVectorFonts(boolean AllowVectorFonts) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowVectorFonts", AllowVectorFonts);
         } catch (JCNativeException jcne) {
@@ -239,9 +251,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getAllowVerticalFonts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowVerticalFonts = null;
         try {
-            return (boolean)classInstance.Get("AllowVerticalFonts");
+            retObjectAllowVerticalFonts = classInstance.Get("AllowVerticalFonts");
+            return (boolean)retObjectAllowVerticalFonts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowVerticalFonts != null ? retObjectAllowVerticalFonts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +265,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setAllowVerticalFonts(boolean AllowVerticalFonts) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowVerticalFonts", AllowVerticalFonts);
         } catch (JCNativeException jcne) {
@@ -259,9 +275,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getFixedPitchOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFixedPitchOnly = null;
         try {
-            return (boolean)classInstance.Get("FixedPitchOnly");
+            retObjectFixedPitchOnly = classInstance.Get("FixedPitchOnly");
+            return (boolean)retObjectFixedPitchOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFixedPitchOnly != null ? retObjectFixedPitchOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +289,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setFixedPitchOnly(boolean FixedPitchOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FixedPitchOnly", FixedPitchOnly);
         } catch (JCNativeException jcne) {
@@ -279,9 +299,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getFontMustExist() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontMustExist = null;
         try {
-            return (boolean)classInstance.Get("FontMustExist");
+            retObjectFontMustExist = classInstance.Get("FontMustExist");
+            return (boolean)retObjectFontMustExist;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFontMustExist != null ? retObjectFontMustExist.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +313,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setFontMustExist(boolean FontMustExist) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontMustExist", FontMustExist);
         } catch (JCNativeException jcne) {
@@ -299,9 +323,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getScriptsOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScriptsOnly = null;
         try {
-            return (boolean)classInstance.Get("ScriptsOnly");
+            retObjectScriptsOnly = classInstance.Get("ScriptsOnly");
+            return (boolean)retObjectScriptsOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectScriptsOnly != null ? retObjectScriptsOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +337,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setScriptsOnly(boolean ScriptsOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScriptsOnly", ScriptsOnly);
         } catch (JCNativeException jcne) {
@@ -319,9 +347,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getShowApply() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowApply = null;
         try {
-            return (boolean)classInstance.Get("ShowApply");
+            retObjectShowApply = classInstance.Get("ShowApply");
+            return (boolean)retObjectShowApply;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowApply != null ? retObjectShowApply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +361,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setShowApply(boolean ShowApply) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowApply", ShowApply);
         } catch (JCNativeException jcne) {
@@ -339,9 +371,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getShowColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowColor = null;
         try {
-            return (boolean)classInstance.Get("ShowColor");
+            retObjectShowColor = classInstance.Get("ShowColor");
+            return (boolean)retObjectShowColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowColor != null ? retObjectShowColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +385,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setShowColor(boolean ShowColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowColor", ShowColor);
         } catch (JCNativeException jcne) {
@@ -359,9 +395,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getShowEffects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowEffects = null;
         try {
-            return (boolean)classInstance.Get("ShowEffects");
+            retObjectShowEffects = classInstance.Get("ShowEffects");
+            return (boolean)retObjectShowEffects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowEffects != null ? retObjectShowEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +409,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setShowEffects(boolean ShowEffects) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowEffects", ShowEffects);
         } catch (JCNativeException jcne) {
@@ -379,9 +419,13 @@ public class FontDialog extends CommonDialog  {
 
     public boolean getShowHelp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHelp = null;
         try {
-            return (boolean)classInstance.Get("ShowHelp");
+            retObjectShowHelp = classInstance.Get("ShowHelp");
+            return (boolean)retObjectShowHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHelp != null ? retObjectShowHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,7 +433,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setShowHelp(boolean ShowHelp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHelp", ShowHelp);
         } catch (JCNativeException jcne) {
@@ -399,9 +443,19 @@ public class FontDialog extends CommonDialog  {
 
     public int getMaxSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxSize = null;
         try {
-            return (int)classInstance.Get("MaxSize");
+            retObjectMaxSize = classInstance.Get("MaxSize");
+            return (int)retObjectMaxSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxSizeNumber = (java.lang.Number)retObjectMaxSize;
+                return retObjectMaxSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,7 +463,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setMaxSize(int MaxSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxSize", MaxSize);
         } catch (JCNativeException jcne) {
@@ -419,9 +473,19 @@ public class FontDialog extends CommonDialog  {
 
     public int getMinSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinSize = null;
         try {
-            return (int)classInstance.Get("MinSize");
+            retObjectMinSize = classInstance.Get("MinSize");
+            return (int)retObjectMinSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinSizeNumber = (java.lang.Number)retObjectMinSize;
+                return retObjectMinSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinSize != null ? retObjectMinSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,7 +493,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setMinSize(int MinSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinSize", MinSize);
         } catch (JCNativeException jcne) {
@@ -439,10 +503,14 @@ public class FontDialog extends CommonDialog  {
 
     public Color getColor() throws Throwable, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Color");
+            retObjectColor = classInstance.Get("Color");
+            JCObject val = (JCObject)retObjectColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColor != null ? retObjectColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,7 +518,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setColor(Color Color) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Color", Color == null ? null : Color.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -460,10 +528,14 @@ public class FontDialog extends CommonDialog  {
 
     public Font getFont() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
+            retObjectFont = classInstance.Get("Font");
+            JCObject val = (JCObject)retObjectFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFont != null ? retObjectFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,7 +543,7 @@ public class FontDialog extends CommonDialog  {
 
     public void setFont(Font Font) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Font", Font == null ? null : Font.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -486,7 +558,7 @@ public class FontDialog extends CommonDialog  {
 
     public void addApply(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Apply", handler);
         } catch (JCNativeException jcne) {
@@ -496,7 +568,7 @@ public class FontDialog extends CommonDialog  {
 
     public void removeApply(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Apply", handler);
         } catch (JCNativeException jcne) {

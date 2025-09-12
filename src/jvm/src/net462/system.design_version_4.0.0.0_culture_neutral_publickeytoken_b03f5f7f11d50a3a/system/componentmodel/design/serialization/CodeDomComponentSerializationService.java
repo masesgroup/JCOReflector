@@ -181,10 +181,14 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
     
     public ICollection Deserialize(SerializationStore store) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.collections.generic.KeyNotFoundException, system.componentmodel.design.serialization.CodeDomSerializerException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new ICollectionImplementation(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public ICollection Deserialize(SerializationStore store, IContainer container) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.collections.generic.KeyNotFoundException, system.componentmodel.design.serialization.CodeDomSerializerException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new ICollectionImplementation(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public SerializationStore CreateStore() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateStore = null;
         try {
-            JCObject objCreateStore = (JCObject)classInstance.Invoke("CreateStore");
+            retObjectCreateStore = classInstance.Invoke("CreateStore");
+            JCObject objCreateStore = (JCObject)retObjectCreateStore;
             return new SerializationStore(objCreateStore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateStore != null ? retObjectCreateStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +226,14 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public SerializationStore LoadStore(Stream stream) throws Throwable, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadStore = null;
         try {
-            JCObject objLoadStore = (JCObject)classInstance.Invoke("LoadStore", stream == null ? null : stream.getJCOInstance());
+            retObjectLoadStore = classInstance.Invoke("LoadStore", stream == null ? null : stream.getJCOInstance());
+            JCObject objLoadStore = (JCObject)retObjectLoadStore;
             return new SerializationStore(objLoadStore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadStore != null ? retObjectLoadStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +241,7 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes, boolean applyDefaults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.serialization.SerializationException, system.collections.generic.KeyNotFoundException, system.componentmodel.design.serialization.CodeDomSerializerException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes, applyDefaults);
         } catch (JCNativeException jcne) {
@@ -235,7 +251,7 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public void Serialize(SerializationStore store, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", store == null ? null : store.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +261,7 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public void SerializeAbsolute(SerializationStore store, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SerializeAbsolute", store == null ? null : store.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +271,7 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public void SerializeMember(SerializationStore store, NetObject owningObject, MemberDescriptor member) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SerializeMember", store == null ? null : store.getJCOInstance(), owningObject == null ? null : owningObject.getJCOInstance(), member == null ? null : member.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,7 +281,7 @@ public class CodeDomComponentSerializationService extends ComponentSerialization
 
     public void SerializeMemberAbsolute(SerializationStore store, NetObject owningObject, MemberDescriptor member) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SerializeMemberAbsolute", store == null ? null : store.getJCOInstance(), owningObject == null ? null : owningObject.getJCOInstance(), member == null ? null : member.getJCOInstance());
         } catch (JCNativeException jcne) {

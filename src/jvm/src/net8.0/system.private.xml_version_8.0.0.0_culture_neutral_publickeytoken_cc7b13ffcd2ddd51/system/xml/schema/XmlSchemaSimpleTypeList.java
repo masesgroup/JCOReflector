@@ -168,10 +168,14 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
     
     public XmlSchemaSimpleType getBaseItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseItemType");
+            retObjectBaseItemType = classInstance.Get("BaseItemType");
+            JCObject val = (JCObject)retObjectBaseItemType;
             return new XmlSchemaSimpleType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseItemType != null ? retObjectBaseItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
 
     public void setBaseItemType(XmlSchemaSimpleType BaseItemType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseItemType", BaseItemType == null ? null : BaseItemType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
 
     public XmlSchemaSimpleType getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            JCObject val = (JCObject)retObjectItemType;
             return new XmlSchemaSimpleType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
 
     public void setItemType(XmlSchemaSimpleType ItemType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemType", ItemType == null ? null : ItemType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
 
     public XmlQualifiedName getItemTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTypeName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTypeName");
+            retObjectItemTypeName = classInstance.Get("ItemTypeName");
+            JCObject val = (JCObject)retObjectItemTypeName;
             return new XmlQualifiedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTypeName != null ? retObjectItemTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
 
     public void setItemTypeName(XmlQualifiedName ItemTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTypeName", ItemTypeName == null ? null : ItemTypeName.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -145,10 +145,14 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
     
     public Expression GetArgument(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArgument = null;
         try {
-            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
+            retObjectGetArgument = classInstance.Invoke("GetArgument", index);
+            JCObject objGetArgument = (JCObject)retObjectGetArgument;
             return new Expression(objGetArgument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArgument != null ? retObjectGetArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
 
     public Expression Rewrite(Expression[] args) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRewrite = null;
         try {
-            JCObject objRewrite = (JCObject)classInstance.Invoke("Rewrite", (java.lang.Object)toObjectFromArray(args));
+            retObjectRewrite = classInstance.Invoke("Rewrite", (java.lang.Object)toObjectFromArray(args));
+            JCObject objRewrite = (JCObject)retObjectRewrite;
             return new Expression(objRewrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRewrite != null ? retObjectRewrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +175,14 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
 
     public NetObject CreateCallSite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCallSite = null;
         try {
-            JCObject objCreateCallSite = (JCObject)classInstance.Invoke("CreateCallSite");
+            retObjectCreateCallSite = classInstance.Invoke("CreateCallSite");
+            JCObject objCreateCallSite = (JCObject)retObjectCreateCallSite;
             return new NetObject(objCreateCallSite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCallSite != null ? retObjectCreateCallSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +194,19 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
     
     public int getArgumentCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentCount = null;
         try {
-            return (int)classInstance.Get("ArgumentCount");
+            retObjectArgumentCount = classInstance.Get("ArgumentCount");
+            return (int)retObjectArgumentCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectArgumentCountNumber = (java.lang.Number)retObjectArgumentCount;
+                return retObjectArgumentCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectArgumentCount != null ? retObjectArgumentCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +214,14 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
 
     public NetType getDelegateType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelegateType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DelegateType");
+            retObjectDelegateType = classInstance.Get("DelegateType");
+            JCObject val = (JCObject)retObjectDelegateType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelegateType != null ? retObjectDelegateType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -193,10 +193,14 @@ public class PEReader extends NetObject implements AutoCloseable {
     
     public MetadataReaderProvider ReadEmbeddedPortablePdbDebugDirectoryData(DebugDirectoryEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.BadImageFormatException, system.io.compression.ZLibException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEmbeddedPortablePdbDebugDirectoryData = null;
         try {
-            JCObject objReadEmbeddedPortablePdbDebugDirectoryData = (JCObject)classInstance.Invoke("ReadEmbeddedPortablePdbDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
+            retObjectReadEmbeddedPortablePdbDebugDirectoryData = classInstance.Invoke("ReadEmbeddedPortablePdbDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
+            JCObject objReadEmbeddedPortablePdbDebugDirectoryData = (JCObject)retObjectReadEmbeddedPortablePdbDebugDirectoryData;
             return new MetadataReaderProvider(objReadEmbeddedPortablePdbDebugDirectoryData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadEmbeddedPortablePdbDebugDirectoryData != null ? retObjectReadEmbeddedPortablePdbDebugDirectoryData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +208,14 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public CodeViewDebugDirectoryData ReadCodeViewDebugDirectoryData(DebugDirectoryEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadCodeViewDebugDirectoryData = null;
         try {
-            JCObject objReadCodeViewDebugDirectoryData = (JCObject)classInstance.Invoke("ReadCodeViewDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
+            retObjectReadCodeViewDebugDirectoryData = classInstance.Invoke("ReadCodeViewDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
+            JCObject objReadCodeViewDebugDirectoryData = (JCObject)retObjectReadCodeViewDebugDirectoryData;
             return new CodeViewDebugDirectoryData(objReadCodeViewDebugDirectoryData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadCodeViewDebugDirectoryData != null ? retObjectReadCodeViewDebugDirectoryData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +223,14 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public PdbChecksumDebugDirectoryData ReadPdbChecksumDebugDirectoryData(DebugDirectoryEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadPdbChecksumDebugDirectoryData = null;
         try {
-            JCObject objReadPdbChecksumDebugDirectoryData = (JCObject)classInstance.Invoke("ReadPdbChecksumDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
+            retObjectReadPdbChecksumDebugDirectoryData = classInstance.Invoke("ReadPdbChecksumDebugDirectoryData", entry == null ? null : entry.getJCOInstance());
+            JCObject objReadPdbChecksumDebugDirectoryData = (JCObject)retObjectReadPdbChecksumDebugDirectoryData;
             return new PdbChecksumDebugDirectoryData(objReadPdbChecksumDebugDirectoryData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadPdbChecksumDebugDirectoryData != null ? retObjectReadPdbChecksumDebugDirectoryData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +238,14 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public PEMemoryBlock GetEntireImage() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntireImage = null;
         try {
-            JCObject objGetEntireImage = (JCObject)classInstance.Invoke("GetEntireImage");
+            retObjectGetEntireImage = classInstance.Invoke("GetEntireImage");
+            JCObject objGetEntireImage = (JCObject)retObjectGetEntireImage;
             return new PEMemoryBlock(objGetEntireImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntireImage != null ? retObjectGetEntireImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +253,14 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public PEMemoryBlock GetMetadata() throws Throwable, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.BadImageFormatException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata");
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata");
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new PEMemoryBlock(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +268,14 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public PEMemoryBlock GetSectionData(int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSectionData = null;
         try {
-            JCObject objGetSectionData = (JCObject)classInstance.Invoke("GetSectionData", relativeVirtualAddress);
+            retObjectGetSectionData = classInstance.Invoke("GetSectionData", relativeVirtualAddress);
+            JCObject objGetSectionData = (JCObject)retObjectGetSectionData;
             return new PEMemoryBlock(objGetSectionData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionData != null ? retObjectGetSectionData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +283,14 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public PEMemoryBlock GetSectionData(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSectionData = null;
         try {
-            JCObject objGetSectionData = (JCObject)classInstance.Invoke("GetSectionData", sectionName);
+            retObjectGetSectionData = classInstance.Invoke("GetSectionData", sectionName);
+            JCObject objGetSectionData = (JCObject)retObjectGetSectionData;
             return new PEMemoryBlock(objGetSectionData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionData != null ? retObjectGetSectionData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +298,7 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -281,7 +309,7 @@ public class PEReader extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -297,9 +325,13 @@ public class PEReader extends NetObject implements AutoCloseable {
     
     public boolean getHasMetadata() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.BadImageFormatException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasMetadata = null;
         try {
-            return (boolean)classInstance.Get("HasMetadata");
+            retObjectHasMetadata = classInstance.Get("HasMetadata");
+            return (boolean)retObjectHasMetadata;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasMetadata != null ? retObjectHasMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +339,13 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public boolean getIsEntireImageAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEntireImageAvailable = null;
         try {
-            return (boolean)classInstance.Get("IsEntireImageAvailable");
+            retObjectIsEntireImageAvailable = classInstance.Get("IsEntireImageAvailable");
+            return (boolean)retObjectIsEntireImageAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEntireImageAvailable != null ? retObjectIsEntireImageAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +353,13 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public boolean getIsLoadedImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoadedImage = null;
         try {
-            return (boolean)classInstance.Get("IsLoadedImage");
+            retObjectIsLoadedImage = classInstance.Get("IsLoadedImage");
+            return (boolean)retObjectIsLoadedImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoadedImage != null ? retObjectIsLoadedImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +367,14 @@ public class PEReader extends NetObject implements AutoCloseable {
 
     public PEHeaders getPEHeaders() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.BadImageFormatException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPEHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PEHeaders");
+            retObjectPEHeaders = classInstance.Get("PEHeaders");
+            JCObject val = (JCObject)retObjectPEHeaders;
             return new PEHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPEHeaders != null ? retObjectPEHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

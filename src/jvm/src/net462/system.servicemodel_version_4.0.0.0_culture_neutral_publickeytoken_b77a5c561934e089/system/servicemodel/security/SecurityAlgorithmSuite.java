@@ -154,9 +154,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
     
     public boolean IsAsymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsymmetricKeyLengthSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricKeyLengthSupported", length);
+            retObjectIsAsymmetricKeyLengthSupported = classInstance.Invoke("IsAsymmetricKeyLengthSupported", length);
+            return (boolean)retObjectIsAsymmetricKeyLengthSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAsymmetricKeyLengthSupported != null ? retObjectIsAsymmetricKeyLengthSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsAsymmetricKeyWrapAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsymmetricKeyWrapAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricKeyWrapAlgorithmSupported", algorithm);
+            retObjectIsAsymmetricKeyWrapAlgorithmSupported = classInstance.Invoke("IsAsymmetricKeyWrapAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsAsymmetricKeyWrapAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAsymmetricKeyWrapAlgorithmSupported != null ? retObjectIsAsymmetricKeyWrapAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsAsymmetricSignatureAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsymmetricSignatureAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricSignatureAlgorithmSupported", algorithm);
+            retObjectIsAsymmetricSignatureAlgorithmSupported = classInstance.Invoke("IsAsymmetricSignatureAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsAsymmetricSignatureAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAsymmetricSignatureAlgorithmSupported != null ? retObjectIsAsymmetricSignatureAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsCanonicalizationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCanonicalizationAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsCanonicalizationAlgorithmSupported", algorithm);
+            retObjectIsCanonicalizationAlgorithmSupported = classInstance.Invoke("IsCanonicalizationAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsCanonicalizationAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsCanonicalizationAlgorithmSupported != null ? retObjectIsCanonicalizationAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +210,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsDigestAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDigestAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsDigestAlgorithmSupported", algorithm);
+            retObjectIsDigestAlgorithmSupported = classInstance.Invoke("IsDigestAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsDigestAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDigestAlgorithmSupported != null ? retObjectIsDigestAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +224,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsEncryptionAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEncryptionAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsEncryptionAlgorithmSupported", algorithm);
+            retObjectIsEncryptionAlgorithmSupported = classInstance.Invoke("IsEncryptionAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsEncryptionAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEncryptionAlgorithmSupported != null ? retObjectIsEncryptionAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +238,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsEncryptionKeyDerivationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEncryptionKeyDerivationAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsEncryptionKeyDerivationAlgorithmSupported", algorithm);
+            retObjectIsEncryptionKeyDerivationAlgorithmSupported = classInstance.Invoke("IsEncryptionKeyDerivationAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsEncryptionKeyDerivationAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEncryptionKeyDerivationAlgorithmSupported != null ? retObjectIsEncryptionKeyDerivationAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +252,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsSignatureKeyDerivationAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSignatureKeyDerivationAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsSignatureKeyDerivationAlgorithmSupported", algorithm);
+            retObjectIsSignatureKeyDerivationAlgorithmSupported = classInstance.Invoke("IsSignatureKeyDerivationAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsSignatureKeyDerivationAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSignatureKeyDerivationAlgorithmSupported != null ? retObjectIsSignatureKeyDerivationAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +266,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsSymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSymmetricKeyLengthSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricKeyLengthSupported", length);
+            retObjectIsSymmetricKeyLengthSupported = classInstance.Invoke("IsSymmetricKeyLengthSupported", length);
+            return (boolean)retObjectIsSymmetricKeyLengthSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSymmetricKeyLengthSupported != null ? retObjectIsSymmetricKeyLengthSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +280,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsSymmetricKeyWrapAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSymmetricKeyWrapAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricKeyWrapAlgorithmSupported", algorithm);
+            retObjectIsSymmetricKeyWrapAlgorithmSupported = classInstance.Invoke("IsSymmetricKeyWrapAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsSymmetricKeyWrapAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSymmetricKeyWrapAlgorithmSupported != null ? retObjectIsSymmetricKeyWrapAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +294,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public boolean IsSymmetricSignatureAlgorithmSupported(java.lang.String algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSymmetricSignatureAlgorithmSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricSignatureAlgorithmSupported", algorithm);
+            retObjectIsSymmetricSignatureAlgorithmSupported = classInstance.Invoke("IsSymmetricSignatureAlgorithmSupported", algorithm);
+            return (boolean)retObjectIsSymmetricSignatureAlgorithmSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSymmetricSignatureAlgorithmSupported != null ? retObjectIsSymmetricSignatureAlgorithmSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +312,19 @@ public class SecurityAlgorithmSuite extends NetObject  {
     
     public int getDefaultEncryptionKeyDerivationLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultEncryptionKeyDerivationLength = null;
         try {
-            return (int)classInstance.Get("DefaultEncryptionKeyDerivationLength");
+            retObjectDefaultEncryptionKeyDerivationLength = classInstance.Get("DefaultEncryptionKeyDerivationLength");
+            return (int)retObjectDefaultEncryptionKeyDerivationLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultEncryptionKeyDerivationLengthNumber = (java.lang.Number)retObjectDefaultEncryptionKeyDerivationLength;
+                return retObjectDefaultEncryptionKeyDerivationLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultEncryptionKeyDerivationLength != null ? retObjectDefaultEncryptionKeyDerivationLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +332,19 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public int getDefaultSignatureKeyDerivationLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSignatureKeyDerivationLength = null;
         try {
-            return (int)classInstance.Get("DefaultSignatureKeyDerivationLength");
+            retObjectDefaultSignatureKeyDerivationLength = classInstance.Get("DefaultSignatureKeyDerivationLength");
+            return (int)retObjectDefaultSignatureKeyDerivationLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultSignatureKeyDerivationLengthNumber = (java.lang.Number)retObjectDefaultSignatureKeyDerivationLength;
+                return retObjectDefaultSignatureKeyDerivationLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultSignatureKeyDerivationLength != null ? retObjectDefaultSignatureKeyDerivationLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +352,19 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public int getDefaultSymmetricKeyLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSymmetricKeyLength = null;
         try {
-            return (int)classInstance.Get("DefaultSymmetricKeyLength");
+            retObjectDefaultSymmetricKeyLength = classInstance.Get("DefaultSymmetricKeyLength");
+            return (int)retObjectDefaultSymmetricKeyLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDefaultSymmetricKeyLengthNumber = (java.lang.Number)retObjectDefaultSymmetricKeyLength;
+                return retObjectDefaultSymmetricKeyLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectDefaultSymmetricKeyLength != null ? retObjectDefaultSymmetricKeyLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +372,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic128() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic128 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic128");
+            retObjectBasic128 = classType.Get("Basic128");
+            JCObject val = (JCObject)retObjectBasic128;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic128 != null ? retObjectBasic128.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +387,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic128Rsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic128Rsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic128Rsa15");
+            retObjectBasic128Rsa15 = classType.Get("Basic128Rsa15");
+            JCObject val = (JCObject)retObjectBasic128Rsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic128Rsa15 != null ? retObjectBasic128Rsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +402,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic128Sha256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic128Sha256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic128Sha256");
+            retObjectBasic128Sha256 = classType.Get("Basic128Sha256");
+            JCObject val = (JCObject)retObjectBasic128Sha256;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic128Sha256 != null ? retObjectBasic128Sha256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +417,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic128Sha256Rsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic128Sha256Rsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic128Sha256Rsa15");
+            retObjectBasic128Sha256Rsa15 = classType.Get("Basic128Sha256Rsa15");
+            JCObject val = (JCObject)retObjectBasic128Sha256Rsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic128Sha256Rsa15 != null ? retObjectBasic128Sha256Rsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +432,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic192() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic192 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic192");
+            retObjectBasic192 = classType.Get("Basic192");
+            JCObject val = (JCObject)retObjectBasic192;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic192 != null ? retObjectBasic192.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +447,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic192Rsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic192Rsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic192Rsa15");
+            retObjectBasic192Rsa15 = classType.Get("Basic192Rsa15");
+            JCObject val = (JCObject)retObjectBasic192Rsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic192Rsa15 != null ? retObjectBasic192Rsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +462,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic192Sha256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic192Sha256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic192Sha256");
+            retObjectBasic192Sha256 = classType.Get("Basic192Sha256");
+            JCObject val = (JCObject)retObjectBasic192Sha256;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic192Sha256 != null ? retObjectBasic192Sha256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +477,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic192Sha256Rsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic192Sha256Rsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic192Sha256Rsa15");
+            retObjectBasic192Sha256Rsa15 = classType.Get("Basic192Sha256Rsa15");
+            JCObject val = (JCObject)retObjectBasic192Sha256Rsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic192Sha256Rsa15 != null ? retObjectBasic192Sha256Rsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +492,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic256");
+            retObjectBasic256 = classType.Get("Basic256");
+            JCObject val = (JCObject)retObjectBasic256;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic256 != null ? retObjectBasic256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +507,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic256Rsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic256Rsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic256Rsa15");
+            retObjectBasic256Rsa15 = classType.Get("Basic256Rsa15");
+            JCObject val = (JCObject)retObjectBasic256Rsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic256Rsa15 != null ? retObjectBasic256Rsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +522,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic256Sha256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic256Sha256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic256Sha256");
+            retObjectBasic256Sha256 = classType.Get("Basic256Sha256");
+            JCObject val = (JCObject)retObjectBasic256Sha256;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic256Sha256 != null ? retObjectBasic256Sha256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +537,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getBasic256Sha256Rsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasic256Sha256Rsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Basic256Sha256Rsa15");
+            retObjectBasic256Sha256Rsa15 = classType.Get("Basic256Sha256Rsa15");
+            JCObject val = (JCObject)retObjectBasic256Sha256Rsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasic256Sha256Rsa15 != null ? retObjectBasic256Sha256Rsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +552,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +567,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getTripleDes() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTripleDes = null;
         try {
-            JCObject val = (JCObject)classType.Get("TripleDes");
+            retObjectTripleDes = classType.Get("TripleDes");
+            JCObject val = (JCObject)retObjectTripleDes;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTripleDes != null ? retObjectTripleDes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,10 +582,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getTripleDesRsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTripleDesRsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("TripleDesRsa15");
+            retObjectTripleDesRsa15 = classType.Get("TripleDesRsa15");
+            JCObject val = (JCObject)retObjectTripleDesRsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTripleDesRsa15 != null ? retObjectTripleDesRsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,10 +597,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getTripleDesSha256() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTripleDesSha256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("TripleDesSha256");
+            retObjectTripleDesSha256 = classType.Get("TripleDesSha256");
+            JCObject val = (JCObject)retObjectTripleDesSha256;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTripleDesSha256 != null ? retObjectTripleDesSha256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,10 +612,14 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public static SecurityAlgorithmSuite getTripleDesSha256Rsa15() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTripleDesSha256Rsa15 = null;
         try {
-            JCObject val = (JCObject)classType.Get("TripleDesSha256Rsa15");
+            retObjectTripleDesSha256Rsa15 = classType.Get("TripleDesSha256Rsa15");
+            JCObject val = (JCObject)retObjectTripleDesSha256Rsa15;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTripleDesSha256Rsa15 != null ? retObjectTripleDesSha256Rsa15.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,9 +627,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public java.lang.String getDefaultAsymmetricKeyWrapAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultAsymmetricKeyWrapAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultAsymmetricKeyWrapAlgorithm");
+            retObjectDefaultAsymmetricKeyWrapAlgorithm = classInstance.Get("DefaultAsymmetricKeyWrapAlgorithm");
+            return (java.lang.String)retObjectDefaultAsymmetricKeyWrapAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultAsymmetricKeyWrapAlgorithm != null ? retObjectDefaultAsymmetricKeyWrapAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,9 +641,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public java.lang.String getDefaultAsymmetricSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultAsymmetricSignatureAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultAsymmetricSignatureAlgorithm");
+            retObjectDefaultAsymmetricSignatureAlgorithm = classInstance.Get("DefaultAsymmetricSignatureAlgorithm");
+            return (java.lang.String)retObjectDefaultAsymmetricSignatureAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultAsymmetricSignatureAlgorithm != null ? retObjectDefaultAsymmetricSignatureAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,9 +655,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public java.lang.String getDefaultCanonicalizationAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultCanonicalizationAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultCanonicalizationAlgorithm");
+            retObjectDefaultCanonicalizationAlgorithm = classInstance.Get("DefaultCanonicalizationAlgorithm");
+            return (java.lang.String)retObjectDefaultCanonicalizationAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultCanonicalizationAlgorithm != null ? retObjectDefaultCanonicalizationAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,9 +669,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public java.lang.String getDefaultDigestAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultDigestAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultDigestAlgorithm");
+            retObjectDefaultDigestAlgorithm = classInstance.Get("DefaultDigestAlgorithm");
+            return (java.lang.String)retObjectDefaultDigestAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultDigestAlgorithm != null ? retObjectDefaultDigestAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,9 +683,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public java.lang.String getDefaultEncryptionAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultEncryptionAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultEncryptionAlgorithm");
+            retObjectDefaultEncryptionAlgorithm = classInstance.Get("DefaultEncryptionAlgorithm");
+            return (java.lang.String)retObjectDefaultEncryptionAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultEncryptionAlgorithm != null ? retObjectDefaultEncryptionAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,9 +697,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public java.lang.String getDefaultSymmetricKeyWrapAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSymmetricKeyWrapAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultSymmetricKeyWrapAlgorithm");
+            retObjectDefaultSymmetricKeyWrapAlgorithm = classInstance.Get("DefaultSymmetricKeyWrapAlgorithm");
+            return (java.lang.String)retObjectDefaultSymmetricKeyWrapAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultSymmetricKeyWrapAlgorithm != null ? retObjectDefaultSymmetricKeyWrapAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,9 +711,13 @@ public class SecurityAlgorithmSuite extends NetObject  {
 
     public java.lang.String getDefaultSymmetricSignatureAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSymmetricSignatureAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultSymmetricSignatureAlgorithm");
+            retObjectDefaultSymmetricSignatureAlgorithm = classInstance.Get("DefaultSymmetricSignatureAlgorithm");
+            return (java.lang.String)retObjectDefaultSymmetricSignatureAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultSymmetricSignatureAlgorithm != null ? retObjectDefaultSymmetricSignatureAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

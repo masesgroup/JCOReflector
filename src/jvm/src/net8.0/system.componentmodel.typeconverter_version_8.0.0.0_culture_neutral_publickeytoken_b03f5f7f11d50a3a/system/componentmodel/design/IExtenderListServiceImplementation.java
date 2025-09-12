@@ -144,16 +144,20 @@ public class IExtenderListServiceImplementation extends NetObject implements IEx
     
     public IExtenderProvider[] GetExtenderProviders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExtenderProviders = null;
         try {
             ArrayList<IExtenderProvider> resultingArrayList = new ArrayList<IExtenderProvider>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExtenderProviders");
+            retObjectGetExtenderProviders = classInstance.Invoke("GetExtenderProviders");
+            JCObject resultingObjects = (JCObject)retObjectGetExtenderProviders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IExtenderProviderImplementation(resultingObject));
             }
             IExtenderProvider[] resultingArray = new IExtenderProvider[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExtenderProviders != null ? retObjectGetExtenderProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

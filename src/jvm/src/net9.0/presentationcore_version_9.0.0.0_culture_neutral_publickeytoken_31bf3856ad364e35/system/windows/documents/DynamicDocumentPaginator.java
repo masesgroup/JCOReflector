@@ -159,9 +159,19 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
     
     public int GetPageNumber(ContentPosition contentPosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPageNumber = null;
         try {
-            return (int)classInstance.Invoke("GetPageNumber", contentPosition == null ? null : contentPosition.getJCOInstance());
+            retObjectGetPageNumber = classInstance.Invoke("GetPageNumber", contentPosition == null ? null : contentPosition.getJCOInstance());
+            return (int)retObjectGetPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPageNumberNumber = (java.lang.Number)retObjectGetPageNumber;
+                return retObjectGetPageNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPageNumber != null ? retObjectGetPageNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +179,14 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public ContentPosition GetObjectPosition(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectPosition = null;
         try {
-            JCObject objGetObjectPosition = (JCObject)classInstance.Invoke("GetObjectPosition", value == null ? null : value.getJCOInstance());
+            retObjectGetObjectPosition = classInstance.Invoke("GetObjectPosition", value == null ? null : value.getJCOInstance());
+            JCObject objGetObjectPosition = (JCObject)retObjectGetObjectPosition;
             return new ContentPosition(objGetObjectPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectPosition != null ? retObjectGetObjectPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +194,14 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public ContentPosition GetPagePosition(DocumentPage page) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPagePosition = null;
         try {
-            JCObject objGetPagePosition = (JCObject)classInstance.Invoke("GetPagePosition", page == null ? null : page.getJCOInstance());
+            retObjectGetPagePosition = classInstance.Invoke("GetPagePosition", page == null ? null : page.getJCOInstance());
+            JCObject objGetPagePosition = (JCObject)retObjectGetPagePosition;
             return new ContentPosition(objGetPagePosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPagePosition != null ? retObjectGetPagePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +209,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void GetPageNumberAsync(ContentPosition contentPosition, NetObject userState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPageNumberAsync", contentPosition == null ? null : contentPosition.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +219,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void GetPageNumberAsync(ContentPosition contentPosition) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPageNumberAsync", contentPosition == null ? null : contentPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,9 +233,13 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
     
     public boolean getIsBackgroundPaginationEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBackgroundPaginationEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsBackgroundPaginationEnabled");
+            retObjectIsBackgroundPaginationEnabled = classInstance.Get("IsBackgroundPaginationEnabled");
+            return (boolean)retObjectIsBackgroundPaginationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBackgroundPaginationEnabled != null ? retObjectIsBackgroundPaginationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +247,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void setIsBackgroundPaginationEnabled(boolean IsBackgroundPaginationEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBackgroundPaginationEnabled", IsBackgroundPaginationEnabled);
         } catch (JCNativeException jcne) {
@@ -240,7 +262,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void addPaginationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaginationCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -250,7 +272,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void removePaginationCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaginationCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -260,7 +282,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void addGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GetPageNumberCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -270,7 +292,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void removeGetPageNumberCompleted(GetPageNumberCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GetPageNumberCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -280,7 +302,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void addPaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaginationProgress", handler);
         } catch (JCNativeException jcne) {
@@ -290,7 +312,7 @@ public class DynamicDocumentPaginator extends DocumentPaginator  {
 
     public void removePaginationProgress(PaginationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaginationProgress", handler);
         } catch (JCNativeException jcne) {

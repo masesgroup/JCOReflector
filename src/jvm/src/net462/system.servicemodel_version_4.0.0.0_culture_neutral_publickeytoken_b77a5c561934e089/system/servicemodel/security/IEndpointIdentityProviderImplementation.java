@@ -144,10 +144,14 @@ public class IEndpointIdentityProviderImplementation extends NetObject implement
     
     public EndpointIdentity GetIdentityOfSelf(SecurityTokenRequirement tokenRequirement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIdentityOfSelf = null;
         try {
-            JCObject objGetIdentityOfSelf = (JCObject)classInstance.Invoke("GetIdentityOfSelf", tokenRequirement == null ? null : tokenRequirement.getJCOInstance());
+            retObjectGetIdentityOfSelf = classInstance.Invoke("GetIdentityOfSelf", tokenRequirement == null ? null : tokenRequirement.getJCOInstance());
+            JCObject objGetIdentityOfSelf = (JCObject)retObjectGetIdentityOfSelf;
             return new EndpointIdentity(objGetIdentityOfSelf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIdentityOfSelf != null ? retObjectGetIdentityOfSelf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

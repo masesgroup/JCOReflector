@@ -163,7 +163,7 @@ public class StickyNoteControl extends Control  {
     
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception, system.windows.markup.XamlParseException, system.UnauthorizedAccessException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.xml.XmlException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class StickyNoteControl extends Control  {
     
     public boolean getIsActive() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsActive = null;
         try {
-            return (boolean)classInstance.Get("IsActive");
+            retObjectIsActive = classInstance.Get("IsActive");
+            return (boolean)retObjectIsActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsActive != null ? retObjectIsActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class StickyNoteControl extends Control  {
 
     public boolean getIsExpanded() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExpanded = null;
         try {
-            return (boolean)classInstance.Get("IsExpanded");
+            retObjectIsExpanded = classInstance.Get("IsExpanded");
+            return (boolean)retObjectIsExpanded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExpanded != null ? retObjectIsExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class StickyNoteControl extends Control  {
 
     public void setIsExpanded(boolean IsExpanded) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsExpanded", IsExpanded);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class StickyNoteControl extends Control  {
 
     public boolean getIsMouseOverAnchor() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseOverAnchor = null;
         try {
-            return (boolean)classInstance.Get("IsMouseOverAnchor");
+            retObjectIsMouseOverAnchor = classInstance.Get("IsMouseOverAnchor");
+            return (boolean)retObjectIsMouseOverAnchor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseOverAnchor != null ? retObjectIsMouseOverAnchor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +229,19 @@ public class StickyNoteControl extends Control  {
 
     public double getCaptionFontSize() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionFontSize = null;
         try {
-            return (double)classInstance.Get("CaptionFontSize");
+            retObjectCaptionFontSize = classInstance.Get("CaptionFontSize");
+            return (double)retObjectCaptionFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCaptionFontSizeNumber = (java.lang.Number)retObjectCaptionFontSize;
+                return retObjectCaptionFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectCaptionFontSize != null ? retObjectCaptionFontSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +249,7 @@ public class StickyNoteControl extends Control  {
 
     public void setCaptionFontSize(double CaptionFontSize) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionFontSize", CaptionFontSize);
         } catch (JCNativeException jcne) {
@@ -237,9 +259,19 @@ public class StickyNoteControl extends Control  {
 
     public double getPenWidth() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPenWidth = null;
         try {
-            return (double)classInstance.Get("PenWidth");
+            retObjectPenWidth = classInstance.Get("PenWidth");
+            return (double)retObjectPenWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPenWidthNumber = (java.lang.Number)retObjectPenWidth;
+                return retObjectPenWidthNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectPenWidth != null ? retObjectPenWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +279,7 @@ public class StickyNoteControl extends Control  {
 
     public void setPenWidth(double PenWidth) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PenWidth", PenWidth);
         } catch (JCNativeException jcne) {
@@ -257,9 +289,13 @@ public class StickyNoteControl extends Control  {
 
     public java.lang.String getAuthor() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthor = null;
         try {
-            return (java.lang.String)classInstance.Get("Author");
+            retObjectAuthor = classInstance.Get("Author");
+            return (java.lang.String)retObjectAuthor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthor != null ? retObjectAuthor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +303,14 @@ public class StickyNoteControl extends Control  {
 
     public IAnchorInfo getAnchorInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnchorInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AnchorInfo");
+            retObjectAnchorInfo = classInstance.Get("AnchorInfo");
+            JCObject val = (JCObject)retObjectAnchorInfo;
             return new IAnchorInfoImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnchorInfo != null ? retObjectAnchorInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +318,14 @@ public class StickyNoteControl extends Control  {
 
     public StickyNoteType getStickyNoteType() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStickyNoteType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StickyNoteType");
+            retObjectStickyNoteType = classInstance.Get("StickyNoteType");
+            JCObject val = (JCObject)retObjectStickyNoteType;
             return new StickyNoteType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStickyNoteType != null ? retObjectStickyNoteType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +333,14 @@ public class StickyNoteControl extends Control  {
 
     public FontStretch getCaptionFontStretch() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionFontStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionFontStretch");
+            retObjectCaptionFontStretch = classInstance.Get("CaptionFontStretch");
+            JCObject val = (JCObject)retObjectCaptionFontStretch;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontStretch != null ? retObjectCaptionFontStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +348,7 @@ public class StickyNoteControl extends Control  {
 
     public void setCaptionFontStretch(FontStretch CaptionFontStretch) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionFontStretch", CaptionFontStretch == null ? null : CaptionFontStretch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,10 +358,14 @@ public class StickyNoteControl extends Control  {
 
     public FontStyle getCaptionFontStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionFontStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionFontStyle");
+            retObjectCaptionFontStyle = classInstance.Get("CaptionFontStyle");
+            JCObject val = (JCObject)retObjectCaptionFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontStyle != null ? retObjectCaptionFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +373,7 @@ public class StickyNoteControl extends Control  {
 
     public void setCaptionFontStyle(FontStyle CaptionFontStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionFontStyle", CaptionFontStyle == null ? null : CaptionFontStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,10 +383,14 @@ public class StickyNoteControl extends Control  {
 
     public FontWeight getCaptionFontWeight() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionFontWeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionFontWeight");
+            retObjectCaptionFontWeight = classInstance.Get("CaptionFontWeight");
+            JCObject val = (JCObject)retObjectCaptionFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontWeight != null ? retObjectCaptionFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +398,7 @@ public class StickyNoteControl extends Control  {
 
     public void setCaptionFontWeight(FontWeight CaptionFontWeight) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionFontWeight", CaptionFontWeight == null ? null : CaptionFontWeight.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,10 +408,14 @@ public class StickyNoteControl extends Control  {
 
     public FontFamily getCaptionFontFamily() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionFontFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionFontFamily");
+            retObjectCaptionFontFamily = classInstance.Get("CaptionFontFamily");
+            JCObject val = (JCObject)retObjectCaptionFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionFontFamily != null ? retObjectCaptionFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +423,7 @@ public class StickyNoteControl extends Control  {
 
     public void setCaptionFontFamily(FontFamily CaptionFontFamily) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionFontFamily", CaptionFontFamily == null ? null : CaptionFontFamily.getJCOInstance());
         } catch (JCNativeException jcne) {

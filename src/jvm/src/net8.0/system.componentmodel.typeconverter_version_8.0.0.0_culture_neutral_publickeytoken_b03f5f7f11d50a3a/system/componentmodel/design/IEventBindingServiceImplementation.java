@@ -150,9 +150,13 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
     
     public boolean ShowCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCode = null;
         try {
-            return (boolean)classInstance.Invoke("ShowCode");
+            retObjectShowCode = classInstance.Invoke("ShowCode");
+            return (boolean)retObjectShowCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShowCode != null ? retObjectShowCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,9 +164,13 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     public boolean ShowCode(int lineNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCode = null;
         try {
-            return (boolean)classInstance.Invoke("ShowCode", lineNumber);
+            retObjectShowCode = classInstance.Invoke("ShowCode", lineNumber);
+            return (boolean)retObjectShowCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShowCode != null ? retObjectShowCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +178,13 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCode = null;
         try {
-            return (boolean)classInstance.Invoke("ShowCode", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            retObjectShowCode = classInstance.Invoke("ShowCode", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectShowCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShowCode != null ? retObjectShowCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +192,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     public ICollection GetCompatibleMethods(EventDescriptor e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCompatibleMethods = null;
         try {
-            JCObject objGetCompatibleMethods = (JCObject)classInstance.Invoke("GetCompatibleMethods", e == null ? null : e.getJCOInstance());
+            retObjectGetCompatibleMethods = classInstance.Invoke("GetCompatibleMethods", e == null ? null : e.getJCOInstance());
+            JCObject objGetCompatibleMethods = (JCObject)retObjectGetCompatibleMethods;
             return new ICollectionImplementation(objGetCompatibleMethods);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompatibleMethods != null ? retObjectGetCompatibleMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +207,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     public EventDescriptor GetEvent(PropertyDescriptor property) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEvent = null;
         try {
-            JCObject objGetEvent = (JCObject)classInstance.Invoke("GetEvent", property == null ? null : property.getJCOInstance());
+            retObjectGetEvent = classInstance.Invoke("GetEvent", property == null ? null : property.getJCOInstance());
+            JCObject objGetEvent = (JCObject)retObjectGetEvent;
             return new EventDescriptor(objGetEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEvent != null ? retObjectGetEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +222,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEventProperty = null;
         try {
-            JCObject objGetEventProperty = (JCObject)classInstance.Invoke("GetEventProperty", e == null ? null : e.getJCOInstance());
+            retObjectGetEventProperty = classInstance.Invoke("GetEventProperty", e == null ? null : e.getJCOInstance());
+            JCObject objGetEventProperty = (JCObject)retObjectGetEventProperty;
             return new PropertyDescriptor(objGetEventProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventProperty != null ? retObjectGetEventProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +237,14 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEventProperties = null;
         try {
-            JCObject objGetEventProperties = (JCObject)classInstance.Invoke("GetEventProperties", events == null ? null : events.getJCOInstance());
+            retObjectGetEventProperties = classInstance.Invoke("GetEventProperties", events == null ? null : events.getJCOInstance());
+            JCObject objGetEventProperties = (JCObject)retObjectGetEventProperties;
             return new PropertyDescriptorCollection(objGetEventProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEventProperties != null ? retObjectGetEventProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +252,13 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
 
     public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUniqueMethodName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateUniqueMethodName", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            retObjectCreateUniqueMethodName = classInstance.Invoke("CreateUniqueMethodName", component == null ? null : component.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            return (java.lang.String)retObjectCreateUniqueMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateUniqueMethodName != null ? retObjectCreateUniqueMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

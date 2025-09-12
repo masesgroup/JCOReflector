@@ -160,10 +160,14 @@ public class PrimitiveType extends SimpleType  {
     
     public EdmType GetEdmPrimitiveType() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEdmPrimitiveType = null;
         try {
-            JCObject objGetEdmPrimitiveType = (JCObject)classInstance.Invoke("GetEdmPrimitiveType");
+            retObjectGetEdmPrimitiveType = classInstance.Invoke("GetEdmPrimitiveType");
+            JCObject objGetEdmPrimitiveType = (JCObject)retObjectGetEdmPrimitiveType;
             return new EdmType(objGetEdmPrimitiveType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdmPrimitiveType != null ? retObjectGetEdmPrimitiveType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class PrimitiveType extends SimpleType  {
 
     public static PrimitiveType GetEdmPrimitiveType(PrimitiveTypeKind primitiveTypeKind) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEdmPrimitiveType = null;
         try {
-            JCObject objGetEdmPrimitiveType = (JCObject)classType.Invoke("GetEdmPrimitiveType", primitiveTypeKind == null ? null : primitiveTypeKind.getJCOInstance());
+            retObjectGetEdmPrimitiveType = classType.Invoke("GetEdmPrimitiveType", primitiveTypeKind == null ? null : primitiveTypeKind.getJCOInstance());
+            JCObject objGetEdmPrimitiveType = (JCObject)retObjectGetEdmPrimitiveType;
             return new PrimitiveType(objGetEdmPrimitiveType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdmPrimitiveType != null ? retObjectGetEdmPrimitiveType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class PrimitiveType extends SimpleType  {
     
     public PrimitiveTypeKind getPrimitiveTypeKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimitiveTypeKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimitiveTypeKind");
+            retObjectPrimitiveTypeKind = classInstance.Get("PrimitiveTypeKind");
+            JCObject val = (JCObject)retObjectPrimitiveTypeKind;
             return new PrimitiveTypeKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimitiveTypeKind != null ? retObjectPrimitiveTypeKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +209,7 @@ public class PrimitiveType extends SimpleType  {
 
     public void setPrimitiveTypeKind(PrimitiveTypeKind PrimitiveTypeKind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrimitiveTypeKind", PrimitiveTypeKind == null ? null : PrimitiveTypeKind.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,10 +219,14 @@ public class PrimitiveType extends SimpleType  {
 
     public NetType getClrEquivalentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClrEquivalentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClrEquivalentType");
+            retObjectClrEquivalentType = classInstance.Get("ClrEquivalentType");
+            JCObject val = (JCObject)retObjectClrEquivalentType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClrEquivalentType != null ? retObjectClrEquivalentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

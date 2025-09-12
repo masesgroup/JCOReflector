@@ -177,10 +177,14 @@ public class ExtendedPropertyValueEditor extends PropertyValueEditor  {
     
     public DataTemplate getExtendedEditorTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedEditorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedEditorTemplate");
+            retObjectExtendedEditorTemplate = classInstance.Get("ExtendedEditorTemplate");
+            JCObject val = (JCObject)retObjectExtendedEditorTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedEditorTemplate != null ? retObjectExtendedEditorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class ExtendedPropertyValueEditor extends PropertyValueEditor  {
 
     public void setExtendedEditorTemplate(DataTemplate ExtendedEditorTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedEditorTemplate", ExtendedEditorTemplate == null ? null : ExtendedEditorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

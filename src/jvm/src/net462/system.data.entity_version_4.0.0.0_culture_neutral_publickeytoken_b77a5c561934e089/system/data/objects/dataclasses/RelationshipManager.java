@@ -161,10 +161,14 @@ public class RelationshipManager extends NetObject  {
     
     public IRelatedEnd GetRelatedEnd(java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelatedEnd = null;
         try {
-            JCObject objGetRelatedEnd = (JCObject)classInstance.Invoke("GetRelatedEnd", relationshipName, targetRoleName);
+            retObjectGetRelatedEnd = classInstance.Invoke("GetRelatedEnd", relationshipName, targetRoleName);
+            JCObject objGetRelatedEnd = (JCObject)retObjectGetRelatedEnd;
             return new IRelatedEndImplementation(objGetRelatedEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelatedEnd != null ? retObjectGetRelatedEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class RelationshipManager extends NetObject  {
 
     public static RelationshipManager Create(IEntityWithRelationships owner) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", owner == null ? null : owner.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", owner == null ? null : owner.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new RelationshipManager(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +191,7 @@ public class RelationshipManager extends NetObject  {
 
     public void OnDeserialized(StreamingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.threading.LockRecursionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDeserialized", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,7 +201,7 @@ public class RelationshipManager extends NetObject  {
 
     public void OnSerializing(StreamingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnSerializing", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

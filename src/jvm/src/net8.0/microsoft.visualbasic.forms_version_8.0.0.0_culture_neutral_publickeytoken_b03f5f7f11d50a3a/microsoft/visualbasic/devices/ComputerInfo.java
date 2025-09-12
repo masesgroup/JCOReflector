@@ -167,10 +167,14 @@ public class ComputerInfo extends NetObject  {
     
     public CultureInfo getInstalledUICulture() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstalledUICulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstalledUICulture");
+            retObjectInstalledUICulture = classInstance.Get("InstalledUICulture");
+            JCObject val = (JCObject)retObjectInstalledUICulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstalledUICulture != null ? retObjectInstalledUICulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class ComputerInfo extends NetObject  {
 
     public java.lang.String getOSFullName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOSFullName = null;
         try {
-            return (java.lang.String)classInstance.Get("OSFullName");
+            retObjectOSFullName = classInstance.Get("OSFullName");
+            return (java.lang.String)retObjectOSFullName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOSFullName != null ? retObjectOSFullName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class ComputerInfo extends NetObject  {
 
     public java.lang.String getOSPlatform() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOSPlatform = null;
         try {
-            return (java.lang.String)classInstance.Get("OSPlatform");
+            retObjectOSPlatform = classInstance.Get("OSPlatform");
+            return (java.lang.String)retObjectOSPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOSPlatform != null ? retObjectOSPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class ComputerInfo extends NetObject  {
 
     public java.lang.String getOSVersion() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOSVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("OSVersion");
+            retObjectOSVersion = classInstance.Get("OSVersion");
+            return (java.lang.String)retObjectOSVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOSVersion != null ? retObjectOSVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class ComputerInfo extends NetObject  {
 
     public UInt64 getAvailablePhysicalMemory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailablePhysicalMemory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AvailablePhysicalMemory");
+            retObjectAvailablePhysicalMemory = classInstance.Get("AvailablePhysicalMemory");
+            JCObject val = (JCObject)retObjectAvailablePhysicalMemory;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAvailablePhysicalMemory != null ? retObjectAvailablePhysicalMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class ComputerInfo extends NetObject  {
 
     public UInt64 getAvailableVirtualMemory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailableVirtualMemory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AvailableVirtualMemory");
+            retObjectAvailableVirtualMemory = classInstance.Get("AvailableVirtualMemory");
+            JCObject val = (JCObject)retObjectAvailableVirtualMemory;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAvailableVirtualMemory != null ? retObjectAvailableVirtualMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +254,14 @@ public class ComputerInfo extends NetObject  {
 
     public UInt64 getTotalPhysicalMemory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalPhysicalMemory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TotalPhysicalMemory");
+            retObjectTotalPhysicalMemory = classInstance.Get("TotalPhysicalMemory");
+            JCObject val = (JCObject)retObjectTotalPhysicalMemory;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTotalPhysicalMemory != null ? retObjectTotalPhysicalMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +269,14 @@ public class ComputerInfo extends NetObject  {
 
     public UInt64 getTotalVirtualMemory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalVirtualMemory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TotalVirtualMemory");
+            retObjectTotalVirtualMemory = classInstance.Get("TotalVirtualMemory");
+            JCObject val = (JCObject)retObjectTotalVirtualMemory;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTotalVirtualMemory != null ? retObjectTotalVirtualMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

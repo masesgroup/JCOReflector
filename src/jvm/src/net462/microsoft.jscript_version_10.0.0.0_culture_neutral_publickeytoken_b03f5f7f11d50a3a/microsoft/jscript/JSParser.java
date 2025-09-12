@@ -168,10 +168,14 @@ public class JSParser extends NetObject  {
     
     public Block ParseEvalBody() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.EndOfFile, microsoft.jscript.vsa.JSVsaException, system.NullReferenceException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseEvalBody = null;
         try {
-            JCObject objParseEvalBody = (JCObject)classInstance.Invoke("ParseEvalBody");
+            retObjectParseEvalBody = classInstance.Invoke("ParseEvalBody");
+            JCObject objParseEvalBody = (JCObject)retObjectParseEvalBody;
             return new Block(objParseEvalBody);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseEvalBody != null ? retObjectParseEvalBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class JSParser extends NetObject  {
 
     public ScriptBlock Parse() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.EndOfFile, microsoft.jscript.vsa.JSVsaException, system.NullReferenceException, system.ArithmeticException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classInstance.Invoke("Parse");
+            retObjectParse = classInstance.Invoke("Parse");
+            JCObject objParse = (JCObject)retObjectParse;
             return new ScriptBlock(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

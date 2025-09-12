@@ -153,9 +153,13 @@ public class EntityFunctions extends NetObject  {
     
     public static java.lang.String AsNonUnicode(java.lang.String value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsNonUnicode = null;
         try {
-            return (java.lang.String)classType.Invoke("AsNonUnicode", value);
+            retObjectAsNonUnicode = classType.Invoke("AsNonUnicode", value);
+            return (java.lang.String)retObjectAsNonUnicode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsNonUnicode != null ? retObjectAsNonUnicode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class EntityFunctions extends NetObject  {
 
     public static java.lang.String AsUnicode(java.lang.String value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsUnicode = null;
         try {
-            return (java.lang.String)classType.Invoke("AsUnicode", value);
+            retObjectAsUnicode = classType.Invoke("AsUnicode", value);
+            return (java.lang.String)retObjectAsUnicode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsUnicode != null ? retObjectAsUnicode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +181,13 @@ public class EntityFunctions extends NetObject  {
 
     public static java.lang.String Reverse(java.lang.String stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverse = null;
         try {
-            return (java.lang.String)classType.Invoke("Reverse", stringArgument);
+            retObjectReverse = classType.Invoke("Reverse", stringArgument);
+            return (java.lang.String)retObjectReverse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReverse != null ? retObjectReverse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

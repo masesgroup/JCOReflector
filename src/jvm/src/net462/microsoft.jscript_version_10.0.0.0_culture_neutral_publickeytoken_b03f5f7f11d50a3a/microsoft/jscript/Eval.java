@@ -157,10 +157,14 @@ public class Eval extends AST  {
     
     public static NetObject JScriptEvaluate(NetObject source, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptEvaluate = null;
         try {
-            JCObject objJScriptEvaluate = (JCObject)classType.Invoke("JScriptEvaluate", source == null ? null : source.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            retObjectJScriptEvaluate = classType.Invoke("JScriptEvaluate", source == null ? null : source.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            JCObject objJScriptEvaluate = (JCObject)retObjectJScriptEvaluate;
             return new NetObject(objJScriptEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptEvaluate != null ? retObjectJScriptEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class Eval extends AST  {
 
     public static NetObject JScriptEvaluate(NetObject source, NetObject unsafeOption, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile, system.IndexOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptEvaluate = null;
         try {
-            JCObject objJScriptEvaluate = (JCObject)classType.Invoke("JScriptEvaluate", source == null ? null : source.getJCOInstance(), unsafeOption == null ? null : unsafeOption.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            retObjectJScriptEvaluate = classType.Invoke("JScriptEvaluate", source == null ? null : source.getJCOInstance(), unsafeOption == null ? null : unsafeOption.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            JCObject objJScriptEvaluate = (JCObject)retObjectJScriptEvaluate;
             return new NetObject(objJScriptEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptEvaluate != null ? retObjectJScriptEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

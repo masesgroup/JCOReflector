@@ -160,10 +160,14 @@ public class ParseResult extends NetObject  {
     
     public DbCommandTree getCommandTree() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTree = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandTree");
+            retObjectCommandTree = classInstance.Get("CommandTree");
+            JCObject val = (JCObject)retObjectCommandTree;
             return new DbCommandTree(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandTree != null ? retObjectCommandTree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

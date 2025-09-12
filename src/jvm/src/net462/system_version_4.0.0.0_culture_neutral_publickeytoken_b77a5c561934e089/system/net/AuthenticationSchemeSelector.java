@@ -172,7 +172,7 @@ public class AuthenticationSchemeSelector extends JCDelegate implements IJCEvent
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
+            throw new java.lang.UnsupportedOperationException(
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
@@ -186,10 +186,14 @@ public class AuthenticationSchemeSelector extends JCDelegate implements IJCEvent
 
     public AuthenticationSchemes DynamicInvoke(HttpListenerRequest httpRequest) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            JCObject objDynamicInvoke = (JCObject)classInstance.Invoke("DynamicInvoke", httpRequest == null ? null : httpRequest.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", httpRequest == null ? null : httpRequest.getJCOInstance());
+            JCObject objDynamicInvoke = (JCObject)retObjectDynamicInvoke;
             return new AuthenticationSchemes(objDynamicInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

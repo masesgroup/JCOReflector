@@ -176,10 +176,14 @@ public class AudienceRestriction extends NetObject  {
     
     public AudienceUriMode getAudienceMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAudienceMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AudienceMode");
+            retObjectAudienceMode = classInstance.Get("AudienceMode");
+            JCObject val = (JCObject)retObjectAudienceMode;
             return new AudienceUriMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAudienceMode != null ? retObjectAudienceMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class AudienceRestriction extends NetObject  {
 
     public void setAudienceMode(AudienceUriMode AudienceMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AudienceMode", AudienceMode == null ? null : AudienceMode.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,10 +166,14 @@ public class RouteTable extends NetObject  {
     
     public static RouteCollection getRoutes() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRoutes = null;
         try {
-            JCObject val = (JCObject)classType.Get("Routes");
+            retObjectRoutes = classType.Get("Routes");
+            JCObject val = (JCObject)retObjectRoutes;
             return new RouteCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoutes != null ? retObjectRoutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

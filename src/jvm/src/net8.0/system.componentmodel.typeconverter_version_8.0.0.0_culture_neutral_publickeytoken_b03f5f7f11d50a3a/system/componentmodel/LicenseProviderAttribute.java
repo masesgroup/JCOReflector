@@ -186,10 +186,14 @@ public class LicenseProviderAttribute extends Attribute  {
     
     public NetType getLicenseProvider() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLicenseProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LicenseProvider");
+            retObjectLicenseProvider = classInstance.Get("LicenseProvider");
+            JCObject val = (JCObject)retObjectLicenseProvider;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLicenseProvider != null ? retObjectLicenseProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

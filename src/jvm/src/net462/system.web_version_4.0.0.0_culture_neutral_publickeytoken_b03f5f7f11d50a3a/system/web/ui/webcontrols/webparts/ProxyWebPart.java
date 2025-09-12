@@ -158,9 +158,13 @@ public class ProxyWebPart extends WebPart  {
     
     public java.lang.String getGenericWebPartID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenericWebPartID = null;
         try {
-            return (java.lang.String)classInstance.Get("GenericWebPartID");
+            retObjectGenericWebPartID = classInstance.Get("GenericWebPartID");
+            return (java.lang.String)retObjectGenericWebPartID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGenericWebPartID != null ? retObjectGenericWebPartID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class ProxyWebPart extends WebPart  {
 
     public java.lang.String getOriginalID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalID = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalID");
+            retObjectOriginalID = classInstance.Get("OriginalID");
+            return (java.lang.String)retObjectOriginalID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalID != null ? retObjectOriginalID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class ProxyWebPart extends WebPart  {
 
     public java.lang.String getOriginalPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalPath = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalPath");
+            retObjectOriginalPath = classInstance.Get("OriginalPath");
+            return (java.lang.String)retObjectOriginalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalPath != null ? retObjectOriginalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class ProxyWebPart extends WebPart  {
 
     public java.lang.String getOriginalTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalTypeName");
+            retObjectOriginalTypeName = classInstance.Get("OriginalTypeName");
+            return (java.lang.String)retObjectOriginalTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalTypeName != null ? retObjectOriginalTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

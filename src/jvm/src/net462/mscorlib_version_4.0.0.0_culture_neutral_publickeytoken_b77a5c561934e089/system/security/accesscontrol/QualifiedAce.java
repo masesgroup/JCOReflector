@@ -155,10 +155,12 @@ public class QualifiedAce extends KnownAce  {
     
     public byte[] GetOpaque() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOpaque = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOpaque");
+            retObjectGetOpaque = classInstance.Invoke("GetOpaque");
+            JCObject resultingObjects = (JCObject)retObjectGetOpaque;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -167,6 +169,8 @@ public class QualifiedAce extends KnownAce  {
 				resultingArray[indexGetOpaque] = (byte)resultingArrayList.get(indexGetOpaque);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetOpaque != null ? retObjectGetOpaque.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class QualifiedAce extends KnownAce  {
 
     public void SetOpaque(byte[] opaque) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOpaque", (java.lang.Object)opaque);
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class QualifiedAce extends KnownAce  {
 
     public void SetOpaque(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOpaque", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class QualifiedAce extends KnownAce  {
     
     public boolean getIsCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCallback = null;
         try {
-            return (boolean)classInstance.Get("IsCallback");
+            retObjectIsCallback = classInstance.Get("IsCallback");
+            return (boolean)retObjectIsCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCallback != null ? retObjectIsCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +216,19 @@ public class QualifiedAce extends KnownAce  {
 
     public int getOpaqueLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpaqueLength = null;
         try {
-            return (int)classInstance.Get("OpaqueLength");
+            retObjectOpaqueLength = classInstance.Get("OpaqueLength");
+            return (int)retObjectOpaqueLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOpaqueLengthNumber = (java.lang.Number)retObjectOpaqueLength;
+                return retObjectOpaqueLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectOpaqueLength != null ? retObjectOpaqueLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +236,14 @@ public class QualifiedAce extends KnownAce  {
 
     public AceQualifier getAceQualifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAceQualifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AceQualifier");
+            retObjectAceQualifier = classInstance.Get("AceQualifier");
+            JCObject val = (JCObject)retObjectAceQualifier;
             return new AceQualifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAceQualifier != null ? retObjectAceQualifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

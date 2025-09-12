@@ -152,10 +152,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
     
     public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), name, addToContainer);
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", type == null ? null : type.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), name, addToContainer);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public NetObject GetInstance(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInstance = null;
         try {
-            JCObject objGetInstance = (JCObject)classInstance.Invoke("GetInstance", name);
+            retObjectGetInstance = classInstance.Invoke("GetInstance", name);
+            JCObject objGetInstance = (JCObject)retObjectGetInstance;
             return new NetObject(objGetInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstance != null ? retObjectGetInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +182,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public NetObject GetSerializer(NetType objectType, NetType serializerType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerializer = null;
         try {
-            JCObject objGetSerializer = (JCObject)classInstance.Invoke("GetSerializer", objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            retObjectGetSerializer = classInstance.Invoke("GetSerializer", objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            JCObject objGetSerializer = (JCObject)retObjectGetSerializer;
             return new NetObject(objGetSerializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializer != null ? retObjectGetSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +197,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +212,13 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public java.lang.String GetName(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", value == null ? null : value.getJCOInstance());
+            retObjectGetName = classInstance.Invoke("GetName", value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +226,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public NetType GetType(java.lang.String typeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", typeName);
+            retObjectGetType = classInstance.Invoke("GetType", typeName);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +241,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSerializationProvider", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,7 +251,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void RemoveSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSerializationProvider", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,7 +261,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void ReportError(NetObject errorInformation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportError", errorInformation == null ? null : errorInformation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,7 +271,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void SetName(NetObject instance, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetName", instance == null ? null : instance.getJCOInstance(), name);
         } catch (JCNativeException jcne) {
@@ -261,10 +285,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
     
     public ContextStack getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new ContextStack(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +300,14 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public PropertyDescriptorCollection getProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new PropertyDescriptorCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +320,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void addResolveName(ResolveNameEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ResolveName", handler);
         } catch (JCNativeException jcne) {
@@ -298,7 +330,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void removeResolveName(ResolveNameEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ResolveName", handler);
         } catch (JCNativeException jcne) {
@@ -308,7 +340,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void addSerializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SerializationComplete", handler);
         } catch (JCNativeException jcne) {
@@ -318,7 +350,7 @@ public class IDesignerSerializationManagerImplementation extends NetObject imple
 
     public void removeSerializationComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SerializationComplete", handler);
         } catch (JCNativeException jcne) {

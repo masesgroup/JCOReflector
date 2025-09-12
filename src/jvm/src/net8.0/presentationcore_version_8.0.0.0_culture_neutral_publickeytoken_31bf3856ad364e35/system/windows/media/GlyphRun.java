@@ -180,9 +180,19 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
     
     public double GetDistanceFromCaretCharacterHit(CharacterHit characterHit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDistanceFromCaretCharacterHit = null;
         try {
-            return (double)classInstance.Invoke("GetDistanceFromCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            retObjectGetDistanceFromCaretCharacterHit = classInstance.Invoke("GetDistanceFromCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            return (double)retObjectGetDistanceFromCaretCharacterHit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDistanceFromCaretCharacterHitNumber = (java.lang.Number)retObjectGetDistanceFromCaretCharacterHit;
+                return retObjectGetDistanceFromCaretCharacterHitNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetDistanceFromCaretCharacterHit != null ? retObjectGetDistanceFromCaretCharacterHit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +200,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public Geometry BuildGeometry() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildGeometry = null;
         try {
-            JCObject objBuildGeometry = (JCObject)classInstance.Invoke("BuildGeometry");
+            retObjectBuildGeometry = classInstance.Invoke("BuildGeometry");
+            JCObject objBuildGeometry = (JCObject)retObjectBuildGeometry;
             return new Geometry(objBuildGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildGeometry != null ? retObjectBuildGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +215,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public CharacterHit GetCaretCharacterHitFromDistance(double distance, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isInside) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCaretCharacterHitFromDistance = null;
         try {
-            JCObject objGetCaretCharacterHitFromDistance = (JCObject)classInstance.Invoke("GetCaretCharacterHitFromDistance", distance, isInside.getJCRefOut());
+            retObjectGetCaretCharacterHitFromDistance = classInstance.Invoke("GetCaretCharacterHitFromDistance", distance, isInside.getJCRefOut());
+            JCObject objGetCaretCharacterHitFromDistance = (JCObject)retObjectGetCaretCharacterHitFromDistance;
             return new CharacterHit(objGetCaretCharacterHitFromDistance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCaretCharacterHitFromDistance != null ? retObjectGetCaretCharacterHitFromDistance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +230,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public CharacterHit GetNextCaretCharacterHit(CharacterHit characterHit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextCaretCharacterHit = null;
         try {
-            JCObject objGetNextCaretCharacterHit = (JCObject)classInstance.Invoke("GetNextCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            retObjectGetNextCaretCharacterHit = classInstance.Invoke("GetNextCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            JCObject objGetNextCaretCharacterHit = (JCObject)retObjectGetNextCaretCharacterHit;
             return new CharacterHit(objGetNextCaretCharacterHit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextCaretCharacterHit != null ? retObjectGetNextCaretCharacterHit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +245,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public CharacterHit GetPreviousCaretCharacterHit(CharacterHit characterHit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreviousCaretCharacterHit = null;
         try {
-            JCObject objGetPreviousCaretCharacterHit = (JCObject)classInstance.Invoke("GetPreviousCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            retObjectGetPreviousCaretCharacterHit = classInstance.Invoke("GetPreviousCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            JCObject objGetPreviousCaretCharacterHit = (JCObject)retObjectGetPreviousCaretCharacterHit;
             return new CharacterHit(objGetPreviousCaretCharacterHit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreviousCaretCharacterHit != null ? retObjectGetPreviousCaretCharacterHit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +260,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public Rect ComputeAlignmentBox() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComputeAlignmentBox = null;
         try {
-            JCObject objComputeAlignmentBox = (JCObject)classInstance.Invoke("ComputeAlignmentBox");
+            retObjectComputeAlignmentBox = classInstance.Invoke("ComputeAlignmentBox");
+            JCObject objComputeAlignmentBox = (JCObject)retObjectComputeAlignmentBox;
             return new Rect(objComputeAlignmentBox);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeAlignmentBox != null ? retObjectComputeAlignmentBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +275,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public Rect ComputeInkBoundingBox() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.io.FileFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComputeInkBoundingBox = null;
         try {
-            JCObject objComputeInkBoundingBox = (JCObject)classInstance.Invoke("ComputeInkBoundingBox");
+            retObjectComputeInkBoundingBox = classInstance.Invoke("ComputeInkBoundingBox");
+            JCObject objComputeInkBoundingBox = (JCObject)retObjectComputeInkBoundingBox;
             return new Rect(objComputeInkBoundingBox);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeInkBoundingBox != null ? retObjectComputeInkBoundingBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +294,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
      */
     @Deprecated 
     public void BeginInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -269,7 +303,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
      */
     @Deprecated 
     public void EndInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 
@@ -278,9 +312,13 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
     
     public boolean getIsHitTestable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHitTestable = null;
         try {
-            return (boolean)classInstance.Get("IsHitTestable");
+            retObjectIsHitTestable = classInstance.Get("IsHitTestable");
+            return (boolean)retObjectIsHitTestable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHitTestable != null ? retObjectIsHitTestable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +326,13 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public boolean getIsSideways() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSideways = null;
         try {
-            return (boolean)classInstance.Get("IsSideways");
+            retObjectIsSideways = classInstance.Get("IsSideways");
+            return (boolean)retObjectIsSideways;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSideways != null ? retObjectIsSideways.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +340,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setIsSideways(boolean IsSideways) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSideways", IsSideways);
         } catch (JCNativeException jcne) {
@@ -308,9 +350,19 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public double getFontRenderingEmSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontRenderingEmSize = null;
         try {
-            return (double)classInstance.Get("FontRenderingEmSize");
+            retObjectFontRenderingEmSize = classInstance.Get("FontRenderingEmSize");
+            return (double)retObjectFontRenderingEmSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFontRenderingEmSizeNumber = (java.lang.Number)retObjectFontRenderingEmSize;
+                return retObjectFontRenderingEmSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +370,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setFontRenderingEmSize(double FontRenderingEmSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontRenderingEmSize", FontRenderingEmSize);
         } catch (JCNativeException jcne) {
@@ -328,9 +380,19 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public int getBidiLevel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBidiLevel = null;
         try {
-            return (int)classInstance.Get("BidiLevel");
+            retObjectBidiLevel = classInstance.Get("BidiLevel");
+            return (int)retObjectBidiLevel;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBidiLevelNumber = (java.lang.Number)retObjectBidiLevel;
+                return retObjectBidiLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBidiLevel != null ? retObjectBidiLevel.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,7 +400,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setBidiLevel(int BidiLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BidiLevel", BidiLevel);
         } catch (JCNativeException jcne) {
@@ -348,10 +410,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public Single getPixelsPerDip() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerDip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelsPerDip");
+            retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
+            JCObject val = (JCObject)retObjectPixelsPerDip;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +425,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setPixelsPerDip(Single PixelsPerDip) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelsPerDip", PixelsPerDip == null ? null : PixelsPerDip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -369,9 +435,13 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public java.lang.String getDeviceFontName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceFontName = null;
         try {
-            return (java.lang.String)classInstance.Get("DeviceFontName");
+            retObjectDeviceFontName = classInstance.Get("DeviceFontName");
+            return (java.lang.String)retObjectDeviceFontName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeviceFontName != null ? retObjectDeviceFontName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,7 +449,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setDeviceFontName(java.lang.String DeviceFontName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeviceFontName", DeviceFontName);
         } catch (JCNativeException jcne) {
@@ -389,10 +459,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public XmlLanguage getLanguage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            JCObject val = (JCObject)retObjectLanguage;
             return new XmlLanguage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +474,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setLanguage(XmlLanguage Language) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Language", Language == null ? null : Language.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -410,10 +484,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public GlyphTypeface getGlyphTypeface() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphTypeface = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlyphTypeface");
+            retObjectGlyphTypeface = classInstance.Get("GlyphTypeface");
+            JCObject val = (JCObject)retObjectGlyphTypeface;
             return new GlyphTypeface(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlyphTypeface != null ? retObjectGlyphTypeface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +499,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setGlyphTypeface(GlyphTypeface GlyphTypeface) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GlyphTypeface", GlyphTypeface == null ? null : GlyphTypeface.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -431,10 +509,14 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public Point getBaselineOrigin() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaselineOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaselineOrigin");
+            retObjectBaselineOrigin = classInstance.Get("BaselineOrigin");
+            JCObject val = (JCObject)retObjectBaselineOrigin;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaselineOrigin != null ? retObjectBaselineOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +524,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
 
     public void setBaselineOrigin(Point BaselineOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaselineOrigin", BaselineOrigin == null ? null : BaselineOrigin.getJCOInstance());
         } catch (JCNativeException jcne) {

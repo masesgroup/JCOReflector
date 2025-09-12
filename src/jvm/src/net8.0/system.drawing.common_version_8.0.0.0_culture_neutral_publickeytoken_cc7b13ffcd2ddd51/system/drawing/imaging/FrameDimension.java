@@ -171,10 +171,14 @@ public class FrameDimension extends NetObject  {
     
     public static FrameDimension getPage() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPage = null;
         try {
-            JCObject val = (JCObject)classType.Get("Page");
+            retObjectPage = classType.Get("Page");
+            JCObject val = (JCObject)retObjectPage;
             return new FrameDimension(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPage != null ? retObjectPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class FrameDimension extends NetObject  {
 
     public static FrameDimension getResolution() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolution = null;
         try {
-            JCObject val = (JCObject)classType.Get("Resolution");
+            retObjectResolution = classType.Get("Resolution");
+            JCObject val = (JCObject)retObjectResolution;
             return new FrameDimension(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolution != null ? retObjectResolution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class FrameDimension extends NetObject  {
 
     public static FrameDimension getTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("Time");
+            retObjectTime = classType.Get("Time");
+            JCObject val = (JCObject)retObjectTime;
             return new FrameDimension(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTime != null ? retObjectTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class FrameDimension extends NetObject  {
 
     public Guid getGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Guid");
+            retObjectGuid = classInstance.Get("Guid");
+            JCObject val = (JCObject)retObjectGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGuid != null ? retObjectGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -155,10 +155,14 @@ public class LightLambda extends NetObject  {
     
     public NetObject Run(NetObject... arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRun = null;
         try {
-            JCObject objRun = (JCObject)classInstance.Invoke("Run", (java.lang.Object)toObjectFromArray(arguments));
+            retObjectRun = classInstance.Invoke("Run", (java.lang.Object)toObjectFromArray(arguments));
+            JCObject objRun = (JCObject)retObjectRun;
             return new NetObject(objRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRun != null ? retObjectRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class LightLambda extends NetObject  {
 
     public NetObject RunVoid(NetObject... arguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRunVoid = null;
         try {
-            JCObject objRunVoid = (JCObject)classInstance.Invoke("RunVoid", (java.lang.Object)toObjectFromArray(arguments));
+            retObjectRunVoid = classInstance.Invoke("RunVoid", (java.lang.Object)toObjectFromArray(arguments));
+            JCObject objRunVoid = (JCObject)retObjectRunVoid;
             return new NetObject(objRunVoid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRunVoid != null ? retObjectRunVoid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

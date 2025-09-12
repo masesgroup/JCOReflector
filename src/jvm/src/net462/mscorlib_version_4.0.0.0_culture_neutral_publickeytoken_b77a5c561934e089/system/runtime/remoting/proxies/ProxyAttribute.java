@@ -168,9 +168,13 @@ public class ProxyAttribute extends Attribute  {
     
     public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContextOK = null;
         try {
-            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            retObjectIsContextOK = classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectIsContextOK;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContextOK != null ? retObjectIsContextOK.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class ProxyAttribute extends Attribute  {
 
     public MarshalByRefObject CreateInstance(NetType serverType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", serverType == null ? null : serverType.getJCOInstance());
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", serverType == null ? null : serverType.getJCOInstance());
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new MarshalByRefObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class ProxyAttribute extends Attribute  {
 
     public RealProxy CreateProxy(ObjRef objRef, NetType serverType, NetObject serverObject, Context serverContext) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateProxy = null;
         try {
-            JCObject objCreateProxy = (JCObject)classInstance.Invoke("CreateProxy", objRef == null ? null : objRef.getJCOInstance(), serverType == null ? null : serverType.getJCOInstance(), serverObject == null ? null : serverObject.getJCOInstance(), serverContext == null ? null : serverContext.getJCOInstance());
+            retObjectCreateProxy = classInstance.Invoke("CreateProxy", objRef == null ? null : objRef.getJCOInstance(), serverType == null ? null : serverType.getJCOInstance(), serverObject == null ? null : serverObject.getJCOInstance(), serverContext == null ? null : serverContext.getJCOInstance());
+            JCObject objCreateProxy = (JCObject)retObjectCreateProxy;
             return new RealProxy(objCreateProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateProxy != null ? retObjectCreateProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class ProxyAttribute extends Attribute  {
 
     public void GetPropertiesForNewContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPropertiesForNewContext", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {

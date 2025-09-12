@@ -198,10 +198,14 @@ public class TaskItem extends MarshalByRefObject  {
     
     public IDictionary CloneCustomMetadata() throws Throwable, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCustomMetadata = null;
         try {
-            JCObject objCloneCustomMetadata = (JCObject)classInstance.Invoke("CloneCustomMetadata");
+            retObjectCloneCustomMetadata = classInstance.Invoke("CloneCustomMetadata");
+            JCObject objCloneCustomMetadata = (JCObject)retObjectCloneCustomMetadata;
             return new IDictionaryImplementation(objCloneCustomMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCustomMetadata != null ? retObjectCloneCustomMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +213,14 @@ public class TaskItem extends MarshalByRefObject  {
 
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +228,13 @@ public class TaskItem extends MarshalByRefObject  {
 
     public java.lang.String GetMetadata(java.lang.String metadataName) throws Throwable, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetMetadata", metadataName);
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", metadataName);
+            return (java.lang.String)retObjectGetMetadata;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class TaskItem extends MarshalByRefObject  {
 
     public void CopyMetadataTo(ITaskItem destinationItem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyMetadataTo", destinationItem == null ? null : destinationItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +252,7 @@ public class TaskItem extends MarshalByRefObject  {
 
     public void RemoveMetadata(java.lang.String metadataName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveMetadata", metadataName);
         } catch (JCNativeException jcne) {
@@ -250,7 +262,7 @@ public class TaskItem extends MarshalByRefObject  {
 
     public void SetMetadata(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMetadata", metadataName, metadataValue);
         } catch (JCNativeException jcne) {
@@ -264,7 +276,7 @@ public class TaskItem extends MarshalByRefObject  {
      */
     @Deprecated 
     public IDictionary CloneCustomMetadataEscaped() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
     }
 
     /**
@@ -273,7 +285,7 @@ public class TaskItem extends MarshalByRefObject  {
      */
     @Deprecated 
     public java.lang.String GetMetadataValueEscaped(java.lang.String metadataName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
     }
 
     /**
@@ -282,7 +294,7 @@ public class TaskItem extends MarshalByRefObject  {
      */
     @Deprecated 
     public void SetMetadataValueLiteral(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
     }
 
 
@@ -291,9 +303,19 @@ public class TaskItem extends MarshalByRefObject  {
     
     public int getMetadataCount() throws Throwable, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataCount = null;
         try {
-            return (int)classInstance.Get("MetadataCount");
+            retObjectMetadataCount = classInstance.Get("MetadataCount");
+            return (int)retObjectMetadataCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMetadataCountNumber = (java.lang.Number)retObjectMetadataCount;
+                return retObjectMetadataCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMetadataCount != null ? retObjectMetadataCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +323,14 @@ public class TaskItem extends MarshalByRefObject  {
 
     public ICollection getMetadataNames() throws Throwable, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataNames");
+            retObjectMetadataNames = classInstance.Get("MetadataNames");
+            JCObject val = (JCObject)retObjectMetadataNames;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataNames != null ? retObjectMetadataNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +338,13 @@ public class TaskItem extends MarshalByRefObject  {
 
     public java.lang.String getItemSpec() throws Throwable, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemSpec = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemSpec");
+            retObjectItemSpec = classInstance.Get("ItemSpec");
+            return (java.lang.String)retObjectItemSpec;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemSpec != null ? retObjectItemSpec.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +352,7 @@ public class TaskItem extends MarshalByRefObject  {
 
     public void setItemSpec(java.lang.String ItemSpec) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemSpec", ItemSpec);
         } catch (JCNativeException jcne) {

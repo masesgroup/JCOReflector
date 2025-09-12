@@ -173,10 +173,14 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
     
     public Saml2Evidence getEvidence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvidence = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Evidence");
+            retObjectEvidence = classInstance.Get("Evidence");
+            JCObject val = (JCObject)retObjectEvidence;
             return new Saml2Evidence(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvidence != null ? retObjectEvidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
 
     public void setEvidence(Saml2Evidence Evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Evidence", Evidence == null ? null : Evidence.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,10 +198,14 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
 
     public SamlAccessDecision getDecision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecision = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Decision");
+            retObjectDecision = classInstance.Get("Decision");
+            JCObject val = (JCObject)retObjectDecision;
             return new SamlAccessDecision(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecision != null ? retObjectDecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
 
     public void setDecision(SamlAccessDecision Decision) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Decision", Decision == null ? null : Decision.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,10 +223,14 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
 
     public Uri getResource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resource");
+            retObjectResource = classInstance.Get("Resource");
+            JCObject val = (JCObject)retObjectResource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResource != null ? retObjectResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
 
     public void setResource(Uri Resource) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resource", Resource == null ? null : Resource.getJCOInstance());
         } catch (JCNativeException jcne) {

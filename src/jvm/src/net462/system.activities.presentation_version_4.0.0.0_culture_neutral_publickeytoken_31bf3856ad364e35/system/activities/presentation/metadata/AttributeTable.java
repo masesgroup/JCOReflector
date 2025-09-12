@@ -158,9 +158,13 @@ public class AttributeTable extends NetObject  {
     
     public boolean ContainsAttributes(NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsAttributes = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsAttributes", type == null ? null : type.getJCOInstance());
+            retObjectContainsAttributes = classInstance.Invoke("ContainsAttributes", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectContainsAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsAttributes != null ? retObjectContainsAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class AttributeTable extends NetObject  {
 
     public IEnumerable GetCustomAttributes(NetType type) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", type == null ? null : type.getJCOInstance());
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", type == null ? null : type.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new IEnumerableImplementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class AttributeTable extends NetObject  {
 
     public IEnumerable GetCustomAttributes(NetType ownerType, MemberDescriptor descriptor) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new IEnumerableImplementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class AttributeTable extends NetObject  {
 
     public IEnumerable GetCustomAttributes(NetType ownerType, MemberInfo member) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), member == null ? null : member.getJCOInstance());
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), member == null ? null : member.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new IEnumerableImplementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class AttributeTable extends NetObject  {
 
     public IEnumerable GetCustomAttributes(NetType ownerType, java.lang.String memberName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), memberName);
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), memberName);
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new IEnumerableImplementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class AttributeTable extends NetObject  {
 
     public IEnumerable GetCustomAttributes(NetType ownerType, DependencyProperty dp) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes", ownerType == null ? null : ownerType.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new IEnumerableImplementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

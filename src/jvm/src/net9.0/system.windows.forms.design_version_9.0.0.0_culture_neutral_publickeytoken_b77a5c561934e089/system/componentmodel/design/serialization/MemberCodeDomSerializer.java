@@ -158,9 +158,13 @@ public class MemberCodeDomSerializer extends CodeDomSerializerBase  {
     
     public boolean ShouldSerialize(IDesignerSerializationManager manager, NetObject value, MemberDescriptor descriptor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerialize = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
+            retObjectShouldSerialize = classInstance.Invoke("ShouldSerialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance());
+            return (boolean)retObjectShouldSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerialize != null ? retObjectShouldSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class MemberCodeDomSerializer extends CodeDomSerializerBase  {
 
     public void Serialize(IDesignerSerializationManager manager, NetObject value, MemberDescriptor descriptor, CodeStatementCollection statements) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance(), descriptor == null ? null : descriptor.getJCOInstance(), statements == null ? null : statements.getJCOInstance());
         } catch (JCNativeException jcne) {

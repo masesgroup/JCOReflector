@@ -147,7 +147,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
     
     public void EnumObjectParam(JCORefOut<UCOMIEnumString> ppenum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumObjectParam", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -157,7 +157,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void GetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBindOptions", pbindopts.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void GetObjectParam(java.lang.String pszKey, JCORefOut<NetObject> ppunk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectParam", pszKey, ppunk.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void GetRunningObjectTable(JCORefOut<UCOMIRunningObjectTable> pprot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRunningObjectTable", pprot.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void RegisterObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObjectBound", punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObjectParam", pszKey, punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void ReleaseBoundObjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseBoundObjects");
         } catch (JCNativeException jcne) {
@@ -217,7 +217,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void RevokeObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RevokeObjectBound", punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,7 +227,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void RevokeObjectParam(java.lang.String pszKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RevokeObjectParam", pszKey);
         } catch (JCNativeException jcne) {
@@ -237,7 +237,7 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
 
     public void SetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBindOptions", pbindopts.getJCRefOut());
         } catch (JCNativeException jcne) {

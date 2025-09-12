@@ -160,9 +160,19 @@ public class NamedPipeConnectionPoolSettings extends NetObject  {
     
     public int getMaxOutboundConnectionsPerEndpoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxOutboundConnectionsPerEndpoint = null;
         try {
-            return (int)classInstance.Get("MaxOutboundConnectionsPerEndpoint");
+            retObjectMaxOutboundConnectionsPerEndpoint = classInstance.Get("MaxOutboundConnectionsPerEndpoint");
+            return (int)retObjectMaxOutboundConnectionsPerEndpoint;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxOutboundConnectionsPerEndpointNumber = (java.lang.Number)retObjectMaxOutboundConnectionsPerEndpoint;
+                return retObjectMaxOutboundConnectionsPerEndpointNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxOutboundConnectionsPerEndpoint != null ? retObjectMaxOutboundConnectionsPerEndpoint.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +180,7 @@ public class NamedPipeConnectionPoolSettings extends NetObject  {
 
     public void setMaxOutboundConnectionsPerEndpoint(int MaxOutboundConnectionsPerEndpoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxOutboundConnectionsPerEndpoint", MaxOutboundConnectionsPerEndpoint);
         } catch (JCNativeException jcne) {
@@ -180,9 +190,13 @@ public class NamedPipeConnectionPoolSettings extends NetObject  {
 
     public java.lang.String getGroupName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupName = null;
         try {
-            return (java.lang.String)classInstance.Get("GroupName");
+            retObjectGroupName = classInstance.Get("GroupName");
+            return (java.lang.String)retObjectGroupName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGroupName != null ? retObjectGroupName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +204,7 @@ public class NamedPipeConnectionPoolSettings extends NetObject  {
 
     public void setGroupName(java.lang.String GroupName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GroupName", GroupName);
         } catch (JCNativeException jcne) {
@@ -200,10 +214,14 @@ public class NamedPipeConnectionPoolSettings extends NetObject  {
 
     public TimeSpan getIdleTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdleTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdleTimeout");
+            retObjectIdleTimeout = classInstance.Get("IdleTimeout");
+            JCObject val = (JCObject)retObjectIdleTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdleTimeout != null ? retObjectIdleTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +229,7 @@ public class NamedPipeConnectionPoolSettings extends NetObject  {
 
     public void setIdleTimeout(TimeSpan IdleTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdleTimeout", IdleTimeout == null ? null : IdleTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

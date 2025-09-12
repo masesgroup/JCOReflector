@@ -167,10 +167,14 @@ public class If extends NativeActivity  {
     
     public Activity getElse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Else");
+            retObjectElse = classInstance.Get("Else");
+            JCObject val = (JCObject)retObjectElse;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElse != null ? retObjectElse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class If extends NativeActivity  {
 
     public void setElse(Activity Else) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Else", Else == null ? null : Else.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class If extends NativeActivity  {
 
     public Activity getThen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThen = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Then");
+            retObjectThen = classInstance.Get("Then");
+            JCObject val = (JCObject)retObjectThen;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThen != null ? retObjectThen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class If extends NativeActivity  {
 
     public void setThen(Activity Then) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Then", Then == null ? null : Then.getJCOInstance());
         } catch (JCNativeException jcne) {

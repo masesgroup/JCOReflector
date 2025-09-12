@@ -165,9 +165,13 @@ public class LowerCaseStringConverter extends TypeConverter  {
     
     public boolean CanConvertFrom(ITypeDescriptorContext ctx, NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertFrom = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertFrom", ctx == null ? null : ctx.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectCanConvertFrom = classInstance.Invoke("CanConvertFrom", ctx == null ? null : ctx.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectCanConvertFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertFrom != null ? retObjectCanConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class LowerCaseStringConverter extends TypeConverter  {
 
     public boolean CanConvertTo(ITypeDescriptorContext ctx, NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertTo = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertTo", ctx == null ? null : ctx.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectCanConvertTo = classInstance.Invoke("CanConvertTo", ctx == null ? null : ctx.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectCanConvertTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertTo != null ? retObjectCanConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class LowerCaseStringConverter extends TypeConverter  {
 
     public NetObject ConvertFrom(ITypeDescriptorContext ctx, CultureInfo ci, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertFrom = null;
         try {
-            JCObject objConvertFrom = (JCObject)classInstance.Invoke("ConvertFrom", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            retObjectConvertFrom = classInstance.Invoke("ConvertFrom", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            JCObject objConvertFrom = (JCObject)retObjectConvertFrom;
             return new NetObject(objConvertFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertFrom != null ? retObjectConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class LowerCaseStringConverter extends TypeConverter  {
 
     public NetObject ConvertTo(ITypeDescriptorContext ctx, CultureInfo ci, NetObject value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTo = null;
         try {
-            JCObject objConvertTo = (JCObject)classInstance.Invoke("ConvertTo", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectConvertTo = classInstance.Invoke("ConvertTo", ctx == null ? null : ctx.getJCOInstance(), ci == null ? null : ci.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objConvertTo = (JCObject)retObjectConvertTo;
             return new NetObject(objConvertTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTo != null ? retObjectConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

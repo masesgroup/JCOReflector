@@ -161,10 +161,14 @@ public class PropertyAccessors extends ValueType  {
     
     public MethodDefinitionHandle getGetter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Getter");
+            retObjectGetter = classInstance.Get("Getter");
+            JCObject val = (JCObject)retObjectGetter;
             return new MethodDefinitionHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class PropertyAccessors extends ValueType  {
 
     public MethodDefinitionHandle getSetter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Setter");
+            retObjectSetter = classInstance.Get("Setter");
+            JCObject val = (JCObject)retObjectSetter;
             return new MethodDefinitionHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

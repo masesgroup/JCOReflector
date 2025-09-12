@@ -156,9 +156,13 @@ public class BitOperations extends NetObject  {
     
     public static boolean IsPow2(int value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPow2 = null;
         try {
-            return (boolean)classType.Invoke("IsPow2", value);
+            retObjectIsPow2 = classType.Invoke("IsPow2", value);
+            return (boolean)retObjectIsPow2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPow2 != null ? retObjectIsPow2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class BitOperations extends NetObject  {
 
     public static boolean IsPow2(long value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPow2 = null;
         try {
-            return (boolean)classType.Invoke("IsPow2", value);
+            retObjectIsPow2 = classType.Invoke("IsPow2", value);
+            return (boolean)retObjectIsPow2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPow2 != null ? retObjectIsPow2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class BitOperations extends NetObject  {
 
     public static boolean IsPow2(UInt32 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPow2 = null;
         try {
-            return (boolean)classType.Invoke("IsPow2", value == null ? null : value.getJCOInstance());
+            retObjectIsPow2 = classType.Invoke("IsPow2", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPow2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPow2 != null ? retObjectIsPow2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class BitOperations extends NetObject  {
 
     public static boolean IsPow2(UInt64 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPow2 = null;
         try {
-            return (boolean)classType.Invoke("IsPow2", value == null ? null : value.getJCOInstance());
+            retObjectIsPow2 = classType.Invoke("IsPow2", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPow2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPow2 != null ? retObjectIsPow2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +212,19 @@ public class BitOperations extends NetObject  {
 
     public static int LeadingZeroCount(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeadingZeroCount = null;
         try {
-            return (int)classType.Invoke("LeadingZeroCount", value == null ? null : value.getJCOInstance());
+            retObjectLeadingZeroCount = classType.Invoke("LeadingZeroCount", value == null ? null : value.getJCOInstance());
+            return (int)retObjectLeadingZeroCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLeadingZeroCountNumber = (java.lang.Number)retObjectLeadingZeroCount;
+                return retObjectLeadingZeroCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLeadingZeroCount != null ? retObjectLeadingZeroCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +232,19 @@ public class BitOperations extends NetObject  {
 
     public static int LeadingZeroCount(UInt64 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeadingZeroCount = null;
         try {
-            return (int)classType.Invoke("LeadingZeroCount", value == null ? null : value.getJCOInstance());
+            retObjectLeadingZeroCount = classType.Invoke("LeadingZeroCount", value == null ? null : value.getJCOInstance());
+            return (int)retObjectLeadingZeroCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLeadingZeroCountNumber = (java.lang.Number)retObjectLeadingZeroCount;
+                return retObjectLeadingZeroCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLeadingZeroCount != null ? retObjectLeadingZeroCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +252,19 @@ public class BitOperations extends NetObject  {
 
     public static int Log2(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog2 = null;
         try {
-            return (int)classType.Invoke("Log2", value == null ? null : value.getJCOInstance());
+            retObjectLog2 = classType.Invoke("Log2", value == null ? null : value.getJCOInstance());
+            return (int)retObjectLog2;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLog2Number = (java.lang.Number)retObjectLog2;
+                return retObjectLog2Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLog2 != null ? retObjectLog2.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +272,19 @@ public class BitOperations extends NetObject  {
 
     public static int Log2(UInt64 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog2 = null;
         try {
-            return (int)classType.Invoke("Log2", value == null ? null : value.getJCOInstance());
+            retObjectLog2 = classType.Invoke("Log2", value == null ? null : value.getJCOInstance());
+            return (int)retObjectLog2;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLog2Number = (java.lang.Number)retObjectLog2;
+                return retObjectLog2Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLog2 != null ? retObjectLog2.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +292,19 @@ public class BitOperations extends NetObject  {
 
     public static int PopCount(UInt32 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPopCount = null;
         try {
-            return (int)classType.Invoke("PopCount", value == null ? null : value.getJCOInstance());
+            retObjectPopCount = classType.Invoke("PopCount", value == null ? null : value.getJCOInstance());
+            return (int)retObjectPopCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPopCountNumber = (java.lang.Number)retObjectPopCount;
+                return retObjectPopCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPopCount != null ? retObjectPopCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +312,19 @@ public class BitOperations extends NetObject  {
 
     public static int PopCount(UInt64 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPopCount = null;
         try {
-            return (int)classType.Invoke("PopCount", value == null ? null : value.getJCOInstance());
+            retObjectPopCount = classType.Invoke("PopCount", value == null ? null : value.getJCOInstance());
+            return (int)retObjectPopCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPopCountNumber = (java.lang.Number)retObjectPopCount;
+                return retObjectPopCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPopCount != null ? retObjectPopCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +332,19 @@ public class BitOperations extends NetObject  {
 
     public static int TrailingZeroCount(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrailingZeroCount = null;
         try {
-            return (int)classType.Invoke("TrailingZeroCount", value);
+            retObjectTrailingZeroCount = classType.Invoke("TrailingZeroCount", value);
+            return (int)retObjectTrailingZeroCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTrailingZeroCountNumber = (java.lang.Number)retObjectTrailingZeroCount;
+                return retObjectTrailingZeroCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTrailingZeroCount != null ? retObjectTrailingZeroCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +352,19 @@ public class BitOperations extends NetObject  {
 
     public static int TrailingZeroCount(long value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrailingZeroCount = null;
         try {
-            return (int)classType.Invoke("TrailingZeroCount", value);
+            retObjectTrailingZeroCount = classType.Invoke("TrailingZeroCount", value);
+            return (int)retObjectTrailingZeroCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTrailingZeroCountNumber = (java.lang.Number)retObjectTrailingZeroCount;
+                return retObjectTrailingZeroCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTrailingZeroCount != null ? retObjectTrailingZeroCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +372,19 @@ public class BitOperations extends NetObject  {
 
     public static int TrailingZeroCount(UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrailingZeroCount = null;
         try {
-            return (int)classType.Invoke("TrailingZeroCount", value == null ? null : value.getJCOInstance());
+            retObjectTrailingZeroCount = classType.Invoke("TrailingZeroCount", value == null ? null : value.getJCOInstance());
+            return (int)retObjectTrailingZeroCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTrailingZeroCountNumber = (java.lang.Number)retObjectTrailingZeroCount;
+                return retObjectTrailingZeroCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTrailingZeroCount != null ? retObjectTrailingZeroCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +392,19 @@ public class BitOperations extends NetObject  {
 
     public static int TrailingZeroCount(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrailingZeroCount = null;
         try {
-            return (int)classType.Invoke("TrailingZeroCount", value == null ? null : value.getJCOInstance());
+            retObjectTrailingZeroCount = classType.Invoke("TrailingZeroCount", value == null ? null : value.getJCOInstance());
+            return (int)retObjectTrailingZeroCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTrailingZeroCountNumber = (java.lang.Number)retObjectTrailingZeroCount;
+                return retObjectTrailingZeroCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTrailingZeroCount != null ? retObjectTrailingZeroCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +412,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt32 Crc32C(UInt32 crc, byte data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrc32C = null;
         try {
-            JCObject objCrc32C = (JCObject)classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data);
+            retObjectCrc32C = classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data);
+            JCObject objCrc32C = (JCObject)retObjectCrc32C;
             return new UInt32(objCrc32C);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrc32C != null ? retObjectCrc32C.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +427,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt32 Crc32C(UInt32 crc, UInt16 data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrc32C = null;
         try {
-            JCObject objCrc32C = (JCObject)classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            retObjectCrc32C = classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            JCObject objCrc32C = (JCObject)retObjectCrc32C;
             return new UInt32(objCrc32C);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrc32C != null ? retObjectCrc32C.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +442,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt32 Crc32C(UInt32 crc, UInt32 data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrc32C = null;
         try {
-            JCObject objCrc32C = (JCObject)classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            retObjectCrc32C = classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            JCObject objCrc32C = (JCObject)retObjectCrc32C;
             return new UInt32(objCrc32C);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrc32C != null ? retObjectCrc32C.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +457,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt32 Crc32C(UInt32 crc, UInt64 data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrc32C = null;
         try {
-            JCObject objCrc32C = (JCObject)classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            retObjectCrc32C = classType.Invoke("Crc32C", crc == null ? null : crc.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            JCObject objCrc32C = (JCObject)retObjectCrc32C;
             return new UInt32(objCrc32C);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrc32C != null ? retObjectCrc32C.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +472,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt32 RotateLeft(UInt32 value, int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRotateLeft = null;
         try {
-            JCObject objRotateLeft = (JCObject)classType.Invoke("RotateLeft", value == null ? null : value.getJCOInstance(), offset);
+            retObjectRotateLeft = classType.Invoke("RotateLeft", value == null ? null : value.getJCOInstance(), offset);
+            JCObject objRotateLeft = (JCObject)retObjectRotateLeft;
             return new UInt32(objRotateLeft);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotateLeft != null ? retObjectRotateLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +487,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt32 RotateRight(UInt32 value, int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRotateRight = null;
         try {
-            JCObject objRotateRight = (JCObject)classType.Invoke("RotateRight", value == null ? null : value.getJCOInstance(), offset);
+            retObjectRotateRight = classType.Invoke("RotateRight", value == null ? null : value.getJCOInstance(), offset);
+            JCObject objRotateRight = (JCObject)retObjectRotateRight;
             return new UInt32(objRotateRight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotateRight != null ? retObjectRotateRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +502,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt32 RoundUpToPowerOf2(UInt32 value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRoundUpToPowerOf2 = null;
         try {
-            JCObject objRoundUpToPowerOf2 = (JCObject)classType.Invoke("RoundUpToPowerOf2", value == null ? null : value.getJCOInstance());
+            retObjectRoundUpToPowerOf2 = classType.Invoke("RoundUpToPowerOf2", value == null ? null : value.getJCOInstance());
+            JCObject objRoundUpToPowerOf2 = (JCObject)retObjectRoundUpToPowerOf2;
             return new UInt32(objRoundUpToPowerOf2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoundUpToPowerOf2 != null ? retObjectRoundUpToPowerOf2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +517,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt64 RotateLeft(UInt64 value, int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRotateLeft = null;
         try {
-            JCObject objRotateLeft = (JCObject)classType.Invoke("RotateLeft", value == null ? null : value.getJCOInstance(), offset);
+            retObjectRotateLeft = classType.Invoke("RotateLeft", value == null ? null : value.getJCOInstance(), offset);
+            JCObject objRotateLeft = (JCObject)retObjectRotateLeft;
             return new UInt64(objRotateLeft);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotateLeft != null ? retObjectRotateLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +532,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt64 RotateRight(UInt64 value, int offset) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRotateRight = null;
         try {
-            JCObject objRotateRight = (JCObject)classType.Invoke("RotateRight", value == null ? null : value.getJCOInstance(), offset);
+            retObjectRotateRight = classType.Invoke("RotateRight", value == null ? null : value.getJCOInstance(), offset);
+            JCObject objRotateRight = (JCObject)retObjectRotateRight;
             return new UInt64(objRotateRight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotateRight != null ? retObjectRotateRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +547,14 @@ public class BitOperations extends NetObject  {
 
     public static UInt64 RoundUpToPowerOf2(UInt64 value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRoundUpToPowerOf2 = null;
         try {
-            JCObject objRoundUpToPowerOf2 = (JCObject)classType.Invoke("RoundUpToPowerOf2", value == null ? null : value.getJCOInstance());
+            retObjectRoundUpToPowerOf2 = classType.Invoke("RoundUpToPowerOf2", value == null ? null : value.getJCOInstance());
+            JCObject objRoundUpToPowerOf2 = (JCObject)retObjectRoundUpToPowerOf2;
             return new UInt64(objRoundUpToPowerOf2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoundUpToPowerOf2 != null ? retObjectRoundUpToPowerOf2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

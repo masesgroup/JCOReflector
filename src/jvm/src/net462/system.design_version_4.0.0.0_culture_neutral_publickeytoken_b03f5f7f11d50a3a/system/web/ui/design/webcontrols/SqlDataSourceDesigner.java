@@ -164,10 +164,12 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
     
     public java.lang.String[] GetViewNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViewNames");
+            retObjectGetViewNames = classInstance.Invoke("GetViewNames");
+            JCObject resultingObjects = (JCObject)retObjectGetViewNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -176,6 +178,8 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 				resultingArray[indexGetViewNames] = (java.lang.String)resultingArrayList.get(indexGetViewNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetViewNames != null ? retObjectGetViewNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public DesignerDataSourceView GetView(java.lang.String viewName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewName);
+            retObjectGetView = classInstance.Invoke("GetView", viewName);
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DesignerDataSourceView(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void Configure() throws Throwable, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.RankException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.threading.ThreadStateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidCastException, system.web.HttpException, system.web.HttpParseException, system.NullReferenceException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Configure");
         } catch (JCNativeException jcne) {
@@ -204,7 +212,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void RefreshSchema(boolean preferSilent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.InvalidCastException, system.AccessViolationException, system.data.sqltypes.SqlNullValueException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshSchema", preferSilent);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
     
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionString = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectionString");
+            retObjectConnectionString = classInstance.Get("ConnectionString");
+            return (java.lang.String)retObjectConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectionString != null ? retObjectConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectionString", ConnectionString);
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
+            retObjectProviderName = classInstance.Get("ProviderName");
+            return (java.lang.String)retObjectProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProviderName != null ? retObjectProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void setProviderName(java.lang.String ProviderName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProviderName", ProviderName);
         } catch (JCNativeException jcne) {
@@ -258,9 +274,13 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public java.lang.String getSelectCommand() throws Throwable, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectCommand = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectCommand");
+            retObjectSelectCommand = classInstance.Get("SelectCommand");
+            return (java.lang.String)retObjectSelectCommand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectCommand != null ? retObjectSelectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void setSelectCommand(java.lang.String SelectCommand) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectCommand", SelectCommand);
         } catch (JCNativeException jcne) {
@@ -278,10 +298,14 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public DataSourceOperation getDeleteQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteQuery = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteQuery");
+            retObjectDeleteQuery = classInstance.Get("DeleteQuery");
+            JCObject val = (JCObject)retObjectDeleteQuery;
             return new DataSourceOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteQuery != null ? retObjectDeleteQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +313,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void setDeleteQuery(DataSourceOperation DeleteQuery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteQuery", DeleteQuery == null ? null : DeleteQuery.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,10 +323,14 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public DataSourceOperation getInsertQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertQuery = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertQuery");
+            retObjectInsertQuery = classInstance.Get("InsertQuery");
+            JCObject val = (JCObject)retObjectInsertQuery;
             return new DataSourceOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertQuery != null ? retObjectInsertQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +338,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void setInsertQuery(DataSourceOperation InsertQuery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertQuery", InsertQuery == null ? null : InsertQuery.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +348,14 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public DataSourceOperation getSelectQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectQuery = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectQuery");
+            retObjectSelectQuery = classInstance.Get("SelectQuery");
+            JCObject val = (JCObject)retObjectSelectQuery;
             return new DataSourceOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectQuery != null ? retObjectSelectQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +363,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void setSelectQuery(DataSourceOperation SelectQuery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectQuery", SelectQuery == null ? null : SelectQuery.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,10 +373,14 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public DataSourceOperation getUpdateQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateQuery = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateQuery");
+            retObjectUpdateQuery = classInstance.Get("UpdateQuery");
+            JCObject val = (JCObject)retObjectUpdateQuery;
             return new DataSourceOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateQuery != null ? retObjectUpdateQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +388,7 @@ public class SqlDataSourceDesigner extends DataSourceDesigner  {
 
     public void setUpdateQuery(DataSourceOperation UpdateQuery) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateQuery", UpdateQuery == null ? null : UpdateQuery.getJCOInstance());
         } catch (JCNativeException jcne) {

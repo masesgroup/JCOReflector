@@ -155,10 +155,14 @@ public class ApplicationHost extends NetObject  {
     
     public static NetObject CreateApplicationHost(NetType hostType, java.lang.String virtualDir, java.lang.String physicalDir) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.web.HttpException, system.NullReferenceException, system.MemberAccessException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidCastException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.provider.ProviderException, system.io.IOException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.XmlSyntaxException, system.OverflowException, system.SystemException, system.CannotUnloadAppDomainException, system.security.policy.PolicyException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateApplicationHost = null;
         try {
-            JCObject objCreateApplicationHost = (JCObject)classType.Invoke("CreateApplicationHost", hostType == null ? null : hostType.getJCOInstance(), virtualDir, physicalDir);
+            retObjectCreateApplicationHost = classType.Invoke("CreateApplicationHost", hostType == null ? null : hostType.getJCOInstance(), virtualDir, physicalDir);
+            JCObject objCreateApplicationHost = (JCObject)retObjectCreateApplicationHost;
             return new NetObject(objCreateApplicationHost);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateApplicationHost != null ? retObjectCreateApplicationHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

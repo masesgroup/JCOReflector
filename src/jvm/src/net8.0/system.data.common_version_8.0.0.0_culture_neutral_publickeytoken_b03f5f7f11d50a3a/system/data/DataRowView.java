@@ -169,10 +169,14 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
     
     public DataView CreateChildView(DataRelation relation, boolean followParent) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateChildView = null;
         try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance(), followParent);
+            retObjectCreateChildView = classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance(), followParent);
+            JCObject objCreateChildView = (JCObject)retObjectCreateChildView;
             return new DataView(objCreateChildView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChildView != null ? retObjectCreateChildView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public DataView CreateChildView(DataRelation relation) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateChildView = null;
         try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance());
+            retObjectCreateChildView = classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance());
+            JCObject objCreateChildView = (JCObject)retObjectCreateChildView;
             return new DataView(objCreateChildView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChildView != null ? retObjectCreateChildView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public DataView CreateChildView(java.lang.String relationName, boolean followParent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateChildView = null;
         try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName, followParent);
+            retObjectCreateChildView = classInstance.Invoke("CreateChildView", relationName, followParent);
+            JCObject objCreateChildView = (JCObject)retObjectCreateChildView;
             return new DataView(objCreateChildView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChildView != null ? retObjectCreateChildView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public DataView CreateChildView(java.lang.String relationName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateChildView = null;
         try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName);
+            retObjectCreateChildView = classInstance.Invoke("CreateChildView", relationName);
+            JCObject objCreateChildView = (JCObject)retObjectCreateChildView;
             return new DataView(objCreateChildView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChildView != null ? retObjectCreateChildView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +229,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public void BeginEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginEdit");
         } catch (JCNativeException jcne) {
@@ -223,7 +239,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public void CancelEdit() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelEdit");
         } catch (JCNativeException jcne) {
@@ -233,7 +249,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public void Delete() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -243,7 +259,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public void EndEdit() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndEdit");
         } catch (JCNativeException jcne) {
@@ -257,7 +273,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public AttributeCollection GetAttributes() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -266,7 +282,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public EventDescriptor GetDefaultEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -275,7 +291,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public EventDescriptorCollection GetEvents() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -284,7 +300,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -293,7 +309,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public PropertyDescriptor GetDefaultProperty() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -302,7 +318,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public PropertyDescriptorCollection GetProperties() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -311,7 +327,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -320,7 +336,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public TypeConverter GetConverter() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -329,7 +345,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public NetObject GetEditor(NetType editorBaseType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -338,7 +354,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -347,7 +363,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public java.lang.String GetClassName() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
     /**
@@ -356,7 +372,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
      */
     @Deprecated 
     public java.lang.String GetComponentName() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
 
@@ -365,9 +381,13 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
     
     public boolean getIsEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEdit = null;
         try {
-            return (boolean)classInstance.Get("IsEdit");
+            retObjectIsEdit = classInstance.Get("IsEdit");
+            return (boolean)retObjectIsEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEdit != null ? retObjectIsEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,9 +395,13 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public boolean getIsNew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNew = null;
         try {
-            return (boolean)classInstance.Get("IsNew");
+            retObjectIsNew = classInstance.Get("IsNew");
+            return (boolean)retObjectIsNew;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNew != null ? retObjectIsNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +409,14 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public DataRow getRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Row");
+            retObjectRow = classInstance.Get("Row");
+            JCObject val = (JCObject)retObjectRow;
             return new DataRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRow != null ? retObjectRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +424,14 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public DataRowVersion getRowVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowVersion");
+            retObjectRowVersion = classInstance.Get("RowVersion");
+            JCObject val = (JCObject)retObjectRowVersion;
             return new DataRowVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowVersion != null ? retObjectRowVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,10 +439,14 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public DataView getDataView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataView");
+            retObjectDataView = classInstance.Get("DataView");
+            JCObject val = (JCObject)retObjectDataView;
             return new DataView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataView != null ? retObjectDataView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,7 +459,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -433,7 +469,7 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
 
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {

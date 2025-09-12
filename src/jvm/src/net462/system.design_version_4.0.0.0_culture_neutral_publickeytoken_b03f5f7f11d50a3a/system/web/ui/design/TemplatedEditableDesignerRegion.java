@@ -171,9 +171,13 @@ public class TemplatedEditableDesignerRegion extends EditableDesignerRegion  {
     
     public boolean getIsSingleInstanceTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSingleInstanceTemplate = null;
         try {
-            return (boolean)classInstance.Get("IsSingleInstanceTemplate");
+            retObjectIsSingleInstanceTemplate = classInstance.Get("IsSingleInstanceTemplate");
+            return (boolean)retObjectIsSingleInstanceTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSingleInstanceTemplate != null ? retObjectIsSingleInstanceTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class TemplatedEditableDesignerRegion extends EditableDesignerRegion  {
 
     public void setIsSingleInstanceTemplate(boolean IsSingleInstanceTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSingleInstanceTemplate", IsSingleInstanceTemplate);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class TemplatedEditableDesignerRegion extends EditableDesignerRegion  {
 
     public TemplateDefinition getTemplateDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplateDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TemplateDefinition");
+            retObjectTemplateDefinition = classInstance.Get("TemplateDefinition");
+            JCObject val = (JCObject)retObjectTemplateDefinition;
             return new TemplateDefinition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplateDefinition != null ? retObjectTemplateDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

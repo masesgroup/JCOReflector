@@ -153,9 +153,13 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
     
     public boolean VerifyColumnMasterKeyMetadata(java.lang.String masterKeyPath, boolean allowEnclaveComputations, byte[] signature) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyColumnMasterKeyMetadata = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyColumnMasterKeyMetadata", masterKeyPath, allowEnclaveComputations, signature);
+            retObjectVerifyColumnMasterKeyMetadata = classInstance.Invoke("VerifyColumnMasterKeyMetadata", masterKeyPath, allowEnclaveComputations, signature);
+            return (boolean)retObjectVerifyColumnMasterKeyMetadata;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyColumnMasterKeyMetadata != null ? retObjectVerifyColumnMasterKeyMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 
     public boolean VerifyColumnMasterKeyMetadata(java.lang.String dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyColumnMasterKeyMetadata = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyColumnMasterKeyMetadata", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            retObjectVerifyColumnMasterKeyMetadata = classInstance.Invoke("VerifyColumnMasterKeyMetadata", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            return (boolean)retObjectVerifyColumnMasterKeyMetadata;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyColumnMasterKeyMetadata != null ? retObjectVerifyColumnMasterKeyMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +181,12 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 
     public byte[] DecryptColumnEncryptionKey(java.lang.String masterKeyPath, java.lang.String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptColumnEncryptionKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptColumnEncryptionKey", masterKeyPath, encryptionAlgorithm, encryptedColumnEncryptionKey);
+            retObjectDecryptColumnEncryptionKey = classInstance.Invoke("DecryptColumnEncryptionKey", masterKeyPath, encryptionAlgorithm, encryptedColumnEncryptionKey);
+            JCObject resultingObjects = (JCObject)retObjectDecryptColumnEncryptionKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -185,6 +195,8 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 				resultingArray[indexDecryptColumnEncryptionKey] = (byte)resultingArrayList.get(indexDecryptColumnEncryptionKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptColumnEncryptionKey != null ? retObjectDecryptColumnEncryptionKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,12 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 
     public byte[] DecryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptColumnEncryptionKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            retObjectDecryptColumnEncryptionKey = classInstance.Invoke("DecryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDecryptColumnEncryptionKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -204,6 +218,8 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 				resultingArray[indexDecryptColumnEncryptionKey] = (byte)resultingArrayList.get(indexDecryptColumnEncryptionKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptColumnEncryptionKey != null ? retObjectDecryptColumnEncryptionKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,12 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 
     public byte[] EncryptColumnEncryptionKey(java.lang.String masterKeyPath, java.lang.String encryptionAlgorithm, byte[] columnEncryptionKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptColumnEncryptionKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptColumnEncryptionKey", masterKeyPath, encryptionAlgorithm, columnEncryptionKey);
+            retObjectEncryptColumnEncryptionKey = classInstance.Invoke("EncryptColumnEncryptionKey", masterKeyPath, encryptionAlgorithm, columnEncryptionKey);
+            JCObject resultingObjects = (JCObject)retObjectEncryptColumnEncryptionKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -223,6 +241,8 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 				resultingArray[indexEncryptColumnEncryptionKey] = (byte)resultingArrayList.get(indexEncryptColumnEncryptionKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptColumnEncryptionKey != null ? retObjectEncryptColumnEncryptionKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,12 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 
     public byte[] EncryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptColumnEncryptionKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            retObjectEncryptColumnEncryptionKey = classInstance.Invoke("EncryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectEncryptColumnEncryptionKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -242,6 +264,8 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 				resultingArray[indexEncryptColumnEncryptionKey] = (byte)resultingArrayList.get(indexEncryptColumnEncryptionKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptColumnEncryptionKey != null ? retObjectEncryptColumnEncryptionKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +273,12 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 
     public byte[] SignColumnMasterKeyMetadata(java.lang.String masterKeyPath, boolean allowEnclaveComputations) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignColumnMasterKeyMetadata = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignColumnMasterKeyMetadata", masterKeyPath, allowEnclaveComputations);
+            retObjectSignColumnMasterKeyMetadata = classInstance.Invoke("SignColumnMasterKeyMetadata", masterKeyPath, allowEnclaveComputations);
+            JCObject resultingObjects = (JCObject)retObjectSignColumnMasterKeyMetadata;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -261,6 +287,8 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
 				resultingArray[indexSignColumnMasterKeyMetadata] = (byte)resultingArrayList.get(indexSignColumnMasterKeyMetadata);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignColumnMasterKeyMetadata != null ? retObjectSignColumnMasterKeyMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

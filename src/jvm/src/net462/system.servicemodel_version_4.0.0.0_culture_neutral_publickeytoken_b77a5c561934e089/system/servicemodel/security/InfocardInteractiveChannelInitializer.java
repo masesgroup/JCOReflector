@@ -171,10 +171,14 @@ public class InfocardInteractiveChannelInitializer extends NetObject  {
     
     public IAsyncResult BeginDisplayInitializationUI(IClientChannel channel, AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginDisplayInitializationUI = null;
         try {
-            JCObject objBeginDisplayInitializationUI = (JCObject)classInstance.Invoke("BeginDisplayInitializationUI", channel == null ? null : channel.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginDisplayInitializationUI = classInstance.Invoke("BeginDisplayInitializationUI", channel == null ? null : channel.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginDisplayInitializationUI = (JCObject)retObjectBeginDisplayInitializationUI;
             return new IAsyncResultImplementation(objBeginDisplayInitializationUI);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginDisplayInitializationUI != null ? retObjectBeginDisplayInitializationUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class InfocardInteractiveChannelInitializer extends NetObject  {
 
     public void EndDisplayInitializationUI(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndDisplayInitializationUI", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,10 +200,14 @@ public class InfocardInteractiveChannelInitializer extends NetObject  {
     
     public system.servicemodel.channels.Binding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

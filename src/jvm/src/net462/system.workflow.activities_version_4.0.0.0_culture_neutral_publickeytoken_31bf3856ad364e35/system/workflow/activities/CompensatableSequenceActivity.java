@@ -180,7 +180,7 @@ public class CompensatableSequenceActivity extends SequenceActivity implements s
      */
     @Deprecated 
     public ActivityExecutionStatus Compensate(ActivityExecutionContext executionContext) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompensatableActivity to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompensatableActivity to obtain the full interface.");
     }
 
 

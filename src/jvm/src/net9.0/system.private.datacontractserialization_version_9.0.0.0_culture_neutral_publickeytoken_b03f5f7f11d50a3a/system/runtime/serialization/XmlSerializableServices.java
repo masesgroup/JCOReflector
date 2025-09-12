@@ -158,16 +158,20 @@ public class XmlSerializableServices extends NetObject  {
     
     public static XmlNode[] ReadNodes(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadNodes = null;
         try {
             ArrayList<XmlNode> resultingArrayList = new ArrayList<XmlNode>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ReadNodes", xmlReader == null ? null : xmlReader.getJCOInstance());
+            retObjectReadNodes = classType.Invoke("ReadNodes", xmlReader == null ? null : xmlReader.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadNodes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlNode(resultingObject));
             }
             XmlNode[] resultingArray = new XmlNode[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadNodes != null ? retObjectReadNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class XmlSerializableServices extends NetObject  {
 
     public static void AddDefaultSchema(XmlSchemaSet schemas, XmlQualifiedName typeQName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.FormatException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddDefaultSchema", schemas == null ? null : schemas.getJCOInstance(), typeQName == null ? null : typeQName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class XmlSerializableServices extends NetObject  {
 
     public static void WriteNodes(XmlWriter xmlWriter, XmlNode[] nodes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteNodes", xmlWriter == null ? null : xmlWriter.getJCOInstance(), toObjectFromArray(nodes));
         } catch (JCNativeException jcne) {

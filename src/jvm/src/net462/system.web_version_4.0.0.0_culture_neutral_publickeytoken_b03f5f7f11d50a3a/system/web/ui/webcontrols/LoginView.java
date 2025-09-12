@@ -169,7 +169,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
     
     public void DataBind() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public void Focus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Focus");
         } catch (JCNativeException jcne) {
@@ -193,10 +193,14 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
     
     public ITemplate getAnonymousTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnonymousTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AnonymousTemplate");
+            retObjectAnonymousTemplate = classInstance.Get("AnonymousTemplate");
+            JCObject val = (JCObject)retObjectAnonymousTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnonymousTemplate != null ? retObjectAnonymousTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +208,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public void setAnonymousTemplate(ITemplate AnonymousTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnonymousTemplate", AnonymousTemplate == null ? null : AnonymousTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,10 +218,14 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public ITemplate getLoggedInTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoggedInTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoggedInTemplate");
+            retObjectLoggedInTemplate = classInstance.Get("LoggedInTemplate");
+            JCObject val = (JCObject)retObjectLoggedInTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoggedInTemplate != null ? retObjectLoggedInTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +233,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public void setLoggedInTemplate(ITemplate LoggedInTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoggedInTemplate", LoggedInTemplate == null ? null : LoggedInTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,10 +243,14 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public RoleGroupCollection getRoleGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RoleGroups");
+            retObjectRoleGroups = classInstance.Get("RoleGroups");
+            JCObject val = (JCObject)retObjectRoleGroups;
             return new RoleGroupCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoleGroups != null ? retObjectRoleGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +263,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public void addViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ViewChanged", handler);
         } catch (JCNativeException jcne) {
@@ -261,7 +273,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public void removeViewChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ViewChanged", handler);
         } catch (JCNativeException jcne) {
@@ -271,7 +283,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public void addViewChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ViewChanging", handler);
         } catch (JCNativeException jcne) {
@@ -281,7 +293,7 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
 
     public void removeViewChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ViewChanging", handler);
         } catch (JCNativeException jcne) {

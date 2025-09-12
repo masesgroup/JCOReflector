@@ -184,7 +184,7 @@ public class X509EnhancedKeyUsageExtension extends X509Extension  {
     
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +198,14 @@ public class X509EnhancedKeyUsageExtension extends X509Extension  {
     
     public OidCollection getEnhancedKeyUsages() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnhancedKeyUsages = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EnhancedKeyUsages");
+            retObjectEnhancedKeyUsages = classInstance.Get("EnhancedKeyUsages");
+            JCObject val = (JCObject)retObjectEnhancedKeyUsages;
             return new OidCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnhancedKeyUsages != null ? retObjectEnhancedKeyUsages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

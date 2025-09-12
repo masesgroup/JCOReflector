@@ -182,7 +182,7 @@ public class PropertyGrid extends ContainerControl  {
     
     public void CollapseAllGridItems() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CollapseAllGridItems");
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void ExpandAllGridItems() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExpandAllGridItems");
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void Refresh() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -212,7 +212,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void RefreshTabs(PropertyTabScope tabScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.componentmodel.Win32Exception, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshTabs", tabScope == null ? null : tabScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +222,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void ResetSelectedProperty() throws Throwable, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetSelectedProperty");
         } catch (JCNativeException jcne) {
@@ -236,7 +236,7 @@ public class PropertyGrid extends ContainerControl  {
      */
     @Deprecated 
     public boolean EnsurePendingChangesCommitted() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
     }
 
     /**
@@ -245,7 +245,7 @@ public class PropertyGrid extends ContainerControl  {
      */
     @Deprecated 
     public void DropDownDone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
     }
 
     /**
@@ -254,7 +254,7 @@ public class PropertyGrid extends ContainerControl  {
      */
     @Deprecated 
     public void HandleF4() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
     }
 
     /**
@@ -263,7 +263,7 @@ public class PropertyGrid extends ContainerControl  {
      */
     @Deprecated 
     public void LoadState(RegistryKey key) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
     }
 
     /**
@@ -272,7 +272,7 @@ public class PropertyGrid extends ContainerControl  {
      */
     @Deprecated 
     public void SaveState(RegistryKey key) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
     }
 
 
@@ -281,9 +281,13 @@ public class PropertyGrid extends ContainerControl  {
     
     public boolean getCanShowCommands() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanShowCommands = null;
         try {
-            return (boolean)classInstance.Get("CanShowCommands");
+            retObjectCanShowCommands = classInstance.Get("CanShowCommands");
+            return (boolean)retObjectCanShowCommands;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanShowCommands != null ? retObjectCanShowCommands.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +295,13 @@ public class PropertyGrid extends ContainerControl  {
 
     public boolean getCanShowVisualStyleGlyphs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanShowVisualStyleGlyphs = null;
         try {
-            return (boolean)classInstance.Get("CanShowVisualStyleGlyphs");
+            retObjectCanShowVisualStyleGlyphs = classInstance.Get("CanShowVisualStyleGlyphs");
+            return (boolean)retObjectCanShowVisualStyleGlyphs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanShowVisualStyleGlyphs != null ? retObjectCanShowVisualStyleGlyphs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +309,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCanShowVisualStyleGlyphs(boolean CanShowVisualStyleGlyphs) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanShowVisualStyleGlyphs", CanShowVisualStyleGlyphs);
         } catch (JCNativeException jcne) {
@@ -311,9 +319,13 @@ public class PropertyGrid extends ContainerControl  {
 
     public boolean getCommandsVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsVisible = null;
         try {
-            return (boolean)classInstance.Get("CommandsVisible");
+            retObjectCommandsVisible = classInstance.Get("CommandsVisible");
+            return (boolean)retObjectCommandsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCommandsVisible != null ? retObjectCommandsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,9 +333,13 @@ public class PropertyGrid extends ContainerControl  {
 
     public boolean getCommandsVisibleIfAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsVisibleIfAvailable = null;
         try {
-            return (boolean)classInstance.Get("CommandsVisibleIfAvailable");
+            retObjectCommandsVisibleIfAvailable = classInstance.Get("CommandsVisibleIfAvailable");
+            return (boolean)retObjectCommandsVisibleIfAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCommandsVisibleIfAvailable != null ? retObjectCommandsVisibleIfAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +347,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCommandsVisibleIfAvailable(boolean CommandsVisibleIfAvailable) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.FormatException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandsVisibleIfAvailable", CommandsVisibleIfAvailable);
         } catch (JCNativeException jcne) {
@@ -341,9 +357,13 @@ public class PropertyGrid extends ContainerControl  {
 
     public boolean getHelpVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpVisible = null;
         try {
-            return (boolean)classInstance.Get("HelpVisible");
+            retObjectHelpVisible = classInstance.Get("HelpVisible");
+            return (boolean)retObjectHelpVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHelpVisible != null ? retObjectHelpVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +371,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setHelpVisible(boolean HelpVisible) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpVisible", HelpVisible);
         } catch (JCNativeException jcne) {
@@ -361,9 +381,13 @@ public class PropertyGrid extends ContainerControl  {
 
     public boolean getLargeButtons() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLargeButtons = null;
         try {
-            return (boolean)classInstance.Get("LargeButtons");
+            retObjectLargeButtons = classInstance.Get("LargeButtons");
+            return (boolean)retObjectLargeButtons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLargeButtons != null ? retObjectLargeButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +395,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setLargeButtons(boolean LargeButtons) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LargeButtons", LargeButtons);
         } catch (JCNativeException jcne) {
@@ -381,9 +405,13 @@ public class PropertyGrid extends ContainerControl  {
 
     public boolean getToolbarVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolbarVisible = null;
         try {
-            return (boolean)classInstance.Get("ToolbarVisible");
+            retObjectToolbarVisible = classInstance.Get("ToolbarVisible");
+            return (boolean)retObjectToolbarVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectToolbarVisible != null ? retObjectToolbarVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +419,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setToolbarVisible(boolean ToolbarVisible) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolbarVisible", ToolbarVisible);
         } catch (JCNativeException jcne) {
@@ -401,9 +429,13 @@ public class PropertyGrid extends ContainerControl  {
 
     public boolean getUseCompatibleTextRendering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCompatibleTextRendering = null;
         try {
-            return (boolean)classInstance.Get("UseCompatibleTextRendering");
+            retObjectUseCompatibleTextRendering = classInstance.Get("UseCompatibleTextRendering");
+            return (boolean)retObjectUseCompatibleTextRendering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCompatibleTextRendering != null ? retObjectUseCompatibleTextRendering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +443,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setUseCompatibleTextRendering(boolean UseCompatibleTextRendering) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCompatibleTextRendering", UseCompatibleTextRendering);
         } catch (JCNativeException jcne) {
@@ -421,10 +453,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public AttributeCollection getBrowsableAttributes() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBrowsableAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BrowsableAttributes");
+            retObjectBrowsableAttributes = classInstance.Get("BrowsableAttributes");
+            JCObject val = (JCObject)retObjectBrowsableAttributes;
             return new AttributeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBrowsableAttributes != null ? retObjectBrowsableAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +468,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setBrowsableAttributes(AttributeCollection BrowsableAttributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BrowsableAttributes", BrowsableAttributes == null ? null : BrowsableAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -442,10 +478,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCategoryForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CategoryForeColor");
+            retObjectCategoryForeColor = classInstance.Get("CategoryForeColor");
+            JCObject val = (JCObject)retObjectCategoryForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategoryForeColor != null ? retObjectCategoryForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,7 +493,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCategoryForeColor(Color CategoryForeColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryForeColor", CategoryForeColor == null ? null : CategoryForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -463,10 +503,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCategorySplitterColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategorySplitterColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CategorySplitterColor");
+            retObjectCategorySplitterColor = classInstance.Get("CategorySplitterColor");
+            JCObject val = (JCObject)retObjectCategorySplitterColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategorySplitterColor != null ? retObjectCategorySplitterColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,7 +518,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCategorySplitterColor(Color CategorySplitterColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategorySplitterColor", CategorySplitterColor == null ? null : CategorySplitterColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -484,10 +528,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCommandsActiveLinkColor() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsActiveLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandsActiveLinkColor");
+            retObjectCommandsActiveLinkColor = classInstance.Get("CommandsActiveLinkColor");
+            JCObject val = (JCObject)retObjectCommandsActiveLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandsActiveLinkColor != null ? retObjectCommandsActiveLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,7 +543,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCommandsActiveLinkColor(Color CommandsActiveLinkColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandsActiveLinkColor", CommandsActiveLinkColor == null ? null : CommandsActiveLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -505,10 +553,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCommandsBackColor() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandsBackColor");
+            retObjectCommandsBackColor = classInstance.Get("CommandsBackColor");
+            JCObject val = (JCObject)retObjectCommandsBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandsBackColor != null ? retObjectCommandsBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,7 +568,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCommandsBackColor(Color CommandsBackColor) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandsBackColor", CommandsBackColor == null ? null : CommandsBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -526,10 +578,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCommandsBorderColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsBorderColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandsBorderColor");
+            retObjectCommandsBorderColor = classInstance.Get("CommandsBorderColor");
+            JCObject val = (JCObject)retObjectCommandsBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandsBorderColor != null ? retObjectCommandsBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,7 +593,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCommandsBorderColor(Color CommandsBorderColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandsBorderColor", CommandsBorderColor == null ? null : CommandsBorderColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -547,10 +603,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCommandsDisabledLinkColor() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsDisabledLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandsDisabledLinkColor");
+            retObjectCommandsDisabledLinkColor = classInstance.Get("CommandsDisabledLinkColor");
+            JCObject val = (JCObject)retObjectCommandsDisabledLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandsDisabledLinkColor != null ? retObjectCommandsDisabledLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,7 +618,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCommandsDisabledLinkColor(Color CommandsDisabledLinkColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandsDisabledLinkColor", CommandsDisabledLinkColor == null ? null : CommandsDisabledLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -568,10 +628,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCommandsForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandsForeColor");
+            retObjectCommandsForeColor = classInstance.Get("CommandsForeColor");
+            JCObject val = (JCObject)retObjectCommandsForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandsForeColor != null ? retObjectCommandsForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -579,7 +643,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCommandsForeColor(Color CommandsForeColor) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandsForeColor", CommandsForeColor == null ? null : CommandsForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -589,10 +653,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getCommandsLinkColor() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandsLinkColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandsLinkColor");
+            retObjectCommandsLinkColor = classInstance.Get("CommandsLinkColor");
+            JCObject val = (JCObject)retObjectCommandsLinkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandsLinkColor != null ? retObjectCommandsLinkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,7 +668,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setCommandsLinkColor(Color CommandsLinkColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandsLinkColor", CommandsLinkColor == null ? null : CommandsLinkColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -610,10 +678,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getDisabledItemForeColor() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisabledItemForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisabledItemForeColor");
+            retObjectDisabledItemForeColor = classInstance.Get("DisabledItemForeColor");
+            JCObject val = (JCObject)retObjectDisabledItemForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisabledItemForeColor != null ? retObjectDisabledItemForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,7 +693,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setDisabledItemForeColor(Color DisabledItemForeColor) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisabledItemForeColor", DisabledItemForeColor == null ? null : DisabledItemForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -631,10 +703,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getHelpBackColor() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HelpBackColor");
+            retObjectHelpBackColor = classInstance.Get("HelpBackColor");
+            JCObject val = (JCObject)retObjectHelpBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHelpBackColor != null ? retObjectHelpBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,7 +718,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setHelpBackColor(Color HelpBackColor) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpBackColor", HelpBackColor == null ? null : HelpBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -652,10 +728,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getHelpBorderColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpBorderColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HelpBorderColor");
+            retObjectHelpBorderColor = classInstance.Get("HelpBorderColor");
+            JCObject val = (JCObject)retObjectHelpBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHelpBorderColor != null ? retObjectHelpBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,7 +743,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setHelpBorderColor(Color HelpBorderColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpBorderColor", HelpBorderColor == null ? null : HelpBorderColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -673,10 +753,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getHelpForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HelpForeColor");
+            retObjectHelpForeColor = classInstance.Get("HelpForeColor");
+            JCObject val = (JCObject)retObjectHelpForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHelpForeColor != null ? retObjectHelpForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,7 +768,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setHelpForeColor(Color HelpForeColor) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpForeColor", HelpForeColor == null ? null : HelpForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -694,10 +778,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getLineColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LineColor");
+            retObjectLineColor = classInstance.Get("LineColor");
+            JCObject val = (JCObject)retObjectLineColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineColor != null ? retObjectLineColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -705,7 +793,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setLineColor(Color LineColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineColor", LineColor == null ? null : LineColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -715,10 +803,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getSelectedItemWithFocusBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItemWithFocusBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItemWithFocusBackColor");
+            retObjectSelectedItemWithFocusBackColor = classInstance.Get("SelectedItemWithFocusBackColor");
+            JCObject val = (JCObject)retObjectSelectedItemWithFocusBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItemWithFocusBackColor != null ? retObjectSelectedItemWithFocusBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,7 +818,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setSelectedItemWithFocusBackColor(Color SelectedItemWithFocusBackColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedItemWithFocusBackColor", SelectedItemWithFocusBackColor == null ? null : SelectedItemWithFocusBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -736,10 +828,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getSelectedItemWithFocusForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItemWithFocusForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItemWithFocusForeColor");
+            retObjectSelectedItemWithFocusForeColor = classInstance.Get("SelectedItemWithFocusForeColor");
+            JCObject val = (JCObject)retObjectSelectedItemWithFocusForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItemWithFocusForeColor != null ? retObjectSelectedItemWithFocusForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -747,7 +843,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setSelectedItemWithFocusForeColor(Color SelectedItemWithFocusForeColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedItemWithFocusForeColor", SelectedItemWithFocusForeColor == null ? null : SelectedItemWithFocusForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -757,10 +853,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getViewBackColor() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewBackColor");
+            retObjectViewBackColor = classInstance.Get("ViewBackColor");
+            JCObject val = (JCObject)retObjectViewBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewBackColor != null ? retObjectViewBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -768,7 +868,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setViewBackColor(Color ViewBackColor) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewBackColor", ViewBackColor == null ? null : ViewBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -778,10 +878,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getViewBorderColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewBorderColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewBorderColor");
+            retObjectViewBorderColor = classInstance.Get("ViewBorderColor");
+            JCObject val = (JCObject)retObjectViewBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewBorderColor != null ? retObjectViewBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -789,7 +893,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setViewBorderColor(Color ViewBorderColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewBorderColor", ViewBorderColor == null ? null : ViewBorderColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -799,10 +903,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Color getViewForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ViewForeColor");
+            retObjectViewForeColor = classInstance.Get("ViewForeColor");
+            JCObject val = (JCObject)retObjectViewForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewForeColor != null ? retObjectViewForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -810,7 +918,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setViewForeColor(Color ViewForeColor) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ViewForeColor", ViewForeColor == null ? null : ViewForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -820,10 +928,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Point getContextMenuDefaultLocation() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextMenuDefaultLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextMenuDefaultLocation");
+            retObjectContextMenuDefaultLocation = classInstance.Get("ContextMenuDefaultLocation");
+            JCObject val = (JCObject)retObjectContextMenuDefaultLocation;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuDefaultLocation != null ? retObjectContextMenuDefaultLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -831,10 +943,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public NetObject getSelectedObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedObject");
+            retObjectSelectedObject = classInstance.Get("SelectedObject");
+            JCObject val = (JCObject)retObjectSelectedObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedObject != null ? retObjectSelectedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -842,7 +958,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setSelectedObject(NetObject SelectedObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.FormatException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedObject", SelectedObject == null ? null : SelectedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -852,16 +968,20 @@ public class PropertyGrid extends ContainerControl  {
 
     public final NetObject[] getSelectedObjects() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedObjects = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SelectedObjects");
+            retObjectSelectedObjects = classInstance.Get("SelectedObjects");
+            JCObject resultingObjects = (JCObject)retObjectSelectedObjects;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedObjects != null ? retObjectSelectedObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -869,7 +989,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setSelectedObjects(NetObject[] SelectedObjects) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.InvalidCastException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedObjects", toObjectFromArray(SelectedObjects));
         } catch (JCNativeException jcne) {
@@ -879,10 +999,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public PropertyTab getSelectedTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedTab = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedTab");
+            retObjectSelectedTab = classInstance.Get("SelectedTab");
+            JCObject val = (JCObject)retObjectSelectedTab;
             return new PropertyTab(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedTab != null ? retObjectSelectedTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -890,10 +1014,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public GridItem getSelectedGridItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedGridItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedGridItem");
+            retObjectSelectedGridItem = classInstance.Get("SelectedGridItem");
+            JCObject val = (JCObject)retObjectSelectedGridItem;
             return new GridItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedGridItem != null ? retObjectSelectedGridItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -901,7 +1029,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setSelectedGridItem(GridItem SelectedGridItem) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.PlatformNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedGridItem", SelectedGridItem == null ? null : SelectedGridItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -911,10 +1039,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -922,7 +1054,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -932,10 +1064,14 @@ public class PropertyGrid extends ContainerControl  {
 
     public PropertySort getPropertySort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertySort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertySort");
+            retObjectPropertySort = classInstance.Get("PropertySort");
+            JCObject val = (JCObject)retObjectPropertySort;
             return new PropertySort(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertySort != null ? retObjectPropertySort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -943,7 +1079,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void setPropertySort(PropertySort PropertySort) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertySort", PropertySort == null ? null : PropertySort.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -958,7 +1094,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -968,7 +1104,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -978,7 +1114,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -988,7 +1124,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -998,7 +1134,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1008,7 +1144,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1018,7 +1154,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1028,7 +1164,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1038,7 +1174,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1048,7 +1184,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1058,7 +1194,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1068,7 +1204,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1078,7 +1214,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addPropertySortChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertySortChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1088,7 +1224,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removePropertySortChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertySortChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1098,7 +1234,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addSelectedObjectsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedObjectsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1108,7 +1244,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeSelectedObjectsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedObjectsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1118,7 +1254,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1128,7 +1264,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1138,7 +1274,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -1148,7 +1284,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -1158,7 +1294,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -1168,7 +1304,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -1178,7 +1314,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -1188,7 +1324,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -1198,7 +1334,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1208,7 +1344,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1218,7 +1354,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1228,7 +1364,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1238,7 +1374,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -1248,7 +1384,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -1258,7 +1394,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addPropertyTabChanged(PropertyTabChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1268,7 +1404,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removePropertyTabChanged(PropertyTabChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1278,7 +1414,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addPropertyValueChanged(PropertyValueChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1288,7 +1424,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removePropertyValueChanged(PropertyValueChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1298,7 +1434,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void addSelectedGridItemChanged(SelectedGridItemChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedGridItemChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1308,7 +1444,7 @@ public class PropertyGrid extends ContainerControl  {
 
     public void removeSelectedGridItemChanged(SelectedGridItemChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedGridItemChanged", handler);
         } catch (JCNativeException jcne) {

@@ -154,9 +154,13 @@ public class FeatureSupport extends NetObject  {
     
     public boolean IsPresent(NetObject feature, Version minimumVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPresent = null;
         try {
-            return (boolean)classInstance.Invoke("IsPresent", feature == null ? null : feature.getJCOInstance(), minimumVersion == null ? null : minimumVersion.getJCOInstance());
+            retObjectIsPresent = classInstance.Invoke("IsPresent", feature == null ? null : feature.getJCOInstance(), minimumVersion == null ? null : minimumVersion.getJCOInstance());
+            return (boolean)retObjectIsPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPresent != null ? retObjectIsPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class FeatureSupport extends NetObject  {
 
     public boolean IsPresent(NetObject feature) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPresent = null;
         try {
-            return (boolean)classInstance.Invoke("IsPresent", feature == null ? null : feature.getJCOInstance());
+            retObjectIsPresent = classInstance.Invoke("IsPresent", feature == null ? null : feature.getJCOInstance());
+            return (boolean)retObjectIsPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPresent != null ? retObjectIsPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class FeatureSupport extends NetObject  {
 
     public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName, Version minimumVersion) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPresent = null;
         try {
-            return (boolean)classType.Invoke("IsPresent", featureClassName, featureConstName, minimumVersion == null ? null : minimumVersion.getJCOInstance());
+            retObjectIsPresent = classType.Invoke("IsPresent", featureClassName, featureConstName, minimumVersion == null ? null : minimumVersion.getJCOInstance());
+            return (boolean)retObjectIsPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPresent != null ? retObjectIsPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class FeatureSupport extends NetObject  {
 
     public static boolean IsPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPresent = null;
         try {
-            return (boolean)classType.Invoke("IsPresent", featureClassName, featureConstName);
+            retObjectIsPresent = classType.Invoke("IsPresent", featureClassName, featureConstName);
+            return (boolean)retObjectIsPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPresent != null ? retObjectIsPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +210,14 @@ public class FeatureSupport extends NetObject  {
 
     public Version GetVersionPresent(NetObject feature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVersionPresent = null;
         try {
-            JCObject objGetVersionPresent = (JCObject)classInstance.Invoke("GetVersionPresent", feature == null ? null : feature.getJCOInstance());
+            retObjectGetVersionPresent = classInstance.Invoke("GetVersionPresent", feature == null ? null : feature.getJCOInstance());
+            JCObject objGetVersionPresent = (JCObject)retObjectGetVersionPresent;
             return new Version(objGetVersionPresent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVersionPresent != null ? retObjectGetVersionPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +225,14 @@ public class FeatureSupport extends NetObject  {
 
     public static Version GetVersionPresent(java.lang.String featureClassName, java.lang.String featureConstName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetVersionPresent = null;
         try {
-            JCObject objGetVersionPresent = (JCObject)classType.Invoke("GetVersionPresent", featureClassName, featureConstName);
+            retObjectGetVersionPresent = classType.Invoke("GetVersionPresent", featureClassName, featureConstName);
+            JCObject objGetVersionPresent = (JCObject)retObjectGetVersionPresent;
             return new Version(objGetVersionPresent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVersionPresent != null ? retObjectGetVersionPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

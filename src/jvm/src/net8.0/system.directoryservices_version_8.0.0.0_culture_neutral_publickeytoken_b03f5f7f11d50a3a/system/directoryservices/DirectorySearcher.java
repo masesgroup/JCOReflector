@@ -245,10 +245,14 @@ public class DirectorySearcher extends Component  {
     
     public SearchResult FindOne() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindOne = null;
         try {
-            JCObject objFindOne = (JCObject)classInstance.Invoke("FindOne");
+            retObjectFindOne = classInstance.Invoke("FindOne");
+            JCObject objFindOne = (JCObject)retObjectFindOne;
             return new SearchResult(objFindOne);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindOne != null ? retObjectFindOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +260,14 @@ public class DirectorySearcher extends Component  {
 
     public SearchResultCollection FindAll() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException, system.FormatException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAll = null;
         try {
-            JCObject objFindAll = (JCObject)classInstance.Invoke("FindAll");
+            retObjectFindAll = classInstance.Invoke("FindAll");
+            JCObject objFindAll = (JCObject)retObjectFindAll;
             return new SearchResultCollection(objFindAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAll != null ? retObjectFindAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +279,13 @@ public class DirectorySearcher extends Component  {
     
     public boolean getAsynchronous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsynchronous = null;
         try {
-            return (boolean)classInstance.Get("Asynchronous");
+            retObjectAsynchronous = classInstance.Get("Asynchronous");
+            return (boolean)retObjectAsynchronous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsynchronous != null ? retObjectAsynchronous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +293,7 @@ public class DirectorySearcher extends Component  {
 
     public void setAsynchronous(boolean Asynchronous) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Asynchronous", Asynchronous);
         } catch (JCNativeException jcne) {
@@ -291,9 +303,13 @@ public class DirectorySearcher extends Component  {
 
     public boolean getCacheResults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheResults = null;
         try {
-            return (boolean)classInstance.Get("CacheResults");
+            retObjectCacheResults = classInstance.Get("CacheResults");
+            return (boolean)retObjectCacheResults;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCacheResults != null ? retObjectCacheResults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +317,7 @@ public class DirectorySearcher extends Component  {
 
     public void setCacheResults(boolean CacheResults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheResults", CacheResults);
         } catch (JCNativeException jcne) {
@@ -311,9 +327,13 @@ public class DirectorySearcher extends Component  {
 
     public boolean getPropertyNamesOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyNamesOnly = null;
         try {
-            return (boolean)classInstance.Get("PropertyNamesOnly");
+            retObjectPropertyNamesOnly = classInstance.Get("PropertyNamesOnly");
+            return (boolean)retObjectPropertyNamesOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPropertyNamesOnly != null ? retObjectPropertyNamesOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +341,7 @@ public class DirectorySearcher extends Component  {
 
     public void setPropertyNamesOnly(boolean PropertyNamesOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyNamesOnly", PropertyNamesOnly);
         } catch (JCNativeException jcne) {
@@ -331,9 +351,13 @@ public class DirectorySearcher extends Component  {
 
     public boolean getTombstone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTombstone = null;
         try {
-            return (boolean)classInstance.Get("Tombstone");
+            retObjectTombstone = classInstance.Get("Tombstone");
+            return (boolean)retObjectTombstone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTombstone != null ? retObjectTombstone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +365,7 @@ public class DirectorySearcher extends Component  {
 
     public void setTombstone(boolean Tombstone) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tombstone", Tombstone);
         } catch (JCNativeException jcne) {
@@ -351,9 +375,19 @@ public class DirectorySearcher extends Component  {
 
     public int getPageSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSize = null;
         try {
-            return (int)classInstance.Get("PageSize");
+            retObjectPageSize = classInstance.Get("PageSize");
+            return (int)retObjectPageSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPageSizeNumber = (java.lang.Number)retObjectPageSize;
+                return retObjectPageSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +395,7 @@ public class DirectorySearcher extends Component  {
 
     public void setPageSize(int PageSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSize", PageSize);
         } catch (JCNativeException jcne) {
@@ -371,9 +405,19 @@ public class DirectorySearcher extends Component  {
 
     public int getSizeLimit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeLimit = null;
         try {
-            return (int)classInstance.Get("SizeLimit");
+            retObjectSizeLimit = classInstance.Get("SizeLimit");
+            return (int)retObjectSizeLimit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSizeLimitNumber = (java.lang.Number)retObjectSizeLimit;
+                return retObjectSizeLimitNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSizeLimit != null ? retObjectSizeLimit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +425,7 @@ public class DirectorySearcher extends Component  {
 
     public void setSizeLimit(int SizeLimit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeLimit", SizeLimit);
         } catch (JCNativeException jcne) {
@@ -391,10 +435,14 @@ public class DirectorySearcher extends Component  {
 
     public StringCollection getPropertiesToLoad() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertiesToLoad = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertiesToLoad");
+            retObjectPropertiesToLoad = classInstance.Get("PropertiesToLoad");
+            JCObject val = (JCObject)retObjectPropertiesToLoad;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertiesToLoad != null ? retObjectPropertiesToLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +450,14 @@ public class DirectorySearcher extends Component  {
 
     public DereferenceAlias getDerefAlias() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDerefAlias = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DerefAlias");
+            retObjectDerefAlias = classInstance.Get("DerefAlias");
+            JCObject val = (JCObject)retObjectDerefAlias;
             return new DereferenceAlias(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDerefAlias != null ? retObjectDerefAlias.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,7 +465,7 @@ public class DirectorySearcher extends Component  {
 
     public void setDerefAlias(DereferenceAlias DerefAlias) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DerefAlias", DerefAlias == null ? null : DerefAlias.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -423,10 +475,14 @@ public class DirectorySearcher extends Component  {
 
     public DirectoryEntry getSearchRoot() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSearchRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SearchRoot");
+            retObjectSearchRoot = classInstance.Get("SearchRoot");
+            JCObject val = (JCObject)retObjectSearchRoot;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSearchRoot != null ? retObjectSearchRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,7 +490,7 @@ public class DirectorySearcher extends Component  {
 
     public void setSearchRoot(DirectoryEntry SearchRoot) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SearchRoot", SearchRoot == null ? null : SearchRoot.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -444,10 +500,14 @@ public class DirectorySearcher extends Component  {
 
     public DirectorySynchronization getDirectorySynchronization() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectorySynchronization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DirectorySynchronization");
+            retObjectDirectorySynchronization = classInstance.Get("DirectorySynchronization");
+            JCObject val = (JCObject)retObjectDirectorySynchronization;
             return new DirectorySynchronization(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectorySynchronization != null ? retObjectDirectorySynchronization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,7 +515,7 @@ public class DirectorySearcher extends Component  {
 
     public void setDirectorySynchronization(DirectorySynchronization DirectorySynchronization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DirectorySynchronization", DirectorySynchronization == null ? null : DirectorySynchronization.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -465,10 +525,14 @@ public class DirectorySearcher extends Component  {
 
     public DirectoryVirtualListView getVirtualListView() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualListView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VirtualListView");
+            retObjectVirtualListView = classInstance.Get("VirtualListView");
+            JCObject val = (JCObject)retObjectVirtualListView;
             return new DirectoryVirtualListView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualListView != null ? retObjectVirtualListView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +540,7 @@ public class DirectorySearcher extends Component  {
 
     public void setVirtualListView(DirectoryVirtualListView VirtualListView) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualListView", VirtualListView == null ? null : VirtualListView.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -486,10 +550,14 @@ public class DirectorySearcher extends Component  {
 
     public ExtendedDN getExtendedDN() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedDN = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedDN");
+            retObjectExtendedDN = classInstance.Get("ExtendedDN");
+            JCObject val = (JCObject)retObjectExtendedDN;
             return new ExtendedDN(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedDN != null ? retObjectExtendedDN.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,7 +565,7 @@ public class DirectorySearcher extends Component  {
 
     public void setExtendedDN(ExtendedDN ExtendedDN) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedDN", ExtendedDN == null ? null : ExtendedDN.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -507,10 +575,14 @@ public class DirectorySearcher extends Component  {
 
     public ReferralChasingOption getReferralChasing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralChasing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferralChasing");
+            retObjectReferralChasing = classInstance.Get("ReferralChasing");
+            JCObject val = (JCObject)retObjectReferralChasing;
             return new ReferralChasingOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferralChasing != null ? retObjectReferralChasing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +590,7 @@ public class DirectorySearcher extends Component  {
 
     public void setReferralChasing(ReferralChasingOption ReferralChasing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferralChasing", ReferralChasing == null ? null : ReferralChasing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -528,10 +600,14 @@ public class DirectorySearcher extends Component  {
 
     public SearchScope getSearchScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSearchScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SearchScope");
+            retObjectSearchScope = classInstance.Get("SearchScope");
+            JCObject val = (JCObject)retObjectSearchScope;
             return new SearchScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSearchScope != null ? retObjectSearchScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,7 +615,7 @@ public class DirectorySearcher extends Component  {
 
     public void setSearchScope(SearchScope SearchScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SearchScope", SearchScope == null ? null : SearchScope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -549,10 +625,14 @@ public class DirectorySearcher extends Component  {
 
     public SecurityMasks getSecurityMasks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityMasks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityMasks");
+            retObjectSecurityMasks = classInstance.Get("SecurityMasks");
+            JCObject val = (JCObject)retObjectSecurityMasks;
             return new SecurityMasks(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityMasks != null ? retObjectSecurityMasks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,7 +640,7 @@ public class DirectorySearcher extends Component  {
 
     public void setSecurityMasks(SecurityMasks SecurityMasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityMasks", SecurityMasks == null ? null : SecurityMasks.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -570,10 +650,14 @@ public class DirectorySearcher extends Component  {
 
     public SortOption getSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Sort");
+            retObjectSort = classInstance.Get("Sort");
+            JCObject val = (JCObject)retObjectSort;
             return new SortOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSort != null ? retObjectSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,7 +665,7 @@ public class DirectorySearcher extends Component  {
 
     public void setSort(SortOption Sort) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sort", Sort == null ? null : Sort.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -591,9 +675,13 @@ public class DirectorySearcher extends Component  {
 
     public java.lang.String getAttributeScopeQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeScopeQuery = null;
         try {
-            return (java.lang.String)classInstance.Get("AttributeScopeQuery");
+            retObjectAttributeScopeQuery = classInstance.Get("AttributeScopeQuery");
+            return (java.lang.String)retObjectAttributeScopeQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAttributeScopeQuery != null ? retObjectAttributeScopeQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,7 +689,7 @@ public class DirectorySearcher extends Component  {
 
     public void setAttributeScopeQuery(java.lang.String AttributeScopeQuery) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AttributeScopeQuery", AttributeScopeQuery);
         } catch (JCNativeException jcne) {
@@ -611,9 +699,13 @@ public class DirectorySearcher extends Component  {
 
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            return (java.lang.String)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,7 +713,7 @@ public class DirectorySearcher extends Component  {
 
     public void setFilter(java.lang.String Filter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filter", Filter);
         } catch (JCNativeException jcne) {
@@ -631,10 +723,14 @@ public class DirectorySearcher extends Component  {
 
     public TimeSpan getClientTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientTimeout");
+            retObjectClientTimeout = classInstance.Get("ClientTimeout");
+            JCObject val = (JCObject)retObjectClientTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientTimeout != null ? retObjectClientTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,7 +738,7 @@ public class DirectorySearcher extends Component  {
 
     public void setClientTimeout(TimeSpan ClientTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientTimeout", ClientTimeout == null ? null : ClientTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -652,10 +748,14 @@ public class DirectorySearcher extends Component  {
 
     public TimeSpan getServerPageTimeLimit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerPageTimeLimit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServerPageTimeLimit");
+            retObjectServerPageTimeLimit = classInstance.Get("ServerPageTimeLimit");
+            JCObject val = (JCObject)retObjectServerPageTimeLimit;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServerPageTimeLimit != null ? retObjectServerPageTimeLimit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,7 +763,7 @@ public class DirectorySearcher extends Component  {
 
     public void setServerPageTimeLimit(TimeSpan ServerPageTimeLimit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerPageTimeLimit", ServerPageTimeLimit == null ? null : ServerPageTimeLimit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -673,10 +773,14 @@ public class DirectorySearcher extends Component  {
 
     public TimeSpan getServerTimeLimit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerTimeLimit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServerTimeLimit");
+            retObjectServerTimeLimit = classInstance.Get("ServerTimeLimit");
+            JCObject val = (JCObject)retObjectServerTimeLimit;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServerTimeLimit != null ? retObjectServerTimeLimit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,7 +788,7 @@ public class DirectorySearcher extends Component  {
 
     public void setServerTimeLimit(TimeSpan ServerTimeLimit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerTimeLimit", ServerTimeLimit == null ? null : ServerTimeLimit.getJCOInstance());
         } catch (JCNativeException jcne) {

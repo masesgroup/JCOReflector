@@ -159,10 +159,14 @@ public class StringLocalizerProviders extends NetObject  {
     
     public static IStringLocalizerProvider getDataAnnotationStringLocalizerProvider() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDataAnnotationStringLocalizerProvider = null;
         try {
-            JCObject val = (JCObject)classType.Get("DataAnnotationStringLocalizerProvider");
+            retObjectDataAnnotationStringLocalizerProvider = classType.Get("DataAnnotationStringLocalizerProvider");
+            JCObject val = (JCObject)retObjectDataAnnotationStringLocalizerProvider;
             return new IStringLocalizerProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataAnnotationStringLocalizerProvider != null ? retObjectDataAnnotationStringLocalizerProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class StringLocalizerProviders extends NetObject  {
 
     public static void setDataAnnotationStringLocalizerProvider(IStringLocalizerProvider DataAnnotationStringLocalizerProvider) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DataAnnotationStringLocalizerProvider", DataAnnotationStringLocalizerProvider == null ? null : DataAnnotationStringLocalizerProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

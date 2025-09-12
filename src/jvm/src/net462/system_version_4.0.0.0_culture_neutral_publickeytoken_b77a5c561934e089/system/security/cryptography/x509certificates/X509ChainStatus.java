@@ -161,10 +161,14 @@ public class X509ChainStatus extends ValueType  {
     
     public X509ChainStatusFlags getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new X509ChainStatusFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class X509ChainStatus extends ValueType  {
 
     public void setStatus(X509ChainStatusFlags Status) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Status", Status == null ? null : Status.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class X509ChainStatus extends ValueType  {
 
     public java.lang.String getStatusInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusInformation = null;
         try {
-            return (java.lang.String)classInstance.Get("StatusInformation");
+            retObjectStatusInformation = classInstance.Get("StatusInformation");
+            return (java.lang.String)retObjectStatusInformation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStatusInformation != null ? retObjectStatusInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class X509ChainStatus extends ValueType  {
 
     public void setStatusInformation(java.lang.String StatusInformation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StatusInformation", StatusInformation);
         } catch (JCNativeException jcne) {

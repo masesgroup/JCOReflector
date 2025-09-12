@@ -164,10 +164,14 @@ public class MsmqIntegrationBindingElement extends MsmqBindingElementBase  {
     
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class MsmqIntegrationBindingElement extends MsmqBindingElementBase  {
     
     public MsmqMessageSerializationFormat getSerializationFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializationFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SerializationFormat");
+            retObjectSerializationFormat = classInstance.Get("SerializationFormat");
+            JCObject val = (JCObject)retObjectSerializationFormat;
             return new MsmqMessageSerializationFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializationFormat != null ? retObjectSerializationFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class MsmqIntegrationBindingElement extends MsmqBindingElementBase  {
 
     public void setSerializationFormat(MsmqMessageSerializationFormat SerializationFormat) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializationFormat", SerializationFormat == null ? null : SerializationFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,16 +208,20 @@ public class MsmqIntegrationBindingElement extends MsmqBindingElementBase  {
 
     public final NetType[] getTargetSerializationTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetSerializationTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TargetSerializationTypes");
+            retObjectTargetSerializationTypes = classInstance.Get("TargetSerializationTypes");
+            JCObject resultingObjects = (JCObject)retObjectTargetSerializationTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetSerializationTypes != null ? retObjectTargetSerializationTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class MsmqIntegrationBindingElement extends MsmqBindingElementBase  {
 
     public void setTargetSerializationTypes(NetType[] TargetSerializationTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetSerializationTypes", toObjectFromArray(TargetSerializationTypes));
         } catch (JCNativeException jcne) {

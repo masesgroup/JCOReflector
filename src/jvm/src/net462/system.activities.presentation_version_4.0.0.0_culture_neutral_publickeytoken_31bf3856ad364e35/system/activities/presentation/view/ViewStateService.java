@@ -155,9 +155,13 @@ public class ViewStateService extends NetObject  {
     
     public boolean RemoveViewState(ModelItem modelItem, java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveViewState = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            retObjectRemoveViewState = classInstance.Invoke("RemoveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            return (boolean)retObjectRemoveViewState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveViewState != null ? retObjectRemoveViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class ViewStateService extends NetObject  {
 
     public NetObject RetrieveViewState(ModelItem modelItem, java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetrieveViewState = null;
         try {
-            JCObject objRetrieveViewState = (JCObject)classInstance.Invoke("RetrieveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            retObjectRetrieveViewState = classInstance.Invoke("RetrieveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            JCObject objRetrieveViewState = (JCObject)retObjectRetrieveViewState;
             return new NetObject(objRetrieveViewState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRetrieveViewState != null ? retObjectRetrieveViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class ViewStateService extends NetObject  {
 
     public void StoreViewState(ModelItem modelItem, java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreViewState", modelItem == null ? null : modelItem.getJCOInstance(), key, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +194,7 @@ public class ViewStateService extends NetObject  {
 
     public void StoreViewStateWithUndo(ModelItem modelItem, java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreViewStateWithUndo", modelItem == null ? null : modelItem.getJCOInstance(), key, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +213,7 @@ public class ViewStateService extends NetObject  {
 
     public void addUndoableViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UndoableViewStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -215,7 +223,7 @@ public class ViewStateService extends NetObject  {
 
     public void removeUndoableViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UndoableViewStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -225,7 +233,7 @@ public class ViewStateService extends NetObject  {
 
     public void addViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ViewStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -235,7 +243,7 @@ public class ViewStateService extends NetObject  {
 
     public void removeViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ViewStateChanged", handler);
         } catch (JCNativeException jcne) {

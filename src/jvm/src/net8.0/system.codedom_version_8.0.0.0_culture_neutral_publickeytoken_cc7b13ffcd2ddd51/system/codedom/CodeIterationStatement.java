@@ -178,10 +178,14 @@ public class CodeIterationStatement extends CodeStatement  {
     
     public CodeExpression getTestExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTestExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TestExpression");
+            retObjectTestExpression = classInstance.Get("TestExpression");
+            JCObject val = (JCObject)retObjectTestExpression;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTestExpression != null ? retObjectTestExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class CodeIterationStatement extends CodeStatement  {
 
     public void setTestExpression(CodeExpression TestExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TestExpression", TestExpression == null ? null : TestExpression.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,10 +203,14 @@ public class CodeIterationStatement extends CodeStatement  {
 
     public CodeStatement getIncrementStatement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncrementStatement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IncrementStatement");
+            retObjectIncrementStatement = classInstance.Get("IncrementStatement");
+            JCObject val = (JCObject)retObjectIncrementStatement;
             return new CodeStatement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncrementStatement != null ? retObjectIncrementStatement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +218,7 @@ public class CodeIterationStatement extends CodeStatement  {
 
     public void setIncrementStatement(CodeStatement IncrementStatement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncrementStatement", IncrementStatement == null ? null : IncrementStatement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,10 +228,14 @@ public class CodeIterationStatement extends CodeStatement  {
 
     public CodeStatement getInitStatement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitStatement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitStatement");
+            retObjectInitStatement = classInstance.Get("InitStatement");
+            JCObject val = (JCObject)retObjectInitStatement;
             return new CodeStatement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitStatement != null ? retObjectInitStatement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +243,7 @@ public class CodeIterationStatement extends CodeStatement  {
 
     public void setInitStatement(CodeStatement InitStatement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitStatement", InitStatement == null ? null : InitStatement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,10 +253,14 @@ public class CodeIterationStatement extends CodeStatement  {
 
     public CodeStatementCollection getStatements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Statements");
+            retObjectStatements = classInstance.Get("Statements");
+            JCObject val = (JCObject)retObjectStatements;
             return new CodeStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatements != null ? retObjectStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

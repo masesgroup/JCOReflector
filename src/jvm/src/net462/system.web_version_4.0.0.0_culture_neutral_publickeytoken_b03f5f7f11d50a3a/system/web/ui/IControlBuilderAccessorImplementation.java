@@ -147,10 +147,14 @@ public class IControlBuilderAccessorImplementation extends NetObject implements 
     
     public ControlBuilder getControlBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlBuilder");
+            retObjectControlBuilder = classInstance.Get("ControlBuilder");
+            JCObject val = (JCObject)retObjectControlBuilder;
             return new ControlBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlBuilder != null ? retObjectControlBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -163,10 +163,14 @@ public class RealProxy extends NetObject  {
     
     public static NetObject GetStubData(RealProxy rp) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStubData = null;
         try {
-            JCObject objGetStubData = (JCObject)classType.Invoke("GetStubData", rp == null ? null : rp.getJCOInstance());
+            retObjectGetStubData = classType.Invoke("GetStubData", rp == null ? null : rp.getJCOInstance());
+            JCObject objGetStubData = (JCObject)retObjectGetStubData;
             return new NetObject(objGetStubData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStubData != null ? retObjectGetStubData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class RealProxy extends NetObject  {
 
     public NetObject GetTransparentProxy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTransparentProxy = null;
         try {
-            JCObject objGetTransparentProxy = (JCObject)classInstance.Invoke("GetTransparentProxy");
+            retObjectGetTransparentProxy = classInstance.Invoke("GetTransparentProxy");
+            JCObject objGetTransparentProxy = (JCObject)retObjectGetTransparentProxy;
             return new NetObject(objGetTransparentProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTransparentProxy != null ? retObjectGetTransparentProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class RealProxy extends NetObject  {
 
     public IConstructionReturnMessage InitializeServerObject(IConstructionCallMessage ctorMsg) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeServerObject = null;
         try {
-            JCObject objInitializeServerObject = (JCObject)classInstance.Invoke("InitializeServerObject", ctorMsg == null ? null : ctorMsg.getJCOInstance());
+            retObjectInitializeServerObject = classInstance.Invoke("InitializeServerObject", ctorMsg == null ? null : ctorMsg.getJCOInstance());
+            JCObject objInitializeServerObject = (JCObject)retObjectInitializeServerObject;
             return new IConstructionReturnMessageImplementation(objInitializeServerObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeServerObject != null ? retObjectInitializeServerObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class RealProxy extends NetObject  {
 
     public IMessage Invoke(IMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", msg == null ? null : msg.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", msg == null ? null : msg.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new IMessageImplementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class RealProxy extends NetObject  {
 
     public ObjRef CreateObjRef(NetType requestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObjRef = null;
         try {
-            JCObject objCreateObjRef = (JCObject)classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
+            retObjectCreateObjRef = classInstance.Invoke("CreateObjRef", requestedType == null ? null : requestedType.getJCOInstance());
+            JCObject objCreateObjRef = (JCObject)retObjectCreateObjRef;
             return new ObjRef(objCreateObjRef);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObjRef != null ? retObjectCreateObjRef.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class RealProxy extends NetObject  {
 
     public NetType GetProxiedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProxiedType = null;
         try {
-            JCObject objGetProxiedType = (JCObject)classInstance.Invoke("GetProxiedType");
+            retObjectGetProxiedType = classInstance.Invoke("GetProxiedType");
+            JCObject objGetProxiedType = (JCObject)retObjectGetProxiedType;
             return new NetType(objGetProxiedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProxiedType != null ? retObjectGetProxiedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +253,7 @@ public class RealProxy extends NetObject  {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +263,7 @@ public class RealProxy extends NetObject  {
 
     public static void SetStubData(RealProxy rp, NetObject stubData) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStubData", rp == null ? null : rp.getJCOInstance(), stubData == null ? null : stubData.getJCOInstance());
         } catch (JCNativeException jcne) {

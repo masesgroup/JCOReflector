@@ -142,7 +142,7 @@ public class IProcessPingCallbackImplementation extends NetObject implements IPr
     
     public void Respond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Respond");
         } catch (JCNativeException jcne) {

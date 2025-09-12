@@ -153,10 +153,14 @@ public class Nullable extends NetObject  {
     
     public static NetType GetUnderlyingType(NetType nullableType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUnderlyingType = null;
         try {
-            JCObject objGetUnderlyingType = (JCObject)classType.Invoke("GetUnderlyingType", nullableType == null ? null : nullableType.getJCOInstance());
+            retObjectGetUnderlyingType = classType.Invoke("GetUnderlyingType", nullableType == null ? null : nullableType.getJCOInstance());
+            JCObject objGetUnderlyingType = (JCObject)retObjectGetUnderlyingType;
             return new NetType(objGetUnderlyingType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnderlyingType != null ? retObjectGetUnderlyingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

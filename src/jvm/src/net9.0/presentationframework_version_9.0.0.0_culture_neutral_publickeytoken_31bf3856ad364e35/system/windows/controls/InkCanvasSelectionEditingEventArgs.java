@@ -161,10 +161,14 @@ public class InkCanvasSelectionEditingEventArgs extends CancelEventArgs  {
     
     public Rect getNewRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewRectangle");
+            retObjectNewRectangle = classInstance.Get("NewRectangle");
+            JCObject val = (JCObject)retObjectNewRectangle;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewRectangle != null ? retObjectNewRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class InkCanvasSelectionEditingEventArgs extends CancelEventArgs  {
 
     public void setNewRectangle(Rect NewRectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewRectangle", NewRectangle == null ? null : NewRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,10 +186,14 @@ public class InkCanvasSelectionEditingEventArgs extends CancelEventArgs  {
 
     public Rect getOldRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldRectangle");
+            retObjectOldRectangle = classInstance.Get("OldRectangle");
+            JCObject val = (JCObject)retObjectOldRectangle;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldRectangle != null ? retObjectOldRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

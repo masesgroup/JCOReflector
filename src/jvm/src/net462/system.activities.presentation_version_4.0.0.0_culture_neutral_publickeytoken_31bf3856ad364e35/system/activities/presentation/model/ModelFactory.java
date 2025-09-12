@@ -156,10 +156,14 @@ public class ModelFactory extends NetObject  {
     
     public static ModelItem CreateItem(EditingContext context, NetObject item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateItem = null;
         try {
-            JCObject objCreateItem = (JCObject)classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), item == null ? null : item.getJCOInstance());
+            retObjectCreateItem = classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), item == null ? null : item.getJCOInstance());
+            JCObject objCreateItem = (JCObject)retObjectCreateItem;
             return new ModelItem(objCreateItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateItem != null ? retObjectCreateItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ModelFactory extends NetObject  {
 
     public static ModelItem CreateItem(EditingContext context, NetType itemType, CreateOptions options, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateItem = null;
         try {
-            JCObject objCreateItem = (JCObject)classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), itemType == null ? null : itemType.getJCOInstance(), options == null ? null : options.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectCreateItem = classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), itemType == null ? null : itemType.getJCOInstance(), options == null ? null : options.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objCreateItem = (JCObject)retObjectCreateItem;
             return new ModelItem(objCreateItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateItem != null ? retObjectCreateItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class ModelFactory extends NetObject  {
 
     public static ModelItem CreateItem(EditingContext context, NetType itemType, NetObject... arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateItem = null;
         try {
-            JCObject objCreateItem = (JCObject)classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), itemType == null ? null : itemType.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectCreateItem = classType.Invoke("CreateItem", context == null ? null : context.getJCOInstance(), itemType == null ? null : itemType.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objCreateItem = (JCObject)retObjectCreateItem;
             return new ModelItem(objCreateItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateItem != null ? retObjectCreateItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class ModelFactory extends NetObject  {
 
     public static ModelItem CreateStaticMemberItem(EditingContext context, NetType type, java.lang.String memberName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateStaticMemberItem = null;
         try {
-            JCObject objCreateStaticMemberItem = (JCObject)classType.Invoke("CreateStaticMemberItem", context == null ? null : context.getJCOInstance(), type == null ? null : type.getJCOInstance(), memberName);
+            retObjectCreateStaticMemberItem = classType.Invoke("CreateStaticMemberItem", context == null ? null : context.getJCOInstance(), type == null ? null : type.getJCOInstance(), memberName);
+            JCObject objCreateStaticMemberItem = (JCObject)retObjectCreateStaticMemberItem;
             return new ModelItem(objCreateStaticMemberItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateStaticMemberItem != null ? retObjectCreateStaticMemberItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

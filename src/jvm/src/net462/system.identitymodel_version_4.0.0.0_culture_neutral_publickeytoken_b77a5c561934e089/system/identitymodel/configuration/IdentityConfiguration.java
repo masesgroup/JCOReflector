@@ -225,7 +225,7 @@ public class IdentityConfiguration extends NetObject  {
     
     public void Initialize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -239,9 +239,13 @@ public class IdentityConfiguration extends NetObject  {
     
     public boolean getDetectReplayedTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetectReplayedTokens = null;
         try {
-            return (boolean)classInstance.Get("DetectReplayedTokens");
+            retObjectDetectReplayedTokens = classInstance.Get("DetectReplayedTokens");
+            return (boolean)retObjectDetectReplayedTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDetectReplayedTokens != null ? retObjectDetectReplayedTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +253,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setDetectReplayedTokens(boolean DetectReplayedTokens) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DetectReplayedTokens", DetectReplayedTokens);
         } catch (JCNativeException jcne) {
@@ -259,9 +263,13 @@ public class IdentityConfiguration extends NetObject  {
 
     public boolean getIsInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitialized = null;
         try {
-            return (boolean)classInstance.Get("IsInitialized");
+            retObjectIsInitialized = classInstance.Get("IsInitialized");
+            return (boolean)retObjectIsInitialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitialized != null ? retObjectIsInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +277,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setIsInitialized(boolean IsInitialized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInitialized", IsInitialized);
         } catch (JCNativeException jcne) {
@@ -279,9 +287,13 @@ public class IdentityConfiguration extends NetObject  {
 
     public boolean getSaveBootstrapContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaveBootstrapContext = null;
         try {
-            return (boolean)classInstance.Get("SaveBootstrapContext");
+            retObjectSaveBootstrapContext = classInstance.Get("SaveBootstrapContext");
+            return (boolean)retObjectSaveBootstrapContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSaveBootstrapContext != null ? retObjectSaveBootstrapContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +301,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setSaveBootstrapContext(boolean SaveBootstrapContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SaveBootstrapContext", SaveBootstrapContext);
         } catch (JCNativeException jcne) {
@@ -299,10 +311,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public IdentityModelCaches getCaches() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaches = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Caches");
+            retObjectCaches = classInstance.Get("Caches");
+            JCObject val = (JCObject)retObjectCaches;
             return new IdentityModelCaches(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaches != null ? retObjectCaches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +326,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setCaches(IdentityModelCaches Caches) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caches", Caches == null ? null : Caches.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +336,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public SecurityTokenResolver getIssuerTokenResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerTokenResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerTokenResolver");
+            retObjectIssuerTokenResolver = classInstance.Get("IssuerTokenResolver");
+            JCObject val = (JCObject)retObjectIssuerTokenResolver;
             return new SecurityTokenResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerTokenResolver != null ? retObjectIssuerTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +351,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setIssuerTokenResolver(SecurityTokenResolver IssuerTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerTokenResolver", IssuerTokenResolver == null ? null : IssuerTokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,10 +361,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public SecurityTokenResolver getServiceTokenResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceTokenResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceTokenResolver");
+            retObjectServiceTokenResolver = classInstance.Get("ServiceTokenResolver");
+            JCObject val = (JCObject)retObjectServiceTokenResolver;
             return new SecurityTokenResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceTokenResolver != null ? retObjectServiceTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +376,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setServiceTokenResolver(SecurityTokenResolver ServiceTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceTokenResolver", ServiceTokenResolver == null ? null : ServiceTokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,10 +386,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public X509CertificateValidator getCertificateValidator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateValidator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateValidator");
+            retObjectCertificateValidator = classInstance.Get("CertificateValidator");
+            JCObject val = (JCObject)retObjectCertificateValidator;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateValidator != null ? retObjectCertificateValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +401,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setCertificateValidator(X509CertificateValidator CertificateValidator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateValidator", CertificateValidator == null ? null : CertificateValidator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +411,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public AudienceRestriction getAudienceRestriction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAudienceRestriction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AudienceRestriction");
+            retObjectAudienceRestriction = classInstance.Get("AudienceRestriction");
+            JCObject val = (JCObject)retObjectAudienceRestriction;
             return new AudienceRestriction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAudienceRestriction != null ? retObjectAudienceRestriction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +426,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setAudienceRestriction(AudienceRestriction AudienceRestriction) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AudienceRestriction", AudienceRestriction == null ? null : AudienceRestriction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,10 +436,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public IssuerNameRegistry getIssuerNameRegistry() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerNameRegistry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerNameRegistry");
+            retObjectIssuerNameRegistry = classInstance.Get("IssuerNameRegistry");
+            JCObject val = (JCObject)retObjectIssuerNameRegistry;
             return new IssuerNameRegistry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerNameRegistry != null ? retObjectIssuerNameRegistry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +451,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setIssuerNameRegistry(IssuerNameRegistry IssuerNameRegistry) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerNameRegistry", IssuerNameRegistry == null ? null : IssuerNameRegistry.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -425,10 +461,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public SecurityTokenHandlerCollection getSecurityTokenHandlers() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenHandlers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenHandlers");
+            retObjectSecurityTokenHandlers = classInstance.Get("SecurityTokenHandlers");
+            JCObject val = (JCObject)retObjectSecurityTokenHandlers;
             return new SecurityTokenHandlerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenHandlers != null ? retObjectSecurityTokenHandlers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,10 +476,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public SecurityTokenHandlerCollectionManager getSecurityTokenHandlerCollectionManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenHandlerCollectionManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenHandlerCollectionManager");
+            retObjectSecurityTokenHandlerCollectionManager = classInstance.Get("SecurityTokenHandlerCollectionManager");
+            JCObject val = (JCObject)retObjectSecurityTokenHandlerCollectionManager;
             return new SecurityTokenHandlerCollectionManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenHandlerCollectionManager != null ? retObjectSecurityTokenHandlerCollectionManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,10 +491,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public ClaimsAuthenticationManager getClaimsAuthenticationManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimsAuthenticationManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClaimsAuthenticationManager");
+            retObjectClaimsAuthenticationManager = classInstance.Get("ClaimsAuthenticationManager");
+            JCObject val = (JCObject)retObjectClaimsAuthenticationManager;
             return new ClaimsAuthenticationManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimsAuthenticationManager != null ? retObjectClaimsAuthenticationManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +506,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setClaimsAuthenticationManager(ClaimsAuthenticationManager ClaimsAuthenticationManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClaimsAuthenticationManager", ClaimsAuthenticationManager == null ? null : ClaimsAuthenticationManager.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -468,10 +516,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public ClaimsAuthorizationManager getClaimsAuthorizationManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimsAuthorizationManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClaimsAuthorizationManager");
+            retObjectClaimsAuthorizationManager = classInstance.Get("ClaimsAuthorizationManager");
+            JCObject val = (JCObject)retObjectClaimsAuthorizationManager;
             return new ClaimsAuthorizationManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimsAuthorizationManager != null ? retObjectClaimsAuthorizationManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,7 +531,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setClaimsAuthorizationManager(ClaimsAuthorizationManager ClaimsAuthorizationManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClaimsAuthorizationManager", ClaimsAuthorizationManager == null ? null : ClaimsAuthorizationManager.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -489,10 +541,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public StoreLocation getTrustedStoreLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustedStoreLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustedStoreLocation");
+            retObjectTrustedStoreLocation = classInstance.Get("TrustedStoreLocation");
+            JCObject val = (JCObject)retObjectTrustedStoreLocation;
             return new StoreLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustedStoreLocation != null ? retObjectTrustedStoreLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +556,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setTrustedStoreLocation(StoreLocation TrustedStoreLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustedStoreLocation", TrustedStoreLocation == null ? null : TrustedStoreLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -510,10 +566,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public X509Certificate2 getServiceCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceCertificate");
+            retObjectServiceCertificate = classInstance.Get("ServiceCertificate");
+            JCObject val = (JCObject)retObjectServiceCertificate;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceCertificate != null ? retObjectServiceCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +581,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setServiceCertificate(X509Certificate2 ServiceCertificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceCertificate", ServiceCertificate == null ? null : ServiceCertificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -531,10 +591,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public X509RevocationMode getRevocationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRevocationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RevocationMode");
+            retObjectRevocationMode = classInstance.Get("RevocationMode");
+            JCObject val = (JCObject)retObjectRevocationMode;
             return new X509RevocationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRevocationMode != null ? retObjectRevocationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,7 +606,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setRevocationMode(X509RevocationMode RevocationMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RevocationMode", RevocationMode == null ? null : RevocationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -552,10 +616,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public X509CertificateValidationMode getCertificateValidationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateValidationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateValidationMode");
+            retObjectCertificateValidationMode = classInstance.Get("CertificateValidationMode");
+            JCObject val = (JCObject)retObjectCertificateValidationMode;
             return new X509CertificateValidationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateValidationMode != null ? retObjectCertificateValidationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,7 +631,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setCertificateValidationMode(X509CertificateValidationMode CertificateValidationMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateValidationMode", CertificateValidationMode == null ? null : CertificateValidationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -573,9 +641,13 @@ public class IdentityConfiguration extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,10 +655,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public TimeSpan getMaxClockSkew() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxClockSkew = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxClockSkew");
+            retObjectMaxClockSkew = classInstance.Get("MaxClockSkew");
+            JCObject val = (JCObject)retObjectMaxClockSkew;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxClockSkew != null ? retObjectMaxClockSkew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,7 +670,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setMaxClockSkew(TimeSpan MaxClockSkew) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxClockSkew", MaxClockSkew == null ? null : MaxClockSkew.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -604,10 +680,14 @@ public class IdentityConfiguration extends NetObject  {
 
     public TimeSpan getTokenReplayCacheExpirationPeriod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenReplayCacheExpirationPeriod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenReplayCacheExpirationPeriod");
+            retObjectTokenReplayCacheExpirationPeriod = classInstance.Get("TokenReplayCacheExpirationPeriod");
+            JCObject val = (JCObject)retObjectTokenReplayCacheExpirationPeriod;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenReplayCacheExpirationPeriod != null ? retObjectTokenReplayCacheExpirationPeriod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,7 +695,7 @@ public class IdentityConfiguration extends NetObject  {
 
     public void setTokenReplayCacheExpirationPeriod(TimeSpan TokenReplayCacheExpirationPeriod) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenReplayCacheExpirationPeriod", TokenReplayCacheExpirationPeriod == null ? null : TokenReplayCacheExpirationPeriod.getJCOInstance());
         } catch (JCNativeException jcne) {

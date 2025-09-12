@@ -152,10 +152,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
     
     public CodeExpression GetCodeExpression(DesignerDataConnection connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCodeExpression = null;
         try {
-            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", connection == null ? null : connection.getJCOInstance());
+            retObjectGetCodeExpression = classInstance.Invoke("GetCodeExpression", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetCodeExpression = (JCObject)retObjectGetCodeExpression;
             return new CodeExpression(objGetCodeExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCodeExpression != null ? retObjectGetCodeExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
 
     public DesignerDataConnection BuildConnection(IWin32Window owner, DesignerDataConnection initialConnection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildConnection = null;
         try {
-            JCObject objBuildConnection = (JCObject)classInstance.Invoke("BuildConnection", owner == null ? null : owner.getJCOInstance(), initialConnection == null ? null : initialConnection.getJCOInstance());
+            retObjectBuildConnection = classInstance.Invoke("BuildConnection", owner == null ? null : owner.getJCOInstance(), initialConnection == null ? null : initialConnection.getJCOInstance());
+            JCObject objBuildConnection = (JCObject)retObjectBuildConnection;
             return new DesignerDataConnection(objBuildConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildConnection != null ? retObjectBuildConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +182,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
 
     public DesignerDataConnection ConfigureConnection(IWin32Window owner, DesignerDataConnection connection, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigureConnection = null;
         try {
-            JCObject objConfigureConnection = (JCObject)classInstance.Invoke("ConfigureConnection", owner == null ? null : owner.getJCOInstance(), connection == null ? null : connection.getJCOInstance(), name);
+            retObjectConfigureConnection = classInstance.Invoke("ConfigureConnection", owner == null ? null : owner.getJCOInstance(), connection == null ? null : connection.getJCOInstance(), name);
+            JCObject objConfigureConnection = (JCObject)retObjectConfigureConnection;
             return new DesignerDataConnection(objConfigureConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfigureConnection != null ? retObjectConfigureConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +197,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
 
     public IDesignerDataSchema GetConnectionSchema(DesignerDataConnection connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConnectionSchema = null;
         try {
-            JCObject objGetConnectionSchema = (JCObject)classInstance.Invoke("GetConnectionSchema", connection == null ? null : connection.getJCOInstance());
+            retObjectGetConnectionSchema = classInstance.Invoke("GetConnectionSchema", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetConnectionSchema = (JCObject)retObjectGetConnectionSchema;
             return new IDesignerDataSchemaImplementation(objGetConnectionSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConnectionSchema != null ? retObjectGetConnectionSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +212,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
 
     public DbConnection GetDesignTimeConnection(DesignerDataConnection connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeConnection = null;
         try {
-            JCObject objGetDesignTimeConnection = (JCObject)classInstance.Invoke("GetDesignTimeConnection", connection == null ? null : connection.getJCOInstance());
+            retObjectGetDesignTimeConnection = classInstance.Invoke("GetDesignTimeConnection", connection == null ? null : connection.getJCOInstance());
+            JCObject objGetDesignTimeConnection = (JCObject)retObjectGetDesignTimeConnection;
             return new DbConnection(objGetDesignTimeConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignTimeConnection != null ? retObjectGetDesignTimeConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
 
     public java.lang.String BuildQuery(IWin32Window owner, DesignerDataConnection connection, QueryBuilderMode mode, java.lang.String initialQueryText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildQuery = null;
         try {
-            return (java.lang.String)classInstance.Invoke("BuildQuery", owner == null ? null : owner.getJCOInstance(), connection == null ? null : connection.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), initialQueryText);
+            retObjectBuildQuery = classInstance.Invoke("BuildQuery", owner == null ? null : owner.getJCOInstance(), connection == null ? null : connection.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), initialQueryText);
+            return (java.lang.String)retObjectBuildQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBuildQuery != null ? retObjectBuildQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +245,14 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
     
     public ICollection getConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnections = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connections");
+            retObjectConnections = classInstance.Get("Connections");
+            JCObject val = (JCObject)retObjectConnections;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnections != null ? retObjectConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

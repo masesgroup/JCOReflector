@@ -161,9 +161,19 @@ public class ReplicationCursor extends NetObject  {
     
     public long getUpToDatenessUsn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpToDatenessUsn = null;
         try {
-            return (long)classInstance.Get("UpToDatenessUsn");
+            retObjectUpToDatenessUsn = classInstance.Get("UpToDatenessUsn");
+            return (long)retObjectUpToDatenessUsn;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUpToDatenessUsnNumber = (java.lang.Number)retObjectUpToDatenessUsn;
+                return retObjectUpToDatenessUsnNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectUpToDatenessUsn != null ? retObjectUpToDatenessUsn.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +181,14 @@ public class ReplicationCursor extends NetObject  {
 
     public DateTime getLastSuccessfulSyncTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastSuccessfulSyncTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastSuccessfulSyncTime");
+            retObjectLastSuccessfulSyncTime = classInstance.Get("LastSuccessfulSyncTime");
+            JCObject val = (JCObject)retObjectLastSuccessfulSyncTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastSuccessfulSyncTime != null ? retObjectLastSuccessfulSyncTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +196,14 @@ public class ReplicationCursor extends NetObject  {
 
     public Guid getSourceInvocationId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceInvocationId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceInvocationId");
+            retObjectSourceInvocationId = classInstance.Get("SourceInvocationId");
+            JCObject val = (JCObject)retObjectSourceInvocationId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceInvocationId != null ? retObjectSourceInvocationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +211,13 @@ public class ReplicationCursor extends NetObject  {
 
     public java.lang.String getPartitionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartitionName = null;
         try {
-            return (java.lang.String)classInstance.Get("PartitionName");
+            retObjectPartitionName = classInstance.Get("PartitionName");
+            return (java.lang.String)retObjectPartitionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPartitionName != null ? retObjectPartitionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +225,13 @@ public class ReplicationCursor extends NetObject  {
 
     public java.lang.String getSourceServer() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.AccessViolationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.FormatException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceServer = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceServer");
+            retObjectSourceServer = classInstance.Get("SourceServer");
+            return (java.lang.String)retObjectSourceServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceServer != null ? retObjectSourceServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

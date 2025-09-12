@@ -157,9 +157,13 @@ public class CategoryEntry extends NetObject  {
     
     public boolean MatchesPredicate(PropertyFilterPredicate predicate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesPredicate = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesPredicate", predicate == null ? null : predicate.getJCOInstance());
+            retObjectMatchesPredicate = classInstance.Invoke("MatchesPredicate", predicate == null ? null : predicate.getJCOInstance());
+            return (boolean)retObjectMatchesPredicate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesPredicate != null ? retObjectMatchesPredicate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class CategoryEntry extends NetObject  {
 
     public void ApplyFilter(PropertyFilter filter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyFilter", filter == null ? null : filter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,9 +185,13 @@ public class CategoryEntry extends NetObject  {
     
     public boolean getMatchesFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesFilter = null;
         try {
-            return (boolean)classInstance.Get("MatchesFilter");
+            retObjectMatchesFilter = classInstance.Get("MatchesFilter");
+            return (boolean)retObjectMatchesFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMatchesFilter != null ? retObjectMatchesFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class CategoryEntry extends NetObject  {
 
     public void setMatchesFilter(boolean MatchesFilter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchesFilter", MatchesFilter);
         } catch (JCNativeException jcne) {
@@ -201,9 +209,13 @@ public class CategoryEntry extends NetObject  {
 
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryName");
+            retObjectCategoryName = classInstance.Get("CategoryName");
+            return (java.lang.String)retObjectCategoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryName != null ? retObjectCategoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class CategoryEntry extends NetObject  {
 
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -226,7 +238,7 @@ public class CategoryEntry extends NetObject  {
 
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {

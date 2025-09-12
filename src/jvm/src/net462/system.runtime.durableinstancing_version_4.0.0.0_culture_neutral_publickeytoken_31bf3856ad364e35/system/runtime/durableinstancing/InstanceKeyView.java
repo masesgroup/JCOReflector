@@ -162,10 +162,14 @@ public class InstanceKeyView extends NetObject  {
     
     public Guid getInstanceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceKey");
+            retObjectInstanceKey = classInstance.Get("InstanceKey");
+            JCObject val = (JCObject)retObjectInstanceKey;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKey != null ? retObjectInstanceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class InstanceKeyView extends NetObject  {
 
     public void setInstanceKey(Guid InstanceKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceKey", InstanceKey == null ? null : InstanceKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,10 +187,14 @@ public class InstanceKeyView extends NetObject  {
 
     public InstanceKeyState getInstanceKeyState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeyState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceKeyState");
+            retObjectInstanceKeyState = classInstance.Get("InstanceKeyState");
+            JCObject val = (JCObject)retObjectInstanceKeyState;
             return new InstanceKeyState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeyState != null ? retObjectInstanceKeyState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class InstanceKeyView extends NetObject  {
 
     public void setInstanceKeyState(InstanceKeyState InstanceKeyState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceKeyState", InstanceKeyState == null ? null : InstanceKeyState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +212,14 @@ public class InstanceKeyView extends NetObject  {
 
     public InstanceValueConsistency getInstanceKeyMetadataConsistency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeyMetadataConsistency = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceKeyMetadataConsistency");
+            retObjectInstanceKeyMetadataConsistency = classInstance.Get("InstanceKeyMetadataConsistency");
+            JCObject val = (JCObject)retObjectInstanceKeyMetadataConsistency;
             return new InstanceValueConsistency(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeyMetadataConsistency != null ? retObjectInstanceKeyMetadataConsistency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class InstanceKeyView extends NetObject  {
 
     public void setInstanceKeyMetadataConsistency(InstanceValueConsistency InstanceKeyMetadataConsistency) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceKeyMetadataConsistency", InstanceKeyMetadataConsistency == null ? null : InstanceKeyMetadataConsistency.getJCOInstance());
         } catch (JCNativeException jcne) {

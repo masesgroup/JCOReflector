@@ -166,9 +166,13 @@ public class Network extends NetObject  {
     
     public boolean Ping(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.net.networkinformation.NetworkInformationException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPing = null;
         try {
-            return (boolean)classInstance.Invoke("Ping", hostNameOrAddress, timeout);
+            retObjectPing = classInstance.Invoke("Ping", hostNameOrAddress, timeout);
+            return (boolean)retObjectPing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPing != null ? retObjectPing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class Network extends NetObject  {
 
     public boolean Ping(java.lang.String hostNameOrAddress) throws Throwable, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPing = null;
         try {
-            return (boolean)classInstance.Invoke("Ping", hostNameOrAddress);
+            retObjectPing = classInstance.Invoke("Ping", hostNameOrAddress);
+            return (boolean)retObjectPing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPing != null ? retObjectPing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class Network extends NetObject  {
 
     public boolean Ping(Uri address, int timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.net.networkinformation.NetworkInformationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPing = null;
         try {
-            return (boolean)classInstance.Invoke("Ping", address == null ? null : address.getJCOInstance(), timeout);
+            retObjectPing = classInstance.Invoke("Ping", address == null ? null : address.getJCOInstance(), timeout);
+            return (boolean)retObjectPing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPing != null ? retObjectPing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class Network extends NetObject  {
 
     public boolean Ping(Uri address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.net.networkinformation.NetworkInformationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPing = null;
         try {
-            return (boolean)classInstance.Invoke("Ping", address == null ? null : address.getJCOInstance());
+            retObjectPing = classInstance.Invoke("Ping", address == null ? null : address.getJCOInstance());
+            return (boolean)retObjectPing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPing != null ? retObjectPing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +222,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.OutOfMemoryException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address, destinationFileName, userName, password, showUI, connectionTimeout, overwrite, onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,7 +232,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address, destinationFileName, userName, password, showUI, connectionTimeout, overwrite);
         } catch (JCNativeException jcne) {
@@ -226,7 +242,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address, destinationFileName, userName, password);
         } catch (JCNativeException jcne) {
@@ -236,7 +252,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(java.lang.String address, java.lang.String destinationFileName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address, destinationFileName);
         } catch (JCNativeException jcne) {
@@ -246,7 +262,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.SynchronizationLockException, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, overwrite, onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,7 +272,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(Uri address, java.lang.String destinationFileName, ICredentials networkCredentials, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, overwrite);
         } catch (JCNativeException jcne) {
@@ -266,7 +282,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, userName, password, showUI, connectionTimeout, overwrite, onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +292,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, boolean overwrite) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, userName, password, showUI, connectionTimeout, overwrite);
         } catch (JCNativeException jcne) {
@@ -286,7 +302,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(Uri address, java.lang.String destinationFileName, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName, userName, password);
         } catch (JCNativeException jcne) {
@@ -296,7 +312,7 @@ public class Network extends NetObject  {
 
     public void DownloadFile(Uri address, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DownloadFile", address == null ? null : address.getJCOInstance(), destinationFileName);
         } catch (JCNativeException jcne) {
@@ -306,7 +322,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address, userName, password, showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,7 +332,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address, userName, password, showUI, connectionTimeout);
         } catch (JCNativeException jcne) {
@@ -326,7 +342,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address, java.lang.String userName, java.lang.String password) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address, userName, password);
         } catch (JCNativeException jcne) {
@@ -336,7 +352,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, java.lang.String address) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.UnreachableException, system.UriFormatException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address);
         } catch (JCNativeException jcne) {
@@ -346,7 +362,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.threading.SynchronizationLockException, system.NullReferenceException, system.diagnostics.UnreachableException, system.UriFormatException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,7 +372,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, Uri address, ICredentials networkCredentials, boolean showUI, int connectionTimeout) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), networkCredentials == null ? null : networkCredentials.getJCOInstance(), showUI, connectionTimeout);
         } catch (JCNativeException jcne) {
@@ -366,7 +382,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.OverflowException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), userName, password, showUI, connectionTimeout, onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +392,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password, boolean showUI, int connectionTimeout) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.componentmodel.InvalidAsynchronousStateException, system.net.WebException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), userName, password, showUI, connectionTimeout);
         } catch (JCNativeException jcne) {
@@ -386,7 +402,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, Uri address, java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance(), userName, password);
         } catch (JCNativeException jcne) {
@@ -396,7 +412,7 @@ public class Network extends NetObject  {
 
     public void UploadFile(java.lang.String sourceFileName, Uri address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileNotFoundException, system.MulticastNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.net.WebException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UploadFile", sourceFileName, address == null ? null : address.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -410,9 +426,13 @@ public class Network extends NetObject  {
     
     public boolean getIsAvailable() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAvailable = null;
         try {
-            return (boolean)classInstance.Get("IsAvailable");
+            retObjectIsAvailable = classInstance.Get("IsAvailable");
+            return (boolean)retObjectIsAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAvailable != null ? retObjectIsAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +445,7 @@ public class Network extends NetObject  {
 
     public void addNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NetworkAvailabilityChanged", handler);
         } catch (JCNativeException jcne) {
@@ -435,7 +455,7 @@ public class Network extends NetObject  {
 
     public void removeNetworkAvailabilityChanged(NetworkAvailableEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NetworkAvailabilityChanged", handler);
         } catch (JCNativeException jcne) {

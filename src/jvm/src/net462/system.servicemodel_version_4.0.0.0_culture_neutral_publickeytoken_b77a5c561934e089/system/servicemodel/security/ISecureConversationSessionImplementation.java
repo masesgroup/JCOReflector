@@ -149,9 +149,13 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
     
     public boolean TryReadSessionTokenIdentifier(XmlReader reader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadSessionTokenIdentifier = null;
         try {
-            return (boolean)classInstance.Invoke("TryReadSessionTokenIdentifier", reader == null ? null : reader.getJCOInstance());
+            retObjectTryReadSessionTokenIdentifier = classInstance.Invoke("TryReadSessionTokenIdentifier", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectTryReadSessionTokenIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadSessionTokenIdentifier != null ? retObjectTryReadSessionTokenIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,7 +163,7 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
 
     public void WriteSessionTokenIdentifier(XmlDictionaryWriter writer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSessionTokenIdentifier", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,10 +177,14 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
     
     public EndpointIdentity getRemoteIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteIdentity");
+            retObjectRemoteIdentity = classInstance.Get("RemoteIdentity");
+            JCObject val = (JCObject)retObjectRemoteIdentity;
             return new EndpointIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteIdentity != null ? retObjectRemoteIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class ISecureConversationSessionImplementation extends NetObject implemen
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

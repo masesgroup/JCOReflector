@@ -149,10 +149,14 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
     
     public Rectangle GetBounds(DesignerRegion region) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", region == null ? null : region.getJCOInstance());
+            retObjectGetBounds = classInstance.Invoke("GetBounds", region == null ? null : region.getJCOInstance());
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,7 +164,7 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public void Invalidate(Rectangle rectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,7 +174,7 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public void SetFlags(ViewFlags viewFlags, boolean setFlag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFlags", viewFlags == null ? null : viewFlags.getJCOInstance(), setFlag);
         } catch (JCNativeException jcne) {
@@ -180,7 +184,7 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public void SetRegionContent(EditableDesignerRegion region, java.lang.String content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRegionContent", region == null ? null : region.getJCOInstance(), content);
         } catch (JCNativeException jcne) {
@@ -190,7 +194,7 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public void Update() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update");
         } catch (JCNativeException jcne) {
@@ -204,9 +208,13 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
     
     public boolean getSupportsRegions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsRegions = null;
         try {
-            return (boolean)classInstance.Get("SupportsRegions");
+            retObjectSupportsRegions = classInstance.Get("SupportsRegions");
+            return (boolean)retObjectSupportsRegions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsRegions != null ? retObjectSupportsRegions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +222,14 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public IDesigner getNamingContainerDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamingContainerDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamingContainerDesigner");
+            retObjectNamingContainerDesigner = classInstance.Get("NamingContainerDesigner");
+            JCObject val = (JCObject)retObjectNamingContainerDesigner;
             return new IDesignerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamingContainerDesigner != null ? retObjectNamingContainerDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +237,14 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public DesignerRegion getContainingRegion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainingRegion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainingRegion");
+            retObjectContainingRegion = classInstance.Get("ContainingRegion");
+            JCObject val = (JCObject)retObjectContainingRegion;
             return new DesignerRegion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainingRegion != null ? retObjectContainingRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +257,7 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public void addViewEvent(ViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ViewEvent", handler);
         } catch (JCNativeException jcne) {
@@ -251,7 +267,7 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
 
     public void removeViewEvent(ViewEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ViewEvent", handler);
         } catch (JCNativeException jcne) {

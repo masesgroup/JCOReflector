@@ -170,9 +170,19 @@ public class DragDeltaEventArgs extends RoutedEventArgs  {
     
     public double getHorizontalChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalChange = null;
         try {
-            return (double)classInstance.Get("HorizontalChange");
+            retObjectHorizontalChange = classInstance.Get("HorizontalChange");
+            return (double)retObjectHorizontalChange;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectHorizontalChangeNumber = (java.lang.Number)retObjectHorizontalChange;
+                return retObjectHorizontalChangeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectHorizontalChange != null ? retObjectHorizontalChange.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +190,19 @@ public class DragDeltaEventArgs extends RoutedEventArgs  {
 
     public double getVerticalChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalChange = null;
         try {
-            return (double)classInstance.Get("VerticalChange");
+            retObjectVerticalChange = classInstance.Get("VerticalChange");
+            return (double)retObjectVerticalChange;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalChangeNumber = (java.lang.Number)retObjectVerticalChange;
+                return retObjectVerticalChangeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVerticalChange != null ? retObjectVerticalChange.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,9 +171,13 @@ public class CodeIdentifiers extends NetObject  {
     
     public boolean IsInUse(java.lang.String identifier) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInUse = null;
         try {
-            return (boolean)classInstance.Invoke("IsInUse", identifier);
+            retObjectIsInUse = classInstance.Invoke("IsInUse", identifier);
+            return (boolean)retObjectIsInUse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInUse != null ? retObjectIsInUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class CodeIdentifiers extends NetObject  {
 
     public NetObject ToArray(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToArray = null;
         try {
-            JCObject objToArray = (JCObject)classInstance.Invoke("ToArray", type == null ? null : type.getJCOInstance());
+            retObjectToArray = classInstance.Invoke("ToArray", type == null ? null : type.getJCOInstance());
+            JCObject objToArray = (JCObject)retObjectToArray;
             return new NetObject(objToArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToArray != null ? retObjectToArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class CodeIdentifiers extends NetObject  {
 
     public java.lang.String AddUnique(java.lang.String identifier, NetObject value) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddUnique = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AddUnique", identifier, value == null ? null : value.getJCOInstance());
+            retObjectAddUnique = classInstance.Invoke("AddUnique", identifier, value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectAddUnique;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAddUnique != null ? retObjectAddUnique.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class CodeIdentifiers extends NetObject  {
 
     public java.lang.String MakeRightCase(java.lang.String identifier) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeRightCase = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MakeRightCase", identifier);
+            retObjectMakeRightCase = classInstance.Invoke("MakeRightCase", identifier);
+            return (java.lang.String)retObjectMakeRightCase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeRightCase != null ? retObjectMakeRightCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +228,13 @@ public class CodeIdentifiers extends NetObject  {
 
     public java.lang.String MakeUnique(java.lang.String identifier) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeUnique = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MakeUnique", identifier);
+            retObjectMakeUnique = classInstance.Invoke("MakeUnique", identifier);
+            return (java.lang.String)retObjectMakeUnique;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeUnique != null ? retObjectMakeUnique.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +242,7 @@ public class CodeIdentifiers extends NetObject  {
 
     public void Add(java.lang.String identifier, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", identifier, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,7 +252,7 @@ public class CodeIdentifiers extends NetObject  {
 
     public void AddReserved(java.lang.String identifier) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddReserved", identifier);
         } catch (JCNativeException jcne) {
@@ -242,7 +262,7 @@ public class CodeIdentifiers extends NetObject  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -252,7 +272,7 @@ public class CodeIdentifiers extends NetObject  {
 
     public void Remove(java.lang.String identifier) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", identifier);
         } catch (JCNativeException jcne) {
@@ -262,7 +282,7 @@ public class CodeIdentifiers extends NetObject  {
 
     public void RemoveReserved(java.lang.String identifier) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveReserved", identifier);
         } catch (JCNativeException jcne) {
@@ -276,9 +296,13 @@ public class CodeIdentifiers extends NetObject  {
     
     public boolean getUseCamelCasing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCamelCasing = null;
         try {
-            return (boolean)classInstance.Get("UseCamelCasing");
+            retObjectUseCamelCasing = classInstance.Get("UseCamelCasing");
+            return (boolean)retObjectUseCamelCasing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCamelCasing != null ? retObjectUseCamelCasing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +310,7 @@ public class CodeIdentifiers extends NetObject  {
 
     public void setUseCamelCasing(boolean UseCamelCasing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCamelCasing", UseCamelCasing);
         } catch (JCNativeException jcne) {

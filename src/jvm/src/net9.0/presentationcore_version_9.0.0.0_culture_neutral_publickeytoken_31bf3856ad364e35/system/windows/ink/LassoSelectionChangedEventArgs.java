@@ -161,10 +161,14 @@ public class LassoSelectionChangedEventArgs extends EventArgs  {
     
     public StrokeCollection getDeselectedStrokes() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeselectedStrokes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeselectedStrokes");
+            retObjectDeselectedStrokes = classInstance.Get("DeselectedStrokes");
+            JCObject val = (JCObject)retObjectDeselectedStrokes;
             return new StrokeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeselectedStrokes != null ? retObjectDeselectedStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class LassoSelectionChangedEventArgs extends EventArgs  {
 
     public StrokeCollection getSelectedStrokes() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedStrokes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedStrokes");
+            retObjectSelectedStrokes = classInstance.Get("SelectedStrokes");
+            JCObject val = (JCObject)retObjectSelectedStrokes;
             return new StrokeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedStrokes != null ? retObjectSelectedStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

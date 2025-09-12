@@ -163,7 +163,7 @@ public class ServiceDescriptionReflector extends NetObject  {
     
     public void Reflect(NetType type, java.lang.String url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.security.SecurityException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reflect", type == null ? null : type.getJCOInstance(), url);
         } catch (JCNativeException jcne) {
@@ -177,10 +177,14 @@ public class ServiceDescriptionReflector extends NetObject  {
     
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
+            retObjectServiceDescriptions = classInstance.Get("ServiceDescriptions");
+            JCObject val = (JCObject)retObjectServiceDescriptions;
             return new ServiceDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescriptions != null ? retObjectServiceDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class ServiceDescriptionReflector extends NetObject  {
 
     public XmlSchemas getSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
+            retObjectSchemas = classInstance.Get("Schemas");
+            JCObject val = (JCObject)retObjectSchemas;
             return new XmlSchemas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

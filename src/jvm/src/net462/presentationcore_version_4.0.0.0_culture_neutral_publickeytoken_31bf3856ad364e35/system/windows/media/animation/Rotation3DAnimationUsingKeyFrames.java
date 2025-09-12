@@ -166,9 +166,13 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
     
     public boolean ShouldSerializeKeyFrames() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeKeyFrames = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeKeyFrames");
+            retObjectShouldSerializeKeyFrames = classInstance.Invoke("ShouldSerializeKeyFrames");
+            return (boolean)retObjectShouldSerializeKeyFrames;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeKeyFrames != null ? retObjectShouldSerializeKeyFrames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
 
     public Rotation3DAnimationUsingKeyFrames CloneNewRotation3DAnimationUsingKeyFrames() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Rotation3DAnimationUsingKeyFrames(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
 
     public Rotation3DAnimationUsingKeyFrames CloneCurrentValueNewRotation3DAnimationUsingKeyFrames() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new Rotation3DAnimationUsingKeyFrames(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -211,7 +223,7 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -220,9 +232,13 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
     
     public boolean getIsAdditive() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAdditive = null;
         try {
-            return (boolean)classInstance.Get("IsAdditive");
+            retObjectIsAdditive = classInstance.Get("IsAdditive");
+            return (boolean)retObjectIsAdditive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAdditive != null ? retObjectIsAdditive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +246,7 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
 
     public void setIsAdditive(boolean IsAdditive) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAdditive", IsAdditive);
         } catch (JCNativeException jcne) {
@@ -240,9 +256,13 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
 
     public boolean getIsCumulative() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCumulative = null;
         try {
-            return (boolean)classInstance.Get("IsCumulative");
+            retObjectIsCumulative = classInstance.Get("IsCumulative");
+            return (boolean)retObjectIsCumulative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCumulative != null ? retObjectIsCumulative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
 
     public void setIsCumulative(boolean IsCumulative) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsCumulative", IsCumulative);
         } catch (JCNativeException jcne) {
@@ -260,10 +280,14 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
 
     public Rotation3DKeyFrameCollection getKeyFrames() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFrames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyFrames");
+            retObjectKeyFrames = classInstance.Get("KeyFrames");
+            JCObject val = (JCObject)retObjectKeyFrames;
             return new Rotation3DKeyFrameCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyFrames != null ? retObjectKeyFrames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +295,7 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
 
     public void setKeyFrames(Rotation3DKeyFrameCollection KeyFrames) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyFrames", KeyFrames == null ? null : KeyFrames.getJCOInstance());
         } catch (JCNativeException jcne) {

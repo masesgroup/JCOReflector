@@ -157,7 +157,7 @@ public class InlineCollection extends NetObjectEnumerable  {
     
     public void Add(java.lang.String text) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", text);
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class InlineCollection extends NetObjectEnumerable  {
 
     public void Add(UIElement uiElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", uiElement == null ? null : uiElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,10 +181,14 @@ public class InlineCollection extends NetObjectEnumerable  {
     
     public Inline getFirstInline() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstInline = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstInline");
+            retObjectFirstInline = classInstance.Get("FirstInline");
+            JCObject val = (JCObject)retObjectFirstInline;
             return new Inline(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstInline != null ? retObjectFirstInline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class InlineCollection extends NetObjectEnumerable  {
 
     public Inline getLastInline() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastInline = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastInline");
+            retObjectLastInline = classInstance.Get("LastInline");
+            JCObject val = (JCObject)retObjectLastInline;
             return new Inline(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastInline != null ? retObjectLastInline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

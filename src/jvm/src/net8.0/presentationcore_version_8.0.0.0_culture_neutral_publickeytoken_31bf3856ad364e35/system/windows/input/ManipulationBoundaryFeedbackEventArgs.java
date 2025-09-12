@@ -163,10 +163,14 @@ public class ManipulationBoundaryFeedbackEventArgs extends InputEventArgs  {
     
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManipulationContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManipulationContainer");
+            retObjectManipulationContainer = classInstance.Get("ManipulationContainer");
+            JCObject val = (JCObject)retObjectManipulationContainer;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManipulationContainer != null ? retObjectManipulationContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class ManipulationBoundaryFeedbackEventArgs extends InputEventArgs  {
 
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManipulationContainer", ManipulationContainer == null ? null : ManipulationContainer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class ManipulationBoundaryFeedbackEventArgs extends InputEventArgs  {
 
     public ManipulationDelta getBoundaryFeedback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoundaryFeedback = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundaryFeedback");
+            retObjectBoundaryFeedback = classInstance.Get("BoundaryFeedback");
+            JCObject val = (JCObject)retObjectBoundaryFeedback;
             return new ManipulationDelta(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoundaryFeedback != null ? retObjectBoundaryFeedback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ManipulationBoundaryFeedbackEventArgs extends InputEventArgs  {
 
     public void setBoundaryFeedback(ManipulationDelta BoundaryFeedback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BoundaryFeedback", BoundaryFeedback == null ? null : BoundaryFeedback.getJCOInstance());
         } catch (JCNativeException jcne) {

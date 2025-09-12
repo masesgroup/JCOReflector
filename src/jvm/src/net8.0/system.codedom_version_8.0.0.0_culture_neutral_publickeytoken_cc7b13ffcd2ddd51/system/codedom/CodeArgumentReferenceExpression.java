@@ -176,9 +176,13 @@ public class CodeArgumentReferenceExpression extends CodeExpression  {
     
     public java.lang.String getParameterName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterName = null;
         try {
-            return (java.lang.String)classInstance.Get("ParameterName");
+            retObjectParameterName = classInstance.Get("ParameterName");
+            return (java.lang.String)retObjectParameterName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameterName != null ? retObjectParameterName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class CodeArgumentReferenceExpression extends CodeExpression  {
 
     public void setParameterName(java.lang.String ParameterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterName", ParameterName);
         } catch (JCNativeException jcne) {

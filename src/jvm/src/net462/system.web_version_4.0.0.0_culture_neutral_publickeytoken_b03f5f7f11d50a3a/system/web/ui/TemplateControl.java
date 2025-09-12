@@ -161,9 +161,13 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
     
     public boolean TestDeviceFilter(java.lang.String filterName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTestDeviceFilter = null;
         try {
-            return (boolean)classInstance.Invoke("TestDeviceFilter", filterName);
+            retObjectTestDeviceFilter = classInstance.Invoke("TestDeviceFilter", filterName);
+            return (boolean)retObjectTestDeviceFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTestDeviceFilter != null ? retObjectTestDeviceFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public NetObject ReadStringResource() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadStringResource = null;
         try {
-            JCObject objReadStringResource = (JCObject)classInstance.Invoke("ReadStringResource");
+            retObjectReadStringResource = classInstance.Invoke("ReadStringResource");
+            JCObject objReadStringResource = (JCObject)retObjectReadStringResource;
             return new NetObject(objReadStringResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadStringResource != null ? retObjectReadStringResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public static NetObject ReadStringResource(NetType t) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadStringResource = null;
         try {
-            JCObject objReadStringResource = (JCObject)classType.Invoke("ReadStringResource", t == null ? null : t.getJCOInstance());
+            retObjectReadStringResource = classType.Invoke("ReadStringResource", t == null ? null : t.getJCOInstance());
+            JCObject objReadStringResource = (JCObject)retObjectReadStringResource;
             return new NetObject(objReadStringResource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadStringResource != null ? retObjectReadStringResource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public Control LoadControl(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpRequestValidationException, system.NullReferenceException, system.web.HttpParseException, system.web.HttpCompileException, system.NotSupportedException, system.MissingMethodException, system.MulticastNotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadControl = null;
         try {
-            JCObject objLoadControl = (JCObject)classInstance.Invoke("LoadControl", virtualPath);
+            retObjectLoadControl = classInstance.Invoke("LoadControl", virtualPath);
+            JCObject objLoadControl = (JCObject)retObjectLoadControl;
             return new Control(objLoadControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadControl != null ? retObjectLoadControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public Control LoadControl(NetType t, NetObject[] parameters) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadControl = null;
         try {
-            JCObject objLoadControl = (JCObject)classInstance.Invoke("LoadControl", t == null ? null : t.getJCOInstance(), toObjectFromArray(parameters));
+            retObjectLoadControl = classInstance.Invoke("LoadControl", t == null ? null : t.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objLoadControl = (JCObject)retObjectLoadControl;
             return new Control(objLoadControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadControl != null ? retObjectLoadControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public Control ParseControl(java.lang.String content) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.configuration.ConfigurationException, system.web.HttpParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseControl = null;
         try {
-            JCObject objParseControl = (JCObject)classInstance.Invoke("ParseControl", content);
+            retObjectParseControl = classInstance.Invoke("ParseControl", content);
+            JCObject objParseControl = (JCObject)retObjectParseControl;
             return new Control(objParseControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseControl != null ? retObjectParseControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +250,14 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public Control ParseControl(java.lang.String content, boolean ignoreParserFilter) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.ArgumentException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.web.HttpParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseControl = null;
         try {
-            JCObject objParseControl = (JCObject)classInstance.Invoke("ParseControl", content, ignoreParserFilter);
+            retObjectParseControl = classInstance.Invoke("ParseControl", content, ignoreParserFilter);
+            JCObject objParseControl = (JCObject)retObjectParseControl;
             return new Control(objParseControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseControl != null ? retObjectParseControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +265,14 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public ITemplate LoadTemplate(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpRequestValidationException, system.NullReferenceException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadTemplate = null;
         try {
-            JCObject objLoadTemplate = (JCObject)classInstance.Invoke("LoadTemplate", virtualPath);
+            retObjectLoadTemplate = classInstance.Invoke("LoadTemplate", virtualPath);
+            JCObject objLoadTemplate = (JCObject)retObjectLoadTemplate;
             return new ITemplateImplementation(objLoadTemplate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadTemplate != null ? retObjectLoadTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +284,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
      */
     @Deprecated 
     public boolean EvaluateFilter(java.lang.String filterName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFilterResolutionService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFilterResolutionService to obtain the full interface.");
     }
 
     /**
@@ -261,7 +293,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
      */
     @Deprecated 
     public int CompareFilters(java.lang.String filter1, java.lang.String filter2) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFilterResolutionService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFilterResolutionService to obtain the full interface.");
     }
 
 
@@ -270,9 +302,13 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
     
     public java.lang.String getAppRelativeVirtualPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppRelativeVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("AppRelativeVirtualPath");
+            retObjectAppRelativeVirtualPath = classInstance.Get("AppRelativeVirtualPath");
+            return (java.lang.String)retObjectAppRelativeVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppRelativeVirtualPath != null ? retObjectAppRelativeVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +316,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public void setAppRelativeVirtualPath(java.lang.String AppRelativeVirtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppRelativeVirtualPath", AppRelativeVirtualPath);
         } catch (JCNativeException jcne) {
@@ -295,7 +331,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public void addAbortTransaction(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AbortTransaction", handler);
         } catch (JCNativeException jcne) {
@@ -305,7 +341,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public void removeAbortTransaction(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AbortTransaction", handler);
         } catch (JCNativeException jcne) {
@@ -315,7 +351,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public void addCommitTransaction(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CommitTransaction", handler);
         } catch (JCNativeException jcne) {
@@ -325,7 +361,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public void removeCommitTransaction(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CommitTransaction", handler);
         } catch (JCNativeException jcne) {
@@ -335,7 +371,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public void addError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Error", handler);
         } catch (JCNativeException jcne) {
@@ -345,7 +381,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
 
     public void removeError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Error", handler);
         } catch (JCNativeException jcne) {

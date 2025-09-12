@@ -146,16 +146,20 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
     
     public ISymbolNamespace[] GetNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespaces = null;
         try {
             ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
+            retObjectGetNamespaces = classInstance.Invoke("GetNamespaces");
+            JCObject resultingObjects = (JCObject)retObjectGetNamespaces;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
             }
             ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespaces != null ? retObjectGetNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,16 +167,20 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
 
     public ISymbolVariable[] GetVariables() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVariables = null;
         try {
             ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVariables");
+            retObjectGetVariables = classInstance.Invoke("GetVariables");
+            JCObject resultingObjects = (JCObject)retObjectGetVariables;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
             ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVariables != null ? retObjectGetVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,9 +162,13 @@ public class Instrumentation extends NetObject  {
     
     public static boolean IsAssemblyRegistered(Assembly assemblyToRegister) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.management.ManagementException, system.reflection.AmbiguousMatchException, system.resources.MissingManifestResourceException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAssemblyRegistered = null;
         try {
-            return (boolean)classType.Invoke("IsAssemblyRegistered", assemblyToRegister == null ? null : assemblyToRegister.getJCOInstance());
+            retObjectIsAssemblyRegistered = classType.Invoke("IsAssemblyRegistered", assemblyToRegister == null ? null : assemblyToRegister.getJCOInstance());
+            return (boolean)retObjectIsAssemblyRegistered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAssemblyRegistered != null ? retObjectIsAssemblyRegistered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class Instrumentation extends NetObject  {
 
     public static void Fire(NetObject eventData) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.management.ManagementException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.io.IOException, system.io.PathTooLongException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Fire", eventData == null ? null : eventData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,7 +186,7 @@ public class Instrumentation extends NetObject  {
 
     public static void Publish(NetObject instanceData) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.management.ManagementException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Publish", instanceData == null ? null : instanceData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +196,7 @@ public class Instrumentation extends NetObject  {
 
     public static void RegisterAssembly(Assembly assemblyToRegister) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.management.ManagementException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterAssembly", assemblyToRegister == null ? null : assemblyToRegister.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +206,7 @@ public class Instrumentation extends NetObject  {
 
     public static void Revoke(NetObject instanceData) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.management.ManagementException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.io.IOException, system.io.PathTooLongException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Revoke", instanceData == null ? null : instanceData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +216,7 @@ public class Instrumentation extends NetObject  {
 
     public static void SetBatchSize(NetType instrumentationClass, int batchSize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.management.ManagementException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.AccessViolationException, system.resources.MissingManifestResourceException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetBatchSize", instrumentationClass == null ? null : instrumentationClass.getJCOInstance(), batchSize);
         } catch (JCNativeException jcne) {

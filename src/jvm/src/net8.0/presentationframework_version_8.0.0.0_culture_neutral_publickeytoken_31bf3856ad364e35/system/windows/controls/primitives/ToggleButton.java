@@ -167,9 +167,13 @@ public class ToggleButton extends ButtonBase  {
     
     public boolean getIsThreeState() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsThreeState = null;
         try {
-            return (boolean)classInstance.Get("IsThreeState");
+            retObjectIsThreeState = classInstance.Get("IsThreeState");
+            return (boolean)retObjectIsThreeState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsThreeState != null ? retObjectIsThreeState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ToggleButton extends ButtonBase  {
 
     public void setIsThreeState(boolean IsThreeState) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsThreeState", IsThreeState);
         } catch (JCNativeException jcne) {
@@ -192,7 +196,7 @@ public class ToggleButton extends ButtonBase  {
 
     public void addChecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Checked", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +206,7 @@ public class ToggleButton extends ButtonBase  {
 
     public void removeChecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Checked", handler);
         } catch (JCNativeException jcne) {
@@ -212,7 +216,7 @@ public class ToggleButton extends ButtonBase  {
 
     public void addIndeterminate(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Indeterminate", handler);
         } catch (JCNativeException jcne) {
@@ -222,7 +226,7 @@ public class ToggleButton extends ButtonBase  {
 
     public void removeIndeterminate(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Indeterminate", handler);
         } catch (JCNativeException jcne) {
@@ -232,7 +236,7 @@ public class ToggleButton extends ButtonBase  {
 
     public void addUnchecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unchecked", handler);
         } catch (JCNativeException jcne) {
@@ -242,7 +246,7 @@ public class ToggleButton extends ButtonBase  {
 
     public void removeUnchecked(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unchecked", handler);
         } catch (JCNativeException jcne) {

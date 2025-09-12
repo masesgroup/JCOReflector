@@ -191,10 +191,14 @@ public class EncryptedKeyEncryptingCredentials extends EncryptingCredentials  {
     
     public EncryptingCredentials getWrappingCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrappingCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WrappingCredentials");
+            retObjectWrappingCredentials = classInstance.Get("WrappingCredentials");
+            JCObject val = (JCObject)retObjectWrappingCredentials;
             return new EncryptingCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWrappingCredentials != null ? retObjectWrappingCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

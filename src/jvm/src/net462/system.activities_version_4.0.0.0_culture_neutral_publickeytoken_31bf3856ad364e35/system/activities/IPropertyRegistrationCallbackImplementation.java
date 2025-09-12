@@ -143,7 +143,7 @@ public class IPropertyRegistrationCallbackImplementation extends NetObject imple
     
     public void Register(RegistrationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Register", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IPropertyRegistrationCallbackImplementation extends NetObject imple
 
     public void Unregister(RegistrationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unregister", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

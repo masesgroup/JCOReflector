@@ -158,9 +158,13 @@ public class SpanRuneEnumerator extends ValueType  {
     
     public boolean MoveNext() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveNext = null;
         try {
-            return (boolean)classInstance.Invoke("MoveNext");
+            retObjectMoveNext = classInstance.Invoke("MoveNext");
+            return (boolean)retObjectMoveNext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveNext != null ? retObjectMoveNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class SpanRuneEnumerator extends ValueType  {
 
     public SpanRuneEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnumerator = null;
         try {
-            JCObject objGetEnumerator = (JCObject)classInstance.Invoke("GetEnumerator");
+            retObjectGetEnumerator = classInstance.Invoke("GetEnumerator");
+            JCObject objGetEnumerator = (JCObject)retObjectGetEnumerator;
             return new SpanRuneEnumerator(objGetEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnumerator != null ? retObjectGetEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class SpanRuneEnumerator extends ValueType  {
     
     public Rune getCurrent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Current");
+            retObjectCurrent = classInstance.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new Rune(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

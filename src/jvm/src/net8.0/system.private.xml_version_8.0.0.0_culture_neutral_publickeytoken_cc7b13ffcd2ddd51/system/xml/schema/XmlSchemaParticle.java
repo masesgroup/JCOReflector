@@ -159,10 +159,14 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
     
     public Decimal getMaxOccurs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxOccurs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxOccurs");
+            retObjectMaxOccurs = classInstance.Get("MaxOccurs");
+            JCObject val = (JCObject)retObjectMaxOccurs;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxOccurs != null ? retObjectMaxOccurs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
 
     public void setMaxOccurs(Decimal MaxOccurs) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxOccurs", MaxOccurs == null ? null : MaxOccurs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,10 +184,14 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
 
     public Decimal getMinOccurs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinOccurs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinOccurs");
+            retObjectMinOccurs = classInstance.Get("MinOccurs");
+            JCObject val = (JCObject)retObjectMinOccurs;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinOccurs != null ? retObjectMinOccurs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
 
     public void setMinOccurs(Decimal MinOccurs) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinOccurs", MinOccurs == null ? null : MinOccurs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,9 +209,13 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
 
     public java.lang.String getMaxOccursString() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxOccursString = null;
         try {
-            return (java.lang.String)classInstance.Get("MaxOccursString");
+            retObjectMaxOccursString = classInstance.Get("MaxOccursString");
+            return (java.lang.String)retObjectMaxOccursString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMaxOccursString != null ? retObjectMaxOccursString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
 
     public void setMaxOccursString(java.lang.String MaxOccursString) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxOccursString", MaxOccursString);
         } catch (JCNativeException jcne) {
@@ -221,9 +233,13 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
 
     public java.lang.String getMinOccursString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinOccursString = null;
         try {
-            return (java.lang.String)classInstance.Get("MinOccursString");
+            retObjectMinOccursString = classInstance.Get("MinOccursString");
+            return (java.lang.String)retObjectMinOccursString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMinOccursString != null ? retObjectMinOccursString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class XmlSchemaParticle extends XmlSchemaAnnotated  {
 
     public void setMinOccursString(java.lang.String MinOccursString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinOccursString", MinOccursString);
         } catch (JCNativeException jcne) {

@@ -142,7 +142,7 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
     
     public void BeginLoad() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginLoad");
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
 
     public void BeginSave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginSave");
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
 
     public void EndLoad() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndLoad");
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
 
     public void EndSave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSave");
         } catch (JCNativeException jcne) {
@@ -186,9 +186,13 @@ public class ITrackingPersonalizableImplementation extends NetObject implements 
     
     public boolean getTracksChanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTracksChanges = null;
         try {
-            return (boolean)classInstance.Get("TracksChanges");
+            retObjectTracksChanges = classInstance.Get("TracksChanges");
+            return (boolean)retObjectTracksChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTracksChanges != null ? retObjectTracksChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

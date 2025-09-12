@@ -152,10 +152,14 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
     
     public DesignerCollection getDesigners() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesigners = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Designers");
+            retObjectDesigners = classInstance.Get("Designers");
+            JCObject val = (JCObject)retObjectDesigners;
             return new DesignerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesigners != null ? retObjectDesigners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,10 +167,14 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public IDesignerHost getActiveDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveDesigner");
+            retObjectActiveDesigner = classInstance.Get("ActiveDesigner");
+            JCObject val = (JCObject)retObjectActiveDesigner;
             return new IDesignerHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveDesigner != null ? retObjectActiveDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +187,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void addActiveDesignerChanged(ActiveDesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ActiveDesignerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -189,7 +197,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void removeActiveDesignerChanged(ActiveDesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ActiveDesignerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -199,7 +207,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void addDesignerCreated(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DesignerCreated", handler);
         } catch (JCNativeException jcne) {
@@ -209,7 +217,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void removeDesignerCreated(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DesignerCreated", handler);
         } catch (JCNativeException jcne) {
@@ -219,7 +227,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void addDesignerDisposed(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DesignerDisposed", handler);
         } catch (JCNativeException jcne) {
@@ -229,7 +237,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void removeDesignerDisposed(DesignerEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DesignerDisposed", handler);
         } catch (JCNativeException jcne) {
@@ -239,7 +247,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -249,7 +257,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
 
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {

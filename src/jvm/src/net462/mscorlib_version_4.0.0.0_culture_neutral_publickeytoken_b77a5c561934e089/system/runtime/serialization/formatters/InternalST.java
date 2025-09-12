@@ -157,9 +157,13 @@ public class InternalST extends NetObject  {
     
     public static boolean SoapCheckEnabled() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoapCheckEnabled = null;
         try {
-            return (boolean)classType.Invoke("SoapCheckEnabled");
+            retObjectSoapCheckEnabled = classType.Invoke("SoapCheckEnabled");
+            return (boolean)retObjectSoapCheckEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSoapCheckEnabled != null ? retObjectSoapCheckEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class InternalST extends NetObject  {
 
     public static Assembly LoadAssemblyFromString(java.lang.String assemblyString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadAssemblyFromString = null;
         try {
-            JCObject objLoadAssemblyFromString = (JCObject)classType.Invoke("LoadAssemblyFromString", assemblyString);
+            retObjectLoadAssemblyFromString = classType.Invoke("LoadAssemblyFromString", assemblyString);
+            JCObject objLoadAssemblyFromString = (JCObject)retObjectLoadAssemblyFromString;
             return new Assembly(objLoadAssemblyFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAssemblyFromString != null ? retObjectLoadAssemblyFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class InternalST extends NetObject  {
 
     public static void InfoSoap(NetObject... messages) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InfoSoap", (java.lang.Object)toObjectFromArray(messages));
         } catch (JCNativeException jcne) {
@@ -188,7 +196,7 @@ public class InternalST extends NetObject  {
 
     public static void SerializationSetValue(FieldInfo fi, NetObject target, NetObject value) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.reflection.TargetException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SerializationSetValue", fi == null ? null : fi.getJCOInstance(), target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +206,7 @@ public class InternalST extends NetObject  {
 
     public static void Soap(NetObject... messages) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Soap", (java.lang.Object)toObjectFromArray(messages));
         } catch (JCNativeException jcne) {
@@ -208,7 +216,7 @@ public class InternalST extends NetObject  {
 
     public static void SoapAssert(boolean condition, java.lang.String message) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SoapAssert", condition, message);
         } catch (JCNativeException jcne) {

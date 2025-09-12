@@ -162,9 +162,13 @@ public class MsmqBindingBase extends Binding  {
     
     public boolean getDurable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDurable = null;
         try {
-            return (boolean)classInstance.Get("Durable");
+            retObjectDurable = classInstance.Get("Durable");
+            return (boolean)retObjectDurable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDurable != null ? retObjectDurable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setDurable(boolean Durable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Durable", Durable);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class MsmqBindingBase extends Binding  {
 
     public boolean getExactlyOnce() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExactlyOnce = null;
         try {
-            return (boolean)classInstance.Get("ExactlyOnce");
+            retObjectExactlyOnce = classInstance.Get("ExactlyOnce");
+            return (boolean)retObjectExactlyOnce;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExactlyOnce != null ? retObjectExactlyOnce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setExactlyOnce(boolean ExactlyOnce) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExactlyOnce", ExactlyOnce);
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class MsmqBindingBase extends Binding  {
 
     public boolean getReceiveContextEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveContextEnabled = null;
         try {
-            return (boolean)classInstance.Get("ReceiveContextEnabled");
+            retObjectReceiveContextEnabled = classInstance.Get("ReceiveContextEnabled");
+            return (boolean)retObjectReceiveContextEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReceiveContextEnabled != null ? retObjectReceiveContextEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setReceiveContextEnabled(boolean ReceiveContextEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveContextEnabled", ReceiveContextEnabled);
         } catch (JCNativeException jcne) {
@@ -222,9 +234,13 @@ public class MsmqBindingBase extends Binding  {
 
     public boolean getUseMsmqTracing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseMsmqTracing = null;
         try {
-            return (boolean)classInstance.Get("UseMsmqTracing");
+            retObjectUseMsmqTracing = classInstance.Get("UseMsmqTracing");
+            return (boolean)retObjectUseMsmqTracing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseMsmqTracing != null ? retObjectUseMsmqTracing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setUseMsmqTracing(boolean UseMsmqTracing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseMsmqTracing", UseMsmqTracing);
         } catch (JCNativeException jcne) {
@@ -242,9 +258,13 @@ public class MsmqBindingBase extends Binding  {
 
     public boolean getUseSourceJournal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSourceJournal = null;
         try {
-            return (boolean)classInstance.Get("UseSourceJournal");
+            retObjectUseSourceJournal = classInstance.Get("UseSourceJournal");
+            return (boolean)retObjectUseSourceJournal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSourceJournal != null ? retObjectUseSourceJournal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setUseSourceJournal(boolean UseSourceJournal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSourceJournal", UseSourceJournal);
         } catch (JCNativeException jcne) {
@@ -262,9 +282,19 @@ public class MsmqBindingBase extends Binding  {
 
     public int getMaxRetryCycles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxRetryCycles = null;
         try {
-            return (int)classInstance.Get("MaxRetryCycles");
+            retObjectMaxRetryCycles = classInstance.Get("MaxRetryCycles");
+            return (int)retObjectMaxRetryCycles;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxRetryCyclesNumber = (java.lang.Number)retObjectMaxRetryCycles;
+                return retObjectMaxRetryCyclesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxRetryCycles != null ? retObjectMaxRetryCycles.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +302,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setMaxRetryCycles(int MaxRetryCycles) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxRetryCycles", MaxRetryCycles);
         } catch (JCNativeException jcne) {
@@ -282,9 +312,19 @@ public class MsmqBindingBase extends Binding  {
 
     public int getReceiveRetryCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveRetryCount = null;
         try {
-            return (int)classInstance.Get("ReceiveRetryCount");
+            retObjectReceiveRetryCount = classInstance.Get("ReceiveRetryCount");
+            return (int)retObjectReceiveRetryCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReceiveRetryCountNumber = (java.lang.Number)retObjectReceiveRetryCount;
+                return retObjectReceiveRetryCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReceiveRetryCount != null ? retObjectReceiveRetryCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +332,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setReceiveRetryCount(int ReceiveRetryCount) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveRetryCount", ReceiveRetryCount);
         } catch (JCNativeException jcne) {
@@ -302,9 +342,19 @@ public class MsmqBindingBase extends Binding  {
 
     public long getMaxReceivedMessageSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxReceivedMessageSize = null;
         try {
-            return (long)classInstance.Get("MaxReceivedMessageSize");
+            retObjectMaxReceivedMessageSize = classInstance.Get("MaxReceivedMessageSize");
+            return (long)retObjectMaxReceivedMessageSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxReceivedMessageSizeNumber = (java.lang.Number)retObjectMaxReceivedMessageSize;
+                return retObjectMaxReceivedMessageSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +362,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setMaxReceivedMessageSize(long MaxReceivedMessageSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxReceivedMessageSize", MaxReceivedMessageSize);
         } catch (JCNativeException jcne) {
@@ -322,10 +372,14 @@ public class MsmqBindingBase extends Binding  {
 
     public DeadLetterQueue getDeadLetterQueue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeadLetterQueue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeadLetterQueue");
+            retObjectDeadLetterQueue = classInstance.Get("DeadLetterQueue");
+            JCObject val = (JCObject)retObjectDeadLetterQueue;
             return new DeadLetterQueue(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeadLetterQueue != null ? retObjectDeadLetterQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +387,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setDeadLetterQueue(DeadLetterQueue DeadLetterQueue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeadLetterQueue", DeadLetterQueue == null ? null : DeadLetterQueue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,10 +397,14 @@ public class MsmqBindingBase extends Binding  {
 
     public ReceiveErrorHandling getReceiveErrorHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveErrorHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReceiveErrorHandling");
+            retObjectReceiveErrorHandling = classInstance.Get("ReceiveErrorHandling");
+            JCObject val = (JCObject)retObjectReceiveErrorHandling;
             return new ReceiveErrorHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveErrorHandling != null ? retObjectReceiveErrorHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +412,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setReceiveErrorHandling(ReceiveErrorHandling ReceiveErrorHandling) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReceiveErrorHandling", ReceiveErrorHandling == null ? null : ReceiveErrorHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -364,10 +422,14 @@ public class MsmqBindingBase extends Binding  {
 
     public TimeSpan getRetryCycleDelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetryCycleDelay = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RetryCycleDelay");
+            retObjectRetryCycleDelay = classInstance.Get("RetryCycleDelay");
+            JCObject val = (JCObject)retObjectRetryCycleDelay;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRetryCycleDelay != null ? retObjectRetryCycleDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,7 +437,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setRetryCycleDelay(TimeSpan RetryCycleDelay) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RetryCycleDelay", RetryCycleDelay == null ? null : RetryCycleDelay.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,10 +447,14 @@ public class MsmqBindingBase extends Binding  {
 
     public TimeSpan getTimeToLive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeToLive = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeToLive");
+            retObjectTimeToLive = classInstance.Get("TimeToLive");
+            JCObject val = (JCObject)retObjectTimeToLive;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeToLive != null ? retObjectTimeToLive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +462,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setTimeToLive(TimeSpan TimeToLive) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimeToLive", TimeToLive == null ? null : TimeToLive.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -406,10 +472,14 @@ public class MsmqBindingBase extends Binding  {
 
     public TimeSpan getValidityDuration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidityDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidityDuration");
+            retObjectValidityDuration = classInstance.Get("ValidityDuration");
+            JCObject val = (JCObject)retObjectValidityDuration;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidityDuration != null ? retObjectValidityDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,7 +487,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setValidityDuration(TimeSpan ValidityDuration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidityDuration", ValidityDuration == null ? null : ValidityDuration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -427,10 +497,14 @@ public class MsmqBindingBase extends Binding  {
 
     public Uri getCustomDeadLetterQueue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomDeadLetterQueue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomDeadLetterQueue");
+            retObjectCustomDeadLetterQueue = classInstance.Get("CustomDeadLetterQueue");
+            JCObject val = (JCObject)retObjectCustomDeadLetterQueue;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomDeadLetterQueue != null ? retObjectCustomDeadLetterQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +512,7 @@ public class MsmqBindingBase extends Binding  {
 
     public void setCustomDeadLetterQueue(Uri CustomDeadLetterQueue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomDeadLetterQueue", CustomDeadLetterQueue == null ? null : CustomDeadLetterQueue.getJCOInstance());
         } catch (JCNativeException jcne) {

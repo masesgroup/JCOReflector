@@ -157,7 +157,7 @@ public class DependencyPropertyKey extends NetObject  {
     
     public void OverrideMetadata(NetType forType, PropertyMetadata typeMetadata) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OverrideMetadata", forType == null ? null : forType.getJCOInstance(), typeMetadata == null ? null : typeMetadata.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -171,10 +171,14 @@ public class DependencyPropertyKey extends NetObject  {
     
     public DependencyProperty getDependencyProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependencyProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DependencyProperty");
+            retObjectDependencyProperty = classInstance.Get("DependencyProperty");
+            JCObject val = (JCObject)retObjectDependencyProperty;
             return new DependencyProperty(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependencyProperty != null ? retObjectDependencyProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

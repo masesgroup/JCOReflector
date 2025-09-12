@@ -159,9 +159,13 @@ public class StorageInfo extends NetObject  {
     
     public boolean StreamExists(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStreamExists = null;
         try {
-            return (boolean)classInstance.Invoke("StreamExists", name);
+            retObjectStreamExists = classInstance.Invoke("StreamExists", name);
+            return (boolean)retObjectStreamExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStreamExists != null ? retObjectStreamExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class StorageInfo extends NetObject  {
 
     public boolean SubStorageExists(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.DirectoryNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubStorageExists = null;
         try {
-            return (boolean)classInstance.Invoke("SubStorageExists", name);
+            retObjectSubStorageExists = classInstance.Invoke("SubStorageExists", name);
+            return (boolean)retObjectSubStorageExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSubStorageExists != null ? retObjectSubStorageExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class StorageInfo extends NetObject  {
 
     public StorageInfo CreateSubStorage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.DirectoryNotFoundException, system.io.IOException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubStorage = null;
         try {
-            JCObject objCreateSubStorage = (JCObject)classInstance.Invoke("CreateSubStorage", name);
+            retObjectCreateSubStorage = classInstance.Invoke("CreateSubStorage", name);
+            JCObject objCreateSubStorage = (JCObject)retObjectCreateSubStorage;
             return new StorageInfo(objCreateSubStorage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubStorage != null ? retObjectCreateSubStorage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class StorageInfo extends NetObject  {
 
     public StorageInfo GetSubStorageInfo(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.DirectoryNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSubStorageInfo = null;
         try {
-            JCObject objGetSubStorageInfo = (JCObject)classInstance.Invoke("GetSubStorageInfo", name);
+            retObjectGetSubStorageInfo = classInstance.Invoke("GetSubStorageInfo", name);
+            JCObject objGetSubStorageInfo = (JCObject)retObjectGetSubStorageInfo;
             return new StorageInfo(objGetSubStorageInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSubStorageInfo != null ? retObjectGetSubStorageInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,16 +217,20 @@ public class StorageInfo extends NetObject  {
 
     public StorageInfo[] GetSubStorages() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.DirectoryNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileFormatException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSubStorages = null;
         try {
             ArrayList<StorageInfo> resultingArrayList = new ArrayList<StorageInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSubStorages");
+            retObjectGetSubStorages = classInstance.Invoke("GetSubStorages");
+            JCObject resultingObjects = (JCObject)retObjectGetSubStorages;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new StorageInfo(resultingObject));
             }
             StorageInfo[] resultingArray = new StorageInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSubStorages != null ? retObjectGetSubStorages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class StorageInfo extends NetObject  {
 
     public StreamInfo CreateStream(java.lang.String name, CompressionOption compressionOption, EncryptionOption encryptionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.SystemException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateStream = null;
         try {
-            JCObject objCreateStream = (JCObject)classInstance.Invoke("CreateStream", name, compressionOption == null ? null : compressionOption.getJCOInstance(), encryptionOption == null ? null : encryptionOption.getJCOInstance());
+            retObjectCreateStream = classInstance.Invoke("CreateStream", name, compressionOption == null ? null : compressionOption.getJCOInstance(), encryptionOption == null ? null : encryptionOption.getJCOInstance());
+            JCObject objCreateStream = (JCObject)retObjectCreateStream;
             return new StreamInfo(objCreateStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateStream != null ? retObjectCreateStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class StorageInfo extends NetObject  {
 
     public StreamInfo CreateStream(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.FormatException, system.UnauthorizedAccessException, system.SystemException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateStream = null;
         try {
-            JCObject objCreateStream = (JCObject)classInstance.Invoke("CreateStream", name);
+            retObjectCreateStream = classInstance.Invoke("CreateStream", name);
+            JCObject objCreateStream = (JCObject)retObjectCreateStream;
             return new StreamInfo(objCreateStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateStream != null ? retObjectCreateStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +268,14 @@ public class StorageInfo extends NetObject  {
 
     public StreamInfo GetStreamInfo(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStreamInfo = null;
         try {
-            JCObject objGetStreamInfo = (JCObject)classInstance.Invoke("GetStreamInfo", name);
+            retObjectGetStreamInfo = classInstance.Invoke("GetStreamInfo", name);
+            JCObject objGetStreamInfo = (JCObject)retObjectGetStreamInfo;
             return new StreamInfo(objGetStreamInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStreamInfo != null ? retObjectGetStreamInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,16 +283,20 @@ public class StorageInfo extends NetObject  {
 
     public StreamInfo[] GetStreams() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.DirectoryNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileFormatException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStreams = null;
         try {
             ArrayList<StreamInfo> resultingArrayList = new ArrayList<StreamInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetStreams");
+            retObjectGetStreams = classInstance.Invoke("GetStreams");
+            JCObject resultingObjects = (JCObject)retObjectGetStreams;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new StreamInfo(resultingObject));
             }
             StreamInfo[] resultingArray = new StreamInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStreams != null ? retObjectGetStreams.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +304,7 @@ public class StorageInfo extends NetObject  {
 
     public void DeleteStream(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.NotSupportedException, system.FormatException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteStream", name);
         } catch (JCNativeException jcne) {
@@ -278,7 +314,7 @@ public class StorageInfo extends NetObject  {
 
     public void DeleteSubStorage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.DirectoryNotFoundException, system.io.IOException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.NotSupportedException, system.io.FileFormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteSubStorage", name);
         } catch (JCNativeException jcne) {
@@ -292,9 +328,13 @@ public class StorageInfo extends NetObject  {
     
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

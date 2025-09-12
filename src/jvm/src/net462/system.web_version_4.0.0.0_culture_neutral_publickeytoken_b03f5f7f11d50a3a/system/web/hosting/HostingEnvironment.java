@@ -172,10 +172,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
     
     public static IDisposable Impersonate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImpersonate = null;
         try {
-            JCObject objImpersonate = (JCObject)classType.Invoke("Impersonate");
+            retObjectImpersonate = classType.Invoke("Impersonate");
+            JCObject objImpersonate = (JCObject)retObjectImpersonate;
             return new IDisposableImplementation(objImpersonate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonate != null ? retObjectImpersonate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static IDisposable SetCultures() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetCultures = null;
         try {
-            JCObject objSetCultures = (JCObject)classType.Invoke("SetCultures");
+            retObjectSetCultures = classType.Invoke("SetCultures");
+            JCObject objSetCultures = (JCObject)retObjectSetCultures;
             return new IDisposableImplementation(objSetCultures);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetCultures != null ? retObjectSetCultures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static IDisposable SetCultures(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.web.HttpException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeInitializationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetCultures = null;
         try {
-            JCObject objSetCultures = (JCObject)classType.Invoke("SetCultures", virtualPath);
+            retObjectSetCultures = classType.Invoke("SetCultures", virtualPath);
+            JCObject objSetCultures = (JCObject)retObjectSetCultures;
             return new IDisposableImplementation(objSetCultures);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetCultures != null ? retObjectSetCultures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +232,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static java.lang.String MapPath(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMapPath = null;
         try {
-            return (java.lang.String)classType.Invoke("MapPath", virtualPath);
+            retObjectMapPath = classType.Invoke("MapPath", virtualPath);
+            return (java.lang.String)retObjectMapPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapPath != null ? retObjectMapPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +246,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void DecrementBusyCount() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DecrementBusyCount");
         } catch (JCNativeException jcne) {
@@ -236,7 +256,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void IncrementBusyCount() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("IncrementBusyCount");
         } catch (JCNativeException jcne) {
@@ -246,7 +266,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void InitiateShutdown() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InitiateShutdown");
         } catch (JCNativeException jcne) {
@@ -256,7 +276,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void MessageReceived() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MessageReceived");
         } catch (JCNativeException jcne) {
@@ -266,7 +286,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void RegisterObject(IRegisteredObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +296,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void RegisterVirtualPathProvider(VirtualPathProvider virtualPathProvider) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterVirtualPathProvider", virtualPathProvider == null ? null : virtualPathProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,7 +306,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void UnregisterObject(IRegisteredObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.threading.SemaphoreFullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnregisterObject", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -300,9 +320,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
     
     public static boolean getInClientBuildManager() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInClientBuildManager = null;
         try {
-            return (boolean)classType.Get("InClientBuildManager");
+            retObjectInClientBuildManager = classType.Get("InClientBuildManager");
+            return (boolean)retObjectInClientBuildManager;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInClientBuildManager != null ? retObjectInClientBuildManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +334,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static boolean getIsDevelopmentEnvironment() throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDevelopmentEnvironment = null;
         try {
-            return (boolean)classType.Get("IsDevelopmentEnvironment");
+            retObjectIsDevelopmentEnvironment = classType.Get("IsDevelopmentEnvironment");
+            return (boolean)retObjectIsDevelopmentEnvironment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDevelopmentEnvironment != null ? retObjectIsDevelopmentEnvironment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +348,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static boolean getIsHosted() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsHosted = null;
         try {
-            return (boolean)classType.Get("IsHosted");
+            retObjectIsHosted = classType.Get("IsHosted");
+            return (boolean)retObjectIsHosted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHosted != null ? retObjectIsHosted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +362,19 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static int getMaxConcurrentRequestsPerCPU() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxConcurrentRequestsPerCPU = null;
         try {
-            return (int)classType.Get("MaxConcurrentRequestsPerCPU");
+            retObjectMaxConcurrentRequestsPerCPU = classType.Get("MaxConcurrentRequestsPerCPU");
+            return (int)retObjectMaxConcurrentRequestsPerCPU;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConcurrentRequestsPerCPUNumber = (java.lang.Number)retObjectMaxConcurrentRequestsPerCPU;
+                return retObjectMaxConcurrentRequestsPerCPUNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentRequestsPerCPU != null ? retObjectMaxConcurrentRequestsPerCPU.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +382,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void setMaxConcurrentRequestsPerCPU(int MaxConcurrentRequestsPerCPU) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("MaxConcurrentRequestsPerCPU", MaxConcurrentRequestsPerCPU);
         } catch (JCNativeException jcne) {
@@ -350,9 +392,19 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static int getMaxConcurrentThreadsPerCPU() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxConcurrentThreadsPerCPU = null;
         try {
-            return (int)classType.Get("MaxConcurrentThreadsPerCPU");
+            retObjectMaxConcurrentThreadsPerCPU = classType.Get("MaxConcurrentThreadsPerCPU");
+            return (int)retObjectMaxConcurrentThreadsPerCPU;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxConcurrentThreadsPerCPUNumber = (java.lang.Number)retObjectMaxConcurrentThreadsPerCPU;
+                return retObjectMaxConcurrentThreadsPerCPUNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxConcurrentThreadsPerCPU != null ? retObjectMaxConcurrentThreadsPerCPU.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +412,7 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static void setMaxConcurrentThreadsPerCPU(int MaxConcurrentThreadsPerCPU) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("MaxConcurrentThreadsPerCPU", MaxConcurrentThreadsPerCPU);
         } catch (JCNativeException jcne) {
@@ -370,10 +422,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static NetException getInitializationException() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInitializationException = null;
         try {
-            JCObject val = (JCObject)classType.Get("InitializationException");
+            retObjectInitializationException = classType.Get("InitializationException");
+            JCObject val = (JCObject)retObjectInitializationException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializationException != null ? retObjectInitializationException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,9 +437,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static java.lang.String getApplicationID() throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationID = null;
         try {
-            return (java.lang.String)classType.Get("ApplicationID");
+            retObjectApplicationID = classType.Get("ApplicationID");
+            return (java.lang.String)retObjectApplicationID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationID != null ? retObjectApplicationID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,9 +451,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static java.lang.String getApplicationPhysicalPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationPhysicalPath = null;
         try {
-            return (java.lang.String)classType.Get("ApplicationPhysicalPath");
+            retObjectApplicationPhysicalPath = classType.Get("ApplicationPhysicalPath");
+            return (java.lang.String)retObjectApplicationPhysicalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationPhysicalPath != null ? retObjectApplicationPhysicalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,9 +465,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static java.lang.String getApplicationVirtualPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationVirtualPath = null;
         try {
-            return (java.lang.String)classType.Get("ApplicationVirtualPath");
+            retObjectApplicationVirtualPath = classType.Get("ApplicationVirtualPath");
+            return (java.lang.String)retObjectApplicationVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationVirtualPath != null ? retObjectApplicationVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,9 +479,13 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static java.lang.String getSiteName() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSiteName = null;
         try {
-            return (java.lang.String)classType.Get("SiteName");
+            retObjectSiteName = classType.Get("SiteName");
+            return (java.lang.String)retObjectSiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSiteName != null ? retObjectSiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +493,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static ApplicationShutdownReason getShutdownReason() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShutdownReason = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShutdownReason");
+            retObjectShutdownReason = classType.Get("ShutdownReason");
+            JCObject val = (JCObject)retObjectShutdownReason;
             return new ApplicationShutdownReason(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShutdownReason != null ? retObjectShutdownReason.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +508,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static Cache getCache() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCache = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cache");
+            retObjectCache = classType.Get("Cache");
+            JCObject val = (JCObject)retObjectCache;
             return new Cache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCache != null ? retObjectCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,10 +523,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static ApplicationMonitors getApplicationMonitors() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationMonitors = null;
         try {
-            JCObject val = (JCObject)classType.Get("ApplicationMonitors");
+            retObjectApplicationMonitors = classType.Get("ApplicationMonitors");
+            JCObject val = (JCObject)retObjectApplicationMonitors;
             return new ApplicationMonitors(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationMonitors != null ? retObjectApplicationMonitors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,10 +538,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static IApplicationHost getApplicationHost() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationHost = null;
         try {
-            JCObject val = (JCObject)classType.Get("ApplicationHost");
+            retObjectApplicationHost = classType.Get("ApplicationHost");
+            JCObject val = (JCObject)retObjectApplicationHost;
             return new IApplicationHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationHost != null ? retObjectApplicationHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,10 +553,14 @@ public class HostingEnvironment extends MarshalByRefObject  {
 
     public static VirtualPathProvider getVirtualPathProvider() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualPathProvider = null;
         try {
-            JCObject val = (JCObject)classType.Get("VirtualPathProvider");
+            retObjectVirtualPathProvider = classType.Get("VirtualPathProvider");
+            JCObject val = (JCObject)retObjectVirtualPathProvider;
             return new VirtualPathProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualPathProvider != null ? retObjectVirtualPathProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -175,10 +175,14 @@ public class ChannelServices extends NetObject  {
     
     public static IDictionary GetChannelSinkProperties(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChannelSinkProperties = null;
         try {
-            JCObject objGetChannelSinkProperties = (JCObject)classType.Invoke("GetChannelSinkProperties", obj == null ? null : obj.getJCOInstance());
+            retObjectGetChannelSinkProperties = classType.Invoke("GetChannelSinkProperties", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetChannelSinkProperties = (JCObject)retObjectGetChannelSinkProperties;
             return new IDictionaryImplementation(objGetChannelSinkProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChannelSinkProperties != null ? retObjectGetChannelSinkProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class ChannelServices extends NetObject  {
 
     public static IChannel GetChannel(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChannel = null;
         try {
-            JCObject objGetChannel = (JCObject)classType.Invoke("GetChannel", name);
+            retObjectGetChannel = classType.Invoke("GetChannel", name);
+            JCObject objGetChannel = (JCObject)retObjectGetChannel;
             return new IChannelImplementation(objGetChannel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChannel != null ? retObjectGetChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class ChannelServices extends NetObject  {
 
     public static IServerChannelSink CreateServerChannelSinkChain(IServerChannelSinkProvider provider, IChannelReceiver channel) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateServerChannelSinkChain = null;
         try {
-            JCObject objCreateServerChannelSinkChain = (JCObject)classType.Invoke("CreateServerChannelSinkChain", provider == null ? null : provider.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            retObjectCreateServerChannelSinkChain = classType.Invoke("CreateServerChannelSinkChain", provider == null ? null : provider.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            JCObject objCreateServerChannelSinkChain = (JCObject)retObjectCreateServerChannelSinkChain;
             return new IServerChannelSinkImplementation(objCreateServerChannelSinkChain);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateServerChannelSinkChain != null ? retObjectCreateServerChannelSinkChain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,14 @@ public class ChannelServices extends NetObject  {
 
     public static ServerProcessing DispatchMessage(IServerChannelSinkStack sinkStack, IMessage msg, JCORefOut<IMessage> replyMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDispatchMessage = null;
         try {
-            JCObject objDispatchMessage = (JCObject)classType.Invoke("DispatchMessage", sinkStack == null ? null : sinkStack.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), replyMsg.getJCRefOut());
+            retObjectDispatchMessage = classType.Invoke("DispatchMessage", sinkStack == null ? null : sinkStack.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), replyMsg.getJCRefOut());
+            JCObject objDispatchMessage = (JCObject)retObjectDispatchMessage;
             return new ServerProcessing(objDispatchMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDispatchMessage != null ? retObjectDispatchMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +235,14 @@ public class ChannelServices extends NetObject  {
 
     public static IMessage SyncDispatchMessage(IMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSyncDispatchMessage = null;
         try {
-            JCObject objSyncDispatchMessage = (JCObject)classType.Invoke("SyncDispatchMessage", msg == null ? null : msg.getJCOInstance());
+            retObjectSyncDispatchMessage = classType.Invoke("SyncDispatchMessage", msg == null ? null : msg.getJCOInstance());
+            JCObject objSyncDispatchMessage = (JCObject)retObjectSyncDispatchMessage;
             return new IMessageImplementation(objSyncDispatchMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncDispatchMessage != null ? retObjectSyncDispatchMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class ChannelServices extends NetObject  {
 
     public static IMessageCtrl AsyncDispatchMessage(IMessage msg, IMessageSink replySink) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsyncDispatchMessage = null;
         try {
-            JCObject objAsyncDispatchMessage = (JCObject)classType.Invoke("AsyncDispatchMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            retObjectAsyncDispatchMessage = classType.Invoke("AsyncDispatchMessage", msg == null ? null : msg.getJCOInstance(), replySink == null ? null : replySink.getJCOInstance());
+            JCObject objAsyncDispatchMessage = (JCObject)retObjectAsyncDispatchMessage;
             return new IMessageCtrlImplementation(objAsyncDispatchMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncDispatchMessage != null ? retObjectAsyncDispatchMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +265,12 @@ public class ChannelServices extends NetObject  {
 
     public static java.lang.String[] GetUrlsForObject(MarshalByRefObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUrlsForObject = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetUrlsForObject", obj == null ? null : obj.getJCOInstance());
+            retObjectGetUrlsForObject = classType.Invoke("GetUrlsForObject", obj == null ? null : obj.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetUrlsForObject;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -253,6 +279,8 @@ public class ChannelServices extends NetObject  {
 				resultingArray[indexGetUrlsForObject] = (java.lang.String)resultingArrayList.get(indexGetUrlsForObject);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetUrlsForObject != null ? retObjectGetUrlsForObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +288,7 @@ public class ChannelServices extends NetObject  {
 
     public static void RegisterChannel(IChannel chnl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterChannel", chnl == null ? null : chnl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,7 +298,7 @@ public class ChannelServices extends NetObject  {
 
     public static void RegisterChannel(IChannel chnl, boolean ensureSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterChannel", chnl == null ? null : chnl.getJCOInstance(), ensureSecurity);
         } catch (JCNativeException jcne) {
@@ -280,7 +308,7 @@ public class ChannelServices extends NetObject  {
 
     public static void UnregisterChannel(IChannel chnl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnregisterChannel", chnl == null ? null : chnl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,16 +322,20 @@ public class ChannelServices extends NetObject  {
     
     public final static IChannel[] getRegisteredChannels() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisteredChannels = null;
         try {
             ArrayList<IChannel> resultingArrayList = new ArrayList<IChannel>();
-            JCObject resultingObjects = (JCObject)classType.Get("RegisteredChannels");
+            retObjectRegisteredChannels = classType.Get("RegisteredChannels");
+            JCObject resultingObjects = (JCObject)retObjectRegisteredChannels;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IChannelImplementation(resultingObject));
             }
             IChannel[] resultingArray = new IChannel[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisteredChannels != null ? retObjectRegisteredChannels.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

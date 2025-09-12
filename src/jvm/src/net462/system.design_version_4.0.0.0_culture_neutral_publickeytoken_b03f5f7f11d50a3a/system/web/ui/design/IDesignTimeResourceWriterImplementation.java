@@ -146,9 +146,13 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
     
     public java.lang.String CreateResourceKey(java.lang.String resourceName, NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateResourceKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CreateResourceKey", resourceName, obj == null ? null : obj.getJCOInstance());
+            retObjectCreateResourceKey = classInstance.Invoke("CreateResourceKey", resourceName, obj == null ? null : obj.getJCOInstance());
+            return (java.lang.String)retObjectCreateResourceKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateResourceKey != null ? retObjectCreateResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     public void AddResource(java.lang.String name, byte[] value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -166,7 +170,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -176,7 +180,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     public void AddResource(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -196,7 +200,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -206,7 +210,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -216,7 +220,7 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
 
     public void Generate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Generate");
         } catch (JCNativeException jcne) {

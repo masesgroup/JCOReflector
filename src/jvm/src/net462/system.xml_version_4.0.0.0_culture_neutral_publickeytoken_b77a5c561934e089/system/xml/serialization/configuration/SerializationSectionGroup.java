@@ -169,10 +169,14 @@ public class SerializationSectionGroup extends ConfigurationSectionGroup  {
     
     public DateTimeSerializationSection getDateTimeSerialization() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTimeSerialization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DateTimeSerialization");
+            retObjectDateTimeSerialization = classInstance.Get("DateTimeSerialization");
+            JCObject val = (JCObject)retObjectDateTimeSerialization;
             return new DateTimeSerializationSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeSerialization != null ? retObjectDateTimeSerialization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class SerializationSectionGroup extends ConfigurationSectionGroup  {
 
     public SchemaImporterExtensionsSection getSchemaImporterExtensions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaImporterExtensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaImporterExtensions");
+            retObjectSchemaImporterExtensions = classInstance.Get("SchemaImporterExtensions");
+            JCObject val = (JCObject)retObjectSchemaImporterExtensions;
             return new SchemaImporterExtensionsSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaImporterExtensions != null ? retObjectSchemaImporterExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class SerializationSectionGroup extends ConfigurationSectionGroup  {
 
     public XmlSerializerSection getXmlSerializer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlSerializer");
+            retObjectXmlSerializer = classInstance.Get("XmlSerializer");
+            JCObject val = (JCObject)retObjectXmlSerializer;
             return new XmlSerializerSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlSerializer != null ? retObjectXmlSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

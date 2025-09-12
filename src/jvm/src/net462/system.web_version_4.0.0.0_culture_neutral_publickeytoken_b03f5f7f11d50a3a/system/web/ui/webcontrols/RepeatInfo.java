@@ -169,7 +169,7 @@ public class RepeatInfo extends NetObject  {
     
     public void RenderRepeater(HtmlTextWriter writer, IRepeatInfoUser user, Style controlStyle, WebControl baseControl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderRepeater", writer == null ? null : writer.getJCOInstance(), user == null ? null : user.getJCOInstance(), controlStyle == null ? null : controlStyle.getJCOInstance(), baseControl == null ? null : baseControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,9 +183,13 @@ public class RepeatInfo extends NetObject  {
     
     public boolean getOuterTableImplied() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOuterTableImplied = null;
         try {
-            return (boolean)classInstance.Get("OuterTableImplied");
+            retObjectOuterTableImplied = classInstance.Get("OuterTableImplied");
+            return (boolean)retObjectOuterTableImplied;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOuterTableImplied != null ? retObjectOuterTableImplied.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class RepeatInfo extends NetObject  {
 
     public void setOuterTableImplied(boolean OuterTableImplied) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OuterTableImplied", OuterTableImplied);
         } catch (JCNativeException jcne) {
@@ -203,9 +207,13 @@ public class RepeatInfo extends NetObject  {
 
     public boolean getUseAccessibleHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAccessibleHeader = null;
         try {
-            return (boolean)classInstance.Get("UseAccessibleHeader");
+            retObjectUseAccessibleHeader = classInstance.Get("UseAccessibleHeader");
+            return (boolean)retObjectUseAccessibleHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAccessibleHeader != null ? retObjectUseAccessibleHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class RepeatInfo extends NetObject  {
 
     public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAccessibleHeader", UseAccessibleHeader);
         } catch (JCNativeException jcne) {
@@ -223,9 +231,19 @@ public class RepeatInfo extends NetObject  {
 
     public int getRepeatColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatColumns = null;
         try {
-            return (int)classInstance.Get("RepeatColumns");
+            retObjectRepeatColumns = classInstance.Get("RepeatColumns");
+            return (int)retObjectRepeatColumns;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRepeatColumnsNumber = (java.lang.Number)retObjectRepeatColumns;
+                return retObjectRepeatColumnsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +251,7 @@ public class RepeatInfo extends NetObject  {
 
     public void setRepeatColumns(int RepeatColumns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatColumns", RepeatColumns);
         } catch (JCNativeException jcne) {
@@ -243,9 +261,13 @@ public class RepeatInfo extends NetObject  {
 
     public java.lang.String getCaption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +275,7 @@ public class RepeatInfo extends NetObject  {
 
     public void setCaption(java.lang.String Caption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -263,10 +285,14 @@ public class RepeatInfo extends NetObject  {
 
     public RepeatDirection getRepeatDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RepeatDirection");
+            retObjectRepeatDirection = classInstance.Get("RepeatDirection");
+            JCObject val = (JCObject)retObjectRepeatDirection;
             return new RepeatDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeatDirection != null ? retObjectRepeatDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +300,7 @@ public class RepeatInfo extends NetObject  {
 
     public void setRepeatDirection(RepeatDirection RepeatDirection) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatDirection", RepeatDirection == null ? null : RepeatDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +310,14 @@ public class RepeatInfo extends NetObject  {
 
     public RepeatLayout getRepeatLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RepeatLayout");
+            retObjectRepeatLayout = classInstance.Get("RepeatLayout");
+            JCObject val = (JCObject)retObjectRepeatLayout;
             return new RepeatLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeatLayout != null ? retObjectRepeatLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +325,7 @@ public class RepeatInfo extends NetObject  {
 
     public void setRepeatLayout(RepeatLayout RepeatLayout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatLayout", RepeatLayout == null ? null : RepeatLayout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +335,14 @@ public class RepeatInfo extends NetObject  {
 
     public TableCaptionAlign getCaptionAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionAlign");
+            retObjectCaptionAlign = classInstance.Get("CaptionAlign");
+            JCObject val = (JCObject)retObjectCaptionAlign;
             return new TableCaptionAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionAlign != null ? retObjectCaptionAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +350,7 @@ public class RepeatInfo extends NetObject  {
 
     public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionAlign", CaptionAlign == null ? null : CaptionAlign.getJCOInstance());
         } catch (JCNativeException jcne) {

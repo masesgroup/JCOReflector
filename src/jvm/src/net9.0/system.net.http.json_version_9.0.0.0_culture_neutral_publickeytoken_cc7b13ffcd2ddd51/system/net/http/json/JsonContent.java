@@ -160,10 +160,14 @@ public class JsonContent extends HttpContent  {
     
     public static JsonContent Create(NetObject inputValue, JsonTypeInfo jsonTypeInfo, MediaTypeHeaderValue mediaType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", inputValue == null ? null : inputValue.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), mediaType == null ? null : mediaType.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", inputValue == null ? null : inputValue.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), mediaType == null ? null : mediaType.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new JsonContent(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class JsonContent extends HttpContent  {
 
     public static JsonContent Create(NetObject inputValue, NetType inputType, MediaTypeHeaderValue mediaType, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", inputValue == null ? null : inputValue.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), mediaType == null ? null : mediaType.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", inputValue == null ? null : inputValue.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), mediaType == null ? null : mediaType.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new JsonContent(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class JsonContent extends HttpContent  {
     
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class JsonContent extends HttpContent  {
 
     public NetType getObjectType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            retObjectObjectType = classInstance.Get("ObjectType");
+            JCObject val = (JCObject)retObjectObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectType != null ? retObjectObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,10 +160,14 @@ public class LenientGlobalObject extends GlobalObject  {
     
     public NetObject getActiveXObjectNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveXObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveXObject");
+            retObjectActiveXObject = classInstance.Get("ActiveXObject");
+            JCObject val = (JCObject)retObjectActiveXObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveXObject != null ? retObjectActiveXObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setActiveXObject(NetObject ActiveXObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveXObject", ActiveXObject == null ? null : ActiveXObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,10 +185,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getArrayNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArray = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Array");
+            retObjectArray = classInstance.Get("Array");
+            JCObject val = (JCObject)retObjectArray;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArray != null ? retObjectArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setArray(NetObject Array) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Array", Array == null ? null : Array.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +210,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getBooleanNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoolean = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Boolean");
+            retObjectBoolean = classInstance.Get("Boolean");
+            JCObject val = (JCObject)retObjectBoolean;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoolean != null ? retObjectBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setBoolean(NetObject Boolean) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Boolean", Boolean == null ? null : Boolean.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,10 +235,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getDateNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Date");
+            retObjectDate = classInstance.Get("Date");
+            JCObject val = (JCObject)retObjectDate;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDate != null ? retObjectDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setDate(NetObject Date) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Date", Date == null ? null : Date.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +260,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getEnumeratorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Enumerator");
+            retObjectEnumerator = classInstance.Get("Enumerator");
+            JCObject val = (JCObject)retObjectEnumerator;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerator != null ? retObjectEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setEnumerator(NetObject Enumerator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enumerator", Enumerator == null ? null : Enumerator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +285,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Error");
+            retObjectError = classInstance.Get("Error");
+            JCObject val = (JCObject)retObjectError;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectError != null ? retObjectError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setError(NetObject Error) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Error", Error == null ? null : Error.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +310,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getEvalErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvalError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EvalError");
+            retObjectEvalError = classInstance.Get("EvalError");
+            JCObject val = (JCObject)retObjectEvalError;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvalError != null ? retObjectEvalError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setEvalError(NetObject EvalError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EvalError", EvalError == null ? null : EvalError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -307,10 +335,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getFunctionNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Function");
+            retObjectFunction = classInstance.Get("Function");
+            JCObject val = (JCObject)retObjectFunction;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunction != null ? retObjectFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +350,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setFunction(NetObject Function) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Function", Function == null ? null : Function.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -328,10 +360,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getMathNewLenientGlobalObject() throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMath = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Math");
+            retObjectMath = classInstance.Get("Math");
+            JCObject val = (JCObject)retObjectMath;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMath != null ? retObjectMath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +375,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setMath(NetObject Math) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Math", Math == null ? null : Math.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,10 +385,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getNumberNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumber = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Number");
+            retObjectNumber = classInstance.Get("Number");
+            JCObject val = (JCObject)retObjectNumber;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumber != null ? retObjectNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +400,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setNumber(NetObject Number) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Number", Number == null ? null : Number.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,10 +410,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getObjectNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Object");
+            retObjectObject = classInstance.Get("Object");
+            JCObject val = (JCObject)retObjectObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObject != null ? retObjectObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +425,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setObject(NetObject Object) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Object", Object == null ? null : Object.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,10 +435,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getRangeErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRangeError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RangeError");
+            retObjectRangeError = classInstance.Get("RangeError");
+            JCObject val = (JCObject)retObjectRangeError;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRangeError != null ? retObjectRangeError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +450,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setRangeError(NetObject RangeError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RangeError", RangeError == null ? null : RangeError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,10 +460,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getReferenceErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferenceError");
+            retObjectReferenceError = classInstance.Get("ReferenceError");
+            JCObject val = (JCObject)retObjectReferenceError;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceError != null ? retObjectReferenceError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,7 +475,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setReferenceError(NetObject ReferenceError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceError", ReferenceError == null ? null : ReferenceError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -433,10 +485,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getRegExpNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegExp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RegExp");
+            retObjectRegExp = classInstance.Get("RegExp");
+            JCObject val = (JCObject)retObjectRegExp;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegExp != null ? retObjectRegExp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +500,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setRegExp(NetObject RegExp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RegExp", RegExp == null ? null : RegExp.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -454,10 +510,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getStringNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectString = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("String");
+            retObjectString = classInstance.Get("String");
+            JCObject val = (JCObject)retObjectString;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectString != null ? retObjectString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +525,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setString(NetObject String) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("String", String == null ? null : String.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -475,10 +535,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getSyntaxErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyntaxError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyntaxError");
+            retObjectSyntaxError = classInstance.Get("SyntaxError");
+            JCObject val = (JCObject)retObjectSyntaxError;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyntaxError != null ? retObjectSyntaxError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +550,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setSyntaxError(NetObject SyntaxError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SyntaxError", SyntaxError == null ? null : SyntaxError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -496,10 +560,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getTypeErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeError");
+            retObjectTypeError = classInstance.Get("TypeError");
+            JCObject val = (JCObject)retObjectTypeError;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeError != null ? retObjectTypeError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,7 +575,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setTypeError(NetObject TypeError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeError", TypeError == null ? null : TypeError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -517,10 +585,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getURIErrorNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectURIError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("URIError");
+            retObjectURIError = classInstance.Get("URIError");
+            JCObject val = (JCObject)retObjectURIError;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectURIError != null ? retObjectURIError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,7 +600,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setURIError(NetObject URIError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("URIError", URIError == null ? null : URIError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -538,10 +610,14 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public NetObject getVBArrayNewLenientGlobalObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVBArray = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VBArray");
+            retObjectVBArray = classInstance.Get("VBArray");
+            JCObject val = (JCObject)retObjectVBArray;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVBArray != null ? retObjectVBArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,7 +625,7 @@ public class LenientGlobalObject extends GlobalObject  {
 
     public void setVBArray(NetObject VBArray) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VBArray", VBArray == null ? null : VBArray.getJCOInstance());
         } catch (JCNativeException jcne) {

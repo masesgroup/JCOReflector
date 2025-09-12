@@ -174,10 +174,12 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
     
     public byte[] CreateKeyExchange(byte[] rgbData) throws Throwable, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.ApplicationException, system.io.IOException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKeyExchange = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (java.lang.Object)rgbData);
+            retObjectCreateKeyExchange = classInstance.Invoke("CreateKeyExchange", (java.lang.Object)rgbData);
+            JCObject resultingObjects = (JCObject)retObjectCreateKeyExchange;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -186,6 +188,8 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 				resultingArray[indexCreateKeyExchange] = (byte)resultingArrayList.get(indexCreateKeyExchange);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateKeyExchange != null ? retObjectCreateKeyExchange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,12 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 
     public byte[] CreateKeyExchange(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.ApplicationException, system.io.IOException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKeyExchange = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateKeyExchange = classInstance.Invoke("CreateKeyExchange", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectCreateKeyExchange;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -205,6 +211,8 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 				resultingArray[indexCreateKeyExchange] = (byte)resultingArrayList.get(indexCreateKeyExchange);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateKeyExchange != null ? retObjectCreateKeyExchange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +220,12 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 
     public byte[] CreateKeyExchange(byte[] rgbData, NetType symAlgType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKeyExchange = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", rgbData, symAlgType == null ? null : symAlgType.getJCOInstance());
+            retObjectCreateKeyExchange = classInstance.Invoke("CreateKeyExchange", rgbData, symAlgType == null ? null : symAlgType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreateKeyExchange;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -224,6 +234,8 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 				resultingArray[indexCreateKeyExchange] = (byte)resultingArrayList.get(indexCreateKeyExchange);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateKeyExchange != null ? retObjectCreateKeyExchange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +243,12 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 
     public byte[] CreateKeyExchange(JCORefOut dupParam0, NetType dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKeyExchange = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectCreateKeyExchange = classInstance.Invoke("CreateKeyExchange", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreateKeyExchange;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -243,6 +257,8 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 				resultingArray[indexCreateKeyExchange] = (byte)resultingArrayList.get(indexCreateKeyExchange);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateKeyExchange != null ? retObjectCreateKeyExchange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +266,7 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 
     public void SetKey(AsymmetricAlgorithm key) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,10 +280,14 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
     
     public RandomNumberGenerator getRng() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRng = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rng");
+            retObjectRng = classInstance.Get("Rng");
+            JCObject val = (JCObject)retObjectRng;
             return new RandomNumberGenerator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRng != null ? retObjectRng.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +295,7 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
 
     public void setRng(RandomNumberGenerator Rng) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rng", Rng == null ? null : Rng.getJCOInstance());
         } catch (JCNativeException jcne) {

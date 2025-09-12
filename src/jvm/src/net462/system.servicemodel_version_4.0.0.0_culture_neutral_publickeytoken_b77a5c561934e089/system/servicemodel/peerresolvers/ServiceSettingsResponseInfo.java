@@ -171,9 +171,13 @@ public class ServiceSettingsResponseInfo extends NetObject  {
     
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasBody = null;
         try {
-            return (boolean)classInstance.Invoke("HasBody");
+            retObjectHasBody = classInstance.Invoke("HasBody");
+            return (boolean)retObjectHasBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasBody != null ? retObjectHasBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class ServiceSettingsResponseInfo extends NetObject  {
     
     public boolean getControlMeshShape() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlMeshShape = null;
         try {
-            return (boolean)classInstance.Get("ControlMeshShape");
+            retObjectControlMeshShape = classInstance.Get("ControlMeshShape");
+            return (boolean)retObjectControlMeshShape;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectControlMeshShape != null ? retObjectControlMeshShape.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ServiceSettingsResponseInfo extends NetObject  {
 
     public void setControlMeshShape(boolean ControlMeshShape) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlMeshShape", ControlMeshShape);
         } catch (JCNativeException jcne) {

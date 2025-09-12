@@ -158,10 +158,14 @@ public class MediaCommands extends NetObject  {
     
     public static RoutedUICommand getBoostBass() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBoostBass = null;
         try {
-            JCObject val = (JCObject)classType.Get("BoostBass");
+            retObjectBoostBass = classType.Get("BoostBass");
+            JCObject val = (JCObject)retObjectBoostBass;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoostBass != null ? retObjectBoostBass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getChannelDown() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChannelDown = null;
         try {
-            JCObject val = (JCObject)classType.Get("ChannelDown");
+            retObjectChannelDown = classType.Get("ChannelDown");
+            JCObject val = (JCObject)retObjectChannelDown;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelDown != null ? retObjectChannelDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getChannelUp() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChannelUp = null;
         try {
-            JCObject val = (JCObject)classType.Get("ChannelUp");
+            retObjectChannelUp = classType.Get("ChannelUp");
+            JCObject val = (JCObject)retObjectChannelUp;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelUp != null ? retObjectChannelUp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getDecreaseBass() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseBass = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseBass");
+            retObjectDecreaseBass = classType.Get("DecreaseBass");
+            JCObject val = (JCObject)retObjectDecreaseBass;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseBass != null ? retObjectDecreaseBass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getDecreaseMicrophoneVolume() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseMicrophoneVolume = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseMicrophoneVolume");
+            retObjectDecreaseMicrophoneVolume = classType.Get("DecreaseMicrophoneVolume");
+            JCObject val = (JCObject)retObjectDecreaseMicrophoneVolume;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseMicrophoneVolume != null ? retObjectDecreaseMicrophoneVolume.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getDecreaseTreble() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseTreble = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseTreble");
+            retObjectDecreaseTreble = classType.Get("DecreaseTreble");
+            JCObject val = (JCObject)retObjectDecreaseTreble;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseTreble != null ? retObjectDecreaseTreble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getDecreaseVolume() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseVolume = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseVolume");
+            retObjectDecreaseVolume = classType.Get("DecreaseVolume");
+            JCObject val = (JCObject)retObjectDecreaseVolume;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseVolume != null ? retObjectDecreaseVolume.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getFastForward() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFastForward = null;
         try {
-            JCObject val = (JCObject)classType.Get("FastForward");
+            retObjectFastForward = classType.Get("FastForward");
+            JCObject val = (JCObject)retObjectFastForward;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFastForward != null ? retObjectFastForward.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getIncreaseBass() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseBass = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseBass");
+            retObjectIncreaseBass = classType.Get("IncreaseBass");
+            JCObject val = (JCObject)retObjectIncreaseBass;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseBass != null ? retObjectIncreaseBass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getIncreaseMicrophoneVolume() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseMicrophoneVolume = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseMicrophoneVolume");
+            retObjectIncreaseMicrophoneVolume = classType.Get("IncreaseMicrophoneVolume");
+            JCObject val = (JCObject)retObjectIncreaseMicrophoneVolume;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseMicrophoneVolume != null ? retObjectIncreaseMicrophoneVolume.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getIncreaseTreble() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseTreble = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseTreble");
+            retObjectIncreaseTreble = classType.Get("IncreaseTreble");
+            JCObject val = (JCObject)retObjectIncreaseTreble;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseTreble != null ? retObjectIncreaseTreble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getIncreaseVolume() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseVolume = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseVolume");
+            retObjectIncreaseVolume = classType.Get("IncreaseVolume");
+            JCObject val = (JCObject)retObjectIncreaseVolume;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseVolume != null ? retObjectIncreaseVolume.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getMuteMicrophoneVolume() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMuteMicrophoneVolume = null;
         try {
-            JCObject val = (JCObject)classType.Get("MuteMicrophoneVolume");
+            retObjectMuteMicrophoneVolume = classType.Get("MuteMicrophoneVolume");
+            JCObject val = (JCObject)retObjectMuteMicrophoneVolume;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMuteMicrophoneVolume != null ? retObjectMuteMicrophoneVolume.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getMuteVolume() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMuteVolume = null;
         try {
-            JCObject val = (JCObject)classType.Get("MuteVolume");
+            retObjectMuteVolume = classType.Get("MuteVolume");
+            JCObject val = (JCObject)retObjectMuteVolume;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMuteVolume != null ? retObjectMuteVolume.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getNextTrack() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNextTrack = null;
         try {
-            JCObject val = (JCObject)classType.Get("NextTrack");
+            retObjectNextTrack = classType.Get("NextTrack");
+            JCObject val = (JCObject)retObjectNextTrack;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextTrack != null ? retObjectNextTrack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getPause() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPause = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pause");
+            retObjectPause = classType.Get("Pause");
+            JCObject val = (JCObject)retObjectPause;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPause != null ? retObjectPause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getPlay() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPlay = null;
         try {
-            JCObject val = (JCObject)classType.Get("Play");
+            retObjectPlay = classType.Get("Play");
+            JCObject val = (JCObject)retObjectPlay;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlay != null ? retObjectPlay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +413,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getPreviousTrack() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreviousTrack = null;
         try {
-            JCObject val = (JCObject)classType.Get("PreviousTrack");
+            retObjectPreviousTrack = classType.Get("PreviousTrack");
+            JCObject val = (JCObject)retObjectPreviousTrack;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousTrack != null ? retObjectPreviousTrack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +428,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getRecord() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRecord = null;
         try {
-            JCObject val = (JCObject)classType.Get("Record");
+            retObjectRecord = classType.Get("Record");
+            JCObject val = (JCObject)retObjectRecord;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecord != null ? retObjectRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +443,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getRewind() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRewind = null;
         try {
-            JCObject val = (JCObject)classType.Get("Rewind");
+            retObjectRewind = classType.Get("Rewind");
+            JCObject val = (JCObject)retObjectRewind;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRewind != null ? retObjectRewind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +458,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getSelect() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject val = (JCObject)classType.Get("Select");
+            retObjectSelect = classType.Get("Select");
+            JCObject val = (JCObject)retObjectSelect;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +473,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getStop() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStop = null;
         try {
-            JCObject val = (JCObject)classType.Get("Stop");
+            retObjectStop = classType.Get("Stop");
+            JCObject val = (JCObject)retObjectStop;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStop != null ? retObjectStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +488,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getToggleMicrophoneOnOff() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleMicrophoneOnOff = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleMicrophoneOnOff");
+            retObjectToggleMicrophoneOnOff = classType.Get("ToggleMicrophoneOnOff");
+            JCObject val = (JCObject)retObjectToggleMicrophoneOnOff;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleMicrophoneOnOff != null ? retObjectToggleMicrophoneOnOff.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +503,14 @@ public class MediaCommands extends NetObject  {
 
     public static RoutedUICommand getTogglePlayPause() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTogglePlayPause = null;
         try {
-            JCObject val = (JCObject)classType.Get("TogglePlayPause");
+            retObjectTogglePlayPause = classType.Get("TogglePlayPause");
+            JCObject val = (JCObject)retObjectTogglePlayPause;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTogglePlayPause != null ? retObjectTogglePlayPause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,10 +171,14 @@ public class DataTableClearEventArgs extends EventArgs  {
     
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Table");
+            retObjectTable = classInstance.Get("Table");
+            JCObject val = (JCObject)retObjectTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTable != null ? retObjectTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class DataTableClearEventArgs extends EventArgs  {
 
     public java.lang.String getTableName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTableName = null;
         try {
-            return (java.lang.String)classInstance.Get("TableName");
+            retObjectTableName = classInstance.Get("TableName");
+            return (java.lang.String)retObjectTableName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTableName != null ? retObjectTableName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class DataTableClearEventArgs extends EventArgs  {
 
     public java.lang.String getTableNamespace() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTableNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("TableNamespace");
+            retObjectTableNamespace = classInstance.Get("TableNamespace");
+            return (java.lang.String)retObjectTableNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTableNamespace != null ? retObjectTableNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -143,7 +143,7 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
     
     public void EndFragment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndFragment");
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
 
     public void StartFragment(Stream stream, boolean generateSelfContainedTextFragment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartFragment", stream == null ? null : stream.getJCOInstance(), generateSelfContainedTextFragment);
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
 
     public void WriteFragment(byte[] buffer, int offset, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteFragment", buffer, offset, count);
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
 
     public void WriteFragment(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteFragment", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -187,9 +187,13 @@ public class IFragmentCapableXmlDictionaryWriterImplementation extends NetObject
     
     public boolean getCanFragment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanFragment = null;
         try {
-            return (boolean)classInstance.Get("CanFragment");
+            retObjectCanFragment = classInstance.Get("CanFragment");
+            return (boolean)retObjectCanFragment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanFragment != null ? retObjectCanFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

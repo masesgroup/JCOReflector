@@ -172,10 +172,14 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
     }
 
     /**
@@ -196,7 +200,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public int[] GetSupportedViews() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
     }
 
     /**
@@ -205,7 +209,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public java.lang.String GetViewName(int viewId) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
     }
 
     /**
@@ -214,7 +218,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public void SetCurrentView(int viewId) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
     }
 
     /**
@@ -223,7 +227,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetSelection() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionProvider to obtain the full interface.");
     }
 
     /**
@@ -232,7 +236,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
 
     /**
@@ -241,7 +245,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
 
     /**
@@ -250,7 +254,7 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
      */
     @Deprecated 
     public IRawElementProviderSimple FindItemByProperty(IRawElementProviderSimple startAfter, int propertyId, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerProvider to obtain the full interface.");
     }
 
 

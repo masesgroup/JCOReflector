@@ -144,10 +144,14 @@ public class ISymbolBinderImplementation extends NetObject implements ISymbolBin
     
     public ISymbolReader GetReader(int importer, java.lang.String filename, java.lang.String searchPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReader = null;
         try {
-            JCObject objGetReader = (JCObject)classInstance.Invoke("GetReader", importer, filename, searchPath);
+            retObjectGetReader = classInstance.Invoke("GetReader", importer, filename, searchPath);
+            JCObject objGetReader = (JCObject)retObjectGetReader;
             return new ISymbolReaderImplementation(objGetReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReader != null ? retObjectGetReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,9 +159,13 @@ public class PageParserFilter extends NetObject  {
     
     public boolean AllowBaseType(NetType baseType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowBaseType = null;
         try {
-            return (boolean)classInstance.Invoke("AllowBaseType", baseType == null ? null : baseType.getJCOInstance());
+            retObjectAllowBaseType = classInstance.Invoke("AllowBaseType", baseType == null ? null : baseType.getJCOInstance());
+            return (boolean)retObjectAllowBaseType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAllowBaseType != null ? retObjectAllowBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class PageParserFilter extends NetObject  {
 
     public boolean AllowControl(NetType controlType, ControlBuilder builder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowControl = null;
         try {
-            return (boolean)classInstance.Invoke("AllowControl", controlType == null ? null : controlType.getJCOInstance(), builder == null ? null : builder.getJCOInstance());
+            retObjectAllowControl = classInstance.Invoke("AllowControl", controlType == null ? null : controlType.getJCOInstance(), builder == null ? null : builder.getJCOInstance());
+            return (boolean)retObjectAllowControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAllowControl != null ? retObjectAllowControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class PageParserFilter extends NetObject  {
 
     public boolean AllowServerSideInclude(java.lang.String includeVirtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowServerSideInclude = null;
         try {
-            return (boolean)classInstance.Invoke("AllowServerSideInclude", includeVirtualPath);
+            retObjectAllowServerSideInclude = classInstance.Invoke("AllowServerSideInclude", includeVirtualPath);
+            return (boolean)retObjectAllowServerSideInclude;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAllowServerSideInclude != null ? retObjectAllowServerSideInclude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +201,13 @@ public class PageParserFilter extends NetObject  {
 
     public boolean AllowVirtualReference(java.lang.String referenceVirtualPath, VirtualReferenceType referenceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowVirtualReference = null;
         try {
-            return (boolean)classInstance.Invoke("AllowVirtualReference", referenceVirtualPath, referenceType == null ? null : referenceType.getJCOInstance());
+            retObjectAllowVirtualReference = classInstance.Invoke("AllowVirtualReference", referenceVirtualPath, referenceType == null ? null : referenceType.getJCOInstance());
+            return (boolean)retObjectAllowVirtualReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAllowVirtualReference != null ? retObjectAllowVirtualReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +215,13 @@ public class PageParserFilter extends NetObject  {
 
     public boolean ProcessCodeConstruct(CodeConstructType codeType, java.lang.String code) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessCodeConstruct = null;
         try {
-            return (boolean)classInstance.Invoke("ProcessCodeConstruct", codeType == null ? null : codeType.getJCOInstance(), code);
+            retObjectProcessCodeConstruct = classInstance.Invoke("ProcessCodeConstruct", codeType == null ? null : codeType.getJCOInstance(), code);
+            return (boolean)retObjectProcessCodeConstruct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectProcessCodeConstruct != null ? retObjectProcessCodeConstruct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +229,13 @@ public class PageParserFilter extends NetObject  {
 
     public boolean ProcessDataBindingAttribute(java.lang.String controlId, java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessDataBindingAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("ProcessDataBindingAttribute", controlId, name, value);
+            retObjectProcessDataBindingAttribute = classInstance.Invoke("ProcessDataBindingAttribute", controlId, name, value);
+            return (boolean)retObjectProcessDataBindingAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectProcessDataBindingAttribute != null ? retObjectProcessDataBindingAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +243,13 @@ public class PageParserFilter extends NetObject  {
 
     public boolean ProcessEventHookup(java.lang.String controlId, java.lang.String eventName, java.lang.String handlerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessEventHookup = null;
         try {
-            return (boolean)classInstance.Invoke("ProcessEventHookup", controlId, eventName, handlerName);
+            retObjectProcessEventHookup = classInstance.Invoke("ProcessEventHookup", controlId, eventName, handlerName);
+            return (boolean)retObjectProcessEventHookup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectProcessEventHookup != null ? retObjectProcessEventHookup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +257,14 @@ public class PageParserFilter extends NetObject  {
 
     public NetType GetNoCompileUserControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNoCompileUserControlType = null;
         try {
-            JCObject objGetNoCompileUserControlType = (JCObject)classInstance.Invoke("GetNoCompileUserControlType");
+            retObjectGetNoCompileUserControlType = classInstance.Invoke("GetNoCompileUserControlType");
+            JCObject objGetNoCompileUserControlType = (JCObject)retObjectGetNoCompileUserControlType;
             return new NetType(objGetNoCompileUserControlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNoCompileUserControlType != null ? retObjectGetNoCompileUserControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +272,14 @@ public class PageParserFilter extends NetObject  {
 
     public CompilationMode GetCompilationMode(CompilationMode current) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCompilationMode = null;
         try {
-            JCObject objGetCompilationMode = (JCObject)classInstance.Invoke("GetCompilationMode", current == null ? null : current.getJCOInstance());
+            retObjectGetCompilationMode = classInstance.Invoke("GetCompilationMode", current == null ? null : current.getJCOInstance());
+            JCObject objGetCompilationMode = (JCObject)retObjectGetCompilationMode;
             return new CompilationMode(objGetCompilationMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompilationMode != null ? retObjectGetCompilationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +287,7 @@ public class PageParserFilter extends NetObject  {
 
     public void ParseComplete(ControlBuilder rootBuilder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ParseComplete", rootBuilder == null ? null : rootBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,7 +297,7 @@ public class PageParserFilter extends NetObject  {
 
     public void PreprocessDirective(java.lang.String directiveName, IDictionary attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PreprocessDirective", directiveName, attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,9 +311,13 @@ public class PageParserFilter extends NetObject  {
     
     public boolean getAllowCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCode = null;
         try {
-            return (boolean)classInstance.Get("AllowCode");
+            retObjectAllowCode = classInstance.Get("AllowCode");
+            return (boolean)retObjectAllowCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCode != null ? retObjectAllowCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +325,19 @@ public class PageParserFilter extends NetObject  {
 
     public int getNumberOfControlsAllowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfControlsAllowed = null;
         try {
-            return (int)classInstance.Get("NumberOfControlsAllowed");
+            retObjectNumberOfControlsAllowed = classInstance.Get("NumberOfControlsAllowed");
+            return (int)retObjectNumberOfControlsAllowed;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfControlsAllowedNumber = (java.lang.Number)retObjectNumberOfControlsAllowed;
+                return retObjectNumberOfControlsAllowedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfControlsAllowed != null ? retObjectNumberOfControlsAllowed.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,9 +345,19 @@ public class PageParserFilter extends NetObject  {
 
     public int getNumberOfDirectDependenciesAllowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfDirectDependenciesAllowed = null;
         try {
-            return (int)classInstance.Get("NumberOfDirectDependenciesAllowed");
+            retObjectNumberOfDirectDependenciesAllowed = classInstance.Get("NumberOfDirectDependenciesAllowed");
+            return (int)retObjectNumberOfDirectDependenciesAllowed;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfDirectDependenciesAllowedNumber = (java.lang.Number)retObjectNumberOfDirectDependenciesAllowed;
+                return retObjectNumberOfDirectDependenciesAllowedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfDirectDependenciesAllowed != null ? retObjectNumberOfDirectDependenciesAllowed.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,9 +365,19 @@ public class PageParserFilter extends NetObject  {
 
     public int getTotalNumberOfDependenciesAllowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalNumberOfDependenciesAllowed = null;
         try {
-            return (int)classInstance.Get("TotalNumberOfDependenciesAllowed");
+            retObjectTotalNumberOfDependenciesAllowed = classInstance.Get("TotalNumberOfDependenciesAllowed");
+            return (int)retObjectTotalNumberOfDependenciesAllowed;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTotalNumberOfDependenciesAllowedNumber = (java.lang.Number)retObjectTotalNumberOfDependenciesAllowed;
+                return retObjectTotalNumberOfDependenciesAllowedNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectTotalNumberOfDependenciesAllowed != null ? retObjectTotalNumberOfDependenciesAllowed.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

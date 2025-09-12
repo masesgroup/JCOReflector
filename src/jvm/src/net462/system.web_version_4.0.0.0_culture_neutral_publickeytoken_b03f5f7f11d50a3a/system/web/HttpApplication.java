@@ -178,9 +178,13 @@ public class HttpApplication extends NetObject implements AutoCloseable {
     
     public java.lang.String GetOutputCacheProviderName(HttpContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutputCacheProviderName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetOutputCacheProviderName", context == null ? null : context.getJCOInstance());
+            retObjectGetOutputCacheProviderName = classInstance.Invoke("GetOutputCacheProviderName", context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectGetOutputCacheProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetOutputCacheProviderName != null ? retObjectGetOutputCacheProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public java.lang.String GetVaryByCustomString(HttpContext context, java.lang.String custom) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVaryByCustomString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetVaryByCustomString", context == null ? null : context.getJCOInstance(), custom);
+            retObjectGetVaryByCustomString = classInstance.Invoke("GetVaryByCustomString", context == null ? null : context.getJCOInstance(), custom);
+            return (java.lang.String)retObjectGetVaryByCustomString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetVaryByCustomString != null ? retObjectGetVaryByCustomString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnAcquireRequestStateAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnAcquireRequestStateAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -208,7 +216,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnAcquireRequestStateAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnAcquireRequestStateAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +226,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnAuthenticateRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnAuthenticateRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -228,7 +236,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnAuthenticateRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnAuthenticateRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -238,7 +246,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnAuthorizeRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnAuthorizeRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -248,7 +256,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnAuthorizeRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnAuthorizeRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,7 +266,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnBeginRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnBeginRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -268,7 +276,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnBeginRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnBeginRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,7 +286,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnEndRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnEndRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -288,7 +296,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnEndRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnEndRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,7 +306,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnLogRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnLogRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -308,7 +316,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnLogRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnLogRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -318,7 +326,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnMapRequestHandlerAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnMapRequestHandlerAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -328,7 +336,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnMapRequestHandlerAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnMapRequestHandlerAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -338,7 +346,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostAcquireRequestStateAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostAcquireRequestStateAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -348,7 +356,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostAcquireRequestStateAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostAcquireRequestStateAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -358,7 +366,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostAuthenticateRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostAuthenticateRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -368,7 +376,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostAuthenticateRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostAuthenticateRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -378,7 +386,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostAuthorizeRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostAuthorizeRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -388,7 +396,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostAuthorizeRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostAuthorizeRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -398,7 +406,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostLogRequestAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostLogRequestAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -408,7 +416,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostLogRequestAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostLogRequestAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -418,7 +426,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostMapRequestHandlerAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostMapRequestHandlerAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -428,7 +436,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostMapRequestHandlerAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostMapRequestHandlerAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -438,7 +446,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostReleaseRequestStateAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostReleaseRequestStateAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -448,7 +456,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostReleaseRequestStateAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostReleaseRequestStateAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -458,7 +466,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostRequestHandlerExecuteAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostRequestHandlerExecuteAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -468,7 +476,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostRequestHandlerExecuteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostRequestHandlerExecuteAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -478,7 +486,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostResolveRequestCacheAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostResolveRequestCacheAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -488,7 +496,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostResolveRequestCacheAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostResolveRequestCacheAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -498,7 +506,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostUpdateRequestCacheAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostUpdateRequestCacheAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -508,7 +516,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPostUpdateRequestCacheAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPostUpdateRequestCacheAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -518,7 +526,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPreRequestHandlerExecuteAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPreRequestHandlerExecuteAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -528,7 +536,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnPreRequestHandlerExecuteAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnPreRequestHandlerExecuteAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -538,7 +546,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnReleaseRequestStateAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnReleaseRequestStateAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -548,7 +556,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnReleaseRequestStateAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnReleaseRequestStateAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -558,7 +566,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnResolveRequestCacheAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnResolveRequestCacheAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -568,7 +576,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnResolveRequestCacheAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnResolveRequestCacheAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -578,7 +586,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnUpdateRequestCacheAsync(BeginEventHandler bh, EndEventHandler eh) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnUpdateRequestCacheAsync", bh, eh);
         } catch (JCNativeException jcne) {
@@ -588,7 +596,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void AddOnUpdateRequestCacheAsync(BeginEventHandler beginHandler, EndEventHandler endHandler, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOnUpdateRequestCacheAsync", beginHandler, endHandler, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -598,7 +606,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void CompleteRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteRequest");
         } catch (JCNativeException jcne) {
@@ -608,7 +616,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -618,7 +626,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void Init() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init");
         } catch (JCNativeException jcne) {
@@ -628,7 +636,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public static void RegisterModule(NetType moduleType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterModule", moduleType == null ? null : moduleType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -642,7 +650,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
      */
     @Deprecated 
     public IAsyncResult BeginProcessRequest(HttpContext context, AsyncCallback cb, NetObject extraData) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
     }
 
     /**
@@ -651,7 +659,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
      */
     @Deprecated 
     public void EndProcessRequest(IAsyncResult result) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
     }
 
     /**
@@ -660,13 +668,13 @@ public class HttpApplication extends NetObject implements AutoCloseable {
      */
     @Deprecated 
     public void ProcessRequest(HttpContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -682,10 +690,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
     
     public ISite getSite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Site");
+            retObjectSite = classInstance.Get("Site");
+            JCObject val = (JCObject)retObjectSite;
             return new ISiteImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSite != null ? retObjectSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,7 +705,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void setSite(ISite Site) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -703,10 +715,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public IPrincipal getUser() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            JCObject val = (JCObject)retObjectUser;
             return new IPrincipalImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -714,10 +730,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public HttpApplicationState getApplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Application");
+            retObjectApplication = classInstance.Get("Application");
+            JCObject val = (JCObject)retObjectApplication;
             return new HttpApplicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplication != null ? retObjectApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -725,10 +745,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public HttpContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new HttpContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,10 +760,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public HttpModuleCollection getModules() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModules = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Modules");
+            retObjectModules = classInstance.Get("Modules");
+            JCObject val = (JCObject)retObjectModules;
             return new HttpModuleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModules != null ? retObjectModules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -747,10 +775,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public HttpRequest getRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Request");
+            retObjectRequest = classInstance.Get("Request");
+            JCObject val = (JCObject)retObjectRequest;
             return new HttpRequest(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequest != null ? retObjectRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,10 +790,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public HttpResponse getResponse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Response");
+            retObjectResponse = classInstance.Get("Response");
+            JCObject val = (JCObject)retObjectResponse;
             return new HttpResponse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponse != null ? retObjectResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -769,10 +805,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public HttpServerUtility getServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            JCObject val = (JCObject)retObjectServer;
             return new HttpServerUtility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,10 +820,14 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public HttpSessionState getSession() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
             return new HttpSessionState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,7 +840,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addAcquireRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AcquireRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -806,7 +850,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeAcquireRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AcquireRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -816,7 +860,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addAuthenticateRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AuthenticateRequest", handler);
         } catch (JCNativeException jcne) {
@@ -826,7 +870,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeAuthenticateRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AuthenticateRequest", handler);
         } catch (JCNativeException jcne) {
@@ -836,7 +880,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addAuthorizeRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AuthorizeRequest", handler);
         } catch (JCNativeException jcne) {
@@ -846,7 +890,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeAuthorizeRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AuthorizeRequest", handler);
         } catch (JCNativeException jcne) {
@@ -856,7 +900,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addBeginRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeginRequest", handler);
         } catch (JCNativeException jcne) {
@@ -866,7 +910,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeBeginRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeginRequest", handler);
         } catch (JCNativeException jcne) {
@@ -876,7 +920,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -886,7 +930,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -896,7 +940,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addEndRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EndRequest", handler);
         } catch (JCNativeException jcne) {
@@ -906,7 +950,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeEndRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EndRequest", handler);
         } catch (JCNativeException jcne) {
@@ -916,7 +960,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Error", handler);
         } catch (JCNativeException jcne) {
@@ -926,7 +970,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Error", handler);
         } catch (JCNativeException jcne) {
@@ -936,7 +980,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addLogRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LogRequest", handler);
         } catch (JCNativeException jcne) {
@@ -946,7 +990,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeLogRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LogRequest", handler);
         } catch (JCNativeException jcne) {
@@ -956,7 +1000,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addMapRequestHandler(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MapRequestHandler", handler);
         } catch (JCNativeException jcne) {
@@ -966,7 +1010,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeMapRequestHandler(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MapRequestHandler", handler);
         } catch (JCNativeException jcne) {
@@ -976,7 +1020,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostAcquireRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostAcquireRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -986,7 +1030,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostAcquireRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostAcquireRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -996,7 +1040,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostAuthenticateRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostAuthenticateRequest", handler);
         } catch (JCNativeException jcne) {
@@ -1006,7 +1050,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostAuthenticateRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostAuthenticateRequest", handler);
         } catch (JCNativeException jcne) {
@@ -1016,7 +1060,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostAuthorizeRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostAuthorizeRequest", handler);
         } catch (JCNativeException jcne) {
@@ -1026,7 +1070,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostAuthorizeRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostAuthorizeRequest", handler);
         } catch (JCNativeException jcne) {
@@ -1036,7 +1080,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostLogRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostLogRequest", handler);
         } catch (JCNativeException jcne) {
@@ -1046,7 +1090,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostLogRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostLogRequest", handler);
         } catch (JCNativeException jcne) {
@@ -1056,7 +1100,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostMapRequestHandler(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostMapRequestHandler", handler);
         } catch (JCNativeException jcne) {
@@ -1066,7 +1110,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostMapRequestHandler(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostMapRequestHandler", handler);
         } catch (JCNativeException jcne) {
@@ -1076,7 +1120,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostReleaseRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostReleaseRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -1086,7 +1130,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostReleaseRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostReleaseRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -1096,7 +1140,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostRequestHandlerExecute(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostRequestHandlerExecute", handler);
         } catch (JCNativeException jcne) {
@@ -1106,7 +1150,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostRequestHandlerExecute(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostRequestHandlerExecute", handler);
         } catch (JCNativeException jcne) {
@@ -1116,7 +1160,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostResolveRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostResolveRequestCache", handler);
         } catch (JCNativeException jcne) {
@@ -1126,7 +1170,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostResolveRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostResolveRequestCache", handler);
         } catch (JCNativeException jcne) {
@@ -1136,7 +1180,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPostUpdateRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PostUpdateRequestCache", handler);
         } catch (JCNativeException jcne) {
@@ -1146,7 +1190,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePostUpdateRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PostUpdateRequestCache", handler);
         } catch (JCNativeException jcne) {
@@ -1156,7 +1200,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPreRequestHandlerExecute(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreRequestHandlerExecute", handler);
         } catch (JCNativeException jcne) {
@@ -1166,7 +1210,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePreRequestHandlerExecute(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreRequestHandlerExecute", handler);
         } catch (JCNativeException jcne) {
@@ -1176,7 +1220,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPreSendRequestContent(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreSendRequestContent", handler);
         } catch (JCNativeException jcne) {
@@ -1186,7 +1230,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePreSendRequestContent(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreSendRequestContent", handler);
         } catch (JCNativeException jcne) {
@@ -1196,7 +1240,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addPreSendRequestHeaders(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreSendRequestHeaders", handler);
         } catch (JCNativeException jcne) {
@@ -1206,7 +1250,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removePreSendRequestHeaders(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreSendRequestHeaders", handler);
         } catch (JCNativeException jcne) {
@@ -1216,7 +1260,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addReleaseRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReleaseRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -1226,7 +1270,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeReleaseRequestState(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReleaseRequestState", handler);
         } catch (JCNativeException jcne) {
@@ -1236,7 +1280,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addRequestCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RequestCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1246,7 +1290,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeRequestCompleted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RequestCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -1256,7 +1300,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addResolveRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ResolveRequestCache", handler);
         } catch (JCNativeException jcne) {
@@ -1266,7 +1310,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeResolveRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ResolveRequestCache", handler);
         } catch (JCNativeException jcne) {
@@ -1276,7 +1320,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void addUpdateRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UpdateRequestCache", handler);
         } catch (JCNativeException jcne) {
@@ -1286,7 +1330,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
 
     public void removeUpdateRequestCache(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UpdateRequestCache", handler);
         } catch (JCNativeException jcne) {

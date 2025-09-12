@@ -163,7 +163,7 @@ public class IndexExpression extends Expression  {
      */
     @Deprecated 
     public Expression GetArgument(int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIArgumentProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIArgumentProvider to obtain the full interface.");
     }
 
 
@@ -172,10 +172,14 @@ public class IndexExpression extends Expression  {
     
     public Expression getObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Object");
+            retObjectObject = classInstance.Get("Object");
+            JCObject val = (JCObject)retObjectObject;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObject != null ? retObjectObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class IndexExpression extends Expression  {
 
     public PropertyInfo getIndexer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Indexer");
+            retObjectIndexer = classInstance.Get("Indexer");
+            JCObject val = (JCObject)retObjectIndexer;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndexer != null ? retObjectIndexer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

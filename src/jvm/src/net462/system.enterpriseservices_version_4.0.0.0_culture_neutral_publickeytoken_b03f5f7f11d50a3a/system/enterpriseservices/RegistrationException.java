@@ -173,7 +173,7 @@ public class RegistrationException extends SystemException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext ctx) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.FormatException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), ctx == null ? null : ctx.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,16 +187,20 @@ public class RegistrationException extends SystemException {
     
     public final RegistrationErrorInfo[] getErrorInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorInfo = null;
         try {
             ArrayList<RegistrationErrorInfo> resultingArrayList = new ArrayList<RegistrationErrorInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ErrorInfo");
+            retObjectErrorInfo = classInstance.Get("ErrorInfo");
+            JCObject resultingObjects = (JCObject)retObjectErrorInfo;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RegistrationErrorInfo(resultingObject));
             }
             RegistrationErrorInfo[] resultingArray = new RegistrationErrorInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorInfo != null ? retObjectErrorInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

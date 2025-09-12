@@ -157,9 +157,13 @@ public class ChannelOptions extends NetObject  {
     
     public boolean getAllowSynchronousContinuations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSynchronousContinuations = null;
         try {
-            return (boolean)classInstance.Get("AllowSynchronousContinuations");
+            retObjectAllowSynchronousContinuations = classInstance.Get("AllowSynchronousContinuations");
+            return (boolean)retObjectAllowSynchronousContinuations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSynchronousContinuations != null ? retObjectAllowSynchronousContinuations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class ChannelOptions extends NetObject  {
 
     public void setAllowSynchronousContinuations(boolean AllowSynchronousContinuations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSynchronousContinuations", AllowSynchronousContinuations);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class ChannelOptions extends NetObject  {
 
     public boolean getSingleReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingleReader = null;
         try {
-            return (boolean)classInstance.Get("SingleReader");
+            retObjectSingleReader = classInstance.Get("SingleReader");
+            return (boolean)retObjectSingleReader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSingleReader != null ? retObjectSingleReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class ChannelOptions extends NetObject  {
 
     public void setSingleReader(boolean SingleReader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SingleReader", SingleReader);
         } catch (JCNativeException jcne) {
@@ -197,9 +205,13 @@ public class ChannelOptions extends NetObject  {
 
     public boolean getSingleWriter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingleWriter = null;
         try {
-            return (boolean)classInstance.Get("SingleWriter");
+            retObjectSingleWriter = classInstance.Get("SingleWriter");
+            return (boolean)retObjectSingleWriter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSingleWriter != null ? retObjectSingleWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class ChannelOptions extends NetObject  {
 
     public void setSingleWriter(boolean SingleWriter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SingleWriter", SingleWriter);
         } catch (JCNativeException jcne) {

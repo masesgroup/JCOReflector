@@ -207,9 +207,13 @@ public class DataSet extends MarshalByValueComponent  {
     
     public boolean HasChanges() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasChanges = null;
         try {
-            return (boolean)classInstance.Invoke("HasChanges");
+            retObjectHasChanges = classInstance.Invoke("HasChanges");
+            return (boolean)retObjectHasChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasChanges != null ? retObjectHasChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +221,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public boolean HasChanges(DataRowState rowStates) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasChanges = null;
         try {
-            return (boolean)classInstance.Invoke("HasChanges", rowStates == null ? null : rowStates.getJCOInstance());
+            retObjectHasChanges = classInstance.Invoke("HasChanges", rowStates == null ? null : rowStates.getJCOInstance());
+            return (boolean)retObjectHasChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasChanges != null ? retObjectHasChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +235,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataSet Clone() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.LockRecursionException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.RankException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new DataSet(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +250,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataSet Copy() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.RankException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new DataSet(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +265,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataSet GetChanges() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.data.sqltypes.SqlNullValueException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChanges = null;
         try {
-            JCObject objGetChanges = (JCObject)classInstance.Invoke("GetChanges");
+            retObjectGetChanges = classInstance.Invoke("GetChanges");
+            JCObject objGetChanges = (JCObject)retObjectGetChanges;
             return new DataSet(objGetChanges);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChanges != null ? retObjectGetChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +280,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataSet GetChanges(DataRowState rowStates) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChanges = null;
         try {
-            JCObject objGetChanges = (JCObject)classInstance.Invoke("GetChanges", rowStates == null ? null : rowStates.getJCOInstance());
+            retObjectGetChanges = classInstance.Invoke("GetChanges", rowStates == null ? null : rowStates.getJCOInstance());
+            JCObject objGetChanges = (JCObject)retObjectGetChanges;
             return new DataSet(objGetChanges);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChanges != null ? retObjectGetChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +295,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataTableReader CreateDataReader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDataReader = null;
         try {
-            JCObject objCreateDataReader = (JCObject)classInstance.Invoke("CreateDataReader");
+            retObjectCreateDataReader = classInstance.Invoke("CreateDataReader");
+            JCObject objCreateDataReader = (JCObject)retObjectCreateDataReader;
             return new DataTableReader(objCreateDataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDataReader != null ? retObjectCreateDataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +310,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataTableReader CreateDataReader(DataTable... dataTables) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDataReader = null;
         try {
-            JCObject objCreateDataReader = (JCObject)classInstance.Invoke("CreateDataReader", (java.lang.Object)toObjectFromArray(dataTables));
+            retObjectCreateDataReader = classInstance.Invoke("CreateDataReader", (java.lang.Object)toObjectFromArray(dataTables));
+            JCObject objCreateDataReader = (JCObject)retObjectCreateDataReader;
             return new DataTableReader(objCreateDataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDataReader != null ? retObjectCreateDataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +325,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(Stream stream, XmlReadMode mode) throws Throwable, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +340,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(Stream stream) throws Throwable, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.OverflowException, system.TypeLoadException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", stream == null ? null : stream.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", stream == null ? null : stream.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +355,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(TextReader reader, XmlReadMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidCastException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +370,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.OverflowException, system.TypeLoadException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +385,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(java.lang.String fileName, XmlReadMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ArrayTypeMismatchException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.diagnostics.UnreachableException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.InvalidCastException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", fileName, mode == null ? null : mode.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", fileName, mode == null ? null : mode.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +400,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.OverflowException, system.TypeLoadException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", fileName);
+            retObjectReadXml = classInstance.Invoke("ReadXml", fileName);
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +415,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(XmlReader reader, XmlReadMode mode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,10 +430,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.OverflowException, system.TypeLoadException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new XmlReadMode(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,9 +445,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public java.lang.String GetXml() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            return (java.lang.String)retObjectGetXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,9 +459,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public java.lang.String GetXmlSchema() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXmlSchema = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetXmlSchema");
+            retObjectGetXmlSchema = classInstance.Invoke("GetXmlSchema");
+            return (java.lang.String)retObjectGetXmlSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlSchema != null ? retObjectGetXmlSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,10 +473,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public static XmlSchemaComplexType GetDataSetSchema(XmlSchemaSet schemaSet) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDataSetSchema = null;
         try {
-            JCObject objGetDataSetSchema = (JCObject)classType.Invoke("GetDataSetSchema", schemaSet == null ? null : schemaSet.getJCOInstance());
+            retObjectGetDataSetSchema = classType.Invoke("GetDataSetSchema", schemaSet == null ? null : schemaSet.getJCOInstance());
+            JCObject objGetDataSetSchema = (JCObject)retObjectGetDataSetSchema;
             return new XmlSchemaComplexType(objGetDataSetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataSetSchema != null ? retObjectGetDataSetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +488,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void AcceptChanges() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcceptChanges");
         } catch (JCNativeException jcne) {
@@ -422,7 +498,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -432,7 +508,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Clear() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentNullException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -442,7 +518,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void EndInit() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.OverflowException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -452,7 +528,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.UnauthorizedAccessException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +538,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(Stream stream, java.lang.String[] nsArray) throws Throwable, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", stream == null ? null : stream.getJCOInstance(), nsArray);
         } catch (JCNativeException jcne) {
@@ -472,7 +548,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(Stream dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -482,7 +558,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(TextReader reader, java.lang.String[] nsArray) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", reader == null ? null : reader.getJCOInstance(), nsArray);
         } catch (JCNativeException jcne) {
@@ -492,7 +568,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(TextReader dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -502,7 +578,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(java.lang.String fileName, java.lang.String[] nsArray) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.NullReferenceException, system.NotImplementedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", fileName, nsArray);
         } catch (JCNativeException jcne) {
@@ -512,7 +588,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.NullReferenceException, system.NotImplementedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -522,7 +598,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(XmlReader reader, java.lang.String[] nsArray) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.ArgumentNullException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.UriFormatException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException, system.InvalidCastException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", reader == null ? null : reader.getJCOInstance(), nsArray);
         } catch (JCNativeException jcne) {
@@ -532,7 +608,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void InferXmlSchema(XmlReader dupParam0, JCORefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.ArgumentNullException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.UriFormatException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.TypeLoadException, system.OverflowException, system.InvalidCastException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -542,7 +618,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Load(IDataReader reader, LoadOption loadOption, DataTable... tables) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", reader == null ? null : reader.getJCOInstance(), loadOption == null ? null : loadOption.getJCOInstance(), toObjectFromArray(tables));
         } catch (JCNativeException jcne) {
@@ -552,7 +628,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Load(IDataReader reader, LoadOption loadOption, FillErrorEventHandler errorHandler, DataTable... tables) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", reader == null ? null : reader.getJCOInstance(), loadOption == null ? null : loadOption.getJCOInstance(), errorHandler, toObjectFromArray(tables));
         } catch (JCNativeException jcne) {
@@ -562,7 +638,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Load(IDataReader reader, LoadOption loadOption, java.lang.String... tables) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", reader == null ? null : reader.getJCOInstance(), loadOption == null ? null : loadOption.getJCOInstance(), tables);
         } catch (JCNativeException jcne) {
@@ -572,7 +648,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Load(IDataReader dupParam0, LoadOption dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -582,7 +658,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Merge(DataRow[] rows, boolean preserveChanges, MissingSchemaAction missingSchemaAction) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", toObjectFromArray(rows), preserveChanges, missingSchemaAction == null ? null : missingSchemaAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -592,7 +668,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Merge(DataRow[] rows) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", (java.lang.Object)toObjectFromArray(rows));
         } catch (JCNativeException jcne) {
@@ -602,7 +678,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Merge(DataSet dataSet, boolean preserveChanges, MissingSchemaAction missingSchemaAction) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", dataSet == null ? null : dataSet.getJCOInstance(), preserveChanges, missingSchemaAction == null ? null : missingSchemaAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -612,7 +688,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Merge(DataSet dataSet, boolean preserveChanges) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", dataSet == null ? null : dataSet.getJCOInstance(), preserveChanges);
         } catch (JCNativeException jcne) {
@@ -622,7 +698,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Merge(DataSet dataSet) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", dataSet == null ? null : dataSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -632,7 +708,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Merge(DataTable table, boolean preserveChanges, MissingSchemaAction missingSchemaAction) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", table == null ? null : table.getJCOInstance(), preserveChanges, missingSchemaAction == null ? null : missingSchemaAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -642,7 +718,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Merge(DataTable table) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -652,7 +728,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void ReadXmlSchema(Stream stream) throws Throwable, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.threading.SynchronizationLockException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlSchema", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -662,7 +738,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void ReadXmlSchema(TextReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.threading.SynchronizationLockException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlSchema", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -672,7 +748,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void ReadXmlSchema(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.threading.SynchronizationLockException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlSchema", fileName);
         } catch (JCNativeException jcne) {
@@ -682,7 +758,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void ReadXmlSchema(XmlReader reader) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.threading.SynchronizationLockException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlSchema", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -692,7 +768,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void RejectChanges() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentNullException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RejectChanges");
         } catch (JCNativeException jcne) {
@@ -702,7 +778,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void Reset() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.RankException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -712,7 +788,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(Stream stream, XmlWriteMode mode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -722,7 +798,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -732,7 +808,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(TextWriter writer, XmlWriteMode mode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -742,7 +818,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(TextWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -752,7 +828,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(java.lang.String fileName, XmlWriteMode mode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.runtime.serialization.SerializationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", fileName, mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -762,7 +838,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(java.lang.String fileName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.runtime.serialization.SerializationException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", fileName);
         } catch (JCNativeException jcne) {
@@ -772,7 +848,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(XmlWriter writer, XmlWriteMode mode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -782,7 +858,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXml(XmlWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -792,7 +868,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXmlSchema(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.XmlException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlSchema", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -802,7 +878,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXmlSchema(TextWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.xml.XmlException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlSchema", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -812,7 +888,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXmlSchema(java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlSchema", fileName);
         } catch (JCNativeException jcne) {
@@ -822,7 +898,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void WriteXmlSchema(XmlWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.RankException, system.OutOfMemoryException, system.data.sqltypes.SqlTypeException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlSchema", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -836,7 +912,7 @@ public class DataSet extends MarshalByValueComponent  {
      */
     @Deprecated 
     public IList GetList() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
     }
 
     /**
@@ -845,7 +921,7 @@ public class DataSet extends MarshalByValueComponent  {
      */
     @Deprecated 
     public XmlSchema GetSchema() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 
@@ -854,9 +930,13 @@ public class DataSet extends MarshalByValueComponent  {
     
     public boolean getCaseSensitive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaseSensitive = null;
         try {
-            return (boolean)classInstance.Get("CaseSensitive");
+            retObjectCaseSensitive = classInstance.Get("CaseSensitive");
+            return (boolean)retObjectCaseSensitive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCaseSensitive != null ? retObjectCaseSensitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -864,7 +944,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setCaseSensitive(boolean CaseSensitive) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaseSensitive", CaseSensitive);
         } catch (JCNativeException jcne) {
@@ -874,9 +954,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public boolean getEnforceConstraints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnforceConstraints = null;
         try {
-            return (boolean)classInstance.Get("EnforceConstraints");
+            retObjectEnforceConstraints = classInstance.Get("EnforceConstraints");
+            return (boolean)retObjectEnforceConstraints;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnforceConstraints != null ? retObjectEnforceConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -884,7 +968,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setEnforceConstraints(boolean EnforceConstraints) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnforceConstraints", EnforceConstraints);
         } catch (JCNativeException jcne) {
@@ -894,9 +978,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public boolean getHasErrors() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasErrors = null;
         try {
-            return (boolean)classInstance.Get("HasErrors");
+            retObjectHasErrors = classInstance.Get("HasErrors");
+            return (boolean)retObjectHasErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasErrors != null ? retObjectHasErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -904,9 +992,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public boolean getIsInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitialized = null;
         try {
-            return (boolean)classInstance.Get("IsInitialized");
+            retObjectIsInitialized = classInstance.Get("IsInitialized");
+            return (boolean)retObjectIsInitialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitialized != null ? retObjectIsInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -914,10 +1006,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataRelationCollection getRelations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Relations");
+            retObjectRelations = classInstance.Get("Relations");
+            JCObject val = (JCObject)retObjectRelations;
             return new DataRelationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelations != null ? retObjectRelations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -925,10 +1021,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataTableCollection getTables() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTables = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tables");
+            retObjectTables = classInstance.Get("Tables");
+            JCObject val = (JCObject)retObjectTables;
             return new DataTableCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTables != null ? retObjectTables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -936,10 +1036,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public DataViewManager getDefaultViewManager() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultViewManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultViewManager");
+            retObjectDefaultViewManager = classInstance.Get("DefaultViewManager");
+            JCObject val = (JCObject)retObjectDefaultViewManager;
             return new DataViewManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultViewManager != null ? retObjectDefaultViewManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -947,10 +1051,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public PropertyCollection getExtendedProperties() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProperties");
+            retObjectExtendedProperties = classInstance.Get("ExtendedProperties");
+            JCObject val = (JCObject)retObjectExtendedProperties;
             return new PropertyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedProperties != null ? retObjectExtendedProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -958,10 +1066,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public SchemaSerializationMode getSchemaSerializationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaSerializationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaSerializationMode");
+            retObjectSchemaSerializationMode = classInstance.Get("SchemaSerializationMode");
+            JCObject val = (JCObject)retObjectSchemaSerializationMode;
             return new SchemaSerializationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaSerializationMode != null ? retObjectSchemaSerializationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -969,7 +1081,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setSchemaSerializationMode(SchemaSerializationMode SchemaSerializationMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SchemaSerializationMode", SchemaSerializationMode == null ? null : SchemaSerializationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -979,10 +1091,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public SerializationFormat getRemotingFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemotingFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemotingFormat");
+            retObjectRemotingFormat = classInstance.Get("RemotingFormat");
+            JCObject val = (JCObject)retObjectRemotingFormat;
             return new SerializationFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemotingFormat != null ? retObjectRemotingFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -990,7 +1106,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setRemotingFormat(SerializationFormat RemotingFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemotingFormat", RemotingFormat == null ? null : RemotingFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1000,10 +1116,14 @@ public class DataSet extends MarshalByValueComponent  {
 
     public CultureInfo getLocale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocale = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Locale");
+            retObjectLocale = classInstance.Get("Locale");
+            JCObject val = (JCObject)retObjectLocale;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocale != null ? retObjectLocale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1011,7 +1131,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setLocale(CultureInfo Locale) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Locale", Locale == null ? null : Locale.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1021,9 +1141,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public java.lang.String getDataSetName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSetName = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSetName");
+            retObjectDataSetName = classInstance.Get("DataSetName");
+            return (java.lang.String)retObjectDataSetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSetName != null ? retObjectDataSetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1031,7 +1155,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setDataSetName(java.lang.String DataSetName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSetName", DataSetName);
         } catch (JCNativeException jcne) {
@@ -1041,9 +1165,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1051,7 +1179,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -1061,9 +1189,13 @@ public class DataSet extends MarshalByValueComponent  {
 
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("Prefix");
+            retObjectPrefix = classInstance.Get("Prefix");
+            return (java.lang.String)retObjectPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrefix != null ? retObjectPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1071,7 +1203,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void setPrefix(java.lang.String Prefix) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Prefix", Prefix);
         } catch (JCNativeException jcne) {
@@ -1086,7 +1218,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void addMergeFailed(MergeFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MergeFailed", handler);
         } catch (JCNativeException jcne) {
@@ -1096,7 +1228,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void removeMergeFailed(MergeFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MergeFailed", handler);
         } catch (JCNativeException jcne) {
@@ -1106,7 +1238,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void addInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {
@@ -1116,7 +1248,7 @@ public class DataSet extends MarshalByValueComponent  {
 
     public void removeInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {

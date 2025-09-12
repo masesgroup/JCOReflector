@@ -164,10 +164,14 @@ public class ActivityCodeDomSerializer extends DependencyObjectCodeDomSerializer
     
     public NetObject Serialize(IDesignerSerializationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.design.serialization.CodeDomSerializerException, system.NullReferenceException, system.RankException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialize = null;
         try {
-            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            retObjectSerialize = classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            JCObject objSerialize = (JCObject)retObjectSerialize;
             return new NetObject(objSerialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

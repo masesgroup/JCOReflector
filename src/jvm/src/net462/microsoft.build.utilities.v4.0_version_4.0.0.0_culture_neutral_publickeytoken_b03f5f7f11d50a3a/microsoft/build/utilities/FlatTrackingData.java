@@ -215,9 +215,13 @@ public class FlatTrackingData extends NetObject  {
     
     public boolean FileIsExcludedFromDependencyCheck(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileIsExcludedFromDependencyCheck = null;
         try {
-            return (boolean)classInstance.Invoke("FileIsExcludedFromDependencyCheck", fileName);
+            retObjectFileIsExcludedFromDependencyCheck = classInstance.Invoke("FileIsExcludedFromDependencyCheck", fileName);
+            return (boolean)retObjectFileIsExcludedFromDependencyCheck;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFileIsExcludedFromDependencyCheck != null ? retObjectFileIsExcludedFromDependencyCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +229,13 @@ public class FlatTrackingData extends NetObject  {
 
     public static boolean IsUpToDate(Task hostTask, UpToDateCheckType upToDateCheckType, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsUpToDate = null;
         try {
-            return (boolean)classType.Invoke("IsUpToDate", hostTask == null ? null : hostTask.getJCOInstance(), upToDateCheckType == null ? null : upToDateCheckType.getJCOInstance(), toObjectFromArray(readTLogNames), toObjectFromArray(writeTLogNames));
+            retObjectIsUpToDate = classType.Invoke("IsUpToDate", hostTask == null ? null : hostTask.getJCOInstance(), upToDateCheckType == null ? null : upToDateCheckType.getJCOInstance(), toObjectFromArray(readTLogNames), toObjectFromArray(writeTLogNames));
+            return (boolean)retObjectIsUpToDate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUpToDate != null ? retObjectIsUpToDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +243,13 @@ public class FlatTrackingData extends NetObject  {
 
     public static boolean IsUpToDate(TaskLoggingHelper Log, UpToDateCheckType upToDateCheckType, FlatTrackingData inputs, FlatTrackingData outputs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OverflowException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsUpToDate = null;
         try {
-            return (boolean)classType.Invoke("IsUpToDate", Log == null ? null : Log.getJCOInstance(), upToDateCheckType == null ? null : upToDateCheckType.getJCOInstance(), inputs == null ? null : inputs.getJCOInstance(), outputs == null ? null : outputs.getJCOInstance());
+            retObjectIsUpToDate = classType.Invoke("IsUpToDate", Log == null ? null : Log.getJCOInstance(), upToDateCheckType == null ? null : upToDateCheckType.getJCOInstance(), inputs == null ? null : inputs.getJCOInstance(), outputs == null ? null : outputs.getJCOInstance());
+            return (boolean)retObjectIsUpToDate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUpToDate != null ? retObjectIsUpToDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +257,14 @@ public class FlatTrackingData extends NetObject  {
 
     public DateTime GetLastWriteTimeUtc(java.lang.String file) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLastWriteTimeUtc = null;
         try {
-            JCObject objGetLastWriteTimeUtc = (JCObject)classInstance.Invoke("GetLastWriteTimeUtc", file);
+            retObjectGetLastWriteTimeUtc = classInstance.Invoke("GetLastWriteTimeUtc", file);
+            JCObject objGetLastWriteTimeUtc = (JCObject)retObjectGetLastWriteTimeUtc;
             return new DateTime(objGetLastWriteTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTimeUtc != null ? retObjectGetLastWriteTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +272,7 @@ public class FlatTrackingData extends NetObject  {
 
     public static void FinalizeTLogs(boolean trackedOperationsSucceeded, ITaskItem[] readTLogNames, ITaskItem[] writeTLogNames, ITaskItem[] trackedFilesToRemoveFromTLogs) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FinalizeTLogs", trackedOperationsSucceeded, toObjectFromArray(readTLogNames), toObjectFromArray(writeTLogNames), toObjectFromArray(trackedFilesToRemoveFromTLogs));
         } catch (JCNativeException jcne) {
@@ -266,7 +282,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void SaveTlog() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.InvalidOperationException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveTlog");
         } catch (JCNativeException jcne) {
@@ -276,7 +292,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void SaveTlog(DependencyFilter includeInTLog) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveTlog", includeInTLog);
         } catch (JCNativeException jcne) {
@@ -286,7 +302,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void UpdateFileEntryDetails() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateFileEntryDetails");
         } catch (JCNativeException jcne) {
@@ -300,9 +316,13 @@ public class FlatTrackingData extends NetObject  {
     
     public boolean getSkipMissingFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipMissingFiles = null;
         try {
-            return (boolean)classInstance.Get("SkipMissingFiles");
+            retObjectSkipMissingFiles = classInstance.Get("SkipMissingFiles");
+            return (boolean)retObjectSkipMissingFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipMissingFiles != null ? retObjectSkipMissingFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +330,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setSkipMissingFiles(boolean SkipMissingFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipMissingFiles", SkipMissingFiles);
         } catch (JCNativeException jcne) {
@@ -320,9 +340,13 @@ public class FlatTrackingData extends NetObject  {
 
     public boolean getTlogsAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTlogsAvailable = null;
         try {
-            return (boolean)classInstance.Get("TlogsAvailable");
+            retObjectTlogsAvailable = classInstance.Get("TlogsAvailable");
+            return (boolean)retObjectTlogsAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTlogsAvailable != null ? retObjectTlogsAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +354,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setTlogsAvailable(boolean TlogsAvailable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TlogsAvailable", TlogsAvailable);
         } catch (JCNativeException jcne) {
@@ -340,9 +364,13 @@ public class FlatTrackingData extends NetObject  {
 
     public boolean getTreatRootMarkersAsEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTreatRootMarkersAsEntries = null;
         try {
-            return (boolean)classInstance.Get("TreatRootMarkersAsEntries");
+            retObjectTreatRootMarkersAsEntries = classInstance.Get("TreatRootMarkersAsEntries");
+            return (boolean)retObjectTreatRootMarkersAsEntries;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTreatRootMarkersAsEntries != null ? retObjectTreatRootMarkersAsEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +378,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setTreatRootMarkersAsEntries(boolean TreatRootMarkersAsEntries) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TreatRootMarkersAsEntries", TreatRootMarkersAsEntries);
         } catch (JCNativeException jcne) {
@@ -360,16 +388,20 @@ public class FlatTrackingData extends NetObject  {
 
     public final ITaskItem[] getTlogFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTlogFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TlogFiles");
+            retObjectTlogFiles = classInstance.Get("TlogFiles");
+            JCObject resultingObjects = (JCObject)retObjectTlogFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTlogFiles != null ? retObjectTlogFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +409,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setTlogFiles(ITaskItem[] TlogFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TlogFiles", toObjectFromArray(TlogFiles));
         } catch (JCNativeException jcne) {
@@ -387,10 +419,14 @@ public class FlatTrackingData extends NetObject  {
 
     public DateTime getNewestFileTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewestFileTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewestFileTime");
+            retObjectNewestFileTime = classInstance.Get("NewestFileTime");
+            JCObject val = (JCObject)retObjectNewestFileTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewestFileTime != null ? retObjectNewestFileTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +434,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setNewestFileTime(DateTime NewestFileTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewestFileTime", NewestFileTime == null ? null : NewestFileTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -408,10 +444,14 @@ public class FlatTrackingData extends NetObject  {
 
     public DateTime getNewestFileTimeUtc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewestFileTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewestFileTimeUtc");
+            retObjectNewestFileTimeUtc = classInstance.Get("NewestFileTimeUtc");
+            JCObject val = (JCObject)retObjectNewestFileTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewestFileTimeUtc != null ? retObjectNewestFileTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +459,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setNewestFileTimeUtc(DateTime NewestFileTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewestFileTimeUtc", NewestFileTimeUtc == null ? null : NewestFileTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -429,10 +469,14 @@ public class FlatTrackingData extends NetObject  {
 
     public DateTime getNewestTLogTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewestTLogTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewestTLogTime");
+            retObjectNewestTLogTime = classInstance.Get("NewestTLogTime");
+            JCObject val = (JCObject)retObjectNewestTLogTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewestTLogTime != null ? retObjectNewestTLogTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +484,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setNewestTLogTime(DateTime NewestTLogTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewestTLogTime", NewestTLogTime == null ? null : NewestTLogTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,10 +494,14 @@ public class FlatTrackingData extends NetObject  {
 
     public DateTime getNewestTLogTimeUtc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewestTLogTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewestTLogTimeUtc");
+            retObjectNewestTLogTimeUtc = classInstance.Get("NewestTLogTimeUtc");
+            JCObject val = (JCObject)retObjectNewestTLogTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewestTLogTimeUtc != null ? retObjectNewestTLogTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +509,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setNewestTLogTimeUtc(DateTime NewestTLogTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewestTLogTimeUtc", NewestTLogTimeUtc == null ? null : NewestTLogTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -471,10 +519,14 @@ public class FlatTrackingData extends NetObject  {
 
     public DateTime getOldestFileTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldestFileTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldestFileTime");
+            retObjectOldestFileTime = classInstance.Get("OldestFileTime");
+            JCObject val = (JCObject)retObjectOldestFileTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldestFileTime != null ? retObjectOldestFileTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +534,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setOldestFileTime(DateTime OldestFileTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldestFileTime", OldestFileTime == null ? null : OldestFileTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -492,10 +544,14 @@ public class FlatTrackingData extends NetObject  {
 
     public DateTime getOldestFileTimeUtc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldestFileTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldestFileTimeUtc");
+            retObjectOldestFileTimeUtc = classInstance.Get("OldestFileTimeUtc");
+            JCObject val = (JCObject)retObjectOldestFileTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldestFileTimeUtc != null ? retObjectOldestFileTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +559,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setOldestFileTimeUtc(DateTime OldestFileTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldestFileTimeUtc", OldestFileTimeUtc == null ? null : OldestFileTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -513,9 +569,13 @@ public class FlatTrackingData extends NetObject  {
 
     public java.lang.String getNewestFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewestFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("NewestFileName");
+            retObjectNewestFileName = classInstance.Get("NewestFileName");
+            return (java.lang.String)retObjectNewestFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewestFileName != null ? retObjectNewestFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,7 +583,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setNewestFileName(java.lang.String NewestFileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewestFileName", NewestFileName);
         } catch (JCNativeException jcne) {
@@ -533,9 +593,13 @@ public class FlatTrackingData extends NetObject  {
 
     public java.lang.String getNewestTLogFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewestTLogFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("NewestTLogFileName");
+            retObjectNewestTLogFileName = classInstance.Get("NewestTLogFileName");
+            return (java.lang.String)retObjectNewestTLogFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewestTLogFileName != null ? retObjectNewestTLogFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +607,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setNewestTLogFileName(java.lang.String NewestTLogFileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewestTLogFileName", NewestTLogFileName);
         } catch (JCNativeException jcne) {
@@ -553,9 +617,13 @@ public class FlatTrackingData extends NetObject  {
 
     public java.lang.String getOldestFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldestFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("OldestFileName");
+            retObjectOldestFileName = classInstance.Get("OldestFileName");
+            return (java.lang.String)retObjectOldestFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOldestFileName != null ? retObjectOldestFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,7 +631,7 @@ public class FlatTrackingData extends NetObject  {
 
     public void setOldestFileName(java.lang.String OldestFileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldestFileName", OldestFileName);
         } catch (JCNativeException jcne) {

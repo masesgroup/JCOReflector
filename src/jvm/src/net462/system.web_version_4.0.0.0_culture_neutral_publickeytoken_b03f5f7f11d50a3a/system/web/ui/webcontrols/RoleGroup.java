@@ -165,9 +165,13 @@ public class RoleGroup extends NetObject  {
     
     public boolean ContainsUser(IPrincipal user) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsUser = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsUser", user == null ? null : user.getJCOInstance());
+            retObjectContainsUser = classInstance.Invoke("ContainsUser", user == null ? null : user.getJCOInstance());
+            return (boolean)retObjectContainsUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsUser != null ? retObjectContainsUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,12 @@ public class RoleGroup extends NetObject  {
     
     public java.lang.String[] getRoles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Roles");
+            retObjectRoles = classInstance.Get("Roles");
+            JCObject resultingObjects = (JCObject)retObjectRoles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -191,6 +197,8 @@ public class RoleGroup extends NetObject  {
 				resultingArray[indexRoles] = (java.lang.String)resultingArrayList.get(indexRoles);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectRoles != null ? retObjectRoles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class RoleGroup extends NetObject  {
 
     public void setRoles(java.lang.String[] Roles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Roles", Roles);
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class RoleGroup extends NetObject  {
 
     public ITemplate getContentTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentTemplate");
+            retObjectContentTemplate = classInstance.Get("ContentTemplate");
+            JCObject val = (JCObject)retObjectContentTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentTemplate != null ? retObjectContentTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class RoleGroup extends NetObject  {
 
     public void setContentTemplate(ITemplate ContentTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentTemplate", ContentTemplate == null ? null : ContentTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

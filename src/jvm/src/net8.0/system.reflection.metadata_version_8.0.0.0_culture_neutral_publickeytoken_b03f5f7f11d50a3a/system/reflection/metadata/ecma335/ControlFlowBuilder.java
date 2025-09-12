@@ -163,7 +163,7 @@ public class ControlFlowBuilder extends NetObject  {
     
     public void AddCatchRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd, EntityHandle catchType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCatchRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance(), catchType == null ? null : catchType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class ControlFlowBuilder extends NetObject  {
 
     public void AddFaultRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFaultRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class ControlFlowBuilder extends NetObject  {
 
     public void AddFilterRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd, LabelHandle filterStart) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFilterRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance(), filterStart == null ? null : filterStart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class ControlFlowBuilder extends NetObject  {
 
     public void AddFinallyRegion(LabelHandle tryStart, LabelHandle tryEnd, LabelHandle handlerStart, LabelHandle handlerEnd) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddFinallyRegion", tryStart == null ? null : tryStart.getJCOInstance(), tryEnd == null ? null : tryEnd.getJCOInstance(), handlerStart == null ? null : handlerStart.getJCOInstance(), handlerEnd == null ? null : handlerEnd.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class ControlFlowBuilder extends NetObject  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {

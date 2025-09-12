@@ -164,7 +164,7 @@ public class WmiWebEventProvider extends WebEventProvider  {
     
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class WmiWebEventProvider extends WebEventProvider  {
 
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class WmiWebEventProvider extends WebEventProvider  {
 
     public void ProcessEvent(WebBaseEvent eventRaised) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.web.HttpException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessEvent", eventRaised == null ? null : eventRaised.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class WmiWebEventProvider extends WebEventProvider  {
 
     public void Shutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {

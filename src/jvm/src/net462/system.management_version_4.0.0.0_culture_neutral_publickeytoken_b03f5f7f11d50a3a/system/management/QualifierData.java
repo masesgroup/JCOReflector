@@ -159,9 +159,13 @@ public class QualifierData extends NetObject  {
     
     public boolean getIsAmended() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAmended = null;
         try {
-            return (boolean)classInstance.Get("IsAmended");
+            retObjectIsAmended = classInstance.Get("IsAmended");
+            return (boolean)retObjectIsAmended;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAmended != null ? retObjectIsAmended.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class QualifierData extends NetObject  {
 
     public void setIsAmended(boolean IsAmended) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAmended", IsAmended);
         } catch (JCNativeException jcne) {
@@ -179,9 +183,13 @@ public class QualifierData extends NetObject  {
 
     public boolean getIsLocal() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocal = null;
         try {
-            return (boolean)classInstance.Get("IsLocal");
+            retObjectIsLocal = classInstance.Get("IsLocal");
+            return (boolean)retObjectIsLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLocal != null ? retObjectIsLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class QualifierData extends NetObject  {
 
     public boolean getIsOverridable() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOverridable = null;
         try {
-            return (boolean)classInstance.Get("IsOverridable");
+            retObjectIsOverridable = classInstance.Get("IsOverridable");
+            return (boolean)retObjectIsOverridable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOverridable != null ? retObjectIsOverridable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +211,7 @@ public class QualifierData extends NetObject  {
 
     public void setIsOverridable(boolean IsOverridable) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOverridable", IsOverridable);
         } catch (JCNativeException jcne) {
@@ -209,9 +221,13 @@ public class QualifierData extends NetObject  {
 
     public boolean getPropagatesToInstance() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropagatesToInstance = null;
         try {
-            return (boolean)classInstance.Get("PropagatesToInstance");
+            retObjectPropagatesToInstance = classInstance.Get("PropagatesToInstance");
+            return (boolean)retObjectPropagatesToInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPropagatesToInstance != null ? retObjectPropagatesToInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class QualifierData extends NetObject  {
 
     public void setPropagatesToInstance(boolean PropagatesToInstance) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropagatesToInstance", PropagatesToInstance);
         } catch (JCNativeException jcne) {
@@ -229,9 +245,13 @@ public class QualifierData extends NetObject  {
 
     public boolean getPropagatesToSubclass() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropagatesToSubclass = null;
         try {
-            return (boolean)classInstance.Get("PropagatesToSubclass");
+            retObjectPropagatesToSubclass = classInstance.Get("PropagatesToSubclass");
+            return (boolean)retObjectPropagatesToSubclass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPropagatesToSubclass != null ? retObjectPropagatesToSubclass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +259,7 @@ public class QualifierData extends NetObject  {
 
     public void setPropagatesToSubclass(boolean PropagatesToSubclass) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropagatesToSubclass", PropagatesToSubclass);
         } catch (JCNativeException jcne) {
@@ -249,10 +269,14 @@ public class QualifierData extends NetObject  {
 
     public NetObject getValue() throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +284,7 @@ public class QualifierData extends NetObject  {
 
     public void setValue(NetObject Value) throws Throwable, system.ObjectDisposedException, system.management.ManagementException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,9 +294,13 @@ public class QualifierData extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

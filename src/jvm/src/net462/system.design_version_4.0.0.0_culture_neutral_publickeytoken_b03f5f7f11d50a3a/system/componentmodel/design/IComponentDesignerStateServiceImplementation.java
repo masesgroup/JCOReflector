@@ -144,10 +144,14 @@ public class IComponentDesignerStateServiceImplementation extends NetObject impl
     
     public NetObject GetState(IComponent component, java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetState = null;
         try {
-            JCObject objGetState = (JCObject)classInstance.Invoke("GetState", component == null ? null : component.getJCOInstance(), key);
+            retObjectGetState = classInstance.Invoke("GetState", component == null ? null : component.getJCOInstance(), key);
+            JCObject objGetState = (JCObject)retObjectGetState;
             return new NetObject(objGetState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetState != null ? retObjectGetState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class IComponentDesignerStateServiceImplementation extends NetObject impl
 
     public void SetState(IComponent component, java.lang.String key, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetState", component == null ? null : component.getJCOInstance(), key, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

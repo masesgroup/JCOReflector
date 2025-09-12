@@ -168,7 +168,7 @@ public class MetadataRootBuilder extends NetObject  {
     
     public void Serialize(BlobBuilder builder, int methodBodyStreamRva, int mappedFieldDataStreamRva) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", builder == null ? null : builder.getJCOInstance(), methodBodyStreamRva, mappedFieldDataStreamRva);
         } catch (JCNativeException jcne) {
@@ -182,9 +182,13 @@ public class MetadataRootBuilder extends NetObject  {
     
     public boolean getSuppressValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressValidation = null;
         try {
-            return (boolean)classInstance.Get("SuppressValidation");
+            retObjectSuppressValidation = classInstance.Get("SuppressValidation");
+            return (boolean)retObjectSuppressValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressValidation != null ? retObjectSuppressValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class MetadataRootBuilder extends NetObject  {
 
     public MetadataSizes getSizes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Sizes");
+            retObjectSizes = classInstance.Get("Sizes");
+            JCObject val = (JCObject)retObjectSizes;
             return new MetadataSizes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizes != null ? retObjectSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,13 @@ public class MetadataRootBuilder extends NetObject  {
 
     public java.lang.String getMetadataVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("MetadataVersion");
+            retObjectMetadataVersion = classInstance.Get("MetadataVersion");
+            return (java.lang.String)retObjectMetadataVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetadataVersion != null ? retObjectMetadataVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

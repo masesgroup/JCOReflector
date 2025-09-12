@@ -142,16 +142,20 @@ public class ISite2Implementation extends NetObject implements ISite2 {
     
     public NetObject[] GetParentChain(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentChain = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentChain", obj == null ? null : obj.getJCOInstance());
+            retObjectGetParentChain = classInstance.Invoke("GetParentChain", obj == null ? null : obj.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetParentChain;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentChain != null ? retObjectGetParentChain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

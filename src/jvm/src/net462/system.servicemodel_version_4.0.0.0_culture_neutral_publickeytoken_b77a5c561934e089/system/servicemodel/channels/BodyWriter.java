@@ -158,10 +158,14 @@ public class BodyWriter extends NetObject  {
     
     public IAsyncResult BeginWriteBodyContents(XmlDictionaryWriter writer, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWriteBodyContents = null;
         try {
-            JCObject objBeginWriteBodyContents = (JCObject)classInstance.Invoke("BeginWriteBodyContents", writer == null ? null : writer.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWriteBodyContents = classInstance.Invoke("BeginWriteBodyContents", writer == null ? null : writer.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWriteBodyContents = (JCObject)retObjectBeginWriteBodyContents;
             return new IAsyncResultImplementation(objBeginWriteBodyContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWriteBodyContents != null ? retObjectBeginWriteBodyContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class BodyWriter extends NetObject  {
 
     public BodyWriter CreateBufferedCopy(int maxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBufferedCopy = null;
         try {
-            JCObject objCreateBufferedCopy = (JCObject)classInstance.Invoke("CreateBufferedCopy", maxBufferSize);
+            retObjectCreateBufferedCopy = classInstance.Invoke("CreateBufferedCopy", maxBufferSize);
+            JCObject objCreateBufferedCopy = (JCObject)retObjectCreateBufferedCopy;
             return new BodyWriter(objCreateBufferedCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBufferedCopy != null ? retObjectCreateBufferedCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class BodyWriter extends NetObject  {
 
     public void EndWriteBodyContents(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWriteBodyContents", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,7 +198,7 @@ public class BodyWriter extends NetObject  {
 
     public void WriteBodyContents(XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBodyContents", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,9 +212,13 @@ public class BodyWriter extends NetObject  {
     
     public boolean getIsBuffered() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBuffered = null;
         try {
-            return (boolean)classInstance.Get("IsBuffered");
+            retObjectIsBuffered = classInstance.Get("IsBuffered");
+            return (boolean)retObjectIsBuffered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBuffered != null ? retObjectIsBuffered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

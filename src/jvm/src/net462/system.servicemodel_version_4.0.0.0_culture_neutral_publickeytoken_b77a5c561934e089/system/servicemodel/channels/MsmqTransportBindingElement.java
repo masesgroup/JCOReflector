@@ -164,10 +164,14 @@ public class MsmqTransportBindingElement extends MsmqBindingElementBase  {
     
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class MsmqTransportBindingElement extends MsmqBindingElementBase  {
     
     public boolean getUseActiveDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseActiveDirectory = null;
         try {
-            return (boolean)classInstance.Get("UseActiveDirectory");
+            retObjectUseActiveDirectory = classInstance.Get("UseActiveDirectory");
+            return (boolean)retObjectUseActiveDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseActiveDirectory != null ? retObjectUseActiveDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class MsmqTransportBindingElement extends MsmqBindingElementBase  {
 
     public void setUseActiveDirectory(boolean UseActiveDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseActiveDirectory", UseActiveDirectory);
         } catch (JCNativeException jcne) {
@@ -199,9 +207,19 @@ public class MsmqTransportBindingElement extends MsmqBindingElementBase  {
 
     public int getMaxPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPoolSize = null;
         try {
-            return (int)classInstance.Get("MaxPoolSize");
+            retObjectMaxPoolSize = classInstance.Get("MaxPoolSize");
+            return (int)retObjectMaxPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPoolSizeNumber = (java.lang.Number)retObjectMaxPoolSize;
+                return retObjectMaxPoolSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +227,7 @@ public class MsmqTransportBindingElement extends MsmqBindingElementBase  {
 
     public void setMaxPoolSize(int MaxPoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPoolSize", MaxPoolSize);
         } catch (JCNativeException jcne) {
@@ -219,10 +237,14 @@ public class MsmqTransportBindingElement extends MsmqBindingElementBase  {
 
     public QueueTransferProtocol getQueueTransferProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueueTransferProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueueTransferProtocol");
+            retObjectQueueTransferProtocol = classInstance.Get("QueueTransferProtocol");
+            JCObject val = (JCObject)retObjectQueueTransferProtocol;
             return new QueueTransferProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueueTransferProtocol != null ? retObjectQueueTransferProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +252,7 @@ public class MsmqTransportBindingElement extends MsmqBindingElementBase  {
 
     public void setQueueTransferProtocol(QueueTransferProtocol QueueTransferProtocol) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueueTransferProtocol", QueueTransferProtocol == null ? null : QueueTransferProtocol.getJCOInstance());
         } catch (JCNativeException jcne) {

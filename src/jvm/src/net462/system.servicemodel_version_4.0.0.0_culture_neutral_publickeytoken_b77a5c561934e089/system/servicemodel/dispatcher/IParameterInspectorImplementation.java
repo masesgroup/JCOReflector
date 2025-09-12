@@ -142,10 +142,14 @@ public class IParameterInspectorImplementation extends NetObject implements IPar
     
     public NetObject BeforeCall(java.lang.String operationName, NetObject[] inputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeforeCall = null;
         try {
-            JCObject objBeforeCall = (JCObject)classInstance.Invoke("BeforeCall", operationName, toObjectFromArray(inputs));
+            retObjectBeforeCall = classInstance.Invoke("BeforeCall", operationName, toObjectFromArray(inputs));
+            JCObject objBeforeCall = (JCObject)retObjectBeforeCall;
             return new NetObject(objBeforeCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeforeCall != null ? retObjectBeforeCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IParameterInspectorImplementation extends NetObject implements IPar
 
     public void AfterCall(java.lang.String operationName, NetObject[] outputs, NetObject returnValue, NetObject correlationState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AfterCall", operationName, toObjectFromArray(outputs), returnValue == null ? null : returnValue.getJCOInstance(), correlationState == null ? null : correlationState.getJCOInstance());
         } catch (JCNativeException jcne) {

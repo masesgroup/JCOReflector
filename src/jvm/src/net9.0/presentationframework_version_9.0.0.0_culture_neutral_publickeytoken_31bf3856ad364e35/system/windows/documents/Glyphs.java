@@ -166,10 +166,14 @@ public class Glyphs extends FrameworkElement  {
     
     public GlyphRun ToGlyphRun() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.UriFormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.io.FileFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToGlyphRun = null;
         try {
-            JCObject objToGlyphRun = (JCObject)classInstance.Invoke("ToGlyphRun");
+            retObjectToGlyphRun = classInstance.Invoke("ToGlyphRun");
+            JCObject objToGlyphRun = (JCObject)retObjectToGlyphRun;
             return new GlyphRun(objToGlyphRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToGlyphRun != null ? retObjectToGlyphRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class Glyphs extends FrameworkElement  {
     
     public boolean getIsSideways() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSideways = null;
         try {
-            return (boolean)classInstance.Get("IsSideways");
+            retObjectIsSideways = classInstance.Get("IsSideways");
+            return (boolean)retObjectIsSideways;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSideways != null ? retObjectIsSideways.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setIsSideways(boolean IsSideways) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSideways", IsSideways);
         } catch (JCNativeException jcne) {
@@ -201,9 +209,19 @@ public class Glyphs extends FrameworkElement  {
 
     public double getFontRenderingEmSize() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontRenderingEmSize = null;
         try {
-            return (double)classInstance.Get("FontRenderingEmSize");
+            retObjectFontRenderingEmSize = classInstance.Get("FontRenderingEmSize");
+            return (double)retObjectFontRenderingEmSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFontRenderingEmSizeNumber = (java.lang.Number)retObjectFontRenderingEmSize;
+                return retObjectFontRenderingEmSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +229,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setFontRenderingEmSize(double FontRenderingEmSize) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontRenderingEmSize", FontRenderingEmSize);
         } catch (JCNativeException jcne) {
@@ -221,9 +239,19 @@ public class Glyphs extends FrameworkElement  {
 
     public double getOriginX() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginX = null;
         try {
-            return (double)classInstance.Get("OriginX");
+            retObjectOriginX = classInstance.Get("OriginX");
+            return (double)retObjectOriginX;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOriginXNumber = (java.lang.Number)retObjectOriginX;
+                return retObjectOriginXNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOriginX != null ? retObjectOriginX.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +259,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setOriginX(double OriginX) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginX", OriginX);
         } catch (JCNativeException jcne) {
@@ -241,9 +269,19 @@ public class Glyphs extends FrameworkElement  {
 
     public double getOriginY() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginY = null;
         try {
-            return (double)classInstance.Get("OriginY");
+            retObjectOriginY = classInstance.Get("OriginY");
+            return (double)retObjectOriginY;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectOriginYNumber = (java.lang.Number)retObjectOriginY;
+                return retObjectOriginYNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectOriginY != null ? retObjectOriginY.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +289,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setOriginY(double OriginY) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginY", OriginY);
         } catch (JCNativeException jcne) {
@@ -261,9 +299,19 @@ public class Glyphs extends FrameworkElement  {
 
     public int getBidiLevel() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBidiLevel = null;
         try {
-            return (int)classInstance.Get("BidiLevel");
+            retObjectBidiLevel = classInstance.Get("BidiLevel");
+            return (int)retObjectBidiLevel;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBidiLevelNumber = (java.lang.Number)retObjectBidiLevel;
+                return retObjectBidiLevelNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBidiLevel != null ? retObjectBidiLevel.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +319,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setBidiLevel(int BidiLevel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BidiLevel", BidiLevel);
         } catch (JCNativeException jcne) {
@@ -281,9 +329,13 @@ public class Glyphs extends FrameworkElement  {
 
     public java.lang.String getCaretStops() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaretStops = null;
         try {
-            return (java.lang.String)classInstance.Get("CaretStops");
+            retObjectCaretStops = classInstance.Get("CaretStops");
+            return (java.lang.String)retObjectCaretStops;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaretStops != null ? retObjectCaretStops.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +343,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setCaretStops(java.lang.String CaretStops) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaretStops", CaretStops);
         } catch (JCNativeException jcne) {
@@ -301,9 +353,13 @@ public class Glyphs extends FrameworkElement  {
 
     public java.lang.String getDeviceFontName() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceFontName = null;
         try {
-            return (java.lang.String)classInstance.Get("DeviceFontName");
+            retObjectDeviceFontName = classInstance.Get("DeviceFontName");
+            return (java.lang.String)retObjectDeviceFontName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeviceFontName != null ? retObjectDeviceFontName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +367,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setDeviceFontName(java.lang.String DeviceFontName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeviceFontName", DeviceFontName);
         } catch (JCNativeException jcne) {
@@ -321,9 +377,13 @@ public class Glyphs extends FrameworkElement  {
 
     public java.lang.String getIndices() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndices = null;
         try {
-            return (java.lang.String)classInstance.Get("Indices");
+            retObjectIndices = classInstance.Get("Indices");
+            return (java.lang.String)retObjectIndices;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIndices != null ? retObjectIndices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +391,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setIndices(java.lang.String Indices) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Indices", Indices);
         } catch (JCNativeException jcne) {
@@ -341,9 +401,13 @@ public class Glyphs extends FrameworkElement  {
 
     public java.lang.String getUnicodeString() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnicodeString = null;
         try {
-            return (java.lang.String)classInstance.Get("UnicodeString");
+            retObjectUnicodeString = classInstance.Get("UnicodeString");
+            return (java.lang.String)retObjectUnicodeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUnicodeString != null ? retObjectUnicodeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +415,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setUnicodeString(java.lang.String UnicodeString) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnicodeString", UnicodeString);
         } catch (JCNativeException jcne) {
@@ -361,10 +425,14 @@ public class Glyphs extends FrameworkElement  {
 
     public Uri getFontUri() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontUri");
+            retObjectFontUri = classInstance.Get("FontUri");
+            JCObject val = (JCObject)retObjectFontUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontUri != null ? retObjectFontUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +440,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setFontUri(Uri FontUri) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontUri", FontUri == null ? null : FontUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,10 +450,14 @@ public class Glyphs extends FrameworkElement  {
 
     public Brush getFill() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fill");
+            retObjectFill = classInstance.Get("Fill");
+            JCObject val = (JCObject)retObjectFill;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFill != null ? retObjectFill.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,7 +465,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setFill(Brush Fill) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Fill", Fill == null ? null : Fill.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -403,10 +475,14 @@ public class Glyphs extends FrameworkElement  {
 
     public StyleSimulations getStyleSimulations() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyleSimulations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StyleSimulations");
+            retObjectStyleSimulations = classInstance.Get("StyleSimulations");
+            JCObject val = (JCObject)retObjectStyleSimulations;
             return new StyleSimulations(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyleSimulations != null ? retObjectStyleSimulations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +490,7 @@ public class Glyphs extends FrameworkElement  {
 
     public void setStyleSimulations(StyleSimulations StyleSimulations) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StyleSimulations", StyleSimulations == null ? null : StyleSimulations.getJCOInstance());
         } catch (JCNativeException jcne) {

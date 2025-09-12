@@ -162,9 +162,13 @@ public class Basic128SecurityAlgorithmSuite extends SecurityAlgorithmSuite  {
     
     public boolean IsAsymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsymmetricKeyLengthSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsAsymmetricKeyLengthSupported", length);
+            retObjectIsAsymmetricKeyLengthSupported = classInstance.Invoke("IsAsymmetricKeyLengthSupported", length);
+            return (boolean)retObjectIsAsymmetricKeyLengthSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAsymmetricKeyLengthSupported != null ? retObjectIsAsymmetricKeyLengthSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class Basic128SecurityAlgorithmSuite extends SecurityAlgorithmSuite  {
 
     public boolean IsSymmetricKeyLengthSupported(int length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSymmetricKeyLengthSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsSymmetricKeyLengthSupported", length);
+            retObjectIsSymmetricKeyLengthSupported = classInstance.Invoke("IsSymmetricKeyLengthSupported", length);
+            return (boolean)retObjectIsSymmetricKeyLengthSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSymmetricKeyLengthSupported != null ? retObjectIsSymmetricKeyLengthSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

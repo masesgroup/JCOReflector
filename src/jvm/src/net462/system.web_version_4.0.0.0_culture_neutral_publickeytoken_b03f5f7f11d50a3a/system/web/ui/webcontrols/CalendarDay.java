@@ -170,9 +170,13 @@ public class CalendarDay extends NetObject  {
     
     public boolean getIsOtherMonth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOtherMonth = null;
         try {
-            return (boolean)classInstance.Get("IsOtherMonth");
+            retObjectIsOtherMonth = classInstance.Get("IsOtherMonth");
+            return (boolean)retObjectIsOtherMonth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOtherMonth != null ? retObjectIsOtherMonth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class CalendarDay extends NetObject  {
 
     public boolean getIsSelectable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectable = null;
         try {
-            return (boolean)classInstance.Get("IsSelectable");
+            retObjectIsSelectable = classInstance.Get("IsSelectable");
+            return (boolean)retObjectIsSelectable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectable != null ? retObjectIsSelectable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class CalendarDay extends NetObject  {
 
     public void setIsSelectable(boolean IsSelectable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSelectable", IsSelectable);
         } catch (JCNativeException jcne) {
@@ -200,9 +208,13 @@ public class CalendarDay extends NetObject  {
 
     public boolean getIsSelected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelected = null;
         try {
-            return (boolean)classInstance.Get("IsSelected");
+            retObjectIsSelected = classInstance.Get("IsSelected");
+            return (boolean)retObjectIsSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelected != null ? retObjectIsSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +222,13 @@ public class CalendarDay extends NetObject  {
 
     public boolean getIsToday() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsToday = null;
         try {
-            return (boolean)classInstance.Get("IsToday");
+            retObjectIsToday = classInstance.Get("IsToday");
+            return (boolean)retObjectIsToday;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsToday != null ? retObjectIsToday.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +236,13 @@ public class CalendarDay extends NetObject  {
 
     public boolean getIsWeekend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWeekend = null;
         try {
-            return (boolean)classInstance.Get("IsWeekend");
+            retObjectIsWeekend = classInstance.Get("IsWeekend");
+            return (boolean)retObjectIsWeekend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWeekend != null ? retObjectIsWeekend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +250,14 @@ public class CalendarDay extends NetObject  {
 
     public DateTime getDate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Date");
+            retObjectDate = classInstance.Get("Date");
+            JCObject val = (JCObject)retObjectDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDate != null ? retObjectDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +265,13 @@ public class CalendarDay extends NetObject  {
 
     public java.lang.String getDayNumberText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayNumberText = null;
         try {
-            return (java.lang.String)classInstance.Get("DayNumberText");
+            retObjectDayNumberText = classInstance.Get("DayNumberText");
+            return (java.lang.String)retObjectDayNumberText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDayNumberText != null ? retObjectDayNumberText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

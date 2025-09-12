@@ -164,9 +164,13 @@ public class FindInList extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class FindInList extends TaskExtension  {
     
     public boolean getCaseSensitive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaseSensitive = null;
         try {
-            return (boolean)classInstance.Get("CaseSensitive");
+            retObjectCaseSensitive = classInstance.Get("CaseSensitive");
+            return (boolean)retObjectCaseSensitive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCaseSensitive != null ? retObjectCaseSensitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class FindInList extends TaskExtension  {
 
     public void setCaseSensitive(boolean CaseSensitive) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaseSensitive", CaseSensitive);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class FindInList extends TaskExtension  {
 
     public boolean getFindLastMatch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindLastMatch = null;
         try {
-            return (boolean)classInstance.Get("FindLastMatch");
+            retObjectFindLastMatch = classInstance.Get("FindLastMatch");
+            return (boolean)retObjectFindLastMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFindLastMatch != null ? retObjectFindLastMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class FindInList extends TaskExtension  {
 
     public void setFindLastMatch(boolean FindLastMatch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FindLastMatch", FindLastMatch);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class FindInList extends TaskExtension  {
 
     public boolean getMatchFileNameOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchFileNameOnly = null;
         try {
-            return (boolean)classInstance.Get("MatchFileNameOnly");
+            retObjectMatchFileNameOnly = classInstance.Get("MatchFileNameOnly");
+            return (boolean)retObjectMatchFileNameOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMatchFileNameOnly != null ? retObjectMatchFileNameOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class FindInList extends TaskExtension  {
 
     public void setMatchFileNameOnly(boolean MatchFileNameOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchFileNameOnly", MatchFileNameOnly);
         } catch (JCNativeException jcne) {
@@ -238,10 +254,14 @@ public class FindInList extends TaskExtension  {
 
     public ITaskItem getItemFound() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemFound = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemFound");
+            retObjectItemFound = classInstance.Get("ItemFound");
+            JCObject val = (JCObject)retObjectItemFound;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemFound != null ? retObjectItemFound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +269,7 @@ public class FindInList extends TaskExtension  {
 
     public void setItemFound(ITaskItem ItemFound) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemFound", ItemFound == null ? null : ItemFound.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,16 +279,20 @@ public class FindInList extends TaskExtension  {
 
     public final ITaskItem[] getList() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectList = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("List");
+            retObjectList = classInstance.Get("List");
+            JCObject resultingObjects = (JCObject)retObjectList;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectList != null ? retObjectList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class FindInList extends TaskExtension  {
 
     public void setList(ITaskItem[] List) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("List", toObjectFromArray(List));
         } catch (JCNativeException jcne) {
@@ -286,9 +310,13 @@ public class FindInList extends TaskExtension  {
 
     public java.lang.String getItemSpecToFind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemSpecToFind = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemSpecToFind");
+            retObjectItemSpecToFind = classInstance.Get("ItemSpecToFind");
+            return (java.lang.String)retObjectItemSpecToFind;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemSpecToFind != null ? retObjectItemSpecToFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +324,7 @@ public class FindInList extends TaskExtension  {
 
     public void setItemSpecToFind(java.lang.String ItemSpecToFind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemSpecToFind", ItemSpecToFind);
         } catch (JCNativeException jcne) {

@@ -144,7 +144,7 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
     
     public void RegisterCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
 
     public void RegisterDefaultCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterDefaultCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
 
     public void UnregisterCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class ICompositeViewEventsImplementation extends NetObject implements ICo
 
     public void UnregisterDefaultCompositeView(ICompositeView container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterDefaultCompositeView", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {

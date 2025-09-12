@@ -171,10 +171,14 @@ public class UserPersonalizationStateInfo extends PersonalizationStateInfo  {
     
     public DateTime getLastActivityDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastActivityDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastActivityDate");
+            retObjectLastActivityDate = classInstance.Get("LastActivityDate");
+            JCObject val = (JCObject)retObjectLastActivityDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastActivityDate != null ? retObjectLastActivityDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class UserPersonalizationStateInfo extends PersonalizationStateInfo  {
 
     public java.lang.String getUsername() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsername = null;
         try {
-            return (java.lang.String)classInstance.Get("Username");
+            retObjectUsername = classInstance.Get("Username");
+            return (java.lang.String)retObjectUsername;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUsername != null ? retObjectUsername.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

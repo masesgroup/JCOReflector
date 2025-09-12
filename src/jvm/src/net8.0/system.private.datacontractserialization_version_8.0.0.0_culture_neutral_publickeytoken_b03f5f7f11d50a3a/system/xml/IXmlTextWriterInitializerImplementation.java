@@ -144,7 +144,7 @@ public class IXmlTextWriterInitializerImplementation extends NetObject implement
     
     public void SetOutput(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutput", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
         } catch (JCNativeException jcne) {

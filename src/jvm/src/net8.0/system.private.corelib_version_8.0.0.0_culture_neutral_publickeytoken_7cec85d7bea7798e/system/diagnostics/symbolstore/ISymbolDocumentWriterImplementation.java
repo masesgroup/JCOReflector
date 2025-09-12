@@ -143,7 +143,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
     
     public void SetCheckSum(Guid algorithmId, byte[] checkSum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCheckSum", algorithmId == null ? null : algorithmId.getJCOInstance(), checkSum);
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
 
     public void SetCheckSum(Guid dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCheckSum", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
 
     public void SetSource(byte[] source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSource", (java.lang.Object)source);
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
 
     public void SetSource(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSource", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {

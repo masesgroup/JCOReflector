@@ -218,9 +218,13 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
     
     public boolean getCanRenewSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRenewSession = null;
         try {
-            return (boolean)classInstance.Get("CanRenewSession");
+            retObjectCanRenewSession = classInstance.Get("CanRenewSession");
+            return (boolean)retObjectCanRenewSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRenewSession != null ? retObjectCanRenewSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +232,7 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
 
     public void setCanRenewSession(boolean CanRenewSession) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanRenewSession", CanRenewSession);
         } catch (JCNativeException jcne) {
@@ -238,9 +242,13 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
 
     public boolean getRequireCancellation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireCancellation = null;
         try {
-            return (boolean)classInstance.Get("RequireCancellation");
+            retObjectRequireCancellation = classInstance.Get("RequireCancellation");
+            return (boolean)retObjectRequireCancellation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireCancellation != null ? retObjectRequireCancellation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +256,7 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
 
     public void setRequireCancellation(boolean RequireCancellation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireCancellation", RequireCancellation);
         } catch (JCNativeException jcne) {
@@ -258,10 +266,14 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
 
     public SecurityBindingElement getBootstrapSecurityBindingElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBootstrapSecurityBindingElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BootstrapSecurityBindingElement");
+            retObjectBootstrapSecurityBindingElement = classInstance.Get("BootstrapSecurityBindingElement");
+            JCObject val = (JCObject)retObjectBootstrapSecurityBindingElement;
             return new SecurityBindingElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBootstrapSecurityBindingElement != null ? retObjectBootstrapSecurityBindingElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +281,7 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
 
     public void setBootstrapSecurityBindingElement(SecurityBindingElement BootstrapSecurityBindingElement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BootstrapSecurityBindingElement", BootstrapSecurityBindingElement == null ? null : BootstrapSecurityBindingElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,10 +291,14 @@ public class SecureConversationSecurityTokenParameters extends SecurityTokenPara
 
     public ChannelProtectionRequirements getBootstrapProtectionRequirements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBootstrapProtectionRequirements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BootstrapProtectionRequirements");
+            retObjectBootstrapProtectionRequirements = classInstance.Get("BootstrapProtectionRequirements");
+            JCObject val = (JCObject)retObjectBootstrapProtectionRequirements;
             return new ChannelProtectionRequirements(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBootstrapProtectionRequirements != null ? retObjectBootstrapProtectionRequirements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,10 +171,14 @@ public class DrawingAttributesReplacedEventArgs extends EventArgs  {
     
     public DrawingAttributes getNewDrawingAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewDrawingAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewDrawingAttributes");
+            retObjectNewDrawingAttributes = classInstance.Get("NewDrawingAttributes");
+            JCObject val = (JCObject)retObjectNewDrawingAttributes;
             return new DrawingAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewDrawingAttributes != null ? retObjectNewDrawingAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class DrawingAttributesReplacedEventArgs extends EventArgs  {
 
     public DrawingAttributes getPreviousDrawingAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousDrawingAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousDrawingAttributes");
+            retObjectPreviousDrawingAttributes = classInstance.Get("PreviousDrawingAttributes");
+            JCObject val = (JCObject)retObjectPreviousDrawingAttributes;
             return new DrawingAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousDrawingAttributes != null ? retObjectPreviousDrawingAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

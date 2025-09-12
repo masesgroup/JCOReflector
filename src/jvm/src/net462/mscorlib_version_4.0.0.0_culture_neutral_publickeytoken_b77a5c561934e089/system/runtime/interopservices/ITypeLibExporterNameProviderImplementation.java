@@ -142,10 +142,12 @@ public class ITypeLibExporterNameProviderImplementation extends NetObject implem
     
     public java.lang.String[] GetNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNames");
+            retObjectGetNames = classInstance.Invoke("GetNames");
+            JCObject resultingObjects = (JCObject)retObjectGetNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -154,6 +156,8 @@ public class ITypeLibExporterNameProviderImplementation extends NetObject implem
 				resultingArray[indexGetNames] = (java.lang.String)resultingArrayList.get(indexGetNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetNames != null ? retObjectGetNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

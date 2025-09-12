@@ -163,9 +163,13 @@ public class ProxyDataContractResolver extends DataContractResolver  {
     
     public boolean TryResolveType(NetType dataContractType, NetType declaredType, DataContractResolver knownTypeResolver, JCORefOut<XmlDictionaryString> typeName, JCORefOut<XmlDictionaryString> typeNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryResolveType = null;
         try {
-            return (boolean)classInstance.Invoke("TryResolveType", dataContractType == null ? null : dataContractType.getJCOInstance(), declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance(), typeName.getJCRefOut(), typeNamespace.getJCRefOut());
+            retObjectTryResolveType = classInstance.Invoke("TryResolveType", dataContractType == null ? null : dataContractType.getJCOInstance(), declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance(), typeName.getJCRefOut(), typeNamespace.getJCRefOut());
+            return (boolean)retObjectTryResolveType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryResolveType != null ? retObjectTryResolveType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ProxyDataContractResolver extends DataContractResolver  {
 
     public NetType ResolveName(java.lang.String typeName, java.lang.String typeNamespace, NetType declaredType, DataContractResolver knownTypeResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveName = null;
         try {
-            JCObject objResolveName = (JCObject)classInstance.Invoke("ResolveName", typeName, typeNamespace, declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance());
+            retObjectResolveName = classInstance.Invoke("ResolveName", typeName, typeNamespace, declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance());
+            JCObject objResolveName = (JCObject)retObjectResolveName;
             return new NetType(objResolveName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveName != null ? retObjectResolveName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

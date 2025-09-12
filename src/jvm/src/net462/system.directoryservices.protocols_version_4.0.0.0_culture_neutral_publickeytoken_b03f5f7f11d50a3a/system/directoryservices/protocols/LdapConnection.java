@@ -208,10 +208,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     
     public DirectoryResponse EndSendRequest(IAsyncResult asyncResult) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.threading.AbandonedMutexException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndSendRequest = null;
         try {
-            JCObject objEndSendRequest = (JCObject)classInstance.Invoke("EndSendRequest", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndSendRequest = classInstance.Invoke("EndSendRequest", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndSendRequest = (JCObject)retObjectEndSendRequest;
             return new DirectoryResponse(objEndSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndSendRequest != null ? retObjectEndSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +223,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public DirectoryResponse SendRequest(DirectoryRequest request) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.PlatformNotSupportedException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryOperationException, system.OutOfMemoryException, system.AccessViolationException, system.IndexOutOfRangeException, system.UriFormatException, system.xml.xpath.XPathException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.FormatException, system.directoryservices.protocols.DirectoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendRequest = null;
         try {
-            JCObject objSendRequest = (JCObject)classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            retObjectSendRequest = classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            JCObject objSendRequest = (JCObject)retObjectSendRequest;
             return new DirectoryResponse(objSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendRequest != null ? retObjectSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +238,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public DirectoryResponse SendRequest(DirectoryRequest request, TimeSpan requestTimeout) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryOperationException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.FormatException, system.security.SecurityException, system.UriFormatException, system.xml.xpath.XPathException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.directoryservices.protocols.DirectoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendRequest = null;
         try {
-            JCObject objSendRequest = (JCObject)classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance(), requestTimeout == null ? null : requestTimeout.getJCOInstance());
+            retObjectSendRequest = classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance(), requestTimeout == null ? null : requestTimeout.getJCOInstance());
+            JCObject objSendRequest = (JCObject)retObjectSendRequest;
             return new DirectoryResponse(objSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendRequest != null ? retObjectSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +253,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public PartialResultsCollection GetPartialResults(IAsyncResult asyncResult) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.RankException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPartialResults = null;
         try {
-            JCObject objGetPartialResults = (JCObject)classInstance.Invoke("GetPartialResults", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectGetPartialResults = classInstance.Invoke("GetPartialResults", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objGetPartialResults = (JCObject)retObjectGetPartialResults;
             return new PartialResultsCollection(objGetPartialResults);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPartialResults != null ? retObjectGetPartialResults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +268,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public IAsyncResult BeginSendRequest(DirectoryRequest request, PartialResultProcessing partialMode, AsyncCallback callback, NetObject state) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryOperationException, system.OutOfMemoryException, system.AccessViolationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.directoryservices.protocols.DirectoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendRequest = null;
         try {
-            JCObject objBeginSendRequest = (JCObject)classInstance.Invoke("BeginSendRequest", request == null ? null : request.getJCOInstance(), partialMode == null ? null : partialMode.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSendRequest = classInstance.Invoke("BeginSendRequest", request == null ? null : request.getJCOInstance(), partialMode == null ? null : partialMode.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSendRequest = (JCObject)retObjectBeginSendRequest;
             return new IAsyncResultImplementation(objBeginSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendRequest != null ? retObjectBeginSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +283,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public IAsyncResult BeginSendRequest(DirectoryRequest request, TimeSpan requestTimeout, PartialResultProcessing partialMode, AsyncCallback callback, NetObject state) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryOperationException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.directoryservices.protocols.DirectoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSendRequest = null;
         try {
-            JCObject objBeginSendRequest = (JCObject)classInstance.Invoke("BeginSendRequest", request == null ? null : request.getJCOInstance(), requestTimeout == null ? null : requestTimeout.getJCOInstance(), partialMode == null ? null : partialMode.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSendRequest = classInstance.Invoke("BeginSendRequest", request == null ? null : request.getJCOInstance(), requestTimeout == null ? null : requestTimeout.getJCOInstance(), partialMode == null ? null : partialMode.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSendRequest = (JCObject)retObjectBeginSendRequest;
             return new IAsyncResultImplementation(objBeginSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSendRequest != null ? retObjectBeginSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +298,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public void Abort(IAsyncResult asyncResult) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.FormatException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +308,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public void Bind() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.PlatformNotSupportedException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Bind");
         } catch (JCNativeException jcne) {
@@ -294,7 +318,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public void Bind(NetworkCredential newCredential) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.PlatformNotSupportedException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Bind", newCredential == null ? null : newCredential.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,7 +328,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -315,7 +339,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -331,9 +355,13 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     
     public boolean getAutoBind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoBind = null;
         try {
-            return (boolean)classInstance.Get("AutoBind");
+            retObjectAutoBind = classInstance.Get("AutoBind");
+            return (boolean)retObjectAutoBind;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoBind != null ? retObjectAutoBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +369,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public void setAutoBind(boolean AutoBind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoBind", AutoBind);
         } catch (JCNativeException jcne) {
@@ -351,10 +379,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public AuthType getAuthType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthType");
+            retObjectAuthType = classInstance.Get("AuthType");
+            JCObject val = (JCObject)retObjectAuthType;
             return new AuthType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthType != null ? retObjectAuthType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +394,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public void setAuthType(AuthType AuthType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthType", AuthType == null ? null : AuthType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,10 +404,14 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     public LdapSessionOptions getSessionOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SessionOptions");
+            retObjectSessionOptions = classInstance.Get("SessionOptions");
+            JCObject val = (JCObject)retObjectSessionOptions;
             return new LdapSessionOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionOptions != null ? retObjectSessionOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

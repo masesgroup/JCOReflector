@@ -177,9 +177,13 @@ public class StateMachineWorkflowActivity extends StateActivity  {
     
     public java.lang.String getCompletedStateName() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompletedStateName = null;
         try {
-            return (java.lang.String)classInstance.Get("CompletedStateName");
+            retObjectCompletedStateName = classInstance.Get("CompletedStateName");
+            return (java.lang.String)retObjectCompletedStateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompletedStateName != null ? retObjectCompletedStateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class StateMachineWorkflowActivity extends StateActivity  {
 
     public void setCompletedStateName(java.lang.String CompletedStateName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompletedStateName", CompletedStateName);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class StateMachineWorkflowActivity extends StateActivity  {
 
     public java.lang.String getCurrentStateName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentStateName = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrentStateName");
+            retObjectCurrentStateName = classInstance.Get("CurrentStateName");
+            return (java.lang.String)retObjectCurrentStateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentStateName != null ? retObjectCurrentStateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +215,13 @@ public class StateMachineWorkflowActivity extends StateActivity  {
 
     public java.lang.String getInitialStateName() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialStateName = null;
         try {
-            return (java.lang.String)classInstance.Get("InitialStateName");
+            retObjectInitialStateName = classInstance.Get("InitialStateName");
+            return (java.lang.String)retObjectInitialStateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInitialStateName != null ? retObjectInitialStateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class StateMachineWorkflowActivity extends StateActivity  {
 
     public void setInitialStateName(java.lang.String InitialStateName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialStateName", InitialStateName);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class StateMachineWorkflowActivity extends StateActivity  {
 
     public java.lang.String getPreviousStateName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousStateName = null;
         try {
-            return (java.lang.String)classInstance.Get("PreviousStateName");
+            retObjectPreviousStateName = classInstance.Get("PreviousStateName");
+            return (java.lang.String)retObjectPreviousStateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPreviousStateName != null ? retObjectPreviousStateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +253,14 @@ public class StateMachineWorkflowActivity extends StateActivity  {
 
     public ActivityCondition getDynamicUpdateCondition() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicUpdateCondition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DynamicUpdateCondition");
+            retObjectDynamicUpdateCondition = classInstance.Get("DynamicUpdateCondition");
+            JCObject val = (JCObject)retObjectDynamicUpdateCondition;
             return new ActivityCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicUpdateCondition != null ? retObjectDynamicUpdateCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class StateMachineWorkflowActivity extends StateActivity  {
 
     public void setDynamicUpdateCondition(ActivityCondition DynamicUpdateCondition) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicUpdateCondition", DynamicUpdateCondition == null ? null : DynamicUpdateCondition.getJCOInstance());
         } catch (JCNativeException jcne) {

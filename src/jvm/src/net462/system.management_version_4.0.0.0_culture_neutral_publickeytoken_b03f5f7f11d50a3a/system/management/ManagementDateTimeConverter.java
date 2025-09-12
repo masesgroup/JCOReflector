@@ -157,10 +157,14 @@ public class ManagementDateTimeConverter extends NetObject  {
     
     public static DateTime ToDateTime(java.lang.String dmtfDate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDateTime = null;
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", dmtfDate);
+            retObjectToDateTime = classType.Invoke("ToDateTime", dmtfDate);
+            JCObject objToDateTime = (JCObject)retObjectToDateTime;
             return new DateTime(objToDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDateTime != null ? retObjectToDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class ManagementDateTimeConverter extends NetObject  {
 
     public static java.lang.String ToDmtfDateTime(DateTime date) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException, system.InvalidTimeZoneException, system.io.IOException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDmtfDateTime = null;
         try {
-            return (java.lang.String)classType.Invoke("ToDmtfDateTime", date == null ? null : date.getJCOInstance());
+            retObjectToDmtfDateTime = classType.Invoke("ToDmtfDateTime", date == null ? null : date.getJCOInstance());
+            return (java.lang.String)retObjectToDmtfDateTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToDmtfDateTime != null ? retObjectToDmtfDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class ManagementDateTimeConverter extends NetObject  {
 
     public static java.lang.String ToDmtfTimeInterval(TimeSpan timespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDmtfTimeInterval = null;
         try {
-            return (java.lang.String)classType.Invoke("ToDmtfTimeInterval", timespan == null ? null : timespan.getJCOInstance());
+            retObjectToDmtfTimeInterval = classType.Invoke("ToDmtfTimeInterval", timespan == null ? null : timespan.getJCOInstance());
+            return (java.lang.String)retObjectToDmtfTimeInterval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToDmtfTimeInterval != null ? retObjectToDmtfTimeInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class ManagementDateTimeConverter extends NetObject  {
 
     public static TimeSpan ToTimeSpan(java.lang.String dmtfTimespan) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTimeSpan = null;
         try {
-            JCObject objToTimeSpan = (JCObject)classType.Invoke("ToTimeSpan", dmtfTimespan);
+            retObjectToTimeSpan = classType.Invoke("ToTimeSpan", dmtfTimespan);
+            JCObject objToTimeSpan = (JCObject)retObjectToTimeSpan;
             return new TimeSpan(objToTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTimeSpan != null ? retObjectToTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,9 +159,13 @@ public class RuleActionTrackingEvent extends NetObject  {
     
     public boolean getConditionResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditionResult = null;
         try {
-            return (boolean)classInstance.Get("ConditionResult");
+            retObjectConditionResult = classInstance.Get("ConditionResult");
+            return (boolean)retObjectConditionResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConditionResult != null ? retObjectConditionResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class RuleActionTrackingEvent extends NetObject  {
 
     public java.lang.String getRuleName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRuleName = null;
         try {
-            return (java.lang.String)classInstance.Get("RuleName");
+            retObjectRuleName = classInstance.Get("RuleName");
+            return (java.lang.String)retObjectRuleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRuleName != null ? retObjectRuleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

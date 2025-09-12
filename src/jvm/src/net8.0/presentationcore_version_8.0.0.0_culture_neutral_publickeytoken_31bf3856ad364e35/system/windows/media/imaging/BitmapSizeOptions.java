@@ -157,10 +157,14 @@ public class BitmapSizeOptions extends NetObject  {
     
     public static BitmapSizeOptions FromEmptyOptions() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromEmptyOptions = null;
         try {
-            JCObject objFromEmptyOptions = (JCObject)classType.Invoke("FromEmptyOptions");
+            retObjectFromEmptyOptions = classType.Invoke("FromEmptyOptions");
+            JCObject objFromEmptyOptions = (JCObject)retObjectFromEmptyOptions;
             return new BitmapSizeOptions(objFromEmptyOptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromEmptyOptions != null ? retObjectFromEmptyOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class BitmapSizeOptions extends NetObject  {
 
     public static BitmapSizeOptions FromHeight(int pixelHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHeight = null;
         try {
-            JCObject objFromHeight = (JCObject)classType.Invoke("FromHeight", pixelHeight);
+            retObjectFromHeight = classType.Invoke("FromHeight", pixelHeight);
+            JCObject objFromHeight = (JCObject)retObjectFromHeight;
             return new BitmapSizeOptions(objFromHeight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromHeight != null ? retObjectFromHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class BitmapSizeOptions extends NetObject  {
 
     public static BitmapSizeOptions FromRotation(Rotation rotation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromRotation = null;
         try {
-            JCObject objFromRotation = (JCObject)classType.Invoke("FromRotation", rotation == null ? null : rotation.getJCOInstance());
+            retObjectFromRotation = classType.Invoke("FromRotation", rotation == null ? null : rotation.getJCOInstance());
+            JCObject objFromRotation = (JCObject)retObjectFromRotation;
             return new BitmapSizeOptions(objFromRotation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromRotation != null ? retObjectFromRotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class BitmapSizeOptions extends NetObject  {
 
     public static BitmapSizeOptions FromWidth(int pixelWidth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromWidth = null;
         try {
-            JCObject objFromWidth = (JCObject)classType.Invoke("FromWidth", pixelWidth);
+            retObjectFromWidth = classType.Invoke("FromWidth", pixelWidth);
+            JCObject objFromWidth = (JCObject)retObjectFromWidth;
             return new BitmapSizeOptions(objFromWidth);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromWidth != null ? retObjectFromWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class BitmapSizeOptions extends NetObject  {
 
     public static BitmapSizeOptions FromWidthAndHeight(int pixelWidth, int pixelHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromWidthAndHeight = null;
         try {
-            JCObject objFromWidthAndHeight = (JCObject)classType.Invoke("FromWidthAndHeight", pixelWidth, pixelHeight);
+            retObjectFromWidthAndHeight = classType.Invoke("FromWidthAndHeight", pixelWidth, pixelHeight);
+            JCObject objFromWidthAndHeight = (JCObject)retObjectFromWidthAndHeight;
             return new BitmapSizeOptions(objFromWidthAndHeight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromWidthAndHeight != null ? retObjectFromWidthAndHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +236,13 @@ public class BitmapSizeOptions extends NetObject  {
     
     public boolean getPreservesAspectRatio() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreservesAspectRatio = null;
         try {
-            return (boolean)classInstance.Get("PreservesAspectRatio");
+            retObjectPreservesAspectRatio = classInstance.Get("PreservesAspectRatio");
+            return (boolean)retObjectPreservesAspectRatio;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreservesAspectRatio != null ? retObjectPreservesAspectRatio.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +250,19 @@ public class BitmapSizeOptions extends NetObject  {
 
     public int getPixelHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelHeight = null;
         try {
-            return (int)classInstance.Get("PixelHeight");
+            retObjectPixelHeight = classInstance.Get("PixelHeight");
+            return (int)retObjectPixelHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPixelHeightNumber = (java.lang.Number)retObjectPixelHeight;
+                return retObjectPixelHeightNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPixelHeight != null ? retObjectPixelHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +270,19 @@ public class BitmapSizeOptions extends NetObject  {
 
     public int getPixelWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelWidth = null;
         try {
-            return (int)classInstance.Get("PixelWidth");
+            retObjectPixelWidth = classInstance.Get("PixelWidth");
+            return (int)retObjectPixelWidth;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPixelWidthNumber = (java.lang.Number)retObjectPixelWidth;
+                return retObjectPixelWidthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPixelWidth != null ? retObjectPixelWidth.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +290,14 @@ public class BitmapSizeOptions extends NetObject  {
 
     public Rotation getRotation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRotation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rotation");
+            retObjectRotation = classInstance.Get("Rotation");
+            JCObject val = (JCObject)retObjectRotation;
             return new Rotation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRotation != null ? retObjectRotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

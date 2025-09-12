@@ -154,9 +154,13 @@ public class ExceptionHandler extends NetObject  {
     
     public boolean HandleException(NetException exception) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandleException = null;
         try {
-            return (boolean)classInstance.Invoke("HandleException", exception == null ? null : exception.getJCOInstance());
+            retObjectHandleException = classInstance.Invoke("HandleException", exception == null ? null : exception.getJCOInstance());
+            return (boolean)retObjectHandleException;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHandleException != null ? retObjectHandleException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class ExceptionHandler extends NetObject  {
     
     public static ExceptionHandler getAlwaysHandle() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAlwaysHandle = null;
         try {
-            JCObject val = (JCObject)classType.Get("AlwaysHandle");
+            retObjectAlwaysHandle = classType.Get("AlwaysHandle");
+            JCObject val = (JCObject)retObjectAlwaysHandle;
             return new ExceptionHandler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlwaysHandle != null ? retObjectAlwaysHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class ExceptionHandler extends NetObject  {
 
     public static ExceptionHandler getAsynchronousThreadExceptionHandler() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsynchronousThreadExceptionHandler = null;
         try {
-            JCObject val = (JCObject)classType.Get("AsynchronousThreadExceptionHandler");
+            retObjectAsynchronousThreadExceptionHandler = classType.Get("AsynchronousThreadExceptionHandler");
+            JCObject val = (JCObject)retObjectAsynchronousThreadExceptionHandler;
             return new ExceptionHandler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsynchronousThreadExceptionHandler != null ? retObjectAsynchronousThreadExceptionHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +202,7 @@ public class ExceptionHandler extends NetObject  {
 
     public static void setAsynchronousThreadExceptionHandler(ExceptionHandler AsynchronousThreadExceptionHandler) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("AsynchronousThreadExceptionHandler", AsynchronousThreadExceptionHandler == null ? null : AsynchronousThreadExceptionHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,10 +212,14 @@ public class ExceptionHandler extends NetObject  {
 
     public static ExceptionHandler getTransportExceptionHandler() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTransportExceptionHandler = null;
         try {
-            JCObject val = (JCObject)classType.Get("TransportExceptionHandler");
+            retObjectTransportExceptionHandler = classType.Get("TransportExceptionHandler");
+            JCObject val = (JCObject)retObjectTransportExceptionHandler;
             return new ExceptionHandler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransportExceptionHandler != null ? retObjectTransportExceptionHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +227,7 @@ public class ExceptionHandler extends NetObject  {
 
     public static void setTransportExceptionHandler(ExceptionHandler TransportExceptionHandler) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("TransportExceptionHandler", TransportExceptionHandler == null ? null : TransportExceptionHandler.getJCOInstance());
         } catch (JCNativeException jcne) {

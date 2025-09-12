@@ -171,10 +171,14 @@ public class CultureSpecificCharacterBufferRange extends NetObject  {
     
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CultureInfo");
+            retObjectCultureInfo = classInstance.Get("CultureInfo");
+            JCObject val = (JCObject)retObjectCultureInfo;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCultureInfo != null ? retObjectCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class CultureSpecificCharacterBufferRange extends NetObject  {
 
     public CharacterBufferRange getCharacterBufferRange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacterBufferRange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CharacterBufferRange");
+            retObjectCharacterBufferRange = classInstance.Get("CharacterBufferRange");
+            JCObject val = (JCObject)retObjectCharacterBufferRange;
             return new CharacterBufferRange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharacterBufferRange != null ? retObjectCharacterBufferRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

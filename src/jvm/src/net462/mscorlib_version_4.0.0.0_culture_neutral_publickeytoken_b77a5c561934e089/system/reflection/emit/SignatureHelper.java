@@ -161,10 +161,12 @@ public class SignatureHelper extends NetObject  {
     
     public byte[] GetSignature() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSignature = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSignature");
+            retObjectGetSignature = classInstance.Invoke("GetSignature");
+            JCObject resultingObjects = (JCObject)retObjectGetSignature;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +175,8 @@ public class SignatureHelper extends NetObject  {
 				resultingArray[indexGetSignature] = (byte)resultingArrayList.get(indexGetSignature);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSignature != null ? retObjectGetSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetFieldSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFieldSigHelper = null;
         try {
-            JCObject objGetFieldSigHelper = (JCObject)classType.Invoke("GetFieldSigHelper", mod == null ? null : mod.getJCOInstance());
+            retObjectGetFieldSigHelper = classType.Invoke("GetFieldSigHelper", mod == null ? null : mod.getJCOInstance());
+            JCObject objGetFieldSigHelper = (JCObject)retObjectGetFieldSigHelper;
             return new SignatureHelper(objGetFieldSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldSigHelper != null ? retObjectGetFieldSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetLocalVarSigHelper() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLocalVarSigHelper = null;
         try {
-            JCObject objGetLocalVarSigHelper = (JCObject)classType.Invoke("GetLocalVarSigHelper");
+            retObjectGetLocalVarSigHelper = classType.Invoke("GetLocalVarSigHelper");
+            JCObject objGetLocalVarSigHelper = (JCObject)retObjectGetLocalVarSigHelper;
             return new SignatureHelper(objGetLocalVarSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalVarSigHelper != null ? retObjectGetLocalVarSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetLocalVarSigHelper(Module mod) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLocalVarSigHelper = null;
         try {
-            JCObject objGetLocalVarSigHelper = (JCObject)classType.Invoke("GetLocalVarSigHelper", mod == null ? null : mod.getJCOInstance());
+            retObjectGetLocalVarSigHelper = classType.Invoke("GetLocalVarSigHelper", mod == null ? null : mod.getJCOInstance());
+            JCObject objGetLocalVarSigHelper = (JCObject)retObjectGetLocalVarSigHelper;
             return new SignatureHelper(objGetLocalVarSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalVarSigHelper != null ? retObjectGetLocalVarSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetMethodSigHelper(CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethodSigHelper = null;
         try {
-            JCObject objGetMethodSigHelper = (JCObject)classType.Invoke("GetMethodSigHelper", callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            retObjectGetMethodSigHelper = classType.Invoke("GetMethodSigHelper", callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            JCObject objGetMethodSigHelper = (JCObject)retObjectGetMethodSigHelper;
             return new SignatureHelper(objGetMethodSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodSigHelper != null ? retObjectGetMethodSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetMethodSigHelper(Module mod, CallingConventions callingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethodSigHelper = null;
         try {
-            JCObject objGetMethodSigHelper = (JCObject)classType.Invoke("GetMethodSigHelper", mod == null ? null : mod.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            retObjectGetMethodSigHelper = classType.Invoke("GetMethodSigHelper", mod == null ? null : mod.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            JCObject objGetMethodSigHelper = (JCObject)retObjectGetMethodSigHelper;
             return new SignatureHelper(objGetMethodSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodSigHelper != null ? retObjectGetMethodSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +259,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetMethodSigHelper(Module mod, CallingConvention unmanagedCallConv, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethodSigHelper = null;
         try {
-            JCObject objGetMethodSigHelper = (JCObject)classType.Invoke("GetMethodSigHelper", mod == null ? null : mod.getJCOInstance(), unmanagedCallConv == null ? null : unmanagedCallConv.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            retObjectGetMethodSigHelper = classType.Invoke("GetMethodSigHelper", mod == null ? null : mod.getJCOInstance(), unmanagedCallConv == null ? null : unmanagedCallConv.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            JCObject objGetMethodSigHelper = (JCObject)retObjectGetMethodSigHelper;
             return new SignatureHelper(objGetMethodSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodSigHelper != null ? retObjectGetMethodSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +274,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetMethodSigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethodSigHelper = null;
         try {
-            JCObject objGetMethodSigHelper = (JCObject)classType.Invoke("GetMethodSigHelper", mod == null ? null : mod.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            retObjectGetMethodSigHelper = classType.Invoke("GetMethodSigHelper", mod == null ? null : mod.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            JCObject objGetMethodSigHelper = (JCObject)retObjectGetMethodSigHelper;
             return new SignatureHelper(objGetMethodSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodSigHelper != null ? retObjectGetMethodSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +289,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetMethodSigHelper(CallingConvention unmanagedCallingConvention, NetType returnType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethodSigHelper = null;
         try {
-            JCObject objGetMethodSigHelper = (JCObject)classType.Invoke("GetMethodSigHelper", unmanagedCallingConvention == null ? null : unmanagedCallingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            retObjectGetMethodSigHelper = classType.Invoke("GetMethodSigHelper", unmanagedCallingConvention == null ? null : unmanagedCallingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance());
+            JCObject objGetMethodSigHelper = (JCObject)retObjectGetMethodSigHelper;
             return new SignatureHelper(objGetMethodSigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodSigHelper != null ? retObjectGetMethodSigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +304,14 @@ public class SignatureHelper extends NetObject  {
 
     public static SignatureHelper GetPropertySigHelper(Module mod, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPropertySigHelper = null;
         try {
-            JCObject objGetPropertySigHelper = (JCObject)classType.Invoke("GetPropertySigHelper", mod == null ? null : mod.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            retObjectGetPropertySigHelper = classType.Invoke("GetPropertySigHelper", mod == null ? null : mod.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            JCObject objGetPropertySigHelper = (JCObject)retObjectGetPropertySigHelper;
             return new SignatureHelper(objGetPropertySigHelper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertySigHelper != null ? retObjectGetPropertySigHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +319,7 @@ public class SignatureHelper extends NetObject  {
 
     public void AddArgument(NetType clsArgument) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArgument", clsArgument == null ? null : clsArgument.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,7 +329,7 @@ public class SignatureHelper extends NetObject  {
 
     public void AddArgument(NetType argument, boolean pinned) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArgument", argument == null ? null : argument.getJCOInstance(), pinned);
         } catch (JCNativeException jcne) {
@@ -299,7 +339,7 @@ public class SignatureHelper extends NetObject  {
 
     public void AddArgument(NetType argument, NetType[] requiredCustomModifiers, NetType[] optionalCustomModifiers) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArgument", argument == null ? null : argument.getJCOInstance(), toObjectFromArray(requiredCustomModifiers), toObjectFromArray(optionalCustomModifiers));
         } catch (JCNativeException jcne) {
@@ -309,7 +349,7 @@ public class SignatureHelper extends NetObject  {
 
     public void AddSentinel() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSentinel");
         } catch (JCNativeException jcne) {
@@ -323,7 +363,7 @@ public class SignatureHelper extends NetObject  {
      */
     @Deprecated 
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_SignatureHelper to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_SignatureHelper to obtain the full interface.");
     }
 
 

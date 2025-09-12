@@ -162,7 +162,7 @@ public class RecycleLimitObserver extends NetObject  {
     
     public void OnCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnCompleted");
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class RecycleLimitObserver extends NetObject  {
 
     public void OnError(NetException error) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnError", error == null ? null : error.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class RecycleLimitObserver extends NetObject  {
 
     public void OnNext(RecycleLimitInfo recycleLimitInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnNext", recycleLimitInfo == null ? null : recycleLimitInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

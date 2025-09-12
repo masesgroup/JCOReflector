@@ -154,9 +154,13 @@ public class CutCopyPasteHelper extends NetObject  {
     
     public static boolean CanCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanCopy = null;
         try {
-            return (boolean)classType.Invoke("CanCopy", context == null ? null : context.getJCOInstance());
+            retObjectCanCopy = classType.Invoke("CanCopy", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanCopy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCopy != null ? retObjectCanCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class CutCopyPasteHelper extends NetObject  {
 
     public static boolean CanCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanCut = null;
         try {
-            return (boolean)classType.Invoke("CanCut", context == null ? null : context.getJCOInstance());
+            retObjectCanCut = classType.Invoke("CanCut", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanCut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCut != null ? retObjectCanCut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class CutCopyPasteHelper extends NetObject  {
 
     public static boolean CanPaste(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.threading.ThreadStateException, system.SystemException, system.security.XmlSyntaxException, system.NullReferenceException, system.deployment.application.InvalidDeploymentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCanPaste = null;
         try {
-            return (boolean)classType.Invoke("CanPaste", context == null ? null : context.getJCOInstance());
+            retObjectCanPaste = classType.Invoke("CanPaste", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanPaste;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanPaste != null ? retObjectCanPaste.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +196,7 @@ public class CutCopyPasteHelper extends NetObject  {
 
     public static void DoCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DoCopy", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +206,7 @@ public class CutCopyPasteHelper extends NetObject  {
 
     public static void DoCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DoCut", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,7 +216,7 @@ public class CutCopyPasteHelper extends NetObject  {
 
     public static void DoPaste(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadStateException, system.SystemException, system.NullReferenceException, system.security.SecurityException, system.xml.XmlException, system.NotImplementedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DoPaste", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

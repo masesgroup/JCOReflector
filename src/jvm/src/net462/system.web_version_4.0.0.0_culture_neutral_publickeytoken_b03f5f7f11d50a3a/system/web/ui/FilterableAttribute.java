@@ -167,9 +167,13 @@ public class FilterableAttribute extends Attribute  {
     
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class FilterableAttribute extends Attribute  {
 
     public static boolean IsObjectFilterable(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsObjectFilterable = null;
         try {
-            return (boolean)classType.Invoke("IsObjectFilterable", instance == null ? null : instance.getJCOInstance());
+            retObjectIsObjectFilterable = classType.Invoke("IsObjectFilterable", instance == null ? null : instance.getJCOInstance());
+            return (boolean)retObjectIsObjectFilterable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsObjectFilterable != null ? retObjectIsObjectFilterable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class FilterableAttribute extends Attribute  {
 
     public static boolean IsPropertyFilterable(PropertyDescriptor propertyDescriptor) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPropertyFilterable = null;
         try {
-            return (boolean)classType.Invoke("IsPropertyFilterable", propertyDescriptor == null ? null : propertyDescriptor.getJCOInstance());
+            retObjectIsPropertyFilterable = classType.Invoke("IsPropertyFilterable", propertyDescriptor == null ? null : propertyDescriptor.getJCOInstance());
+            return (boolean)retObjectIsPropertyFilterable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPropertyFilterable != null ? retObjectIsPropertyFilterable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class FilterableAttribute extends Attribute  {
 
     public static boolean IsTypeFilterable(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTypeFilterable = null;
         try {
-            return (boolean)classType.Invoke("IsTypeFilterable", type == null ? null : type.getJCOInstance());
+            retObjectIsTypeFilterable = classType.Invoke("IsTypeFilterable", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsTypeFilterable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTypeFilterable != null ? retObjectIsTypeFilterable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +227,13 @@ public class FilterableAttribute extends Attribute  {
     
     public boolean getFilterable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterable = null;
         try {
-            return (boolean)classInstance.Get("Filterable");
+            retObjectFilterable = classInstance.Get("Filterable");
+            return (boolean)retObjectFilterable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFilterable != null ? retObjectFilterable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

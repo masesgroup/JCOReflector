@@ -176,9 +176,13 @@ public class EntityKey extends NetObject  {
     
     public boolean Equals(EntityKey other) throws Throwable, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class EntityKey extends NetObject  {
 
     public EntitySet GetEntitySet(MetadataWorkspace metadataWorkspace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntitySet = null;
         try {
-            JCObject objGetEntitySet = (JCObject)classInstance.Invoke("GetEntitySet", metadataWorkspace == null ? null : metadataWorkspace.getJCOInstance());
+            retObjectGetEntitySet = classInstance.Invoke("GetEntitySet", metadataWorkspace == null ? null : metadataWorkspace.getJCOInstance());
+            JCObject objGetEntitySet = (JCObject)retObjectGetEntitySet;
             return new EntitySet(objGetEntitySet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntitySet != null ? retObjectGetEntitySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class EntityKey extends NetObject  {
 
     public void OnDeserialized(StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDeserialized", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +215,7 @@ public class EntityKey extends NetObject  {
 
     public void OnDeserializing(StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDeserializing", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,9 +229,13 @@ public class EntityKey extends NetObject  {
     
     public boolean getIsTemporary() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTemporary = null;
         try {
-            return (boolean)classInstance.Get("IsTemporary");
+            retObjectIsTemporary = classInstance.Get("IsTemporary");
+            return (boolean)retObjectIsTemporary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTemporary != null ? retObjectIsTemporary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,16 +243,20 @@ public class EntityKey extends NetObject  {
 
     public final EntityKeyMember[] getEntityKeyValues() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityKeyValues = null;
         try {
             ArrayList<EntityKeyMember> resultingArrayList = new ArrayList<EntityKeyMember>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("EntityKeyValues");
+            retObjectEntityKeyValues = classInstance.Get("EntityKeyValues");
+            JCObject resultingObjects = (JCObject)retObjectEntityKeyValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EntityKeyMember(resultingObject));
             }
             EntityKeyMember[] resultingArray = new EntityKeyMember[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityKeyValues != null ? retObjectEntityKeyValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class EntityKey extends NetObject  {
 
     public void setEntityKeyValues(EntityKeyMember[] EntityKeyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityKeyValues", toObjectFromArray(EntityKeyValues));
         } catch (JCNativeException jcne) {
@@ -258,9 +274,13 @@ public class EntityKey extends NetObject  {
 
     public java.lang.String getEntityContainerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("EntityContainerName");
+            retObjectEntityContainerName = classInstance.Get("EntityContainerName");
+            return (java.lang.String)retObjectEntityContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEntityContainerName != null ? retObjectEntityContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class EntityKey extends NetObject  {
 
     public void setEntityContainerName(java.lang.String EntityContainerName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityContainerName", EntityContainerName);
         } catch (JCNativeException jcne) {
@@ -278,9 +298,13 @@ public class EntityKey extends NetObject  {
 
     public java.lang.String getEntitySetName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntitySetName = null;
         try {
-            return (java.lang.String)classInstance.Get("EntitySetName");
+            retObjectEntitySetName = classInstance.Get("EntitySetName");
+            return (java.lang.String)retObjectEntitySetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEntitySetName != null ? retObjectEntitySetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class EntityKey extends NetObject  {
 
     public void setEntitySetName(java.lang.String EntitySetName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntitySetName", EntitySetName);
         } catch (JCNativeException jcne) {

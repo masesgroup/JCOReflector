@@ -172,8 +172,8 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -186,9 +186,13 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
 
     public java.lang.String DynamicInvoke(Match match) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            return (java.lang.String)classInstance.Invoke("DynamicInvoke", match == null ? null : match.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", match == null ? null : match.getJCOInstance());
+            return (java.lang.String)retObjectDynamicInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

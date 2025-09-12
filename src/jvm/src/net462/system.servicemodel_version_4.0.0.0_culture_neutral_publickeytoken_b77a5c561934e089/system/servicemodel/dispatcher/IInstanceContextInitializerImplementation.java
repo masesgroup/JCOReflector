@@ -144,7 +144,7 @@ public class IInstanceContextInitializerImplementation extends NetObject impleme
     
     public void Initialize(InstanceContext instanceContext, Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", instanceContext == null ? null : instanceContext.getJCOInstance(), message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {

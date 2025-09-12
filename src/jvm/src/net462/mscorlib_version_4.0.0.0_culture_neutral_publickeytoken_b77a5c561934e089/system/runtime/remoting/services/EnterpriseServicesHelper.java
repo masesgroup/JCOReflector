@@ -167,10 +167,14 @@ public class EnterpriseServicesHelper extends NetObject  {
     
     public static IConstructionReturnMessage CreateConstructionReturnMessage(IConstructionCallMessage ctorMsg, MarshalByRefObject retObj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateConstructionReturnMessage = null;
         try {
-            JCObject objCreateConstructionReturnMessage = (JCObject)classType.Invoke("CreateConstructionReturnMessage", ctorMsg == null ? null : ctorMsg.getJCOInstance(), retObj == null ? null : retObj.getJCOInstance());
+            retObjectCreateConstructionReturnMessage = classType.Invoke("CreateConstructionReturnMessage", ctorMsg == null ? null : ctorMsg.getJCOInstance(), retObj == null ? null : retObj.getJCOInstance());
+            JCObject objCreateConstructionReturnMessage = (JCObject)retObjectCreateConstructionReturnMessage;
             return new IConstructionReturnMessageImplementation(objCreateConstructionReturnMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConstructionReturnMessage != null ? retObjectCreateConstructionReturnMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class EnterpriseServicesHelper extends NetObject  {
 
     public static void SwitchWrappers(RealProxy oldcp, RealProxy newcp) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SwitchWrappers", oldcp == null ? null : oldcp.getJCOInstance(), newcp == null ? null : newcp.getJCOInstance());
         } catch (JCNativeException jcne) {

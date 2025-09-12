@@ -159,7 +159,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
     
     public void ArcTo(Point point, Size size, double rotationAngle, boolean isLargeArc, SweepDirection sweepDirection, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ArcTo", point == null ? null : point.getJCOInstance(), size == null ? null : size.getJCOInstance(), rotationAngle, isLargeArc, sweepDirection == null ? null : sweepDirection.getJCOInstance(), isStroked, isSmoothJoin);
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
 
     public void BeginFigure(Point startPoint, boolean isFilled, boolean isClosed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginFigure", startPoint == null ? null : startPoint.getJCOInstance(), isFilled, isClosed);
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
 
     public void BezierTo(Point point1, Point point2, Point point3, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BezierTo", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance(), point3 == null ? null : point3.getJCOInstance(), isStroked, isSmoothJoin);
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
 
     public void LineTo(Point point, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineTo", point == null ? null : point.getJCOInstance(), isStroked, isSmoothJoin);
         } catch (JCNativeException jcne) {
@@ -209,7 +209,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
 
     public void QuadraticBezierTo(Point point1, Point point2, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("QuadraticBezierTo", point1 == null ? null : point1.getJCOInstance(), point2 == null ? null : point2.getJCOInstance(), isStroked, isSmoothJoin);
         } catch (JCNativeException jcne) {
@@ -223,13 +223,13 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

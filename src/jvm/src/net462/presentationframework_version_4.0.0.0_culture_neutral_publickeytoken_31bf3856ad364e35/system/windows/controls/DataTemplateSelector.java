@@ -163,10 +163,14 @@ public class DataTemplateSelector extends NetObject  {
     
     public DataTemplate SelectTemplate(NetObject item, DependencyObject container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectTemplate = null;
         try {
-            JCObject objSelectTemplate = (JCObject)classInstance.Invoke("SelectTemplate", item == null ? null : item.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            retObjectSelectTemplate = classInstance.Invoke("SelectTemplate", item == null ? null : item.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            JCObject objSelectTemplate = (JCObject)retObjectSelectTemplate;
             return new DataTemplate(objSelectTemplate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectTemplate != null ? retObjectSelectTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

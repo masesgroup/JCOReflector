@@ -147,7 +147,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
     
     public void OnComponentChanged(NetObject component, MemberDescriptor member, NetObject oldValue, NetObject newValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanged", component == null ? null : component.getJCOInstance(), member == null ? null : member.getJCOInstance(), oldValue == null ? null : oldValue.getJCOInstance(), newValue == null ? null : newValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -157,7 +157,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void OnComponentChanging(NetObject component, MemberDescriptor member) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnComponentChanging", component == null ? null : component.getJCOInstance(), member == null ? null : member.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void addComponentChanged(ComponentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void removeComponentChanged(ComponentChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void addComponentChanging(ComponentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentChanging", handler);
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void removeComponentChanging(ComponentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentChanging", handler);
         } catch (JCNativeException jcne) {
@@ -216,7 +216,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void addComponentAdded(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentAdded", handler);
         } catch (JCNativeException jcne) {
@@ -226,7 +226,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void removeComponentAdded(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentAdded", handler);
         } catch (JCNativeException jcne) {
@@ -236,7 +236,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void addComponentAdding(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentAdding", handler);
         } catch (JCNativeException jcne) {
@@ -246,7 +246,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void removeComponentAdding(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentAdding", handler);
         } catch (JCNativeException jcne) {
@@ -256,7 +256,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void addComponentRemoved(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -266,7 +266,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void removeComponentRemoved(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentRemoved", handler);
         } catch (JCNativeException jcne) {
@@ -276,7 +276,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void addComponentRemoving(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentRemoving", handler);
         } catch (JCNativeException jcne) {
@@ -286,7 +286,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void removeComponentRemoving(ComponentEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentRemoving", handler);
         } catch (JCNativeException jcne) {
@@ -296,7 +296,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void addComponentRename(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentRename", handler);
         } catch (JCNativeException jcne) {
@@ -306,7 +306,7 @@ public class IComponentChangeServiceImplementation extends NetObject implements 
 
     public void removeComponentRename(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentRename", handler);
         } catch (JCNativeException jcne) {

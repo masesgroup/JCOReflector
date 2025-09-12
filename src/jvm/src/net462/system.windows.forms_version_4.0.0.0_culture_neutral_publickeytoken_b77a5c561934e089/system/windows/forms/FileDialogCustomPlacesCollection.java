@@ -162,7 +162,7 @@ public class FileDialogCustomPlacesCollection extends NetObjectEnumerable  {
     
     public void Add(Guid knownFolderGuid) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", knownFolderGuid == null ? null : knownFolderGuid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class FileDialogCustomPlacesCollection extends NetObjectEnumerable  {
 
     public void Add(java.lang.String path) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", path);
         } catch (JCNativeException jcne) {

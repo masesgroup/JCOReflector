@@ -161,9 +161,19 @@ public class Conversion extends NetObject  {
     
     public static double Fix(double Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFix = null;
         try {
-            return (double)classType.Invoke("Fix", Number);
+            retObjectFix = classType.Invoke("Fix", Number);
+            return (double)retObjectFix;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFixNumber = (java.lang.Number)retObjectFix;
+                return retObjectFixNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectFix != null ? retObjectFix.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +181,19 @@ public class Conversion extends NetObject  {
 
     public static double Int(double Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt = null;
         try {
-            return (double)classType.Invoke("Int", Number);
+            retObjectInt = classType.Invoke("Int", Number);
+            return (double)retObjectInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIntNumber = (java.lang.Number)retObjectInt;
+                return retObjectIntNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectInt != null ? retObjectInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +201,19 @@ public class Conversion extends NetObject  {
 
     public static double Val(NetObject Expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.InvalidCastException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVal = null;
         try {
-            return (double)classType.Invoke("Val", Expression == null ? null : Expression.getJCOInstance());
+            retObjectVal = classType.Invoke("Val", Expression == null ? null : Expression.getJCOInstance());
+            return (double)retObjectVal;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValNumber = (java.lang.Number)retObjectVal;
+                return retObjectValNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVal != null ? retObjectVal.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +221,19 @@ public class Conversion extends NetObject  {
 
     public static double Val(java.lang.String InputStr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVal = null;
         try {
-            return (double)classType.Invoke("Val", InputStr);
+            retObjectVal = classType.Invoke("Val", InputStr);
+            return (double)retObjectVal;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValNumber = (java.lang.Number)retObjectVal;
+                return retObjectValNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectVal != null ? retObjectVal.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +241,19 @@ public class Conversion extends NetObject  {
 
     public static short Fix(short Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFix = null;
         try {
-            return (short)classType.Invoke("Fix", Number);
+            retObjectFix = classType.Invoke("Fix", Number);
+            return (short)retObjectFix;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFixNumber = (java.lang.Number)retObjectFix;
+                return retObjectFixNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectFix != null ? retObjectFix.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +261,19 @@ public class Conversion extends NetObject  {
 
     public static short Int(short Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt = null;
         try {
-            return (short)classType.Invoke("Int", Number);
+            retObjectInt = classType.Invoke("Int", Number);
+            return (short)retObjectInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIntNumber = (java.lang.Number)retObjectInt;
+                return retObjectIntNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectInt != null ? retObjectInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +281,19 @@ public class Conversion extends NetObject  {
 
     public static int Fix(int Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFix = null;
         try {
-            return (int)classType.Invoke("Fix", Number);
+            retObjectFix = classType.Invoke("Fix", Number);
+            return (int)retObjectFix;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFixNumber = (java.lang.Number)retObjectFix;
+                return retObjectFixNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFix != null ? retObjectFix.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +301,19 @@ public class Conversion extends NetObject  {
 
     public static int Int(int Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt = null;
         try {
-            return (int)classType.Invoke("Int", Number);
+            retObjectInt = classType.Invoke("Int", Number);
+            return (int)retObjectInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIntNumber = (java.lang.Number)retObjectInt;
+                return retObjectIntNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectInt != null ? retObjectInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +321,19 @@ public class Conversion extends NetObject  {
 
     public static int Val(char Expression) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVal = null;
         try {
-            return (int)classType.Invoke("Val", Expression);
+            retObjectVal = classType.Invoke("Val", Expression);
+            return (int)retObjectVal;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectValNumber = (java.lang.Number)retObjectVal;
+                return retObjectValNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVal != null ? retObjectVal.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +341,19 @@ public class Conversion extends NetObject  {
 
     public static long Fix(long Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFix = null;
         try {
-            return (long)classType.Invoke("Fix", Number);
+            retObjectFix = classType.Invoke("Fix", Number);
+            return (long)retObjectFix;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFixNumber = (java.lang.Number)retObjectFix;
+                return retObjectFixNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectFix != null ? retObjectFix.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +361,19 @@ public class Conversion extends NetObject  {
 
     public static long Int(long Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt = null;
         try {
-            return (long)classType.Invoke("Int", Number);
+            retObjectInt = classType.Invoke("Int", Number);
+            return (long)retObjectInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIntNumber = (java.lang.Number)retObjectInt;
+                return retObjectIntNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectInt != null ? retObjectInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +381,14 @@ public class Conversion extends NetObject  {
 
     public static Single Fix(Single Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFix = null;
         try {
-            JCObject objFix = (JCObject)classType.Invoke("Fix", Number == null ? null : Number.getJCOInstance());
+            retObjectFix = classType.Invoke("Fix", Number == null ? null : Number.getJCOInstance());
+            JCObject objFix = (JCObject)retObjectFix;
             return new Single(objFix);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFix != null ? retObjectFix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +396,14 @@ public class Conversion extends NetObject  {
 
     public static Single Int(Single Number) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt = null;
         try {
-            JCObject objInt = (JCObject)classType.Invoke("Int", Number == null ? null : Number.getJCOInstance());
+            retObjectInt = classType.Invoke("Int", Number == null ? null : Number.getJCOInstance());
+            JCObject objInt = (JCObject)retObjectInt;
             return new Single(objInt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt != null ? retObjectInt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +411,14 @@ public class Conversion extends NetObject  {
 
     public static Decimal Fix(Decimal Number) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFix = null;
         try {
-            JCObject objFix = (JCObject)classType.Invoke("Fix", Number == null ? null : Number.getJCOInstance());
+            retObjectFix = classType.Invoke("Fix", Number == null ? null : Number.getJCOInstance());
+            JCObject objFix = (JCObject)retObjectFix;
             return new Decimal(objFix);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFix != null ? retObjectFix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +426,14 @@ public class Conversion extends NetObject  {
 
     public static Decimal Int(Decimal Number) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt = null;
         try {
-            JCObject objInt = (JCObject)classType.Invoke("Int", Number == null ? null : Number.getJCOInstance());
+            retObjectInt = classType.Invoke("Int", Number == null ? null : Number.getJCOInstance());
+            JCObject objInt = (JCObject)retObjectInt;
             return new Decimal(objInt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt != null ? retObjectInt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +441,14 @@ public class Conversion extends NetObject  {
 
     public static NetObject CTypeDynamic(NetObject Expression, NetType TargetType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.NullReferenceException, system.MissingMemberException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCTypeDynamic = null;
         try {
-            JCObject objCTypeDynamic = (JCObject)classType.Invoke("CTypeDynamic", Expression == null ? null : Expression.getJCOInstance(), TargetType == null ? null : TargetType.getJCOInstance());
+            retObjectCTypeDynamic = classType.Invoke("CTypeDynamic", Expression == null ? null : Expression.getJCOInstance(), TargetType == null ? null : TargetType.getJCOInstance());
+            JCObject objCTypeDynamic = (JCObject)retObjectCTypeDynamic;
             return new NetObject(objCTypeDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCTypeDynamic != null ? retObjectCTypeDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +456,14 @@ public class Conversion extends NetObject  {
 
     public static NetObject Fix(NetObject Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFix = null;
         try {
-            JCObject objFix = (JCObject)classType.Invoke("Fix", Number == null ? null : Number.getJCOInstance());
+            retObjectFix = classType.Invoke("Fix", Number == null ? null : Number.getJCOInstance());
+            JCObject objFix = (JCObject)retObjectFix;
             return new NetObject(objFix);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFix != null ? retObjectFix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +471,14 @@ public class Conversion extends NetObject  {
 
     public static NetObject Int(NetObject Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt = null;
         try {
-            JCObject objInt = (JCObject)classType.Invoke("Int", Number == null ? null : Number.getJCOInstance());
+            retObjectInt = classType.Invoke("Int", Number == null ? null : Number.getJCOInstance());
+            JCObject objInt = (JCObject)retObjectInt;
             return new NetObject(objInt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt != null ? retObjectInt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +486,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String ErrorToString() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectErrorToString = null;
         try {
-            return (java.lang.String)classType.Invoke("ErrorToString");
+            retObjectErrorToString = classType.Invoke("ErrorToString");
+            return (java.lang.String)retObjectErrorToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectErrorToString != null ? retObjectErrorToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +500,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String ErrorToString(int ErrorNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectErrorToString = null;
         try {
-            return (java.lang.String)classType.Invoke("ErrorToString", ErrorNumber);
+            retObjectErrorToString = classType.Invoke("ErrorToString", ErrorNumber);
+            return (java.lang.String)retObjectErrorToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectErrorToString != null ? retObjectErrorToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +514,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(byte Number) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number);
+            retObjectHex = classType.Invoke("Hex", Number);
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,9 +528,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(short Number) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number);
+            retObjectHex = classType.Invoke("Hex", Number);
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,9 +542,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(int Number) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number);
+            retObjectHex = classType.Invoke("Hex", Number);
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,9 +556,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(long Number) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number);
+            retObjectHex = classType.Invoke("Hex", Number);
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,9 +570,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(SByte Number) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            retObjectHex = classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,9 +584,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(NetObject Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            retObjectHex = classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,9 +598,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(UInt16 Number) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            retObjectHex = classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,9 +612,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(UInt32 Number) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            retObjectHex = classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,9 +626,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Hex(UInt64 Number) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHex = null;
         try {
-            return (java.lang.String)classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            retObjectHex = classType.Invoke("Hex", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectHex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHex != null ? retObjectHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,9 +640,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(byte Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number);
+            retObjectOct = classType.Invoke("Oct", Number);
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,9 +654,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(short Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number);
+            retObjectOct = classType.Invoke("Oct", Number);
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,9 +668,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(int Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number);
+            retObjectOct = classType.Invoke("Oct", Number);
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,9 +682,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(long Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number);
+            retObjectOct = classType.Invoke("Oct", Number);
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,9 +696,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(SByte Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            retObjectOct = classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,9 +710,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(NetObject Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.OverflowException, system.FormatException, system.InvalidCastException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            retObjectOct = classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,9 +724,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(UInt16 Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            retObjectOct = classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,9 +738,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(UInt32 Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            retObjectOct = classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,9 +752,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Oct(UInt64 Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOct = null;
         try {
-            return (java.lang.String)classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            retObjectOct = classType.Invoke("Oct", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectOct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOct != null ? retObjectOct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,9 +766,13 @@ public class Conversion extends NetObject  {
 
     public static java.lang.String Str(NetObject Number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidCastException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStr = null;
         try {
-            return (java.lang.String)classType.Invoke("Str", Number == null ? null : Number.getJCOInstance());
+            retObjectStr = classType.Invoke("Str", Number == null ? null : Number.getJCOInstance());
+            return (java.lang.String)retObjectStr;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectStr != null ? retObjectStr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

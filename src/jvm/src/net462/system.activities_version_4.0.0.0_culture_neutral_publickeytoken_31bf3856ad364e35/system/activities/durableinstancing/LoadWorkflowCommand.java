@@ -166,9 +166,13 @@ public class LoadWorkflowCommand extends InstancePersistenceCommand  {
     
     public boolean getAcceptUninitializedInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptUninitializedInstance = null;
         try {
-            return (boolean)classInstance.Get("AcceptUninitializedInstance");
+            retObjectAcceptUninitializedInstance = classInstance.Get("AcceptUninitializedInstance");
+            return (boolean)retObjectAcceptUninitializedInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptUninitializedInstance != null ? retObjectAcceptUninitializedInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class LoadWorkflowCommand extends InstancePersistenceCommand  {
 
     public void setAcceptUninitializedInstance(boolean AcceptUninitializedInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptUninitializedInstance", AcceptUninitializedInstance);
         } catch (JCNativeException jcne) {

@@ -226,9 +226,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
     
     public static boolean CheckSchemeName(java.lang.String schemeName) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckSchemeName = null;
         try {
-            return (boolean)classType.Invoke("CheckSchemeName", schemeName);
+            retObjectCheckSchemeName = classType.Invoke("CheckSchemeName", schemeName);
+            return (boolean)retObjectCheckSchemeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckSchemeName != null ? retObjectCheckSchemeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +240,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public boolean IsBaseOf(Uri uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBaseOf = null;
         try {
-            return (boolean)classInstance.Invoke("IsBaseOf", uri == null ? null : uri.getJCOInstance());
+            retObjectIsBaseOf = classInstance.Invoke("IsBaseOf", uri == null ? null : uri.getJCOInstance());
+            return (boolean)retObjectIsBaseOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBaseOf != null ? retObjectIsBaseOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +254,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static boolean IsHexDigit(char character) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsHexDigit = null;
         try {
-            return (boolean)classType.Invoke("IsHexDigit", character);
+            retObjectIsHexDigit = classType.Invoke("IsHexDigit", character);
+            return (boolean)retObjectIsHexDigit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsHexDigit != null ? retObjectIsHexDigit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +268,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static boolean IsHexEncoding(java.lang.String pattern, int index) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsHexEncoding = null;
         try {
-            return (boolean)classType.Invoke("IsHexEncoding", pattern, index);
+            retObjectIsHexEncoding = classType.Invoke("IsHexEncoding", pattern, index);
+            return (boolean)retObjectIsHexEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsHexEncoding != null ? retObjectIsHexEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +282,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public boolean IsWellFormedOriginalString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWellFormedOriginalString = null;
         try {
-            return (boolean)classInstance.Invoke("IsWellFormedOriginalString");
+            retObjectIsWellFormedOriginalString = classInstance.Invoke("IsWellFormedOriginalString");
+            return (boolean)retObjectIsWellFormedOriginalString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWellFormedOriginalString != null ? retObjectIsWellFormedOriginalString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +296,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static boolean IsWellFormedUriString(java.lang.String uriString, UriKind uriKind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWellFormedUriString = null;
         try {
-            return (boolean)classType.Invoke("IsWellFormedUriString", uriString, uriKind == null ? null : uriKind.getJCOInstance());
+            retObjectIsWellFormedUriString = classType.Invoke("IsWellFormedUriString", uriString, uriKind == null ? null : uriKind.getJCOInstance());
+            return (boolean)retObjectIsWellFormedUriString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWellFormedUriString != null ? retObjectIsWellFormedUriString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +310,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static boolean TryCreate(java.lang.String uriString, UriKind uriKind, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.MemberAccessException, system.io.PathTooLongException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", uriString, uriKind == null ? null : uriKind.getJCOInstance(), result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", uriString, uriKind == null ? null : uriKind.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +324,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static boolean TryCreate(Uri baseUri, java.lang.String relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri, result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri, result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +338,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static boolean TryCreate(Uri baseUri, Uri relativeUri, JCORefOut<Uri> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri == null ? null : relativeUri.getJCOInstance(), result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", baseUri == null ? null : baseUri.getJCOInstance(), relativeUri == null ? null : relativeUri.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,9 +352,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static char HexUnescape(java.lang.String pattern, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHexUnescape = null;
         try {
-            return (char)classType.Invoke("HexUnescape", pattern, index.getJCRefOut());
+            retObjectHexUnescape = classType.Invoke("HexUnescape", pattern, index.getJCRefOut());
+            return (char)retObjectHexUnescape;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectHexUnescape != null ? retObjectHexUnescape.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +366,19 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static int Compare(Uri uri1, Uri uri2, UriComponents partsToCompare, UriFormat compareFormat, StringComparison comparisonType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompare = null;
         try {
-            return (int)classType.Invoke("Compare", uri1 == null ? null : uri1.getJCOInstance(), uri2 == null ? null : uri2.getJCOInstance(), partsToCompare == null ? null : partsToCompare.getJCOInstance(), compareFormat == null ? null : compareFormat.getJCOInstance(), comparisonType == null ? null : comparisonType.getJCOInstance());
+            retObjectCompare = classType.Invoke("Compare", uri1 == null ? null : uri1.getJCOInstance(), uri2 == null ? null : uri2.getJCOInstance(), partsToCompare == null ? null : partsToCompare.getJCOInstance(), compareFormat == null ? null : compareFormat.getJCOInstance(), comparisonType == null ? null : comparisonType.getJCOInstance());
+            return (int)retObjectCompare;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareNumber = (java.lang.Number)retObjectCompare;
+                return retObjectCompareNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompare != null ? retObjectCompare.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,9 +386,19 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static int FromHex(char digit) throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHex = null;
         try {
-            return (int)classType.Invoke("FromHex", digit);
+            retObjectFromHex = classType.Invoke("FromHex", digit);
+            return (int)retObjectFromHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFromHexNumber = (java.lang.Number)retObjectFromHex;
+                return retObjectFromHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFromHex != null ? retObjectFromHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,9 +406,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static java.lang.String EscapeDataString(java.lang.String stringToEscape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEscapeDataString = null;
         try {
-            return (java.lang.String)classType.Invoke("EscapeDataString", stringToEscape);
+            retObjectEscapeDataString = classType.Invoke("EscapeDataString", stringToEscape);
+            return (java.lang.String)retObjectEscapeDataString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEscapeDataString != null ? retObjectEscapeDataString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +420,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static java.lang.String EscapeUriString(java.lang.String stringToEscape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEscapeUriString = null;
         try {
-            return (java.lang.String)classType.Invoke("EscapeUriString", stringToEscape);
+            retObjectEscapeUriString = classType.Invoke("EscapeUriString", stringToEscape);
+            return (java.lang.String)retObjectEscapeUriString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEscapeUriString != null ? retObjectEscapeUriString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +434,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String GetComponents(UriComponents components, UriFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComponents = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetComponents", components == null ? null : components.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            retObjectGetComponents = classInstance.Invoke("GetComponents", components == null ? null : components.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            return (java.lang.String)retObjectGetComponents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetComponents != null ? retObjectGetComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +448,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String GetLeftPart(UriPartial part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLeftPart = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLeftPart", part == null ? null : part.getJCOInstance());
+            retObjectGetLeftPart = classInstance.Invoke("GetLeftPart", part == null ? null : part.getJCOInstance());
+            return (java.lang.String)retObjectGetLeftPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLeftPart != null ? retObjectGetLeftPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +462,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static java.lang.String HexEscape(char character) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHexEscape = null;
         try {
-            return (java.lang.String)classType.Invoke("HexEscape", character);
+            retObjectHexEscape = classType.Invoke("HexEscape", character);
+            return (java.lang.String)retObjectHexEscape;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHexEscape != null ? retObjectHexEscape.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,9 +476,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String MakeRelative(Uri toUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeRelative = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MakeRelative", toUri == null ? null : toUri.getJCOInstance());
+            retObjectMakeRelative = classInstance.Invoke("MakeRelative", toUri == null ? null : toUri.getJCOInstance());
+            return (java.lang.String)retObjectMakeRelative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeRelative != null ? retObjectMakeRelative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,9 +490,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static java.lang.String UnescapeDataString(java.lang.String stringToUnescape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnescapeDataString = null;
         try {
-            return (java.lang.String)classType.Invoke("UnescapeDataString", stringToUnescape);
+            retObjectUnescapeDataString = classType.Invoke("UnescapeDataString", stringToUnescape);
+            return (java.lang.String)retObjectUnescapeDataString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUnescapeDataString != null ? retObjectUnescapeDataString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +504,14 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public Uri MakeRelativeUri(Uri uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeRelativeUri = null;
         try {
-            JCObject objMakeRelativeUri = (JCObject)classInstance.Invoke("MakeRelativeUri", uri == null ? null : uri.getJCOInstance());
+            retObjectMakeRelativeUri = classInstance.Invoke("MakeRelativeUri", uri == null ? null : uri.getJCOInstance());
+            JCObject objMakeRelativeUri = (JCObject)retObjectMakeRelativeUri;
             return new Uri(objMakeRelativeUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeRelativeUri != null ? retObjectMakeRelativeUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +519,14 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public static UriHostNameType CheckHostName(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckHostName = null;
         try {
-            JCObject objCheckHostName = (JCObject)classType.Invoke("CheckHostName", name);
+            retObjectCheckHostName = classType.Invoke("CheckHostName", name);
+            JCObject objCheckHostName = (JCObject)retObjectCheckHostName;
             return new UriHostNameType(objCheckHostName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckHostName != null ? retObjectCheckHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +538,7 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -451,9 +547,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
     
     public boolean getIsAbsoluteUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAbsoluteUri = null;
         try {
-            return (boolean)classInstance.Get("IsAbsoluteUri");
+            retObjectIsAbsoluteUri = classInstance.Get("IsAbsoluteUri");
+            return (boolean)retObjectIsAbsoluteUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAbsoluteUri != null ? retObjectIsAbsoluteUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,9 +561,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public boolean getIsDefaultPort() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultPort = null;
         try {
-            return (boolean)classInstance.Get("IsDefaultPort");
+            retObjectIsDefaultPort = classInstance.Get("IsDefaultPort");
+            return (boolean)retObjectIsDefaultPort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefaultPort != null ? retObjectIsDefaultPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,9 +575,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public boolean getIsFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFile = null;
         try {
-            return (boolean)classInstance.Get("IsFile");
+            retObjectIsFile = classInstance.Get("IsFile");
+            return (boolean)retObjectIsFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFile != null ? retObjectIsFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,9 +589,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public boolean getIsLoopback() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoopback = null;
         try {
-            return (boolean)classInstance.Get("IsLoopback");
+            retObjectIsLoopback = classInstance.Get("IsLoopback");
+            return (boolean)retObjectIsLoopback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoopback != null ? retObjectIsLoopback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,9 +603,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public boolean getIsUnc() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUnc = null;
         try {
-            return (boolean)classInstance.Get("IsUnc");
+            retObjectIsUnc = classInstance.Get("IsUnc");
+            return (boolean)retObjectIsUnc;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsUnc != null ? retObjectIsUnc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,9 +617,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public boolean getUserEscaped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserEscaped = null;
         try {
-            return (boolean)classInstance.Get("UserEscaped");
+            retObjectUserEscaped = classInstance.Get("UserEscaped");
+            return (boolean)retObjectUserEscaped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserEscaped != null ? retObjectUserEscaped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,9 +631,19 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public int getPort() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            return (int)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            return (int)retObjectPort;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectPortNumber = (java.lang.Number)retObjectPort;
+                return retObjectPortNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,9 +651,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getAbsolutePath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbsolutePath = null;
         try {
-            return (java.lang.String)classInstance.Get("AbsolutePath");
+            retObjectAbsolutePath = classInstance.Get("AbsolutePath");
+            return (java.lang.String)retObjectAbsolutePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAbsolutePath != null ? retObjectAbsolutePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,9 +665,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getAbsoluteUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbsoluteUri = null;
         try {
-            return (java.lang.String)classInstance.Get("AbsoluteUri");
+            retObjectAbsoluteUri = classInstance.Get("AbsoluteUri");
+            return (java.lang.String)retObjectAbsoluteUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAbsoluteUri != null ? retObjectAbsoluteUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,9 +679,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getAuthority() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthority = null;
         try {
-            return (java.lang.String)classInstance.Get("Authority");
+            retObjectAuthority = classInstance.Get("Authority");
+            return (java.lang.String)retObjectAuthority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthority != null ? retObjectAuthority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,9 +693,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getDnsSafeHost() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsSafeHost = null;
         try {
-            return (java.lang.String)classInstance.Get("DnsSafeHost");
+            retObjectDnsSafeHost = classInstance.Get("DnsSafeHost");
+            return (java.lang.String)retObjectDnsSafeHost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDnsSafeHost != null ? retObjectDnsSafeHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,9 +707,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getFragment() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragment = null;
         try {
-            return (java.lang.String)classInstance.Get("Fragment");
+            retObjectFragment = classInstance.Get("Fragment");
+            return (java.lang.String)retObjectFragment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFragment != null ? retObjectFragment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,9 +721,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getHost() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHost = null;
         try {
-            return (java.lang.String)classInstance.Get("Host");
+            retObjectHost = classInstance.Get("Host");
+            return (java.lang.String)retObjectHost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHost != null ? retObjectHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,9 +735,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getIdnHost() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdnHost = null;
         try {
-            return (java.lang.String)classInstance.Get("IdnHost");
+            retObjectIdnHost = classInstance.Get("IdnHost");
+            return (java.lang.String)retObjectIdnHost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIdnHost != null ? retObjectIdnHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,9 +749,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getLocalPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalPath = null;
         try {
-            return (java.lang.String)classInstance.Get("LocalPath");
+            retObjectLocalPath = classInstance.Get("LocalPath");
+            return (java.lang.String)retObjectLocalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalPath != null ? retObjectLocalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,9 +763,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getOriginalString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalString = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalString");
+            retObjectOriginalString = classInstance.Get("OriginalString");
+            return (java.lang.String)retObjectOriginalString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalString != null ? retObjectOriginalString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -611,9 +777,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getPathAndQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathAndQuery = null;
         try {
-            return (java.lang.String)classInstance.Get("PathAndQuery");
+            retObjectPathAndQuery = classInstance.Get("PathAndQuery");
+            return (java.lang.String)retObjectPathAndQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathAndQuery != null ? retObjectPathAndQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,9 +791,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuery = null;
         try {
-            return (java.lang.String)classInstance.Get("Query");
+            retObjectQuery = classInstance.Get("Query");
+            return (java.lang.String)retObjectQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuery != null ? retObjectQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,9 +805,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getScheme() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheme = null;
         try {
-            return (java.lang.String)classInstance.Get("Scheme");
+            retObjectScheme = classInstance.Get("Scheme");
+            return (java.lang.String)retObjectScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScheme != null ? retObjectScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,9 +819,13 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String getUserInfo() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserInfo = null;
         try {
-            return (java.lang.String)classInstance.Get("UserInfo");
+            retObjectUserInfo = classInstance.Get("UserInfo");
+            return (java.lang.String)retObjectUserInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserInfo != null ? retObjectUserInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,10 +833,12 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public java.lang.String[] getSegments() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSegments = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Segments");
+            retObjectSegments = classInstance.Get("Segments");
+            JCObject resultingObjects = (JCObject)retObjectSegments;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -663,6 +847,8 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 				resultingArray[indexSegments] = (java.lang.String)resultingArrayList.get(indexSegments);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSegments != null ? retObjectSegments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -670,10 +856,14 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
 
     public UriHostNameType getHostNameType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.UriFormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostNameType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostNameType");
+            retObjectHostNameType = classInstance.Get("HostNameType");
+            JCObject val = (JCObject)retObjectHostNameType;
             return new UriHostNameType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostNameType != null ? retObjectHostNameType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

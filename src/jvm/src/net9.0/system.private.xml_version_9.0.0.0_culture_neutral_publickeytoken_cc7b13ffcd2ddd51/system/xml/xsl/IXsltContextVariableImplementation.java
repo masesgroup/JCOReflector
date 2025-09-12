@@ -144,10 +144,14 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
     
     public NetObject Evaluate(XsltContext xsltContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate", xsltContext == null ? null : xsltContext.getJCOInstance());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", xsltContext == null ? null : xsltContext.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new NetObject(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,9 +163,13 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
     
     public boolean getIsLocal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocal = null;
         try {
-            return (boolean)classInstance.Get("IsLocal");
+            retObjectIsLocal = classInstance.Get("IsLocal");
+            return (boolean)retObjectIsLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLocal != null ? retObjectIsLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +177,13 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
 
     public boolean getIsParam() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsParam = null;
         try {
-            return (boolean)classInstance.Get("IsParam");
+            retObjectIsParam = classInstance.Get("IsParam");
+            return (boolean)retObjectIsParam;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsParam != null ? retObjectIsParam.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +191,14 @@ public class IXsltContextVariableImplementation extends NetObject implements IXs
 
     public XPathResultType getVariableType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariableType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VariableType");
+            retObjectVariableType = classInstance.Get("VariableType");
+            JCObject val = (JCObject)retObjectVariableType;
             return new XPathResultType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariableType != null ? retObjectVariableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

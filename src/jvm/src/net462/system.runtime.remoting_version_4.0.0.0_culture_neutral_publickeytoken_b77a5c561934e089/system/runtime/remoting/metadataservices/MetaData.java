@@ -164,7 +164,7 @@ public class MetaData extends NetObject  {
     
     public static void ConvertCodeSourceFileToAssemblyFile(java.lang.String codePath, java.lang.String assemblyPath, java.lang.String strongNameFilename) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.remoting.RemotingException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertCodeSourceFileToAssemblyFile", codePath, assemblyPath, strongNameFilename);
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertCodeSourceStreamToAssemblyFile(NetArrayList outCodeStreamList, java.lang.String assemblyPath, java.lang.String strongNameFilename) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.FormatException, system.TypeInitializationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertCodeSourceStreamToAssemblyFile", outCodeStreamList == null ? null : outCodeStreamList.getJCOInstance(), assemblyPath, strongNameFilename);
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertSchemaStreamToCodeSourceStream(boolean clientProxy, java.lang.String outputDirectory, Stream inputStream, NetArrayList outCodeStreamList) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.NotImplementedException, system.runtime.remoting.metadataservices.SUDSParserException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertSchemaStreamToCodeSourceStream", clientProxy, outputDirectory, inputStream == null ? null : inputStream.getJCOInstance(), outCodeStreamList == null ? null : outCodeStreamList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertSchemaStreamToCodeSourceStream(boolean clientProxy, java.lang.String outputDirectory, Stream inputStream, NetArrayList outCodeStreamList, java.lang.String proxyUrl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.NotImplementedException, system.runtime.remoting.metadataservices.SUDSParserException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertSchemaStreamToCodeSourceStream", clientProxy, outputDirectory, inputStream == null ? null : inputStream.getJCOInstance(), outCodeStreamList == null ? null : outCodeStreamList.getJCOInstance(), proxyUrl);
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertSchemaStreamToCodeSourceStream(boolean clientProxy, java.lang.String outputDirectory, Stream inputStream, NetArrayList outCodeStreamList, java.lang.String proxyUrl, java.lang.String proxyNamespace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.runtime.remoting.metadataservices.SUDSParserException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertSchemaStreamToCodeSourceStream", clientProxy, outputDirectory, inputStream == null ? null : inputStream.getJCOInstance(), outCodeStreamList == null ? null : outCodeStreamList.getJCOInstance(), proxyUrl, proxyNamespace);
         } catch (JCNativeException jcne) {
@@ -214,7 +214,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertTypesToSchemaToFile(ServiceType[] types, SdlType sdlType, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertTypesToSchemaToFile", toObjectFromArray(types), sdlType == null ? null : sdlType.getJCOInstance(), path);
         } catch (JCNativeException jcne) {
@@ -224,7 +224,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertTypesToSchemaToFile(NetType[] types, SdlType sdlType, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertTypesToSchemaToFile", toObjectFromArray(types), sdlType == null ? null : sdlType.getJCOInstance(), path);
         } catch (JCNativeException jcne) {
@@ -234,7 +234,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertTypesToSchemaToStream(ServiceType[] serviceTypes, SdlType sdlType, Stream outputStream) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertTypesToSchemaToStream", toObjectFromArray(serviceTypes), sdlType == null ? null : sdlType.getJCOInstance(), outputStream == null ? null : outputStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,7 +244,7 @@ public class MetaData extends NetObject  {
 
     public static void ConvertTypesToSchemaToStream(NetType[] types, SdlType sdlType, Stream outputStream) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertTypesToSchemaToStream", toObjectFromArray(types), sdlType == null ? null : sdlType.getJCOInstance(), outputStream == null ? null : outputStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,7 +254,7 @@ public class MetaData extends NetObject  {
 
     public static void RetrieveSchemaFromUrlToFile(java.lang.String url, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RetrieveSchemaFromUrlToFile", url, path);
         } catch (JCNativeException jcne) {
@@ -264,7 +264,7 @@ public class MetaData extends NetObject  {
 
     public static void RetrieveSchemaFromUrlToStream(java.lang.String url, Stream outputStream) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RetrieveSchemaFromUrlToStream", url, outputStream == null ? null : outputStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,7 +274,7 @@ public class MetaData extends NetObject  {
 
     public static void SaveStreamToFile(Stream inputStream, java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SaveStreamToFile", inputStream == null ? null : inputStream.getJCOInstance(), path);
         } catch (JCNativeException jcne) {

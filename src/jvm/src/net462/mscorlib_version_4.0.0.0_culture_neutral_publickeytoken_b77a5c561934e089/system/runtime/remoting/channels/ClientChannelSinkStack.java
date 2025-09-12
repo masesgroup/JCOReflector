@@ -180,10 +180,14 @@ public class ClientChannelSinkStack extends NetObject  {
     
     public NetObject Pop(IClientChannelSink sink) throws Throwable, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPop = null;
         try {
-            JCObject objPop = (JCObject)classInstance.Invoke("Pop", sink == null ? null : sink.getJCOInstance());
+            retObjectPop = classInstance.Invoke("Pop", sink == null ? null : sink.getJCOInstance());
+            JCObject objPop = (JCObject)retObjectPop;
             return new NetObject(objPop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPop != null ? retObjectPop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class ClientChannelSinkStack extends NetObject  {
 
     public void AsyncProcessResponse(ITransportHeaders headers, Stream stream) throws Throwable, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AsyncProcessResponse", headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +205,7 @@ public class ClientChannelSinkStack extends NetObject  {
 
     public void DispatchException(NetException e) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DispatchException", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +215,7 @@ public class ClientChannelSinkStack extends NetObject  {
 
     public void DispatchReplyMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DispatchReplyMessage", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +225,7 @@ public class ClientChannelSinkStack extends NetObject  {
 
     public void Push(IClientChannelSink sink, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Push", sink == null ? null : sink.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {

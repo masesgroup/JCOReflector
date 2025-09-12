@@ -148,7 +148,7 @@ public class IXmlBinaryReaderInitializerImplementation extends NetObject impleme
     
     public void SetInput(byte[] buffer, int offset, int count, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance(), onClose);
         } catch (JCNativeException jcne) {
@@ -158,7 +158,7 @@ public class IXmlBinaryReaderInitializerImplementation extends NetObject impleme
 
     public void SetInput(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
         } catch (JCNativeException jcne) {
@@ -168,7 +168,7 @@ public class IXmlBinaryReaderInitializerImplementation extends NetObject impleme
 
     public void SetInput(Stream stream, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInput", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance(), onClose);
         } catch (JCNativeException jcne) {

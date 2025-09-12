@@ -171,10 +171,14 @@ public class MergeFailedEventArgs extends EventArgs  {
     
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Table");
+            retObjectTable = classInstance.Get("Table");
+            JCObject val = (JCObject)retObjectTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTable != null ? retObjectTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class MergeFailedEventArgs extends EventArgs  {
 
     public java.lang.String getConflict() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConflict = null;
         try {
-            return (java.lang.String)classInstance.Get("Conflict");
+            retObjectConflict = classInstance.Get("Conflict");
+            return (java.lang.String)retObjectConflict;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConflict != null ? retObjectConflict.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

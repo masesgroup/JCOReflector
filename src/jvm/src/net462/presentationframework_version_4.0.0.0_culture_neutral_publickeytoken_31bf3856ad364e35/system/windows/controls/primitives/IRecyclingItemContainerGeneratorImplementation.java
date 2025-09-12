@@ -151,9 +151,19 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
     
     public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexFromGeneratorPosition = null;
         try {
-            return (int)classInstance.Invoke("IndexFromGeneratorPosition", position == null ? null : position.getJCOInstance());
+            retObjectIndexFromGeneratorPosition = classInstance.Invoke("IndexFromGeneratorPosition", position == null ? null : position.getJCOInstance());
+            return (int)retObjectIndexFromGeneratorPosition;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexFromGeneratorPositionNumber = (java.lang.Number)retObjectIndexFromGeneratorPosition;
+                return retObjectIndexFromGeneratorPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexFromGeneratorPosition != null ? retObjectIndexFromGeneratorPosition.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,10 +171,14 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartAt = null;
         try {
-            JCObject objStartAt = (JCObject)classInstance.Invoke("StartAt", position == null ? null : position.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            retObjectStartAt = classInstance.Invoke("StartAt", position == null ? null : position.getJCOInstance(), direction == null ? null : direction.getJCOInstance());
+            JCObject objStartAt = (JCObject)retObjectStartAt;
             return new IDisposableImplementation(objStartAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartAt != null ? retObjectStartAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +186,14 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction, boolean allowStartAtRealizedItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartAt = null;
         try {
-            JCObject objStartAt = (JCObject)classInstance.Invoke("StartAt", position == null ? null : position.getJCOInstance(), direction == null ? null : direction.getJCOInstance(), allowStartAtRealizedItem);
+            retObjectStartAt = classInstance.Invoke("StartAt", position == null ? null : position.getJCOInstance(), direction == null ? null : direction.getJCOInstance(), allowStartAtRealizedItem);
+            JCObject objStartAt = (JCObject)retObjectStartAt;
             return new IDisposableImplementation(objStartAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartAt != null ? retObjectStartAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +201,14 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemContainerGeneratorForPanel = null;
         try {
-            JCObject objGetItemContainerGeneratorForPanel = (JCObject)classInstance.Invoke("GetItemContainerGeneratorForPanel", panel == null ? null : panel.getJCOInstance());
+            retObjectGetItemContainerGeneratorForPanel = classInstance.Invoke("GetItemContainerGeneratorForPanel", panel == null ? null : panel.getJCOInstance());
+            JCObject objGetItemContainerGeneratorForPanel = (JCObject)retObjectGetItemContainerGeneratorForPanel;
             return new ItemContainerGenerator(objGetItemContainerGeneratorForPanel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemContainerGeneratorForPanel != null ? retObjectGetItemContainerGeneratorForPanel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +216,14 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratorPositionFromIndex = null;
         try {
-            JCObject objGeneratorPositionFromIndex = (JCObject)classInstance.Invoke("GeneratorPositionFromIndex", itemIndex);
+            retObjectGeneratorPositionFromIndex = classInstance.Invoke("GeneratorPositionFromIndex", itemIndex);
+            JCObject objGeneratorPositionFromIndex = (JCObject)retObjectGeneratorPositionFromIndex;
             return new GeneratorPosition(objGeneratorPositionFromIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeneratorPositionFromIndex != null ? retObjectGeneratorPositionFromIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +231,14 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public DependencyObject GenerateNext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateNext = null;
         try {
-            JCObject objGenerateNext = (JCObject)classInstance.Invoke("GenerateNext");
+            retObjectGenerateNext = classInstance.Invoke("GenerateNext");
+            JCObject objGenerateNext = (JCObject)retObjectGenerateNext;
             return new DependencyObject(objGenerateNext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateNext != null ? retObjectGenerateNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +246,14 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateNext = null;
         try {
-            JCObject objGenerateNext = (JCObject)classInstance.Invoke("GenerateNext", isNewlyRealized.getJCRefOut());
+            retObjectGenerateNext = classInstance.Invoke("GenerateNext", isNewlyRealized.getJCRefOut());
+            JCObject objGenerateNext = (JCObject)retObjectGenerateNext;
             return new DependencyObject(objGenerateNext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateNext != null ? retObjectGenerateNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +261,7 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public void PrepareItemContainer(DependencyObject container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrepareItemContainer", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,7 +271,7 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public void Recycle(GeneratorPosition position, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Recycle", position == null ? null : position.getJCOInstance(), count);
         } catch (JCNativeException jcne) {
@@ -247,7 +281,7 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public void Remove(GeneratorPosition position, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", position == null ? null : position.getJCOInstance(), count);
         } catch (JCNativeException jcne) {
@@ -257,7 +291,7 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
 
     public void RemoveAll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll");
         } catch (JCNativeException jcne) {

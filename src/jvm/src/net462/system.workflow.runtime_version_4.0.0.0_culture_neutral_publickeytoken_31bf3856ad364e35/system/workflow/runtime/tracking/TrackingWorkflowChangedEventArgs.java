@@ -161,10 +161,14 @@ public class TrackingWorkflowChangedEventArgs extends EventArgs  {
     
     public Activity getDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Definition");
+            retObjectDefinition = classInstance.Get("Definition");
+            JCObject val = (JCObject)retObjectDefinition;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefinition != null ? retObjectDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

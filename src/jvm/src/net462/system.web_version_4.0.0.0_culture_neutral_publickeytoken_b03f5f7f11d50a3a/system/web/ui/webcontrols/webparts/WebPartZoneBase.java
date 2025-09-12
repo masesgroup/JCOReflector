@@ -170,10 +170,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
     
     public PartChromeType GetEffectiveChromeType(Part part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEffectiveChromeType = null;
         try {
-            JCObject objGetEffectiveChromeType = (JCObject)classInstance.Invoke("GetEffectiveChromeType", part == null ? null : part.getJCOInstance());
+            retObjectGetEffectiveChromeType = classInstance.Invoke("GetEffectiveChromeType", part == null ? null : part.getJCOInstance());
+            JCObject objGetEffectiveChromeType = (JCObject)retObjectGetEffectiveChromeType;
             return new PartChromeType(objGetEffectiveChromeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEffectiveChromeType != null ? retObjectGetEffectiveChromeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 
@@ -194,9 +198,13 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
     
     public boolean getAllowLayoutChange() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowLayoutChange = null;
         try {
-            return (boolean)classInstance.Get("AllowLayoutChange");
+            retObjectAllowLayoutChange = classInstance.Get("AllowLayoutChange");
+            return (boolean)retObjectAllowLayoutChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowLayoutChange != null ? retObjectAllowLayoutChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setAllowLayoutChange(boolean AllowLayoutChange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowLayoutChange", AllowLayoutChange);
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public boolean getShowTitleIcons() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowTitleIcons = null;
         try {
-            return (boolean)classInstance.Get("ShowTitleIcons");
+            retObjectShowTitleIcons = classInstance.Get("ShowTitleIcons");
+            return (boolean)retObjectShowTitleIcons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowTitleIcons != null ? retObjectShowTitleIcons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setShowTitleIcons(boolean ShowTitleIcons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowTitleIcons", ShowTitleIcons);
         } catch (JCNativeException jcne) {
@@ -234,10 +246,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Color getDragHighlightColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDragHighlightColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DragHighlightColor");
+            retObjectDragHighlightColor = classInstance.Get("DragHighlightColor");
+            JCObject val = (JCObject)retObjectDragHighlightColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDragHighlightColor != null ? retObjectDragHighlightColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setDragHighlightColor(Color DragHighlightColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DragHighlightColor", DragHighlightColor == null ? null : DragHighlightColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,9 +271,13 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public java.lang.String getDisplayTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayTitle");
+            retObjectDisplayTitle = classInstance.Get("DisplayTitle");
+            return (java.lang.String)retObjectDisplayTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayTitle != null ? retObjectDisplayTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +285,13 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public java.lang.String getMenuCheckImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuCheckImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("MenuCheckImageUrl");
+            retObjectMenuCheckImageUrl = classInstance.Get("MenuCheckImageUrl");
+            return (java.lang.String)retObjectMenuCheckImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMenuCheckImageUrl != null ? retObjectMenuCheckImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setMenuCheckImageUrl(java.lang.String MenuCheckImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MenuCheckImageUrl", MenuCheckImageUrl);
         } catch (JCNativeException jcne) {
@@ -285,9 +309,13 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public java.lang.String getMenuLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("MenuLabelText");
+            retObjectMenuLabelText = classInstance.Get("MenuLabelText");
+            return (java.lang.String)retObjectMenuLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMenuLabelText != null ? retObjectMenuLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setMenuLabelText(java.lang.String MenuLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MenuLabelText", MenuLabelText);
         } catch (JCNativeException jcne) {
@@ -305,9 +333,13 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public java.lang.String getMenuPopupImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuPopupImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("MenuPopupImageUrl");
+            retObjectMenuPopupImageUrl = classInstance.Get("MenuPopupImageUrl");
+            return (java.lang.String)retObjectMenuPopupImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMenuPopupImageUrl != null ? retObjectMenuPopupImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setMenuPopupImageUrl(java.lang.String MenuPopupImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MenuPopupImageUrl", MenuPopupImageUrl);
         } catch (JCNativeException jcne) {
@@ -325,10 +357,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public ButtonType getTitleBarVerbButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleBarVerbButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TitleBarVerbButtonType");
+            retObjectTitleBarVerbButtonType = classInstance.Get("TitleBarVerbButtonType");
+            JCObject val = (JCObject)retObjectTitleBarVerbButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitleBarVerbButtonType != null ? retObjectTitleBarVerbButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +372,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setTitleBarVerbButtonType(ButtonType TitleBarVerbButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TitleBarVerbButtonType", TitleBarVerbButtonType == null ? null : TitleBarVerbButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,10 +382,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Orientation getLayoutOrientation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayoutOrientation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LayoutOrientation");
+            retObjectLayoutOrientation = classInstance.Get("LayoutOrientation");
+            JCObject val = (JCObject)retObjectLayoutOrientation;
             return new Orientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayoutOrientation != null ? retObjectLayoutOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +397,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setLayoutOrientation(Orientation LayoutOrientation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LayoutOrientation", LayoutOrientation == null ? null : LayoutOrientation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,10 +407,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Style getMenuCheckImageStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuCheckImageStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuCheckImageStyle");
+            retObjectMenuCheckImageStyle = classInstance.Get("MenuCheckImageStyle");
+            JCObject val = (JCObject)retObjectMenuCheckImageStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuCheckImageStyle != null ? retObjectMenuCheckImageStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +422,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Style getMenuLabelHoverStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuLabelHoverStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuLabelHoverStyle");
+            retObjectMenuLabelHoverStyle = classInstance.Get("MenuLabelHoverStyle");
+            JCObject val = (JCObject)retObjectMenuLabelHoverStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuLabelHoverStyle != null ? retObjectMenuLabelHoverStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +437,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Style getMenuLabelStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuLabelStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuLabelStyle");
+            retObjectMenuLabelStyle = classInstance.Get("MenuLabelStyle");
+            JCObject val = (JCObject)retObjectMenuLabelStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuLabelStyle != null ? retObjectMenuLabelStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +452,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Style getMenuVerbHoverStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuVerbHoverStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuVerbHoverStyle");
+            retObjectMenuVerbHoverStyle = classInstance.Get("MenuVerbHoverStyle");
+            JCObject val = (JCObject)retObjectMenuVerbHoverStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuVerbHoverStyle != null ? retObjectMenuVerbHoverStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +467,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Style getMenuVerbStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuVerbStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuVerbStyle");
+            retObjectMenuVerbStyle = classInstance.Get("MenuVerbStyle");
+            JCObject val = (JCObject)retObjectMenuVerbStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuVerbStyle != null ? retObjectMenuVerbStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +482,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Style getSelectedPartChromeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedPartChromeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedPartChromeStyle");
+            retObjectSelectedPartChromeStyle = classInstance.Get("SelectedPartChromeStyle");
+            JCObject val = (JCObject)retObjectSelectedPartChromeStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedPartChromeStyle != null ? retObjectSelectedPartChromeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +497,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public Style getTitleBarVerbStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleBarVerbStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TitleBarVerbStyle");
+            retObjectTitleBarVerbStyle = classInstance.Get("TitleBarVerbStyle");
+            JCObject val = (JCObject)retObjectTitleBarVerbStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitleBarVerbStyle != null ? retObjectTitleBarVerbStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,10 +512,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartChrome getWebPartChrome() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebPartChrome = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebPartChrome");
+            retObjectWebPartChrome = classInstance.Get("WebPartChrome");
+            JCObject val = (JCObject)retObjectWebPartChrome;
             return new WebPartChrome(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebPartChrome != null ? retObjectWebPartChrome.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +527,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartCollection getWebParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebParts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebParts");
+            retObjectWebParts = classInstance.Get("WebParts");
+            JCObject val = (JCObject)retObjectWebParts;
             return new WebPartCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebParts != null ? retObjectWebParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +542,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartMenuStyle getMenuPopupStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuPopupStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuPopupStyle");
+            retObjectMenuPopupStyle = classInstance.Get("MenuPopupStyle");
+            JCObject val = (JCObject)retObjectMenuPopupStyle;
             return new WebPartMenuStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuPopupStyle != null ? retObjectMenuPopupStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +557,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getCloseVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CloseVerb");
+            retObjectCloseVerb = classInstance.Get("CloseVerb");
+            JCObject val = (JCObject)retObjectCloseVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseVerb != null ? retObjectCloseVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +572,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getConnectVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectVerb");
+            retObjectConnectVerb = classInstance.Get("ConnectVerb");
+            JCObject val = (JCObject)retObjectConnectVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectVerb != null ? retObjectConnectVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +587,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getDeleteVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteVerb");
+            retObjectDeleteVerb = classInstance.Get("DeleteVerb");
+            JCObject val = (JCObject)retObjectDeleteVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteVerb != null ? retObjectDeleteVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +602,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getEditVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditVerb");
+            retObjectEditVerb = classInstance.Get("EditVerb");
+            JCObject val = (JCObject)retObjectEditVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditVerb != null ? retObjectEditVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,10 +617,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getExportVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExportVerb");
+            retObjectExportVerb = classInstance.Get("ExportVerb");
+            JCObject val = (JCObject)retObjectExportVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportVerb != null ? retObjectExportVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +632,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getHelpVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HelpVerb");
+            retObjectHelpVerb = classInstance.Get("HelpVerb");
+            JCObject val = (JCObject)retObjectHelpVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHelpVerb != null ? retObjectHelpVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +647,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getMinimizeVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimizeVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinimizeVerb");
+            retObjectMinimizeVerb = classInstance.Get("MinimizeVerb");
+            JCObject val = (JCObject)retObjectMinimizeVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizeVerb != null ? retObjectMinimizeVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,10 +662,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerb getRestoreVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestoreVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RestoreVerb");
+            retObjectRestoreVerb = classInstance.Get("RestoreVerb");
+            JCObject val = (JCObject)retObjectRestoreVerb;
             return new WebPartVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRestoreVerb != null ? retObjectRestoreVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +677,14 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public WebPartVerbRenderMode getWebPartVerbRenderMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebPartVerbRenderMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebPartVerbRenderMode");
+            retObjectWebPartVerbRenderMode = classInstance.Get("WebPartVerbRenderMode");
+            JCObject val = (JCObject)retObjectWebPartVerbRenderMode;
             return new WebPartVerbRenderMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebPartVerbRenderMode != null ? retObjectWebPartVerbRenderMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,7 +692,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void setWebPartVerbRenderMode(WebPartVerbRenderMode WebPartVerbRenderMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WebPartVerbRenderMode", WebPartVerbRenderMode == null ? null : WebPartVerbRenderMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -591,7 +707,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void addCreateVerbs(WebPartVerbsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CreateVerbs", handler);
         } catch (JCNativeException jcne) {
@@ -601,7 +717,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
 
     public void removeCreateVerbs(WebPartVerbsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CreateVerbs", handler);
         } catch (JCNativeException jcne) {

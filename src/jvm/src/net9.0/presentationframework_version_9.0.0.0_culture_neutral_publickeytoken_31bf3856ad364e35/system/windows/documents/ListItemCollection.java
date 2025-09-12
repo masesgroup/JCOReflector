@@ -160,10 +160,14 @@ public class ListItemCollection extends NetObjectEnumerable  {
     
     public ListItem getFirstListItem() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstListItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstListItem");
+            retObjectFirstListItem = classInstance.Get("FirstListItem");
+            JCObject val = (JCObject)retObjectFirstListItem;
             return new ListItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstListItem != null ? retObjectFirstListItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class ListItemCollection extends NetObjectEnumerable  {
 
     public ListItem getLastListItem() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastListItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastListItem");
+            retObjectLastListItem = classInstance.Get("LastListItem");
+            JCObject val = (JCObject)retObjectLastListItem;
             return new ListItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastListItem != null ? retObjectLastListItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

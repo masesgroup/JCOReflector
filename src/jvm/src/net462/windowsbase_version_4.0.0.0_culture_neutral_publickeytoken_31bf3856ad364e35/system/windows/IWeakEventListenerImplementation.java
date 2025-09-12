@@ -143,9 +143,13 @@ public class IWeakEventListenerImplementation extends NetObject implements IWeak
     
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveWeakEvent = null;
         try {
-            return (boolean)classInstance.Invoke("ReceiveWeakEvent", managerType == null ? null : managerType.getJCOInstance(), sender == null ? null : sender.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            retObjectReceiveWeakEvent = classInstance.Invoke("ReceiveWeakEvent", managerType == null ? null : managerType.getJCOInstance(), sender == null ? null : sender.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            return (boolean)retObjectReceiveWeakEvent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReceiveWeakEvent != null ? retObjectReceiveWeakEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

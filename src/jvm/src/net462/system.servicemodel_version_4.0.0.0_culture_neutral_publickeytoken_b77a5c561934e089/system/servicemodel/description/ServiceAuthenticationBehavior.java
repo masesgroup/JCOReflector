@@ -165,9 +165,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     
     public boolean ShouldSerializeAuthenticationSchemes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeAuthenticationSchemes = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeAuthenticationSchemes");
+            retObjectShouldSerializeAuthenticationSchemes = classInstance.Invoke("ShouldSerializeAuthenticationSchemes");
+            return (boolean)retObjectShouldSerializeAuthenticationSchemes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeAuthenticationSchemes != null ? retObjectShouldSerializeAuthenticationSchemes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class ServiceAuthenticationBehavior extends NetObject  {
 
     public boolean ShouldSerializeServiceAuthenticationManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeServiceAuthenticationManager = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeServiceAuthenticationManager");
+            retObjectShouldSerializeServiceAuthenticationManager = classInstance.Invoke("ShouldSerializeServiceAuthenticationManager");
+            return (boolean)retObjectShouldSerializeServiceAuthenticationManager;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeServiceAuthenticationManager != null ? retObjectShouldSerializeServiceAuthenticationManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class ServiceAuthenticationBehavior extends NetObject  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -198,7 +206,7 @@ public class ServiceAuthenticationBehavior extends NetObject  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -207,10 +215,14 @@ public class ServiceAuthenticationBehavior extends NetObject  {
     
     public AuthenticationSchemes getAuthenticationSchemes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationSchemes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationSchemes");
+            retObjectAuthenticationSchemes = classInstance.Get("AuthenticationSchemes");
+            JCObject val = (JCObject)retObjectAuthenticationSchemes;
             return new AuthenticationSchemes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationSchemes != null ? retObjectAuthenticationSchemes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ServiceAuthenticationBehavior extends NetObject  {
 
     public void setAuthenticationSchemes(AuthenticationSchemes AuthenticationSchemes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationSchemes", AuthenticationSchemes == null ? null : AuthenticationSchemes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,10 +240,14 @@ public class ServiceAuthenticationBehavior extends NetObject  {
 
     public ServiceAuthenticationManager getServiceAuthenticationManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceAuthenticationManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceAuthenticationManager");
+            retObjectServiceAuthenticationManager = classInstance.Get("ServiceAuthenticationManager");
+            JCObject val = (JCObject)retObjectServiceAuthenticationManager;
             return new ServiceAuthenticationManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceAuthenticationManager != null ? retObjectServiceAuthenticationManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class ServiceAuthenticationBehavior extends NetObject  {
 
     public void setServiceAuthenticationManager(ServiceAuthenticationManager ServiceAuthenticationManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceAuthenticationManager", ServiceAuthenticationManager == null ? null : ServiceAuthenticationManager.getJCOInstance());
         } catch (JCNativeException jcne) {

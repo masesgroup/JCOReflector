@@ -169,9 +169,13 @@ public class File extends NetObject  {
     
     public static boolean Exists(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", path);
+            retObjectExists = classType.Invoke("Exists", path);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,12 @@ public class File extends NetObject  {
 
     public static byte[] ReadAllBytes(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.ApplicationException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ReadAllBytes", path);
+            retObjectReadAllBytes = classType.Invoke("ReadAllBytes", path);
+            JCObject resultingObjects = (JCObject)retObjectReadAllBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -191,6 +197,8 @@ public class File extends NetObject  {
 				resultingArray[indexReadAllBytes] = (byte)resultingArrayList.get(indexReadAllBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadAllBytes != null ? retObjectReadAllBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class File extends NetObject  {
 
     public static SafeFileHandle OpenHandle(java.lang.String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, long preallocationSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenHandle = null;
         try {
-            JCObject objOpenHandle = (JCObject)classType.Invoke("OpenHandle", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance(), options == null ? null : options.getJCOInstance(), preallocationSize);
+            retObjectOpenHandle = classType.Invoke("OpenHandle", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance(), options == null ? null : options.getJCOInstance(), preallocationSize);
+            JCObject objOpenHandle = (JCObject)retObjectOpenHandle;
             return new SafeFileHandle(objOpenHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenHandle != null ? retObjectOpenHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +221,14 @@ public class File extends NetObject  {
 
     public static DateTime GetCreationTime(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCreationTime = null;
         try {
-            JCObject objGetCreationTime = (JCObject)classType.Invoke("GetCreationTime", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetCreationTime = classType.Invoke("GetCreationTime", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetCreationTime = (JCObject)retObjectGetCreationTime;
             return new DateTime(objGetCreationTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCreationTime != null ? retObjectGetCreationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +236,14 @@ public class File extends NetObject  {
 
     public static DateTime GetCreationTime(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCreationTime = null;
         try {
-            JCObject objGetCreationTime = (JCObject)classType.Invoke("GetCreationTime", path);
+            retObjectGetCreationTime = classType.Invoke("GetCreationTime", path);
+            JCObject objGetCreationTime = (JCObject)retObjectGetCreationTime;
             return new DateTime(objGetCreationTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCreationTime != null ? retObjectGetCreationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +251,14 @@ public class File extends NetObject  {
 
     public static DateTime GetCreationTimeUtc(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCreationTimeUtc = null;
         try {
-            JCObject objGetCreationTimeUtc = (JCObject)classType.Invoke("GetCreationTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetCreationTimeUtc = classType.Invoke("GetCreationTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetCreationTimeUtc = (JCObject)retObjectGetCreationTimeUtc;
             return new DateTime(objGetCreationTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCreationTimeUtc != null ? retObjectGetCreationTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +266,14 @@ public class File extends NetObject  {
 
     public static DateTime GetCreationTimeUtc(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCreationTimeUtc = null;
         try {
-            JCObject objGetCreationTimeUtc = (JCObject)classType.Invoke("GetCreationTimeUtc", path);
+            retObjectGetCreationTimeUtc = classType.Invoke("GetCreationTimeUtc", path);
+            JCObject objGetCreationTimeUtc = (JCObject)retObjectGetCreationTimeUtc;
             return new DateTime(objGetCreationTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCreationTimeUtc != null ? retObjectGetCreationTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +281,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastAccessTime(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastAccessTime = null;
         try {
-            JCObject objGetLastAccessTime = (JCObject)classType.Invoke("GetLastAccessTime", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetLastAccessTime = classType.Invoke("GetLastAccessTime", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetLastAccessTime = (JCObject)retObjectGetLastAccessTime;
             return new DateTime(objGetLastAccessTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastAccessTime != null ? retObjectGetLastAccessTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +296,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastAccessTime(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastAccessTime = null;
         try {
-            JCObject objGetLastAccessTime = (JCObject)classType.Invoke("GetLastAccessTime", path);
+            retObjectGetLastAccessTime = classType.Invoke("GetLastAccessTime", path);
+            JCObject objGetLastAccessTime = (JCObject)retObjectGetLastAccessTime;
             return new DateTime(objGetLastAccessTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastAccessTime != null ? retObjectGetLastAccessTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +311,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastAccessTimeUtc(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastAccessTimeUtc = null;
         try {
-            JCObject objGetLastAccessTimeUtc = (JCObject)classType.Invoke("GetLastAccessTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetLastAccessTimeUtc = classType.Invoke("GetLastAccessTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetLastAccessTimeUtc = (JCObject)retObjectGetLastAccessTimeUtc;
             return new DateTime(objGetLastAccessTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastAccessTimeUtc != null ? retObjectGetLastAccessTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +326,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastAccessTimeUtc(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastAccessTimeUtc = null;
         try {
-            JCObject objGetLastAccessTimeUtc = (JCObject)classType.Invoke("GetLastAccessTimeUtc", path);
+            retObjectGetLastAccessTimeUtc = classType.Invoke("GetLastAccessTimeUtc", path);
+            JCObject objGetLastAccessTimeUtc = (JCObject)retObjectGetLastAccessTimeUtc;
             return new DateTime(objGetLastAccessTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastAccessTimeUtc != null ? retObjectGetLastAccessTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +341,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastWriteTime(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastWriteTime = null;
         try {
-            JCObject objGetLastWriteTime = (JCObject)classType.Invoke("GetLastWriteTime", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetLastWriteTime = classType.Invoke("GetLastWriteTime", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetLastWriteTime = (JCObject)retObjectGetLastWriteTime;
             return new DateTime(objGetLastWriteTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTime != null ? retObjectGetLastWriteTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +356,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastWriteTime(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastWriteTime = null;
         try {
-            JCObject objGetLastWriteTime = (JCObject)classType.Invoke("GetLastWriteTime", path);
+            retObjectGetLastWriteTime = classType.Invoke("GetLastWriteTime", path);
+            JCObject objGetLastWriteTime = (JCObject)retObjectGetLastWriteTime;
             return new DateTime(objGetLastWriteTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTime != null ? retObjectGetLastWriteTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +371,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastWriteTimeUtc(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastWriteTimeUtc = null;
         try {
-            JCObject objGetLastWriteTimeUtc = (JCObject)classType.Invoke("GetLastWriteTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetLastWriteTimeUtc = classType.Invoke("GetLastWriteTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetLastWriteTimeUtc = (JCObject)retObjectGetLastWriteTimeUtc;
             return new DateTime(objGetLastWriteTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTimeUtc != null ? retObjectGetLastWriteTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +386,14 @@ public class File extends NetObject  {
 
     public static DateTime GetLastWriteTimeUtc(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastWriteTimeUtc = null;
         try {
-            JCObject objGetLastWriteTimeUtc = (JCObject)classType.Invoke("GetLastWriteTimeUtc", path);
+            retObjectGetLastWriteTimeUtc = classType.Invoke("GetLastWriteTimeUtc", path);
+            JCObject objGetLastWriteTimeUtc = (JCObject)retObjectGetLastWriteTimeUtc;
             return new DateTime(objGetLastWriteTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTimeUtc != null ? retObjectGetLastWriteTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +401,14 @@ public class File extends NetObject  {
 
     public static FileAttributes GetAttributes(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAttributes = null;
         try {
-            JCObject objGetAttributes = (JCObject)classType.Invoke("GetAttributes", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetAttributes = classType.Invoke("GetAttributes", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetAttributes = (JCObject)retObjectGetAttributes;
             return new FileAttributes(objGetAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributes != null ? retObjectGetAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +416,14 @@ public class File extends NetObject  {
 
     public static FileAttributes GetAttributes(java.lang.String path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAttributes = null;
         try {
-            JCObject objGetAttributes = (JCObject)classType.Invoke("GetAttributes", path);
+            retObjectGetAttributes = classType.Invoke("GetAttributes", path);
+            JCObject objGetAttributes = (JCObject)retObjectGetAttributes;
             return new FileAttributes(objGetAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributes != null ? retObjectGetAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +431,14 @@ public class File extends NetObject  {
 
     public static FileStream Create(java.lang.String path, int bufferSize, FileOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", path, bufferSize, options == null ? null : options.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", path, bufferSize, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new FileStream(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +446,14 @@ public class File extends NetObject  {
 
     public static FileStream Create(java.lang.String path, int bufferSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", path, bufferSize);
+            retObjectCreate = classType.Invoke("Create", path, bufferSize);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new FileStream(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +461,14 @@ public class File extends NetObject  {
 
     public static FileStream Create(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", path);
+            retObjectCreate = classType.Invoke("Create", path);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new FileStream(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +476,14 @@ public class File extends NetObject  {
 
     public static FileStream Open(java.lang.String path, FileMode mode, FileAccess access, FileShare share) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new FileStream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,10 +491,14 @@ public class File extends NetObject  {
 
     public static FileStream Open(java.lang.String path, FileMode mode, FileAccess access) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new FileStream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,10 +506,14 @@ public class File extends NetObject  {
 
     public static FileStream Open(java.lang.String path, FileMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, mode == null ? null : mode.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", path, mode == null ? null : mode.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new FileStream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,10 +521,14 @@ public class File extends NetObject  {
 
     public static FileStream Open(java.lang.String path, FileStreamOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, options == null ? null : options.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", path, options == null ? null : options.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new FileStream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +536,14 @@ public class File extends NetObject  {
 
     public static FileStream OpenRead(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenRead = null;
         try {
-            JCObject objOpenRead = (JCObject)classType.Invoke("OpenRead", path);
+            retObjectOpenRead = classType.Invoke("OpenRead", path);
+            JCObject objOpenRead = (JCObject)retObjectOpenRead;
             return new FileStream(objOpenRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenRead != null ? retObjectOpenRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -451,10 +551,14 @@ public class File extends NetObject  {
 
     public static FileStream OpenWrite(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenWrite = null;
         try {
-            JCObject objOpenWrite = (JCObject)classType.Invoke("OpenWrite", path);
+            retObjectOpenWrite = classType.Invoke("OpenWrite", path);
+            JCObject objOpenWrite = (JCObject)retObjectOpenWrite;
             return new FileStream(objOpenWrite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWrite != null ? retObjectOpenWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,10 +566,14 @@ public class File extends NetObject  {
 
     public static FileSystemInfo CreateSymbolicLink(java.lang.String path, java.lang.String pathToTarget) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSymbolicLink = null;
         try {
-            JCObject objCreateSymbolicLink = (JCObject)classType.Invoke("CreateSymbolicLink", path, pathToTarget);
+            retObjectCreateSymbolicLink = classType.Invoke("CreateSymbolicLink", path, pathToTarget);
+            JCObject objCreateSymbolicLink = (JCObject)retObjectCreateSymbolicLink;
             return new FileSystemInfo(objCreateSymbolicLink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSymbolicLink != null ? retObjectCreateSymbolicLink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,10 +581,14 @@ public class File extends NetObject  {
 
     public static FileSystemInfo ResolveLinkTarget(java.lang.String linkPath, boolean returnFinalTarget) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolveLinkTarget = null;
         try {
-            JCObject objResolveLinkTarget = (JCObject)classType.Invoke("ResolveLinkTarget", linkPath, returnFinalTarget);
+            retObjectResolveLinkTarget = classType.Invoke("ResolveLinkTarget", linkPath, returnFinalTarget);
+            JCObject objResolveLinkTarget = (JCObject)retObjectResolveLinkTarget;
             return new FileSystemInfo(objResolveLinkTarget);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveLinkTarget != null ? retObjectResolveLinkTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,10 +596,14 @@ public class File extends NetObject  {
 
     public static StreamReader OpenText(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenText = null;
         try {
-            JCObject objOpenText = (JCObject)classType.Invoke("OpenText", path);
+            retObjectOpenText = classType.Invoke("OpenText", path);
+            JCObject objOpenText = (JCObject)retObjectOpenText;
             return new StreamReader(objOpenText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenText != null ? retObjectOpenText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,10 +611,14 @@ public class File extends NetObject  {
 
     public static StreamWriter AppendText(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendText = null;
         try {
-            JCObject objAppendText = (JCObject)classType.Invoke("AppendText", path);
+            retObjectAppendText = classType.Invoke("AppendText", path);
+            JCObject objAppendText = (JCObject)retObjectAppendText;
             return new StreamWriter(objAppendText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendText != null ? retObjectAppendText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,10 +626,14 @@ public class File extends NetObject  {
 
     public static StreamWriter CreateText(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateText = null;
         try {
-            JCObject objCreateText = (JCObject)classType.Invoke("CreateText", path);
+            retObjectCreateText = classType.Invoke("CreateText", path);
+            JCObject objCreateText = (JCObject)retObjectCreateText;
             return new StreamWriter(objCreateText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateText != null ? retObjectCreateText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,10 +641,14 @@ public class File extends NetObject  {
 
     public static UnixFileMode GetUnixFileMode(SafeFileHandle fileHandle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUnixFileMode = null;
         try {
-            JCObject objGetUnixFileMode = (JCObject)classType.Invoke("GetUnixFileMode", fileHandle == null ? null : fileHandle.getJCOInstance());
+            retObjectGetUnixFileMode = classType.Invoke("GetUnixFileMode", fileHandle == null ? null : fileHandle.getJCOInstance());
+            JCObject objGetUnixFileMode = (JCObject)retObjectGetUnixFileMode;
             return new UnixFileMode(objGetUnixFileMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnixFileMode != null ? retObjectGetUnixFileMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,10 +656,14 @@ public class File extends NetObject  {
 
     public static UnixFileMode GetUnixFileMode(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUnixFileMode = null;
         try {
-            JCObject objGetUnixFileMode = (JCObject)classType.Invoke("GetUnixFileMode", path);
+            retObjectGetUnixFileMode = classType.Invoke("GetUnixFileMode", path);
+            JCObject objGetUnixFileMode = (JCObject)retObjectGetUnixFileMode;
             return new UnixFileMode(objGetUnixFileMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnixFileMode != null ? retObjectGetUnixFileMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,9 +671,13 @@ public class File extends NetObject  {
 
     public static java.lang.String ReadAllText(java.lang.String path, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllText = null;
         try {
-            return (java.lang.String)classType.Invoke("ReadAllText", path, encoding == null ? null : encoding.getJCOInstance());
+            retObjectReadAllText = classType.Invoke("ReadAllText", path, encoding == null ? null : encoding.getJCOInstance());
+            return (java.lang.String)retObjectReadAllText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadAllText != null ? retObjectReadAllText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,9 +685,13 @@ public class File extends NetObject  {
 
     public static java.lang.String ReadAllText(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllText = null;
         try {
-            return (java.lang.String)classType.Invoke("ReadAllText", path);
+            retObjectReadAllText = classType.Invoke("ReadAllText", path);
+            return (java.lang.String)retObjectReadAllText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadAllText != null ? retObjectReadAllText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +699,12 @@ public class File extends NetObject  {
 
     public static java.lang.String[] ReadAllLines(java.lang.String path, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllLines = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ReadAllLines", path, encoding == null ? null : encoding.getJCOInstance());
+            retObjectReadAllLines = classType.Invoke("ReadAllLines", path, encoding == null ? null : encoding.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadAllLines;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -571,6 +713,8 @@ public class File extends NetObject  {
 				resultingArray[indexReadAllLines] = (java.lang.String)resultingArrayList.get(indexReadAllLines);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReadAllLines != null ? retObjectReadAllLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,10 +722,12 @@ public class File extends NetObject  {
 
     public static java.lang.String[] ReadAllLines(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllLines = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ReadAllLines", path);
+            retObjectReadAllLines = classType.Invoke("ReadAllLines", path);
+            JCObject resultingObjects = (JCObject)retObjectReadAllLines;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -590,6 +736,8 @@ public class File extends NetObject  {
 				resultingArray[indexReadAllLines] = (java.lang.String)resultingArrayList.get(indexReadAllLines);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReadAllLines != null ? retObjectReadAllLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,10 +745,14 @@ public class File extends NetObject  {
 
     public static Task AppendAllTextAsync(java.lang.String path, java.lang.String contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendAllTextAsync = null;
         try {
-            JCObject objAppendAllTextAsync = (JCObject)classType.Invoke("AppendAllTextAsync", path, contents, encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectAppendAllTextAsync = classType.Invoke("AppendAllTextAsync", path, contents, encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAppendAllTextAsync = (JCObject)retObjectAppendAllTextAsync;
             return new Task(objAppendAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendAllTextAsync != null ? retObjectAppendAllTextAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,10 +760,14 @@ public class File extends NetObject  {
 
     public static Task AppendAllTextAsync(java.lang.String path, java.lang.String contents, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendAllTextAsync = null;
         try {
-            JCObject objAppendAllTextAsync = (JCObject)classType.Invoke("AppendAllTextAsync", path, contents, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectAppendAllTextAsync = classType.Invoke("AppendAllTextAsync", path, contents, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAppendAllTextAsync = (JCObject)retObjectAppendAllTextAsync;
             return new Task(objAppendAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendAllTextAsync != null ? retObjectAppendAllTextAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -619,10 +775,14 @@ public class File extends NetObject  {
 
     public static Task WriteAllBytesAsync(java.lang.String path, byte[] bytes, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllBytesAsync = null;
         try {
-            JCObject objWriteAllBytesAsync = (JCObject)classType.Invoke("WriteAllBytesAsync", path, bytes, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteAllBytesAsync = classType.Invoke("WriteAllBytesAsync", path, bytes, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllBytesAsync = (JCObject)retObjectWriteAllBytesAsync;
             return new Task(objWriteAllBytesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllBytesAsync != null ? retObjectWriteAllBytesAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,10 +790,14 @@ public class File extends NetObject  {
 
     public static Task WriteAllBytesAsync(java.lang.String dupParam0, JCORefOut dupParam1, CancellationToken dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllBytesAsync = null;
         try {
-            JCObject objWriteAllBytesAsync = (JCObject)classType.Invoke("WriteAllBytesAsync", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectWriteAllBytesAsync = classType.Invoke("WriteAllBytesAsync", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objWriteAllBytesAsync = (JCObject)retObjectWriteAllBytesAsync;
             return new Task(objWriteAllBytesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllBytesAsync != null ? retObjectWriteAllBytesAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,10 +805,14 @@ public class File extends NetObject  {
 
     public static Task WriteAllTextAsync(java.lang.String path, java.lang.String contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllTextAsync = null;
         try {
-            JCObject objWriteAllTextAsync = (JCObject)classType.Invoke("WriteAllTextAsync", path, contents, encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteAllTextAsync = classType.Invoke("WriteAllTextAsync", path, contents, encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllTextAsync = (JCObject)retObjectWriteAllTextAsync;
             return new Task(objWriteAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllTextAsync != null ? retObjectWriteAllTextAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -652,10 +820,14 @@ public class File extends NetObject  {
 
     public static Task WriteAllTextAsync(java.lang.String path, java.lang.String contents, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllTextAsync = null;
         try {
-            JCObject objWriteAllTextAsync = (JCObject)classType.Invoke("WriteAllTextAsync", path, contents, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectWriteAllTextAsync = classType.Invoke("WriteAllTextAsync", path, contents, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllTextAsync = (JCObject)retObjectWriteAllTextAsync;
             return new Task(objWriteAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllTextAsync != null ? retObjectWriteAllTextAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,7 +835,7 @@ public class File extends NetObject  {
 
     public static void AppendAllText(java.lang.String path, java.lang.String contents, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AppendAllText", path, contents, encoding == null ? null : encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -673,7 +845,7 @@ public class File extends NetObject  {
 
     public static void AppendAllText(java.lang.String path, java.lang.String contents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException, system.ObjectDisposedException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AppendAllText", path, contents);
         } catch (JCNativeException jcne) {
@@ -683,7 +855,7 @@ public class File extends NetObject  {
 
     public static void Copy(java.lang.String sourceFileName, java.lang.String destFileName, boolean overwrite) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Copy", sourceFileName, destFileName, overwrite);
         } catch (JCNativeException jcne) {
@@ -693,7 +865,7 @@ public class File extends NetObject  {
 
     public static void Copy(java.lang.String sourceFileName, java.lang.String destFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Copy", sourceFileName, destFileName);
         } catch (JCNativeException jcne) {
@@ -703,7 +875,7 @@ public class File extends NetObject  {
 
     public static void Decrypt(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Decrypt", path);
         } catch (JCNativeException jcne) {
@@ -713,7 +885,7 @@ public class File extends NetObject  {
 
     public static void Delete(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", path);
         } catch (JCNativeException jcne) {
@@ -723,7 +895,7 @@ public class File extends NetObject  {
 
     public static void Encrypt(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Encrypt", path);
         } catch (JCNativeException jcne) {
@@ -733,7 +905,7 @@ public class File extends NetObject  {
 
     public static void Move(java.lang.String sourceFileName, java.lang.String destFileName, boolean overwrite) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Move", sourceFileName, destFileName, overwrite);
         } catch (JCNativeException jcne) {
@@ -743,7 +915,7 @@ public class File extends NetObject  {
 
     public static void Move(java.lang.String sourceFileName, java.lang.String destFileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Move", sourceFileName, destFileName);
         } catch (JCNativeException jcne) {
@@ -753,7 +925,7 @@ public class File extends NetObject  {
 
     public static void Replace(java.lang.String sourceFileName, java.lang.String destinationFileName, java.lang.String destinationBackupFileName, boolean ignoreMetadataErrors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Replace", sourceFileName, destinationFileName, destinationBackupFileName, ignoreMetadataErrors);
         } catch (JCNativeException jcne) {
@@ -763,7 +935,7 @@ public class File extends NetObject  {
 
     public static void Replace(java.lang.String sourceFileName, java.lang.String destinationFileName, java.lang.String destinationBackupFileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Replace", sourceFileName, destinationFileName, destinationBackupFileName);
         } catch (JCNativeException jcne) {
@@ -773,7 +945,7 @@ public class File extends NetObject  {
 
     public static void SetAttributes(SafeFileHandle fileHandle, FileAttributes fileAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAttributes", fileHandle == null ? null : fileHandle.getJCOInstance(), fileAttributes == null ? null : fileAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -783,7 +955,7 @@ public class File extends NetObject  {
 
     public static void SetAttributes(java.lang.String path, FileAttributes fileAttributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAttributes", path, fileAttributes == null ? null : fileAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -793,7 +965,7 @@ public class File extends NetObject  {
 
     public static void SetCreationTime(SafeFileHandle fileHandle, DateTime creationTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCreationTime", fileHandle == null ? null : fileHandle.getJCOInstance(), creationTime == null ? null : creationTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -803,7 +975,7 @@ public class File extends NetObject  {
 
     public static void SetCreationTime(java.lang.String path, DateTime creationTime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCreationTime", path, creationTime == null ? null : creationTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -813,7 +985,7 @@ public class File extends NetObject  {
 
     public static void SetCreationTimeUtc(SafeFileHandle fileHandle, DateTime creationTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCreationTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance(), creationTimeUtc == null ? null : creationTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -823,7 +995,7 @@ public class File extends NetObject  {
 
     public static void SetCreationTimeUtc(java.lang.String path, DateTime creationTimeUtc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCreationTimeUtc", path, creationTimeUtc == null ? null : creationTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -833,7 +1005,7 @@ public class File extends NetObject  {
 
     public static void SetLastAccessTime(SafeFileHandle fileHandle, DateTime lastAccessTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastAccessTime", fileHandle == null ? null : fileHandle.getJCOInstance(), lastAccessTime == null ? null : lastAccessTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -843,7 +1015,7 @@ public class File extends NetObject  {
 
     public static void SetLastAccessTime(java.lang.String path, DateTime lastAccessTime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastAccessTime", path, lastAccessTime == null ? null : lastAccessTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -853,7 +1025,7 @@ public class File extends NetObject  {
 
     public static void SetLastAccessTimeUtc(SafeFileHandle fileHandle, DateTime lastAccessTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastAccessTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance(), lastAccessTimeUtc == null ? null : lastAccessTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -863,7 +1035,7 @@ public class File extends NetObject  {
 
     public static void SetLastAccessTimeUtc(java.lang.String path, DateTime lastAccessTimeUtc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastAccessTimeUtc", path, lastAccessTimeUtc == null ? null : lastAccessTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -873,7 +1045,7 @@ public class File extends NetObject  {
 
     public static void SetLastWriteTime(SafeFileHandle fileHandle, DateTime lastWriteTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastWriteTime", fileHandle == null ? null : fileHandle.getJCOInstance(), lastWriteTime == null ? null : lastWriteTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -883,7 +1055,7 @@ public class File extends NetObject  {
 
     public static void SetLastWriteTime(java.lang.String path, DateTime lastWriteTime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastWriteTime", path, lastWriteTime == null ? null : lastWriteTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -893,7 +1065,7 @@ public class File extends NetObject  {
 
     public static void SetLastWriteTimeUtc(SafeFileHandle fileHandle, DateTime lastWriteTimeUtc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastWriteTimeUtc", fileHandle == null ? null : fileHandle.getJCOInstance(), lastWriteTimeUtc == null ? null : lastWriteTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -903,7 +1075,7 @@ public class File extends NetObject  {
 
     public static void SetLastWriteTimeUtc(java.lang.String path, DateTime lastWriteTimeUtc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastWriteTimeUtc", path, lastWriteTimeUtc == null ? null : lastWriteTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -913,7 +1085,7 @@ public class File extends NetObject  {
 
     public static void SetUnixFileMode(SafeFileHandle fileHandle, UnixFileMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetUnixFileMode", fileHandle == null ? null : fileHandle.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -923,7 +1095,7 @@ public class File extends NetObject  {
 
     public static void SetUnixFileMode(java.lang.String path, UnixFileMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetUnixFileMode", path, mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -933,7 +1105,7 @@ public class File extends NetObject  {
 
     public static void WriteAllBytes(java.lang.String path, byte[] bytes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.ApplicationException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllBytes", path, bytes);
         } catch (JCNativeException jcne) {
@@ -943,7 +1115,7 @@ public class File extends NetObject  {
 
     public static void WriteAllBytes(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.IOException, system.ApplicationException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllBytes", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -953,7 +1125,7 @@ public class File extends NetObject  {
 
     public static void WriteAllLines(java.lang.String path, java.lang.String[] contents, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllLines", path, contents, encoding == null ? null : encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -963,7 +1135,7 @@ public class File extends NetObject  {
 
     public static void WriteAllLines(java.lang.String dupParam0, JCORefOut dupParam1, Encoding dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllLines", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -973,7 +1145,7 @@ public class File extends NetObject  {
 
     public static void WriteAllLines(java.lang.String path, java.lang.String[] contents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllLines", path, contents);
         } catch (JCNativeException jcne) {
@@ -983,7 +1155,7 @@ public class File extends NetObject  {
 
     public static void WriteAllLines(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllLines", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -993,7 +1165,7 @@ public class File extends NetObject  {
 
     public static void WriteAllText(java.lang.String path, java.lang.String contents, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllText", path, contents, encoding == null ? null : encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1003,7 +1175,7 @@ public class File extends NetObject  {
 
     public static void WriteAllText(java.lang.String path, java.lang.String contents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException, system.ObjectDisposedException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllText", path, contents);
         } catch (JCNativeException jcne) {

@@ -152,9 +152,13 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
     
     public boolean ToBoolean(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ToBoolean", provider == null ? null : provider.getJCOInstance());
+            retObjectToBoolean = classInstance.Invoke("ToBoolean", provider == null ? null : provider.getJCOInstance());
+            return (boolean)retObjectToBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectToBoolean != null ? retObjectToBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,9 +166,19 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public byte ToByte(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToByte = null;
         try {
-            return (byte)classInstance.Invoke("ToByte", provider == null ? null : provider.getJCOInstance());
+            retObjectToByte = classInstance.Invoke("ToByte", provider == null ? null : provider.getJCOInstance());
+            return (byte)retObjectToByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToByteNumber = (java.lang.Number)retObjectToByte;
+                return retObjectToByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectToByte != null ? retObjectToByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +186,13 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public char ToChar(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToChar = null;
         try {
-            return (char)classInstance.Invoke("ToChar", provider == null ? null : provider.getJCOInstance());
+            retObjectToChar = classInstance.Invoke("ToChar", provider == null ? null : provider.getJCOInstance());
+            return (char)retObjectToChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectToChar != null ? retObjectToChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +200,19 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public double ToDouble(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDouble = null;
         try {
-            return (double)classInstance.Invoke("ToDouble", provider == null ? null : provider.getJCOInstance());
+            retObjectToDouble = classInstance.Invoke("ToDouble", provider == null ? null : provider.getJCOInstance());
+            return (double)retObjectToDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
+                return retObjectToDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +220,19 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public short ToInt16(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToInt16 = null;
         try {
-            return (short)classInstance.Invoke("ToInt16", provider == null ? null : provider.getJCOInstance());
+            retObjectToInt16 = classInstance.Invoke("ToInt16", provider == null ? null : provider.getJCOInstance());
+            return (short)retObjectToInt16;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToInt16Number = (java.lang.Number)retObjectToInt16;
+                return retObjectToInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectToInt16 != null ? retObjectToInt16.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +240,19 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public int ToInt32(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToInt32 = null;
         try {
-            return (int)classInstance.Invoke("ToInt32", provider == null ? null : provider.getJCOInstance());
+            retObjectToInt32 = classInstance.Invoke("ToInt32", provider == null ? null : provider.getJCOInstance());
+            return (int)retObjectToInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToInt32Number = (java.lang.Number)retObjectToInt32;
+                return retObjectToInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToInt32 != null ? retObjectToInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +260,19 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public long ToInt64(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToInt64 = null;
         try {
-            return (long)classInstance.Invoke("ToInt64", provider == null ? null : provider.getJCOInstance());
+            retObjectToInt64 = classInstance.Invoke("ToInt64", provider == null ? null : provider.getJCOInstance());
+            return (long)retObjectToInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToInt64Number = (java.lang.Number)retObjectToInt64;
+                return retObjectToInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToInt64 != null ? retObjectToInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +280,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public SByte ToSByte(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSByte = null;
         try {
-            JCObject objToSByte = (JCObject)classInstance.Invoke("ToSByte", provider == null ? null : provider.getJCOInstance());
+            retObjectToSByte = classInstance.Invoke("ToSByte", provider == null ? null : provider.getJCOInstance());
+            JCObject objToSByte = (JCObject)retObjectToSByte;
             return new SByte(objToSByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSByte != null ? retObjectToSByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +295,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public Single ToSingle(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSingle = null;
         try {
-            JCObject objToSingle = (JCObject)classInstance.Invoke("ToSingle", provider == null ? null : provider.getJCOInstance());
+            retObjectToSingle = classInstance.Invoke("ToSingle", provider == null ? null : provider.getJCOInstance());
+            JCObject objToSingle = (JCObject)retObjectToSingle;
             return new Single(objToSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSingle != null ? retObjectToSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +310,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public DateTime ToDateTime(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDateTime = null;
         try {
-            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", provider == null ? null : provider.getJCOInstance());
+            retObjectToDateTime = classInstance.Invoke("ToDateTime", provider == null ? null : provider.getJCOInstance());
+            JCObject objToDateTime = (JCObject)retObjectToDateTime;
             return new DateTime(objToDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDateTime != null ? retObjectToDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +325,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public Decimal ToDecimal(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDecimal = null;
         try {
-            JCObject objToDecimal = (JCObject)classInstance.Invoke("ToDecimal", provider == null ? null : provider.getJCOInstance());
+            retObjectToDecimal = classInstance.Invoke("ToDecimal", provider == null ? null : provider.getJCOInstance());
+            JCObject objToDecimal = (JCObject)retObjectToDecimal;
             return new Decimal(objToDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDecimal != null ? retObjectToDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +340,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public NetObject ToType(NetType conversionType, IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToType = null;
         try {
-            JCObject objToType = (JCObject)classInstance.Invoke("ToType", conversionType == null ? null : conversionType.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            retObjectToType = classInstance.Invoke("ToType", conversionType == null ? null : conversionType.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objToType = (JCObject)retObjectToType;
             return new NetObject(objToType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToType != null ? retObjectToType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +355,13 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +369,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public TypeCode GetTypeCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeCode = null;
         try {
-            JCObject objGetTypeCode = (JCObject)classInstance.Invoke("GetTypeCode");
+            retObjectGetTypeCode = classInstance.Invoke("GetTypeCode");
+            JCObject objGetTypeCode = (JCObject)retObjectGetTypeCode;
             return new TypeCode(objGetTypeCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeCode != null ? retObjectGetTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +384,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public UInt16 ToUInt16(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUInt16 = null;
         try {
-            JCObject objToUInt16 = (JCObject)classInstance.Invoke("ToUInt16", provider == null ? null : provider.getJCOInstance());
+            retObjectToUInt16 = classInstance.Invoke("ToUInt16", provider == null ? null : provider.getJCOInstance());
+            JCObject objToUInt16 = (JCObject)retObjectToUInt16;
             return new UInt16(objToUInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUInt16 != null ? retObjectToUInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +399,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public UInt32 ToUInt32(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUInt32 = null;
         try {
-            JCObject objToUInt32 = (JCObject)classInstance.Invoke("ToUInt32", provider == null ? null : provider.getJCOInstance());
+            retObjectToUInt32 = classInstance.Invoke("ToUInt32", provider == null ? null : provider.getJCOInstance());
+            JCObject objToUInt32 = (JCObject)retObjectToUInt32;
             return new UInt32(objToUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUInt32 != null ? retObjectToUInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +414,14 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
 
     public UInt64 ToUInt64(IFormatProvider provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUInt64 = null;
         try {
-            JCObject objToUInt64 = (JCObject)classInstance.Invoke("ToUInt64", provider == null ? null : provider.getJCOInstance());
+            retObjectToUInt64 = classInstance.Invoke("ToUInt64", provider == null ? null : provider.getJCOInstance());
+            JCObject objToUInt64 = (JCObject)retObjectToUInt64;
             return new UInt64(objToUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUInt64 != null ? retObjectToUInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

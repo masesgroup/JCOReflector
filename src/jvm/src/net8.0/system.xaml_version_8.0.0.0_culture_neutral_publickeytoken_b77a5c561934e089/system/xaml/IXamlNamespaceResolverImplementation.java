@@ -142,9 +142,13 @@ public class IXamlNamespaceResolverImplementation extends NetObject implements I
     
     public java.lang.String GetNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetNamespace", prefix);
+            retObjectGetNamespace = classInstance.Invoke("GetNamespace", prefix);
+            return (java.lang.String)retObjectGetNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNamespace != null ? retObjectGetNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

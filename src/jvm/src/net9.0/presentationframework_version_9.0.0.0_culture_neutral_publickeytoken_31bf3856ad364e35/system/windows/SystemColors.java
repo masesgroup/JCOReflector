@@ -160,10 +160,14 @@ public class SystemColors extends NetObject  {
     
     public static Color getAccentColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColor");
+            retObjectAccentColor = classType.Get("AccentColor");
+            JCObject val = (JCObject)retObjectAccentColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColor != null ? retObjectAccentColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getAccentColorDark1() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark1 = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark1");
+            retObjectAccentColorDark1 = classType.Get("AccentColorDark1");
+            JCObject val = (JCObject)retObjectAccentColorDark1;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark1 != null ? retObjectAccentColorDark1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getAccentColorDark2() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark2 = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark2");
+            retObjectAccentColorDark2 = classType.Get("AccentColorDark2");
+            JCObject val = (JCObject)retObjectAccentColorDark2;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark2 != null ? retObjectAccentColorDark2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getAccentColorDark3() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark3 = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark3");
+            retObjectAccentColorDark3 = classType.Get("AccentColorDark3");
+            JCObject val = (JCObject)retObjectAccentColorDark3;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark3 != null ? retObjectAccentColorDark3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getAccentColorLight1() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight1 = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight1");
+            retObjectAccentColorLight1 = classType.Get("AccentColorLight1");
+            JCObject val = (JCObject)retObjectAccentColorLight1;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight1 != null ? retObjectAccentColorLight1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getAccentColorLight2() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight2 = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight2");
+            retObjectAccentColorLight2 = classType.Get("AccentColorLight2");
+            JCObject val = (JCObject)retObjectAccentColorLight2;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight2 != null ? retObjectAccentColorLight2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +250,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getAccentColorLight3() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight3 = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight3");
+            retObjectAccentColorLight3 = classType.Get("AccentColorLight3");
+            JCObject val = (JCObject)retObjectAccentColorLight3;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight3 != null ? retObjectAccentColorLight3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +265,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getActiveBorderColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveBorderColor");
+            retObjectActiveBorderColor = classType.Get("ActiveBorderColor");
+            JCObject val = (JCObject)retObjectActiveBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveBorderColor != null ? retObjectActiveBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +280,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getActiveCaptionColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionColor");
+            retObjectActiveCaptionColor = classType.Get("ActiveCaptionColor");
+            JCObject val = (JCObject)retObjectActiveCaptionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionColor != null ? retObjectActiveCaptionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +295,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getActiveCaptionTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionTextColor");
+            retObjectActiveCaptionTextColor = classType.Get("ActiveCaptionTextColor");
+            JCObject val = (JCObject)retObjectActiveCaptionTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionTextColor != null ? retObjectActiveCaptionTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +310,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getAppWorkspaceColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppWorkspaceColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AppWorkspaceColor");
+            retObjectAppWorkspaceColor = classType.Get("AppWorkspaceColor");
+            JCObject val = (JCObject)retObjectAppWorkspaceColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppWorkspaceColor != null ? retObjectAppWorkspaceColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +325,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getControlColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlColor");
+            retObjectControlColor = classType.Get("ControlColor");
+            JCObject val = (JCObject)retObjectControlColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlColor != null ? retObjectControlColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +340,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getControlDarkColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkColor");
+            retObjectControlDarkColor = classType.Get("ControlDarkColor");
+            JCObject val = (JCObject)retObjectControlDarkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkColor != null ? retObjectControlDarkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +355,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getControlDarkDarkColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkDarkColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkDarkColor");
+            retObjectControlDarkDarkColor = classType.Get("ControlDarkDarkColor");
+            JCObject val = (JCObject)retObjectControlDarkDarkColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkDarkColor != null ? retObjectControlDarkDarkColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +370,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getControlLightColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightColor");
+            retObjectControlLightColor = classType.Get("ControlLightColor");
+            JCObject val = (JCObject)retObjectControlLightColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightColor != null ? retObjectControlLightColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +385,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getControlLightLightColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightLightColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightLightColor");
+            retObjectControlLightLightColor = classType.Get("ControlLightLightColor");
+            JCObject val = (JCObject)retObjectControlLightLightColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightLightColor != null ? retObjectControlLightLightColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +400,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getControlTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlTextColor");
+            retObjectControlTextColor = classType.Get("ControlTextColor");
+            JCObject val = (JCObject)retObjectControlTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlTextColor != null ? retObjectControlTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +415,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getDesktopColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesktopColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesktopColor");
+            retObjectDesktopColor = classType.Get("DesktopColor");
+            JCObject val = (JCObject)retObjectDesktopColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesktopColor != null ? retObjectDesktopColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +430,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getGradientActiveCaptionColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientActiveCaptionColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientActiveCaptionColor");
+            retObjectGradientActiveCaptionColor = classType.Get("GradientActiveCaptionColor");
+            JCObject val = (JCObject)retObjectGradientActiveCaptionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientActiveCaptionColor != null ? retObjectGradientActiveCaptionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +445,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getGradientInactiveCaptionColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientInactiveCaptionColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientInactiveCaptionColor");
+            retObjectGradientInactiveCaptionColor = classType.Get("GradientInactiveCaptionColor");
+            JCObject val = (JCObject)retObjectGradientInactiveCaptionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientInactiveCaptionColor != null ? retObjectGradientInactiveCaptionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +460,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getGrayTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGrayTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("GrayTextColor");
+            retObjectGrayTextColor = classType.Get("GrayTextColor");
+            JCObject val = (JCObject)retObjectGrayTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGrayTextColor != null ? retObjectGrayTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,10 +475,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getHighlightColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightColor");
+            retObjectHighlightColor = classType.Get("HighlightColor");
+            JCObject val = (JCObject)retObjectHighlightColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightColor != null ? retObjectHighlightColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +490,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getHighlightTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightTextColor");
+            retObjectHighlightTextColor = classType.Get("HighlightTextColor");
+            JCObject val = (JCObject)retObjectHighlightTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightTextColor != null ? retObjectHighlightTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,10 +505,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getHotTrackColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHotTrackColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("HotTrackColor");
+            retObjectHotTrackColor = classType.Get("HotTrackColor");
+            JCObject val = (JCObject)retObjectHotTrackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotTrackColor != null ? retObjectHotTrackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +520,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getInactiveBorderColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveBorderColor");
+            retObjectInactiveBorderColor = classType.Get("InactiveBorderColor");
+            JCObject val = (JCObject)retObjectInactiveBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveBorderColor != null ? retObjectInactiveBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +535,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getInactiveCaptionColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionColor");
+            retObjectInactiveCaptionColor = classType.Get("InactiveCaptionColor");
+            JCObject val = (JCObject)retObjectInactiveCaptionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionColor != null ? retObjectInactiveCaptionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +550,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getInactiveCaptionTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionTextColor");
+            retObjectInactiveCaptionTextColor = classType.Get("InactiveCaptionTextColor");
+            JCObject val = (JCObject)retObjectInactiveCaptionTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionTextColor != null ? retObjectInactiveCaptionTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,10 +565,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getInfoColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoColor");
+            retObjectInfoColor = classType.Get("InfoColor");
+            JCObject val = (JCObject)retObjectInfoColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoColor != null ? retObjectInfoColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,10 +580,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getInfoTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoTextColor");
+            retObjectInfoTextColor = classType.Get("InfoTextColor");
+            JCObject val = (JCObject)retObjectInfoTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoTextColor != null ? retObjectInfoTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +595,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getMenuBarColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBarColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBarColor");
+            retObjectMenuBarColor = classType.Get("MenuBarColor");
+            JCObject val = (JCObject)retObjectMenuBarColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBarColor != null ? retObjectMenuBarColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,10 +610,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getMenuColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuColor");
+            retObjectMenuColor = classType.Get("MenuColor");
+            JCObject val = (JCObject)retObjectMenuColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuColor != null ? retObjectMenuColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,10 +625,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getMenuHighlightColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuHighlightColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuHighlightColor");
+            retObjectMenuHighlightColor = classType.Get("MenuHighlightColor");
+            JCObject val = (JCObject)retObjectMenuHighlightColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuHighlightColor != null ? retObjectMenuHighlightColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,10 +640,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getMenuTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuTextColor");
+            retObjectMenuTextColor = classType.Get("MenuTextColor");
+            JCObject val = (JCObject)retObjectMenuTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuTextColor != null ? retObjectMenuTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,10 +655,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getScrollBarColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollBarColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ScrollBarColor");
+            retObjectScrollBarColor = classType.Get("ScrollBarColor");
+            JCObject val = (JCObject)retObjectScrollBarColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollBarColor != null ? retObjectScrollBarColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,10 +670,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getWindowColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowColor");
+            retObjectWindowColor = classType.Get("WindowColor");
+            JCObject val = (JCObject)retObjectWindowColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowColor != null ? retObjectWindowColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,10 +685,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getWindowFrameColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowFrameColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowFrameColor");
+            retObjectWindowFrameColor = classType.Get("WindowFrameColor");
+            JCObject val = (JCObject)retObjectWindowFrameColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowFrameColor != null ? retObjectWindowFrameColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,10 +700,14 @@ public class SystemColors extends NetObject  {
 
     public static Color getWindowTextColor() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowTextColor");
+            retObjectWindowTextColor = classType.Get("WindowTextColor");
+            JCObject val = (JCObject)retObjectWindowTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowTextColor != null ? retObjectWindowTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,10 +715,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAccentColorBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorBrush");
+            retObjectAccentColorBrush = classType.Get("AccentColorBrush");
+            JCObject val = (JCObject)retObjectAccentColorBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorBrush != null ? retObjectAccentColorBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,10 +730,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAccentColorDark1Brush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark1Brush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark1Brush");
+            retObjectAccentColorDark1Brush = classType.Get("AccentColorDark1Brush");
+            JCObject val = (JCObject)retObjectAccentColorDark1Brush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark1Brush != null ? retObjectAccentColorDark1Brush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -589,10 +745,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAccentColorDark2Brush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark2Brush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark2Brush");
+            retObjectAccentColorDark2Brush = classType.Get("AccentColorDark2Brush");
+            JCObject val = (JCObject)retObjectAccentColorDark2Brush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark2Brush != null ? retObjectAccentColorDark2Brush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,10 +760,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAccentColorDark3Brush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark3Brush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark3Brush");
+            retObjectAccentColorDark3Brush = classType.Get("AccentColorDark3Brush");
+            JCObject val = (JCObject)retObjectAccentColorDark3Brush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark3Brush != null ? retObjectAccentColorDark3Brush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -611,10 +775,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAccentColorLight1Brush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight1Brush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight1Brush");
+            retObjectAccentColorLight1Brush = classType.Get("AccentColorLight1Brush");
+            JCObject val = (JCObject)retObjectAccentColorLight1Brush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight1Brush != null ? retObjectAccentColorLight1Brush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,10 +790,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAccentColorLight2Brush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight2Brush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight2Brush");
+            retObjectAccentColorLight2Brush = classType.Get("AccentColorLight2Brush");
+            JCObject val = (JCObject)retObjectAccentColorLight2Brush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight2Brush != null ? retObjectAccentColorLight2Brush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,10 +805,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAccentColorLight3Brush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight3Brush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight3Brush");
+            retObjectAccentColorLight3Brush = classType.Get("AccentColorLight3Brush");
+            JCObject val = (JCObject)retObjectAccentColorLight3Brush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight3Brush != null ? retObjectAccentColorLight3Brush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -644,10 +820,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getActiveBorderBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveBorderBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveBorderBrush");
+            retObjectActiveBorderBrush = classType.Get("ActiveBorderBrush");
+            JCObject val = (JCObject)retObjectActiveBorderBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveBorderBrush != null ? retObjectActiveBorderBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -655,10 +835,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getActiveCaptionBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionBrush");
+            retObjectActiveCaptionBrush = classType.Get("ActiveCaptionBrush");
+            JCObject val = (JCObject)retObjectActiveCaptionBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionBrush != null ? retObjectActiveCaptionBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,10 +850,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getActiveCaptionTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionTextBrush");
+            retObjectActiveCaptionTextBrush = classType.Get("ActiveCaptionTextBrush");
+            JCObject val = (JCObject)retObjectActiveCaptionTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionTextBrush != null ? retObjectActiveCaptionTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -677,10 +865,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getAppWorkspaceBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppWorkspaceBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("AppWorkspaceBrush");
+            retObjectAppWorkspaceBrush = classType.Get("AppWorkspaceBrush");
+            JCObject val = (JCObject)retObjectAppWorkspaceBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppWorkspaceBrush != null ? retObjectAppWorkspaceBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,10 +880,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getControlBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlBrush");
+            retObjectControlBrush = classType.Get("ControlBrush");
+            JCObject val = (JCObject)retObjectControlBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlBrush != null ? retObjectControlBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -699,10 +895,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getControlDarkBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkBrush");
+            retObjectControlDarkBrush = classType.Get("ControlDarkBrush");
+            JCObject val = (JCObject)retObjectControlDarkBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkBrush != null ? retObjectControlDarkBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -710,10 +910,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getControlDarkDarkBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkDarkBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkDarkBrush");
+            retObjectControlDarkDarkBrush = classType.Get("ControlDarkDarkBrush");
+            JCObject val = (JCObject)retObjectControlDarkDarkBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkDarkBrush != null ? retObjectControlDarkDarkBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -721,10 +925,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getControlLightBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightBrush");
+            retObjectControlLightBrush = classType.Get("ControlLightBrush");
+            JCObject val = (JCObject)retObjectControlLightBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightBrush != null ? retObjectControlLightBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -732,10 +940,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getControlLightLightBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightLightBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightLightBrush");
+            retObjectControlLightLightBrush = classType.Get("ControlLightLightBrush");
+            JCObject val = (JCObject)retObjectControlLightLightBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightLightBrush != null ? retObjectControlLightLightBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -743,10 +955,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getControlTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlTextBrush");
+            retObjectControlTextBrush = classType.Get("ControlTextBrush");
+            JCObject val = (JCObject)retObjectControlTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlTextBrush != null ? retObjectControlTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -754,10 +970,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getDesktopBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesktopBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesktopBrush");
+            retObjectDesktopBrush = classType.Get("DesktopBrush");
+            JCObject val = (JCObject)retObjectDesktopBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesktopBrush != null ? retObjectDesktopBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -765,10 +985,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getGradientActiveCaptionBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientActiveCaptionBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientActiveCaptionBrush");
+            retObjectGradientActiveCaptionBrush = classType.Get("GradientActiveCaptionBrush");
+            JCObject val = (JCObject)retObjectGradientActiveCaptionBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientActiveCaptionBrush != null ? retObjectGradientActiveCaptionBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -776,10 +1000,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getGradientInactiveCaptionBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientInactiveCaptionBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientInactiveCaptionBrush");
+            retObjectGradientInactiveCaptionBrush = classType.Get("GradientInactiveCaptionBrush");
+            JCObject val = (JCObject)retObjectGradientInactiveCaptionBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientInactiveCaptionBrush != null ? retObjectGradientInactiveCaptionBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -787,10 +1015,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getGrayTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGrayTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("GrayTextBrush");
+            retObjectGrayTextBrush = classType.Get("GrayTextBrush");
+            JCObject val = (JCObject)retObjectGrayTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGrayTextBrush != null ? retObjectGrayTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,10 +1030,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getHighlightBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightBrush");
+            retObjectHighlightBrush = classType.Get("HighlightBrush");
+            JCObject val = (JCObject)retObjectHighlightBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightBrush != null ? retObjectHighlightBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -809,10 +1045,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getHighlightTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightTextBrush");
+            retObjectHighlightTextBrush = classType.Get("HighlightTextBrush");
+            JCObject val = (JCObject)retObjectHighlightTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightTextBrush != null ? retObjectHighlightTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,10 +1060,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getHotTrackBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHotTrackBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("HotTrackBrush");
+            retObjectHotTrackBrush = classType.Get("HotTrackBrush");
+            JCObject val = (JCObject)retObjectHotTrackBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotTrackBrush != null ? retObjectHotTrackBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -831,10 +1075,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getInactiveBorderBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveBorderBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveBorderBrush");
+            retObjectInactiveBorderBrush = classType.Get("InactiveBorderBrush");
+            JCObject val = (JCObject)retObjectInactiveBorderBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveBorderBrush != null ? retObjectInactiveBorderBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -842,10 +1090,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getInactiveCaptionBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionBrush");
+            retObjectInactiveCaptionBrush = classType.Get("InactiveCaptionBrush");
+            JCObject val = (JCObject)retObjectInactiveCaptionBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionBrush != null ? retObjectInactiveCaptionBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -853,10 +1105,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getInactiveCaptionTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionTextBrush");
+            retObjectInactiveCaptionTextBrush = classType.Get("InactiveCaptionTextBrush");
+            JCObject val = (JCObject)retObjectInactiveCaptionTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionTextBrush != null ? retObjectInactiveCaptionTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -864,10 +1120,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getInactiveSelectionHighlightBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveSelectionHighlightBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveSelectionHighlightBrush");
+            retObjectInactiveSelectionHighlightBrush = classType.Get("InactiveSelectionHighlightBrush");
+            JCObject val = (JCObject)retObjectInactiveSelectionHighlightBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveSelectionHighlightBrush != null ? retObjectInactiveSelectionHighlightBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -875,10 +1135,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getInactiveSelectionHighlightTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveSelectionHighlightTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveSelectionHighlightTextBrush");
+            retObjectInactiveSelectionHighlightTextBrush = classType.Get("InactiveSelectionHighlightTextBrush");
+            JCObject val = (JCObject)retObjectInactiveSelectionHighlightTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveSelectionHighlightTextBrush != null ? retObjectInactiveSelectionHighlightTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -886,10 +1150,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getInfoBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoBrush");
+            retObjectInfoBrush = classType.Get("InfoBrush");
+            JCObject val = (JCObject)retObjectInfoBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoBrush != null ? retObjectInfoBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -897,10 +1165,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getInfoTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoTextBrush");
+            retObjectInfoTextBrush = classType.Get("InfoTextBrush");
+            JCObject val = (JCObject)retObjectInfoTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoTextBrush != null ? retObjectInfoTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -908,10 +1180,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getMenuBarBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBarBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBarBrush");
+            retObjectMenuBarBrush = classType.Get("MenuBarBrush");
+            JCObject val = (JCObject)retObjectMenuBarBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBarBrush != null ? retObjectMenuBarBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -919,10 +1195,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getMenuBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBrush");
+            retObjectMenuBrush = classType.Get("MenuBrush");
+            JCObject val = (JCObject)retObjectMenuBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBrush != null ? retObjectMenuBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -930,10 +1210,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getMenuHighlightBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuHighlightBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuHighlightBrush");
+            retObjectMenuHighlightBrush = classType.Get("MenuHighlightBrush");
+            JCObject val = (JCObject)retObjectMenuHighlightBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuHighlightBrush != null ? retObjectMenuHighlightBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -941,10 +1225,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getMenuTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuTextBrush");
+            retObjectMenuTextBrush = classType.Get("MenuTextBrush");
+            JCObject val = (JCObject)retObjectMenuTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuTextBrush != null ? retObjectMenuTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -952,10 +1240,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getScrollBarBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollBarBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("ScrollBarBrush");
+            retObjectScrollBarBrush = classType.Get("ScrollBarBrush");
+            JCObject val = (JCObject)retObjectScrollBarBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollBarBrush != null ? retObjectScrollBarBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -963,10 +1255,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getWindowBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowBrush");
+            retObjectWindowBrush = classType.Get("WindowBrush");
+            JCObject val = (JCObject)retObjectWindowBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowBrush != null ? retObjectWindowBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -974,10 +1270,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getWindowFrameBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowFrameBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowFrameBrush");
+            retObjectWindowFrameBrush = classType.Get("WindowFrameBrush");
+            JCObject val = (JCObject)retObjectWindowFrameBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowFrameBrush != null ? retObjectWindowFrameBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -985,10 +1285,14 @@ public class SystemColors extends NetObject  {
 
     public static SolidColorBrush getWindowTextBrush() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowTextBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowTextBrush");
+            retObjectWindowTextBrush = classType.Get("WindowTextBrush");
+            JCObject val = (JCObject)retObjectWindowTextBrush;
             return new SolidColorBrush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowTextBrush != null ? retObjectWindowTextBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -996,10 +1300,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorBrushKey");
+            retObjectAccentColorBrushKey = classType.Get("AccentColorBrushKey");
+            JCObject val = (JCObject)retObjectAccentColorBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorBrushKey != null ? retObjectAccentColorBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1007,10 +1315,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorDark1BrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark1BrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark1BrushKey");
+            retObjectAccentColorDark1BrushKey = classType.Get("AccentColorDark1BrushKey");
+            JCObject val = (JCObject)retObjectAccentColorDark1BrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark1BrushKey != null ? retObjectAccentColorDark1BrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1018,10 +1330,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorDark1Key() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark1Key = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark1Key");
+            retObjectAccentColorDark1Key = classType.Get("AccentColorDark1Key");
+            JCObject val = (JCObject)retObjectAccentColorDark1Key;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark1Key != null ? retObjectAccentColorDark1Key.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1029,10 +1345,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorDark2BrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark2BrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark2BrushKey");
+            retObjectAccentColorDark2BrushKey = classType.Get("AccentColorDark2BrushKey");
+            JCObject val = (JCObject)retObjectAccentColorDark2BrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark2BrushKey != null ? retObjectAccentColorDark2BrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1040,10 +1360,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorDark2Key() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark2Key = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark2Key");
+            retObjectAccentColorDark2Key = classType.Get("AccentColorDark2Key");
+            JCObject val = (JCObject)retObjectAccentColorDark2Key;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark2Key != null ? retObjectAccentColorDark2Key.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1051,10 +1375,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorDark3BrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark3BrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark3BrushKey");
+            retObjectAccentColorDark3BrushKey = classType.Get("AccentColorDark3BrushKey");
+            JCObject val = (JCObject)retObjectAccentColorDark3BrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark3BrushKey != null ? retObjectAccentColorDark3BrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1062,10 +1390,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorDark3Key() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorDark3Key = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorDark3Key");
+            retObjectAccentColorDark3Key = classType.Get("AccentColorDark3Key");
+            JCObject val = (JCObject)retObjectAccentColorDark3Key;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorDark3Key != null ? retObjectAccentColorDark3Key.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1073,10 +1405,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorKey");
+            retObjectAccentColorKey = classType.Get("AccentColorKey");
+            JCObject val = (JCObject)retObjectAccentColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorKey != null ? retObjectAccentColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1084,10 +1420,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorLight1BrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight1BrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight1BrushKey");
+            retObjectAccentColorLight1BrushKey = classType.Get("AccentColorLight1BrushKey");
+            JCObject val = (JCObject)retObjectAccentColorLight1BrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight1BrushKey != null ? retObjectAccentColorLight1BrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1095,10 +1435,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorLight1Key() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight1Key = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight1Key");
+            retObjectAccentColorLight1Key = classType.Get("AccentColorLight1Key");
+            JCObject val = (JCObject)retObjectAccentColorLight1Key;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight1Key != null ? retObjectAccentColorLight1Key.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1106,10 +1450,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorLight2BrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight2BrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight2BrushKey");
+            retObjectAccentColorLight2BrushKey = classType.Get("AccentColorLight2BrushKey");
+            JCObject val = (JCObject)retObjectAccentColorLight2BrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight2BrushKey != null ? retObjectAccentColorLight2BrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1117,10 +1465,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorLight2Key() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight2Key = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight2Key");
+            retObjectAccentColorLight2Key = classType.Get("AccentColorLight2Key");
+            JCObject val = (JCObject)retObjectAccentColorLight2Key;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight2Key != null ? retObjectAccentColorLight2Key.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1128,10 +1480,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorLight3BrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight3BrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight3BrushKey");
+            retObjectAccentColorLight3BrushKey = classType.Get("AccentColorLight3BrushKey");
+            JCObject val = (JCObject)retObjectAccentColorLight3BrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight3BrushKey != null ? retObjectAccentColorLight3BrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1139,10 +1495,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAccentColorLight3Key() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAccentColorLight3Key = null;
         try {
-            JCObject val = (JCObject)classType.Get("AccentColorLight3Key");
+            retObjectAccentColorLight3Key = classType.Get("AccentColorLight3Key");
+            JCObject val = (JCObject)retObjectAccentColorLight3Key;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccentColorLight3Key != null ? retObjectAccentColorLight3Key.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1150,10 +1510,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getActiveBorderBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveBorderBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveBorderBrushKey");
+            retObjectActiveBorderBrushKey = classType.Get("ActiveBorderBrushKey");
+            JCObject val = (JCObject)retObjectActiveBorderBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveBorderBrushKey != null ? retObjectActiveBorderBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1161,10 +1525,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getActiveBorderColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveBorderColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveBorderColorKey");
+            retObjectActiveBorderColorKey = classType.Get("ActiveBorderColorKey");
+            JCObject val = (JCObject)retObjectActiveBorderColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveBorderColorKey != null ? retObjectActiveBorderColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1172,10 +1540,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getActiveCaptionBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionBrushKey");
+            retObjectActiveCaptionBrushKey = classType.Get("ActiveCaptionBrushKey");
+            JCObject val = (JCObject)retObjectActiveCaptionBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionBrushKey != null ? retObjectActiveCaptionBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1183,10 +1555,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getActiveCaptionColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionColorKey");
+            retObjectActiveCaptionColorKey = classType.Get("ActiveCaptionColorKey");
+            JCObject val = (JCObject)retObjectActiveCaptionColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionColorKey != null ? retObjectActiveCaptionColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1194,10 +1570,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getActiveCaptionTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionTextBrushKey");
+            retObjectActiveCaptionTextBrushKey = classType.Get("ActiveCaptionTextBrushKey");
+            JCObject val = (JCObject)retObjectActiveCaptionTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionTextBrushKey != null ? retObjectActiveCaptionTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1205,10 +1585,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getActiveCaptionTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveCaptionTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveCaptionTextColorKey");
+            retObjectActiveCaptionTextColorKey = classType.Get("ActiveCaptionTextColorKey");
+            JCObject val = (JCObject)retObjectActiveCaptionTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveCaptionTextColorKey != null ? retObjectActiveCaptionTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1216,10 +1600,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAppWorkspaceBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppWorkspaceBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AppWorkspaceBrushKey");
+            retObjectAppWorkspaceBrushKey = classType.Get("AppWorkspaceBrushKey");
+            JCObject val = (JCObject)retObjectAppWorkspaceBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppWorkspaceBrushKey != null ? retObjectAppWorkspaceBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1227,10 +1615,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getAppWorkspaceColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppWorkspaceColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("AppWorkspaceColorKey");
+            retObjectAppWorkspaceColorKey = classType.Get("AppWorkspaceColorKey");
+            JCObject val = (JCObject)retObjectAppWorkspaceColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppWorkspaceColorKey != null ? retObjectAppWorkspaceColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1238,10 +1630,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlBrushKey");
+            retObjectControlBrushKey = classType.Get("ControlBrushKey");
+            JCObject val = (JCObject)retObjectControlBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlBrushKey != null ? retObjectControlBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1249,10 +1645,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlColorKey");
+            retObjectControlColorKey = classType.Get("ControlColorKey");
+            JCObject val = (JCObject)retObjectControlColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlColorKey != null ? retObjectControlColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1260,10 +1660,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlDarkBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkBrushKey");
+            retObjectControlDarkBrushKey = classType.Get("ControlDarkBrushKey");
+            JCObject val = (JCObject)retObjectControlDarkBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkBrushKey != null ? retObjectControlDarkBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1271,10 +1675,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlDarkColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkColorKey");
+            retObjectControlDarkColorKey = classType.Get("ControlDarkColorKey");
+            JCObject val = (JCObject)retObjectControlDarkColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkColorKey != null ? retObjectControlDarkColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1282,10 +1690,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlDarkDarkBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkDarkBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkDarkBrushKey");
+            retObjectControlDarkDarkBrushKey = classType.Get("ControlDarkDarkBrushKey");
+            JCObject val = (JCObject)retObjectControlDarkDarkBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkDarkBrushKey != null ? retObjectControlDarkDarkBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1293,10 +1705,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlDarkDarkColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlDarkDarkColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlDarkDarkColorKey");
+            retObjectControlDarkDarkColorKey = classType.Get("ControlDarkDarkColorKey");
+            JCObject val = (JCObject)retObjectControlDarkDarkColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlDarkDarkColorKey != null ? retObjectControlDarkDarkColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1304,10 +1720,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlLightBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightBrushKey");
+            retObjectControlLightBrushKey = classType.Get("ControlLightBrushKey");
+            JCObject val = (JCObject)retObjectControlLightBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightBrushKey != null ? retObjectControlLightBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1315,10 +1735,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlLightColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightColorKey");
+            retObjectControlLightColorKey = classType.Get("ControlLightColorKey");
+            JCObject val = (JCObject)retObjectControlLightColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightColorKey != null ? retObjectControlLightColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1326,10 +1750,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlLightLightBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightLightBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightLightBrushKey");
+            retObjectControlLightLightBrushKey = classType.Get("ControlLightLightBrushKey");
+            JCObject val = (JCObject)retObjectControlLightLightBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightLightBrushKey != null ? retObjectControlLightLightBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1337,10 +1765,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlLightLightColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlLightLightColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlLightLightColorKey");
+            retObjectControlLightLightColorKey = classType.Get("ControlLightLightColorKey");
+            JCObject val = (JCObject)retObjectControlLightLightColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlLightLightColorKey != null ? retObjectControlLightLightColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1348,10 +1780,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlTextBrushKey");
+            retObjectControlTextBrushKey = classType.Get("ControlTextBrushKey");
+            JCObject val = (JCObject)retObjectControlTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlTextBrushKey != null ? retObjectControlTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1359,10 +1795,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getControlTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectControlTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ControlTextColorKey");
+            retObjectControlTextColorKey = classType.Get("ControlTextColorKey");
+            JCObject val = (JCObject)retObjectControlTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlTextColorKey != null ? retObjectControlTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1370,10 +1810,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getDesktopBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesktopBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesktopBrushKey");
+            retObjectDesktopBrushKey = classType.Get("DesktopBrushKey");
+            JCObject val = (JCObject)retObjectDesktopBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesktopBrushKey != null ? retObjectDesktopBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1381,10 +1825,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getDesktopColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesktopColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesktopColorKey");
+            retObjectDesktopColorKey = classType.Get("DesktopColorKey");
+            JCObject val = (JCObject)retObjectDesktopColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesktopColorKey != null ? retObjectDesktopColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1392,10 +1840,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getGradientActiveCaptionBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientActiveCaptionBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientActiveCaptionBrushKey");
+            retObjectGradientActiveCaptionBrushKey = classType.Get("GradientActiveCaptionBrushKey");
+            JCObject val = (JCObject)retObjectGradientActiveCaptionBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientActiveCaptionBrushKey != null ? retObjectGradientActiveCaptionBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1403,10 +1855,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getGradientActiveCaptionColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientActiveCaptionColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientActiveCaptionColorKey");
+            retObjectGradientActiveCaptionColorKey = classType.Get("GradientActiveCaptionColorKey");
+            JCObject val = (JCObject)retObjectGradientActiveCaptionColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientActiveCaptionColorKey != null ? retObjectGradientActiveCaptionColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1414,10 +1870,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getGradientInactiveCaptionBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientInactiveCaptionBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientInactiveCaptionBrushKey");
+            retObjectGradientInactiveCaptionBrushKey = classType.Get("GradientInactiveCaptionBrushKey");
+            JCObject val = (JCObject)retObjectGradientInactiveCaptionBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientInactiveCaptionBrushKey != null ? retObjectGradientInactiveCaptionBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1425,10 +1885,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getGradientInactiveCaptionColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGradientInactiveCaptionColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("GradientInactiveCaptionColorKey");
+            retObjectGradientInactiveCaptionColorKey = classType.Get("GradientInactiveCaptionColorKey");
+            JCObject val = (JCObject)retObjectGradientInactiveCaptionColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGradientInactiveCaptionColorKey != null ? retObjectGradientInactiveCaptionColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1436,10 +1900,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getGrayTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGrayTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("GrayTextBrushKey");
+            retObjectGrayTextBrushKey = classType.Get("GrayTextBrushKey");
+            JCObject val = (JCObject)retObjectGrayTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGrayTextBrushKey != null ? retObjectGrayTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1447,10 +1915,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getGrayTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGrayTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("GrayTextColorKey");
+            retObjectGrayTextColorKey = classType.Get("GrayTextColorKey");
+            JCObject val = (JCObject)retObjectGrayTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGrayTextColorKey != null ? retObjectGrayTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1458,10 +1930,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getHighlightBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightBrushKey");
+            retObjectHighlightBrushKey = classType.Get("HighlightBrushKey");
+            JCObject val = (JCObject)retObjectHighlightBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightBrushKey != null ? retObjectHighlightBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1469,10 +1945,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getHighlightColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightColorKey");
+            retObjectHighlightColorKey = classType.Get("HighlightColorKey");
+            JCObject val = (JCObject)retObjectHighlightColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightColorKey != null ? retObjectHighlightColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1480,10 +1960,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getHighlightTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightTextBrushKey");
+            retObjectHighlightTextBrushKey = classType.Get("HighlightTextBrushKey");
+            JCObject val = (JCObject)retObjectHighlightTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightTextBrushKey != null ? retObjectHighlightTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1491,10 +1975,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getHighlightTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighlightTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HighlightTextColorKey");
+            retObjectHighlightTextColorKey = classType.Get("HighlightTextColorKey");
+            JCObject val = (JCObject)retObjectHighlightTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHighlightTextColorKey != null ? retObjectHighlightTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1502,10 +1990,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getHotTrackBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHotTrackBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HotTrackBrushKey");
+            retObjectHotTrackBrushKey = classType.Get("HotTrackBrushKey");
+            JCObject val = (JCObject)retObjectHotTrackBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotTrackBrushKey != null ? retObjectHotTrackBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1513,10 +2005,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getHotTrackColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHotTrackColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("HotTrackColorKey");
+            retObjectHotTrackColorKey = classType.Get("HotTrackColorKey");
+            JCObject val = (JCObject)retObjectHotTrackColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotTrackColorKey != null ? retObjectHotTrackColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1524,10 +2020,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveBorderBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveBorderBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveBorderBrushKey");
+            retObjectInactiveBorderBrushKey = classType.Get("InactiveBorderBrushKey");
+            JCObject val = (JCObject)retObjectInactiveBorderBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveBorderBrushKey != null ? retObjectInactiveBorderBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1535,10 +2035,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveBorderColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveBorderColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveBorderColorKey");
+            retObjectInactiveBorderColorKey = classType.Get("InactiveBorderColorKey");
+            JCObject val = (JCObject)retObjectInactiveBorderColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveBorderColorKey != null ? retObjectInactiveBorderColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1546,10 +2050,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveCaptionBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionBrushKey");
+            retObjectInactiveCaptionBrushKey = classType.Get("InactiveCaptionBrushKey");
+            JCObject val = (JCObject)retObjectInactiveCaptionBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionBrushKey != null ? retObjectInactiveCaptionBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1557,10 +2065,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveCaptionColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionColorKey");
+            retObjectInactiveCaptionColorKey = classType.Get("InactiveCaptionColorKey");
+            JCObject val = (JCObject)retObjectInactiveCaptionColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionColorKey != null ? retObjectInactiveCaptionColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1568,10 +2080,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveCaptionTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionTextBrushKey");
+            retObjectInactiveCaptionTextBrushKey = classType.Get("InactiveCaptionTextBrushKey");
+            JCObject val = (JCObject)retObjectInactiveCaptionTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionTextBrushKey != null ? retObjectInactiveCaptionTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1579,10 +2095,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveCaptionTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveCaptionTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveCaptionTextColorKey");
+            retObjectInactiveCaptionTextColorKey = classType.Get("InactiveCaptionTextColorKey");
+            JCObject val = (JCObject)retObjectInactiveCaptionTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveCaptionTextColorKey != null ? retObjectInactiveCaptionTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1590,10 +2110,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveSelectionHighlightBrushKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveSelectionHighlightBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveSelectionHighlightBrushKey");
+            retObjectInactiveSelectionHighlightBrushKey = classType.Get("InactiveSelectionHighlightBrushKey");
+            JCObject val = (JCObject)retObjectInactiveSelectionHighlightBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveSelectionHighlightBrushKey != null ? retObjectInactiveSelectionHighlightBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1601,10 +2125,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInactiveSelectionHighlightTextBrushKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInactiveSelectionHighlightTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InactiveSelectionHighlightTextBrushKey");
+            retObjectInactiveSelectionHighlightTextBrushKey = classType.Get("InactiveSelectionHighlightTextBrushKey");
+            JCObject val = (JCObject)retObjectInactiveSelectionHighlightTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactiveSelectionHighlightTextBrushKey != null ? retObjectInactiveSelectionHighlightTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1612,10 +2140,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInfoBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoBrushKey");
+            retObjectInfoBrushKey = classType.Get("InfoBrushKey");
+            JCObject val = (JCObject)retObjectInfoBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoBrushKey != null ? retObjectInfoBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1623,10 +2155,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInfoColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoColorKey");
+            retObjectInfoColorKey = classType.Get("InfoColorKey");
+            JCObject val = (JCObject)retObjectInfoColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoColorKey != null ? retObjectInfoColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1634,10 +2170,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInfoTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoTextBrushKey");
+            retObjectInfoTextBrushKey = classType.Get("InfoTextBrushKey");
+            JCObject val = (JCObject)retObjectInfoTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoTextBrushKey != null ? retObjectInfoTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1645,10 +2185,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getInfoTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfoTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("InfoTextColorKey");
+            retObjectInfoTextColorKey = classType.Get("InfoTextColorKey");
+            JCObject val = (JCObject)retObjectInfoTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfoTextColorKey != null ? retObjectInfoTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1656,10 +2200,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuBarBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBarBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBarBrushKey");
+            retObjectMenuBarBrushKey = classType.Get("MenuBarBrushKey");
+            JCObject val = (JCObject)retObjectMenuBarBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBarBrushKey != null ? retObjectMenuBarBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1667,10 +2215,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuBarColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBarColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBarColorKey");
+            retObjectMenuBarColorKey = classType.Get("MenuBarColorKey");
+            JCObject val = (JCObject)retObjectMenuBarColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBarColorKey != null ? retObjectMenuBarColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1678,10 +2230,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBrushKey");
+            retObjectMenuBrushKey = classType.Get("MenuBrushKey");
+            JCObject val = (JCObject)retObjectMenuBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBrushKey != null ? retObjectMenuBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1689,10 +2245,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuColorKey");
+            retObjectMenuColorKey = classType.Get("MenuColorKey");
+            JCObject val = (JCObject)retObjectMenuColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuColorKey != null ? retObjectMenuColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1700,10 +2260,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuHighlightBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuHighlightBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuHighlightBrushKey");
+            retObjectMenuHighlightBrushKey = classType.Get("MenuHighlightBrushKey");
+            JCObject val = (JCObject)retObjectMenuHighlightBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuHighlightBrushKey != null ? retObjectMenuHighlightBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1711,10 +2275,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuHighlightColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuHighlightColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuHighlightColorKey");
+            retObjectMenuHighlightColorKey = classType.Get("MenuHighlightColorKey");
+            JCObject val = (JCObject)retObjectMenuHighlightColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuHighlightColorKey != null ? retObjectMenuHighlightColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1722,10 +2290,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuTextBrushKey");
+            retObjectMenuTextBrushKey = classType.Get("MenuTextBrushKey");
+            JCObject val = (JCObject)retObjectMenuTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuTextBrushKey != null ? retObjectMenuTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1733,10 +2305,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getMenuTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuTextColorKey");
+            retObjectMenuTextColorKey = classType.Get("MenuTextColorKey");
+            JCObject val = (JCObject)retObjectMenuTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuTextColorKey != null ? retObjectMenuTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1744,10 +2320,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getScrollBarBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollBarBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ScrollBarBrushKey");
+            retObjectScrollBarBrushKey = classType.Get("ScrollBarBrushKey");
+            JCObject val = (JCObject)retObjectScrollBarBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollBarBrushKey != null ? retObjectScrollBarBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1755,10 +2335,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getScrollBarColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScrollBarColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ScrollBarColorKey");
+            retObjectScrollBarColorKey = classType.Get("ScrollBarColorKey");
+            JCObject val = (JCObject)retObjectScrollBarColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollBarColorKey != null ? retObjectScrollBarColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1766,10 +2350,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getWindowBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowBrushKey");
+            retObjectWindowBrushKey = classType.Get("WindowBrushKey");
+            JCObject val = (JCObject)retObjectWindowBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowBrushKey != null ? retObjectWindowBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1777,10 +2365,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getWindowColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowColorKey");
+            retObjectWindowColorKey = classType.Get("WindowColorKey");
+            JCObject val = (JCObject)retObjectWindowColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowColorKey != null ? retObjectWindowColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1788,10 +2380,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getWindowFrameBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowFrameBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowFrameBrushKey");
+            retObjectWindowFrameBrushKey = classType.Get("WindowFrameBrushKey");
+            JCObject val = (JCObject)retObjectWindowFrameBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowFrameBrushKey != null ? retObjectWindowFrameBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1799,10 +2395,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getWindowFrameColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowFrameColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowFrameColorKey");
+            retObjectWindowFrameColorKey = classType.Get("WindowFrameColorKey");
+            JCObject val = (JCObject)retObjectWindowFrameColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowFrameColorKey != null ? retObjectWindowFrameColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1810,10 +2410,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getWindowTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowTextBrushKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowTextBrushKey");
+            retObjectWindowTextBrushKey = classType.Get("WindowTextBrushKey");
+            JCObject val = (JCObject)retObjectWindowTextBrushKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowTextBrushKey != null ? retObjectWindowTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1821,10 +2425,14 @@ public class SystemColors extends NetObject  {
 
     public static ResourceKey getWindowTextColorKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowTextColorKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowTextColorKey");
+            retObjectWindowTextColorKey = classType.Get("WindowTextColorKey");
+            JCObject val = (JCObject)retObjectWindowTextColorKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowTextColorKey != null ? retObjectWindowTextColorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,7 +170,7 @@ public class StopRoutingHandler extends NetObject implements system.web.routing.
      */
     @Deprecated 
     public IHttpHandler GetHttpHandler(RequestContext requestContext) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteHandler to obtain the full interface.");
     }
 
 

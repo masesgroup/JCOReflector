@@ -171,10 +171,14 @@ public class SiteMapDesignerHierarchicalDataSourceView extends DesignerHierarchi
     
     public IHierarchicalEnumerable GetDesignTimeData(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeData = null;
         try {
-            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", isSampleData.getJCRefOut());
+            retObjectGetDesignTimeData = classInstance.Invoke("GetDesignTimeData", isSampleData.getJCRefOut());
+            JCObject objGetDesignTimeData = (JCObject)retObjectGetDesignTimeData;
             return new IHierarchicalEnumerableImplementation(objGetDesignTimeData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignTimeData != null ? retObjectGetDesignTimeData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

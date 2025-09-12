@@ -181,10 +181,14 @@ public class BindingContext extends NetObject  {
     
     public BindingContext Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingContext(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +200,14 @@ public class BindingContext extends NetObject  {
     
     public BindingElementCollection getRemainingBindingElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemainingBindingElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemainingBindingElements");
+            retObjectRemainingBindingElements = classInstance.Get("RemainingBindingElements");
+            JCObject val = (JCObject)retObjectRemainingBindingElements;
             return new BindingElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemainingBindingElements != null ? retObjectRemainingBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +215,14 @@ public class BindingContext extends NetObject  {
 
     public BindingParameterCollection getBindingParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingParameters");
+            retObjectBindingParameters = classInstance.Get("BindingParameters");
+            JCObject val = (JCObject)retObjectBindingParameters;
             return new BindingParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingParameters != null ? retObjectBindingParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +230,14 @@ public class BindingContext extends NetObject  {
 
     public CustomBinding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new CustomBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +245,14 @@ public class BindingContext extends NetObject  {
 
     public ListenUriMode getListenUriMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenUriMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenUriMode");
+            retObjectListenUriMode = classInstance.Get("ListenUriMode");
+            JCObject val = (JCObject)retObjectListenUriMode;
             return new ListenUriMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenUriMode != null ? retObjectListenUriMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +260,7 @@ public class BindingContext extends NetObject  {
 
     public void setListenUriMode(ListenUriMode ListenUriMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenUriMode", ListenUriMode == null ? null : ListenUriMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,9 +270,13 @@ public class BindingContext extends NetObject  {
 
     public java.lang.String getListenUriRelativeAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenUriRelativeAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("ListenUriRelativeAddress");
+            retObjectListenUriRelativeAddress = classInstance.Get("ListenUriRelativeAddress");
+            return (java.lang.String)retObjectListenUriRelativeAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectListenUriRelativeAddress != null ? retObjectListenUriRelativeAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +284,7 @@ public class BindingContext extends NetObject  {
 
     public void setListenUriRelativeAddress(java.lang.String ListenUriRelativeAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenUriRelativeAddress", ListenUriRelativeAddress);
         } catch (JCNativeException jcne) {
@@ -270,10 +294,14 @@ public class BindingContext extends NetObject  {
 
     public Uri getListenUriBaseAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenUriBaseAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenUriBaseAddress");
+            retObjectListenUriBaseAddress = classInstance.Get("ListenUriBaseAddress");
+            JCObject val = (JCObject)retObjectListenUriBaseAddress;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenUriBaseAddress != null ? retObjectListenUriBaseAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +309,7 @@ public class BindingContext extends NetObject  {
 
     public void setListenUriBaseAddress(Uri ListenUriBaseAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenUriBaseAddress", ListenUriBaseAddress == null ? null : ListenUriBaseAddress.getJCOInstance());
         } catch (JCNativeException jcne) {

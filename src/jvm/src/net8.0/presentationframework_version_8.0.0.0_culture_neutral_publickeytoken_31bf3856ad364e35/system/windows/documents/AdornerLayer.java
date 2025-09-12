@@ -162,16 +162,20 @@ public class AdornerLayer extends FrameworkElement  {
     
     public Adorner[] GetAdorners(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAdorners = null;
         try {
             ArrayList<Adorner> resultingArrayList = new ArrayList<Adorner>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAdorners", element == null ? null : element.getJCOInstance());
+            retObjectGetAdorners = classInstance.Invoke("GetAdorners", element == null ? null : element.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetAdorners;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Adorner(resultingObject));
             }
             Adorner[] resultingArray = new Adorner[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAdorners != null ? retObjectGetAdorners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class AdornerLayer extends FrameworkElement  {
 
     public static AdornerLayer GetAdornerLayer(Visual visual) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAdornerLayer = null;
         try {
-            JCObject objGetAdornerLayer = (JCObject)classType.Invoke("GetAdornerLayer", visual == null ? null : visual.getJCOInstance());
+            retObjectGetAdornerLayer = classType.Invoke("GetAdornerLayer", visual == null ? null : visual.getJCOInstance());
+            JCObject objGetAdornerLayer = (JCObject)retObjectGetAdornerLayer;
             return new AdornerLayer(objGetAdornerLayer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAdornerLayer != null ? retObjectGetAdornerLayer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class AdornerLayer extends FrameworkElement  {
 
     public AdornerHitTestResult AdornerHitTest(Point point) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdornerHitTest = null;
         try {
-            JCObject objAdornerHitTest = (JCObject)classInstance.Invoke("AdornerHitTest", point == null ? null : point.getJCOInstance());
+            retObjectAdornerHitTest = classInstance.Invoke("AdornerHitTest", point == null ? null : point.getJCOInstance());
+            JCObject objAdornerHitTest = (JCObject)retObjectAdornerHitTest;
             return new AdornerHitTestResult(objAdornerHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdornerHitTest != null ? retObjectAdornerHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class AdornerLayer extends FrameworkElement  {
 
     public void Add(Adorner adorner) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", adorner == null ? null : adorner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +223,7 @@ public class AdornerLayer extends FrameworkElement  {
 
     public void Remove(Adorner adorner) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", adorner == null ? null : adorner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +233,7 @@ public class AdornerLayer extends FrameworkElement  {
 
     public void Update() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update");
         } catch (JCNativeException jcne) {
@@ -231,7 +243,7 @@ public class AdornerLayer extends FrameworkElement  {
 
     public void Update(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {

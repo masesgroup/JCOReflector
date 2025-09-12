@@ -167,10 +167,14 @@ public class SingleSignOnDescriptor extends RoleDescriptor  {
     
     public IndexedProtocolEndpointDictionary getArtifactResolutionServices() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArtifactResolutionServices = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ArtifactResolutionServices");
+            retObjectArtifactResolutionServices = classInstance.Get("ArtifactResolutionServices");
+            JCObject val = (JCObject)retObjectArtifactResolutionServices;
             return new IndexedProtocolEndpointDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArtifactResolutionServices != null ? retObjectArtifactResolutionServices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

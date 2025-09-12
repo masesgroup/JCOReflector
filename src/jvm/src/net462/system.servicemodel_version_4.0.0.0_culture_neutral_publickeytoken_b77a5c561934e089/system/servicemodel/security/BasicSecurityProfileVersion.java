@@ -158,10 +158,14 @@ public class BasicSecurityProfileVersion extends NetObject  {
     
     public static BasicSecurityProfileVersion getBasicSecurityProfile10() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBasicSecurityProfile10 = null;
         try {
-            JCObject val = (JCObject)classType.Get("BasicSecurityProfile10");
+            retObjectBasicSecurityProfile10 = classType.Get("BasicSecurityProfile10");
+            JCObject val = (JCObject)retObjectBasicSecurityProfile10;
             return new BasicSecurityProfileVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBasicSecurityProfile10 != null ? retObjectBasicSecurityProfile10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

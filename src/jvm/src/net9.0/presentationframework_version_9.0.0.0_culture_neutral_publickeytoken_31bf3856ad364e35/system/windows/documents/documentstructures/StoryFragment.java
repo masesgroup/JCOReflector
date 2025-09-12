@@ -164,7 +164,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
     
     public void Add(BlockElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -187,7 +187,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -196,9 +196,13 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
     
     public java.lang.String getFragmentName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentName = null;
         try {
-            return (java.lang.String)classInstance.Get("FragmentName");
+            retObjectFragmentName = classInstance.Get("FragmentName");
+            return (java.lang.String)retObjectFragmentName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFragmentName != null ? retObjectFragmentName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +210,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
 
     public void setFragmentName(java.lang.String FragmentName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FragmentName", FragmentName);
         } catch (JCNativeException jcne) {
@@ -216,9 +220,13 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
 
     public java.lang.String getFragmentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentType = null;
         try {
-            return (java.lang.String)classInstance.Get("FragmentType");
+            retObjectFragmentType = classInstance.Get("FragmentType");
+            return (java.lang.String)retObjectFragmentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFragmentType != null ? retObjectFragmentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +234,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
 
     public void setFragmentType(java.lang.String FragmentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FragmentType", FragmentType);
         } catch (JCNativeException jcne) {
@@ -236,9 +244,13 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
 
     public java.lang.String getStoryName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoryName = null;
         try {
-            return (java.lang.String)classInstance.Get("StoryName");
+            retObjectStoryName = classInstance.Get("StoryName");
+            return (java.lang.String)retObjectStoryName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStoryName != null ? retObjectStoryName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +258,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
 
     public void setStoryName(java.lang.String StoryName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StoryName", StoryName);
         } catch (JCNativeException jcne) {

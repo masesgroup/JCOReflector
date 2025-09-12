@@ -159,9 +159,19 @@ public class PageScalingFactorRange extends NetObject  {
     
     public int getMaximumScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumScale = null;
         try {
-            return (int)classInstance.Get("MaximumScale");
+            retObjectMaximumScale = classInstance.Get("MaximumScale");
+            return (int)retObjectMaximumScale;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumScaleNumber = (java.lang.Number)retObjectMaximumScale;
+                return retObjectMaximumScaleNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumScale != null ? retObjectMaximumScale.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +179,19 @@ public class PageScalingFactorRange extends NetObject  {
 
     public int getMinimumScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumScale = null;
         try {
-            return (int)classInstance.Get("MinimumScale");
+            retObjectMinimumScale = classInstance.Get("MinimumScale");
+            return (int)retObjectMinimumScale;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinimumScaleNumber = (java.lang.Number)retObjectMinimumScale;
+                return retObjectMinimumScaleNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinimumScale != null ? retObjectMinimumScale.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

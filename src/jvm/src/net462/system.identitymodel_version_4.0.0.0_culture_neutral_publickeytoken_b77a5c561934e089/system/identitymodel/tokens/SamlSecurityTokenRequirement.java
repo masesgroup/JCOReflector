@@ -175,9 +175,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
     
     public boolean ShouldEnforceAudienceRestriction(AudienceUriMode audienceUriMode, SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldEnforceAudienceRestriction = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldEnforceAudienceRestriction", audienceUriMode == null ? null : audienceUriMode.getJCOInstance(), token == null ? null : token.getJCOInstance());
+            retObjectShouldEnforceAudienceRestriction = classInstance.Invoke("ShouldEnforceAudienceRestriction", audienceUriMode == null ? null : audienceUriMode.getJCOInstance(), token == null ? null : token.getJCOInstance());
+            return (boolean)retObjectShouldEnforceAudienceRestriction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldEnforceAudienceRestriction != null ? retObjectShouldEnforceAudienceRestriction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
     
     public boolean getMapToWindows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapToWindows = null;
         try {
-            return (boolean)classInstance.Get("MapToWindows");
+            retObjectMapToWindows = classInstance.Get("MapToWindows");
+            return (boolean)retObjectMapToWindows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMapToWindows != null ? retObjectMapToWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     public void setMapToWindows(boolean MapToWindows) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MapToWindows", MapToWindows);
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     public X509CertificateValidator getCertificateValidator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateValidator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateValidator");
+            retObjectCertificateValidator = classInstance.Get("CertificateValidator");
+            JCObject val = (JCObject)retObjectCertificateValidator;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateValidator != null ? retObjectCertificateValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     public void setCertificateValidator(X509CertificateValidator CertificateValidator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateValidator", CertificateValidator == null ? null : CertificateValidator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,9 +242,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     public java.lang.String getNameClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("NameClaimType");
+            retObjectNameClaimType = classInstance.Get("NameClaimType");
+            return (java.lang.String)retObjectNameClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNameClaimType != null ? retObjectNameClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     public void setNameClaimType(java.lang.String NameClaimType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameClaimType", NameClaimType);
         } catch (JCNativeException jcne) {
@@ -250,9 +266,13 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     public java.lang.String getRoleClaimType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleClaimType = null;
         try {
-            return (java.lang.String)classInstance.Get("RoleClaimType");
+            retObjectRoleClaimType = classInstance.Get("RoleClaimType");
+            return (java.lang.String)retObjectRoleClaimType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRoleClaimType != null ? retObjectRoleClaimType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class SamlSecurityTokenRequirement extends NetObject  {
 
     public void setRoleClaimType(java.lang.String RoleClaimType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RoleClaimType", RoleClaimType);
         } catch (JCNativeException jcne) {

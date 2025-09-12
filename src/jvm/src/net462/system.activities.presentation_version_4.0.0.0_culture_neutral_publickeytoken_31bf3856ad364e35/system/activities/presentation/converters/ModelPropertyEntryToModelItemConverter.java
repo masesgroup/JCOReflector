@@ -162,10 +162,14 @@ public class ModelPropertyEntryToModelItemConverter extends NetObject  {
     
     public NetObject Convert(NetObject value, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classInstance.Invoke("Convert", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvert = classInstance.Invoke("Convert", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new NetObject(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ModelPropertyEntryToModelItemConverter extends NetObject  {
 
     public NetObject Convert(NetObject[] values, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classInstance.Invoke("Convert", toObjectFromArray(values), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvert = classInstance.Invoke("Convert", toObjectFromArray(values), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new NetObject(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class ModelPropertyEntryToModelItemConverter extends NetObject  {
 
     public NetObject ConvertBack(NetObject value, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertBack = null;
         try {
-            JCObject objConvertBack = (JCObject)classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvertBack = classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objConvertBack = (JCObject)retObjectConvertBack;
             return new NetObject(objConvertBack);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertBack != null ? retObjectConvertBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,16 +207,20 @@ public class ModelPropertyEntryToModelItemConverter extends NetObject  {
 
     public NetObject[] ConvertBack(NetObject value, NetType[] targetTypes, NetObject parameter, CultureInfo culture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertBack = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), toObjectFromArray(targetTypes), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvertBack = classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), toObjectFromArray(targetTypes), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectConvertBack;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertBack != null ? retObjectConvertBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

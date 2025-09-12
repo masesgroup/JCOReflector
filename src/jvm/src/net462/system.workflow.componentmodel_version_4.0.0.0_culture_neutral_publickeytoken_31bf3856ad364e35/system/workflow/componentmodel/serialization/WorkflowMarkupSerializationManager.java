@@ -174,10 +174,14 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
     
     public NetObject GetSerializer(NetType objectType, NetType serializerType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerializer = null;
         try {
-            JCObject objGetSerializer = (JCObject)classInstance.Invoke("GetSerializer", objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            retObjectGetSerializer = classInstance.Invoke("GetSerializer", objectType == null ? null : objectType.getJCOInstance(), serializerType == null ? null : serializerType.getJCOInstance());
+            JCObject objGetSerializer = (JCObject)retObjectGetSerializer;
             return new NetObject(objGetSerializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializer != null ? retObjectGetSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public NetType GetType(java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", typeName);
+            retObjectGetType = classInstance.Invoke("GetType", typeName);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public NetType GetType(XmlQualifiedName xmlQualifiedName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", xmlQualifiedName == null ? null : xmlQualifiedName.getJCOInstance());
+            retObjectGetType = classInstance.Invoke("GetType", xmlQualifiedName == null ? null : xmlQualifiedName.getJCOInstance());
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +234,14 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public XmlQualifiedName GetXmlQualifiedName(NetType type, JCORefOut prefix) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXmlQualifiedName = null;
         try {
-            JCObject objGetXmlQualifiedName = (JCObject)classInstance.Invoke("GetXmlQualifiedName", type == null ? null : type.getJCOInstance(), prefix.getJCRefOut());
+            retObjectGetXmlQualifiedName = classInstance.Invoke("GetXmlQualifiedName", type == null ? null : type.getJCOInstance(), prefix.getJCRefOut());
+            JCObject objGetXmlQualifiedName = (JCObject)retObjectGetXmlQualifiedName;
             return new XmlQualifiedName(objGetXmlQualifiedName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXmlQualifiedName != null ? retObjectGetXmlQualifiedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +249,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSerializationProvider", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +259,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public void RemoveSerializationProvider(IDesignerSerializationProvider provider) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSerializationProvider", provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +269,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public void ReportError(NetObject errorInformation) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReportError", errorInformation == null ? null : errorInformation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +283,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
      */
     @Deprecated 
     public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -272,7 +292,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
      */
     @Deprecated 
     public NetObject GetInstance(java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -281,7 +301,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
      */
     @Deprecated 
     public java.lang.String GetName(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
     /**
@@ -290,7 +310,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
      */
     @Deprecated 
     public void SetName(NetObject instance, java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
     }
 
 
@@ -299,10 +319,14 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
     
     public ContextStack getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new ContextStack(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +334,14 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public Assembly getLocalAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalAssembly");
+            retObjectLocalAssembly = classInstance.Get("LocalAssembly");
+            JCObject val = (JCObject)retObjectLocalAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalAssembly != null ? retObjectLocalAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +349,7 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
 
     public void setLocalAssembly(Assembly LocalAssembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalAssembly", LocalAssembly == null ? null : LocalAssembly.getJCOInstance());
         } catch (JCNativeException jcne) {

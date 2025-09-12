@@ -172,10 +172,14 @@ public class DispatcherHookEventArgs extends EventArgs  {
     
     public Dispatcher getDispatcher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDispatcher = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Dispatcher");
+            retObjectDispatcher = classInstance.Get("Dispatcher");
+            JCObject val = (JCObject)retObjectDispatcher;
             return new Dispatcher(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDispatcher != null ? retObjectDispatcher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DispatcherHookEventArgs extends EventArgs  {
 
     public DispatcherOperation getOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Operation");
+            retObjectOperation = classInstance.Get("Operation");
+            JCObject val = (JCObject)retObjectOperation;
             return new DispatcherOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperation != null ? retObjectOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

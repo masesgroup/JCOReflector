@@ -159,7 +159,7 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
     
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,10 +173,14 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
     
     public DbExpression getNavigationSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationSource");
+            retObjectNavigationSource = classInstance.Get("NavigationSource");
+            JCObject val = (JCObject)retObjectNavigationSource;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationSource != null ? retObjectNavigationSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
 
     public RelationshipEndMember getNavigateFrom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateFrom = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigateFrom");
+            retObjectNavigateFrom = classInstance.Get("NavigateFrom");
+            JCObject val = (JCObject)retObjectNavigateFrom;
             return new RelationshipEndMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigateFrom != null ? retObjectNavigateFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
 
     public RelationshipEndMember getNavigateTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigateTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigateTo");
+            retObjectNavigateTo = classInstance.Get("NavigateTo");
+            JCObject val = (JCObject)retObjectNavigateTo;
             return new RelationshipEndMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigateTo != null ? retObjectNavigateTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
 
     public RelationshipType getRelationship() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationship = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Relationship");
+            retObjectRelationship = classInstance.Get("Relationship");
+            JCObject val = (JCObject)retObjectRelationship;
             return new RelationshipType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelationship != null ? retObjectRelationship.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

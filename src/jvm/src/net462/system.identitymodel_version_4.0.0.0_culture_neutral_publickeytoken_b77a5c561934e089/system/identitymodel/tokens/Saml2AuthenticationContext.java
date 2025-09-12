@@ -186,10 +186,14 @@ public class Saml2AuthenticationContext extends NetObject  {
     
     public Uri getClassReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClassReference");
+            retObjectClassReference = classInstance.Get("ClassReference");
+            JCObject val = (JCObject)retObjectClassReference;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClassReference != null ? retObjectClassReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +201,7 @@ public class Saml2AuthenticationContext extends NetObject  {
 
     public void setClassReference(Uri ClassReference) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClassReference", ClassReference == null ? null : ClassReference.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,10 +211,14 @@ public class Saml2AuthenticationContext extends NetObject  {
 
     public Uri getDeclarationReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclarationReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclarationReference");
+            retObjectDeclarationReference = classInstance.Get("DeclarationReference");
+            JCObject val = (JCObject)retObjectDeclarationReference;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclarationReference != null ? retObjectDeclarationReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +226,7 @@ public class Saml2AuthenticationContext extends NetObject  {
 
     public void setDeclarationReference(Uri DeclarationReference) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeclarationReference", DeclarationReference == null ? null : DeclarationReference.getJCOInstance());
         } catch (JCNativeException jcne) {

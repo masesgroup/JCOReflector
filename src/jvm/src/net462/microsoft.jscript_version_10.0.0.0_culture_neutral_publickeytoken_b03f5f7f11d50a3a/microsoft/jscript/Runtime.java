@@ -154,9 +154,13 @@ public class Runtime extends NetObject  {
     
     public static boolean Equals(NetObject v1, NetObject v2) throws Throwable, system.NullReferenceException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, microsoft.jscript.JScriptException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,19 @@ public class Runtime extends NetObject  {
 
     public static long DoubleToInt64(double val) throws Throwable, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDoubleToInt64 = null;
         try {
-            return (long)classType.Invoke("DoubleToInt64", val);
+            retObjectDoubleToInt64 = classType.Invoke("DoubleToInt64", val);
+            return (long)retObjectDoubleToInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDoubleToInt64Number = (java.lang.Number)retObjectDoubleToInt64;
+                return retObjectDoubleToInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectDoubleToInt64 != null ? retObjectDoubleToInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +188,19 @@ public class Runtime extends NetObject  {
 
     public static long UncheckedDecimalToInt64(Decimal val) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUncheckedDecimalToInt64 = null;
         try {
-            return (long)classType.Invoke("UncheckedDecimalToInt64", val == null ? null : val.getJCOInstance());
+            retObjectUncheckedDecimalToInt64 = classType.Invoke("UncheckedDecimalToInt64", val == null ? null : val.getJCOInstance());
+            return (long)retObjectUncheckedDecimalToInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectUncheckedDecimalToInt64Number = (java.lang.Number)retObjectUncheckedDecimalToInt64;
+                return retObjectUncheckedDecimalToInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectUncheckedDecimalToInt64 != null ? retObjectUncheckedDecimalToInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -164,10 +164,14 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
     
     public X509Extension Build(boolean critical) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuild = null;
         try {
-            JCObject objBuild = (JCObject)classInstance.Invoke("Build", critical);
+            retObjectBuild = classInstance.Invoke("Build", critical);
+            JCObject objBuild = (JCObject)retObjectBuild;
             return new X509Extension(objBuild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
 
     public void AddDnsName(java.lang.String dnsName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OverflowException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDnsName", dnsName);
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
 
     public void AddEmailAddress(java.lang.String emailAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OverflowException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEmailAddress", emailAddress);
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
 
     public void AddIpAddress(IPAddress ipAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OverflowException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddIpAddress", ipAddress == null ? null : ipAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +209,7 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
 
     public void AddUri(Uri uri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.OverflowException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUri", uri == null ? null : uri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +219,7 @@ public class SubjectAlternativeNameBuilder extends NetObject  {
 
     public void AddUserPrincipalName(java.lang.String upn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddUserPrincipalName", upn);
         } catch (JCNativeException jcne) {

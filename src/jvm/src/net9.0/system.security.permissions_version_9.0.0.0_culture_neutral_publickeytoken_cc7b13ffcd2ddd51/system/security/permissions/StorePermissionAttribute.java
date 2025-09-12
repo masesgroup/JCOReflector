@@ -170,10 +170,14 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
     
     public boolean getAddToStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddToStore = null;
         try {
-            return (boolean)classInstance.Get("AddToStore");
+            retObjectAddToStore = classInstance.Get("AddToStore");
+            return (boolean)retObjectAddToStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAddToStore != null ? retObjectAddToStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setAddToStore(boolean AddToStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddToStore", AddToStore);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getCreateStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateStore = null;
         try {
-            return (boolean)classInstance.Get("CreateStore");
+            retObjectCreateStore = classInstance.Get("CreateStore");
+            return (boolean)retObjectCreateStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateStore != null ? retObjectCreateStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setCreateStore(boolean CreateStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateStore", CreateStore);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getDeleteStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteStore = null;
         try {
-            return (boolean)classInstance.Get("DeleteStore");
+            retObjectDeleteStore = classInstance.Get("DeleteStore");
+            return (boolean)retObjectDeleteStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDeleteStore != null ? retObjectDeleteStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setDeleteStore(boolean DeleteStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteStore", DeleteStore);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getEnumerateCertificates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateCertificates = null;
         try {
-            return (boolean)classInstance.Get("EnumerateCertificates");
+            retObjectEnumerateCertificates = classInstance.Get("EnumerateCertificates");
+            return (boolean)retObjectEnumerateCertificates;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnumerateCertificates != null ? retObjectEnumerateCertificates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setEnumerateCertificates(boolean EnumerateCertificates) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnumerateCertificates", EnumerateCertificates);
         } catch (JCNativeException jcne) {
@@ -265,9 +285,13 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getEnumerateStores() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateStores = null;
         try {
-            return (boolean)classInstance.Get("EnumerateStores");
+            retObjectEnumerateStores = classInstance.Get("EnumerateStores");
+            return (boolean)retObjectEnumerateStores;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnumerateStores != null ? retObjectEnumerateStores.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setEnumerateStores(boolean EnumerateStores) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnumerateStores", EnumerateStores);
         } catch (JCNativeException jcne) {
@@ -285,9 +309,13 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getOpenStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenStore = null;
         try {
-            return (boolean)classInstance.Get("OpenStore");
+            retObjectOpenStore = classInstance.Get("OpenStore");
+            return (boolean)retObjectOpenStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOpenStore != null ? retObjectOpenStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setOpenStore(boolean OpenStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OpenStore", OpenStore);
         } catch (JCNativeException jcne) {
@@ -305,9 +333,13 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public boolean getRemoveFromStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveFromStore = null;
         try {
-            return (boolean)classInstance.Get("RemoveFromStore");
+            retObjectRemoveFromStore = classInstance.Get("RemoveFromStore");
+            return (boolean)retObjectRemoveFromStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRemoveFromStore != null ? retObjectRemoveFromStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setRemoveFromStore(boolean RemoveFromStore) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemoveFromStore", RemoveFromStore);
         } catch (JCNativeException jcne) {
@@ -325,10 +357,14 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public StorePermissionFlags getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new StorePermissionFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +372,7 @@ public class StorePermissionAttribute extends CodeAccessSecurityAttribute  {
 
     public void setFlags(StorePermissionFlags Flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {

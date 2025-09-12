@@ -161,10 +161,14 @@ public class TextFormatter extends NetObject implements AutoCloseable {
     
     public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties, TextRunCache textRunCache) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatMinMaxParagraphWidth = null;
         try {
-            JCObject objFormatMinMaxParagraphWidth = (JCObject)classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), textRunCache == null ? null : textRunCache.getJCOInstance());
+            retObjectFormatMinMaxParagraphWidth = classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), textRunCache == null ? null : textRunCache.getJCOInstance());
+            JCObject objFormatMinMaxParagraphWidth = (JCObject)retObjectFormatMinMaxParagraphWidth;
             return new MinMaxParagraphWidth(objFormatMinMaxParagraphWidth);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatMinMaxParagraphWidth != null ? retObjectFormatMinMaxParagraphWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class TextFormatter extends NetObject implements AutoCloseable {
 
     public MinMaxParagraphWidth FormatMinMaxParagraphWidth(TextSource textSource, int firstCharIndex, TextParagraphProperties paragraphProperties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatMinMaxParagraphWidth = null;
         try {
-            JCObject objFormatMinMaxParagraphWidth = (JCObject)classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance());
+            retObjectFormatMinMaxParagraphWidth = classInstance.Invoke("FormatMinMaxParagraphWidth", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphProperties == null ? null : paragraphProperties.getJCOInstance());
+            JCObject objFormatMinMaxParagraphWidth = (JCObject)retObjectFormatMinMaxParagraphWidth;
             return new MinMaxParagraphWidth(objFormatMinMaxParagraphWidth);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatMinMaxParagraphWidth != null ? retObjectFormatMinMaxParagraphWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class TextFormatter extends NetObject implements AutoCloseable {
 
     public static TextFormatter Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create");
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TextFormatter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class TextFormatter extends NetObject implements AutoCloseable {
 
     public static TextFormatter Create(TextFormattingMode textFormattingMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", textFormattingMode == null ? null : textFormattingMode.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", textFormattingMode == null ? null : textFormattingMode.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TextFormatter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class TextFormatter extends NetObject implements AutoCloseable {
 
     public TextLine FormatLine(TextSource textSource, int firstCharIndex, double paragraphWidth, TextParagraphProperties paragraphProperties, TextLineBreak previousLineBreak, TextRunCache textRunCache) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatLine = null;
         try {
-            JCObject objFormatLine = (JCObject)classInstance.Invoke("FormatLine", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphWidth, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), previousLineBreak == null ? null : previousLineBreak.getJCOInstance(), textRunCache == null ? null : textRunCache.getJCOInstance());
+            retObjectFormatLine = classInstance.Invoke("FormatLine", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphWidth, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), previousLineBreak == null ? null : previousLineBreak.getJCOInstance(), textRunCache == null ? null : textRunCache.getJCOInstance());
+            JCObject objFormatLine = (JCObject)retObjectFormatLine;
             return new TextLine(objFormatLine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatLine != null ? retObjectFormatLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class TextFormatter extends NetObject implements AutoCloseable {
 
     public TextLine FormatLine(TextSource textSource, int firstCharIndex, double paragraphWidth, TextParagraphProperties paragraphProperties, TextLineBreak previousLineBreak) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatLine = null;
         try {
-            JCObject objFormatLine = (JCObject)classInstance.Invoke("FormatLine", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphWidth, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), previousLineBreak == null ? null : previousLineBreak.getJCOInstance());
+            retObjectFormatLine = classInstance.Invoke("FormatLine", textSource == null ? null : textSource.getJCOInstance(), firstCharIndex, paragraphWidth, paragraphProperties == null ? null : paragraphProperties.getJCOInstance(), previousLineBreak == null ? null : previousLineBreak.getJCOInstance());
+            JCObject objFormatLine = (JCObject)retObjectFormatLine;
             return new TextLine(objFormatLine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatLine != null ? retObjectFormatLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +251,7 @@ public class TextFormatter extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -238,7 +262,7 @@ public class TextFormatter extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

@@ -206,9 +206,19 @@ public class AbandonedMutexException extends SystemException {
     
     public int getMutexIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMutexIndex = null;
         try {
-            return (int)classInstance.Get("MutexIndex");
+            retObjectMutexIndex = classInstance.Get("MutexIndex");
+            return (int)retObjectMutexIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMutexIndexNumber = (java.lang.Number)retObjectMutexIndex;
+                return retObjectMutexIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMutexIndex != null ? retObjectMutexIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +226,14 @@ public class AbandonedMutexException extends SystemException {
 
     public Mutex getMutex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMutex = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mutex");
+            retObjectMutex = classInstance.Get("Mutex");
+            JCObject val = (JCObject)retObjectMutex;
             return new Mutex(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMutex != null ? retObjectMutex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

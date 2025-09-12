@@ -154,7 +154,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
     
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
 
     public void DangerousAddRef(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DangerousAddRef", success.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
 
     public void DangerousRelease() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DangerousRelease");
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
 
     public void SetHandleAsInvalid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHandleAsInvalid");
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -221,9 +221,13 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
     
     public boolean getIsClosed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClosed = null;
         try {
-            return (boolean)classInstance.Get("IsClosed");
+            retObjectIsClosed = classInstance.Get("IsClosed");
+            return (boolean)retObjectIsClosed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClosed != null ? retObjectIsClosed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +235,13 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
 
     public boolean getIsInvalid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInvalid = null;
         try {
-            return (boolean)classInstance.Get("IsInvalid");
+            retObjectIsInvalid = classInstance.Get("IsInvalid");
+            return (boolean)retObjectIsInvalid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInvalid != null ? retObjectIsInvalid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

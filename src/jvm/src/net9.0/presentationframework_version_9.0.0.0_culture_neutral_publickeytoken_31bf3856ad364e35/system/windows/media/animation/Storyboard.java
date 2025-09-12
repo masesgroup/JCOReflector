@@ -172,9 +172,13 @@ public class Storyboard extends ParallelTimeline  {
     
     public boolean GetIsPaused() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsPaused = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsPaused");
+            retObjectGetIsPaused = classInstance.Invoke("GetIsPaused");
+            return (boolean)retObjectGetIsPaused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsPaused != null ? retObjectGetIsPaused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class Storyboard extends ParallelTimeline  {
 
     public boolean GetIsPaused(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsPaused = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsPaused", containingObject == null ? null : containingObject.getJCOInstance());
+            retObjectGetIsPaused = classInstance.Invoke("GetIsPaused", containingObject == null ? null : containingObject.getJCOInstance());
+            return (boolean)retObjectGetIsPaused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsPaused != null ? retObjectGetIsPaused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class Storyboard extends ParallelTimeline  {
 
     public boolean GetIsPaused(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsPaused = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsPaused", containingObject == null ? null : containingObject.getJCOInstance());
+            retObjectGetIsPaused = classInstance.Invoke("GetIsPaused", containingObject == null ? null : containingObject.getJCOInstance());
+            return (boolean)retObjectGetIsPaused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsPaused != null ? retObjectGetIsPaused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,19 @@ public class Storyboard extends ParallelTimeline  {
 
     public double GetCurrentGlobalSpeed() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentGlobalSpeed = null;
         try {
-            return (double)classInstance.Invoke("GetCurrentGlobalSpeed");
+            retObjectGetCurrentGlobalSpeed = classInstance.Invoke("GetCurrentGlobalSpeed");
+            return (double)retObjectGetCurrentGlobalSpeed;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCurrentGlobalSpeedNumber = (java.lang.Number)retObjectGetCurrentGlobalSpeed;
+                return retObjectGetCurrentGlobalSpeedNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentGlobalSpeed != null ? retObjectGetCurrentGlobalSpeed.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +234,19 @@ public class Storyboard extends ParallelTimeline  {
 
     public double GetCurrentProgress() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentProgress = null;
         try {
-            return (double)classInstance.Invoke("GetCurrentProgress");
+            retObjectGetCurrentProgress = classInstance.Invoke("GetCurrentProgress");
+            return (double)retObjectGetCurrentProgress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCurrentProgressNumber = (java.lang.Number)retObjectGetCurrentProgress;
+                return retObjectGetCurrentProgressNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetCurrentProgress != null ? retObjectGetCurrentProgress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +254,19 @@ public class Storyboard extends ParallelTimeline  {
 
     public int GetCurrentIteration() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentIteration = null;
         try {
-            return (int)classInstance.Invoke("GetCurrentIteration");
+            retObjectGetCurrentIteration = classInstance.Invoke("GetCurrentIteration");
+            return (int)retObjectGetCurrentIteration;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCurrentIterationNumber = (java.lang.Number)retObjectGetCurrentIteration;
+                return retObjectGetCurrentIterationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentIteration != null ? retObjectGetCurrentIteration.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +274,13 @@ public class Storyboard extends ParallelTimeline  {
 
     public static java.lang.String GetTargetName(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTargetName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetTargetName", element == null ? null : element.getJCOInstance());
+            retObjectGetTargetName = classType.Invoke("GetTargetName", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetTargetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTargetName != null ? retObjectGetTargetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +288,14 @@ public class Storyboard extends ParallelTimeline  {
 
     public TimeSpan GetCurrentTime() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentTime = null;
         try {
-            JCObject objGetCurrentTime = (JCObject)classInstance.Invoke("GetCurrentTime");
+            retObjectGetCurrentTime = classInstance.Invoke("GetCurrentTime");
+            JCObject objGetCurrentTime = (JCObject)retObjectGetCurrentTime;
             return new TimeSpan(objGetCurrentTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentTime != null ? retObjectGetCurrentTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +303,14 @@ public class Storyboard extends ParallelTimeline  {
 
     public static DependencyObject GetTarget(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTarget = null;
         try {
-            JCObject objGetTarget = (JCObject)classType.Invoke("GetTarget", element == null ? null : element.getJCOInstance());
+            retObjectGetTarget = classType.Invoke("GetTarget", element == null ? null : element.getJCOInstance());
+            JCObject objGetTarget = (JCObject)retObjectGetTarget;
             return new DependencyObject(objGetTarget);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTarget != null ? retObjectGetTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +318,14 @@ public class Storyboard extends ParallelTimeline  {
 
     public ClockState GetCurrentState() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentState = null;
         try {
-            JCObject objGetCurrentState = (JCObject)classInstance.Invoke("GetCurrentState");
+            retObjectGetCurrentState = classInstance.Invoke("GetCurrentState");
+            JCObject objGetCurrentState = (JCObject)retObjectGetCurrentState;
             return new ClockState(objGetCurrentState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentState != null ? retObjectGetCurrentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +333,14 @@ public class Storyboard extends ParallelTimeline  {
 
     public ClockState GetCurrentState(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentState = null;
         try {
-            JCObject objGetCurrentState = (JCObject)classInstance.Invoke("GetCurrentState", containingObject == null ? null : containingObject.getJCOInstance());
+            retObjectGetCurrentState = classInstance.Invoke("GetCurrentState", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentState = (JCObject)retObjectGetCurrentState;
             return new ClockState(objGetCurrentState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentState != null ? retObjectGetCurrentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +348,14 @@ public class Storyboard extends ParallelTimeline  {
 
     public ClockState GetCurrentState(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentState = null;
         try {
-            JCObject objGetCurrentState = (JCObject)classInstance.Invoke("GetCurrentState", containingObject == null ? null : containingObject.getJCOInstance());
+            retObjectGetCurrentState = classInstance.Invoke("GetCurrentState", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentState = (JCObject)retObjectGetCurrentState;
             return new ClockState(objGetCurrentState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentState != null ? retObjectGetCurrentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +363,14 @@ public class Storyboard extends ParallelTimeline  {
 
     public Storyboard CloneNewStoryboard() throws Throwable, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Storyboard(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +378,14 @@ public class Storyboard extends ParallelTimeline  {
 
     public static PropertyPath GetTargetProperty(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTargetProperty = null;
         try {
-            JCObject objGetTargetProperty = (JCObject)classType.Invoke("GetTargetProperty", element == null ? null : element.getJCOInstance());
+            retObjectGetTargetProperty = classType.Invoke("GetTargetProperty", element == null ? null : element.getJCOInstance());
+            JCObject objGetTargetProperty = (JCObject)retObjectGetTargetProperty;
             return new PropertyPath(objGetTargetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTargetProperty != null ? retObjectGetTargetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +393,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin");
         } catch (JCNativeException jcne) {
@@ -329,7 +403,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkContentElement containingObject, boolean isControllable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), isControllable);
         } catch (JCNativeException jcne) {
@@ -339,7 +413,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkContentElement containingObject, HandoffBehavior handoffBehavior, boolean isControllable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance(), isControllable);
         } catch (JCNativeException jcne) {
@@ -349,7 +423,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkContentElement containingObject, HandoffBehavior handoffBehavior) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -359,7 +433,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkContentElement containingObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -369,7 +443,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject, boolean isControllable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), isControllable);
         } catch (JCNativeException jcne) {
@@ -379,7 +453,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject, FrameworkTemplate frameworkTemplate, boolean isControllable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), frameworkTemplate == null ? null : frameworkTemplate.getJCOInstance(), isControllable);
         } catch (JCNativeException jcne) {
@@ -389,7 +463,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject, FrameworkTemplate frameworkTemplate, HandoffBehavior handoffBehavior, boolean isControllable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), frameworkTemplate == null ? null : frameworkTemplate.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance(), isControllable);
         } catch (JCNativeException jcne) {
@@ -399,7 +473,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject, FrameworkTemplate frameworkTemplate, HandoffBehavior handoffBehavior) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), frameworkTemplate == null ? null : frameworkTemplate.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,7 +483,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject, FrameworkTemplate frameworkTemplate) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), frameworkTemplate == null ? null : frameworkTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -419,7 +493,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject, HandoffBehavior handoffBehavior, boolean isControllable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance(), isControllable);
         } catch (JCNativeException jcne) {
@@ -429,7 +503,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject, HandoffBehavior handoffBehavior) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -439,7 +513,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Begin(FrameworkElement containingObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -449,7 +523,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Pause() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Pause");
         } catch (JCNativeException jcne) {
@@ -459,7 +533,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Pause(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Pause", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -469,7 +543,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Pause(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Pause", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -479,7 +553,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Remove() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove");
         } catch (JCNativeException jcne) {
@@ -489,7 +563,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Remove(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -499,7 +573,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Remove(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -509,7 +583,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Resume() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resume");
         } catch (JCNativeException jcne) {
@@ -519,7 +593,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Resume(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resume", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -529,7 +603,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Resume(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resume", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -539,7 +613,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Seek(TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Seek", offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -549,7 +623,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Seek(TimeSpan offset) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Seek", offset == null ? null : offset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -559,7 +633,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Seek(FrameworkContentElement containingObject, TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Seek", containingObject == null ? null : containingObject.getJCOInstance(), offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -569,7 +643,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Seek(FrameworkElement containingObject, TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Seek", containingObject == null ? null : containingObject.getJCOInstance(), offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -579,7 +653,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SeekAlignedToLastTick(TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SeekAlignedToLastTick", offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -589,7 +663,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SeekAlignedToLastTick(TimeSpan offset) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SeekAlignedToLastTick", offset == null ? null : offset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -599,7 +673,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SeekAlignedToLastTick(FrameworkContentElement containingObject, TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SeekAlignedToLastTick", containingObject == null ? null : containingObject.getJCOInstance(), offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -609,7 +683,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SeekAlignedToLastTick(FrameworkElement containingObject, TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SeekAlignedToLastTick", containingObject == null ? null : containingObject.getJCOInstance(), offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -619,7 +693,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SetSpeedRatio(double speedRatio) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSpeedRatio", speedRatio);
         } catch (JCNativeException jcne) {
@@ -629,7 +703,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SetSpeedRatio(FrameworkContentElement containingObject, double speedRatio) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSpeedRatio", containingObject == null ? null : containingObject.getJCOInstance(), speedRatio);
         } catch (JCNativeException jcne) {
@@ -639,7 +713,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SetSpeedRatio(FrameworkElement containingObject, double speedRatio) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSpeedRatio", containingObject == null ? null : containingObject.getJCOInstance(), speedRatio);
         } catch (JCNativeException jcne) {
@@ -649,7 +723,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public static void SetTarget(DependencyObject element, DependencyObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTarget", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -659,7 +733,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public static void SetTargetName(DependencyObject element, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTargetName", element == null ? null : element.getJCOInstance(), name);
         } catch (JCNativeException jcne) {
@@ -669,7 +743,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public static void SetTargetProperty(DependencyObject element, PropertyPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTargetProperty", element == null ? null : element.getJCOInstance(), path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -679,7 +753,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SkipToFill() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SkipToFill");
         } catch (JCNativeException jcne) {
@@ -689,7 +763,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SkipToFill(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SkipToFill", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -699,7 +773,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void SkipToFill(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SkipToFill", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -709,7 +783,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Stop() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -719,7 +793,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Stop(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -729,7 +803,7 @@ public class Storyboard extends ParallelTimeline  {
 
     public void Stop(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop", containingObject == null ? null : containingObject.getJCOInstance());
         } catch (JCNativeException jcne) {

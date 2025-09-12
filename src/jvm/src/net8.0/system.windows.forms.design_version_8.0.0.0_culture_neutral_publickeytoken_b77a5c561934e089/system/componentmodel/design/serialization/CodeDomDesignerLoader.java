@@ -162,7 +162,7 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader implements system
     
     public void Dispose() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.MulticastNotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader implements system
      */
     @Deprecated 
     public boolean IsValidName(java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
     }
 
     /**
@@ -185,7 +185,7 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader implements system
      */
     @Deprecated 
     public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
     }
 
     /**
@@ -194,7 +194,7 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader implements system
      */
     @Deprecated 
     public void ValidateName(java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
     }
 
     /**
@@ -203,7 +203,7 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader implements system
      */
     @Deprecated 
     public ICollection Deserialize(NetObject serializationData) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationService to obtain the full interface.");
     }
 
     /**
@@ -212,7 +212,7 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader implements system
      */
     @Deprecated 
     public NetObject Serialize(ICollection objects) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationService to obtain the full interface.");
     }
 
 

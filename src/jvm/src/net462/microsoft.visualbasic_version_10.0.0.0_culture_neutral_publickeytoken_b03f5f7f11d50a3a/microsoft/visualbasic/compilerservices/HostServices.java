@@ -167,10 +167,14 @@ public class HostServices extends NetObject  {
     
     public static IVbHost getVBHost() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVBHost = null;
         try {
-            JCObject val = (JCObject)classType.Get("VBHost");
+            retObjectVBHost = classType.Get("VBHost");
+            JCObject val = (JCObject)retObjectVBHost;
             return new IVbHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVBHost != null ? retObjectVBHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class HostServices extends NetObject  {
 
     public static void setVBHost(IVbHost VBHost) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("VBHost", VBHost == null ? null : VBHost.getJCOInstance());
         } catch (JCNativeException jcne) {

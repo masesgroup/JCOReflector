@@ -161,9 +161,13 @@ public class ObjectStateEntry extends NetObject  {
     
     public boolean IsPropertyChanged(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPropertyChanged = null;
         try {
-            return (boolean)classInstance.Invoke("IsPropertyChanged", propertyName);
+            retObjectIsPropertyChanged = classInstance.Invoke("IsPropertyChanged", propertyName);
+            return (boolean)retObjectIsPropertyChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPropertyChanged != null ? retObjectIsPropertyChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public OriginalValueRecord GetUpdatableOriginalValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdatableOriginalValues = null;
         try {
-            JCObject objGetUpdatableOriginalValues = (JCObject)classInstance.Invoke("GetUpdatableOriginalValues");
+            retObjectGetUpdatableOriginalValues = classInstance.Invoke("GetUpdatableOriginalValues");
+            JCObject objGetUpdatableOriginalValues = (JCObject)retObjectGetUpdatableOriginalValues;
             return new OriginalValueRecord(objGetUpdatableOriginalValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdatableOriginalValues != null ? retObjectGetUpdatableOriginalValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void AcceptChanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcceptChanges");
         } catch (JCNativeException jcne) {
@@ -192,7 +200,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void ApplyCurrentValues(NetObject currentEntity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyCurrentValues", currentEntity == null ? null : currentEntity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +210,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void ApplyOriginalValues(NetObject originalEntity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyOriginalValues", originalEntity == null ? null : originalEntity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +220,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void ChangeState(EntityState state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ChangeState", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +230,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void Delete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -232,7 +240,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void RejectPropertyChanges(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RejectPropertyChanges", propertyName);
         } catch (JCNativeException jcne) {
@@ -242,7 +250,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void SetModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetModified");
         } catch (JCNativeException jcne) {
@@ -252,7 +260,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void SetModifiedProperty(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetModifiedProperty", propertyName);
         } catch (JCNativeException jcne) {
@@ -266,7 +274,7 @@ public class ObjectStateEntry extends NetObject  {
      */
     @Deprecated 
     public void EntityComplexMemberChanged(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
 
     /**
@@ -275,7 +283,7 @@ public class ObjectStateEntry extends NetObject  {
      */
     @Deprecated 
     public void EntityComplexMemberChanging(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
 
     /**
@@ -284,7 +292,7 @@ public class ObjectStateEntry extends NetObject  {
      */
     @Deprecated 
     public void EntityMemberChanged(java.lang.String entityMemberName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
 
     /**
@@ -293,7 +301,7 @@ public class ObjectStateEntry extends NetObject  {
      */
     @Deprecated 
     public void EntityMemberChanging(java.lang.String entityMemberName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
     }
 
 
@@ -302,9 +310,13 @@ public class ObjectStateEntry extends NetObject  {
     
     public boolean getIsRelationship() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRelationship = null;
         try {
-            return (boolean)classInstance.Get("IsRelationship");
+            retObjectIsRelationship = classInstance.Get("IsRelationship");
+            return (boolean)retObjectIsRelationship;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRelationship != null ? retObjectIsRelationship.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +324,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public DbDataRecord getOriginalValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalValues");
+            retObjectOriginalValues = classInstance.Get("OriginalValues");
+            JCObject val = (JCObject)retObjectOriginalValues;
             return new DbDataRecord(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalValues != null ? retObjectOriginalValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +339,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityKey");
+            retObjectEntityKey = classInstance.Get("EntityKey");
+            JCObject val = (JCObject)retObjectEntityKey;
             return new EntityKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityKey != null ? retObjectEntityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +354,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void setEntityKey(EntityKey EntityKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityKey", EntityKey == null ? null : EntityKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +364,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public EntityState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new EntityState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +379,7 @@ public class ObjectStateEntry extends NetObject  {
 
     public void setState(EntityState State) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("State", State == null ? null : State.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,10 +389,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public EntitySetBase getEntitySet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntitySet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntitySet");
+            retObjectEntitySet = classInstance.Get("EntitySet");
+            JCObject val = (JCObject)retObjectEntitySet;
             return new EntitySetBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntitySet != null ? retObjectEntitySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +404,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public CurrentValueRecord getCurrentValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentValues");
+            retObjectCurrentValues = classInstance.Get("CurrentValues");
+            JCObject val = (JCObject)retObjectCurrentValues;
             return new CurrentValueRecord(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentValues != null ? retObjectCurrentValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +419,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public RelationshipManager getRelationshipManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelationshipManager");
+            retObjectRelationshipManager = classInstance.Get("RelationshipManager");
+            JCObject val = (JCObject)retObjectRelationshipManager;
             return new RelationshipManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelationshipManager != null ? retObjectRelationshipManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,10 +434,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public ObjectStateManager getObjectStateManager() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectStateManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectStateManager");
+            retObjectObjectStateManager = classInstance.Get("ObjectStateManager");
+            JCObject val = (JCObject)retObjectObjectStateManager;
             return new ObjectStateManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectStateManager != null ? retObjectObjectStateManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,10 +449,14 @@ public class ObjectStateEntry extends NetObject  {
 
     public NetObject getEntity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Entity");
+            retObjectEntity = classInstance.Get("Entity");
+            JCObject val = (JCObject)retObjectEntity;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntity != null ? retObjectEntity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

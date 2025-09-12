@@ -159,9 +159,13 @@ public class MessageEncoder extends NetObject  {
     
     public boolean IsContentTypeSupported(java.lang.String contentType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContentTypeSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsContentTypeSupported", contentType);
+            retObjectIsContentTypeSupported = classInstance.Invoke("IsContentTypeSupported", contentType);
+            return (boolean)retObjectIsContentTypeSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContentTypeSupported != null ? retObjectIsContentTypeSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class MessageEncoder extends NetObject  {
 
     public IAsyncResult BeginWriteMessage(Message message, Stream stream, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWriteMessage = null;
         try {
-            JCObject objBeginWriteMessage = (JCObject)classInstance.Invoke("BeginWriteMessage", message == null ? null : message.getJCOInstance(), stream == null ? null : stream.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWriteMessage = classInstance.Invoke("BeginWriteMessage", message == null ? null : message.getJCOInstance(), stream == null ? null : stream.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWriteMessage = (JCObject)retObjectBeginWriteMessage;
             return new IAsyncResultImplementation(objBeginWriteMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWriteMessage != null ? retObjectBeginWriteMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class MessageEncoder extends NetObject  {
 
     public Message ReadMessage(Stream stream, int maxSizeOfHeaders) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadMessage = null;
         try {
-            JCObject objReadMessage = (JCObject)classInstance.Invoke("ReadMessage", stream == null ? null : stream.getJCOInstance(), maxSizeOfHeaders);
+            retObjectReadMessage = classInstance.Invoke("ReadMessage", stream == null ? null : stream.getJCOInstance(), maxSizeOfHeaders);
+            JCObject objReadMessage = (JCObject)retObjectReadMessage;
             return new Message(objReadMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadMessage != null ? retObjectReadMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class MessageEncoder extends NetObject  {
 
     public Message ReadMessage(Stream stream, int maxSizeOfHeaders, java.lang.String contentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadMessage = null;
         try {
-            JCObject objReadMessage = (JCObject)classInstance.Invoke("ReadMessage", stream == null ? null : stream.getJCOInstance(), maxSizeOfHeaders, contentType);
+            retObjectReadMessage = classInstance.Invoke("ReadMessage", stream == null ? null : stream.getJCOInstance(), maxSizeOfHeaders, contentType);
+            JCObject objReadMessage = (JCObject)retObjectReadMessage;
             return new Message(objReadMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadMessage != null ? retObjectReadMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class MessageEncoder extends NetObject  {
 
     public void EndWriteMessage(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWriteMessage", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +228,7 @@ public class MessageEncoder extends NetObject  {
 
     public void WriteMessage(Message message, Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteMessage", message == null ? null : message.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +242,14 @@ public class MessageEncoder extends NetObject  {
     
     public MessageVersion getMessageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageVersion");
+            retObjectMessageVersion = classInstance.Get("MessageVersion");
+            JCObject val = (JCObject)retObjectMessageVersion;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageVersion != null ? retObjectMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +257,13 @@ public class MessageEncoder extends NetObject  {
 
     public java.lang.String getContentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentType = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentType");
+            retObjectContentType = classInstance.Get("ContentType");
+            return (java.lang.String)retObjectContentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentType != null ? retObjectContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +271,13 @@ public class MessageEncoder extends NetObject  {
 
     public java.lang.String getMediaType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMediaType = null;
         try {
-            return (java.lang.String)classInstance.Get("MediaType");
+            retObjectMediaType = classInstance.Get("MediaType");
+            return (java.lang.String)retObjectMediaType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMediaType != null ? retObjectMediaType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

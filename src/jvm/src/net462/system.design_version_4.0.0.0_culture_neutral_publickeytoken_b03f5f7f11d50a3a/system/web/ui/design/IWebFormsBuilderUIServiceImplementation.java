@@ -144,9 +144,13 @@ public class IWebFormsBuilderUIServiceImplementation extends NetObject implement
     
     public java.lang.String BuildColor(Control owner, java.lang.String initialColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildColor = null;
         try {
-            return (java.lang.String)classInstance.Invoke("BuildColor", owner == null ? null : owner.getJCOInstance(), initialColor);
+            retObjectBuildColor = classInstance.Invoke("BuildColor", owner == null ? null : owner.getJCOInstance(), initialColor);
+            return (java.lang.String)retObjectBuildColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBuildColor != null ? retObjectBuildColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,9 +158,13 @@ public class IWebFormsBuilderUIServiceImplementation extends NetObject implement
 
     public java.lang.String BuildUrl(Control owner, java.lang.String initialUrl, java.lang.String baseUrl, java.lang.String caption, java.lang.String filter, UrlBuilderOptions options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("BuildUrl", owner == null ? null : owner.getJCOInstance(), initialUrl, baseUrl, caption, filter, options == null ? null : options.getJCOInstance());
+            retObjectBuildUrl = classInstance.Invoke("BuildUrl", owner == null ? null : owner.getJCOInstance(), initialUrl, baseUrl, caption, filter, options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectBuildUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBuildUrl != null ? retObjectBuildUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

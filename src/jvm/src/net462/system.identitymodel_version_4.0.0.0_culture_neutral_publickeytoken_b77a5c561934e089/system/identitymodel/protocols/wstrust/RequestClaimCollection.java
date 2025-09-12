@@ -165,9 +165,13 @@ public class RequestClaimCollection extends NetObjectEnumerable  {
     
     public java.lang.String getDialect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDialect = null;
         try {
-            return (java.lang.String)classInstance.Get("Dialect");
+            retObjectDialect = classInstance.Get("Dialect");
+            return (java.lang.String)retObjectDialect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDialect != null ? retObjectDialect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class RequestClaimCollection extends NetObjectEnumerable  {
 
     public void setDialect(java.lang.String Dialect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Dialect", Dialect);
         } catch (JCNativeException jcne) {

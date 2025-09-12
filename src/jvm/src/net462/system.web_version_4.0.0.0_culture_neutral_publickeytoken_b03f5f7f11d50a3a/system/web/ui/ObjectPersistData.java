@@ -171,10 +171,14 @@ public class ObjectPersistData extends NetObject  {
     
     public ICollection GetPropertyAllFilters(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyAllFilters = null;
         try {
-            JCObject objGetPropertyAllFilters = (JCObject)classInstance.Invoke("GetPropertyAllFilters", name);
+            retObjectGetPropertyAllFilters = classInstance.Invoke("GetPropertyAllFilters", name);
+            JCObject objGetPropertyAllFilters = (JCObject)retObjectGetPropertyAllFilters;
             return new ICollectionImplementation(objGetPropertyAllFilters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyAllFilters != null ? retObjectGetPropertyAllFilters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ObjectPersistData extends NetObject  {
 
     public IDictionary GetFilteredProperties(java.lang.String filter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilteredProperties = null;
         try {
-            JCObject objGetFilteredProperties = (JCObject)classInstance.Invoke("GetFilteredProperties", filter);
+            retObjectGetFilteredProperties = classInstance.Invoke("GetFilteredProperties", filter);
+            JCObject objGetFilteredProperties = (JCObject)retObjectGetFilteredProperties;
             return new IDictionaryImplementation(objGetFilteredProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFilteredProperties != null ? retObjectGetFilteredProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class ObjectPersistData extends NetObject  {
 
     public PropertyEntry GetFilteredProperty(java.lang.String filter, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilteredProperty = null;
         try {
-            JCObject objGetFilteredProperty = (JCObject)classInstance.Invoke("GetFilteredProperty", filter, name);
+            retObjectGetFilteredProperty = classInstance.Invoke("GetFilteredProperty", filter, name);
+            JCObject objGetFilteredProperty = (JCObject)retObjectGetFilteredProperty;
             return new PropertyEntry(objGetFilteredProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFilteredProperty != null ? retObjectGetFilteredProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +216,7 @@ public class ObjectPersistData extends NetObject  {
 
     public void AddToObjectControlBuilderTable(IDictionary table) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddToObjectControlBuilderTable", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class ObjectPersistData extends NetObject  {
     
     public boolean getIsCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCollection = null;
         try {
-            return (boolean)classInstance.Get("IsCollection");
+            retObjectIsCollection = classInstance.Get("IsCollection");
+            return (boolean)retObjectIsCollection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCollection != null ? retObjectIsCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +244,13 @@ public class ObjectPersistData extends NetObject  {
 
     public boolean getLocalize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalize = null;
         try {
-            return (boolean)classInstance.Get("Localize");
+            retObjectLocalize = classInstance.Get("Localize");
+            return (boolean)retObjectLocalize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLocalize != null ? retObjectLocalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +258,14 @@ public class ObjectPersistData extends NetObject  {
 
     public ICollection getAllPropertyEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllPropertyEntries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllPropertyEntries");
+            retObjectAllPropertyEntries = classInstance.Get("AllPropertyEntries");
+            JCObject val = (JCObject)retObjectAllPropertyEntries;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllPropertyEntries != null ? retObjectAllPropertyEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +273,14 @@ public class ObjectPersistData extends NetObject  {
 
     public ICollection getCollectionItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollectionItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CollectionItems");
+            retObjectCollectionItems = classInstance.Get("CollectionItems");
+            JCObject val = (JCObject)retObjectCollectionItems;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollectionItems != null ? retObjectCollectionItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +288,14 @@ public class ObjectPersistData extends NetObject  {
 
     public ICollection getEventEntries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventEntries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventEntries");
+            retObjectEventEntries = classInstance.Get("EventEntries");
+            JCObject val = (JCObject)retObjectEventEntries;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventEntries != null ? retObjectEventEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +303,14 @@ public class ObjectPersistData extends NetObject  {
 
     public IDictionary getBuiltObjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuiltObjects = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuiltObjects");
+            retObjectBuiltObjects = classInstance.Get("BuiltObjects");
+            JCObject val = (JCObject)retObjectBuiltObjects;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuiltObjects != null ? retObjectBuiltObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +318,13 @@ public class ObjectPersistData extends NetObject  {
 
     public java.lang.String getResourceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ResourceKey");
+            retObjectResourceKey = classInstance.Get("ResourceKey");
+            return (java.lang.String)retObjectResourceKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResourceKey != null ? retObjectResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +332,14 @@ public class ObjectPersistData extends NetObject  {
 
     public NetType getObjectType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            retObjectObjectType = classInstance.Get("ObjectType");
+            JCObject val = (JCObject)retObjectObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectType != null ? retObjectObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

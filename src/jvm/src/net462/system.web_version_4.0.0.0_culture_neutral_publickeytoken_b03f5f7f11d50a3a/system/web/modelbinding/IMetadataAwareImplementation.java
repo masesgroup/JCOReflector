@@ -143,7 +143,7 @@ public class IMetadataAwareImplementation extends NetObject implements IMetadata
     
     public void OnMetadataCreated(ModelMetadata metadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnMetadataCreated", metadata == null ? null : metadata.getJCOInstance());
         } catch (JCNativeException jcne) {

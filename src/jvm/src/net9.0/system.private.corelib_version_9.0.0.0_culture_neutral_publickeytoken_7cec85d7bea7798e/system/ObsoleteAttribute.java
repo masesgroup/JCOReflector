@@ -186,9 +186,13 @@ public class ObsoleteAttribute extends Attribute  {
     
     public boolean getIsError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsError = null;
         try {
-            return (boolean)classInstance.Get("IsError");
+            retObjectIsError = classInstance.Get("IsError");
+            return (boolean)retObjectIsError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsError != null ? retObjectIsError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +200,13 @@ public class ObsoleteAttribute extends Attribute  {
 
     public java.lang.String getDiagnosticId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiagnosticId = null;
         try {
-            return (java.lang.String)classInstance.Get("DiagnosticId");
+            retObjectDiagnosticId = classInstance.Get("DiagnosticId");
+            return (java.lang.String)retObjectDiagnosticId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDiagnosticId != null ? retObjectDiagnosticId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class ObsoleteAttribute extends Attribute  {
 
     public void setDiagnosticId(java.lang.String DiagnosticId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DiagnosticId", DiagnosticId);
         } catch (JCNativeException jcne) {
@@ -216,9 +224,13 @@ public class ObsoleteAttribute extends Attribute  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +238,13 @@ public class ObsoleteAttribute extends Attribute  {
 
     public java.lang.String getUrlFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("UrlFormat");
+            retObjectUrlFormat = classInstance.Get("UrlFormat");
+            return (java.lang.String)retObjectUrlFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrlFormat != null ? retObjectUrlFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class ObsoleteAttribute extends Attribute  {
 
     public void setUrlFormat(java.lang.String UrlFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UrlFormat", UrlFormat);
         } catch (JCNativeException jcne) {

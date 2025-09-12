@@ -170,9 +170,13 @@ public class InitializationEventAttribute extends Attribute  {
     
     public java.lang.String getEventName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventName = null;
         try {
-            return (java.lang.String)classInstance.Get("EventName");
+            retObjectEventName = classInstance.Get("EventName");
+            return (java.lang.String)retObjectEventName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEventName != null ? retObjectEventName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

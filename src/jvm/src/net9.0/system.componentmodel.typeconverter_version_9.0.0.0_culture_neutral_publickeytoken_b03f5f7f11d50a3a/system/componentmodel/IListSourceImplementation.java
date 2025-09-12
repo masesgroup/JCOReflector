@@ -144,10 +144,14 @@ public class IListSourceImplementation extends NetObject implements IListSource 
     
     public IList GetList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetList = null;
         try {
-            JCObject objGetList = (JCObject)classInstance.Invoke("GetList");
+            retObjectGetList = classInstance.Invoke("GetList");
+            JCObject objGetList = (JCObject)retObjectGetList;
             return new IListImplementation(objGetList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetList != null ? retObjectGetList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,9 +163,13 @@ public class IListSourceImplementation extends NetObject implements IListSource 
     
     public boolean getContainsListCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsListCollection = null;
         try {
-            return (boolean)classInstance.Get("ContainsListCollection");
+            retObjectContainsListCollection = classInstance.Get("ContainsListCollection");
+            return (boolean)retObjectContainsListCollection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContainsListCollection != null ? retObjectContainsListCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

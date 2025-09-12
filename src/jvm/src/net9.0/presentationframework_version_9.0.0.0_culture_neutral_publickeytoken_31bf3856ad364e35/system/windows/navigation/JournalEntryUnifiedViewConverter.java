@@ -164,10 +164,14 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
     
     public NetObject Convert(NetObject[] values, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classInstance.Invoke("Convert", toObjectFromArray(values), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvert = classInstance.Invoke("Convert", toObjectFromArray(values), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new NetObject(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,16 +179,20 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
 
     public NetObject[] ConvertBack(NetObject value, NetType[] targetTypes, NetObject parameter, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertBack = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), toObjectFromArray(targetTypes), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvertBack = classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), toObjectFromArray(targetTypes), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectConvertBack;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertBack != null ? retObjectConvertBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
 
     public static JournalEntryPosition GetJournalEntryPosition(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetJournalEntryPosition = null;
         try {
-            JCObject objGetJournalEntryPosition = (JCObject)classType.Invoke("GetJournalEntryPosition", element == null ? null : element.getJCOInstance());
+            retObjectGetJournalEntryPosition = classType.Invoke("GetJournalEntryPosition", element == null ? null : element.getJCOInstance());
+            JCObject objGetJournalEntryPosition = (JCObject)retObjectGetJournalEntryPosition;
             return new JournalEntryPosition(objGetJournalEntryPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetJournalEntryPosition != null ? retObjectGetJournalEntryPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +215,7 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
 
     public static void SetJournalEntryPosition(DependencyObject element, JournalEntryPosition position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetJournalEntryPosition", element == null ? null : element.getJCOInstance(), position == null ? null : position.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -162,9 +162,13 @@ public class RequiredAttribute extends ValidationAttribute  {
     
     public boolean IsValid(NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            retObjectIsValid = classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class RequiredAttribute extends ValidationAttribute  {
     
     public boolean getAllowEmptyStrings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowEmptyStrings = null;
         try {
-            return (boolean)classInstance.Get("AllowEmptyStrings");
+            retObjectAllowEmptyStrings = classInstance.Get("AllowEmptyStrings");
+            return (boolean)retObjectAllowEmptyStrings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowEmptyStrings != null ? retObjectAllowEmptyStrings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class RequiredAttribute extends ValidationAttribute  {
 
     public void setAllowEmptyStrings(boolean AllowEmptyStrings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowEmptyStrings", AllowEmptyStrings);
         } catch (JCNativeException jcne) {

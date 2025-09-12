@@ -171,7 +171,7 @@ public class SecurityTokenDescriptor extends NetObject  {
     
     public void AddAuthenticationClaims(java.lang.String authType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAuthenticationClaims", authType);
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void AddAuthenticationClaims(java.lang.String authType, DateTime time) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NotSupportedException, system.OverflowException, system.TypeInitializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAuthenticationClaims", authType, time == null ? null : time.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void ApplyTo(RequestSecurityTokenResponse response) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyTo", response == null ? null : response.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +205,14 @@ public class SecurityTokenDescriptor extends NetObject  {
     
     public Lifetime getLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLifetime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Lifetime");
+            retObjectLifetime = classInstance.Get("Lifetime");
+            JCObject val = (JCObject)retObjectLifetime;
             return new Lifetime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLifetime != null ? retObjectLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +220,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setLifetime(Lifetime Lifetime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Lifetime", Lifetime == null ? null : Lifetime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +230,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptingCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptingCredentials");
+            retObjectEncryptingCredentials = classInstance.Get("EncryptingCredentials");
+            JCObject val = (JCObject)retObjectEncryptingCredentials;
             return new EncryptingCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptingCredentials != null ? retObjectEncryptingCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +245,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setEncryptingCredentials(EncryptingCredentials EncryptingCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptingCredentials", EncryptingCredentials == null ? null : EncryptingCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,10 +255,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public ProofDescriptor getProof() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProof = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Proof");
+            retObjectProof = classInstance.Get("Proof");
+            JCObject val = (JCObject)retObjectProof;
             return new ProofDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProof != null ? retObjectProof.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +270,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setProof(ProofDescriptor Proof) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Proof", Proof == null ? null : Proof.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +280,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public SecurityKeyIdentifierClause getAttachedReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttachedReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AttachedReference");
+            retObjectAttachedReference = classInstance.Get("AttachedReference");
+            JCObject val = (JCObject)retObjectAttachedReference;
             return new SecurityKeyIdentifierClause(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttachedReference != null ? retObjectAttachedReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +295,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setAttachedReference(SecurityKeyIdentifierClause AttachedReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AttachedReference", AttachedReference == null ? null : AttachedReference.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,10 +305,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public SecurityKeyIdentifierClause getUnattachedReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnattachedReference = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnattachedReference");
+            retObjectUnattachedReference = classInstance.Get("UnattachedReference");
+            JCObject val = (JCObject)retObjectUnattachedReference;
             return new SecurityKeyIdentifierClause(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnattachedReference != null ? retObjectUnattachedReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +320,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setUnattachedReference(SecurityKeyIdentifierClause UnattachedReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnattachedReference", UnattachedReference == null ? null : UnattachedReference.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,10 +330,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public SecurityToken getToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Token");
+            retObjectToken = classInstance.Get("Token");
+            JCObject val = (JCObject)retObjectToken;
             return new SecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToken != null ? retObjectToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +345,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setToken(SecurityToken Token) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Token", Token == null ? null : Token.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,10 +355,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningCredentials");
+            retObjectSigningCredentials = classInstance.Get("SigningCredentials");
+            JCObject val = (JCObject)retObjectSigningCredentials;
             return new SigningCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningCredentials != null ? retObjectSigningCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +370,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningCredentials", SigningCredentials == null ? null : SigningCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,10 +380,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public AuthenticationInformation getAuthenticationInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationInfo");
+            retObjectAuthenticationInfo = classInstance.Get("AuthenticationInfo");
+            JCObject val = (JCObject)retObjectAuthenticationInfo;
             return new AuthenticationInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationInfo != null ? retObjectAuthenticationInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +395,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setAuthenticationInfo(AuthenticationInformation AuthenticationInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationInfo", AuthenticationInfo == null ? null : AuthenticationInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -373,10 +405,14 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public ClaimsIdentity getSubject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Subject");
+            retObjectSubject = classInstance.Get("Subject");
+            JCObject val = (JCObject)retObjectSubject;
             return new ClaimsIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubject != null ? retObjectSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +420,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setSubject(ClaimsIdentity Subject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subject", Subject == null ? null : Subject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -394,9 +430,13 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public java.lang.String getAppliesToAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppliesToAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("AppliesToAddress");
+            retObjectAppliesToAddress = classInstance.Get("AppliesToAddress");
+            return (java.lang.String)retObjectAppliesToAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppliesToAddress != null ? retObjectAppliesToAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +444,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setAppliesToAddress(java.lang.String AppliesToAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppliesToAddress", AppliesToAddress);
         } catch (JCNativeException jcne) {
@@ -414,9 +454,13 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public java.lang.String getReplyToAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplyToAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("ReplyToAddress");
+            retObjectReplyToAddress = classInstance.Get("ReplyToAddress");
+            return (java.lang.String)retObjectReplyToAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReplyToAddress != null ? retObjectReplyToAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +468,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setReplyToAddress(java.lang.String ReplyToAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplyToAddress", ReplyToAddress);
         } catch (JCNativeException jcne) {
@@ -434,9 +478,13 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public java.lang.String getTokenIssuerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Get("TokenIssuerName");
+            retObjectTokenIssuerName = classInstance.Get("TokenIssuerName");
+            return (java.lang.String)retObjectTokenIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTokenIssuerName != null ? retObjectTokenIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +492,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setTokenIssuerName(java.lang.String TokenIssuerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenIssuerName", TokenIssuerName);
         } catch (JCNativeException jcne) {
@@ -454,9 +502,13 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenType = null;
         try {
-            return (java.lang.String)classInstance.Get("TokenType");
+            retObjectTokenType = classInstance.Get("TokenType");
+            return (java.lang.String)retObjectTokenType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTokenType != null ? retObjectTokenType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +516,7 @@ public class SecurityTokenDescriptor extends NetObject  {
 
     public void setTokenType(java.lang.String TokenType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenType", TokenType);
         } catch (JCNativeException jcne) {

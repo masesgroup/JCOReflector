@@ -175,9 +175,13 @@ public class TrackingDataItemValue extends NetObject  {
     
     public java.lang.String getDataValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataValue = null;
         try {
-            return (java.lang.String)classInstance.Get("DataValue");
+            retObjectDataValue = classInstance.Get("DataValue");
+            return (java.lang.String)retObjectDataValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataValue != null ? retObjectDataValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class TrackingDataItemValue extends NetObject  {
 
     public void setDataValue(java.lang.String DataValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataValue", DataValue);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,13 @@ public class TrackingDataItemValue extends NetObject  {
 
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldName = null;
         try {
-            return (java.lang.String)classInstance.Get("FieldName");
+            retObjectFieldName = classInstance.Get("FieldName");
+            return (java.lang.String)retObjectFieldName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFieldName != null ? retObjectFieldName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class TrackingDataItemValue extends NetObject  {
 
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldName", FieldName);
         } catch (JCNativeException jcne) {
@@ -215,9 +223,13 @@ public class TrackingDataItemValue extends NetObject  {
 
     public java.lang.String getQualifiedName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQualifiedName = null;
         try {
-            return (java.lang.String)classInstance.Get("QualifiedName");
+            retObjectQualifiedName = classInstance.Get("QualifiedName");
+            return (java.lang.String)retObjectQualifiedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQualifiedName != null ? retObjectQualifiedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class TrackingDataItemValue extends NetObject  {
 
     public void setQualifiedName(java.lang.String QualifiedName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QualifiedName", QualifiedName);
         } catch (JCNativeException jcne) {

@@ -144,7 +144,7 @@ public class IRedirectOutputImplementation extends NetObject implements IRedirec
     
     public void SetOutputStream(IMessageReceiver output) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutputStream", output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {

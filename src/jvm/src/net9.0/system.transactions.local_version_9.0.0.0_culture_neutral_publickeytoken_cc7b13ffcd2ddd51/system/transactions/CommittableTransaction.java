@@ -187,10 +187,14 @@ public class CommittableTransaction extends Transaction  {
     
     public IAsyncResult BeginCommit(AsyncCallback asyncCallback, NetObject asyncState) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginCommit = null;
         try {
-            JCObject objBeginCommit = (JCObject)classInstance.Invoke("BeginCommit", asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginCommit = classInstance.Invoke("BeginCommit", asyncCallback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginCommit = (JCObject)retObjectBeginCommit;
             return new IAsyncResultImplementation(objBeginCommit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginCommit != null ? retObjectBeginCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class CommittableTransaction extends Transaction  {
 
     public void Commit() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class CommittableTransaction extends Transaction  {
 
     public void EndCommit(IAsyncResult asyncResult) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCommit", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {

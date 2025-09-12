@@ -174,10 +174,14 @@ public class EnumerationOptions extends ManagementOptions  {
     
     public NetObject Clone() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +193,13 @@ public class EnumerationOptions extends ManagementOptions  {
     
     public boolean getDirectRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectRead = null;
         try {
-            return (boolean)classInstance.Get("DirectRead");
+            retObjectDirectRead = classInstance.Get("DirectRead");
+            return (boolean)retObjectDirectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDirectRead != null ? retObjectDirectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setDirectRead(boolean DirectRead) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DirectRead", DirectRead);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public boolean getEnsureLocatable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnsureLocatable = null;
         try {
-            return (boolean)classInstance.Get("EnsureLocatable");
+            retObjectEnsureLocatable = classInstance.Get("EnsureLocatable");
+            return (boolean)retObjectEnsureLocatable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnsureLocatable != null ? retObjectEnsureLocatable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setEnsureLocatable(boolean EnsureLocatable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnsureLocatable", EnsureLocatable);
         } catch (JCNativeException jcne) {
@@ -229,9 +241,13 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public boolean getEnumerateDeep() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateDeep = null;
         try {
-            return (boolean)classInstance.Get("EnumerateDeep");
+            retObjectEnumerateDeep = classInstance.Get("EnumerateDeep");
+            return (boolean)retObjectEnumerateDeep;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnumerateDeep != null ? retObjectEnumerateDeep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setEnumerateDeep(boolean EnumerateDeep) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnumerateDeep", EnumerateDeep);
         } catch (JCNativeException jcne) {
@@ -249,9 +265,13 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public boolean getPrototypeOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrototypeOnly = null;
         try {
-            return (boolean)classInstance.Get("PrototypeOnly");
+            retObjectPrototypeOnly = classInstance.Get("PrototypeOnly");
+            return (boolean)retObjectPrototypeOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrototypeOnly != null ? retObjectPrototypeOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setPrototypeOnly(boolean PrototypeOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrototypeOnly", PrototypeOnly);
         } catch (JCNativeException jcne) {
@@ -269,9 +289,13 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public boolean getReturnImmediately() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnImmediately = null;
         try {
-            return (boolean)classInstance.Get("ReturnImmediately");
+            retObjectReturnImmediately = classInstance.Get("ReturnImmediately");
+            return (boolean)retObjectReturnImmediately;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReturnImmediately != null ? retObjectReturnImmediately.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setReturnImmediately(boolean ReturnImmediately) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnImmediately", ReturnImmediately);
         } catch (JCNativeException jcne) {
@@ -289,9 +313,13 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public boolean getRewindable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRewindable = null;
         try {
-            return (boolean)classInstance.Get("Rewindable");
+            retObjectRewindable = classInstance.Get("Rewindable");
+            return (boolean)retObjectRewindable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRewindable != null ? retObjectRewindable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +327,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setRewindable(boolean Rewindable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Rewindable", Rewindable);
         } catch (JCNativeException jcne) {
@@ -309,9 +337,13 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public boolean getUseAmendedQualifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAmendedQualifiers = null;
         try {
-            return (boolean)classInstance.Get("UseAmendedQualifiers");
+            retObjectUseAmendedQualifiers = classInstance.Get("UseAmendedQualifiers");
+            return (boolean)retObjectUseAmendedQualifiers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAmendedQualifiers != null ? retObjectUseAmendedQualifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +351,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setUseAmendedQualifiers(boolean UseAmendedQualifiers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAmendedQualifiers", UseAmendedQualifiers);
         } catch (JCNativeException jcne) {
@@ -329,9 +361,19 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public int getBlockSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlockSize = null;
         try {
-            return (int)classInstance.Get("BlockSize");
+            retObjectBlockSize = classInstance.Get("BlockSize");
+            return (int)retObjectBlockSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBlockSizeNumber = (java.lang.Number)retObjectBlockSize;
+                return retObjectBlockSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBlockSize != null ? retObjectBlockSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +381,7 @@ public class EnumerationOptions extends ManagementOptions  {
 
     public void setBlockSize(int BlockSize) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BlockSize", BlockSize);
         } catch (JCNativeException jcne) {

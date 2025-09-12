@@ -142,9 +142,13 @@ public class IResourceUrlGeneratorImplementation extends NetObject implements IR
     
     public java.lang.String GetResourceUrl(NetType type, java.lang.String resourceName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResourceUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetResourceUrl", type == null ? null : type.getJCOInstance(), resourceName);
+            retObjectGetResourceUrl = classInstance.Invoke("GetResourceUrl", type == null ? null : type.getJCOInstance(), resourceName);
+            return (java.lang.String)retObjectGetResourceUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResourceUrl != null ? retObjectGetResourceUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

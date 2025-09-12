@@ -154,9 +154,13 @@ public class StackFrameExtensions extends NetObject  {
     
     public static boolean HasILOffset(StackFrame stackFrame) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasILOffset = null;
         try {
-            return (boolean)classType.Invoke("HasILOffset", stackFrame == null ? null : stackFrame.getJCOInstance());
+            retObjectHasILOffset = classType.Invoke("HasILOffset", stackFrame == null ? null : stackFrame.getJCOInstance());
+            return (boolean)retObjectHasILOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasILOffset != null ? retObjectHasILOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class StackFrameExtensions extends NetObject  {
 
     public static boolean HasMethod(StackFrame stackFrame) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasMethod = null;
         try {
-            return (boolean)classType.Invoke("HasMethod", stackFrame == null ? null : stackFrame.getJCOInstance());
+            retObjectHasMethod = classType.Invoke("HasMethod", stackFrame == null ? null : stackFrame.getJCOInstance());
+            return (boolean)retObjectHasMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasMethod != null ? retObjectHasMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class StackFrameExtensions extends NetObject  {
 
     public static boolean HasNativeImage(StackFrame stackFrame) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasNativeImage = null;
         try {
-            return (boolean)classType.Invoke("HasNativeImage", stackFrame == null ? null : stackFrame.getJCOInstance());
+            retObjectHasNativeImage = classType.Invoke("HasNativeImage", stackFrame == null ? null : stackFrame.getJCOInstance());
+            return (boolean)retObjectHasNativeImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasNativeImage != null ? retObjectHasNativeImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class StackFrameExtensions extends NetObject  {
 
     public static boolean HasSource(StackFrame stackFrame) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasSource = null;
         try {
-            return (boolean)classType.Invoke("HasSource", stackFrame == null ? null : stackFrame.getJCOInstance());
+            retObjectHasSource = classType.Invoke("HasSource", stackFrame == null ? null : stackFrame.getJCOInstance());
+            return (boolean)retObjectHasSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasSource != null ? retObjectHasSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

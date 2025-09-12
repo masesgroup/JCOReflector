@@ -170,9 +170,19 @@ public class MethodBodyStreamEncoder extends ValueType  {
     
     public int AddMethodBody(InstructionEncoder instructionEncoder, int maxStack, StandaloneSignatureHandle localVariablesSignature, MethodBodyAttributes attributes, boolean hasDynamicStackAllocation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMethodBody = null;
         try {
-            return (int)classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), hasDynamicStackAllocation);
+            retObjectAddMethodBody = classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), hasDynamicStackAllocation);
+            return (int)retObjectAddMethodBody;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddMethodBodyNumber = (java.lang.Number)retObjectAddMethodBody;
+                return retObjectAddMethodBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAddMethodBody != null ? retObjectAddMethodBody.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +190,19 @@ public class MethodBodyStreamEncoder extends ValueType  {
 
     public int AddMethodBody(InstructionEncoder instructionEncoder, int maxStack, StandaloneSignatureHandle localVariablesSignature, MethodBodyAttributes attributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMethodBody = null;
         try {
-            return (int)classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
+            retObjectAddMethodBody = classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
+            return (int)retObjectAddMethodBody;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddMethodBodyNumber = (java.lang.Number)retObjectAddMethodBody;
+                return retObjectAddMethodBodyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAddMethodBody != null ? retObjectAddMethodBody.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +214,14 @@ public class MethodBodyStreamEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,10 +161,14 @@ public class ApplicationMonitors extends NetObject  {
     
     public IApplicationMonitor getMemoryMonitor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemoryMonitor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemoryMonitor");
+            retObjectMemoryMonitor = classInstance.Get("MemoryMonitor");
+            JCObject val = (JCObject)retObjectMemoryMonitor;
             return new IApplicationMonitorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemoryMonitor != null ? retObjectMemoryMonitor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class ApplicationMonitors extends NetObject  {
 
     public void setMemoryMonitor(IApplicationMonitor MemoryMonitor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MemoryMonitor", MemoryMonitor == null ? null : MemoryMonitor.getJCOInstance());
         } catch (JCNativeException jcne) {

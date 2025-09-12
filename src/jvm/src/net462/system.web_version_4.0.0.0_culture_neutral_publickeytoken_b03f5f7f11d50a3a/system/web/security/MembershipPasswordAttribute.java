@@ -162,9 +162,13 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
     
     public java.lang.String FormatErrorMessage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatErrorMessage", name);
+            retObjectFormatErrorMessage = classInstance.Invoke("FormatErrorMessage", name);
+            return (java.lang.String)retObjectFormatErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatErrorMessage != null ? retObjectFormatErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,19 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
     
     public int getMinRequiredNonAlphanumericCharacters() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinRequiredNonAlphanumericCharacters = null;
         try {
-            return (int)classInstance.Get("MinRequiredNonAlphanumericCharacters");
+            retObjectMinRequiredNonAlphanumericCharacters = classInstance.Get("MinRequiredNonAlphanumericCharacters");
+            return (int)retObjectMinRequiredNonAlphanumericCharacters;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinRequiredNonAlphanumericCharactersNumber = (java.lang.Number)retObjectMinRequiredNonAlphanumericCharacters;
+                return retObjectMinRequiredNonAlphanumericCharactersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredNonAlphanumericCharacters != null ? retObjectMinRequiredNonAlphanumericCharacters.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +200,7 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public void setMinRequiredNonAlphanumericCharacters(int MinRequiredNonAlphanumericCharacters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinRequiredNonAlphanumericCharacters", MinRequiredNonAlphanumericCharacters);
         } catch (JCNativeException jcne) {
@@ -196,9 +210,19 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public int getMinRequiredPasswordLength() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinRequiredPasswordLength = null;
         try {
-            return (int)classInstance.Get("MinRequiredPasswordLength");
+            retObjectMinRequiredPasswordLength = classInstance.Get("MinRequiredPasswordLength");
+            return (int)retObjectMinRequiredPasswordLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMinRequiredPasswordLengthNumber = (java.lang.Number)retObjectMinRequiredPasswordLength;
+                return retObjectMinRequiredPasswordLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMinRequiredPasswordLength != null ? retObjectMinRequiredPasswordLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +230,7 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public void setMinRequiredPasswordLength(int MinRequiredPasswordLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinRequiredPasswordLength", MinRequiredPasswordLength);
         } catch (JCNativeException jcne) {
@@ -216,9 +240,13 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public java.lang.String getMinNonAlphanumericCharactersError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinNonAlphanumericCharactersError = null;
         try {
-            return (java.lang.String)classInstance.Get("MinNonAlphanumericCharactersError");
+            retObjectMinNonAlphanumericCharactersError = classInstance.Get("MinNonAlphanumericCharactersError");
+            return (java.lang.String)retObjectMinNonAlphanumericCharactersError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMinNonAlphanumericCharactersError != null ? retObjectMinNonAlphanumericCharactersError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +254,7 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public void setMinNonAlphanumericCharactersError(java.lang.String MinNonAlphanumericCharactersError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinNonAlphanumericCharactersError", MinNonAlphanumericCharactersError);
         } catch (JCNativeException jcne) {
@@ -236,9 +264,13 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public java.lang.String getMinPasswordLengthError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinPasswordLengthError = null;
         try {
-            return (java.lang.String)classInstance.Get("MinPasswordLengthError");
+            retObjectMinPasswordLengthError = classInstance.Get("MinPasswordLengthError");
+            return (java.lang.String)retObjectMinPasswordLengthError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMinPasswordLengthError != null ? retObjectMinPasswordLengthError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +278,7 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public void setMinPasswordLengthError(java.lang.String MinPasswordLengthError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinPasswordLengthError", MinPasswordLengthError);
         } catch (JCNativeException jcne) {
@@ -256,9 +288,13 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public java.lang.String getPasswordStrengthError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordStrengthError = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordStrengthError");
+            retObjectPasswordStrengthError = classInstance.Get("PasswordStrengthError");
+            return (java.lang.String)retObjectPasswordStrengthError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordStrengthError != null ? retObjectPasswordStrengthError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +302,7 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public void setPasswordStrengthError(java.lang.String PasswordStrengthError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordStrengthError", PasswordStrengthError);
         } catch (JCNativeException jcne) {
@@ -276,9 +312,13 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public java.lang.String getPasswordStrengthRegularExpression() throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordStrengthRegularExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordStrengthRegularExpression");
+            retObjectPasswordStrengthRegularExpression = classInstance.Get("PasswordStrengthRegularExpression");
+            return (java.lang.String)retObjectPasswordStrengthRegularExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordStrengthRegularExpression != null ? retObjectPasswordStrengthRegularExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +326,7 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public void setPasswordStrengthRegularExpression(java.lang.String PasswordStrengthRegularExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordStrengthRegularExpression", PasswordStrengthRegularExpression);
         } catch (JCNativeException jcne) {
@@ -296,10 +336,14 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public NetType getResourceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceType");
+            retObjectResourceType = classInstance.Get("ResourceType");
+            JCObject val = (JCObject)retObjectResourceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceType != null ? retObjectResourceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +351,7 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
 
     public void setResourceType(NetType ResourceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceType", ResourceType == null ? null : ResourceType.getJCOInstance());
         } catch (JCNativeException jcne) {

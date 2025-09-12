@@ -212,10 +212,14 @@ public class MetadataExchangeClient extends NetObject  {
     
     public IAsyncResult BeginGetMetadata(AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginGetMetadata = null;
         try {
-            JCObject objBeginGetMetadata = (JCObject)classInstance.Invoke("BeginGetMetadata", callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginGetMetadata = classInstance.Invoke("BeginGetMetadata", callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginGetMetadata = (JCObject)retObjectBeginGetMetadata;
             return new IAsyncResultImplementation(objBeginGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetMetadata != null ? retObjectBeginGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +227,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public IAsyncResult BeginGetMetadata(EndpointAddress address, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginGetMetadata = null;
         try {
-            JCObject objBeginGetMetadata = (JCObject)classInstance.Invoke("BeginGetMetadata", address == null ? null : address.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginGetMetadata = classInstance.Invoke("BeginGetMetadata", address == null ? null : address.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginGetMetadata = (JCObject)retObjectBeginGetMetadata;
             return new IAsyncResultImplementation(objBeginGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetMetadata != null ? retObjectBeginGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +242,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public IAsyncResult BeginGetMetadata(Uri address, MetadataExchangeClientMode mode, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginGetMetadata = null;
         try {
-            JCObject objBeginGetMetadata = (JCObject)classInstance.Invoke("BeginGetMetadata", address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginGetMetadata = classInstance.Invoke("BeginGetMetadata", address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginGetMetadata = (JCObject)retObjectBeginGetMetadata;
             return new IAsyncResultImplementation(objBeginGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetMetadata != null ? retObjectBeginGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +257,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public MetadataSet EndGetMetadata(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndGetMetadata = null;
         try {
-            JCObject objEndGetMetadata = (JCObject)classInstance.Invoke("EndGetMetadata", result == null ? null : result.getJCOInstance());
+            retObjectEndGetMetadata = classInstance.Invoke("EndGetMetadata", result == null ? null : result.getJCOInstance());
+            JCObject objEndGetMetadata = (JCObject)retObjectEndGetMetadata;
             return new MetadataSet(objEndGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGetMetadata != null ? retObjectEndGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +272,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public MetadataSet GetMetadata() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata");
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata");
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new MetadataSet(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +287,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public MetadataSet GetMetadata(EndpointAddress address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata", address == null ? null : address.getJCOInstance());
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", address == null ? null : address.getJCOInstance());
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new MetadataSet(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +302,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public MetadataSet GetMetadata(EndpointAddress address, Uri via) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata", address == null ? null : address.getJCOInstance(), via == null ? null : via.getJCOInstance());
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", address == null ? null : address.getJCOInstance(), via == null ? null : via.getJCOInstance());
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new MetadataSet(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +317,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public MetadataSet GetMetadata(Uri address, MetadataExchangeClientMode mode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotImplementedException, system.NullReferenceException, system.security.SecurityException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadata = null;
         try {
-            JCObject objGetMetadata = (JCObject)classInstance.Invoke("GetMetadata", address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            retObjectGetMetadata = classInstance.Invoke("GetMetadata", address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            JCObject objGetMetadata = (JCObject)retObjectGetMetadata;
             return new MetadataSet(objGetMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadata != null ? retObjectGetMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +336,13 @@ public class MetadataExchangeClient extends NetObject  {
     
     public boolean getResolveMetadataReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveMetadataReferences = null;
         try {
-            return (boolean)classInstance.Get("ResolveMetadataReferences");
+            retObjectResolveMetadataReferences = classInstance.Get("ResolveMetadataReferences");
+            return (boolean)retObjectResolveMetadataReferences;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResolveMetadataReferences != null ? retObjectResolveMetadataReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +350,7 @@ public class MetadataExchangeClient extends NetObject  {
 
     public void setResolveMetadataReferences(boolean ResolveMetadataReferences) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResolveMetadataReferences", ResolveMetadataReferences);
         } catch (JCNativeException jcne) {
@@ -324,9 +360,19 @@ public class MetadataExchangeClient extends NetObject  {
 
     public int getMaximumResolvedReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumResolvedReferences = null;
         try {
-            return (int)classInstance.Get("MaximumResolvedReferences");
+            retObjectMaximumResolvedReferences = classInstance.Get("MaximumResolvedReferences");
+            return (int)retObjectMaximumResolvedReferences;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumResolvedReferencesNumber = (java.lang.Number)retObjectMaximumResolvedReferences;
+                return retObjectMaximumResolvedReferencesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaximumResolvedReferences != null ? retObjectMaximumResolvedReferences.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +380,7 @@ public class MetadataExchangeClient extends NetObject  {
 
     public void setMaximumResolvedReferences(int MaximumResolvedReferences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumResolvedReferences", MaximumResolvedReferences);
         } catch (JCNativeException jcne) {
@@ -344,10 +390,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public ICredentials getHttpCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpCredentials");
+            retObjectHttpCredentials = classInstance.Get("HttpCredentials");
+            JCObject val = (JCObject)retObjectHttpCredentials;
             return new ICredentialsImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpCredentials != null ? retObjectHttpCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +405,7 @@ public class MetadataExchangeClient extends NetObject  {
 
     public void setHttpCredentials(ICredentials HttpCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpCredentials", HttpCredentials == null ? null : HttpCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,10 +415,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public ClientCredentials getSoapCredentials() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapCredentials");
+            retObjectSoapCredentials = classInstance.Get("SoapCredentials");
+            JCObject val = (JCObject)retObjectSoapCredentials;
             return new ClientCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapCredentials != null ? retObjectSoapCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +430,7 @@ public class MetadataExchangeClient extends NetObject  {
 
     public void setSoapCredentials(ClientCredentials SoapCredentials) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapCredentials", SoapCredentials == null ? null : SoapCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +440,14 @@ public class MetadataExchangeClient extends NetObject  {
 
     public TimeSpan getOperationTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationTimeout");
+            retObjectOperationTimeout = classInstance.Get("OperationTimeout");
+            JCObject val = (JCObject)retObjectOperationTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationTimeout != null ? retObjectOperationTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +455,7 @@ public class MetadataExchangeClient extends NetObject  {
 
     public void setOperationTimeout(TimeSpan OperationTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OperationTimeout", OperationTimeout == null ? null : OperationTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

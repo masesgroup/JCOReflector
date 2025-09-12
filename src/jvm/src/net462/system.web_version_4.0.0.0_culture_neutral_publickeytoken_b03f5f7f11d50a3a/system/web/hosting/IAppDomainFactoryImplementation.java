@@ -142,10 +142,14 @@ public class IAppDomainFactoryImplementation extends NetObject implements IAppDo
     
     public NetObject Create(java.lang.String module, java.lang.String typeName, java.lang.String appId, java.lang.String appPath, java.lang.String strUrlOfAppOrigin, int iZone) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", module, typeName, appId, appPath, strUrlOfAppOrigin, iZone);
+            retObjectCreate = classInstance.Invoke("Create", module, typeName, appId, appPath, strUrlOfAppOrigin, iZone);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new NetObject(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

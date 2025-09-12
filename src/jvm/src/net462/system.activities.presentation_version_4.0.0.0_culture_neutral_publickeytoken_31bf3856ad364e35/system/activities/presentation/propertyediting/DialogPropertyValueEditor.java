@@ -176,7 +176,7 @@ public class DialogPropertyValueEditor extends PropertyValueEditor  {
     
     public void ShowDialog(PropertyValue propertyValue, IInputElement commandSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowDialog", propertyValue == null ? null : propertyValue.getJCOInstance(), commandSource == null ? null : commandSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +190,14 @@ public class DialogPropertyValueEditor extends PropertyValueEditor  {
     
     public DataTemplate getDialogEditorTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDialogEditorTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DialogEditorTemplate");
+            retObjectDialogEditorTemplate = classInstance.Get("DialogEditorTemplate");
+            JCObject val = (JCObject)retObjectDialogEditorTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDialogEditorTemplate != null ? retObjectDialogEditorTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +205,7 @@ public class DialogPropertyValueEditor extends PropertyValueEditor  {
 
     public void setDialogEditorTemplate(DataTemplate DialogEditorTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DialogEditorTemplate", DialogEditorTemplate == null ? null : DialogEditorTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

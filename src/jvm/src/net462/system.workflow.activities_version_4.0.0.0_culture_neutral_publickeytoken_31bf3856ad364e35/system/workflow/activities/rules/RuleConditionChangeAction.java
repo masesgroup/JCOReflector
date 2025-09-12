@@ -158,9 +158,13 @@ public class RuleConditionChangeAction extends WorkflowChangeAction  {
     
     public java.lang.String getConditionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditionName = null;
         try {
-            return (java.lang.String)classInstance.Get("ConditionName");
+            retObjectConditionName = classInstance.Get("ConditionName");
+            return (java.lang.String)retObjectConditionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConditionName != null ? retObjectConditionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -163,10 +163,14 @@ public class NavigationProperty extends EdmMember  {
     
     public RelationshipEndMember getFromEndMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromEndMember = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FromEndMember");
+            retObjectFromEndMember = classInstance.Get("FromEndMember");
+            JCObject val = (JCObject)retObjectFromEndMember;
             return new RelationshipEndMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromEndMember != null ? retObjectFromEndMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class NavigationProperty extends EdmMember  {
 
     public void setFromEndMember(RelationshipEndMember FromEndMember) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FromEndMember", FromEndMember == null ? null : FromEndMember.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class NavigationProperty extends EdmMember  {
 
     public RelationshipEndMember getToEndMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToEndMember = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToEndMember");
+            retObjectToEndMember = classInstance.Get("ToEndMember");
+            JCObject val = (JCObject)retObjectToEndMember;
             return new RelationshipEndMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToEndMember != null ? retObjectToEndMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class NavigationProperty extends EdmMember  {
 
     public void setToEndMember(RelationshipEndMember ToEndMember) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToEndMember", ToEndMember == null ? null : ToEndMember.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class NavigationProperty extends EdmMember  {
 
     public RelationshipType getRelationshipType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelationshipType");
+            retObjectRelationshipType = classInstance.Get("RelationshipType");
+            JCObject val = (JCObject)retObjectRelationshipType;
             return new RelationshipType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelationshipType != null ? retObjectRelationshipType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class NavigationProperty extends EdmMember  {
 
     public void setRelationshipType(RelationshipType RelationshipType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RelationshipType", RelationshipType == null ? null : RelationshipType.getJCOInstance());
         } catch (JCNativeException jcne) {

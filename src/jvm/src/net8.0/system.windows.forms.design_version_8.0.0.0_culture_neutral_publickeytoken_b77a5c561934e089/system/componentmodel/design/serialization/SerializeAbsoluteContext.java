@@ -172,9 +172,13 @@ public class SerializeAbsoluteContext extends NetObject  {
     
     public boolean ShouldSerialize(MemberDescriptor member) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerialize = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerialize", member == null ? null : member.getJCOInstance());
+            retObjectShouldSerialize = classInstance.Invoke("ShouldSerialize", member == null ? null : member.getJCOInstance());
+            return (boolean)retObjectShouldSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerialize != null ? retObjectShouldSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class SerializeAbsoluteContext extends NetObject  {
     
     public MemberDescriptor getMember() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMember = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Member");
+            retObjectMember = classInstance.Get("Member");
+            JCObject val = (JCObject)retObjectMember;
             return new MemberDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMember != null ? retObjectMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

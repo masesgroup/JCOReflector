@@ -155,10 +155,14 @@ public class VirtualFile extends VirtualFileBase  {
     
     public Stream Open() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classInstance.Invoke("Open");
+            retObjectOpen = classInstance.Invoke("Open");
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Stream(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

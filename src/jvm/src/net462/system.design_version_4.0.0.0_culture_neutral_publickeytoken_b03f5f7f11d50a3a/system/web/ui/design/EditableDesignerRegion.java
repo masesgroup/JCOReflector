@@ -179,10 +179,14 @@ public class EditableDesignerRegion extends DesignerRegion  {
     
     public ViewRendering GetChildViewRendering(Control control) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildViewRendering = null;
         try {
-            JCObject objGetChildViewRendering = (JCObject)classInstance.Invoke("GetChildViewRendering", control == null ? null : control.getJCOInstance());
+            retObjectGetChildViewRendering = classInstance.Invoke("GetChildViewRendering", control == null ? null : control.getJCOInstance());
+            JCObject objGetChildViewRendering = (JCObject)retObjectGetChildViewRendering;
             return new ViewRendering(objGetChildViewRendering);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildViewRendering != null ? retObjectGetChildViewRendering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class EditableDesignerRegion extends DesignerRegion  {
     
     public boolean getServerControlsOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerControlsOnly = null;
         try {
-            return (boolean)classInstance.Get("ServerControlsOnly");
+            retObjectServerControlsOnly = classInstance.Get("ServerControlsOnly");
+            return (boolean)retObjectServerControlsOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServerControlsOnly != null ? retObjectServerControlsOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class EditableDesignerRegion extends DesignerRegion  {
 
     public void setServerControlsOnly(boolean ServerControlsOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerControlsOnly", ServerControlsOnly);
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class EditableDesignerRegion extends DesignerRegion  {
 
     public boolean getSupportsDataBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsDataBinding = null;
         try {
-            return (boolean)classInstance.Get("SupportsDataBinding");
+            retObjectSupportsDataBinding = classInstance.Get("SupportsDataBinding");
+            return (boolean)retObjectSupportsDataBinding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsDataBinding != null ? retObjectSupportsDataBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class EditableDesignerRegion extends DesignerRegion  {
 
     public void setSupportsDataBinding(boolean SupportsDataBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportsDataBinding", SupportsDataBinding);
         } catch (JCNativeException jcne) {
@@ -234,9 +246,13 @@ public class EditableDesignerRegion extends DesignerRegion  {
 
     public java.lang.String getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            return (java.lang.String)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            return (java.lang.String)retObjectContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class EditableDesignerRegion extends DesignerRegion  {
 
     public void setContent(java.lang.String Content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content);
         } catch (JCNativeException jcne) {

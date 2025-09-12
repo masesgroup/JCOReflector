@@ -144,7 +144,7 @@ public class ITransactionImplementation extends NetObject implements ITransactio
     
     public void Abort(JCORefOut<BOID> pboidReason, int fRetaining, int fAsync) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort", pboidReason.getJCRefOut(), fRetaining, fAsync);
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class ITransactionImplementation extends NetObject implements ITransactio
 
     public void Commit(int fRetaining, int grfTC, int grfRM) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", fRetaining, grfTC, grfRM);
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class ITransactionImplementation extends NetObject implements ITransactio
 
     public void GetTransactionInfo(JCORefOut<XACTTRANSINFO> pinfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTransactionInfo", pinfo.getJCRefOut());
         } catch (JCNativeException jcne) {

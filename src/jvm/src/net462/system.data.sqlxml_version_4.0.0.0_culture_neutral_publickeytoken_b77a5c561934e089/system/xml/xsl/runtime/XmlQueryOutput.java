@@ -162,9 +162,13 @@ public class XmlQueryOutput extends XmlWriter  {
     
     public boolean StartCopy(XPathNavigator navigator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartCopy = null;
         try {
-            return (boolean)classInstance.Invoke("StartCopy", navigator == null ? null : navigator.getJCOInstance());
+            retObjectStartCopy = classInstance.Invoke("StartCopy", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectStartCopy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStartCopy != null ? retObjectStartCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public java.lang.String LookupPrefix(java.lang.String ns) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupPrefix", ns);
+            retObjectLookupPrefix = classInstance.Invoke("LookupPrefix", ns);
+            return (java.lang.String)retObjectLookupPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupPrefix != null ? retObjectLookupPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -192,7 +200,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void EndCopy(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCopy", navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +210,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void EndTree() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTree");
         } catch (JCNativeException jcne) {
@@ -212,7 +220,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -222,7 +230,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void StartElementContentUnchecked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartElementContentUnchecked");
         } catch (JCNativeException jcne) {
@@ -232,7 +240,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void StartTree(XPathNodeType rootType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartTree", rootType == null ? null : rootType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,7 +250,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteBase64(byte[] buffer, int index, int count) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBase64", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -252,7 +260,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -262,7 +270,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteCData(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCData", text);
         } catch (JCNativeException jcne) {
@@ -272,7 +280,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteCharEntity(char ch) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCharEntity", ch);
         } catch (JCNativeException jcne) {
@@ -282,7 +290,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteChars(char[] buffer, int index, int count) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteChars", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -292,7 +300,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -302,7 +310,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteComment(java.lang.String text) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteComment", text);
         } catch (JCNativeException jcne) {
@@ -312,7 +320,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteCommentString(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCommentString", text);
         } catch (JCNativeException jcne) {
@@ -322,7 +330,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteDocType(java.lang.String name, java.lang.String pubid, java.lang.String sysid, java.lang.String subset) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteDocType", name, pubid, sysid, subset);
         } catch (JCNativeException jcne) {
@@ -332,7 +340,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndAttribute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndAttribute");
         } catch (JCNativeException jcne) {
@@ -342,7 +350,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndAttributeUnchecked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndAttributeUnchecked");
         } catch (JCNativeException jcne) {
@@ -352,7 +360,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndComment() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndComment");
         } catch (JCNativeException jcne) {
@@ -362,7 +370,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndDocument() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndDocument");
         } catch (JCNativeException jcne) {
@@ -372,7 +380,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndElement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndElement");
         } catch (JCNativeException jcne) {
@@ -382,7 +390,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndElementUnchecked(java.lang.String localName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndElementUnchecked", localName);
         } catch (JCNativeException jcne) {
@@ -392,7 +400,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndElementUnchecked(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndElementUnchecked", prefix, localName, ns);
         } catch (JCNativeException jcne) {
@@ -402,7 +410,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndNamespace() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndNamespace");
         } catch (JCNativeException jcne) {
@@ -412,7 +420,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndProcessingInstruction() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndProcessingInstruction");
         } catch (JCNativeException jcne) {
@@ -422,7 +430,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEndRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndRoot");
         } catch (JCNativeException jcne) {
@@ -432,7 +440,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteEntityRef(java.lang.String name) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntityRef", name);
         } catch (JCNativeException jcne) {
@@ -442,7 +450,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteFullEndElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteFullEndElement");
         } catch (JCNativeException jcne) {
@@ -452,7 +460,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteItem(XPathItem item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteItem", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +470,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteNamespaceDeclaration(java.lang.String prefix, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNamespaceDeclaration", prefix, ns);
         } catch (JCNativeException jcne) {
@@ -472,7 +480,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteNamespaceDeclarationUnchecked(java.lang.String prefix, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNamespaceDeclarationUnchecked", prefix, ns);
         } catch (JCNativeException jcne) {
@@ -482,7 +490,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteNamespaceString(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNamespaceString", text);
         } catch (JCNativeException jcne) {
@@ -492,7 +500,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteProcessingInstruction(java.lang.String target, java.lang.String text) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.ObjectDisposedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteProcessingInstruction", target, text);
         } catch (JCNativeException jcne) {
@@ -502,7 +510,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteProcessingInstructionString(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteProcessingInstructionString", text);
         } catch (JCNativeException jcne) {
@@ -512,7 +520,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteRaw(char[] buffer, int index, int count) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRaw", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -522,7 +530,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteRaw(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRaw", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -532,7 +540,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteRaw(java.lang.String data) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRaw", data);
         } catch (JCNativeException jcne) {
@@ -542,7 +550,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteRawUnchecked(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRawUnchecked", text);
         } catch (JCNativeException jcne) {
@@ -552,7 +560,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttribute", prefix, localName, ns);
         } catch (JCNativeException jcne) {
@@ -562,7 +570,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttributeComputed(java.lang.String tagName, int prefixMappingsIndex) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttributeComputed", tagName, prefixMappingsIndex);
         } catch (JCNativeException jcne) {
@@ -572,7 +580,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttributeComputed(java.lang.String tagName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttributeComputed", tagName, ns);
         } catch (JCNativeException jcne) {
@@ -582,7 +590,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttributeComputed(XmlQualifiedName name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttributeComputed", name == null ? null : name.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -592,7 +600,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttributeComputed(XPathNavigator navigator) throws Throwable, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttributeComputed", navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -602,7 +610,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttributeLocalName(java.lang.String localName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttributeLocalName", localName);
         } catch (JCNativeException jcne) {
@@ -612,7 +620,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttributeUnchecked(java.lang.String localName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttributeUnchecked", localName);
         } catch (JCNativeException jcne) {
@@ -622,7 +630,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartAttributeUnchecked(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttributeUnchecked", prefix, localName, ns);
         } catch (JCNativeException jcne) {
@@ -632,7 +640,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartComment() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartComment");
         } catch (JCNativeException jcne) {
@@ -642,7 +650,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartDocument() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartDocument");
         } catch (JCNativeException jcne) {
@@ -652,7 +660,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartDocument(boolean standalone) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartDocument", standalone);
         } catch (JCNativeException jcne) {
@@ -662,7 +670,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElement(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElement", prefix, localName, ns);
         } catch (JCNativeException jcne) {
@@ -672,7 +680,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElementComputed(java.lang.String tagName, int prefixMappingsIndex) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElementComputed", tagName, prefixMappingsIndex);
         } catch (JCNativeException jcne) {
@@ -682,7 +690,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElementComputed(java.lang.String tagName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElementComputed", tagName, ns);
         } catch (JCNativeException jcne) {
@@ -692,7 +700,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElementComputed(XmlQualifiedName name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElementComputed", name == null ? null : name.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -702,7 +710,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElementComputed(XPathNavigator navigator) throws Throwable, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElementComputed", navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -712,7 +720,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElementLocalName(java.lang.String localName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElementLocalName", localName);
         } catch (JCNativeException jcne) {
@@ -722,7 +730,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElementUnchecked(java.lang.String localName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElementUnchecked", localName);
         } catch (JCNativeException jcne) {
@@ -732,7 +740,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartElementUnchecked(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElementUnchecked", prefix, localName, ns);
         } catch (JCNativeException jcne) {
@@ -742,7 +750,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartNamespace(java.lang.String prefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartNamespace", prefix);
         } catch (JCNativeException jcne) {
@@ -752,7 +760,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartProcessingInstruction(java.lang.String target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartProcessingInstruction", target);
         } catch (JCNativeException jcne) {
@@ -762,7 +770,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStartRoot() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartRoot");
         } catch (JCNativeException jcne) {
@@ -772,7 +780,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteString(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", text);
         } catch (JCNativeException jcne) {
@@ -782,7 +790,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteStringUnchecked(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStringUnchecked", text);
         } catch (JCNativeException jcne) {
@@ -792,7 +800,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteSurrogateCharEntity(char lowChar, char highChar) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSurrogateCharEntity", lowChar, highChar);
         } catch (JCNativeException jcne) {
@@ -802,7 +810,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void WriteWhitespace(java.lang.String ws) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteWhitespace", ws);
         } catch (JCNativeException jcne) {
@@ -812,7 +820,7 @@ public class XmlQueryOutput extends XmlWriter  {
 
     public void XsltCopyOf(XPathNavigator navigator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("XsltCopyOf", navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {

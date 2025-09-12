@@ -157,9 +157,13 @@ public class BaseCompatibilityPreferences extends NetObject  {
     
     public static boolean getFlowDispatcherSynchronizationContextPriority() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFlowDispatcherSynchronizationContextPriority = null;
         try {
-            return (boolean)classType.Get("FlowDispatcherSynchronizationContextPriority");
+            retObjectFlowDispatcherSynchronizationContextPriority = classType.Get("FlowDispatcherSynchronizationContextPriority");
+            return (boolean)retObjectFlowDispatcherSynchronizationContextPriority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFlowDispatcherSynchronizationContextPriority != null ? retObjectFlowDispatcherSynchronizationContextPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class BaseCompatibilityPreferences extends NetObject  {
 
     public static void setFlowDispatcherSynchronizationContextPriority(boolean FlowDispatcherSynchronizationContextPriority) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("FlowDispatcherSynchronizationContextPriority", FlowDispatcherSynchronizationContextPriority);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class BaseCompatibilityPreferences extends NetObject  {
 
     public static boolean getInlineDispatcherSynchronizationContextSend() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInlineDispatcherSynchronizationContextSend = null;
         try {
-            return (boolean)classType.Get("InlineDispatcherSynchronizationContextSend");
+            retObjectInlineDispatcherSynchronizationContextSend = classType.Get("InlineDispatcherSynchronizationContextSend");
+            return (boolean)retObjectInlineDispatcherSynchronizationContextSend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInlineDispatcherSynchronizationContextSend != null ? retObjectInlineDispatcherSynchronizationContextSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class BaseCompatibilityPreferences extends NetObject  {
 
     public static void setInlineDispatcherSynchronizationContextSend(boolean InlineDispatcherSynchronizationContextSend) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("InlineDispatcherSynchronizationContextSend", InlineDispatcherSynchronizationContextSend);
         } catch (JCNativeException jcne) {
@@ -197,9 +205,13 @@ public class BaseCompatibilityPreferences extends NetObject  {
 
     public static boolean getReuseDispatcherSynchronizationContextInstance() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReuseDispatcherSynchronizationContextInstance = null;
         try {
-            return (boolean)classType.Get("ReuseDispatcherSynchronizationContextInstance");
+            retObjectReuseDispatcherSynchronizationContextInstance = classType.Get("ReuseDispatcherSynchronizationContextInstance");
+            return (boolean)retObjectReuseDispatcherSynchronizationContextInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReuseDispatcherSynchronizationContextInstance != null ? retObjectReuseDispatcherSynchronizationContextInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class BaseCompatibilityPreferences extends NetObject  {
 
     public static void setReuseDispatcherSynchronizationContextInstance(boolean ReuseDispatcherSynchronizationContextInstance) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ReuseDispatcherSynchronizationContextInstance", ReuseDispatcherSynchronizationContextInstance);
         } catch (JCNativeException jcne) {

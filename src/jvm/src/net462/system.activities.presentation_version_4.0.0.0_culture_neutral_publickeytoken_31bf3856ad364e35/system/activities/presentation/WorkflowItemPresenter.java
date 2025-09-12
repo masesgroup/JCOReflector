@@ -168,7 +168,7 @@ public class WorkflowItemPresenter extends ContentControl  {
      */
     @Deprecated 
     public void OnItemMoved(ModelItem modelItem) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
 
 
@@ -177,9 +177,13 @@ public class WorkflowItemPresenter extends ContentControl  {
     
     public boolean getIsDefaultContainer() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultContainer = null;
         try {
-            return (boolean)classInstance.Get("IsDefaultContainer");
+            retObjectIsDefaultContainer = classInstance.Get("IsDefaultContainer");
+            return (boolean)retObjectIsDefaultContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefaultContainer != null ? retObjectIsDefaultContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public void setIsDefaultContainer(boolean IsDefaultContainer) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDefaultContainer", IsDefaultContainer);
         } catch (JCNativeException jcne) {
@@ -197,10 +201,14 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public ModelItem getItem() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
+            retObjectItem = classInstance.Get("Item");
+            JCObject val = (JCObject)retObjectItem;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public void setItem(ModelItem Item) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Item", Item == null ? null : Item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +226,14 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public TypeResolvingOptions getDroppingTypeResolvingOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDroppingTypeResolvingOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DroppingTypeResolvingOptions");
+            retObjectDroppingTypeResolvingOptions = classInstance.Get("DroppingTypeResolvingOptions");
+            JCObject val = (JCObject)retObjectDroppingTypeResolvingOptions;
             return new TypeResolvingOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDroppingTypeResolvingOptions != null ? retObjectDroppingTypeResolvingOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public void setDroppingTypeResolvingOptions(TypeResolvingOptions DroppingTypeResolvingOptions) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DroppingTypeResolvingOptions", DroppingTypeResolvingOptions == null ? null : DroppingTypeResolvingOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,9 +251,13 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public java.lang.String getHintText() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHintText = null;
         try {
-            return (java.lang.String)classInstance.Get("HintText");
+            retObjectHintText = classInstance.Get("HintText");
+            return (java.lang.String)retObjectHintText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHintText != null ? retObjectHintText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +265,7 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public void setHintText(java.lang.String HintText) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HintText", HintText);
         } catch (JCNativeException jcne) {
@@ -259,10 +275,14 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public NetType getAllowedItemType() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AllowedItemType");
+            retObjectAllowedItemType = classInstance.Get("AllowedItemType");
+            JCObject val = (JCObject)retObjectAllowedItemType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedItemType != null ? retObjectAllowedItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +290,7 @@ public class WorkflowItemPresenter extends ContentControl  {
 
     public void setAllowedItemType(NetType AllowedItemType) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowedItemType", AllowedItemType == null ? null : AllowedItemType.getJCOInstance());
         } catch (JCNativeException jcne) {

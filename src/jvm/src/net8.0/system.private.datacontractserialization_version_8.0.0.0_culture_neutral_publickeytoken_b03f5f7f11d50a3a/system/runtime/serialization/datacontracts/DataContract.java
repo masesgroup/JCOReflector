@@ -156,9 +156,13 @@ public class DataContract extends NetObject  {
     
     public boolean IsDictionaryLike(JCORefOut keyName, JCORefOut valueName, JCORefOut itemName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDictionaryLike = null;
         try {
-            return (boolean)classInstance.Invoke("IsDictionaryLike", keyName.getJCRefOut(), valueName.getJCRefOut(), itemName.getJCRefOut());
+            retObjectIsDictionaryLike = classInstance.Invoke("IsDictionaryLike", keyName.getJCRefOut(), valueName.getJCRefOut(), itemName.getJCRefOut());
+            return (boolean)retObjectIsDictionaryLike;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDictionaryLike != null ? retObjectIsDictionaryLike.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class DataContract extends NetObject  {
 
     public static DataContract GetBuiltInDataContract(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.runtime.serialization.InvalidDataContractException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBuiltInDataContract = null;
         try {
-            JCObject objGetBuiltInDataContract = (JCObject)classType.Invoke("GetBuiltInDataContract", name, ns);
+            retObjectGetBuiltInDataContract = classType.Invoke("GetBuiltInDataContract", name, ns);
+            JCObject objGetBuiltInDataContract = (JCObject)retObjectGetBuiltInDataContract;
             return new DataContract(objGetBuiltInDataContract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBuiltInDataContract != null ? retObjectGetBuiltInDataContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class DataContract extends NetObject  {
 
     public XmlQualifiedName GetArrayTypeName(boolean isNullable) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.runtime.serialization.InvalidDataContractException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArrayTypeName = null;
         try {
-            JCObject objGetArrayTypeName = (JCObject)classInstance.Invoke("GetArrayTypeName", isNullable);
+            retObjectGetArrayTypeName = classInstance.Invoke("GetArrayTypeName", isNullable);
+            JCObject objGetArrayTypeName = (JCObject)retObjectGetArrayTypeName;
             return new XmlQualifiedName(objGetArrayTypeName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArrayTypeName != null ? retObjectGetArrayTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class DataContract extends NetObject  {
 
     public static XmlQualifiedName GetXmlName(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.serialization.InvalidDataContractException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlName = null;
         try {
-            JCObject objGetXmlName = (JCObject)classType.Invoke("GetXmlName", type == null ? null : type.getJCOInstance());
+            retObjectGetXmlName = classType.Invoke("GetXmlName", type == null ? null : type.getJCOInstance());
+            JCObject objGetXmlName = (JCObject)retObjectGetXmlName;
             return new XmlQualifiedName(objGetXmlName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXmlName != null ? retObjectGetXmlName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class DataContract extends NetObject  {
     
     public boolean getIsBuiltInDataContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBuiltInDataContract = null;
         try {
-            return (boolean)classInstance.Get("IsBuiltInDataContract");
+            retObjectIsBuiltInDataContract = classInstance.Get("IsBuiltInDataContract");
+            return (boolean)retObjectIsBuiltInDataContract;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBuiltInDataContract != null ? retObjectIsBuiltInDataContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class DataContract extends NetObject  {
 
     public boolean getIsISerializable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsISerializable = null;
         try {
-            return (boolean)classInstance.Get("IsISerializable");
+            retObjectIsISerializable = classInstance.Get("IsISerializable");
+            return (boolean)retObjectIsISerializable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsISerializable != null ? retObjectIsISerializable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +247,7 @@ public class DataContract extends NetObject  {
 
     public void setIsISerializable(boolean IsISerializable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsISerializable", IsISerializable);
         } catch (JCNativeException jcne) {
@@ -233,9 +257,13 @@ public class DataContract extends NetObject  {
 
     public boolean getIsReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReference = null;
         try {
-            return (boolean)classInstance.Get("IsReference");
+            retObjectIsReference = classInstance.Get("IsReference");
+            return (boolean)retObjectIsReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReference != null ? retObjectIsReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +271,7 @@ public class DataContract extends NetObject  {
 
     public void setIsReference(boolean IsReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReference", IsReference);
         } catch (JCNativeException jcne) {
@@ -253,9 +281,13 @@ public class DataContract extends NetObject  {
 
     public boolean getIsValueType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValueType = null;
         try {
-            return (boolean)classInstance.Get("IsValueType");
+            retObjectIsValueType = classInstance.Get("IsValueType");
+            return (boolean)retObjectIsValueType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValueType != null ? retObjectIsValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +295,7 @@ public class DataContract extends NetObject  {
 
     public void setIsValueType(boolean IsValueType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsValueType", IsValueType);
         } catch (JCNativeException jcne) {
@@ -273,10 +305,14 @@ public class DataContract extends NetObject  {
 
     public DataContract getBaseContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseContract = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseContract");
+            retObjectBaseContract = classInstance.Get("BaseContract");
+            JCObject val = (JCObject)retObjectBaseContract;
             return new DataContract(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseContract != null ? retObjectBaseContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +320,13 @@ public class DataContract extends NetObject  {
 
     public java.lang.String getContractType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractType = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractType");
+            retObjectContractType = classInstance.Get("ContractType");
+            return (java.lang.String)retObjectContractType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractType != null ? retObjectContractType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +334,14 @@ public class DataContract extends NetObject  {
 
     public NetType getOriginalUnderlyingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalUnderlyingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalUnderlyingType");
+            retObjectOriginalUnderlyingType = classInstance.Get("OriginalUnderlyingType");
+            JCObject val = (JCObject)retObjectOriginalUnderlyingType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalUnderlyingType != null ? retObjectOriginalUnderlyingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +349,14 @@ public class DataContract extends NetObject  {
 
     public NetType getUnderlyingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingType");
+            retObjectUnderlyingType = classInstance.Get("UnderlyingType");
+            JCObject val = (JCObject)retObjectUnderlyingType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingType != null ? retObjectUnderlyingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +364,14 @@ public class DataContract extends NetObject  {
 
     public XmlDictionaryString getTopLevelElementName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopLevelElementName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopLevelElementName");
+            retObjectTopLevelElementName = classInstance.Get("TopLevelElementName");
+            JCObject val = (JCObject)retObjectTopLevelElementName;
             return new XmlDictionaryString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopLevelElementName != null ? retObjectTopLevelElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +379,7 @@ public class DataContract extends NetObject  {
 
     public void setTopLevelElementName(XmlDictionaryString TopLevelElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopLevelElementName", TopLevelElementName == null ? null : TopLevelElementName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,10 +389,14 @@ public class DataContract extends NetObject  {
 
     public XmlDictionaryString getTopLevelElementNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopLevelElementNamespace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopLevelElementNamespace");
+            retObjectTopLevelElementNamespace = classInstance.Get("TopLevelElementNamespace");
+            JCObject val = (JCObject)retObjectTopLevelElementNamespace;
             return new XmlDictionaryString(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopLevelElementNamespace != null ? retObjectTopLevelElementNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +404,7 @@ public class DataContract extends NetObject  {
 
     public void setTopLevelElementNamespace(XmlDictionaryString TopLevelElementNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopLevelElementNamespace", TopLevelElementNamespace == null ? null : TopLevelElementNamespace.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -358,10 +414,14 @@ public class DataContract extends NetObject  {
 
     public XmlQualifiedName getXmlName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlName");
+            retObjectXmlName = classInstance.Get("XmlName");
+            JCObject val = (JCObject)retObjectXmlName;
             return new XmlQualifiedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlName != null ? retObjectXmlName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +429,7 @@ public class DataContract extends NetObject  {
 
     public void setXmlName(XmlQualifiedName XmlName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlName", XmlName == null ? null : XmlName.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -170,10 +170,14 @@ public class DataGridAutomationPeer extends ItemsControlAutomationPeer  {
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class DataGridAutomationPeer extends ItemsControlAutomationPeer  {
      */
     @Deprecated 
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
     }
 
     /**
@@ -194,7 +198,7 @@ public class DataGridAutomationPeer extends ItemsControlAutomationPeer  {
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetSelection() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionProvider to obtain the full interface.");
     }
 
     /**
@@ -203,7 +207,7 @@ public class DataGridAutomationPeer extends ItemsControlAutomationPeer  {
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
 
     /**
@@ -212,7 +216,7 @@ public class DataGridAutomationPeer extends ItemsControlAutomationPeer  {
      */
     @Deprecated 
     public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
 
 

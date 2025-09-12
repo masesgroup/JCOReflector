@@ -145,7 +145,7 @@ public class IExpressionEvaluationFrameImplementation extends NetObject implemen
     
     public void CreateEvaluationFrame(IInstanceTable instanceTable, DebugEngineCallback callback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateEvaluationFrame", instanceTable == null ? null : instanceTable.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {

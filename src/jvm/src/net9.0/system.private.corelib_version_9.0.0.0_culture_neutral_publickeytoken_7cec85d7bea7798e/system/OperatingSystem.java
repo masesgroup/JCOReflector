@@ -169,9 +169,13 @@ public class OperatingSystem extends NetObject  {
     
     public static boolean IsAndroid() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAndroid = null;
         try {
-            return (boolean)classType.Invoke("IsAndroid");
+            retObjectIsAndroid = classType.Invoke("IsAndroid");
+            return (boolean)retObjectIsAndroid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAndroid != null ? retObjectIsAndroid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsAndroidVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAndroidVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsAndroidVersionAtLeast", major, minor, build, revision);
+            retObjectIsAndroidVersionAtLeast = classType.Invoke("IsAndroidVersionAtLeast", major, minor, build, revision);
+            return (boolean)retObjectIsAndroidVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAndroidVersionAtLeast != null ? retObjectIsAndroidVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsBrowser() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBrowser = null;
         try {
-            return (boolean)classType.Invoke("IsBrowser");
+            retObjectIsBrowser = classType.Invoke("IsBrowser");
+            return (boolean)retObjectIsBrowser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBrowser != null ? retObjectIsBrowser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +211,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsFreeBSD() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFreeBSD = null;
         try {
-            return (boolean)classType.Invoke("IsFreeBSD");
+            retObjectIsFreeBSD = classType.Invoke("IsFreeBSD");
+            return (boolean)retObjectIsFreeBSD;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFreeBSD != null ? retObjectIsFreeBSD.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +225,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsFreeBSDVersionAtLeast(int major, int minor, int build, int revision) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFreeBSDVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsFreeBSDVersionAtLeast", major, minor, build, revision);
+            retObjectIsFreeBSDVersionAtLeast = classType.Invoke("IsFreeBSDVersionAtLeast", major, minor, build, revision);
+            return (boolean)retObjectIsFreeBSDVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFreeBSDVersionAtLeast != null ? retObjectIsFreeBSDVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +239,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsIOS() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsIOS = null;
         try {
-            return (boolean)classType.Invoke("IsIOS");
+            retObjectIsIOS = classType.Invoke("IsIOS");
+            return (boolean)retObjectIsIOS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsIOS != null ? retObjectIsIOS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +253,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsIOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsIOSVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsIOSVersionAtLeast", major, minor, build);
+            retObjectIsIOSVersionAtLeast = classType.Invoke("IsIOSVersionAtLeast", major, minor, build);
+            return (boolean)retObjectIsIOSVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsIOSVersionAtLeast != null ? retObjectIsIOSVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +267,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsLinux() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsLinux = null;
         try {
-            return (boolean)classType.Invoke("IsLinux");
+            retObjectIsLinux = classType.Invoke("IsLinux");
+            return (boolean)retObjectIsLinux;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLinux != null ? retObjectIsLinux.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +281,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsMacCatalyst() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMacCatalyst = null;
         try {
-            return (boolean)classType.Invoke("IsMacCatalyst");
+            retObjectIsMacCatalyst = classType.Invoke("IsMacCatalyst");
+            return (boolean)retObjectIsMacCatalyst;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMacCatalyst != null ? retObjectIsMacCatalyst.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +295,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsMacCatalystVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMacCatalystVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsMacCatalystVersionAtLeast", major, minor, build);
+            retObjectIsMacCatalystVersionAtLeast = classType.Invoke("IsMacCatalystVersionAtLeast", major, minor, build);
+            return (boolean)retObjectIsMacCatalystVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMacCatalystVersionAtLeast != null ? retObjectIsMacCatalystVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +309,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsMacOS() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMacOS = null;
         try {
-            return (boolean)classType.Invoke("IsMacOS");
+            retObjectIsMacOS = classType.Invoke("IsMacOS");
+            return (boolean)retObjectIsMacOS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMacOS != null ? retObjectIsMacOS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +323,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsMacOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMacOSVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsMacOSVersionAtLeast", major, minor, build);
+            retObjectIsMacOSVersionAtLeast = classType.Invoke("IsMacOSVersionAtLeast", major, minor, build);
+            return (boolean)retObjectIsMacOSVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMacOSVersionAtLeast != null ? retObjectIsMacOSVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +337,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsOSPlatform(java.lang.String platform) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOSPlatform = null;
         try {
-            return (boolean)classType.Invoke("IsOSPlatform", platform);
+            retObjectIsOSPlatform = classType.Invoke("IsOSPlatform", platform);
+            return (boolean)retObjectIsOSPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOSPlatform != null ? retObjectIsOSPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,9 +351,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsOSPlatformVersionAtLeast(java.lang.String platform, int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOSPlatformVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsOSPlatformVersionAtLeast", platform, major, minor, build, revision);
+            retObjectIsOSPlatformVersionAtLeast = classType.Invoke("IsOSPlatformVersionAtLeast", platform, major, minor, build, revision);
+            return (boolean)retObjectIsOSPlatformVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOSPlatformVersionAtLeast != null ? retObjectIsOSPlatformVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +365,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsTvOS() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTvOS = null;
         try {
-            return (boolean)classType.Invoke("IsTvOS");
+            retObjectIsTvOS = classType.Invoke("IsTvOS");
+            return (boolean)retObjectIsTvOS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTvOS != null ? retObjectIsTvOS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,9 +379,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsTvOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTvOSVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsTvOSVersionAtLeast", major, minor, build);
+            retObjectIsTvOSVersionAtLeast = classType.Invoke("IsTvOSVersionAtLeast", major, minor, build);
+            return (boolean)retObjectIsTvOSVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTvOSVersionAtLeast != null ? retObjectIsTvOSVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,9 +393,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsWasi() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWasi = null;
         try {
-            return (boolean)classType.Invoke("IsWasi");
+            retObjectIsWasi = classType.Invoke("IsWasi");
+            return (boolean)retObjectIsWasi;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWasi != null ? retObjectIsWasi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,9 +407,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsWatchOS() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWatchOS = null;
         try {
-            return (boolean)classType.Invoke("IsWatchOS");
+            retObjectIsWatchOS = classType.Invoke("IsWatchOS");
+            return (boolean)retObjectIsWatchOS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWatchOS != null ? retObjectIsWatchOS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,9 +421,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsWatchOSVersionAtLeast(int major, int minor, int build) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWatchOSVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsWatchOSVersionAtLeast", major, minor, build);
+            retObjectIsWatchOSVersionAtLeast = classType.Invoke("IsWatchOSVersionAtLeast", major, minor, build);
+            return (boolean)retObjectIsWatchOSVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWatchOSVersionAtLeast != null ? retObjectIsWatchOSVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,9 +435,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsWindows() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWindows = null;
         try {
-            return (boolean)classType.Invoke("IsWindows");
+            retObjectIsWindows = classType.Invoke("IsWindows");
+            return (boolean)retObjectIsWindows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWindows != null ? retObjectIsWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,9 +449,13 @@ public class OperatingSystem extends NetObject  {
 
     public static boolean IsWindowsVersionAtLeast(int major, int minor, int build, int revision) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWindowsVersionAtLeast = null;
         try {
-            return (boolean)classType.Invoke("IsWindowsVersionAtLeast", major, minor, build, revision);
+            retObjectIsWindowsVersionAtLeast = classType.Invoke("IsWindowsVersionAtLeast", major, minor, build, revision);
+            return (boolean)retObjectIsWindowsVersionAtLeast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWindowsVersionAtLeast != null ? retObjectIsWindowsVersionAtLeast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,10 +463,14 @@ public class OperatingSystem extends NetObject  {
 
     public NetObject Clone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +478,7 @@ public class OperatingSystem extends NetObject  {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,10 +492,14 @@ public class OperatingSystem extends NetObject  {
     
     public PlatformID getPlatform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlatform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Platform");
+            retObjectPlatform = classInstance.Get("Platform");
+            JCObject val = (JCObject)retObjectPlatform;
             return new PlatformID(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlatform != null ? retObjectPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,9 +507,13 @@ public class OperatingSystem extends NetObject  {
 
     public java.lang.String getServicePack() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServicePack = null;
         try {
-            return (java.lang.String)classInstance.Get("ServicePack");
+            retObjectServicePack = classInstance.Get("ServicePack");
+            return (java.lang.String)retObjectServicePack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServicePack != null ? retObjectServicePack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,9 +521,13 @@ public class OperatingSystem extends NetObject  {
 
     public java.lang.String getVersionString() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersionString = null;
         try {
-            return (java.lang.String)classInstance.Get("VersionString");
+            retObjectVersionString = classInstance.Get("VersionString");
+            return (java.lang.String)retObjectVersionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersionString != null ? retObjectVersionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +535,14 @@ public class OperatingSystem extends NetObject  {
 
     public Version getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

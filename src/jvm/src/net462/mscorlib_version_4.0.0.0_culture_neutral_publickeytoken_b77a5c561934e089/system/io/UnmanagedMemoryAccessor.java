@@ -183,9 +183,13 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
     
     public boolean ReadBoolean(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ReadBoolean", position);
+            retObjectReadBoolean = classInstance.Invoke("ReadBoolean", position);
+            return (boolean)retObjectReadBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadBoolean != null ? retObjectReadBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,19 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public byte ReadByte(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadByte = null;
         try {
-            return (byte)classInstance.Invoke("ReadByte", position);
+            retObjectReadByte = classInstance.Invoke("ReadByte", position);
+            return (byte)retObjectReadByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadByteNumber = (java.lang.Number)retObjectReadByte;
+                return retObjectReadByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectReadByte != null ? retObjectReadByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +217,13 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public char ReadChar(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadChar = null;
         try {
-            return (char)classInstance.Invoke("ReadChar", position);
+            retObjectReadChar = classInstance.Invoke("ReadChar", position);
+            return (char)retObjectReadChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectReadChar != null ? retObjectReadChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +231,19 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public double ReadDouble(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDouble = null;
         try {
-            return (double)classInstance.Invoke("ReadDouble", position);
+            retObjectReadDouble = classInstance.Invoke("ReadDouble", position);
+            return (double)retObjectReadDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadDoubleNumber = (java.lang.Number)retObjectReadDouble;
+                return retObjectReadDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadDouble != null ? retObjectReadDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +251,19 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public short ReadInt16(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt16 = null;
         try {
-            return (short)classInstance.Invoke("ReadInt16", position);
+            retObjectReadInt16 = classInstance.Invoke("ReadInt16", position);
+            return (short)retObjectReadInt16;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt16Number = (java.lang.Number)retObjectReadInt16;
+                return retObjectReadInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectReadInt16 != null ? retObjectReadInt16.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +271,19 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public int ReadInt32(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt32 = null;
         try {
-            return (int)classInstance.Invoke("ReadInt32", position);
+            retObjectReadInt32 = classInstance.Invoke("ReadInt32", position);
+            return (int)retObjectReadInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt32Number = (java.lang.Number)retObjectReadInt32;
+                return retObjectReadInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadInt32 != null ? retObjectReadInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +291,19 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public long ReadInt64(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt64 = null;
         try {
-            return (long)classInstance.Invoke("ReadInt64", position);
+            retObjectReadInt64 = classInstance.Invoke("ReadInt64", position);
+            return (long)retObjectReadInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadInt64Number = (java.lang.Number)retObjectReadInt64;
+                return retObjectReadInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadInt64 != null ? retObjectReadInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +311,14 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public SByte ReadSByte(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSByte = null;
         try {
-            JCObject objReadSByte = (JCObject)classInstance.Invoke("ReadSByte", position);
+            retObjectReadSByte = classInstance.Invoke("ReadSByte", position);
+            JCObject objReadSByte = (JCObject)retObjectReadSByte;
             return new SByte(objReadSByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSByte != null ? retObjectReadSByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +326,14 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public Single ReadSingle(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSingle = null;
         try {
-            JCObject objReadSingle = (JCObject)classInstance.Invoke("ReadSingle", position);
+            retObjectReadSingle = classInstance.Invoke("ReadSingle", position);
+            JCObject objReadSingle = (JCObject)retObjectReadSingle;
             return new Single(objReadSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSingle != null ? retObjectReadSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +341,14 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public Decimal ReadDecimal(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDecimal = null;
         try {
-            JCObject objReadDecimal = (JCObject)classInstance.Invoke("ReadDecimal", position);
+            retObjectReadDecimal = classInstance.Invoke("ReadDecimal", position);
+            JCObject objReadDecimal = (JCObject)retObjectReadDecimal;
             return new Decimal(objReadDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDecimal != null ? retObjectReadDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +356,14 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public UInt16 ReadUInt16(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt16 = null;
         try {
-            JCObject objReadUInt16 = (JCObject)classInstance.Invoke("ReadUInt16", position);
+            retObjectReadUInt16 = classInstance.Invoke("ReadUInt16", position);
+            JCObject objReadUInt16 = (JCObject)retObjectReadUInt16;
             return new UInt16(objReadUInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt16 != null ? retObjectReadUInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +371,14 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public UInt32 ReadUInt32(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt32 = null;
         try {
-            JCObject objReadUInt32 = (JCObject)classInstance.Invoke("ReadUInt32", position);
+            retObjectReadUInt32 = classInstance.Invoke("ReadUInt32", position);
+            JCObject objReadUInt32 = (JCObject)retObjectReadUInt32;
             return new UInt32(objReadUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt32 != null ? retObjectReadUInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +386,14 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public UInt64 ReadUInt64(long position) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUInt64 = null;
         try {
-            JCObject objReadUInt64 = (JCObject)classInstance.Invoke("ReadUInt64", position);
+            retObjectReadUInt64 = classInstance.Invoke("ReadUInt64", position);
+            JCObject objReadUInt64 = (JCObject)retObjectReadUInt64;
             return new UInt64(objReadUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUInt64 != null ? retObjectReadUInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +401,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -329,7 +411,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, boolean value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value);
         } catch (JCNativeException jcne) {
@@ -339,7 +421,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, byte value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value);
         } catch (JCNativeException jcne) {
@@ -349,7 +431,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, char value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value);
         } catch (JCNativeException jcne) {
@@ -359,7 +441,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, double value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value);
         } catch (JCNativeException jcne) {
@@ -369,7 +451,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, short value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value);
         } catch (JCNativeException jcne) {
@@ -379,7 +461,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, int value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value);
         } catch (JCNativeException jcne) {
@@ -389,7 +471,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, long value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value);
         } catch (JCNativeException jcne) {
@@ -399,7 +481,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, SByte value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,7 +491,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, Single value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -419,7 +501,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, Decimal value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -429,7 +511,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, UInt16 value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -439,7 +521,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, UInt32 value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -449,7 +531,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public void Write(long position, UInt64 value) throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", position, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -460,7 +542,7 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -476,9 +558,13 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
     
     public boolean getCanRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classInstance.Get("CanRead");
+            retObjectCanRead = classInstance.Get("CanRead");
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,9 +572,13 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public boolean getCanWrite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanWrite = null;
         try {
-            return (boolean)classInstance.Get("CanWrite");
+            retObjectCanWrite = classInstance.Get("CanWrite");
+            return (boolean)retObjectCanWrite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanWrite != null ? retObjectCanWrite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,9 +586,19 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
 
     public long getCapacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapacity = null;
         try {
-            return (long)classInstance.Get("Capacity");
+            retObjectCapacity = classInstance.Get("Capacity");
+            return (long)retObjectCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCapacityNumber = (java.lang.Number)retObjectCapacity;
+                return retObjectCapacityNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCapacity != null ? retObjectCapacity.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

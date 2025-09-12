@@ -161,10 +161,14 @@ public class Pkcs12SafeContentsBag extends Pkcs12SafeBag  {
     
     public Pkcs12SafeContents getSafeContents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeContents = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SafeContents");
+            retObjectSafeContents = classInstance.Get("SafeContents");
+            JCObject val = (JCObject)retObjectSafeContents;
             return new Pkcs12SafeContents(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSafeContents != null ? retObjectSafeContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class Pkcs12SafeContentsBag extends Pkcs12SafeBag  {
 
     public void setSafeContents(Pkcs12SafeContents SafeContents) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SafeContents", SafeContents == null ? null : SafeContents.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -164,9 +164,13 @@ public class DesigntimeLicenseContext extends LicenseContext  {
     
     public java.lang.String GetSavedLicenseKey(NetType type, Assembly resourceAssembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSavedLicenseKey = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSavedLicenseKey", type == null ? null : type.getJCOInstance(), resourceAssembly == null ? null : resourceAssembly.getJCOInstance());
+            retObjectGetSavedLicenseKey = classInstance.Invoke("GetSavedLicenseKey", type == null ? null : type.getJCOInstance(), resourceAssembly == null ? null : resourceAssembly.getJCOInstance());
+            return (java.lang.String)retObjectGetSavedLicenseKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSavedLicenseKey != null ? retObjectGetSavedLicenseKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class DesigntimeLicenseContext extends LicenseContext  {
 
     public void SetSavedLicenseKey(NetType type, java.lang.String key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSavedLicenseKey", type == null ? null : type.getJCOInstance(), key);
         } catch (JCNativeException jcne) {

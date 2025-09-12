@@ -165,9 +165,13 @@ public class XmlElement extends XmlLinkedNode  {
     
     public boolean HasAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("HasAttribute", localName, namespaceURI);
+            retObjectHasAttribute = classInstance.Invoke("HasAttribute", localName, namespaceURI);
+            return (boolean)retObjectHasAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasAttribute != null ? retObjectHasAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class XmlElement extends XmlLinkedNode  {
 
     public boolean HasAttribute(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("HasAttribute", name);
+            retObjectHasAttribute = classInstance.Invoke("HasAttribute", name);
+            return (boolean)retObjectHasAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasAttribute != null ? retObjectHasAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class XmlElement extends XmlLinkedNode  {
 
     public java.lang.String GetAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", localName, namespaceURI);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", localName, namespaceURI);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class XmlElement extends XmlLinkedNode  {
 
     public java.lang.String GetAttribute(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", name);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class XmlElement extends XmlLinkedNode  {
 
     public java.lang.String SetAttribute(java.lang.String localName, java.lang.String namespaceURI, java.lang.String value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("SetAttribute", localName, namespaceURI, value);
+            retObjectSetAttribute = classInstance.Invoke("SetAttribute", localName, namespaceURI, value);
+            return (java.lang.String)retObjectSetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSetAttribute != null ? retObjectSetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +235,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlAttribute GetAttributeNode(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttributeNode = null;
         try {
-            JCObject objGetAttributeNode = (JCObject)classInstance.Invoke("GetAttributeNode", localName, namespaceURI);
+            retObjectGetAttributeNode = classInstance.Invoke("GetAttributeNode", localName, namespaceURI);
+            JCObject objGetAttributeNode = (JCObject)retObjectGetAttributeNode;
             return new XmlAttribute(objGetAttributeNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributeNode != null ? retObjectGetAttributeNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +250,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlAttribute GetAttributeNode(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttributeNode = null;
         try {
-            JCObject objGetAttributeNode = (JCObject)classInstance.Invoke("GetAttributeNode", name);
+            retObjectGetAttributeNode = classInstance.Invoke("GetAttributeNode", name);
+            JCObject objGetAttributeNode = (JCObject)retObjectGetAttributeNode;
             return new XmlAttribute(objGetAttributeNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttributeNode != null ? retObjectGetAttributeNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +265,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlAttribute RemoveAttributeNode(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAttributeNode = null;
         try {
-            JCObject objRemoveAttributeNode = (JCObject)classInstance.Invoke("RemoveAttributeNode", localName, namespaceURI);
+            retObjectRemoveAttributeNode = classInstance.Invoke("RemoveAttributeNode", localName, namespaceURI);
+            JCObject objRemoveAttributeNode = (JCObject)retObjectRemoveAttributeNode;
             return new XmlAttribute(objRemoveAttributeNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveAttributeNode != null ? retObjectRemoveAttributeNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +280,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlAttribute RemoveAttributeNode(XmlAttribute oldAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAttributeNode = null;
         try {
-            JCObject objRemoveAttributeNode = (JCObject)classInstance.Invoke("RemoveAttributeNode", oldAttr == null ? null : oldAttr.getJCOInstance());
+            retObjectRemoveAttributeNode = classInstance.Invoke("RemoveAttributeNode", oldAttr == null ? null : oldAttr.getJCOInstance());
+            JCObject objRemoveAttributeNode = (JCObject)retObjectRemoveAttributeNode;
             return new XmlAttribute(objRemoveAttributeNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveAttributeNode != null ? retObjectRemoveAttributeNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +295,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlAttribute SetAttributeNode(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAttributeNode = null;
         try {
-            JCObject objSetAttributeNode = (JCObject)classInstance.Invoke("SetAttributeNode", localName, namespaceURI);
+            retObjectSetAttributeNode = classInstance.Invoke("SetAttributeNode", localName, namespaceURI);
+            JCObject objSetAttributeNode = (JCObject)retObjectSetAttributeNode;
             return new XmlAttribute(objSetAttributeNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetAttributeNode != null ? retObjectSetAttributeNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +310,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlAttribute SetAttributeNode(XmlAttribute newAttr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetAttributeNode = null;
         try {
-            JCObject objSetAttributeNode = (JCObject)classInstance.Invoke("SetAttributeNode", newAttr == null ? null : newAttr.getJCOInstance());
+            retObjectSetAttributeNode = classInstance.Invoke("SetAttributeNode", newAttr == null ? null : newAttr.getJCOInstance());
+            JCObject objSetAttributeNode = (JCObject)retObjectSetAttributeNode;
             return new XmlAttribute(objSetAttributeNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetAttributeNode != null ? retObjectSetAttributeNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +325,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlNode CloneNode(boolean deep) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.xml.XmlException, system.NotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneNode = null;
         try {
-            JCObject objCloneNode = (JCObject)classInstance.Invoke("CloneNode", deep);
+            retObjectCloneNode = classInstance.Invoke("CloneNode", deep);
+            JCObject objCloneNode = (JCObject)retObjectCloneNode;
             return new XmlNode(objCloneNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneNode != null ? retObjectCloneNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +340,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlNode RemoveAttributeAt(int i) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAttributeAt = null;
         try {
-            JCObject objRemoveAttributeAt = (JCObject)classInstance.Invoke("RemoveAttributeAt", i);
+            retObjectRemoveAttributeAt = classInstance.Invoke("RemoveAttributeAt", i);
+            JCObject objRemoveAttributeAt = (JCObject)retObjectRemoveAttributeAt;
             return new XmlNode(objRemoveAttributeAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveAttributeAt != null ? retObjectRemoveAttributeAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +355,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlNodeList GetElementsByTagName(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementsByTagName = null;
         try {
-            JCObject objGetElementsByTagName = (JCObject)classInstance.Invoke("GetElementsByTagName", localName, namespaceURI);
+            retObjectGetElementsByTagName = classInstance.Invoke("GetElementsByTagName", localName, namespaceURI);
+            JCObject objGetElementsByTagName = (JCObject)retObjectGetElementsByTagName;
             return new XmlNodeList(objGetElementsByTagName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementsByTagName != null ? retObjectGetElementsByTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +370,14 @@ public class XmlElement extends XmlLinkedNode  {
 
     public XmlNodeList GetElementsByTagName(java.lang.String name) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementsByTagName = null;
         try {
-            JCObject objGetElementsByTagName = (JCObject)classInstance.Invoke("GetElementsByTagName", name);
+            retObjectGetElementsByTagName = classInstance.Invoke("GetElementsByTagName", name);
+            JCObject objGetElementsByTagName = (JCObject)retObjectGetElementsByTagName;
             return new XmlNodeList(objGetElementsByTagName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementsByTagName != null ? retObjectGetElementsByTagName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +385,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void RemoveAll() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll");
         } catch (JCNativeException jcne) {
@@ -335,7 +395,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void RemoveAllAttributes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAllAttributes");
         } catch (JCNativeException jcne) {
@@ -345,7 +405,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void RemoveAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAttribute", localName, namespaceURI);
         } catch (JCNativeException jcne) {
@@ -355,7 +415,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void RemoveAttribute(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAttribute", name);
         } catch (JCNativeException jcne) {
@@ -365,7 +425,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void SetAttribute(java.lang.String name, java.lang.String value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -375,7 +435,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void WriteContentTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteContentTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,7 +445,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void WriteTo(XmlWriter w) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -399,9 +459,13 @@ public class XmlElement extends XmlLinkedNode  {
     
     public boolean getHasAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAttributes = null;
         try {
-            return (boolean)classInstance.Get("HasAttributes");
+            retObjectHasAttributes = classInstance.Get("HasAttributes");
+            return (boolean)retObjectHasAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAttributes != null ? retObjectHasAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,9 +473,13 @@ public class XmlElement extends XmlLinkedNode  {
 
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +487,7 @@ public class XmlElement extends XmlLinkedNode  {
 
     public void setIsEmpty(boolean IsEmpty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEmpty", IsEmpty);
         } catch (JCNativeException jcne) {

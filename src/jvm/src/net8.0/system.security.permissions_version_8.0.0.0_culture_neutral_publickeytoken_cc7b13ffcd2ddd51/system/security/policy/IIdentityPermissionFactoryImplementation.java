@@ -145,10 +145,14 @@ public class IIdentityPermissionFactoryImplementation extends NetObject implemen
     
     public IPermission CreateIdentityPermission(Evidence evidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateIdentityPermission = null;
         try {
-            JCObject objCreateIdentityPermission = (JCObject)classInstance.Invoke("CreateIdentityPermission", evidence == null ? null : evidence.getJCOInstance());
+            retObjectCreateIdentityPermission = classInstance.Invoke("CreateIdentityPermission", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objCreateIdentityPermission = (JCObject)retObjectCreateIdentityPermission;
             return new IPermissionImplementation(objCreateIdentityPermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIdentityPermission != null ? retObjectCreateIdentityPermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

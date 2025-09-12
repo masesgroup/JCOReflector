@@ -142,7 +142,7 @@ public class IStyleConnectorImplementation extends NetObject implements IStyleCo
     
     public void Connect(int connectionId, NetObject target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Connect", connectionId, target == null ? null : target.getJCOInstance());
         } catch (JCNativeException jcne) {

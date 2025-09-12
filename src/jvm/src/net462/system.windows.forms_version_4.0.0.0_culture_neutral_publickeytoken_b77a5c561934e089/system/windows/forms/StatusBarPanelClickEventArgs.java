@@ -172,10 +172,14 @@ public class StatusBarPanelClickEventArgs extends MouseEventArgs  {
     
     public StatusBarPanel getStatusBarPanel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusBarPanel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusBarPanel");
+            retObjectStatusBarPanel = classInstance.Get("StatusBarPanel");
+            JCObject val = (JCObject)retObjectStatusBarPanel;
             return new StatusBarPanel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusBarPanel != null ? retObjectStatusBarPanel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

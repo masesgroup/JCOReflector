@@ -154,9 +154,19 @@ public class KeyInterop extends NetObject  {
     
     public static int VirtualKeyFromKey(Key key) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualKeyFromKey = null;
         try {
-            return (int)classType.Invoke("VirtualKeyFromKey", key == null ? null : key.getJCOInstance());
+            retObjectVirtualKeyFromKey = classType.Invoke("VirtualKeyFromKey", key == null ? null : key.getJCOInstance());
+            return (int)retObjectVirtualKeyFromKey;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVirtualKeyFromKeyNumber = (java.lang.Number)retObjectVirtualKeyFromKey;
+                return retObjectVirtualKeyFromKeyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVirtualKeyFromKey != null ? retObjectVirtualKeyFromKey.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +174,14 @@ public class KeyInterop extends NetObject  {
 
     public static Key KeyFromVirtualKey(int virtualKey) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyFromVirtualKey = null;
         try {
-            JCObject objKeyFromVirtualKey = (JCObject)classType.Invoke("KeyFromVirtualKey", virtualKey);
+            retObjectKeyFromVirtualKey = classType.Invoke("KeyFromVirtualKey", virtualKey);
+            JCObject objKeyFromVirtualKey = (JCObject)retObjectKeyFromVirtualKey;
             return new Key(objKeyFromVirtualKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyFromVirtualKey != null ? retObjectKeyFromVirtualKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

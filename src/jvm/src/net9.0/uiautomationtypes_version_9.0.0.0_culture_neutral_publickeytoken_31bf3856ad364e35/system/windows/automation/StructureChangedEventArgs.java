@@ -167,10 +167,12 @@ public class StructureChangedEventArgs extends AutomationEventArgs  {
     
     public int[] GetRuntimeId() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeId = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRuntimeId");
+            retObjectGetRuntimeId = classInstance.Invoke("GetRuntimeId");
+            JCObject resultingObjects = (JCObject)retObjectGetRuntimeId;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -179,6 +181,8 @@ public class StructureChangedEventArgs extends AutomationEventArgs  {
 				resultingArray[indexGetRuntimeId] = (int)resultingArrayList.get(indexGetRuntimeId);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGetRuntimeId != null ? retObjectGetRuntimeId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class StructureChangedEventArgs extends AutomationEventArgs  {
     
     public StructureChangeType getStructureChangeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStructureChangeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StructureChangeType");
+            retObjectStructureChangeType = classInstance.Get("StructureChangeType");
+            JCObject val = (JCObject)retObjectStructureChangeType;
             return new StructureChangeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStructureChangeType != null ? retObjectStructureChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

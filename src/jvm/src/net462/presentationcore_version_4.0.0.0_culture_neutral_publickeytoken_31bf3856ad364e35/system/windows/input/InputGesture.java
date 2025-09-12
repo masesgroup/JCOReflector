@@ -154,9 +154,13 @@ public class InputGesture extends NetObject  {
     
     public boolean Matches(NetObject targetElement, InputEventArgs inputEventArgs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", targetElement == null ? null : targetElement.getJCOInstance(), inputEventArgs == null ? null : inputEventArgs.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", targetElement == null ? null : targetElement.getJCOInstance(), inputEventArgs == null ? null : inputEventArgs.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,9 +170,19 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
     
     public long getCurrentProgress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentProgress = null;
         try {
-            return (long)classInstance.Get("CurrentProgress");
+            retObjectCurrentProgress = classInstance.Get("CurrentProgress");
+            return (long)retObjectCurrentProgress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCurrentProgressNumber = (java.lang.Number)retObjectCurrentProgress;
+                return retObjectCurrentProgressNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCurrentProgress != null ? retObjectCurrentProgress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +190,19 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
 
     public long getMaximumProgress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumProgress = null;
         try {
-            return (long)classInstance.Get("MaximumProgress");
+            retObjectMaximumProgress = classInstance.Get("MaximumProgress");
+            return (long)retObjectMaximumProgress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaximumProgressNumber = (java.lang.Number)retObjectMaximumProgress;
+                return retObjectMaximumProgressNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectMaximumProgress != null ? retObjectMaximumProgress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,10 +161,14 @@ public class AttributeInfoAttribute extends Attribute  {
     
     public AttributeInfo getAttributeInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AttributeInfo");
+            retObjectAttributeInfo = classInstance.Get("AttributeInfo");
+            JCObject val = (JCObject)retObjectAttributeInfo;
             return new AttributeInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeInfo != null ? retObjectAttributeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

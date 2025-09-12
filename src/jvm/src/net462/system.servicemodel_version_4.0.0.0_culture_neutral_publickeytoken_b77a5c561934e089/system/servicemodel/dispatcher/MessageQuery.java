@@ -154,10 +154,14 @@ public class MessageQuery extends NetObject  {
     
     public MessageQueryCollection CreateMessageQueryCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessageQueryCollection = null;
         try {
-            JCObject objCreateMessageQueryCollection = (JCObject)classInstance.Invoke("CreateMessageQueryCollection");
+            retObjectCreateMessageQueryCollection = classInstance.Invoke("CreateMessageQueryCollection");
+            JCObject objCreateMessageQueryCollection = (JCObject)retObjectCreateMessageQueryCollection;
             return new MessageQueryCollection(objCreateMessageQueryCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessageQueryCollection != null ? retObjectCreateMessageQueryCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

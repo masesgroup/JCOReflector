@@ -178,10 +178,14 @@ public class SecurityTokenElement extends NetObject  {
     
     public SecurityToken GetSecurityToken() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSecurityToken = null;
         try {
-            JCObject objGetSecurityToken = (JCObject)classInstance.Invoke("GetSecurityToken");
+            retObjectGetSecurityToken = classInstance.Invoke("GetSecurityToken");
+            JCObject objGetSecurityToken = (JCObject)retObjectGetSecurityToken;
             return new SecurityToken(objGetSecurityToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSecurityToken != null ? retObjectGetSecurityToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,14 @@ public class SecurityTokenElement extends NetObject  {
     
     public XmlElement getSecurityTokenXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenXml = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenXml");
+            retObjectSecurityTokenXml = classInstance.Get("SecurityTokenXml");
+            JCObject val = (JCObject)retObjectSecurityTokenXml;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenXml != null ? retObjectSecurityTokenXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

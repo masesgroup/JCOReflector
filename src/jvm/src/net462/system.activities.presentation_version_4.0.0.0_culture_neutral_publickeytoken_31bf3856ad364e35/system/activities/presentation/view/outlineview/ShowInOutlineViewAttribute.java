@@ -166,9 +166,13 @@ public class ShowInOutlineViewAttribute extends Attribute  {
     
     public java.lang.String getPromotedProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromotedProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("PromotedProperty");
+            retObjectPromotedProperty = classInstance.Get("PromotedProperty");
+            return (java.lang.String)retObjectPromotedProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPromotedProperty != null ? retObjectPromotedProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ShowInOutlineViewAttribute extends Attribute  {
 
     public void setPromotedProperty(java.lang.String PromotedProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PromotedProperty", PromotedProperty);
         } catch (JCNativeException jcne) {

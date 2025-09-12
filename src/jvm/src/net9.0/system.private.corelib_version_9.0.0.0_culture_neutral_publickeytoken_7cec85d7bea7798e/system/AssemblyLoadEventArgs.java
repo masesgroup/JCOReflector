@@ -171,10 +171,14 @@ public class AssemblyLoadEventArgs extends EventArgs  {
     
     public Assembly getLoadedAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadedAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoadedAssembly");
+            retObjectLoadedAssembly = classInstance.Get("LoadedAssembly");
+            JCObject val = (JCObject)retObjectLoadedAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadedAssembly != null ? retObjectLoadedAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

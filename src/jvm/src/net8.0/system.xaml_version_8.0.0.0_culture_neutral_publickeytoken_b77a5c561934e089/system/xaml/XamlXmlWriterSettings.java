@@ -163,10 +163,14 @@ public class XamlXmlWriterSettings extends XamlWriterSettings  {
     
     public XamlXmlWriterSettings Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new XamlXmlWriterSettings(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class XamlXmlWriterSettings extends XamlWriterSettings  {
     
     public boolean getAssumeValidInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssumeValidInput = null;
         try {
-            return (boolean)classInstance.Get("AssumeValidInput");
+            retObjectAssumeValidInput = classInstance.Get("AssumeValidInput");
+            return (boolean)retObjectAssumeValidInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAssumeValidInput != null ? retObjectAssumeValidInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class XamlXmlWriterSettings extends XamlWriterSettings  {
 
     public void setAssumeValidInput(boolean AssumeValidInput) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssumeValidInput", AssumeValidInput);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class XamlXmlWriterSettings extends XamlWriterSettings  {
 
     public boolean getCloseOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseOutput = null;
         try {
-            return (boolean)classInstance.Get("CloseOutput");
+            retObjectCloseOutput = classInstance.Get("CloseOutput");
+            return (boolean)retObjectCloseOutput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCloseOutput != null ? retObjectCloseOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class XamlXmlWriterSettings extends XamlWriterSettings  {
 
     public void setCloseOutput(boolean CloseOutput) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseOutput", CloseOutput);
         } catch (JCNativeException jcne) {

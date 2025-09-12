@@ -171,10 +171,14 @@ public class PropertyDataChangedEventArgs extends EventArgs  {
     
     public Guid getPropertyGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyGuid");
+            retObjectPropertyGuid = classInstance.Get("PropertyGuid");
+            JCObject val = (JCObject)retObjectPropertyGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyGuid != null ? retObjectPropertyGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class PropertyDataChangedEventArgs extends EventArgs  {
 
     public NetObject getNewValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewValue");
+            retObjectNewValue = classInstance.Get("NewValue");
+            JCObject val = (JCObject)retObjectNewValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewValue != null ? retObjectNewValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class PropertyDataChangedEventArgs extends EventArgs  {
 
     public NetObject getPreviousValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousValue");
+            retObjectPreviousValue = classInstance.Get("PreviousValue");
+            JCObject val = (JCObject)retObjectPreviousValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousValue != null ? retObjectPreviousValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

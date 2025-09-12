@@ -158,9 +158,13 @@ public class MethodDefinitionHandle extends ValueType  {
     
     public boolean Equals(MethodDefinitionHandle other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class MethodDefinitionHandle extends ValueType  {
 
     public MethodDebugInformationHandle ToDebugInformationHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDebugInformationHandle = null;
         try {
-            JCObject objToDebugInformationHandle = (JCObject)classInstance.Invoke("ToDebugInformationHandle");
+            retObjectToDebugInformationHandle = classInstance.Invoke("ToDebugInformationHandle");
+            JCObject objToDebugInformationHandle = (JCObject)retObjectToDebugInformationHandle;
             return new MethodDebugInformationHandle(objToDebugInformationHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDebugInformationHandle != null ? retObjectToDebugInformationHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class MethodDefinitionHandle extends ValueType  {
     
     public boolean getIsNil() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNil = null;
         try {
-            return (boolean)classInstance.Get("IsNil");
+            retObjectIsNil = classInstance.Get("IsNil");
+            return (boolean)retObjectIsNil;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNil != null ? retObjectIsNil.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

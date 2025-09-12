@@ -172,16 +172,20 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
     
     public static DriveInfo[] GetDrives() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDrives = null;
         try {
             ArrayList<DriveInfo> resultingArrayList = new ArrayList<DriveInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDrives");
+            retObjectGetDrives = classType.Invoke("GetDrives");
+            JCObject resultingObjects = (JCObject)retObjectGetDrives;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DriveInfo(resultingObject));
             }
             DriveInfo[] resultingArray = new DriveInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDrives != null ? retObjectGetDrives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -202,9 +206,13 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
     
     public boolean getIsReady() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReady = null;
         try {
-            return (boolean)classInstance.Get("IsReady");
+            retObjectIsReady = classInstance.Get("IsReady");
+            return (boolean)retObjectIsReady;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReady != null ? retObjectIsReady.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +220,19 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public long getAvailableFreeSpace() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.DriveNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailableFreeSpace = null;
         try {
-            return (long)classInstance.Get("AvailableFreeSpace");
+            retObjectAvailableFreeSpace = classInstance.Get("AvailableFreeSpace");
+            return (long)retObjectAvailableFreeSpace;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAvailableFreeSpaceNumber = (java.lang.Number)retObjectAvailableFreeSpace;
+                return retObjectAvailableFreeSpaceNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAvailableFreeSpace != null ? retObjectAvailableFreeSpace.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +240,19 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public long getTotalFreeSpace() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.DriveNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalFreeSpace = null;
         try {
-            return (long)classInstance.Get("TotalFreeSpace");
+            retObjectTotalFreeSpace = classInstance.Get("TotalFreeSpace");
+            return (long)retObjectTotalFreeSpace;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTotalFreeSpaceNumber = (java.lang.Number)retObjectTotalFreeSpace;
+                return retObjectTotalFreeSpaceNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalFreeSpace != null ? retObjectTotalFreeSpace.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +260,19 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public long getTotalSize() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.DriveNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalSize = null;
         try {
-            return (long)classInstance.Get("TotalSize");
+            retObjectTotalSize = classInstance.Get("TotalSize");
+            return (long)retObjectTotalSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTotalSizeNumber = (java.lang.Number)retObjectTotalSize;
+                return retObjectTotalSizeNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTotalSize != null ? retObjectTotalSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +280,14 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public DirectoryInfo getRootDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootDirectory");
+            retObjectRootDirectory = classInstance.Get("RootDirectory");
+            JCObject val = (JCObject)retObjectRootDirectory;
             return new DirectoryInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootDirectory != null ? retObjectRootDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +295,14 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public DriveType getDriveType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDriveType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DriveType");
+            retObjectDriveType = classInstance.Get("DriveType");
+            JCObject val = (JCObject)retObjectDriveType;
             return new DriveType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDriveType != null ? retObjectDriveType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +310,13 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public java.lang.String getDriveFormat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.io.DriveNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDriveFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("DriveFormat");
+            retObjectDriveFormat = classInstance.Get("DriveFormat");
+            return (java.lang.String)retObjectDriveFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDriveFormat != null ? retObjectDriveFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +324,13 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +338,13 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public java.lang.String getVolumeLabel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.io.DriveNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVolumeLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("VolumeLabel");
+            retObjectVolumeLabel = classInstance.Get("VolumeLabel");
+            return (java.lang.String)retObjectVolumeLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVolumeLabel != null ? retObjectVolumeLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +352,7 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
 
     public void setVolumeLabel(java.lang.String VolumeLabel) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.io.PathTooLongException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VolumeLabel", VolumeLabel);
         } catch (JCNativeException jcne) {

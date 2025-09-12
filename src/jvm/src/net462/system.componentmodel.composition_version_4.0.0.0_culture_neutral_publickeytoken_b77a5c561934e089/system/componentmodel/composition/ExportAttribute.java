@@ -196,9 +196,13 @@ public class ExportAttribute extends Attribute  {
     
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractName = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractName");
+            retObjectContractName = classInstance.Get("ContractName");
+            return (java.lang.String)retObjectContractName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractName != null ? retObjectContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +210,7 @@ public class ExportAttribute extends Attribute  {
 
     public void setContractName(java.lang.String ContractName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContractName", ContractName);
         } catch (JCNativeException jcne) {
@@ -216,10 +220,14 @@ public class ExportAttribute extends Attribute  {
 
     public NetType getContractType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContractType");
+            retObjectContractType = classInstance.Get("ContractType");
+            JCObject val = (JCObject)retObjectContractType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContractType != null ? retObjectContractType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +235,7 @@ public class ExportAttribute extends Attribute  {
 
     public void setContractType(NetType ContractType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContractType", ContractType == null ? null : ContractType.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -169,9 +169,13 @@ public class ContentDefinition extends NetObject  {
     
     public java.lang.String getContentPlaceHolderID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentPlaceHolderID = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentPlaceHolderID");
+            retObjectContentPlaceHolderID = classInstance.Get("ContentPlaceHolderID");
+            return (java.lang.String)retObjectContentPlaceHolderID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentPlaceHolderID != null ? retObjectContentPlaceHolderID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class ContentDefinition extends NetObject  {
 
     public java.lang.String getDefaultContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultContent = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultContent");
+            retObjectDefaultContent = classInstance.Get("DefaultContent");
+            return (java.lang.String)retObjectDefaultContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultContent != null ? retObjectDefaultContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class ContentDefinition extends NetObject  {
 
     public java.lang.String getDefaultDesignTimeHtml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultDesignTimeHtml");
+            retObjectDefaultDesignTimeHtml = classInstance.Get("DefaultDesignTimeHtml");
+            return (java.lang.String)retObjectDefaultDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultDesignTimeHtml != null ? retObjectDefaultDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

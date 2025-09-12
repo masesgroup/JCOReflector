@@ -155,9 +155,13 @@ public class ModelItemExtensions extends NetObject  {
     
     public static boolean IsParentOf(ModelItem item, ModelItem child) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsParentOf = null;
         try {
-            return (boolean)classType.Invoke("IsParentOf", item == null ? null : item.getJCOInstance(), child == null ? null : child.getJCOInstance());
+            retObjectIsParentOf = classType.Invoke("IsParentOf", item == null ? null : item.getJCOInstance(), child == null ? null : child.getJCOInstance());
+            return (boolean)retObjectIsParentOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsParentOf != null ? retObjectIsParentOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class ModelItemExtensions extends NetObject  {
 
     public static EditingContext GetEditingContext(ModelItem modelItem) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEditingContext = null;
         try {
-            JCObject objGetEditingContext = (JCObject)classType.Invoke("GetEditingContext", modelItem == null ? null : modelItem.getJCOInstance());
+            retObjectGetEditingContext = classType.Invoke("GetEditingContext", modelItem == null ? null : modelItem.getJCOInstance());
+            JCObject objGetEditingContext = (JCObject)retObjectGetEditingContext;
             return new EditingContext(objGetEditingContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditingContext != null ? retObjectGetEditingContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +184,14 @@ public class ModelItemExtensions extends NetObject  {
 
     public static ModelItem GetModelItemFromPath(java.lang.String path, ModelItem root) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetModelItemFromPath = null;
         try {
-            JCObject objGetModelItemFromPath = (JCObject)classType.Invoke("GetModelItemFromPath", path, root == null ? null : root.getJCOInstance());
+            retObjectGetModelItemFromPath = classType.Invoke("GetModelItemFromPath", path, root == null ? null : root.getJCOInstance());
+            JCObject objGetModelItemFromPath = (JCObject)retObjectGetModelItemFromPath;
             return new ModelItem(objGetModelItemFromPath);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModelItemFromPath != null ? retObjectGetModelItemFromPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class ModelItemExtensions extends NetObject  {
 
     public static java.lang.String GetModelPath(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetModelPath = null;
         try {
-            return (java.lang.String)classType.Invoke("GetModelPath", modelItem == null ? null : modelItem.getJCOInstance());
+            retObjectGetModelPath = classType.Invoke("GetModelPath", modelItem == null ? null : modelItem.getJCOInstance());
+            return (java.lang.String)retObjectGetModelPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetModelPath != null ? retObjectGetModelPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +213,7 @@ public class ModelItemExtensions extends NetObject  {
 
     public static void Focus(ModelItem item) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Focus", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +223,7 @@ public class ModelItemExtensions extends NetObject  {
 
     public static void Focus(ModelItem item, int level) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Focus", item == null ? null : item.getJCOInstance(), level);
         } catch (JCNativeException jcne) {

@@ -198,9 +198,19 @@ public class OleDbDataAdapter extends DbDataAdapter  {
     
     public int Fill(DataSet dataSet, NetObject ADODBRecordSet, java.lang.String srcTable) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.AccessViolationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance(), ADODBRecordSet == null ? null : ADODBRecordSet.getJCOInstance(), srcTable);
+            retObjectFill = classInstance.Invoke("Fill", dataSet == null ? null : dataSet.getJCOInstance(), ADODBRecordSet == null ? null : ADODBRecordSet.getJCOInstance(), srcTable);
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +218,19 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public int Fill(DataTable dataTable, NetObject ADODBRecordSet) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.AccessViolationException, system.InvalidCastException, system.data.sqltypes.SqlNullValueException, system.runtime.interopservices.COMException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFill = null;
         try {
-            return (int)classInstance.Invoke("Fill", dataTable == null ? null : dataTable.getJCOInstance(), ADODBRecordSet == null ? null : ADODBRecordSet.getJCOInstance());
+            retObjectFill = classInstance.Invoke("Fill", dataTable == null ? null : dataTable.getJCOInstance(), ADODBRecordSet == null ? null : ADODBRecordSet.getJCOInstance());
+            return (int)retObjectFill;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFillNumber = (java.lang.Number)retObjectFill;
+                return retObjectFillNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFill != null ? retObjectFill.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class OleDbDataAdapter extends DbDataAdapter  {
     
     public OleDbCommand getDeleteCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteCommand");
+            retObjectDeleteCommand = classInstance.Get("DeleteCommand");
+            JCObject val = (JCObject)retObjectDeleteCommand;
             return new OleDbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteCommand != null ? retObjectDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +257,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void setDeleteCommand(OleDbCommand DeleteCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteCommand", DeleteCommand == null ? null : DeleteCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +267,14 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public OleDbCommand getInsertCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertCommand");
+            retObjectInsertCommand = classInstance.Get("InsertCommand");
+            JCObject val = (JCObject)retObjectInsertCommand;
             return new OleDbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertCommand != null ? retObjectInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +282,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void setInsertCommand(OleDbCommand InsertCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertCommand", InsertCommand == null ? null : InsertCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,10 +292,14 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public OleDbCommand getSelectCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectCommand");
+            retObjectSelectCommand = classInstance.Get("SelectCommand");
+            JCObject val = (JCObject)retObjectSelectCommand;
             return new OleDbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectCommand != null ? retObjectSelectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +307,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void setSelectCommand(OleDbCommand SelectCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectCommand", SelectCommand == null ? null : SelectCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,10 +317,14 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public OleDbCommand getUpdateCommandNewOleDbDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateCommand");
+            retObjectUpdateCommand = classInstance.Get("UpdateCommand");
+            JCObject val = (JCObject)retObjectUpdateCommand;
             return new OleDbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateCommand != null ? retObjectUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +332,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void setUpdateCommand(OleDbCommand UpdateCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateCommand", UpdateCommand == null ? null : UpdateCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,7 +347,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void addRowUpdated(OleDbRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -321,7 +357,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void removeRowUpdated(OleDbRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -331,7 +367,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void addRowUpdating(OleDbRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowUpdating", handler);
         } catch (JCNativeException jcne) {
@@ -341,7 +377,7 @@ public class OleDbDataAdapter extends DbDataAdapter  {
 
     public void removeRowUpdating(OleDbRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowUpdating", handler);
         } catch (JCNativeException jcne) {

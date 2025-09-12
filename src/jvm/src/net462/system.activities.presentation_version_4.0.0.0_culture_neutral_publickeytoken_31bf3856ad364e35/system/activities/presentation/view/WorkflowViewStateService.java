@@ -169,9 +169,13 @@ public class WorkflowViewStateService extends ViewStateService  {
     
     public boolean RemoveViewState(ModelItem modelItem, java.lang.String key) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveViewState = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            retObjectRemoveViewState = classInstance.Invoke("RemoveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            return (boolean)retObjectRemoveViewState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveViewState != null ? retObjectRemoveViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class WorkflowViewStateService extends ViewStateService  {
 
     public NetObject RetrieveViewState(ModelItem modelItem, java.lang.String key) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetrieveViewState = null;
         try {
-            JCObject objRetrieveViewState = (JCObject)classInstance.Invoke("RetrieveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            retObjectRetrieveViewState = classInstance.Invoke("RetrieveViewState", modelItem == null ? null : modelItem.getJCOInstance(), key);
+            JCObject objRetrieveViewState = (JCObject)retObjectRetrieveViewState;
             return new NetObject(objRetrieveViewState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRetrieveViewState != null ? retObjectRetrieveViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class WorkflowViewStateService extends ViewStateService  {
 
     public void StoreViewState(ModelItem modelItem, java.lang.String key, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreViewState", modelItem == null ? null : modelItem.getJCOInstance(), key, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,7 +208,7 @@ public class WorkflowViewStateService extends ViewStateService  {
 
     public void StoreViewStateWithUndo(ModelItem modelItem, java.lang.String key, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreViewStateWithUndo", modelItem == null ? null : modelItem.getJCOInstance(), key, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,7 +227,7 @@ public class WorkflowViewStateService extends ViewStateService  {
 
     public void addUndoableViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UndoableViewStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -229,7 +237,7 @@ public class WorkflowViewStateService extends ViewStateService  {
 
     public void removeUndoableViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UndoableViewStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -239,7 +247,7 @@ public class WorkflowViewStateService extends ViewStateService  {
 
     public void addViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ViewStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -249,7 +257,7 @@ public class WorkflowViewStateService extends ViewStateService  {
 
     public void removeViewStateChanged(ViewStateChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ViewStateChanged", handler);
         } catch (JCNativeException jcne) {

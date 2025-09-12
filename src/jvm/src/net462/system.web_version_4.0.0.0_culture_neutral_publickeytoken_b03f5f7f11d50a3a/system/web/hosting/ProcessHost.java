@@ -164,9 +164,13 @@ public class ProcessHost extends MarshalByRefObject  {
     
     public boolean IsIdle() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdle = null;
         try {
-            return (boolean)classInstance.Invoke("IsIdle");
+            retObjectIsIdle = classInstance.Invoke("IsIdle");
+            return (boolean)retObjectIsIdle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsIdle != null ? retObjectIsIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void EnumerateAppDomains(JCORefOut<IAppDomainInfoEnum> appDomainInfoEnum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumerateAppDomains", appDomainInfoEnum.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void Ping(IProcessPingCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Ping", callback == null ? null : callback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +213,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void SetApplicationPreloadState(java.lang.String context, java.lang.String appId, boolean enabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.AbandonedMutexException, system.security.SecurityException, system.io.IOException, system.web.HttpException, system.NotSupportedException, system.OutOfMemoryException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.io.PathTooLongException, system.OverflowException, system.SystemException, system.CannotUnloadAppDomainException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetApplicationPreloadState", context, appId, enabled);
         } catch (JCNativeException jcne) {
@@ -215,7 +223,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void SetApplicationPreloadUtil(IApplicationPreloadUtil applicationPreloadUtil) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetApplicationPreloadUtil", applicationPreloadUtil == null ? null : applicationPreloadUtil.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +233,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void Shutdown() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -235,7 +243,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void ShutdownApplication(java.lang.String appId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShutdownApplication", appId);
         } catch (JCNativeException jcne) {
@@ -245,7 +253,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void StartAppDomainProtocolListenerChannel(java.lang.String appId, java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MemberAccessException, system.OverflowException, system.NotImplementedException, system.SystemException, system.NullReferenceException, system.CannotUnloadAppDomainException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartAppDomainProtocolListenerChannel", appId, protocolId, listenerChannelCallback == null ? null : listenerChannelCallback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +263,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void StartApplication(java.lang.String appId, java.lang.String appPath, JCORefOut<NetObject> runtimeInterface) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.TypeLoadException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.SystemException, system.configuration.ConfigurationException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartApplication", appId, appPath, runtimeInterface.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -265,7 +273,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void StartProcessProtocolListenerChannel(java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.web.HttpException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartProcessProtocolListenerChannel", protocolId, listenerChannelCallback == null ? null : listenerChannelCallback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +283,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void StopAppDomainProtocol(java.lang.String appId, java.lang.String protocolId, boolean immediate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopAppDomainProtocol", appId, protocolId, immediate);
         } catch (JCNativeException jcne) {
@@ -285,7 +293,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void StopAppDomainProtocolListenerChannel(java.lang.String appId, java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopAppDomainProtocolListenerChannel", appId, protocolId, listenerChannelId, immediate);
         } catch (JCNativeException jcne) {
@@ -295,7 +303,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void StopProcessProtocol(java.lang.String protocolId, boolean immediate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopProcessProtocol", protocolId, immediate);
         } catch (JCNativeException jcne) {
@@ -305,7 +313,7 @@ public class ProcessHost extends MarshalByRefObject  {
 
     public void StopProcessProtocolListenerChannel(java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopProcessProtocolListenerChannel", protocolId, listenerChannelId, immediate);
         } catch (JCNativeException jcne) {

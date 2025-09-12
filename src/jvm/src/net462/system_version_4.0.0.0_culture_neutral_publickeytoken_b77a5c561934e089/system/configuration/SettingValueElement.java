@@ -167,10 +167,14 @@ public class SettingValueElement extends ConfigurationElement  {
     
     public XmlNode getValueXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueXml = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueXml");
+            retObjectValueXml = classInstance.Get("ValueXml");
+            JCObject val = (JCObject)retObjectValueXml;
             return new XmlNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueXml != null ? retObjectValueXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class SettingValueElement extends ConfigurationElement  {
 
     public void setValueXml(XmlNode ValueXml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueXml", ValueXml == null ? null : ValueXml.getJCOInstance());
         } catch (JCNativeException jcne) {

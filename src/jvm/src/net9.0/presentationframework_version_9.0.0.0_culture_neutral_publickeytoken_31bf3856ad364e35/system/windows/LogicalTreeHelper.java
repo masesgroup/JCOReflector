@@ -156,10 +156,14 @@ public class LogicalTreeHelper extends NetObject  {
     
     public static IEnumerable GetChildren(DependencyObject current) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChildren = null;
         try {
-            JCObject objGetChildren = (JCObject)classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
+            retObjectGetChildren = classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
+            JCObject objGetChildren = (JCObject)retObjectGetChildren;
             return new IEnumerableImplementation(objGetChildren);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildren != null ? retObjectGetChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class LogicalTreeHelper extends NetObject  {
 
     public static IEnumerable GetChildren(FrameworkContentElement current) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChildren = null;
         try {
-            JCObject objGetChildren = (JCObject)classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
+            retObjectGetChildren = classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
+            JCObject objGetChildren = (JCObject)retObjectGetChildren;
             return new IEnumerableImplementation(objGetChildren);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildren != null ? retObjectGetChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class LogicalTreeHelper extends NetObject  {
 
     public static IEnumerable GetChildren(FrameworkElement current) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChildren = null;
         try {
-            JCObject objGetChildren = (JCObject)classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
+            retObjectGetChildren = classType.Invoke("GetChildren", current == null ? null : current.getJCOInstance());
+            JCObject objGetChildren = (JCObject)retObjectGetChildren;
             return new IEnumerableImplementation(objGetChildren);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildren != null ? retObjectGetChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class LogicalTreeHelper extends NetObject  {
 
     public static DependencyObject FindLogicalNode(DependencyObject logicalTreeNode, java.lang.String elementName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindLogicalNode = null;
         try {
-            JCObject objFindLogicalNode = (JCObject)classType.Invoke("FindLogicalNode", logicalTreeNode == null ? null : logicalTreeNode.getJCOInstance(), elementName);
+            retObjectFindLogicalNode = classType.Invoke("FindLogicalNode", logicalTreeNode == null ? null : logicalTreeNode.getJCOInstance(), elementName);
+            JCObject objFindLogicalNode = (JCObject)retObjectFindLogicalNode;
             return new DependencyObject(objFindLogicalNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindLogicalNode != null ? retObjectFindLogicalNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class LogicalTreeHelper extends NetObject  {
 
     public static DependencyObject GetParent(DependencyObject current) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetParent = null;
         try {
-            JCObject objGetParent = (JCObject)classType.Invoke("GetParent", current == null ? null : current.getJCOInstance());
+            retObjectGetParent = classType.Invoke("GetParent", current == null ? null : current.getJCOInstance());
+            JCObject objGetParent = (JCObject)retObjectGetParent;
             return new DependencyObject(objGetParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParent != null ? retObjectGetParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +231,7 @@ public class LogicalTreeHelper extends NetObject  {
 
     public static void BringIntoView(DependencyObject current) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("BringIntoView", current == null ? null : current.getJCOInstance());
         } catch (JCNativeException jcne) {

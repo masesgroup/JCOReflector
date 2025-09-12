@@ -164,10 +164,14 @@ public class LicFileLicenseProvider extends LicenseProvider  {
     
     public License GetLicense(LicenseContext context, NetType type, NetObject instance, boolean allowExceptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLicense = null;
         try {
-            JCObject objGetLicense = (JCObject)classInstance.Invoke("GetLicense", context == null ? null : context.getJCOInstance(), type == null ? null : type.getJCOInstance(), instance == null ? null : instance.getJCOInstance(), allowExceptions);
+            retObjectGetLicense = classInstance.Invoke("GetLicense", context == null ? null : context.getJCOInstance(), type == null ? null : type.getJCOInstance(), instance == null ? null : instance.getJCOInstance(), allowExceptions);
+            JCObject objGetLicense = (JCObject)retObjectGetLicense;
             return new License(objGetLicense);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLicense != null ? retObjectGetLicense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

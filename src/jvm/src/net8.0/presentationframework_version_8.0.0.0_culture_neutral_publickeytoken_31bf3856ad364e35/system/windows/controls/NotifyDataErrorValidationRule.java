@@ -164,10 +164,14 @@ public class NotifyDataErrorValidationRule extends ValidationRule  {
     
     public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", value == null ? null : value.getJCOInstance(), cultureInfo == null ? null : cultureInfo.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new ValidationResult(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

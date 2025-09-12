@@ -167,9 +167,13 @@ public class RemotingServices extends NetObject  {
     
     public static boolean Disconnect(MarshalByRefObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDisconnect = null;
         try {
-            return (boolean)classType.Invoke("Disconnect", obj == null ? null : obj.getJCOInstance());
+            retObjectDisconnect = classType.Invoke("Disconnect", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectDisconnect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDisconnect != null ? retObjectDisconnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class RemotingServices extends NetObject  {
 
     public static boolean IsMethodOverloaded(IMethodMessage msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMethodOverloaded = null;
         try {
-            return (boolean)classType.Invoke("IsMethodOverloaded", msg == null ? null : msg.getJCOInstance());
+            retObjectIsMethodOverloaded = classType.Invoke("IsMethodOverloaded", msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectIsMethodOverloaded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsMethodOverloaded != null ? retObjectIsMethodOverloaded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class RemotingServices extends NetObject  {
 
     public static boolean IsObjectOutOfAppDomain(NetObject tp) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsObjectOutOfAppDomain = null;
         try {
-            return (boolean)classType.Invoke("IsObjectOutOfAppDomain", tp == null ? null : tp.getJCOInstance());
+            retObjectIsObjectOutOfAppDomain = classType.Invoke("IsObjectOutOfAppDomain", tp == null ? null : tp.getJCOInstance());
+            return (boolean)retObjectIsObjectOutOfAppDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsObjectOutOfAppDomain != null ? retObjectIsObjectOutOfAppDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class RemotingServices extends NetObject  {
 
     public static boolean IsObjectOutOfContext(NetObject tp) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsObjectOutOfContext = null;
         try {
-            return (boolean)classType.Invoke("IsObjectOutOfContext", tp == null ? null : tp.getJCOInstance());
+            retObjectIsObjectOutOfContext = classType.Invoke("IsObjectOutOfContext", tp == null ? null : tp.getJCOInstance());
+            return (boolean)retObjectIsObjectOutOfContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsObjectOutOfContext != null ? retObjectIsObjectOutOfContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class RemotingServices extends NetObject  {
 
     public static boolean IsOneWay(MethodBase method) throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOneWay = null;
         try {
-            return (boolean)classType.Invoke("IsOneWay", method == null ? null : method.getJCOInstance());
+            retObjectIsOneWay = classType.Invoke("IsOneWay", method == null ? null : method.getJCOInstance());
+            return (boolean)retObjectIsOneWay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOneWay != null ? retObjectIsOneWay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,13 @@ public class RemotingServices extends NetObject  {
 
     public static boolean IsTransparentProxy(NetObject proxy) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTransparentProxy = null;
         try {
-            return (boolean)classType.Invoke("IsTransparentProxy", proxy == null ? null : proxy.getJCOInstance());
+            retObjectIsTransparentProxy = classType.Invoke("IsTransparentProxy", proxy == null ? null : proxy.getJCOInstance());
+            return (boolean)retObjectIsTransparentProxy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTransparentProxy != null ? retObjectIsTransparentProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class RemotingServices extends NetObject  {
 
     public static NetObject Connect(NetType classToProxy, java.lang.String url) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnect = null;
         try {
-            JCObject objConnect = (JCObject)classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url);
+            retObjectConnect = classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url);
+            JCObject objConnect = (JCObject)retObjectConnect;
             return new NetObject(objConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnect != null ? retObjectConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class RemotingServices extends NetObject  {
 
     public static NetObject Connect(NetType classToProxy, java.lang.String url, NetObject data) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotSupportedException, system.ApplicationException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnect = null;
         try {
-            JCObject objConnect = (JCObject)classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url, data == null ? null : data.getJCOInstance());
+            retObjectConnect = classType.Invoke("Connect", classToProxy == null ? null : classToProxy.getJCOInstance(), url, data == null ? null : data.getJCOInstance());
+            JCObject objConnect = (JCObject)retObjectConnect;
             return new NetObject(objConnect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnect != null ? retObjectConnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class RemotingServices extends NetObject  {
 
     public static NetObject GetLifetimeService(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLifetimeService = null;
         try {
-            JCObject objGetLifetimeService = (JCObject)classType.Invoke("GetLifetimeService", obj == null ? null : obj.getJCOInstance());
+            retObjectGetLifetimeService = classType.Invoke("GetLifetimeService", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetLifetimeService = (JCObject)retObjectGetLifetimeService;
             return new NetObject(objGetLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLifetimeService != null ? retObjectGetLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +296,14 @@ public class RemotingServices extends NetObject  {
 
     public static NetObject Unmarshal(ObjRef objectRef) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnmarshal = null;
         try {
-            JCObject objUnmarshal = (JCObject)classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance());
+            retObjectUnmarshal = classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance());
+            JCObject objUnmarshal = (JCObject)retObjectUnmarshal;
             return new NetObject(objUnmarshal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnmarshal != null ? retObjectUnmarshal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +311,14 @@ public class RemotingServices extends NetObject  {
 
     public static NetObject Unmarshal(ObjRef objectRef, boolean fRefine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnmarshal = null;
         try {
-            JCObject objUnmarshal = (JCObject)classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance(), fRefine);
+            retObjectUnmarshal = classType.Invoke("Unmarshal", objectRef == null ? null : objectRef.getJCOInstance(), fRefine);
+            JCObject objUnmarshal = (JCObject)retObjectUnmarshal;
             return new NetObject(objUnmarshal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnmarshal != null ? retObjectUnmarshal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +326,14 @@ public class RemotingServices extends NetObject  {
 
     public static MethodBase GetMethodBaseFromMethodMessage(IMethodMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethodBaseFromMethodMessage = null;
         try {
-            JCObject objGetMethodBaseFromMethodMessage = (JCObject)classType.Invoke("GetMethodBaseFromMethodMessage", msg == null ? null : msg.getJCOInstance());
+            retObjectGetMethodBaseFromMethodMessage = classType.Invoke("GetMethodBaseFromMethodMessage", msg == null ? null : msg.getJCOInstance());
+            JCObject objGetMethodBaseFromMethodMessage = (JCObject)retObjectGetMethodBaseFromMethodMessage;
             return new MethodBase(objGetMethodBaseFromMethodMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodBaseFromMethodMessage != null ? retObjectGetMethodBaseFromMethodMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +341,14 @@ public class RemotingServices extends NetObject  {
 
     public static IMessageSink GetEnvoyChainForProxy(MarshalByRefObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnvoyChainForProxy = null;
         try {
-            JCObject objGetEnvoyChainForProxy = (JCObject)classType.Invoke("GetEnvoyChainForProxy", obj == null ? null : obj.getJCOInstance());
+            retObjectGetEnvoyChainForProxy = classType.Invoke("GetEnvoyChainForProxy", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetEnvoyChainForProxy = (JCObject)retObjectGetEnvoyChainForProxy;
             return new IMessageSinkImplementation(objGetEnvoyChainForProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnvoyChainForProxy != null ? retObjectGetEnvoyChainForProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +356,14 @@ public class RemotingServices extends NetObject  {
 
     public static IMethodReturnMessage ExecuteMessage(MarshalByRefObject target, IMethodCallMessage reqMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExecuteMessage = null;
         try {
-            JCObject objExecuteMessage = (JCObject)classType.Invoke("ExecuteMessage", target == null ? null : target.getJCOInstance(), reqMsg == null ? null : reqMsg.getJCOInstance());
+            retObjectExecuteMessage = classType.Invoke("ExecuteMessage", target == null ? null : target.getJCOInstance(), reqMsg == null ? null : reqMsg.getJCOInstance());
+            JCObject objExecuteMessage = (JCObject)retObjectExecuteMessage;
             return new IMethodReturnMessageImplementation(objExecuteMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteMessage != null ? retObjectExecuteMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +371,14 @@ public class RemotingServices extends NetObject  {
 
     public static ObjRef GetObjRefForProxy(MarshalByRefObject obj) throws Throwable, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetObjRefForProxy = null;
         try {
-            JCObject objGetObjRefForProxy = (JCObject)classType.Invoke("GetObjRefForProxy", obj == null ? null : obj.getJCOInstance());
+            retObjectGetObjRefForProxy = classType.Invoke("GetObjRefForProxy", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetObjRefForProxy = (JCObject)retObjectGetObjRefForProxy;
             return new ObjRef(objGetObjRefForProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjRefForProxy != null ? retObjectGetObjRefForProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +386,14 @@ public class RemotingServices extends NetObject  {
 
     public static ObjRef Marshal(MarshalByRefObject Obj) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMarshal = null;
         try {
-            JCObject objMarshal = (JCObject)classType.Invoke("Marshal", Obj == null ? null : Obj.getJCOInstance());
+            retObjectMarshal = classType.Invoke("Marshal", Obj == null ? null : Obj.getJCOInstance());
+            JCObject objMarshal = (JCObject)retObjectMarshal;
             return new ObjRef(objMarshal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarshal != null ? retObjectMarshal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +401,14 @@ public class RemotingServices extends NetObject  {
 
     public static ObjRef Marshal(MarshalByRefObject Obj, java.lang.String URI) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMarshal = null;
         try {
-            JCObject objMarshal = (JCObject)classType.Invoke("Marshal", Obj == null ? null : Obj.getJCOInstance(), URI);
+            retObjectMarshal = classType.Invoke("Marshal", Obj == null ? null : Obj.getJCOInstance(), URI);
+            JCObject objMarshal = (JCObject)retObjectMarshal;
             return new ObjRef(objMarshal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarshal != null ? retObjectMarshal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +416,14 @@ public class RemotingServices extends NetObject  {
 
     public static ObjRef Marshal(MarshalByRefObject Obj, java.lang.String ObjURI, NetType RequestedType) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMarshal = null;
         try {
-            JCObject objMarshal = (JCObject)classType.Invoke("Marshal", Obj == null ? null : Obj.getJCOInstance(), ObjURI, RequestedType == null ? null : RequestedType.getJCOInstance());
+            retObjectMarshal = classType.Invoke("Marshal", Obj == null ? null : Obj.getJCOInstance(), ObjURI, RequestedType == null ? null : RequestedType.getJCOInstance());
+            JCObject objMarshal = (JCObject)retObjectMarshal;
             return new ObjRef(objMarshal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarshal != null ? retObjectMarshal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +431,14 @@ public class RemotingServices extends NetObject  {
 
     public static RealProxy GetRealProxy(NetObject proxy) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRealProxy = null;
         try {
-            JCObject objGetRealProxy = (JCObject)classType.Invoke("GetRealProxy", proxy == null ? null : proxy.getJCOInstance());
+            retObjectGetRealProxy = classType.Invoke("GetRealProxy", proxy == null ? null : proxy.getJCOInstance());
+            JCObject objGetRealProxy = (JCObject)retObjectGetRealProxy;
             return new RealProxy(objGetRealProxy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRealProxy != null ? retObjectGetRealProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,9 +446,13 @@ public class RemotingServices extends NetObject  {
 
     public static java.lang.String GetObjectUri(MarshalByRefObject obj) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetObjectUri = null;
         try {
-            return (java.lang.String)classType.Invoke("GetObjectUri", obj == null ? null : obj.getJCOInstance());
+            retObjectGetObjectUri = classType.Invoke("GetObjectUri", obj == null ? null : obj.getJCOInstance());
+            return (java.lang.String)retObjectGetObjectUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetObjectUri != null ? retObjectGetObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,9 +460,13 @@ public class RemotingServices extends NetObject  {
 
     public static java.lang.String GetSessionIdForMethodMessage(IMethodMessage msg) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSessionIdForMethodMessage = null;
         try {
-            return (java.lang.String)classType.Invoke("GetSessionIdForMethodMessage", msg == null ? null : msg.getJCOInstance());
+            retObjectGetSessionIdForMethodMessage = classType.Invoke("GetSessionIdForMethodMessage", msg == null ? null : msg.getJCOInstance());
+            return (java.lang.String)retObjectGetSessionIdForMethodMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSessionIdForMethodMessage != null ? retObjectGetSessionIdForMethodMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,10 +474,14 @@ public class RemotingServices extends NetObject  {
 
     public static NetType GetServerTypeForUri(java.lang.String URI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetServerTypeForUri = null;
         try {
-            JCObject objGetServerTypeForUri = (JCObject)classType.Invoke("GetServerTypeForUri", URI);
+            retObjectGetServerTypeForUri = classType.Invoke("GetServerTypeForUri", URI);
+            JCObject objGetServerTypeForUri = (JCObject)retObjectGetServerTypeForUri;
             return new NetType(objGetServerTypeForUri);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetServerTypeForUri != null ? retObjectGetServerTypeForUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +489,7 @@ public class RemotingServices extends NetObject  {
 
     public static void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -411,7 +499,7 @@ public class RemotingServices extends NetObject  {
 
     public static void LogRemotingStage(int stage) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("LogRemotingStage", stage);
         } catch (JCNativeException jcne) {
@@ -421,7 +509,7 @@ public class RemotingServices extends NetObject  {
 
     public static void SetObjectUriForMarshal(MarshalByRefObject obj, java.lang.String uri) throws Throwable, system.runtime.remoting.RemotingException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetObjectUriForMarshal", obj == null ? null : obj.getJCOInstance(), uri);
         } catch (JCNativeException jcne) {

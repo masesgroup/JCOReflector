@@ -142,7 +142,7 @@ public class ITransformProviderImplementation extends NetObject implements ITran
     
     public void Move(double x, double y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Move", x, y);
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class ITransformProviderImplementation extends NetObject implements ITran
 
     public void Resize(double width, double height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resize", width, height);
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class ITransformProviderImplementation extends NetObject implements ITran
 
     public void Rotate(double degrees) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rotate", degrees);
         } catch (JCNativeException jcne) {
@@ -176,9 +176,13 @@ public class ITransformProviderImplementation extends NetObject implements ITran
     
     public boolean getCanMove() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMove = null;
         try {
-            return (boolean)classInstance.Get("CanMove");
+            retObjectCanMove = classInstance.Get("CanMove");
+            return (boolean)retObjectCanMove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanMove != null ? retObjectCanMove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class ITransformProviderImplementation extends NetObject implements ITran
 
     public boolean getCanResize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanResize = null;
         try {
-            return (boolean)classInstance.Get("CanResize");
+            retObjectCanResize = classInstance.Get("CanResize");
+            return (boolean)retObjectCanResize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanResize != null ? retObjectCanResize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +204,13 @@ public class ITransformProviderImplementation extends NetObject implements ITran
 
     public boolean getCanRotate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRotate = null;
         try {
-            return (boolean)classInstance.Get("CanRotate");
+            retObjectCanRotate = classInstance.Get("CanRotate");
+            return (boolean)retObjectCanRotate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRotate != null ? retObjectCanRotate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

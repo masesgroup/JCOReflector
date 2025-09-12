@@ -159,10 +159,14 @@ public class JsonReaderWriterFactory extends NetObject  {
     
     public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryReader CreateJsonReader(byte[] buffer, int offset, int count, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryReader CreateJsonReader(byte[] buffer, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", buffer, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", buffer, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryReader CreateJsonReader(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +264,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryReader CreateJsonReader(Stream stream, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonReader = null;
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateJsonReader = classType.Invoke("CreateJsonReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)retObjectCreateJsonReader;
             return new XmlDictionaryReader(objCreateJsonReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonReader != null ? retObjectCreateJsonReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +279,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent, java.lang.String indentChars) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonWriter = null;
         try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent, indentChars);
+            retObjectCreateJsonWriter = classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent, indentChars);
+            JCObject objCreateJsonWriter = (JCObject)retObjectCreateJsonWriter;
             return new XmlDictionaryWriter(objCreateJsonWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonWriter != null ? retObjectCreateJsonWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +294,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonWriter = null;
         try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent);
+            retObjectCreateJsonWriter = classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent);
+            JCObject objCreateJsonWriter = (JCObject)retObjectCreateJsonWriter;
             return new XmlDictionaryWriter(objCreateJsonWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonWriter != null ? retObjectCreateJsonWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +309,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonWriter = null;
         try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
+            retObjectCreateJsonWriter = classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
+            JCObject objCreateJsonWriter = (JCObject)retObjectCreateJsonWriter;
             return new XmlDictionaryWriter(objCreateJsonWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonWriter != null ? retObjectCreateJsonWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +324,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonWriter = null;
         try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance());
+            retObjectCreateJsonWriter = classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance());
+            JCObject objCreateJsonWriter = (JCObject)retObjectCreateJsonWriter;
             return new XmlDictionaryWriter(objCreateJsonWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonWriter != null ? retObjectCreateJsonWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +339,14 @@ public class JsonReaderWriterFactory extends NetObject  {
 
     public static XmlDictionaryWriter CreateJsonWriter(Stream stream) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonWriter = null;
         try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance());
+            retObjectCreateJsonWriter = classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateJsonWriter = (JCObject)retObjectCreateJsonWriter;
             return new XmlDictionaryWriter(objCreateJsonWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonWriter != null ? retObjectCreateJsonWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

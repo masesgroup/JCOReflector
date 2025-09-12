@@ -179,9 +179,13 @@ public class CounterSample extends ValueType  {
     
     public boolean Equals(CounterSample sample) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", sample == null ? null : sample.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", sample == null ? null : sample.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class CounterSample extends ValueType  {
 
     public static Single Calculate(CounterSample counterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCalculate = null;
         try {
-            JCObject objCalculate = (JCObject)classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance());
+            retObjectCalculate = classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance());
+            JCObject objCalculate = (JCObject)retObjectCalculate;
             return new Single(objCalculate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalculate != null ? retObjectCalculate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class CounterSample extends ValueType  {
 
     public static Single Calculate(CounterSample counterSample, CounterSample nextCounterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCalculate = null;
         try {
-            JCObject objCalculate = (JCObject)classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance(), nextCounterSample == null ? null : nextCounterSample.getJCOInstance());
+            retObjectCalculate = classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance(), nextCounterSample == null ? null : nextCounterSample.getJCOInstance());
+            JCObject objCalculate = (JCObject)retObjectCalculate;
             return new Single(objCalculate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalculate != null ? retObjectCalculate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +227,19 @@ public class CounterSample extends ValueType  {
     
     public long getBaseValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseValue = null;
         try {
-            return (long)classInstance.Get("BaseValue");
+            retObjectBaseValue = classInstance.Get("BaseValue");
+            return (long)retObjectBaseValue;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBaseValueNumber = (java.lang.Number)retObjectBaseValue;
+                return retObjectBaseValueNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectBaseValue != null ? retObjectBaseValue.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +247,19 @@ public class CounterSample extends ValueType  {
 
     public long getCounterFrequency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterFrequency = null;
         try {
-            return (long)classInstance.Get("CounterFrequency");
+            retObjectCounterFrequency = classInstance.Get("CounterFrequency");
+            return (long)retObjectCounterFrequency;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCounterFrequencyNumber = (java.lang.Number)retObjectCounterFrequency;
+                return retObjectCounterFrequencyNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCounterFrequency != null ? retObjectCounterFrequency.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +267,19 @@ public class CounterSample extends ValueType  {
 
     public long getCounterTimeStamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterTimeStamp = null;
         try {
-            return (long)classInstance.Get("CounterTimeStamp");
+            retObjectCounterTimeStamp = classInstance.Get("CounterTimeStamp");
+            return (long)retObjectCounterTimeStamp;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCounterTimeStampNumber = (java.lang.Number)retObjectCounterTimeStamp;
+                return retObjectCounterTimeStampNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectCounterTimeStamp != null ? retObjectCounterTimeStamp.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +287,19 @@ public class CounterSample extends ValueType  {
 
     public long getRawValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawValue = null;
         try {
-            return (long)classInstance.Get("RawValue");
+            retObjectRawValue = classInstance.Get("RawValue");
+            return (long)retObjectRawValue;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRawValueNumber = (java.lang.Number)retObjectRawValue;
+                return retObjectRawValueNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectRawValue != null ? retObjectRawValue.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +307,19 @@ public class CounterSample extends ValueType  {
 
     public long getSystemFrequency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemFrequency = null;
         try {
-            return (long)classInstance.Get("SystemFrequency");
+            retObjectSystemFrequency = classInstance.Get("SystemFrequency");
+            return (long)retObjectSystemFrequency;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSystemFrequencyNumber = (java.lang.Number)retObjectSystemFrequency;
+                return retObjectSystemFrequencyNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectSystemFrequency != null ? retObjectSystemFrequency.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +327,19 @@ public class CounterSample extends ValueType  {
 
     public long getTimeStamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeStamp = null;
         try {
-            return (long)classInstance.Get("TimeStamp");
+            retObjectTimeStamp = classInstance.Get("TimeStamp");
+            return (long)retObjectTimeStamp;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeStampNumber = (java.lang.Number)retObjectTimeStamp;
+                return retObjectTimeStampNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTimeStamp != null ? retObjectTimeStamp.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,9 +347,19 @@ public class CounterSample extends ValueType  {
 
     public long getTimeStamp100nSec() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeStamp100nSec = null;
         try {
-            return (long)classInstance.Get("TimeStamp100nSec");
+            retObjectTimeStamp100nSec = classInstance.Get("TimeStamp100nSec");
+            return (long)retObjectTimeStamp100nSec;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTimeStamp100nSecNumber = (java.lang.Number)retObjectTimeStamp100nSec;
+                return retObjectTimeStamp100nSecNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTimeStamp100nSec != null ? retObjectTimeStamp100nSec.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +367,14 @@ public class CounterSample extends ValueType  {
 
     public PerformanceCounterType getCounterType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CounterType");
+            retObjectCounterType = classInstance.Get("CounterType");
+            JCObject val = (JCObject)retObjectCounterType;
             return new PerformanceCounterType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCounterType != null ? retObjectCounterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

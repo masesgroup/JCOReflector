@@ -144,7 +144,7 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
     
     public void AddHookChannelUri(java.lang.String channelUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddHookChannelUri", channelUri);
         } catch (JCNativeException jcne) {
@@ -158,9 +158,13 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
     
     public boolean getWantsToListen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWantsToListen = null;
         try {
-            return (boolean)classInstance.Get("WantsToListen");
+            retObjectWantsToListen = classInstance.Get("WantsToListen");
+            return (boolean)retObjectWantsToListen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWantsToListen != null ? retObjectWantsToListen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
 
     public IServerChannelSink getChannelSinkChain() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelSinkChain = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelSinkChain");
+            retObjectChannelSinkChain = classInstance.Get("ChannelSinkChain");
+            JCObject val = (JCObject)retObjectChannelSinkChain;
             return new IServerChannelSinkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelSinkChain != null ? retObjectChannelSinkChain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class IChannelReceiverHookImplementation extends NetObject implements ICh
 
     public java.lang.String getChannelScheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelScheme = null;
         try {
-            return (java.lang.String)classInstance.Get("ChannelScheme");
+            retObjectChannelScheme = classInstance.Get("ChannelScheme");
+            return (java.lang.String)retObjectChannelScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectChannelScheme != null ? retObjectChannelScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

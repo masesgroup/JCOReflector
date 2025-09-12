@@ -158,9 +158,13 @@ public class WindowsFormsComponentEditor extends ComponentEditor  {
     
     public boolean EditComponent(ITypeDescriptorContext context, NetObject component, IWin32Window owner) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.LockRecursionException, system.OverflowException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditComponent = null;
         try {
-            return (boolean)classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            retObjectEditComponent = classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            return (boolean)retObjectEditComponent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEditComponent != null ? retObjectEditComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class WindowsFormsComponentEditor extends ComponentEditor  {
 
     public boolean EditComponent(ITypeDescriptorContext context, NetObject component) throws Throwable, system.componentmodel.Win32Exception, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditComponent = null;
         try {
-            return (boolean)classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance());
+            retObjectEditComponent = classInstance.Invoke("EditComponent", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectEditComponent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEditComponent != null ? retObjectEditComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class WindowsFormsComponentEditor extends ComponentEditor  {
 
     public boolean EditComponent(NetObject component, IWin32Window owner) throws Throwable, system.componentmodel.Win32Exception, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditComponent = null;
         try {
-            return (boolean)classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            retObjectEditComponent = classInstance.Invoke("EditComponent", component == null ? null : component.getJCOInstance(), owner == null ? null : owner.getJCOInstance());
+            return (boolean)retObjectEditComponent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEditComponent != null ? retObjectEditComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

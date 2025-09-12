@@ -161,9 +161,13 @@ public class CodeIdentifier extends NetObject  {
     
     public static java.lang.String MakeCamel(java.lang.String identifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeCamel = null;
         try {
-            return (java.lang.String)classType.Invoke("MakeCamel", identifier);
+            retObjectMakeCamel = classType.Invoke("MakeCamel", identifier);
+            return (java.lang.String)retObjectMakeCamel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeCamel != null ? retObjectMakeCamel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class CodeIdentifier extends NetObject  {
 
     public static java.lang.String MakePascal(java.lang.String identifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakePascal = null;
         try {
-            return (java.lang.String)classType.Invoke("MakePascal", identifier);
+            retObjectMakePascal = classType.Invoke("MakePascal", identifier);
+            return (java.lang.String)retObjectMakePascal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakePascal != null ? retObjectMakePascal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class CodeIdentifier extends NetObject  {
 
     public static java.lang.String MakeValid(java.lang.String identifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeValid = null;
         try {
-            return (java.lang.String)classType.Invoke("MakeValid", identifier);
+            retObjectMakeValid = classType.Invoke("MakeValid", identifier);
+            return (java.lang.String)retObjectMakeValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeValid != null ? retObjectMakeValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

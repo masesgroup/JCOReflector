@@ -146,9 +146,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
     
     public boolean Remove(IEntityWithRelationships entity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove", entity == null ? null : entity.getJCOInstance());
+            retObjectRemove = classInstance.Invoke("Remove", entity == null ? null : entity.getJCOInstance());
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public boolean Remove(NetObject entity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove", entity == null ? null : entity.getJCOInstance());
+            retObjectRemove = classInstance.Invoke("Remove", entity == null ? null : entity.getJCOInstance());
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +174,14 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public IEnumerable CreateSourceQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSourceQuery = null;
         try {
-            JCObject objCreateSourceQuery = (JCObject)classInstance.Invoke("CreateSourceQuery");
+            retObjectCreateSourceQuery = classInstance.Invoke("CreateSourceQuery");
+            JCObject objCreateSourceQuery = (JCObject)retObjectCreateSourceQuery;
             return new IEnumerableImplementation(objCreateSourceQuery);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSourceQuery != null ? retObjectCreateSourceQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +189,14 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public IEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnumerator = null;
         try {
-            JCObject objGetEnumerator = (JCObject)classInstance.Invoke("GetEnumerator");
+            retObjectGetEnumerator = classInstance.Invoke("GetEnumerator");
+            JCObject objGetEnumerator = (JCObject)retObjectGetEnumerator;
             return new IEnumeratorImplementation(objGetEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnumerator != null ? retObjectGetEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +204,7 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public void Add(IEntityWithRelationships entity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +214,7 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public void Add(NetObject entity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +224,7 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public void Attach(IEntityWithRelationships entity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Attach", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +234,7 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public void Attach(NetObject entity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Attach", entity == null ? null : entity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,7 +244,7 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public void Load() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load");
         } catch (JCNativeException jcne) {
@@ -238,7 +254,7 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public void Load(MergeOption mergeOption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", mergeOption == null ? null : mergeOption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,9 +268,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
     
     public boolean getIsLoaded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoaded = null;
         try {
-            return (boolean)classInstance.Get("IsLoaded");
+            retObjectIsLoaded = classInstance.Get("IsLoaded");
+            return (boolean)retObjectIsLoaded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoaded != null ? retObjectIsLoaded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +282,14 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public RelationshipSet getRelationshipSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelationshipSet");
+            retObjectRelationshipSet = classInstance.Get("RelationshipSet");
+            JCObject val = (JCObject)retObjectRelationshipSet;
             return new RelationshipSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelationshipSet != null ? retObjectRelationshipSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +297,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public java.lang.String getRelationshipName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipName = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipName");
+            retObjectRelationshipName = classInstance.Get("RelationshipName");
+            return (java.lang.String)retObjectRelationshipName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipName != null ? retObjectRelationshipName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +311,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public java.lang.String getSourceRoleName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceRoleName = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceRoleName");
+            retObjectSourceRoleName = classInstance.Get("SourceRoleName");
+            return (java.lang.String)retObjectSourceRoleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceRoleName != null ? retObjectSourceRoleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +325,13 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
 
     public java.lang.String getTargetRoleName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetRoleName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetRoleName");
+            retObjectTargetRoleName = classInstance.Get("TargetRoleName");
+            return (java.lang.String)retObjectTargetRoleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetRoleName != null ? retObjectTargetRoleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

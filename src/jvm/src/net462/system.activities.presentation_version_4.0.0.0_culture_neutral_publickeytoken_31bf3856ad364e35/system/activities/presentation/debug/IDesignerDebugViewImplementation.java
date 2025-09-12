@@ -144,10 +144,14 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
     
     public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExactLocation = null;
         try {
-            JCObject objGetExactLocation = (JCObject)classInstance.Invoke("GetExactLocation", approximateLocation == null ? null : approximateLocation.getJCOInstance());
+            retObjectGetExactLocation = classInstance.Invoke("GetExactLocation", approximateLocation == null ? null : approximateLocation.getJCOInstance());
+            JCObject objGetExactLocation = (JCObject)retObjectGetExactLocation;
             return new SourceLocation(objGetExactLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExactLocation != null ? retObjectGetExactLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +169,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void EnsureVisible(SourceLocation sourceLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnsureVisible", sourceLocation == null ? null : sourceLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void InsertBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void ResetBreakpoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetBreakpoints");
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void UpdateBreakpoint(SourceLocation sourceLocation, BreakpointTypes breakpointType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), breakpointType == null ? null : breakpointType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
     
     public boolean getHideSourceFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHideSourceFileName = null;
         try {
-            return (boolean)classInstance.Get("HideSourceFileName");
+            retObjectHideSourceFileName = classInstance.Get("HideSourceFileName");
+            return (boolean)retObjectHideSourceFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHideSourceFileName != null ? retObjectHideSourceFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void setHideSourceFileName(boolean HideSourceFileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HideSourceFileName", HideSourceFileName);
         } catch (JCNativeException jcne) {
@@ -229,9 +237,13 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public boolean getIsDebugging() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDebugging = null;
         try {
-            return (boolean)classInstance.Get("IsDebugging");
+            retObjectIsDebugging = classInstance.Get("IsDebugging");
+            return (boolean)retObjectIsDebugging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDebugging != null ? retObjectIsDebugging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +251,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void setIsDebugging(boolean IsDebugging) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDebugging", IsDebugging);
         } catch (JCNativeException jcne) {
@@ -249,10 +261,14 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public SourceLocation getCurrentContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentContext");
+            retObjectCurrentContext = classInstance.Get("CurrentContext");
+            JCObject val = (JCObject)retObjectCurrentContext;
             return new SourceLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentContext != null ? retObjectCurrentContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +276,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void setCurrentContext(SourceLocation CurrentContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentContext", CurrentContext == null ? null : CurrentContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,10 +286,14 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public SourceLocation getCurrentLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentLocation");
+            retObjectCurrentLocation = classInstance.Get("CurrentLocation");
+            JCObject val = (JCObject)retObjectCurrentLocation;
             return new SourceLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentLocation != null ? retObjectCurrentLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +301,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public void setCurrentLocation(SourceLocation CurrentLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentLocation", CurrentLocation == null ? null : CurrentLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,10 +311,14 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
 
     public SourceLocation getSelectedLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedLocation");
+            retObjectSelectedLocation = classInstance.Get("SelectedLocation");
+            JCObject val = (JCObject)retObjectSelectedLocation;
             return new SourceLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedLocation != null ? retObjectSelectedLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

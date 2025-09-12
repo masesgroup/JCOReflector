@@ -171,10 +171,12 @@ public class Hash extends EvidenceBase  {
     
     public byte[] GenerateHash(HashAlgorithm hashAlg) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.TypeLoadException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateHash", hashAlg == null ? null : hashAlg.getJCOInstance());
+            retObjectGenerateHash = classInstance.Invoke("GenerateHash", hashAlg == null ? null : hashAlg.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGenerateHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -183,6 +185,8 @@ public class Hash extends EvidenceBase  {
 				resultingArray[indexGenerateHash] = (byte)resultingArrayList.get(indexGenerateHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGenerateHash != null ? retObjectGenerateHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +194,14 @@ public class Hash extends EvidenceBase  {
 
     public EvidenceBase Clone() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new EvidenceBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class Hash extends EvidenceBase  {
 
     public static Hash CreateMD5(byte[] md5) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMD5 = null;
         try {
-            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (java.lang.Object)md5);
+            retObjectCreateMD5 = classType.Invoke("CreateMD5", (java.lang.Object)md5);
+            JCObject objCreateMD5 = (JCObject)retObjectCreateMD5;
             return new Hash(objCreateMD5);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMD5 != null ? retObjectCreateMD5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class Hash extends EvidenceBase  {
 
     public static Hash CreateMD5(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMD5 = null;
         try {
-            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateMD5 = classType.Invoke("CreateMD5", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objCreateMD5 = (JCObject)retObjectCreateMD5;
             return new Hash(objCreateMD5);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMD5 != null ? retObjectCreateMD5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,14 @@ public class Hash extends EvidenceBase  {
 
     public static Hash CreateSHA1(byte[] sha1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSHA1 = null;
         try {
-            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (java.lang.Object)sha1);
+            retObjectCreateSHA1 = classType.Invoke("CreateSHA1", (java.lang.Object)sha1);
+            JCObject objCreateSHA1 = (JCObject)retObjectCreateSHA1;
             return new Hash(objCreateSHA1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSHA1 != null ? retObjectCreateSHA1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +254,14 @@ public class Hash extends EvidenceBase  {
 
     public static Hash CreateSHA1(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSHA1 = null;
         try {
-            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateSHA1 = classType.Invoke("CreateSHA1", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objCreateSHA1 = (JCObject)retObjectCreateSHA1;
             return new Hash(objCreateSHA1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSHA1 != null ? retObjectCreateSHA1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +269,14 @@ public class Hash extends EvidenceBase  {
 
     public static Hash CreateSHA256(byte[] sha256) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSHA256 = null;
         try {
-            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (java.lang.Object)sha256);
+            retObjectCreateSHA256 = classType.Invoke("CreateSHA256", (java.lang.Object)sha256);
+            JCObject objCreateSHA256 = (JCObject)retObjectCreateSHA256;
             return new Hash(objCreateSHA256);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSHA256 != null ? retObjectCreateSHA256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +284,14 @@ public class Hash extends EvidenceBase  {
 
     public static Hash CreateSHA256(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSHA256 = null;
         try {
-            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateSHA256 = classType.Invoke("CreateSHA256", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objCreateSHA256 = (JCObject)retObjectCreateSHA256;
             return new Hash(objCreateSHA256);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSHA256 != null ? retObjectCreateSHA256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +299,7 @@ public class Hash extends EvidenceBase  {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.TypeLoadException, system.ApplicationException, system.NotSupportedException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,10 +313,12 @@ public class Hash extends EvidenceBase  {
     
     public byte[] getMD5() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.TypeLoadException, system.ApplicationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMD5 = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("MD5");
+            retObjectMD5 = classInstance.Get("MD5");
+            JCObject resultingObjects = (JCObject)retObjectMD5;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -293,6 +327,8 @@ public class Hash extends EvidenceBase  {
 				resultingArray[indexMD5] = (byte)resultingArrayList.get(indexMD5);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectMD5 != null ? retObjectMD5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +336,12 @@ public class Hash extends EvidenceBase  {
 
     public byte[] getSHA1() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.TypeLoadException, system.ApplicationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSHA1 = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SHA1");
+            retObjectSHA1 = classInstance.Get("SHA1");
+            JCObject resultingObjects = (JCObject)retObjectSHA1;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -312,6 +350,8 @@ public class Hash extends EvidenceBase  {
 				resultingArray[indexSHA1] = (byte)resultingArrayList.get(indexSHA1);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSHA1 != null ? retObjectSHA1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +359,12 @@ public class Hash extends EvidenceBase  {
 
     public byte[] getSHA256() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.TypeLoadException, system.ApplicationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSHA256 = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SHA256");
+            retObjectSHA256 = classInstance.Get("SHA256");
+            JCObject resultingObjects = (JCObject)retObjectSHA256;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -331,6 +373,8 @@ public class Hash extends EvidenceBase  {
 				resultingArray[indexSHA256] = (byte)resultingArrayList.get(indexSHA256);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSHA256 != null ? retObjectSHA256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

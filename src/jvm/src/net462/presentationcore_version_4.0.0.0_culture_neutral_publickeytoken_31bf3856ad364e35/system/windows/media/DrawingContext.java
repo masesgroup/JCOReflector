@@ -171,7 +171,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
     
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawDrawing(Drawing drawing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawDrawing", drawing == null ? null : drawing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawEllipse(Brush brush, Pen pen, Point center, double radiusX, double radiusY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawEllipse", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), center == null ? null : center.getJCOInstance(), radiusX, radiusY);
         } catch (JCNativeException jcne) {
@@ -201,7 +201,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawEllipse(Brush brush, Pen pen, Point center, AnimationClock centerAnimations, double radiusX, AnimationClock radiusXAnimations, double radiusY, AnimationClock radiusYAnimations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawEllipse", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), center == null ? null : center.getJCOInstance(), centerAnimations == null ? null : centerAnimations.getJCOInstance(), radiusX, radiusXAnimations == null ? null : radiusXAnimations.getJCOInstance(), radiusY, radiusYAnimations == null ? null : radiusYAnimations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +211,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawGeometry(Brush brush, Pen pen, Geometry geometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawGeometry", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), geometry == null ? null : geometry.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +221,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawGlyphRun(Brush foregroundBrush, GlyphRun glyphRun) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawGlyphRun", foregroundBrush == null ? null : foregroundBrush.getJCOInstance(), glyphRun == null ? null : glyphRun.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +231,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawImage(ImageSource imageSource, Rect rectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", imageSource == null ? null : imageSource.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +241,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawImage(ImageSource imageSource, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", imageSource == null ? null : imageSource.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), rectangleAnimations == null ? null : rectangleAnimations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,7 +251,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawLine(Pen pen, Point point0, AnimationClock point0Animations, Point point1, AnimationClock point1Animations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), point0 == null ? null : point0.getJCOInstance(), point0Animations == null ? null : point0Animations.getJCOInstance(), point1 == null ? null : point1.getJCOInstance(), point1Animations == null ? null : point1Animations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,7 +261,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawLine(Pen pen, Point point0, Point point1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), point0 == null ? null : point0.getJCOInstance(), point1 == null ? null : point1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,7 +271,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawRectangle(Brush brush, Pen pen, Rect rectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangle", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,7 +281,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawRectangle(Brush brush, Pen pen, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangle", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), rectangleAnimations == null ? null : rectangleAnimations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,7 +291,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawRoundedRectangle(Brush brush, Pen pen, Rect rectangle, double radiusX, double radiusY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRoundedRectangle", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), radiusX, radiusY);
         } catch (JCNativeException jcne) {
@@ -301,7 +301,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawRoundedRectangle(Brush brush, Pen pen, Rect rectangle, AnimationClock rectangleAnimations, double radiusX, AnimationClock radiusXAnimations, double radiusY, AnimationClock radiusYAnimations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRoundedRectangle", brush == null ? null : brush.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), rectangleAnimations == null ? null : rectangleAnimations.getJCOInstance(), radiusX, radiusXAnimations == null ? null : radiusXAnimations.getJCOInstance(), radiusY, radiusYAnimations == null ? null : radiusYAnimations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,7 +311,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawText(FormattedText formattedText, Point origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawText", formattedText == null ? null : formattedText.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -321,7 +321,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawVideo(MediaPlayer player, Rect rectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawVideo", player == null ? null : player.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,7 +331,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void DrawVideo(MediaPlayer player, Rect rectangle, AnimationClock rectangleAnimations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawVideo", player == null ? null : player.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), rectangleAnimations == null ? null : rectangleAnimations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,7 +341,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void Pop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Pop");
         } catch (JCNativeException jcne) {
@@ -351,7 +351,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void PushClip(Geometry clipGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushClip", clipGeometry == null ? null : clipGeometry.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,7 +361,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void PushEffect(BitmapEffect effect, BitmapEffectInput effectInput) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushEffect", effect == null ? null : effect.getJCOInstance(), effectInput == null ? null : effectInput.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,7 +371,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void PushGuidelineSet(GuidelineSet guidelines) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushGuidelineSet", guidelines == null ? null : guidelines.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -381,7 +381,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void PushOpacity(double opacity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushOpacity", opacity);
         } catch (JCNativeException jcne) {
@@ -391,7 +391,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void PushOpacity(double opacity, AnimationClock opacityAnimations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushOpacity", opacity, opacityAnimations == null ? null : opacityAnimations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -401,7 +401,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void PushOpacityMask(Brush opacityMask) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushOpacityMask", opacityMask == null ? null : opacityMask.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -411,7 +411,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
 
     public void PushTransform(Transform transform) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushTransform", transform == null ? null : transform.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -425,13 +425,13 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

@@ -160,10 +160,14 @@ public class SerializerDescriptor extends NetObject  {
     
     public static SerializerDescriptor CreateFromFactoryInstance(ISerializerFactory factoryInstance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromFactoryInstance = null;
         try {
-            JCObject objCreateFromFactoryInstance = (JCObject)classType.Invoke("CreateFromFactoryInstance", factoryInstance == null ? null : factoryInstance.getJCOInstance());
+            retObjectCreateFromFactoryInstance = classType.Invoke("CreateFromFactoryInstance", factoryInstance == null ? null : factoryInstance.getJCOInstance());
+            JCObject objCreateFromFactoryInstance = (JCObject)retObjectCreateFromFactoryInstance;
             return new SerializerDescriptor(objCreateFromFactoryInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromFactoryInstance != null ? retObjectCreateFromFactoryInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class SerializerDescriptor extends NetObject  {
     
     public boolean getIsLoadable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoadable = null;
         try {
-            return (boolean)classInstance.Get("IsLoadable");
+            retObjectIsLoadable = classInstance.Get("IsLoadable");
+            return (boolean)retObjectIsLoadable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoadable != null ? retObjectIsLoadable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class SerializerDescriptor extends NetObject  {
 
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            return (java.lang.String)retObjectAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class SerializerDescriptor extends NetObject  {
 
     public java.lang.String getAssemblyPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyPath = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyPath");
+            retObjectAssemblyPath = classInstance.Get("AssemblyPath");
+            return (java.lang.String)retObjectAssemblyPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyPath != null ? retObjectAssemblyPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class SerializerDescriptor extends NetObject  {
 
     public java.lang.String getDefaultFileExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultFileExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultFileExtension");
+            retObjectDefaultFileExtension = classInstance.Get("DefaultFileExtension");
+            return (java.lang.String)retObjectDefaultFileExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultFileExtension != null ? retObjectDefaultFileExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +235,13 @@ public class SerializerDescriptor extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +249,13 @@ public class SerializerDescriptor extends NetObject  {
 
     public java.lang.String getFactoryInterfaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFactoryInterfaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("FactoryInterfaceName");
+            retObjectFactoryInterfaceName = classInstance.Get("FactoryInterfaceName");
+            return (java.lang.String)retObjectFactoryInterfaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFactoryInterfaceName != null ? retObjectFactoryInterfaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +263,13 @@ public class SerializerDescriptor extends NetObject  {
 
     public java.lang.String getManufacturerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManufacturerName = null;
         try {
-            return (java.lang.String)classInstance.Get("ManufacturerName");
+            retObjectManufacturerName = classInstance.Get("ManufacturerName");
+            return (java.lang.String)retObjectManufacturerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectManufacturerName != null ? retObjectManufacturerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class SerializerDescriptor extends NetObject  {
 
     public Uri getManufacturerWebsite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManufacturerWebsite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManufacturerWebsite");
+            retObjectManufacturerWebsite = classInstance.Get("ManufacturerWebsite");
+            JCObject val = (JCObject)retObjectManufacturerWebsite;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManufacturerWebsite != null ? retObjectManufacturerWebsite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +292,14 @@ public class SerializerDescriptor extends NetObject  {
 
     public Version getAssemblyVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyVersion");
+            retObjectAssemblyVersion = classInstance.Get("AssemblyVersion");
+            JCObject val = (JCObject)retObjectAssemblyVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyVersion != null ? retObjectAssemblyVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +307,14 @@ public class SerializerDescriptor extends NetObject  {
 
     public Version getWinFXVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWinFXVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WinFXVersion");
+            retObjectWinFXVersion = classInstance.Get("WinFXVersion");
+            JCObject val = (JCObject)retObjectWinFXVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWinFXVersion != null ? retObjectWinFXVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

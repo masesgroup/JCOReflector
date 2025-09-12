@@ -159,7 +159,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
     
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
 
     public static void DisposeObject(ServicedComponent sc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DisposeObject", sc == null ? null : sc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
      */
     @Deprecated 
     public java.lang.String RemoteDispatchAutoDone(java.lang.String s) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
     }
 
     /**
@@ -192,7 +192,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
      */
     @Deprecated 
     public java.lang.String RemoteDispatchNotAutoDone(java.lang.String s) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
     }
 
     /**
@@ -201,13 +201,13 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
      */
     @Deprecated 
     public void GetComponentInfo(JCORefOut<java.util.concurrent.atomic.AtomicInteger> infoMask, JCORefOut infoArray) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServicedComponentInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServicedComponentInfo to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

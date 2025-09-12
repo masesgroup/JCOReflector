@@ -204,7 +204,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
+            throw new java.lang.UnsupportedOperationException(
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
@@ -218,10 +218,14 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
 
     public X509Certificate DynamicInvoke(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            JCObject objDynamicInvoke = (JCObject)classInstance.Invoke("DynamicInvoke", sender == null ? null : sender.getJCOInstance(), targetHost, localCertificates == null ? null : localCertificates.getJCOInstance(), remoteCertificate == null ? null : remoteCertificate.getJCOInstance(), acceptableIssuers);
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", sender == null ? null : sender.getJCOInstance(), targetHost, localCertificates == null ? null : localCertificates.getJCOInstance(), remoteCertificate == null ? null : remoteCertificate.getJCOInstance(), acceptableIssuers);
+            JCObject objDynamicInvoke = (JCObject)retObjectDynamicInvoke;
             return new X509Certificate(objDynamicInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

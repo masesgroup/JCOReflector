@@ -155,10 +155,14 @@ public class SpatialEdmFunctions extends NetObject  {
     
     public static DbFunctionExpression Area(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArea = null;
         try {
-            JCObject objArea = (JCObject)classType.Invoke("Area", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectArea = classType.Invoke("Area", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objArea = (JCObject)retObjectArea;
             return new DbFunctionExpression(objArea);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArea != null ? retObjectArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AsBinary(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsBinary = null;
         try {
-            JCObject objAsBinary = (JCObject)classType.Invoke("AsBinary", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectAsBinary = classType.Invoke("AsBinary", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objAsBinary = (JCObject)retObjectAsBinary;
             return new DbFunctionExpression(objAsBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsBinary != null ? retObjectAsBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AsGml(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsGml = null;
         try {
-            JCObject objAsGml = (JCObject)classType.Invoke("AsGml", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectAsGml = classType.Invoke("AsGml", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objAsGml = (JCObject)retObjectAsGml;
             return new DbFunctionExpression(objAsGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsGml != null ? retObjectAsGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AsText(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsText = null;
         try {
-            JCObject objAsText = (JCObject)classType.Invoke("AsText", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectAsText = classType.Invoke("AsText", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objAsText = (JCObject)retObjectAsText;
             return new DbFunctionExpression(objAsText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsText != null ? retObjectAsText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Centroid(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCentroid = null;
         try {
-            JCObject objCentroid = (JCObject)classType.Invoke("Centroid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectCentroid = classType.Invoke("Centroid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objCentroid = (JCObject)retObjectCentroid;
             return new DbFunctionExpression(objCentroid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCentroid != null ? retObjectCentroid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression CoordinateSystemId(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCoordinateSystemId = null;
         try {
-            JCObject objCoordinateSystemId = (JCObject)classType.Invoke("CoordinateSystemId", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectCoordinateSystemId = classType.Invoke("CoordinateSystemId", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objCoordinateSystemId = (JCObject)retObjectCoordinateSystemId;
             return new DbFunctionExpression(objCoordinateSystemId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCoordinateSystemId != null ? retObjectCoordinateSystemId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +245,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Distance(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistance = null;
         try {
-            JCObject objDistance = (JCObject)classType.Invoke("Distance", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectDistance = classType.Invoke("Distance", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objDistance = (JCObject)retObjectDistance;
             return new DbFunctionExpression(objDistance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistance != null ? retObjectDistance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +260,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Elevation(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectElevation = null;
         try {
-            JCObject objElevation = (JCObject)classType.Invoke("Elevation", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectElevation = classType.Invoke("Elevation", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objElevation = (JCObject)retObjectElevation;
             return new DbFunctionExpression(objElevation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElevation != null ? retObjectElevation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +275,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression EndPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndPoint = null;
         try {
-            JCObject objEndPoint = (JCObject)classType.Invoke("EndPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectEndPoint = classType.Invoke("EndPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objEndPoint = (JCObject)retObjectEndPoint;
             return new DbFunctionExpression(objEndPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndPoint != null ? retObjectEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +290,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression ExteriorRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExteriorRing = null;
         try {
-            JCObject objExteriorRing = (JCObject)classType.Invoke("ExteriorRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectExteriorRing = classType.Invoke("ExteriorRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objExteriorRing = (JCObject)retObjectExteriorRing;
             return new DbFunctionExpression(objExteriorRing);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExteriorRing != null ? retObjectExteriorRing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +305,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyCollectionFromBinary(DbExpression geographyCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyCollectionFromBinary = null;
         try {
-            JCObject objGeographyCollectionFromBinary = (JCObject)classType.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinaryValue == null ? null : geographyCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyCollectionFromBinary = classType.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinaryValue == null ? null : geographyCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyCollectionFromBinary = (JCObject)retObjectGeographyCollectionFromBinary;
             return new DbFunctionExpression(objGeographyCollectionFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyCollectionFromBinary != null ? retObjectGeographyCollectionFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +320,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyCollectionFromText(DbExpression geographyCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyCollectionFromText = null;
         try {
-            JCObject objGeographyCollectionFromText = (JCObject)classType.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText == null ? null : geographyCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyCollectionFromText = classType.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText == null ? null : geographyCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyCollectionFromText = (JCObject)retObjectGeographyCollectionFromText;
             return new DbFunctionExpression(objGeographyCollectionFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyCollectionFromText != null ? retObjectGeographyCollectionFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +335,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyFromBinary = null;
         try {
-            JCObject objGeographyFromBinary = (JCObject)classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
+            retObjectGeographyFromBinary = classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
+            JCObject objGeographyFromBinary = (JCObject)retObjectGeographyFromBinary;
             return new DbFunctionExpression(objGeographyFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromBinary != null ? retObjectGeographyFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +350,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyFromBinary = null;
         try {
-            JCObject objGeographyFromBinary = (JCObject)classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyFromBinary = classType.Invoke("GeographyFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyFromBinary = (JCObject)retObjectGeographyFromBinary;
             return new DbFunctionExpression(objGeographyFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromBinary != null ? retObjectGeographyFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +365,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyFromGml = null;
         try {
-            JCObject objGeographyFromGml = (JCObject)classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance());
+            retObjectGeographyFromGml = classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance());
+            JCObject objGeographyFromGml = (JCObject)retObjectGeographyFromGml;
             return new DbFunctionExpression(objGeographyFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromGml != null ? retObjectGeographyFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +380,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyFromGml(DbExpression geographyMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyFromGml = null;
         try {
-            JCObject objGeographyFromGml = (JCObject)classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyFromGml = classType.Invoke("GeographyFromGml", geographyMarkup == null ? null : geographyMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyFromGml = (JCObject)retObjectGeographyFromGml;
             return new DbFunctionExpression(objGeographyFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromGml != null ? retObjectGeographyFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +395,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyFromText = null;
         try {
-            JCObject objGeographyFromText = (JCObject)classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
+            retObjectGeographyFromText = classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
+            JCObject objGeographyFromText = (JCObject)retObjectGeographyFromText;
             return new DbFunctionExpression(objGeographyFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromText != null ? retObjectGeographyFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +410,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyFromText = null;
         try {
-            JCObject objGeographyFromText = (JCObject)classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyFromText = classType.Invoke("GeographyFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyFromText = (JCObject)retObjectGeographyFromText;
             return new DbFunctionExpression(objGeographyFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromText != null ? retObjectGeographyFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +425,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyLineFromBinary = null;
         try {
-            JCObject objGeographyLineFromBinary = (JCObject)classType.Invoke("GeographyLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyLineFromBinary = classType.Invoke("GeographyLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyLineFromBinary = (JCObject)retObjectGeographyLineFromBinary;
             return new DbFunctionExpression(objGeographyLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyLineFromBinary != null ? retObjectGeographyLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +440,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyLineFromText = null;
         try {
-            JCObject objGeographyLineFromText = (JCObject)classType.Invoke("GeographyLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyLineFromText = classType.Invoke("GeographyLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyLineFromText = (JCObject)retObjectGeographyLineFromText;
             return new DbFunctionExpression(objGeographyLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyLineFromText != null ? retObjectGeographyLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +455,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyMultiLineFromBinary = null;
         try {
-            JCObject objGeographyMultiLineFromBinary = (JCObject)classType.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyMultiLineFromBinary = classType.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyMultiLineFromBinary = (JCObject)retObjectGeographyMultiLineFromBinary;
             return new DbFunctionExpression(objGeographyMultiLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiLineFromBinary != null ? retObjectGeographyMultiLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +470,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyMultiLineFromText = null;
         try {
-            JCObject objGeographyMultiLineFromText = (JCObject)classType.Invoke("GeographyMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyMultiLineFromText = classType.Invoke("GeographyMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyMultiLineFromText = (JCObject)retObjectGeographyMultiLineFromText;
             return new DbFunctionExpression(objGeographyMultiLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiLineFromText != null ? retObjectGeographyMultiLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +485,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyMultiPointFromBinary = null;
         try {
-            JCObject objGeographyMultiPointFromBinary = (JCObject)classType.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyMultiPointFromBinary = classType.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyMultiPointFromBinary = (JCObject)retObjectGeographyMultiPointFromBinary;
             return new DbFunctionExpression(objGeographyMultiPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPointFromBinary != null ? retObjectGeographyMultiPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +500,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyMultiPointFromText = null;
         try {
-            JCObject objGeographyMultiPointFromText = (JCObject)classType.Invoke("GeographyMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyMultiPointFromText = classType.Invoke("GeographyMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyMultiPointFromText = (JCObject)retObjectGeographyMultiPointFromText;
             return new DbFunctionExpression(objGeographyMultiPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPointFromText != null ? retObjectGeographyMultiPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +515,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyMultiPolygonFromBinary = null;
         try {
-            JCObject objGeographyMultiPolygonFromBinary = (JCObject)classType.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyMultiPolygonFromBinary = classType.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyMultiPolygonFromBinary = (JCObject)retObjectGeographyMultiPolygonFromBinary;
             return new DbFunctionExpression(objGeographyMultiPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPolygonFromBinary != null ? retObjectGeographyMultiPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +530,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyMultiPolygonFromText = null;
         try {
-            JCObject objGeographyMultiPolygonFromText = (JCObject)classType.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyMultiPolygonFromText = classType.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyMultiPolygonFromText = (JCObject)retObjectGeographyMultiPolygonFromText;
             return new DbFunctionExpression(objGeographyMultiPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPolygonFromText != null ? retObjectGeographyMultiPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +545,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyPointFromBinary = null;
         try {
-            JCObject objGeographyPointFromBinary = (JCObject)classType.Invoke("GeographyPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyPointFromBinary = classType.Invoke("GeographyPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyPointFromBinary = (JCObject)retObjectGeographyPointFromBinary;
             return new DbFunctionExpression(objGeographyPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPointFromBinary != null ? retObjectGeographyPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,10 +560,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyPointFromText = null;
         try {
-            JCObject objGeographyPointFromText = (JCObject)classType.Invoke("GeographyPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyPointFromText = classType.Invoke("GeographyPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyPointFromText = (JCObject)retObjectGeographyPointFromText;
             return new DbFunctionExpression(objGeographyPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPointFromText != null ? retObjectGeographyPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,10 +575,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyPolygonFromBinary = null;
         try {
-            JCObject objGeographyPolygonFromBinary = (JCObject)classType.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyPolygonFromBinary = classType.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyPolygonFromBinary = (JCObject)retObjectGeographyPolygonFromBinary;
             return new DbFunctionExpression(objGeographyPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPolygonFromBinary != null ? retObjectGeographyPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,10 +590,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeographyPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeographyPolygonFromText = null;
         try {
-            JCObject objGeographyPolygonFromText = (JCObject)classType.Invoke("GeographyPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeographyPolygonFromText = classType.Invoke("GeographyPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeographyPolygonFromText = (JCObject)retObjectGeographyPolygonFromText;
             return new DbFunctionExpression(objGeographyPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPolygonFromText != null ? retObjectGeographyPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,10 +605,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryCollectionFromBinary(DbExpression geometryCollectionWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryCollectionFromBinary = null;
         try {
-            JCObject objGeometryCollectionFromBinary = (JCObject)classType.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinaryValue == null ? null : geometryCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryCollectionFromBinary = classType.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinaryValue == null ? null : geometryCollectionWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryCollectionFromBinary = (JCObject)retObjectGeometryCollectionFromBinary;
             return new DbFunctionExpression(objGeometryCollectionFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryCollectionFromBinary != null ? retObjectGeometryCollectionFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,10 +620,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryCollectionFromText(DbExpression geometryCollectionWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryCollectionFromText = null;
         try {
-            JCObject objGeometryCollectionFromText = (JCObject)classType.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText == null ? null : geometryCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryCollectionFromText = classType.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText == null ? null : geometryCollectionWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryCollectionFromText = (JCObject)retObjectGeometryCollectionFromText;
             return new DbFunctionExpression(objGeometryCollectionFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryCollectionFromText != null ? retObjectGeometryCollectionFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,10 +635,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryFromBinary = null;
         try {
-            JCObject objGeometryFromBinary = (JCObject)classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
+            retObjectGeometryFromBinary = classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance());
+            JCObject objGeometryFromBinary = (JCObject)retObjectGeometryFromBinary;
             return new DbFunctionExpression(objGeometryFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromBinary != null ? retObjectGeometryFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,10 +650,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryFromBinary(DbExpression wellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryFromBinary = null;
         try {
-            JCObject objGeometryFromBinary = (JCObject)classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryFromBinary = classType.Invoke("GeometryFromBinary", wellKnownBinaryValue == null ? null : wellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryFromBinary = (JCObject)retObjectGeometryFromBinary;
             return new DbFunctionExpression(objGeometryFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromBinary != null ? retObjectGeometryFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,10 +665,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryFromGml = null;
         try {
-            JCObject objGeometryFromGml = (JCObject)classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance());
+            retObjectGeometryFromGml = classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance());
+            JCObject objGeometryFromGml = (JCObject)retObjectGeometryFromGml;
             return new DbFunctionExpression(objGeometryFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromGml != null ? retObjectGeometryFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,10 +680,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryFromGml(DbExpression geometryMarkup, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryFromGml = null;
         try {
-            JCObject objGeometryFromGml = (JCObject)classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryFromGml = classType.Invoke("GeometryFromGml", geometryMarkup == null ? null : geometryMarkup.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryFromGml = (JCObject)retObjectGeometryFromGml;
             return new DbFunctionExpression(objGeometryFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromGml != null ? retObjectGeometryFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,10 +695,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryFromText = null;
         try {
-            JCObject objGeometryFromText = (JCObject)classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
+            retObjectGeometryFromText = classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance());
+            JCObject objGeometryFromText = (JCObject)retObjectGeometryFromText;
             return new DbFunctionExpression(objGeometryFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromText != null ? retObjectGeometryFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,10 +710,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryFromText(DbExpression wellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryFromText = null;
         try {
-            JCObject objGeometryFromText = (JCObject)classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryFromText = classType.Invoke("GeometryFromText", wellKnownText == null ? null : wellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryFromText = (JCObject)retObjectGeometryFromText;
             return new DbFunctionExpression(objGeometryFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromText != null ? retObjectGeometryFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,10 +725,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryLineFromBinary(DbExpression lineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryLineFromBinary = null;
         try {
-            JCObject objGeometryLineFromBinary = (JCObject)classType.Invoke("GeometryLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryLineFromBinary = classType.Invoke("GeometryLineFromBinary", lineWellKnownBinaryValue == null ? null : lineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryLineFromBinary = (JCObject)retObjectGeometryLineFromBinary;
             return new DbFunctionExpression(objGeometryLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryLineFromBinary != null ? retObjectGeometryLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -584,10 +740,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryLineFromText(DbExpression lineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryLineFromText = null;
         try {
-            JCObject objGeometryLineFromText = (JCObject)classType.Invoke("GeometryLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryLineFromText = classType.Invoke("GeometryLineFromText", lineWellKnownText == null ? null : lineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryLineFromText = (JCObject)retObjectGeometryLineFromText;
             return new DbFunctionExpression(objGeometryLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryLineFromText != null ? retObjectGeometryLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,10 +755,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryMultiLineFromBinary(DbExpression multiLineWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryMultiLineFromBinary = null;
         try {
-            JCObject objGeometryMultiLineFromBinary = (JCObject)classType.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryMultiLineFromBinary = classType.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinaryValue == null ? null : multiLineWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryMultiLineFromBinary = (JCObject)retObjectGeometryMultiLineFromBinary;
             return new DbFunctionExpression(objGeometryMultiLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiLineFromBinary != null ? retObjectGeometryMultiLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,10 +770,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryMultiLineFromText(DbExpression multiLineWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryMultiLineFromText = null;
         try {
-            JCObject objGeometryMultiLineFromText = (JCObject)classType.Invoke("GeometryMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryMultiLineFromText = classType.Invoke("GeometryMultiLineFromText", multiLineWellKnownText == null ? null : multiLineWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryMultiLineFromText = (JCObject)retObjectGeometryMultiLineFromText;
             return new DbFunctionExpression(objGeometryMultiLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiLineFromText != null ? retObjectGeometryMultiLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -617,10 +785,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryMultiPointFromBinary(DbExpression multiPointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryMultiPointFromBinary = null;
         try {
-            JCObject objGeometryMultiPointFromBinary = (JCObject)classType.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryMultiPointFromBinary = classType.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinaryValue == null ? null : multiPointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryMultiPointFromBinary = (JCObject)retObjectGeometryMultiPointFromBinary;
             return new DbFunctionExpression(objGeometryMultiPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPointFromBinary != null ? retObjectGeometryMultiPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,10 +800,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryMultiPointFromText(DbExpression multiPointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryMultiPointFromText = null;
         try {
-            JCObject objGeometryMultiPointFromText = (JCObject)classType.Invoke("GeometryMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryMultiPointFromText = classType.Invoke("GeometryMultiPointFromText", multiPointWellKnownText == null ? null : multiPointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryMultiPointFromText = (JCObject)retObjectGeometryMultiPointFromText;
             return new DbFunctionExpression(objGeometryMultiPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPointFromText != null ? retObjectGeometryMultiPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,10 +815,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryMultiPolygonFromBinary(DbExpression multiPolygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryMultiPolygonFromBinary = null;
         try {
-            JCObject objGeometryMultiPolygonFromBinary = (JCObject)classType.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryMultiPolygonFromBinary = classType.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinaryValue == null ? null : multiPolygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryMultiPolygonFromBinary = (JCObject)retObjectGeometryMultiPolygonFromBinary;
             return new DbFunctionExpression(objGeometryMultiPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPolygonFromBinary != null ? retObjectGeometryMultiPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,10 +830,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryMultiPolygonFromText(DbExpression multiPolygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryMultiPolygonFromText = null;
         try {
-            JCObject objGeometryMultiPolygonFromText = (JCObject)classType.Invoke("GeometryMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryMultiPolygonFromText = classType.Invoke("GeometryMultiPolygonFromText", multiPolygonWellKnownText == null ? null : multiPolygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryMultiPolygonFromText = (JCObject)retObjectGeometryMultiPolygonFromText;
             return new DbFunctionExpression(objGeometryMultiPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPolygonFromText != null ? retObjectGeometryMultiPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,10 +845,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryPointFromBinary(DbExpression pointWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryPointFromBinary = null;
         try {
-            JCObject objGeometryPointFromBinary = (JCObject)classType.Invoke("GeometryPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryPointFromBinary = classType.Invoke("GeometryPointFromBinary", pointWellKnownBinaryValue == null ? null : pointWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryPointFromBinary = (JCObject)retObjectGeometryPointFromBinary;
             return new DbFunctionExpression(objGeometryPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPointFromBinary != null ? retObjectGeometryPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,10 +860,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryPointFromText(DbExpression pointWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryPointFromText = null;
         try {
-            JCObject objGeometryPointFromText = (JCObject)classType.Invoke("GeometryPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryPointFromText = classType.Invoke("GeometryPointFromText", pointWellKnownText == null ? null : pointWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryPointFromText = (JCObject)retObjectGeometryPointFromText;
             return new DbFunctionExpression(objGeometryPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPointFromText != null ? retObjectGeometryPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,10 +875,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryPolygonFromBinary(DbExpression polygonWellKnownBinaryValue, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryPolygonFromBinary = null;
         try {
-            JCObject objGeometryPolygonFromBinary = (JCObject)classType.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryPolygonFromBinary = classType.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinaryValue == null ? null : polygonWellKnownBinaryValue.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryPolygonFromBinary = (JCObject)retObjectGeometryPolygonFromBinary;
             return new DbFunctionExpression(objGeometryPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPolygonFromBinary != null ? retObjectGeometryPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -694,10 +890,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GeometryPolygonFromText(DbExpression polygonWellKnownText, DbExpression coordinateSystemId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGeometryPolygonFromText = null;
         try {
-            JCObject objGeometryPolygonFromText = (JCObject)classType.Invoke("GeometryPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            retObjectGeometryPolygonFromText = classType.Invoke("GeometryPolygonFromText", polygonWellKnownText == null ? null : polygonWellKnownText.getJCOInstance(), coordinateSystemId == null ? null : coordinateSystemId.getJCOInstance());
+            JCObject objGeometryPolygonFromText = (JCObject)retObjectGeometryPolygonFromText;
             return new DbFunctionExpression(objGeometryPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPolygonFromText != null ? retObjectGeometryPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -705,10 +905,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression InteriorRingAt(DbExpression geometryValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInteriorRingAt = null;
         try {
-            JCObject objInteriorRingAt = (JCObject)classType.Invoke("InteriorRingAt", geometryValue == null ? null : geometryValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            retObjectInteriorRingAt = classType.Invoke("InteriorRingAt", geometryValue == null ? null : geometryValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            JCObject objInteriorRingAt = (JCObject)retObjectInteriorRingAt;
             return new DbFunctionExpression(objInteriorRingAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInteriorRingAt != null ? retObjectInteriorRingAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,10 +920,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression InteriorRingCount(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInteriorRingCount = null;
         try {
-            JCObject objInteriorRingCount = (JCObject)classType.Invoke("InteriorRingCount", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectInteriorRingCount = classType.Invoke("InteriorRingCount", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objInteriorRingCount = (JCObject)retObjectInteriorRingCount;
             return new DbFunctionExpression(objInteriorRingCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInteriorRingCount != null ? retObjectInteriorRingCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -727,10 +935,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression IsClosedSpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsClosedSpatial = null;
         try {
-            JCObject objIsClosedSpatial = (JCObject)classType.Invoke("IsClosedSpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectIsClosedSpatial = classType.Invoke("IsClosedSpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objIsClosedSpatial = (JCObject)retObjectIsClosedSpatial;
             return new DbFunctionExpression(objIsClosedSpatial);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsClosedSpatial != null ? retObjectIsClosedSpatial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -738,10 +950,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression IsEmptySpatial(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEmptySpatial = null;
         try {
-            JCObject objIsEmptySpatial = (JCObject)classType.Invoke("IsEmptySpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectIsEmptySpatial = classType.Invoke("IsEmptySpatial", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objIsEmptySpatial = (JCObject)retObjectIsEmptySpatial;
             return new DbFunctionExpression(objIsEmptySpatial);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsEmptySpatial != null ? retObjectIsEmptySpatial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -749,10 +965,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression IsRing(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRing = null;
         try {
-            JCObject objIsRing = (JCObject)classType.Invoke("IsRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectIsRing = classType.Invoke("IsRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objIsRing = (JCObject)retObjectIsRing;
             return new DbFunctionExpression(objIsRing);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsRing != null ? retObjectIsRing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -760,10 +980,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression IsSimpleGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSimpleGeometry = null;
         try {
-            JCObject objIsSimpleGeometry = (JCObject)classType.Invoke("IsSimpleGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectIsSimpleGeometry = classType.Invoke("IsSimpleGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objIsSimpleGeometry = (JCObject)retObjectIsSimpleGeometry;
             return new DbFunctionExpression(objIsSimpleGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsSimpleGeometry != null ? retObjectIsSimpleGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -771,10 +995,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression IsValidGeometry(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidGeometry = null;
         try {
-            JCObject objIsValidGeometry = (JCObject)classType.Invoke("IsValidGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectIsValidGeometry = classType.Invoke("IsValidGeometry", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objIsValidGeometry = (JCObject)retObjectIsValidGeometry;
             return new DbFunctionExpression(objIsValidGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsValidGeometry != null ? retObjectIsValidGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -782,10 +1010,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Latitude(DbExpression geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatitude = null;
         try {
-            JCObject objLatitude = (JCObject)classType.Invoke("Latitude", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectLatitude = classType.Invoke("Latitude", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objLatitude = (JCObject)retObjectLatitude;
             return new DbFunctionExpression(objLatitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatitude != null ? retObjectLatitude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -793,10 +1025,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Longitude(DbExpression geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongitude = null;
         try {
-            JCObject objLongitude = (JCObject)classType.Invoke("Longitude", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectLongitude = classType.Invoke("Longitude", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objLongitude = (JCObject)retObjectLongitude;
             return new DbFunctionExpression(objLongitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLongitude != null ? retObjectLongitude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -804,10 +1040,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Measure(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMeasure = null;
         try {
-            JCObject objMeasure = (JCObject)classType.Invoke("Measure", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectMeasure = classType.Invoke("Measure", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objMeasure = (JCObject)retObjectMeasure;
             return new DbFunctionExpression(objMeasure);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasure != null ? retObjectMeasure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -815,10 +1055,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression PointAt(DbExpression spatialValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPointAt = null;
         try {
-            JCObject objPointAt = (JCObject)classType.Invoke("PointAt", spatialValue == null ? null : spatialValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            retObjectPointAt = classType.Invoke("PointAt", spatialValue == null ? null : spatialValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            JCObject objPointAt = (JCObject)retObjectPointAt;
             return new DbFunctionExpression(objPointAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointAt != null ? retObjectPointAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -826,10 +1070,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression PointCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPointCount = null;
         try {
-            JCObject objPointCount = (JCObject)classType.Invoke("PointCount", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectPointCount = classType.Invoke("PointCount", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objPointCount = (JCObject)retObjectPointCount;
             return new DbFunctionExpression(objPointCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointCount != null ? retObjectPointCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -837,10 +1085,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression PointOnSurface(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPointOnSurface = null;
         try {
-            JCObject objPointOnSurface = (JCObject)classType.Invoke("PointOnSurface", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectPointOnSurface = classType.Invoke("PointOnSurface", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objPointOnSurface = (JCObject)retObjectPointOnSurface;
             return new DbFunctionExpression(objPointOnSurface);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointOnSurface != null ? retObjectPointOnSurface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -848,10 +1100,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialBoundary(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialBoundary = null;
         try {
-            JCObject objSpatialBoundary = (JCObject)classType.Invoke("SpatialBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectSpatialBoundary = classType.Invoke("SpatialBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objSpatialBoundary = (JCObject)retObjectSpatialBoundary;
             return new DbFunctionExpression(objSpatialBoundary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialBoundary != null ? retObjectSpatialBoundary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -859,10 +1115,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialBuffer(DbExpression spatialValue, DbExpression distance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialBuffer = null;
         try {
-            JCObject objSpatialBuffer = (JCObject)classType.Invoke("SpatialBuffer", spatialValue == null ? null : spatialValue.getJCOInstance(), distance == null ? null : distance.getJCOInstance());
+            retObjectSpatialBuffer = classType.Invoke("SpatialBuffer", spatialValue == null ? null : spatialValue.getJCOInstance(), distance == null ? null : distance.getJCOInstance());
+            JCObject objSpatialBuffer = (JCObject)retObjectSpatialBuffer;
             return new DbFunctionExpression(objSpatialBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialBuffer != null ? retObjectSpatialBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -870,10 +1130,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialContains(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialContains = null;
         try {
-            JCObject objSpatialContains = (JCObject)classType.Invoke("SpatialContains", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            retObjectSpatialContains = classType.Invoke("SpatialContains", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            JCObject objSpatialContains = (JCObject)retObjectSpatialContains;
             return new DbFunctionExpression(objSpatialContains);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialContains != null ? retObjectSpatialContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,10 +1145,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialConvexHull(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialConvexHull = null;
         try {
-            JCObject objSpatialConvexHull = (JCObject)classType.Invoke("SpatialConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectSpatialConvexHull = classType.Invoke("SpatialConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objSpatialConvexHull = (JCObject)retObjectSpatialConvexHull;
             return new DbFunctionExpression(objSpatialConvexHull);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialConvexHull != null ? retObjectSpatialConvexHull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -892,10 +1160,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialCrosses(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialCrosses = null;
         try {
-            JCObject objSpatialCrosses = (JCObject)classType.Invoke("SpatialCrosses", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            retObjectSpatialCrosses = classType.Invoke("SpatialCrosses", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            JCObject objSpatialCrosses = (JCObject)retObjectSpatialCrosses;
             return new DbFunctionExpression(objSpatialCrosses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialCrosses != null ? retObjectSpatialCrosses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -903,10 +1175,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialDifference = null;
         try {
-            JCObject objSpatialDifference = (JCObject)classType.Invoke("SpatialDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectSpatialDifference = classType.Invoke("SpatialDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objSpatialDifference = (JCObject)retObjectSpatialDifference;
             return new DbFunctionExpression(objSpatialDifference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialDifference != null ? retObjectSpatialDifference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -914,10 +1190,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialDimension(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialDimension = null;
         try {
-            JCObject objSpatialDimension = (JCObject)classType.Invoke("SpatialDimension", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectSpatialDimension = classType.Invoke("SpatialDimension", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objSpatialDimension = (JCObject)retObjectSpatialDimension;
             return new DbFunctionExpression(objSpatialDimension);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialDimension != null ? retObjectSpatialDimension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -925,10 +1205,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialDisjoint(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialDisjoint = null;
         try {
-            JCObject objSpatialDisjoint = (JCObject)classType.Invoke("SpatialDisjoint", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectSpatialDisjoint = classType.Invoke("SpatialDisjoint", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objSpatialDisjoint = (JCObject)retObjectSpatialDisjoint;
             return new DbFunctionExpression(objSpatialDisjoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialDisjoint != null ? retObjectSpatialDisjoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -936,10 +1220,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialElementAt(DbExpression spatialValue, DbExpression indexValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialElementAt = null;
         try {
-            JCObject objSpatialElementAt = (JCObject)classType.Invoke("SpatialElementAt", spatialValue == null ? null : spatialValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            retObjectSpatialElementAt = classType.Invoke("SpatialElementAt", spatialValue == null ? null : spatialValue.getJCOInstance(), indexValue == null ? null : indexValue.getJCOInstance());
+            JCObject objSpatialElementAt = (JCObject)retObjectSpatialElementAt;
             return new DbFunctionExpression(objSpatialElementAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialElementAt != null ? retObjectSpatialElementAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -947,10 +1235,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialElementCount(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialElementCount = null;
         try {
-            JCObject objSpatialElementCount = (JCObject)classType.Invoke("SpatialElementCount", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectSpatialElementCount = classType.Invoke("SpatialElementCount", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objSpatialElementCount = (JCObject)retObjectSpatialElementCount;
             return new DbFunctionExpression(objSpatialElementCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialElementCount != null ? retObjectSpatialElementCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -958,10 +1250,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialEnvelope(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialEnvelope = null;
         try {
-            JCObject objSpatialEnvelope = (JCObject)classType.Invoke("SpatialEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectSpatialEnvelope = classType.Invoke("SpatialEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objSpatialEnvelope = (JCObject)retObjectSpatialEnvelope;
             return new DbFunctionExpression(objSpatialEnvelope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialEnvelope != null ? retObjectSpatialEnvelope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -969,10 +1265,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialEquals(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialEquals = null;
         try {
-            JCObject objSpatialEquals = (JCObject)classType.Invoke("SpatialEquals", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectSpatialEquals = classType.Invoke("SpatialEquals", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objSpatialEquals = (JCObject)retObjectSpatialEquals;
             return new DbFunctionExpression(objSpatialEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialEquals != null ? retObjectSpatialEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -980,10 +1280,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialIntersection(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialIntersection = null;
         try {
-            JCObject objSpatialIntersection = (JCObject)classType.Invoke("SpatialIntersection", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectSpatialIntersection = classType.Invoke("SpatialIntersection", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objSpatialIntersection = (JCObject)retObjectSpatialIntersection;
             return new DbFunctionExpression(objSpatialIntersection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialIntersection != null ? retObjectSpatialIntersection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -991,10 +1295,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialIntersects(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialIntersects = null;
         try {
-            JCObject objSpatialIntersects = (JCObject)classType.Invoke("SpatialIntersects", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectSpatialIntersects = classType.Invoke("SpatialIntersects", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objSpatialIntersects = (JCObject)retObjectSpatialIntersects;
             return new DbFunctionExpression(objSpatialIntersects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialIntersects != null ? retObjectSpatialIntersects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1002,10 +1310,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialLength(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialLength = null;
         try {
-            JCObject objSpatialLength = (JCObject)classType.Invoke("SpatialLength", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectSpatialLength = classType.Invoke("SpatialLength", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objSpatialLength = (JCObject)retObjectSpatialLength;
             return new DbFunctionExpression(objSpatialLength);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialLength != null ? retObjectSpatialLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1013,10 +1325,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialOverlaps(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialOverlaps = null;
         try {
-            JCObject objSpatialOverlaps = (JCObject)classType.Invoke("SpatialOverlaps", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            retObjectSpatialOverlaps = classType.Invoke("SpatialOverlaps", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            JCObject objSpatialOverlaps = (JCObject)retObjectSpatialOverlaps;
             return new DbFunctionExpression(objSpatialOverlaps);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialOverlaps != null ? retObjectSpatialOverlaps.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1024,10 +1340,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialRelate(DbExpression geometryValue1, DbExpression geometryValue2, DbExpression intersectionPatternMatrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialRelate = null;
         try {
-            JCObject objSpatialRelate = (JCObject)classType.Invoke("SpatialRelate", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance(), intersectionPatternMatrix == null ? null : intersectionPatternMatrix.getJCOInstance());
+            retObjectSpatialRelate = classType.Invoke("SpatialRelate", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance(), intersectionPatternMatrix == null ? null : intersectionPatternMatrix.getJCOInstance());
+            JCObject objSpatialRelate = (JCObject)retObjectSpatialRelate;
             return new DbFunctionExpression(objSpatialRelate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialRelate != null ? retObjectSpatialRelate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1035,10 +1355,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialSymmetricDifference(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialSymmetricDifference = null;
         try {
-            JCObject objSpatialSymmetricDifference = (JCObject)classType.Invoke("SpatialSymmetricDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectSpatialSymmetricDifference = classType.Invoke("SpatialSymmetricDifference", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objSpatialSymmetricDifference = (JCObject)retObjectSpatialSymmetricDifference;
             return new DbFunctionExpression(objSpatialSymmetricDifference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialSymmetricDifference != null ? retObjectSpatialSymmetricDifference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1046,10 +1370,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialTouches(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialTouches = null;
         try {
-            JCObject objSpatialTouches = (JCObject)classType.Invoke("SpatialTouches", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            retObjectSpatialTouches = classType.Invoke("SpatialTouches", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            JCObject objSpatialTouches = (JCObject)retObjectSpatialTouches;
             return new DbFunctionExpression(objSpatialTouches);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialTouches != null ? retObjectSpatialTouches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1057,10 +1385,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialTypeName(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialTypeName = null;
         try {
-            JCObject objSpatialTypeName = (JCObject)classType.Invoke("SpatialTypeName", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectSpatialTypeName = classType.Invoke("SpatialTypeName", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objSpatialTypeName = (JCObject)retObjectSpatialTypeName;
             return new DbFunctionExpression(objSpatialTypeName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialTypeName != null ? retObjectSpatialTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1068,10 +1400,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialUnion(DbExpression spatialValue1, DbExpression spatialValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialUnion = null;
         try {
-            JCObject objSpatialUnion = (JCObject)classType.Invoke("SpatialUnion", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            retObjectSpatialUnion = classType.Invoke("SpatialUnion", spatialValue1 == null ? null : spatialValue1.getJCOInstance(), spatialValue2 == null ? null : spatialValue2.getJCOInstance());
+            JCObject objSpatialUnion = (JCObject)retObjectSpatialUnion;
             return new DbFunctionExpression(objSpatialUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialUnion != null ? retObjectSpatialUnion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1079,10 +1415,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression SpatialWithin(DbExpression geometryValue1, DbExpression geometryValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpatialWithin = null;
         try {
-            JCObject objSpatialWithin = (JCObject)classType.Invoke("SpatialWithin", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            retObjectSpatialWithin = classType.Invoke("SpatialWithin", geometryValue1 == null ? null : geometryValue1.getJCOInstance(), geometryValue2 == null ? null : geometryValue2.getJCOInstance());
+            JCObject objSpatialWithin = (JCObject)retObjectSpatialWithin;
             return new DbFunctionExpression(objSpatialWithin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpatialWithin != null ? retObjectSpatialWithin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1090,10 +1430,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression StartPoint(DbExpression spatialValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartPoint = null;
         try {
-            JCObject objStartPoint = (JCObject)classType.Invoke("StartPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
+            retObjectStartPoint = classType.Invoke("StartPoint", spatialValue == null ? null : spatialValue.getJCOInstance());
+            JCObject objStartPoint = (JCObject)retObjectStartPoint;
             return new DbFunctionExpression(objStartPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartPoint != null ? retObjectStartPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1101,10 +1445,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression XCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXCoordinate = null;
         try {
-            JCObject objXCoordinate = (JCObject)classType.Invoke("XCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectXCoordinate = classType.Invoke("XCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objXCoordinate = (JCObject)retObjectXCoordinate;
             return new DbFunctionExpression(objXCoordinate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXCoordinate != null ? retObjectXCoordinate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1112,10 +1460,14 @@ public class SpatialEdmFunctions extends NetObject  {
 
     public static DbFunctionExpression YCoordinate(DbExpression geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYCoordinate = null;
         try {
-            JCObject objYCoordinate = (JCObject)classType.Invoke("YCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectYCoordinate = classType.Invoke("YCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objYCoordinate = (JCObject)retObjectYCoordinate;
             return new DbFunctionExpression(objYCoordinate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYCoordinate != null ? retObjectYCoordinate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

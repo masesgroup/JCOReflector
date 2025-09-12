@@ -170,9 +170,13 @@ public class ActivityDesignerThemeAttribute extends Attribute  {
     
     public java.lang.String getXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXml = null;
         try {
-            return (java.lang.String)classInstance.Get("Xml");
+            retObjectXml = classInstance.Get("Xml");
+            return (java.lang.String)retObjectXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXml != null ? retObjectXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class ActivityDesignerThemeAttribute extends Attribute  {
 
     public void setXml(java.lang.String Xml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Xml", Xml);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class ActivityDesignerThemeAttribute extends Attribute  {
 
     public NetType getDesignerThemeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerThemeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignerThemeType");
+            retObjectDesignerThemeType = classInstance.Get("DesignerThemeType");
+            JCObject val = (JCObject)retObjectDesignerThemeType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerThemeType != null ? retObjectDesignerThemeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

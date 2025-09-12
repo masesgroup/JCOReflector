@@ -270,9 +270,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
     
     public boolean getAffectsArrange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectsArrange = null;
         try {
-            return (boolean)classInstance.Get("AffectsArrange");
+            retObjectAffectsArrange = classInstance.Get("AffectsArrange");
+            return (boolean)retObjectAffectsArrange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAffectsArrange != null ? retObjectAffectsArrange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +284,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setAffectsArrange(boolean AffectsArrange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AffectsArrange", AffectsArrange);
         } catch (JCNativeException jcne) {
@@ -290,9 +294,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getAffectsMeasure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectsMeasure = null;
         try {
-            return (boolean)classInstance.Get("AffectsMeasure");
+            retObjectAffectsMeasure = classInstance.Get("AffectsMeasure");
+            return (boolean)retObjectAffectsMeasure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAffectsMeasure != null ? retObjectAffectsMeasure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +308,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setAffectsMeasure(boolean AffectsMeasure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AffectsMeasure", AffectsMeasure);
         } catch (JCNativeException jcne) {
@@ -310,9 +318,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getAffectsParentArrange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectsParentArrange = null;
         try {
-            return (boolean)classInstance.Get("AffectsParentArrange");
+            retObjectAffectsParentArrange = classInstance.Get("AffectsParentArrange");
+            return (boolean)retObjectAffectsParentArrange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAffectsParentArrange != null ? retObjectAffectsParentArrange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +332,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setAffectsParentArrange(boolean AffectsParentArrange) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AffectsParentArrange", AffectsParentArrange);
         } catch (JCNativeException jcne) {
@@ -330,9 +342,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getAffectsParentMeasure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectsParentMeasure = null;
         try {
-            return (boolean)classInstance.Get("AffectsParentMeasure");
+            retObjectAffectsParentMeasure = classInstance.Get("AffectsParentMeasure");
+            return (boolean)retObjectAffectsParentMeasure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAffectsParentMeasure != null ? retObjectAffectsParentMeasure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +356,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setAffectsParentMeasure(boolean AffectsParentMeasure) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AffectsParentMeasure", AffectsParentMeasure);
         } catch (JCNativeException jcne) {
@@ -350,9 +366,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getAffectsRender() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectsRender = null;
         try {
-            return (boolean)classInstance.Get("AffectsRender");
+            retObjectAffectsRender = classInstance.Get("AffectsRender");
+            return (boolean)retObjectAffectsRender;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAffectsRender != null ? retObjectAffectsRender.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +380,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setAffectsRender(boolean AffectsRender) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AffectsRender", AffectsRender);
         } catch (JCNativeException jcne) {
@@ -370,9 +390,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getBindsTwoWayByDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindsTwoWayByDefault = null;
         try {
-            return (boolean)classInstance.Get("BindsTwoWayByDefault");
+            retObjectBindsTwoWayByDefault = classInstance.Get("BindsTwoWayByDefault");
+            return (boolean)retObjectBindsTwoWayByDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBindsTwoWayByDefault != null ? retObjectBindsTwoWayByDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +404,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setBindsTwoWayByDefault(boolean BindsTwoWayByDefault) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindsTwoWayByDefault", BindsTwoWayByDefault);
         } catch (JCNativeException jcne) {
@@ -390,9 +414,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getInherits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInherits = null;
         try {
-            return (boolean)classInstance.Get("Inherits");
+            retObjectInherits = classInstance.Get("Inherits");
+            return (boolean)retObjectInherits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInherits != null ? retObjectInherits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +428,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setInherits(boolean Inherits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Inherits", Inherits);
         } catch (JCNativeException jcne) {
@@ -410,9 +438,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getIsDataBindingAllowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDataBindingAllowed = null;
         try {
-            return (boolean)classInstance.Get("IsDataBindingAllowed");
+            retObjectIsDataBindingAllowed = classInstance.Get("IsDataBindingAllowed");
+            return (boolean)retObjectIsDataBindingAllowed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDataBindingAllowed != null ? retObjectIsDataBindingAllowed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,9 +452,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getIsNotDataBindable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNotDataBindable = null;
         try {
-            return (boolean)classInstance.Get("IsNotDataBindable");
+            retObjectIsNotDataBindable = classInstance.Get("IsNotDataBindable");
+            return (boolean)retObjectIsNotDataBindable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNotDataBindable != null ? retObjectIsNotDataBindable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,7 +466,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setIsNotDataBindable(boolean IsNotDataBindable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsNotDataBindable", IsNotDataBindable);
         } catch (JCNativeException jcne) {
@@ -440,9 +476,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getJournal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJournal = null;
         try {
-            return (boolean)classInstance.Get("Journal");
+            retObjectJournal = classInstance.Get("Journal");
+            return (boolean)retObjectJournal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectJournal != null ? retObjectJournal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,7 +490,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setJournal(boolean Journal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Journal", Journal);
         } catch (JCNativeException jcne) {
@@ -460,9 +500,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getOverridesInheritanceBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverridesInheritanceBehavior = null;
         try {
-            return (boolean)classInstance.Get("OverridesInheritanceBehavior");
+            retObjectOverridesInheritanceBehavior = classInstance.Get("OverridesInheritanceBehavior");
+            return (boolean)retObjectOverridesInheritanceBehavior;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOverridesInheritanceBehavior != null ? retObjectOverridesInheritanceBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,7 +514,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setOverridesInheritanceBehavior(boolean OverridesInheritanceBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverridesInheritanceBehavior", OverridesInheritanceBehavior);
         } catch (JCNativeException jcne) {
@@ -480,9 +524,13 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public boolean getSubPropertiesDoNotAffectRender() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubPropertiesDoNotAffectRender = null;
         try {
-            return (boolean)classInstance.Get("SubPropertiesDoNotAffectRender");
+            retObjectSubPropertiesDoNotAffectRender = classInstance.Get("SubPropertiesDoNotAffectRender");
+            return (boolean)retObjectSubPropertiesDoNotAffectRender;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSubPropertiesDoNotAffectRender != null ? retObjectSubPropertiesDoNotAffectRender.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +538,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setSubPropertiesDoNotAffectRender(boolean SubPropertiesDoNotAffectRender) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubPropertiesDoNotAffectRender", SubPropertiesDoNotAffectRender);
         } catch (JCNativeException jcne) {
@@ -500,10 +548,14 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public UpdateSourceTrigger getDefaultUpdateSourceTrigger() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultUpdateSourceTrigger = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultUpdateSourceTrigger");
+            retObjectDefaultUpdateSourceTrigger = classInstance.Get("DefaultUpdateSourceTrigger");
+            JCObject val = (JCObject)retObjectDefaultUpdateSourceTrigger;
             return new UpdateSourceTrigger(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultUpdateSourceTrigger != null ? retObjectDefaultUpdateSourceTrigger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +563,7 @@ public class FrameworkPropertyMetadata extends UIPropertyMetadata  {
 
     public void setDefaultUpdateSourceTrigger(UpdateSourceTrigger DefaultUpdateSourceTrigger) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultUpdateSourceTrigger", DefaultUpdateSourceTrigger == null ? null : DefaultUpdateSourceTrigger.getJCOInstance());
         } catch (JCNativeException jcne) {

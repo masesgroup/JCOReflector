@@ -185,10 +185,14 @@ public class PrintQueueCollection extends PrintSystemObjects  {
     
     public IEnumerator GetNonGenericEnumerator() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNonGenericEnumerator = null;
         try {
-            JCObject objGetNonGenericEnumerator = (JCObject)classInstance.Invoke("GetNonGenericEnumerator");
+            retObjectGetNonGenericEnumerator = classInstance.Invoke("GetNonGenericEnumerator");
+            JCObject objGetNonGenericEnumerator = (JCObject)retObjectGetNonGenericEnumerator;
             return new IEnumeratorImplementation(objGetNonGenericEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNonGenericEnumerator != null ? retObjectGetNonGenericEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class PrintQueueCollection extends PrintSystemObjects  {
 
     public void Add(PrintQueue printObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", printObject == null ? null : printObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +214,14 @@ public class PrintQueueCollection extends PrintSystemObjects  {
     
     public static NetObject getSyncRoot() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classType.Get("SyncRoot");
+            retObjectSyncRoot = classType.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

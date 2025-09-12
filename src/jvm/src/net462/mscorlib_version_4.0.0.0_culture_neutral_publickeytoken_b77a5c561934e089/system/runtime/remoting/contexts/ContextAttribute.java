@@ -169,9 +169,13 @@ public class ContextAttribute extends Attribute  {
     
     public boolean IsContextOK(Context ctx, IConstructionCallMessage ctorMsg) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContextOK = null;
         try {
-            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), ctorMsg == null ? null : ctorMsg.getJCOInstance());
+            retObjectIsContextOK = classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), ctorMsg == null ? null : ctorMsg.getJCOInstance());
+            return (boolean)retObjectIsContextOK;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContextOK != null ? retObjectIsContextOK.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class ContextAttribute extends Attribute  {
 
     public boolean IsNewContextOK(Context newCtx) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNewContextOK = null;
         try {
-            return (boolean)classInstance.Invoke("IsNewContextOK", newCtx == null ? null : newCtx.getJCOInstance());
+            retObjectIsNewContextOK = classInstance.Invoke("IsNewContextOK", newCtx == null ? null : newCtx.getJCOInstance());
+            return (boolean)retObjectIsNewContextOK;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNewContextOK != null ? retObjectIsNewContextOK.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class ContextAttribute extends Attribute  {
 
     public void Freeze(Context newContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Freeze", newContext == null ? null : newContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +207,7 @@ public class ContextAttribute extends Attribute  {
 
     public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPropertiesForNewContext", ctorMsg == null ? null : ctorMsg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,9 +221,13 @@ public class ContextAttribute extends Attribute  {
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -186,10 +186,12 @@ public class AppDomainSetup extends NetObject  {
     
     public byte[] GetConfigurationBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConfigurationBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetConfigurationBytes");
+            retObjectGetConfigurationBytes = classInstance.Invoke("GetConfigurationBytes");
+            JCObject resultingObjects = (JCObject)retObjectGetConfigurationBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -198,6 +200,8 @@ public class AppDomainSetup extends NetObject  {
 				resultingArray[indexGetConfigurationBytes] = (byte)resultingArrayList.get(indexGetConfigurationBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetConfigurationBytes != null ? retObjectGetConfigurationBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +209,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void SetConfigurationBytes(byte[] value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetConfigurationBytes", (java.lang.Object)value);
         } catch (JCNativeException jcne) {
@@ -215,7 +219,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void SetConfigurationBytes(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetConfigurationBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -229,9 +233,13 @@ public class AppDomainSetup extends NetObject  {
     
     public boolean getDisallowApplicationBaseProbing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisallowApplicationBaseProbing = null;
         try {
-            return (boolean)classInstance.Get("DisallowApplicationBaseProbing");
+            retObjectDisallowApplicationBaseProbing = classInstance.Get("DisallowApplicationBaseProbing");
+            return (boolean)retObjectDisallowApplicationBaseProbing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisallowApplicationBaseProbing != null ? retObjectDisallowApplicationBaseProbing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +247,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setDisallowApplicationBaseProbing(boolean DisallowApplicationBaseProbing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisallowApplicationBaseProbing", DisallowApplicationBaseProbing);
         } catch (JCNativeException jcne) {
@@ -249,9 +257,13 @@ public class AppDomainSetup extends NetObject  {
 
     public boolean getDisallowBindingRedirects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisallowBindingRedirects = null;
         try {
-            return (boolean)classInstance.Get("DisallowBindingRedirects");
+            retObjectDisallowBindingRedirects = classInstance.Get("DisallowBindingRedirects");
+            return (boolean)retObjectDisallowBindingRedirects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisallowBindingRedirects != null ? retObjectDisallowBindingRedirects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +271,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setDisallowBindingRedirects(boolean DisallowBindingRedirects) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisallowBindingRedirects", DisallowBindingRedirects);
         } catch (JCNativeException jcne) {
@@ -269,9 +281,13 @@ public class AppDomainSetup extends NetObject  {
 
     public boolean getDisallowCodeDownload() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisallowCodeDownload = null;
         try {
-            return (boolean)classInstance.Get("DisallowCodeDownload");
+            retObjectDisallowCodeDownload = classInstance.Get("DisallowCodeDownload");
+            return (boolean)retObjectDisallowCodeDownload;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisallowCodeDownload != null ? retObjectDisallowCodeDownload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +295,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setDisallowCodeDownload(boolean DisallowCodeDownload) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisallowCodeDownload", DisallowCodeDownload);
         } catch (JCNativeException jcne) {
@@ -289,9 +305,13 @@ public class AppDomainSetup extends NetObject  {
 
     public boolean getDisallowPublisherPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisallowPublisherPolicy = null;
         try {
-            return (boolean)classInstance.Get("DisallowPublisherPolicy");
+            retObjectDisallowPublisherPolicy = classInstance.Get("DisallowPublisherPolicy");
+            return (boolean)retObjectDisallowPublisherPolicy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisallowPublisherPolicy != null ? retObjectDisallowPublisherPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +319,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setDisallowPublisherPolicy(boolean DisallowPublisherPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisallowPublisherPolicy", DisallowPublisherPolicy);
         } catch (JCNativeException jcne) {
@@ -309,9 +329,13 @@ public class AppDomainSetup extends NetObject  {
 
     public boolean getSandboxInterop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSandboxInterop = null;
         try {
-            return (boolean)classInstance.Get("SandboxInterop");
+            retObjectSandboxInterop = classInstance.Get("SandboxInterop");
+            return (boolean)retObjectSandboxInterop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSandboxInterop != null ? retObjectSandboxInterop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +343,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setSandboxInterop(boolean SandboxInterop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SandboxInterop", SandboxInterop);
         } catch (JCNativeException jcne) {
@@ -329,9 +353,13 @@ public class AppDomainSetup extends NetObject  {
 
     public AppDomainInitializer getAppDomainInitializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppDomainInitializer = null;
         try {
-            return (AppDomainInitializer)classInstance.Get("AppDomainInitializer");
+            retObjectAppDomainInitializer = classInstance.Get("AppDomainInitializer");
+            return (AppDomainInitializer)retObjectAppDomainInitializer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into AppDomainInitializer", retObjectAppDomainInitializer != null ? retObjectAppDomainInitializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +367,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setAppDomainInitializer(AppDomainInitializer AppDomainInitializer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppDomainInitializer", AppDomainInitializer);
         } catch (JCNativeException jcne) {
@@ -349,10 +377,14 @@ public class AppDomainSetup extends NetObject  {
 
     public LoaderOptimization getLoaderOptimization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoaderOptimization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoaderOptimization");
+            retObjectLoaderOptimization = classInstance.Get("LoaderOptimization");
+            JCObject val = (JCObject)retObjectLoaderOptimization;
             return new LoaderOptimization(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoaderOptimization != null ? retObjectLoaderOptimization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +392,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setLoaderOptimization(LoaderOptimization LoaderOptimization) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoaderOptimization", LoaderOptimization == null ? null : LoaderOptimization.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,10 +402,14 @@ public class AppDomainSetup extends NetObject  {
 
     public ActivationArguments getActivationArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivationArguments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivationArguments");
+            retObjectActivationArguments = classInstance.Get("ActivationArguments");
+            JCObject val = (JCObject)retObjectActivationArguments;
             return new ActivationArguments(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivationArguments != null ? retObjectActivationArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +417,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setActivationArguments(ActivationArguments ActivationArguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivationArguments", ActivationArguments == null ? null : ActivationArguments.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,10 +427,14 @@ public class AppDomainSetup extends NetObject  {
 
     public ApplicationTrust getApplicationTrust() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationTrust = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationTrust");
+            retObjectApplicationTrust = classInstance.Get("ApplicationTrust");
+            JCObject val = (JCObject)retObjectApplicationTrust;
             return new ApplicationTrust(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationTrust != null ? retObjectApplicationTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +442,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setApplicationTrust(ApplicationTrust ApplicationTrust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationTrust", ApplicationTrust == null ? null : ApplicationTrust.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,9 +452,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getAppDomainManagerAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppDomainManagerAssembly = null;
         try {
-            return (java.lang.String)classInstance.Get("AppDomainManagerAssembly");
+            retObjectAppDomainManagerAssembly = classInstance.Get("AppDomainManagerAssembly");
+            return (java.lang.String)retObjectAppDomainManagerAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppDomainManagerAssembly != null ? retObjectAppDomainManagerAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +466,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setAppDomainManagerAssembly(java.lang.String AppDomainManagerAssembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppDomainManagerAssembly", AppDomainManagerAssembly);
         } catch (JCNativeException jcne) {
@@ -432,9 +476,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getAppDomainManagerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppDomainManagerType = null;
         try {
-            return (java.lang.String)classInstance.Get("AppDomainManagerType");
+            retObjectAppDomainManagerType = classInstance.Get("AppDomainManagerType");
+            return (java.lang.String)retObjectAppDomainManagerType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppDomainManagerType != null ? retObjectAppDomainManagerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +490,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setAppDomainManagerType(java.lang.String AppDomainManagerType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppDomainManagerType", AppDomainManagerType);
         } catch (JCNativeException jcne) {
@@ -452,9 +500,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getApplicationBase() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationBase = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationBase");
+            retObjectApplicationBase = classInstance.Get("ApplicationBase");
+            return (java.lang.String)retObjectApplicationBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationBase != null ? retObjectApplicationBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +514,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setApplicationBase(java.lang.String ApplicationBase) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.PathTooLongException, system.MemberAccessException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationBase", ApplicationBase);
         } catch (JCNativeException jcne) {
@@ -472,9 +524,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +538,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -492,9 +548,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getCachePath() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachePath = null;
         try {
-            return (java.lang.String)classInstance.Get("CachePath");
+            retObjectCachePath = classInstance.Get("CachePath");
+            return (java.lang.String)retObjectCachePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCachePath != null ? retObjectCachePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,7 +562,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setCachePath(java.lang.String CachePath) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.PathTooLongException, system.MemberAccessException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CachePath", CachePath);
         } catch (JCNativeException jcne) {
@@ -512,9 +572,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getConfigurationFile() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigurationFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigurationFile");
+            retObjectConfigurationFile = classInstance.Get("ConfigurationFile");
+            return (java.lang.String)retObjectConfigurationFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigurationFile != null ? retObjectConfigurationFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,7 +586,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setConfigurationFile(java.lang.String ConfigurationFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigurationFile", ConfigurationFile);
         } catch (JCNativeException jcne) {
@@ -532,9 +596,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getDynamicBase() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicBase = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicBase");
+            retObjectDynamicBase = classInstance.Get("DynamicBase");
+            return (java.lang.String)retObjectDynamicBase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicBase != null ? retObjectDynamicBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,7 +610,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setDynamicBase(java.lang.String DynamicBase) throws Throwable, system.MemberAccessException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.PathTooLongException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DynamicBase", DynamicBase);
         } catch (JCNativeException jcne) {
@@ -552,9 +620,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getLicenseFile() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLicenseFile = null;
         try {
-            return (java.lang.String)classInstance.Get("LicenseFile");
+            retObjectLicenseFile = classInstance.Get("LicenseFile");
+            return (java.lang.String)retObjectLicenseFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLicenseFile != null ? retObjectLicenseFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,7 +634,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setLicenseFile(java.lang.String LicenseFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LicenseFile", LicenseFile);
         } catch (JCNativeException jcne) {
@@ -572,9 +644,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getPrivateBinPath() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateBinPath = null;
         try {
-            return (java.lang.String)classInstance.Get("PrivateBinPath");
+            retObjectPrivateBinPath = classInstance.Get("PrivateBinPath");
+            return (java.lang.String)retObjectPrivateBinPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivateBinPath != null ? retObjectPrivateBinPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,7 +658,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setPrivateBinPath(java.lang.String PrivateBinPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivateBinPath", PrivateBinPath);
         } catch (JCNativeException jcne) {
@@ -592,9 +668,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getPrivateBinPathProbe() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateBinPathProbe = null;
         try {
-            return (java.lang.String)classInstance.Get("PrivateBinPathProbe");
+            retObjectPrivateBinPathProbe = classInstance.Get("PrivateBinPathProbe");
+            return (java.lang.String)retObjectPrivateBinPathProbe;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivateBinPathProbe != null ? retObjectPrivateBinPathProbe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,7 +682,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setPrivateBinPathProbe(java.lang.String PrivateBinPathProbe) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrivateBinPathProbe", PrivateBinPathProbe);
         } catch (JCNativeException jcne) {
@@ -612,9 +692,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getShadowCopyDirectories() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShadowCopyDirectories = null;
         try {
-            return (java.lang.String)classInstance.Get("ShadowCopyDirectories");
+            retObjectShadowCopyDirectories = classInstance.Get("ShadowCopyDirectories");
+            return (java.lang.String)retObjectShadowCopyDirectories;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShadowCopyDirectories != null ? retObjectShadowCopyDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,7 +706,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setShadowCopyDirectories(java.lang.String ShadowCopyDirectories) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShadowCopyDirectories", ShadowCopyDirectories);
         } catch (JCNativeException jcne) {
@@ -632,9 +716,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getShadowCopyFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShadowCopyFiles = null;
         try {
-            return (java.lang.String)classInstance.Get("ShadowCopyFiles");
+            retObjectShadowCopyFiles = classInstance.Get("ShadowCopyFiles");
+            return (java.lang.String)retObjectShadowCopyFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShadowCopyFiles != null ? retObjectShadowCopyFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,7 +730,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setShadowCopyFiles(java.lang.String ShadowCopyFiles) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShadowCopyFiles", ShadowCopyFiles);
         } catch (JCNativeException jcne) {
@@ -652,9 +740,13 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String getTargetFrameworkName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkName");
+            retObjectTargetFrameworkName = classInstance.Get("TargetFrameworkName");
+            return (java.lang.String)retObjectTargetFrameworkName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkName != null ? retObjectTargetFrameworkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,7 +754,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setTargetFrameworkName(java.lang.String TargetFrameworkName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkName", TargetFrameworkName);
         } catch (JCNativeException jcne) {
@@ -672,10 +764,12 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String[] getAppDomainInitializerArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppDomainInitializerArguments = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AppDomainInitializerArguments");
+            retObjectAppDomainInitializerArguments = classInstance.Get("AppDomainInitializerArguments");
+            JCObject resultingObjects = (JCObject)retObjectAppDomainInitializerArguments;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -684,6 +778,8 @@ public class AppDomainSetup extends NetObject  {
 				resultingArray[indexAppDomainInitializerArguments] = (java.lang.String)resultingArrayList.get(indexAppDomainInitializerArguments);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAppDomainInitializerArguments != null ? retObjectAppDomainInitializerArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -691,7 +787,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setAppDomainInitializerArguments(java.lang.String[] AppDomainInitializerArguments) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppDomainInitializerArguments", AppDomainInitializerArguments);
         } catch (JCNativeException jcne) {
@@ -701,10 +797,12 @@ public class AppDomainSetup extends NetObject  {
 
     public java.lang.String[] getPartialTrustVisibleAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartialTrustVisibleAssemblies = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PartialTrustVisibleAssemblies");
+            retObjectPartialTrustVisibleAssemblies = classInstance.Get("PartialTrustVisibleAssemblies");
+            JCObject resultingObjects = (JCObject)retObjectPartialTrustVisibleAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -713,6 +811,8 @@ public class AppDomainSetup extends NetObject  {
 				resultingArray[indexPartialTrustVisibleAssemblies] = (java.lang.String)resultingArrayList.get(indexPartialTrustVisibleAssemblies);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectPartialTrustVisibleAssemblies != null ? retObjectPartialTrustVisibleAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -720,7 +820,7 @@ public class AppDomainSetup extends NetObject  {
 
     public void setPartialTrustVisibleAssemblies(java.lang.String[] PartialTrustVisibleAssemblies) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartialTrustVisibleAssemblies", PartialTrustVisibleAssemblies);
         } catch (JCNativeException jcne) {

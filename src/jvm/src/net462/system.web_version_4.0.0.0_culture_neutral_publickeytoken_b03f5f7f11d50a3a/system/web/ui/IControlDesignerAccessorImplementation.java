@@ -145,10 +145,14 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
     
     public IDictionary GetDesignModeState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignModeState = null;
         try {
-            JCObject objGetDesignModeState = (JCObject)classInstance.Invoke("GetDesignModeState");
+            retObjectGetDesignModeState = classInstance.Invoke("GetDesignModeState");
+            JCObject objGetDesignModeState = (JCObject)retObjectGetDesignModeState;
             return new IDictionaryImplementation(objGetDesignModeState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignModeState != null ? retObjectGetDesignModeState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
 
     public void SetDesignModeState(IDictionary data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDesignModeState", data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -166,7 +170,7 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
 
     public void SetOwnerControl(Control owner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOwnerControl", owner == null ? null : owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,10 +184,14 @@ public class IControlDesignerAccessorImplementation extends NetObject implements
     
     public IDictionary getUserData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            JCObject val = (JCObject)retObjectUserData;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

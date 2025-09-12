@@ -144,10 +144,14 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
     
     public IComponent GetComponent(NetObject reference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComponent = null;
         try {
-            JCObject objGetComponent = (JCObject)classInstance.Invoke("GetComponent", reference == null ? null : reference.getJCOInstance());
+            retObjectGetComponent = classInstance.Invoke("GetComponent", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetComponent = (JCObject)retObjectGetComponent;
             return new IComponentImplementation(objGetComponent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetComponent != null ? retObjectGetComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,10 +159,14 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
 
     public NetObject GetReference(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReference = null;
         try {
-            JCObject objGetReference = (JCObject)classInstance.Invoke("GetReference", name);
+            retObjectGetReference = classInstance.Invoke("GetReference", name);
+            JCObject objGetReference = (JCObject)retObjectGetReference;
             return new NetObject(objGetReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReference != null ? retObjectGetReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,16 +174,20 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
 
     public NetObject[] GetReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReferences = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetReferences");
+            retObjectGetReferences = classInstance.Invoke("GetReferences");
+            JCObject resultingObjects = (JCObject)retObjectGetReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReferences != null ? retObjectGetReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,16 +195,20 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
 
     public NetObject[] GetReferences(NetType baseType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReferences = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetReferences", baseType == null ? null : baseType.getJCOInstance());
+            retObjectGetReferences = classInstance.Invoke("GetReferences", baseType == null ? null : baseType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReferences != null ? retObjectGetReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
 
     public java.lang.String GetName(NetObject reference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", reference == null ? null : reference.getJCOInstance());
+            retObjectGetName = classInstance.Invoke("GetName", reference == null ? null : reference.getJCOInstance());
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -197,9 +197,13 @@ public class SynchronizationAttribute extends ContextAttribute  {
     
     public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContextOK = null;
         try {
-            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            retObjectIsContextOK = classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectIsContextOK;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContextOK != null ? retObjectIsContextOK.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +211,14 @@ public class SynchronizationAttribute extends ContextAttribute  {
 
     public IMessageSink GetClientContextSink(IMessageSink nextSink) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientContextSink = null;
         try {
-            JCObject objGetClientContextSink = (JCObject)classInstance.Invoke("GetClientContextSink", nextSink == null ? null : nextSink.getJCOInstance());
+            retObjectGetClientContextSink = classInstance.Invoke("GetClientContextSink", nextSink == null ? null : nextSink.getJCOInstance());
+            JCObject objGetClientContextSink = (JCObject)retObjectGetClientContextSink;
             return new IMessageSinkImplementation(objGetClientContextSink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClientContextSink != null ? retObjectGetClientContextSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +226,14 @@ public class SynchronizationAttribute extends ContextAttribute  {
 
     public IMessageSink GetServerContextSink(IMessageSink nextSink) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServerContextSink = null;
         try {
-            JCObject objGetServerContextSink = (JCObject)classInstance.Invoke("GetServerContextSink", nextSink == null ? null : nextSink.getJCOInstance());
+            retObjectGetServerContextSink = classInstance.Invoke("GetServerContextSink", nextSink == null ? null : nextSink.getJCOInstance());
+            JCObject objGetServerContextSink = (JCObject)retObjectGetServerContextSink;
             return new IMessageSinkImplementation(objGetServerContextSink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetServerContextSink != null ? retObjectGetServerContextSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class SynchronizationAttribute extends ContextAttribute  {
 
     public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPropertiesForNewContext", ctorMsg == null ? null : ctorMsg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,9 +255,13 @@ public class SynchronizationAttribute extends ContextAttribute  {
     
     public boolean getIsReEntrant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReEntrant = null;
         try {
-            return (boolean)classInstance.Get("IsReEntrant");
+            retObjectIsReEntrant = classInstance.Get("IsReEntrant");
+            return (boolean)retObjectIsReEntrant;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReEntrant != null ? retObjectIsReEntrant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +269,13 @@ public class SynchronizationAttribute extends ContextAttribute  {
 
     public boolean getLocked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocked = null;
         try {
-            return (boolean)classInstance.Get("Locked");
+            retObjectLocked = classInstance.Get("Locked");
+            return (boolean)retObjectLocked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLocked != null ? retObjectLocked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class SynchronizationAttribute extends ContextAttribute  {
 
     public void setLocked(boolean Locked) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Locked", Locked);
         } catch (JCNativeException jcne) {

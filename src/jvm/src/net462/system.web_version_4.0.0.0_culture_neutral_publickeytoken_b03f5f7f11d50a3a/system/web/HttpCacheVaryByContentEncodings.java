@@ -161,10 +161,12 @@ public class HttpCacheVaryByContentEncodings extends NetObject  {
     
     public java.lang.String[] GetContentEncodings() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContentEncodings = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetContentEncodings");
+            retObjectGetContentEncodings = classInstance.Invoke("GetContentEncodings");
+            JCObject resultingObjects = (JCObject)retObjectGetContentEncodings;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -173,6 +175,8 @@ public class HttpCacheVaryByContentEncodings extends NetObject  {
 				resultingArray[indexGetContentEncodings] = (java.lang.String)resultingArrayList.get(indexGetContentEncodings);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetContentEncodings != null ? retObjectGetContentEncodings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class HttpCacheVaryByContentEncodings extends NetObject  {
 
     public void SetContentEncodings(java.lang.String[] contentEncodings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetContentEncodings", (java.lang.Object)contentEncodings);
         } catch (JCNativeException jcne) {
@@ -190,7 +194,7 @@ public class HttpCacheVaryByContentEncodings extends NetObject  {
 
     public void SetContentEncodings(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetContentEncodings", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {

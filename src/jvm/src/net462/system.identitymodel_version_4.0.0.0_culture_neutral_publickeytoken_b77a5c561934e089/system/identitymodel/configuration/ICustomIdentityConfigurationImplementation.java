@@ -143,7 +143,7 @@ public class ICustomIdentityConfigurationImplementation extends NetObject implem
     
     public void LoadCustomConfiguration(XmlNodeList nodeList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadCustomConfiguration", nodeList == null ? null : nodeList.getJCOInstance());
         } catch (JCNativeException jcne) {

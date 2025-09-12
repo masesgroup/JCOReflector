@@ -144,10 +144,14 @@ public class IContributeDynamicSinkImplementation extends NetObject implements I
     
     public IDynamicMessageSink GetDynamicSink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDynamicSink = null;
         try {
-            JCObject objGetDynamicSink = (JCObject)classInstance.Invoke("GetDynamicSink");
+            retObjectGetDynamicSink = classInstance.Invoke("GetDynamicSink");
+            JCObject objGetDynamicSink = (JCObject)retObjectGetDynamicSink;
             return new IDynamicMessageSinkImplementation(objGetDynamicSink);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDynamicSink != null ? retObjectGetDynamicSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -161,9 +161,13 @@ public class KeyboardDevice extends InputDevice  {
     
     public boolean IsKeyDown(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyDown = null;
         try {
-            return (boolean)classInstance.Invoke("IsKeyDown", key == null ? null : key.getJCOInstance());
+            retObjectIsKeyDown = classInstance.Invoke("IsKeyDown", key == null ? null : key.getJCOInstance());
+            return (boolean)retObjectIsKeyDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsKeyDown != null ? retObjectIsKeyDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class KeyboardDevice extends InputDevice  {
 
     public boolean IsKeyToggled(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyToggled = null;
         try {
-            return (boolean)classInstance.Invoke("IsKeyToggled", key == null ? null : key.getJCOInstance());
+            retObjectIsKeyToggled = classInstance.Invoke("IsKeyToggled", key == null ? null : key.getJCOInstance());
+            return (boolean)retObjectIsKeyToggled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsKeyToggled != null ? retObjectIsKeyToggled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class KeyboardDevice extends InputDevice  {
 
     public boolean IsKeyUp(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyUp = null;
         try {
-            return (boolean)classInstance.Invoke("IsKeyUp", key == null ? null : key.getJCOInstance());
+            retObjectIsKeyUp = classInstance.Invoke("IsKeyUp", key == null ? null : key.getJCOInstance());
+            return (boolean)retObjectIsKeyUp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsKeyUp != null ? retObjectIsKeyUp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class KeyboardDevice extends InputDevice  {
 
     public IInputElement Focus(IInputElement element) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocus = null;
         try {
-            JCObject objFocus = (JCObject)classInstance.Invoke("Focus", element == null ? null : element.getJCOInstance());
+            retObjectFocus = classInstance.Invoke("Focus", element == null ? null : element.getJCOInstance());
+            JCObject objFocus = (JCObject)retObjectFocus;
             return new IInputElementImplementation(objFocus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocus != null ? retObjectFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class KeyboardDevice extends InputDevice  {
 
     public KeyStates GetKeyStates(Key key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKeyStates = null;
         try {
-            JCObject objGetKeyStates = (JCObject)classInstance.Invoke("GetKeyStates", key == null ? null : key.getJCOInstance());
+            retObjectGetKeyStates = classInstance.Invoke("GetKeyStates", key == null ? null : key.getJCOInstance());
+            JCObject objGetKeyStates = (JCObject)retObjectGetKeyStates;
             return new KeyStates(objGetKeyStates);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetKeyStates != null ? retObjectGetKeyStates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +233,7 @@ public class KeyboardDevice extends InputDevice  {
 
     public void ClearFocus() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearFocus");
         } catch (JCNativeException jcne) {
@@ -227,10 +247,14 @@ public class KeyboardDevice extends InputDevice  {
     
     public IInputElement getFocusedElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusedElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FocusedElement");
+            retObjectFocusedElement = classInstance.Get("FocusedElement");
+            JCObject val = (JCObject)retObjectFocusedElement;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusedElement != null ? retObjectFocusedElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +262,14 @@ public class KeyboardDevice extends InputDevice  {
 
     public ModifierKeys getModifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifiers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Modifiers");
+            retObjectModifiers = classInstance.Get("Modifiers");
+            JCObject val = (JCObject)retObjectModifiers;
             return new ModifierKeys(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifiers != null ? retObjectModifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +277,14 @@ public class KeyboardDevice extends InputDevice  {
 
     public RestoreFocusMode getDefaultRestoreFocusMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultRestoreFocusMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultRestoreFocusMode");
+            retObjectDefaultRestoreFocusMode = classInstance.Get("DefaultRestoreFocusMode");
+            JCObject val = (JCObject)retObjectDefaultRestoreFocusMode;
             return new RestoreFocusMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultRestoreFocusMode != null ? retObjectDefaultRestoreFocusMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +292,7 @@ public class KeyboardDevice extends InputDevice  {
 
     public void setDefaultRestoreFocusMode(RestoreFocusMode DefaultRestoreFocusMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultRestoreFocusMode", DefaultRestoreFocusMode == null ? null : DefaultRestoreFocusMode.getJCOInstance());
         } catch (JCNativeException jcne) {

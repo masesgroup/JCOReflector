@@ -157,9 +157,13 @@ public class HttpClientCertificate extends NameValueCollection  {
     
     public java.lang.String Get(java.lang.String field) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.InvalidTimeZoneException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Get", field);
+            retObjectGet = classInstance.Invoke("Get", field);
+            return (java.lang.String)retObjectGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class HttpClientCertificate extends NameValueCollection  {
     
     public boolean getIsPresent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPresent = null;
         try {
-            return (boolean)classInstance.Get("IsPresent");
+            retObjectIsPresent = classInstance.Get("IsPresent");
+            return (boolean)retObjectIsPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPresent != null ? retObjectIsPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Get("IsValid");
+            retObjectIsValid = classInstance.Get("IsValid");
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,12 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public byte[] getBinaryIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinaryIssuer = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("BinaryIssuer");
+            retObjectBinaryIssuer = classInstance.Get("BinaryIssuer");
+            JCObject resultingObjects = (JCObject)retObjectBinaryIssuer;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -203,6 +217,8 @@ public class HttpClientCertificate extends NameValueCollection  {
 				resultingArray[indexBinaryIssuer] = (byte)resultingArrayList.get(indexBinaryIssuer);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBinaryIssuer != null ? retObjectBinaryIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,12 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public byte[] getCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificate = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Certificate");
+            retObjectCertificate = classInstance.Get("Certificate");
+            JCObject resultingObjects = (JCObject)retObjectCertificate;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -222,6 +240,8 @@ public class HttpClientCertificate extends NameValueCollection  {
 				resultingArray[indexCertificate] = (byte)resultingArrayList.get(indexCertificate);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCertificate != null ? retObjectCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +249,12 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public byte[] getPublicKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PublicKey");
+            retObjectPublicKey = classInstance.Get("PublicKey");
+            JCObject resultingObjects = (JCObject)retObjectPublicKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -241,6 +263,8 @@ public class HttpClientCertificate extends NameValueCollection  {
 				resultingArray[indexPublicKey] = (byte)resultingArrayList.get(indexPublicKey);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectPublicKey != null ? retObjectPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +272,19 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public int getCertEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertEncoding = null;
         try {
-            return (int)classInstance.Get("CertEncoding");
+            retObjectCertEncoding = classInstance.Get("CertEncoding");
+            return (int)retObjectCertEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCertEncodingNumber = (java.lang.Number)retObjectCertEncoding;
+                return retObjectCertEncodingNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCertEncoding != null ? retObjectCertEncoding.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +292,19 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public int getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            return (int)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            return (int)retObjectFlags;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFlagsNumber = (java.lang.Number)retObjectFlags;
+                return retObjectFlagsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +312,19 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public int getKeySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySize = null;
         try {
-            return (int)classInstance.Get("KeySize");
+            retObjectKeySize = classInstance.Get("KeySize");
+            return (int)retObjectKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectKeySizeNumber = (java.lang.Number)retObjectKeySize;
+                return retObjectKeySizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectKeySize != null ? retObjectKeySize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +332,19 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public int getSecretKeySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecretKeySize = null;
         try {
-            return (int)classInstance.Get("SecretKeySize");
+            retObjectSecretKeySize = classInstance.Get("SecretKeySize");
+            return (int)retObjectSecretKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSecretKeySizeNumber = (java.lang.Number)retObjectSecretKeySize;
+                return retObjectSecretKeySizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSecretKeySize != null ? retObjectSecretKeySize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +352,14 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public DateTime getValidFrom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidFrom = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidFrom");
+            retObjectValidFrom = classInstance.Get("ValidFrom");
+            JCObject val = (JCObject)retObjectValidFrom;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidFrom != null ? retObjectValidFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +367,14 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public DateTime getValidUntil() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidUntil = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidUntil");
+            retObjectValidUntil = classInstance.Get("ValidUntil");
+            JCObject val = (JCObject)retObjectValidUntil;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidUntil != null ? retObjectValidUntil.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +382,13 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public java.lang.String getCookie() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookie = null;
         try {
-            return (java.lang.String)classInstance.Get("Cookie");
+            retObjectCookie = classInstance.Get("Cookie");
+            return (java.lang.String)retObjectCookie;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCookie != null ? retObjectCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +396,13 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public java.lang.String getIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuer = null;
         try {
-            return (java.lang.String)classInstance.Get("Issuer");
+            retObjectIssuer = classInstance.Get("Issuer");
+            return (java.lang.String)retObjectIssuer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuer != null ? retObjectIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +410,13 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public java.lang.String getSerialNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialNumber = null;
         try {
-            return (java.lang.String)classInstance.Get("SerialNumber");
+            retObjectSerialNumber = classInstance.Get("SerialNumber");
+            return (java.lang.String)retObjectSerialNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSerialNumber != null ? retObjectSerialNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +424,13 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public java.lang.String getServerIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerIssuer = null;
         try {
-            return (java.lang.String)classInstance.Get("ServerIssuer");
+            retObjectServerIssuer = classInstance.Get("ServerIssuer");
+            return (java.lang.String)retObjectServerIssuer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServerIssuer != null ? retObjectServerIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +438,13 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public java.lang.String getServerSubject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerSubject = null;
         try {
-            return (java.lang.String)classInstance.Get("ServerSubject");
+            retObjectServerSubject = classInstance.Get("ServerSubject");
+            return (java.lang.String)retObjectServerSubject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServerSubject != null ? retObjectServerSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,9 +452,13 @@ public class HttpClientCertificate extends NameValueCollection  {
 
     public java.lang.String getSubject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubject = null;
         try {
-            return (java.lang.String)classInstance.Get("Subject");
+            retObjectSubject = classInstance.Get("Subject");
+            return (java.lang.String)retObjectSubject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubject != null ? retObjectSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

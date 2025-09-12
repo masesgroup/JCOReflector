@@ -220,9 +220,13 @@ public class DebuggerVisualizerAttribute extends Attribute  {
     
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +234,7 @@ public class DebuggerVisualizerAttribute extends Attribute  {
 
     public void setDescription(java.lang.String Description) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -240,9 +244,13 @@ public class DebuggerVisualizerAttribute extends Attribute  {
 
     public java.lang.String getTargetTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetTypeName");
+            retObjectTargetTypeName = classInstance.Get("TargetTypeName");
+            return (java.lang.String)retObjectTargetTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetTypeName != null ? retObjectTargetTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +258,7 @@ public class DebuggerVisualizerAttribute extends Attribute  {
 
     public void setTargetTypeName(java.lang.String TargetTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetTypeName", TargetTypeName);
         } catch (JCNativeException jcne) {
@@ -260,9 +268,13 @@ public class DebuggerVisualizerAttribute extends Attribute  {
 
     public java.lang.String getVisualizerObjectSourceTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisualizerObjectSourceTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("VisualizerObjectSourceTypeName");
+            retObjectVisualizerObjectSourceTypeName = classInstance.Get("VisualizerObjectSourceTypeName");
+            return (java.lang.String)retObjectVisualizerObjectSourceTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVisualizerObjectSourceTypeName != null ? retObjectVisualizerObjectSourceTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +282,13 @@ public class DebuggerVisualizerAttribute extends Attribute  {
 
     public java.lang.String getVisualizerTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisualizerTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("VisualizerTypeName");
+            retObjectVisualizerTypeName = classInstance.Get("VisualizerTypeName");
+            return (java.lang.String)retObjectVisualizerTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVisualizerTypeName != null ? retObjectVisualizerTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +296,14 @@ public class DebuggerVisualizerAttribute extends Attribute  {
 
     public NetType getTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +311,7 @@ public class DebuggerVisualizerAttribute extends Attribute  {
 
     public void setTarget(NetType Target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
         } catch (JCNativeException jcne) {

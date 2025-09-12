@@ -168,10 +168,14 @@ public class XmlSchemaRedefine extends XmlSchemaExternal  {
     
     public XmlSchemaObjectCollection getItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new XmlSchemaObjectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class XmlSchemaRedefine extends XmlSchemaExternal  {
 
     public XmlSchemaObjectTable getAttributeGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AttributeGroups");
+            retObjectAttributeGroups = classInstance.Get("AttributeGroups");
+            JCObject val = (JCObject)retObjectAttributeGroups;
             return new XmlSchemaObjectTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeGroups != null ? retObjectAttributeGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class XmlSchemaRedefine extends XmlSchemaExternal  {
 
     public XmlSchemaObjectTable getGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroups = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Groups");
+            retObjectGroups = classInstance.Get("Groups");
+            JCObject val = (JCObject)retObjectGroups;
             return new XmlSchemaObjectTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroups != null ? retObjectGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class XmlSchemaRedefine extends XmlSchemaExternal  {
 
     public XmlSchemaObjectTable getSchemaTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaTypes");
+            retObjectSchemaTypes = classInstance.Get("SchemaTypes");
+            JCObject val = (JCObject)retObjectSchemaTypes;
             return new XmlSchemaObjectTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaTypes != null ? retObjectSchemaTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

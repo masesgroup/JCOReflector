@@ -183,10 +183,14 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
     
     public HandleRef CreateHandleRef() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHandleRef = null;
         try {
-            JCObject objCreateHandleRef = (JCObject)classInstance.Invoke("CreateHandleRef");
+            retObjectCreateHandleRef = classInstance.Invoke("CreateHandleRef");
+            JCObject objCreateHandleRef = (JCObject)retObjectCreateHandleRef;
             return new HandleRef(objCreateHandleRef);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHandleRef != null ? retObjectCreateHandleRef.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.OverflowException, system.OutOfMemoryException, system.NotImplementedException, system.threading.ThreadStateException, system.SystemException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
      */
     @Deprecated 
     public boolean HasFocusWithin() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     /**
@@ -217,7 +221,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
      */
     @Deprecated 
     public boolean OnMnemonic(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     /**
@@ -226,7 +230,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
      */
     @Deprecated 
     public boolean TabInto(TraversalRequest request) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     /**
@@ -235,7 +239,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
      */
     @Deprecated 
     public boolean TranslateAccelerator(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     /**
@@ -244,7 +248,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
      */
     @Deprecated 
     public boolean TranslateChar(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     /**
@@ -253,13 +257,13 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
      */
     @Deprecated 
     public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -275,9 +279,13 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
     
     public boolean getAcquireHwndFocusInMenuMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireHwndFocusInMenuMode = null;
         try {
-            return (boolean)classInstance.Get("AcquireHwndFocusInMenuMode");
+            retObjectAcquireHwndFocusInMenuMode = classInstance.Get("AcquireHwndFocusInMenuMode");
+            return (boolean)retObjectAcquireHwndFocusInMenuMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcquireHwndFocusInMenuMode != null ? retObjectAcquireHwndFocusInMenuMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +293,13 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public static boolean getDefaultAcquireHwndFocusInMenuMode() throws Throwable, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultAcquireHwndFocusInMenuMode = null;
         try {
-            return (boolean)classType.Get("DefaultAcquireHwndFocusInMenuMode");
+            retObjectDefaultAcquireHwndFocusInMenuMode = classType.Get("DefaultAcquireHwndFocusInMenuMode");
+            return (boolean)retObjectDefaultAcquireHwndFocusInMenuMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDefaultAcquireHwndFocusInMenuMode != null ? retObjectDefaultAcquireHwndFocusInMenuMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +307,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public static void setDefaultAcquireHwndFocusInMenuMode(boolean DefaultAcquireHwndFocusInMenuMode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultAcquireHwndFocusInMenuMode", DefaultAcquireHwndFocusInMenuMode);
         } catch (JCNativeException jcne) {
@@ -305,9 +317,13 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public boolean getUsesPerPixelOpacity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesPerPixelOpacity = null;
         try {
-            return (boolean)classInstance.Get("UsesPerPixelOpacity");
+            retObjectUsesPerPixelOpacity = classInstance.Get("UsesPerPixelOpacity");
+            return (boolean)retObjectUsesPerPixelOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesPerPixelOpacity != null ? retObjectUsesPerPixelOpacity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +331,14 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public RestoreFocusMode getRestoreFocusMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestoreFocusMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RestoreFocusMode");
+            retObjectRestoreFocusMode = classInstance.Get("RestoreFocusMode");
+            JCObject val = (JCObject)retObjectRestoreFocusMode;
             return new RestoreFocusMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRestoreFocusMode != null ? retObjectRestoreFocusMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +346,14 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public HwndTarget getCompositionTargetNewHwndSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompositionTarget");
+            retObjectCompositionTarget = classInstance.Get("CompositionTarget");
+            JCObject val = (JCObject)retObjectCompositionTarget;
             return new HwndTarget(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompositionTarget != null ? retObjectCompositionTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +361,14 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public SizeToContent getSizeToContent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeToContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeToContent");
+            retObjectSizeToContent = classInstance.Get("SizeToContent");
+            JCObject val = (JCObject)retObjectSizeToContent;
             return new SizeToContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeToContent != null ? retObjectSizeToContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +376,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void setSizeToContent(SizeToContent SizeToContent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeToContent", SizeToContent == null ? null : SizeToContent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -363,7 +391,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -373,7 +401,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -383,7 +411,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void addSizeToContentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SizeToContentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -393,7 +421,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void removeSizeToContentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SizeToContentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -403,7 +431,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void addAutoResized(AutoResizedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoResized", handler);
         } catch (JCNativeException jcne) {
@@ -413,7 +441,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void removeAutoResized(AutoResizedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoResized", handler);
         } catch (JCNativeException jcne) {
@@ -423,7 +451,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void addDpiChanged(HwndDpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DpiChanged", handler);
         } catch (JCNativeException jcne) {
@@ -433,7 +461,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
 
     public void removeDpiChanged(HwndDpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DpiChanged", handler);
         } catch (JCNativeException jcne) {

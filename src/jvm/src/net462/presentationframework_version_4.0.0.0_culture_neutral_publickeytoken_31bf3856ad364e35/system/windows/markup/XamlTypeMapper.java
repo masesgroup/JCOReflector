@@ -177,10 +177,14 @@ public class XamlTypeMapper extends NetObject  {
     
     public NetType GetType(java.lang.String xmlNamespace, java.lang.String localName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", xmlNamespace, localName);
+            retObjectGetType = classInstance.Invoke("GetType", xmlNamespace, localName);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class XamlTypeMapper extends NetObject  {
 
     public void AddMappingProcessingInstruction(java.lang.String xmlNamespace, java.lang.String clrNamespace, java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMappingProcessingInstruction", xmlNamespace, clrNamespace, assemblyName);
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class XamlTypeMapper extends NetObject  {
 
     public void SetAssemblyPath(java.lang.String assemblyName, java.lang.String assemblyPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAssemblyPath", assemblyName, assemblyPath);
         } catch (JCNativeException jcne) {
@@ -212,10 +216,14 @@ public class XamlTypeMapper extends NetObject  {
     
     public static XamlTypeMapper getDefaultMapper() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultMapper = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultMapper");
+            retObjectDefaultMapper = classType.Get("DefaultMapper");
+            JCObject val = (JCObject)retObjectDefaultMapper;
             return new XamlTypeMapper(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultMapper != null ? retObjectDefaultMapper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

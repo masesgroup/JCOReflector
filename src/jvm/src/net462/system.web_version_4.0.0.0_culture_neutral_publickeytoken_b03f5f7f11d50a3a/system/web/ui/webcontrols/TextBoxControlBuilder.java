@@ -162,9 +162,13 @@ public class TextBoxControlBuilder extends ControlBuilder  {
     
     public boolean AllowWhitespaceLiterals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowWhitespaceLiterals = null;
         try {
-            return (boolean)classInstance.Invoke("AllowWhitespaceLiterals");
+            retObjectAllowWhitespaceLiterals = classInstance.Invoke("AllowWhitespaceLiterals");
+            return (boolean)retObjectAllowWhitespaceLiterals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAllowWhitespaceLiterals != null ? retObjectAllowWhitespaceLiterals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class TextBoxControlBuilder extends ControlBuilder  {
 
     public boolean HtmlDecodeLiterals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlDecodeLiterals = null;
         try {
-            return (boolean)classInstance.Invoke("HtmlDecodeLiterals");
+            retObjectHtmlDecodeLiterals = classInstance.Invoke("HtmlDecodeLiterals");
+            return (boolean)retObjectHtmlDecodeLiterals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHtmlDecodeLiterals != null ? retObjectHtmlDecodeLiterals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

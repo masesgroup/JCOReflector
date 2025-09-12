@@ -166,7 +166,7 @@ public class DebugDirectoryBuilder extends NetObject  {
     
     public void AddCodeViewEntry(java.lang.String pdbPath, BlobContentId pdbContentId, UInt16 portablePdbVersion, int age) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCodeViewEntry", pdbPath, pdbContentId == null ? null : pdbContentId.getJCOInstance(), portablePdbVersion == null ? null : portablePdbVersion.getJCOInstance(), age);
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class DebugDirectoryBuilder extends NetObject  {
 
     public void AddCodeViewEntry(java.lang.String pdbPath, BlobContentId pdbContentId, UInt16 portablePdbVersion) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCodeViewEntry", pdbPath, pdbContentId == null ? null : pdbContentId.getJCOInstance(), portablePdbVersion == null ? null : portablePdbVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class DebugDirectoryBuilder extends NetObject  {
 
     public void AddEmbeddedPortablePdbEntry(BlobBuilder debugMetadata, UInt16 portablePdbVersion) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.compression.ZLibException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEmbeddedPortablePdbEntry", debugMetadata == null ? null : debugMetadata.getJCOInstance(), portablePdbVersion == null ? null : portablePdbVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class DebugDirectoryBuilder extends NetObject  {
 
     public void AddEntry(DebugDirectoryEntryType type, UInt32 version, UInt32 stamp) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEntry", type == null ? null : type.getJCOInstance(), version == null ? null : version.getJCOInstance(), stamp == null ? null : stamp.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class DebugDirectoryBuilder extends NetObject  {
 
     public void AddReproducibleEntry() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddReproducibleEntry");
         } catch (JCNativeException jcne) {

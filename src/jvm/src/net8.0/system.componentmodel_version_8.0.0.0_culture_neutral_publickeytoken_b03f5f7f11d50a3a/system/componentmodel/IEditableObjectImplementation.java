@@ -142,7 +142,7 @@ public class IEditableObjectImplementation extends NetObject implements IEditabl
     
     public void BeginEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginEdit");
         } catch (JCNativeException jcne) {
@@ -152,7 +152,7 @@ public class IEditableObjectImplementation extends NetObject implements IEditabl
 
     public void CancelEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelEdit");
         } catch (JCNativeException jcne) {
@@ -162,7 +162,7 @@ public class IEditableObjectImplementation extends NetObject implements IEditabl
 
     public void EndEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndEdit");
         } catch (JCNativeException jcne) {

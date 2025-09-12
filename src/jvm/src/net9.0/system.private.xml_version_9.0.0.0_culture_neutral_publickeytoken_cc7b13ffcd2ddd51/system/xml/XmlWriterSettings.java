@@ -167,10 +167,14 @@ public class XmlWriterSettings extends NetObject  {
     
     public XmlWriterSettings Clone() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new XmlWriterSettings(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void Reset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -192,9 +196,13 @@ public class XmlWriterSettings extends NetObject  {
     
     public boolean getAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsync = null;
         try {
-            return (boolean)classInstance.Get("Async");
+            retObjectAsync = classInstance.Get("Async");
+            return (boolean)retObjectAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsync != null ? retObjectAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setAsync(boolean Async) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Async", Async);
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public boolean getCheckCharacters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckCharacters = null;
         try {
-            return (boolean)classInstance.Get("CheckCharacters");
+            retObjectCheckCharacters = classInstance.Get("CheckCharacters");
+            return (boolean)retObjectCheckCharacters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckCharacters != null ? retObjectCheckCharacters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setCheckCharacters(boolean CheckCharacters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckCharacters", CheckCharacters);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public boolean getCloseOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseOutput = null;
         try {
-            return (boolean)classInstance.Get("CloseOutput");
+            retObjectCloseOutput = classInstance.Get("CloseOutput");
+            return (boolean)retObjectCloseOutput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCloseOutput != null ? retObjectCloseOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setCloseOutput(boolean CloseOutput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseOutput", CloseOutput);
         } catch (JCNativeException jcne) {
@@ -252,9 +268,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public boolean getDoNotEscapeUriAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoNotEscapeUriAttributes = null;
         try {
-            return (boolean)classInstance.Get("DoNotEscapeUriAttributes");
+            retObjectDoNotEscapeUriAttributes = classInstance.Get("DoNotEscapeUriAttributes");
+            return (boolean)retObjectDoNotEscapeUriAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDoNotEscapeUriAttributes != null ? retObjectDoNotEscapeUriAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setDoNotEscapeUriAttributes(boolean DoNotEscapeUriAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DoNotEscapeUriAttributes", DoNotEscapeUriAttributes);
         } catch (JCNativeException jcne) {
@@ -272,9 +292,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public boolean getIndent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndent = null;
         try {
-            return (boolean)classInstance.Get("Indent");
+            retObjectIndent = classInstance.Get("Indent");
+            return (boolean)retObjectIndent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIndent != null ? retObjectIndent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +306,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setIndent(boolean Indent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Indent", Indent);
         } catch (JCNativeException jcne) {
@@ -292,9 +316,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public boolean getNewLineOnAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewLineOnAttributes = null;
         try {
-            return (boolean)classInstance.Get("NewLineOnAttributes");
+            retObjectNewLineOnAttributes = classInstance.Get("NewLineOnAttributes");
+            return (boolean)retObjectNewLineOnAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNewLineOnAttributes != null ? retObjectNewLineOnAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +330,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setNewLineOnAttributes(boolean NewLineOnAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewLineOnAttributes", NewLineOnAttributes);
         } catch (JCNativeException jcne) {
@@ -312,9 +340,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public boolean getOmitXmlDeclaration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOmitXmlDeclaration = null;
         try {
-            return (boolean)classInstance.Get("OmitXmlDeclaration");
+            retObjectOmitXmlDeclaration = classInstance.Get("OmitXmlDeclaration");
+            return (boolean)retObjectOmitXmlDeclaration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOmitXmlDeclaration != null ? retObjectOmitXmlDeclaration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +354,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setOmitXmlDeclaration(boolean OmitXmlDeclaration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OmitXmlDeclaration", OmitXmlDeclaration);
         } catch (JCNativeException jcne) {
@@ -332,9 +364,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public boolean getWriteEndDocumentOnClose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteEndDocumentOnClose = null;
         try {
-            return (boolean)classInstance.Get("WriteEndDocumentOnClose");
+            retObjectWriteEndDocumentOnClose = classInstance.Get("WriteEndDocumentOnClose");
+            return (boolean)retObjectWriteEndDocumentOnClose;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWriteEndDocumentOnClose != null ? retObjectWriteEndDocumentOnClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +378,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setWriteEndDocumentOnClose(boolean WriteEndDocumentOnClose) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WriteEndDocumentOnClose", WriteEndDocumentOnClose);
         } catch (JCNativeException jcne) {
@@ -352,9 +388,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public java.lang.String getIndentChars() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentChars = null;
         try {
-            return (java.lang.String)classInstance.Get("IndentChars");
+            retObjectIndentChars = classInstance.Get("IndentChars");
+            return (java.lang.String)retObjectIndentChars;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIndentChars != null ? retObjectIndentChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +402,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setIndentChars(java.lang.String IndentChars) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentChars", IndentChars);
         } catch (JCNativeException jcne) {
@@ -372,9 +412,13 @@ public class XmlWriterSettings extends NetObject  {
 
     public java.lang.String getNewLineChars() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewLineChars = null;
         try {
-            return (java.lang.String)classInstance.Get("NewLineChars");
+            retObjectNewLineChars = classInstance.Get("NewLineChars");
+            return (java.lang.String)retObjectNewLineChars;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewLineChars != null ? retObjectNewLineChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +426,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setNewLineChars(java.lang.String NewLineChars) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewLineChars", NewLineChars);
         } catch (JCNativeException jcne) {
@@ -392,10 +436,14 @@ public class XmlWriterSettings extends NetObject  {
 
     public Encoding getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            JCObject val = (JCObject)retObjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +451,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setEncoding(Encoding Encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding == null ? null : Encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +461,14 @@ public class XmlWriterSettings extends NetObject  {
 
     public ConformanceLevel getConformanceLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConformanceLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConformanceLevel");
+            retObjectConformanceLevel = classInstance.Get("ConformanceLevel");
+            JCObject val = (JCObject)retObjectConformanceLevel;
             return new ConformanceLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConformanceLevel != null ? retObjectConformanceLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +476,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setConformanceLevel(ConformanceLevel ConformanceLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConformanceLevel", ConformanceLevel == null ? null : ConformanceLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -434,10 +486,14 @@ public class XmlWriterSettings extends NetObject  {
 
     public NamespaceHandling getNamespaceHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamespaceHandling");
+            retObjectNamespaceHandling = classInstance.Get("NamespaceHandling");
+            JCObject val = (JCObject)retObjectNamespaceHandling;
             return new NamespaceHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaceHandling != null ? retObjectNamespaceHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,7 +501,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setNamespaceHandling(NamespaceHandling NamespaceHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NamespaceHandling", NamespaceHandling == null ? null : NamespaceHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -455,10 +511,14 @@ public class XmlWriterSettings extends NetObject  {
 
     public NewLineHandling getNewLineHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewLineHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewLineHandling");
+            retObjectNewLineHandling = classInstance.Get("NewLineHandling");
+            JCObject val = (JCObject)retObjectNewLineHandling;
             return new NewLineHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewLineHandling != null ? retObjectNewLineHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,7 +526,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setNewLineHandling(NewLineHandling NewLineHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewLineHandling", NewLineHandling == null ? null : NewLineHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -476,10 +536,14 @@ public class XmlWriterSettings extends NetObject  {
 
     public XmlOutputMethod getOutputMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputMethod");
+            retObjectOutputMethod = classInstance.Get("OutputMethod");
+            JCObject val = (JCObject)retObjectOutputMethod;
             return new XmlOutputMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputMethod != null ? retObjectOutputMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,7 +551,7 @@ public class XmlWriterSettings extends NetObject  {
 
     public void setOutputMethod(XmlOutputMethod OutputMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputMethod", OutputMethod == null ? null : OutputMethod.getJCOInstance());
         } catch (JCNativeException jcne) {

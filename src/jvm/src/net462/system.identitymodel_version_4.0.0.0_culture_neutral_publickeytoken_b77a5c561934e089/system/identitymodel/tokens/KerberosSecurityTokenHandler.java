@@ -162,10 +162,12 @@ public class KerberosSecurityTokenHandler extends SecurityTokenHandler  {
     
     public java.lang.String[] GetTokenTypeIdentifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenTypeIdentifiers = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTokenTypeIdentifiers");
+            retObjectGetTokenTypeIdentifiers = classInstance.Invoke("GetTokenTypeIdentifiers");
+            JCObject resultingObjects = (JCObject)retObjectGetTokenTypeIdentifiers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -174,6 +176,8 @@ public class KerberosSecurityTokenHandler extends SecurityTokenHandler  {
 				resultingArray[indexGetTokenTypeIdentifiers] = (java.lang.String)resultingArrayList.get(indexGetTokenTypeIdentifiers);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetTokenTypeIdentifiers != null ? retObjectGetTokenTypeIdentifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

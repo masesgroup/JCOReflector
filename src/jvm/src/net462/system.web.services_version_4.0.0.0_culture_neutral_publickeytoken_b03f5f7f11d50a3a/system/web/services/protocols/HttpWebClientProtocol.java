@@ -159,9 +159,13 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
     
     public static boolean GenerateXmlMappings(NetType type, NetArrayList mappings) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateXmlMappings = null;
         try {
-            return (boolean)classType.Invoke("GenerateXmlMappings", type == null ? null : type.getJCOInstance(), mappings == null ? null : mappings.getJCOInstance());
+            retObjectGenerateXmlMappings = classType.Invoke("GenerateXmlMappings", type == null ? null : type.getJCOInstance(), mappings == null ? null : mappings.getJCOInstance());
+            return (boolean)retObjectGenerateXmlMappings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGenerateXmlMappings != null ? retObjectGenerateXmlMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public static Hashtable GenerateXmlMappings(NetType[] types, NetArrayList mappings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateXmlMappings = null;
         try {
-            JCObject objGenerateXmlMappings = (JCObject)classType.Invoke("GenerateXmlMappings", toObjectFromArray(types), mappings == null ? null : mappings.getJCOInstance());
+            retObjectGenerateXmlMappings = classType.Invoke("GenerateXmlMappings", toObjectFromArray(types), mappings == null ? null : mappings.getJCOInstance());
+            JCObject objGenerateXmlMappings = (JCObject)retObjectGenerateXmlMappings;
             return new Hashtable(objGenerateXmlMappings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateXmlMappings != null ? retObjectGenerateXmlMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
     
     public boolean getAllowAutoRedirect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowAutoRedirect = null;
         try {
-            return (boolean)classInstance.Get("AllowAutoRedirect");
+            retObjectAllowAutoRedirect = classInstance.Get("AllowAutoRedirect");
+            return (boolean)retObjectAllowAutoRedirect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowAutoRedirect != null ? retObjectAllowAutoRedirect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +206,7 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public void setAllowAutoRedirect(boolean AllowAutoRedirect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowAutoRedirect", AllowAutoRedirect);
         } catch (JCNativeException jcne) {
@@ -204,9 +216,13 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public boolean getEnableDecompression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableDecompression = null;
         try {
-            return (boolean)classInstance.Get("EnableDecompression");
+            retObjectEnableDecompression = classInstance.Get("EnableDecompression");
+            return (boolean)retObjectEnableDecompression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableDecompression != null ? retObjectEnableDecompression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +230,7 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public void setEnableDecompression(boolean EnableDecompression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableDecompression", EnableDecompression);
         } catch (JCNativeException jcne) {
@@ -224,9 +240,13 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public boolean getUnsafeAuthenticatedConnectionSharing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnsafeAuthenticatedConnectionSharing = null;
         try {
-            return (boolean)classInstance.Get("UnsafeAuthenticatedConnectionSharing");
+            retObjectUnsafeAuthenticatedConnectionSharing = classInstance.Get("UnsafeAuthenticatedConnectionSharing");
+            return (boolean)retObjectUnsafeAuthenticatedConnectionSharing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnsafeAuthenticatedConnectionSharing != null ? retObjectUnsafeAuthenticatedConnectionSharing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +254,7 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public void setUnsafeAuthenticatedConnectionSharing(boolean UnsafeAuthenticatedConnectionSharing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnsafeAuthenticatedConnectionSharing", UnsafeAuthenticatedConnectionSharing);
         } catch (JCNativeException jcne) {
@@ -244,10 +264,14 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public CookieContainer getCookieContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookieContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CookieContainer");
+            retObjectCookieContainer = classInstance.Get("CookieContainer");
+            JCObject val = (JCObject)retObjectCookieContainer;
             return new CookieContainer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCookieContainer != null ? retObjectCookieContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +279,7 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public void setCookieContainer(CookieContainer CookieContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CookieContainer", CookieContainer == null ? null : CookieContainer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +289,14 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public IWebProxy getProxy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Proxy");
+            retObjectProxy = classInstance.Get("Proxy");
+            JCObject val = (JCObject)retObjectProxy;
             return new IWebProxyImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxy != null ? retObjectProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +304,7 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public void setProxy(IWebProxy Proxy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Proxy", Proxy == null ? null : Proxy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +314,14 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public X509CertificateCollection getClientCertificates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCertificates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificates");
+            retObjectClientCertificates = classInstance.Get("ClientCertificates");
+            JCObject val = (JCObject)retObjectClientCertificates;
             return new X509CertificateCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCertificates != null ? retObjectClientCertificates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +329,13 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public java.lang.String getUserAgent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserAgent = null;
         try {
-            return (java.lang.String)classInstance.Get("UserAgent");
+            retObjectUserAgent = classInstance.Get("UserAgent");
+            return (java.lang.String)retObjectUserAgent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserAgent != null ? retObjectUserAgent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +343,7 @@ public class HttpWebClientProtocol extends WebClientProtocol  {
 
     public void setUserAgent(java.lang.String UserAgent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserAgent", UserAgent);
         } catch (JCNativeException jcne) {

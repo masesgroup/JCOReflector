@@ -176,10 +176,14 @@ public class IssuerTokenResolver extends SecurityTokenResolver  {
     
     public SecurityTokenResolver getWrappedTokenResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrappedTokenResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WrappedTokenResolver");
+            retObjectWrappedTokenResolver = classInstance.Get("WrappedTokenResolver");
+            JCObject val = (JCObject)retObjectWrappedTokenResolver;
             return new SecurityTokenResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWrappedTokenResolver != null ? retObjectWrappedTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

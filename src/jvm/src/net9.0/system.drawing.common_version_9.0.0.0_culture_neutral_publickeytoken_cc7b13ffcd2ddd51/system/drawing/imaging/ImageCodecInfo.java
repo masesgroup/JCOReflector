@@ -158,16 +158,20 @@ public class ImageCodecInfo extends NetObject  {
     
     public static ImageCodecInfo[] GetImageDecoders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetImageDecoders = null;
         try {
             ArrayList<ImageCodecInfo> resultingArrayList = new ArrayList<ImageCodecInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetImageDecoders");
+            retObjectGetImageDecoders = classType.Invoke("GetImageDecoders");
+            JCObject resultingObjects = (JCObject)retObjectGetImageDecoders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ImageCodecInfo(resultingObject));
             }
             ImageCodecInfo[] resultingArray = new ImageCodecInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImageDecoders != null ? retObjectGetImageDecoders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,16 +179,20 @@ public class ImageCodecInfo extends NetObject  {
 
     public static ImageCodecInfo[] GetImageEncoders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetImageEncoders = null;
         try {
             ArrayList<ImageCodecInfo> resultingArrayList = new ArrayList<ImageCodecInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetImageEncoders");
+            retObjectGetImageEncoders = classType.Invoke("GetImageEncoders");
+            JCObject resultingObjects = (JCObject)retObjectGetImageEncoders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ImageCodecInfo(resultingObject));
             }
             ImageCodecInfo[] resultingArray = new ImageCodecInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImageEncoders != null ? retObjectGetImageEncoders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +204,19 @@ public class ImageCodecInfo extends NetObject  {
     
     public int getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (int)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (int)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVersionNumber = (java.lang.Number)retObjectVersion;
+                return retObjectVersionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +224,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setVersion(int Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {
@@ -216,10 +234,14 @@ public class ImageCodecInfo extends NetObject  {
 
     public ImageCodecFlags getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new ImageCodecFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +249,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setFlags(ImageCodecFlags Flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Flags", Flags == null ? null : Flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,10 +259,14 @@ public class ImageCodecInfo extends NetObject  {
 
     public Guid getClsid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClsid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clsid");
+            retObjectClsid = classInstance.Get("Clsid");
+            JCObject val = (JCObject)retObjectClsid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClsid != null ? retObjectClsid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +274,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setClsid(Guid Clsid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clsid", Clsid == null ? null : Clsid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,10 +284,14 @@ public class ImageCodecInfo extends NetObject  {
 
     public Guid getFormatID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatID = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatID");
+            retObjectFormatID = classInstance.Get("FormatID");
+            JCObject val = (JCObject)retObjectFormatID;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatID != null ? retObjectFormatID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +299,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setFormatID(Guid FormatID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatID", FormatID == null ? null : FormatID.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,9 +309,13 @@ public class ImageCodecInfo extends NetObject  {
 
     public java.lang.String getCodecName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodecName = null;
         try {
-            return (java.lang.String)classInstance.Get("CodecName");
+            retObjectCodecName = classInstance.Get("CodecName");
+            return (java.lang.String)retObjectCodecName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCodecName != null ? retObjectCodecName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +323,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setCodecName(java.lang.String CodecName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodecName", CodecName);
         } catch (JCNativeException jcne) {
@@ -299,9 +333,13 @@ public class ImageCodecInfo extends NetObject  {
 
     public java.lang.String getDllName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDllName = null;
         try {
-            return (java.lang.String)classInstance.Get("DllName");
+            retObjectDllName = classInstance.Get("DllName");
+            return (java.lang.String)retObjectDllName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDllName != null ? retObjectDllName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +347,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setDllName(java.lang.String DllName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DllName", DllName);
         } catch (JCNativeException jcne) {
@@ -319,9 +357,13 @@ public class ImageCodecInfo extends NetObject  {
 
     public java.lang.String getFilenameExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilenameExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("FilenameExtension");
+            retObjectFilenameExtension = classInstance.Get("FilenameExtension");
+            return (java.lang.String)retObjectFilenameExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilenameExtension != null ? retObjectFilenameExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +371,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setFilenameExtension(java.lang.String FilenameExtension) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilenameExtension", FilenameExtension);
         } catch (JCNativeException jcne) {
@@ -339,9 +381,13 @@ public class ImageCodecInfo extends NetObject  {
 
     public java.lang.String getFormatDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatDescription");
+            retObjectFormatDescription = classInstance.Get("FormatDescription");
+            return (java.lang.String)retObjectFormatDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatDescription != null ? retObjectFormatDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +395,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setFormatDescription(java.lang.String FormatDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatDescription", FormatDescription);
         } catch (JCNativeException jcne) {
@@ -359,9 +405,13 @@ public class ImageCodecInfo extends NetObject  {
 
     public java.lang.String getMimeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMimeType = null;
         try {
-            return (java.lang.String)classInstance.Get("MimeType");
+            retObjectMimeType = classInstance.Get("MimeType");
+            return (java.lang.String)retObjectMimeType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMimeType != null ? retObjectMimeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +419,7 @@ public class ImageCodecInfo extends NetObject  {
 
     public void setMimeType(java.lang.String MimeType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MimeType", MimeType);
         } catch (JCNativeException jcne) {

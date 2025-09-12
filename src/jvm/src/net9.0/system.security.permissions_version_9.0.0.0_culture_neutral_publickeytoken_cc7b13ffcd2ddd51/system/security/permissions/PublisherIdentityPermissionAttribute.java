@@ -169,10 +169,14 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
     
     public IPermission CreatePermission() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePermission = null;
         try {
-            JCObject objCreatePermission = (JCObject)classInstance.Invoke("CreatePermission");
+            retObjectCreatePermission = classInstance.Invoke("CreatePermission");
+            JCObject objCreatePermission = (JCObject)retObjectCreatePermission;
             return new IPermissionImplementation(objCreatePermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePermission != null ? retObjectCreatePermission.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
     
     public java.lang.String getCertFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertFile = null;
         try {
-            return (java.lang.String)classInstance.Get("CertFile");
+            retObjectCertFile = classInstance.Get("CertFile");
+            return (java.lang.String)retObjectCertFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCertFile != null ? retObjectCertFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
 
     public void setCertFile(java.lang.String CertFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertFile", CertFile);
         } catch (JCNativeException jcne) {
@@ -204,9 +212,13 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
 
     public java.lang.String getSignedFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignedFile = null;
         try {
-            return (java.lang.String)classInstance.Get("SignedFile");
+            retObjectSignedFile = classInstance.Get("SignedFile");
+            return (java.lang.String)retObjectSignedFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignedFile != null ? retObjectSignedFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
 
     public void setSignedFile(java.lang.String SignedFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SignedFile", SignedFile);
         } catch (JCNativeException jcne) {
@@ -224,9 +236,13 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
 
     public java.lang.String getX509Certificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX509Certificate = null;
         try {
-            return (java.lang.String)classInstance.Get("X509Certificate");
+            retObjectX509Certificate = classInstance.Get("X509Certificate");
+            return (java.lang.String)retObjectX509Certificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectX509Certificate != null ? retObjectX509Certificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
 
     public void setX509Certificate(java.lang.String X509Certificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X509Certificate", X509Certificate);
         } catch (JCNativeException jcne) {

@@ -147,9 +147,19 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
     
     public int RevokeObjectParam(java.lang.String pszKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRevokeObjectParam = null;
         try {
-            return (int)classInstance.Invoke("RevokeObjectParam", pszKey);
+            retObjectRevokeObjectParam = classInstance.Invoke("RevokeObjectParam", pszKey);
+            return (int)retObjectRevokeObjectParam;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRevokeObjectParamNumber = (java.lang.Number)retObjectRevokeObjectParam;
+                return retObjectRevokeObjectParamNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectRevokeObjectParam != null ? retObjectRevokeObjectParam.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +167,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void EnumObjectParam(JCORefOut<IEnumString> ppenum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumObjectParam", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -167,7 +177,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void GetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBindOptions", pbindopts.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -177,7 +187,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void GetObjectParam(java.lang.String pszKey, JCORefOut<NetObject> ppunk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectParam", pszKey, ppunk.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -187,7 +197,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void GetRunningObjectTable(JCORefOut<IRunningObjectTable> pprot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRunningObjectTable", pprot.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -197,7 +207,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void RegisterObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObjectBound", punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +217,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObjectParam", pszKey, punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -217,7 +227,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void ReleaseBoundObjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseBoundObjects");
         } catch (JCNativeException jcne) {
@@ -227,7 +237,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void RevokeObjectBound(NetObject punk) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RevokeObjectBound", punk == null ? null : punk.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,7 +247,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
 
     public void SetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBindOptions", pbindopts.getJCRefOut());
         } catch (JCNativeException jcne) {

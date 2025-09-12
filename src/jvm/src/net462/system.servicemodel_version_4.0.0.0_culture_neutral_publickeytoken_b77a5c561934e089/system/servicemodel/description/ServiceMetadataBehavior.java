@@ -169,7 +169,7 @@ public class ServiceMetadataBehavior extends NetObject  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -178,7 +178,7 @@ public class ServiceMetadataBehavior extends NetObject  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -187,9 +187,13 @@ public class ServiceMetadataBehavior extends NetObject  {
     
     public boolean getHttpGetEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpGetEnabled = null;
         try {
-            return (boolean)classInstance.Get("HttpGetEnabled");
+            retObjectHttpGetEnabled = classInstance.Get("HttpGetEnabled");
+            return (boolean)retObjectHttpGetEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHttpGetEnabled != null ? retObjectHttpGetEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +201,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setHttpGetEnabled(boolean HttpGetEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpGetEnabled", HttpGetEnabled);
         } catch (JCNativeException jcne) {
@@ -207,9 +211,13 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public boolean getHttpsGetEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpsGetEnabled = null;
         try {
-            return (boolean)classInstance.Get("HttpsGetEnabled");
+            retObjectHttpsGetEnabled = classInstance.Get("HttpsGetEnabled");
+            return (boolean)retObjectHttpsGetEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHttpsGetEnabled != null ? retObjectHttpsGetEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +225,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setHttpsGetEnabled(boolean HttpsGetEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpsGetEnabled", HttpsGetEnabled);
         } catch (JCNativeException jcne) {
@@ -227,10 +235,14 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public system.servicemodel.channels.Binding getHttpGetBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpGetBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpGetBinding");
+            retObjectHttpGetBinding = classInstance.Get("HttpGetBinding");
+            JCObject val = (JCObject)retObjectHttpGetBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpGetBinding != null ? retObjectHttpGetBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +250,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setHttpGetBinding(system.servicemodel.channels.Binding HttpGetBinding) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpGetBinding", HttpGetBinding == null ? null : HttpGetBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,10 +260,14 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public system.servicemodel.channels.Binding getHttpsGetBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpsGetBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpsGetBinding");
+            retObjectHttpsGetBinding = classInstance.Get("HttpsGetBinding");
+            JCObject val = (JCObject)retObjectHttpsGetBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpsGetBinding != null ? retObjectHttpsGetBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +275,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setHttpsGetBinding(system.servicemodel.channels.Binding HttpsGetBinding) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpsGetBinding", HttpsGetBinding == null ? null : HttpsGetBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +285,14 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public MetadataExporter getMetadataExporter() throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataExporter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MetadataExporter");
+            retObjectMetadataExporter = classInstance.Get("MetadataExporter");
+            JCObject val = (JCObject)retObjectMetadataExporter;
             return new MetadataExporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataExporter != null ? retObjectMetadataExporter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +300,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setMetadataExporter(MetadataExporter MetadataExporter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MetadataExporter", MetadataExporter == null ? null : MetadataExporter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,10 +310,14 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public Uri getExternalMetadataLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalMetadataLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExternalMetadataLocation");
+            retObjectExternalMetadataLocation = classInstance.Get("ExternalMetadataLocation");
+            JCObject val = (JCObject)retObjectExternalMetadataLocation;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalMetadataLocation != null ? retObjectExternalMetadataLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +325,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setExternalMetadataLocation(Uri ExternalMetadataLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExternalMetadataLocation", ExternalMetadataLocation == null ? null : ExternalMetadataLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,10 +335,14 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public Uri getHttpGetUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpGetUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpGetUrl");
+            retObjectHttpGetUrl = classInstance.Get("HttpGetUrl");
+            JCObject val = (JCObject)retObjectHttpGetUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpGetUrl != null ? retObjectHttpGetUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +350,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setHttpGetUrl(Uri HttpGetUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpGetUrl", HttpGetUrl == null ? null : HttpGetUrl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,10 +360,14 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public Uri getHttpsGetUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHttpsGetUrl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HttpsGetUrl");
+            retObjectHttpsGetUrl = classInstance.Get("HttpsGetUrl");
+            JCObject val = (JCObject)retObjectHttpsGetUrl;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpsGetUrl != null ? retObjectHttpsGetUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,7 +375,7 @@ public class ServiceMetadataBehavior extends NetObject  {
 
     public void setHttpsGetUrl(Uri HttpsGetUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HttpsGetUrl", HttpsGetUrl == null ? null : HttpsGetUrl.getJCOInstance());
         } catch (JCNativeException jcne) {

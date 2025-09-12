@@ -166,9 +166,13 @@ public class Viewport2DVisual3D extends Visual3D  {
     
     public static boolean GetIsVisualHostMaterial(Material element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsVisualHostMaterial = null;
         try {
-            return (boolean)classType.Invoke("GetIsVisualHostMaterial", element == null ? null : element.getJCOInstance());
+            retObjectGetIsVisualHostMaterial = classType.Invoke("GetIsVisualHostMaterial", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsVisualHostMaterial;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsVisualHostMaterial != null ? retObjectGetIsVisualHostMaterial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public static void SetIsVisualHostMaterial(Material element, boolean value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsVisualHostMaterial", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class Viewport2DVisual3D extends Visual3D  {
     
     public CacheMode getCacheMode() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheMode");
+            retObjectCacheMode = classInstance.Get("CacheMode");
+            JCObject val = (JCObject)retObjectCacheMode;
             return new CacheMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheMode != null ? retObjectCacheMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public void setCacheMode(CacheMode CacheMode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheMode", CacheMode == null ? null : CacheMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public Geometry3D getGeometry() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Geometry");
+            retObjectGeometry = classInstance.Get("Geometry");
+            JCObject val = (JCObject)retObjectGeometry;
             return new Geometry3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometry != null ? retObjectGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public void setGeometry(Geometry3D Geometry) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Geometry", Geometry == null ? null : Geometry.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +244,14 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public Material getMaterial() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaterial = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Material");
+            retObjectMaterial = classInstance.Get("Material");
+            JCObject val = (JCObject)retObjectMaterial;
             return new Material(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaterial != null ? retObjectMaterial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +259,7 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public void setMaterial(Material Material) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Material", Material == null ? null : Material.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,10 +269,14 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public Visual getVisual() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisual = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Visual");
+            retObjectVisual = classInstance.Get("Visual");
+            JCObject val = (JCObject)retObjectVisual;
             return new Visual(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisual != null ? retObjectVisual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +284,7 @@ public class Viewport2DVisual3D extends Visual3D  {
 
     public void setVisual(Visual Visual) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visual", Visual == null ? null : Visual.getJCOInstance());
         } catch (JCNativeException jcne) {

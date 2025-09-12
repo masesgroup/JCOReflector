@@ -168,10 +168,14 @@ public class InitiatorServiceModelSecurityTokenRequirement extends ServiceModelS
     
     public EndpointAddress getTargetAddress() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetAddress");
+            retObjectTargetAddress = classInstance.Get("TargetAddress");
+            JCObject val = (JCObject)retObjectTargetAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetAddress != null ? retObjectTargetAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class InitiatorServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public void setTargetAddress(EndpointAddress TargetAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetAddress", TargetAddress == null ? null : TargetAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class InitiatorServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public Uri getVia() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVia = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Via");
+            retObjectVia = classInstance.Get("Via");
+            JCObject val = (JCObject)retObjectVia;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVia != null ? retObjectVia.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class InitiatorServiceModelSecurityTokenRequirement extends ServiceModelS
 
     public void setVia(Uri Via) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Via", Via == null ? null : Via.getJCOInstance());
         } catch (JCNativeException jcne) {

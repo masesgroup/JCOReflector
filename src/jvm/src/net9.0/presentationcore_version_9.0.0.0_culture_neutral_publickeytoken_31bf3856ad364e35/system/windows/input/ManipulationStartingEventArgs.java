@@ -161,9 +161,13 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
     
     public boolean Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            return (boolean)classInstance.Invoke("Cancel");
+            retObjectCancel = classInstance.Invoke("Cancel");
+            return (boolean)retObjectCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public void SetManipulationParameter(ManipulationParameters2D parameter) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetManipulationParameter", parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
     
     public boolean getIsSingleTouchEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSingleTouchEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsSingleTouchEnabled");
+            retObjectIsSingleTouchEnabled = classInstance.Get("IsSingleTouchEnabled");
+            return (boolean)retObjectIsSingleTouchEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSingleTouchEnabled != null ? retObjectIsSingleTouchEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public void setIsSingleTouchEnabled(boolean IsSingleTouchEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSingleTouchEnabled", IsSingleTouchEnabled);
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManipulationContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ManipulationContainer");
+            retObjectManipulationContainer = classInstance.Get("ManipulationContainer");
+            JCObject val = (JCObject)retObjectManipulationContainer;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManipulationContainer != null ? retObjectManipulationContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public void setManipulationContainer(IInputElement ManipulationContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManipulationContainer", ManipulationContainer == null ? null : ManipulationContainer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,10 +238,14 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public ManipulationModes getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new ManipulationModes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public void setMode(ManipulationModes Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,10 +263,14 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public ManipulationPivot getPivot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPivot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Pivot");
+            retObjectPivot = classInstance.Get("Pivot");
+            JCObject val = (JCObject)retObjectPivot;
             return new ManipulationPivot(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPivot != null ? retObjectPivot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
 
     public void setPivot(ManipulationPivot Pivot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Pivot", Pivot == null ? null : Pivot.getJCOInstance());
         } catch (JCNativeException jcne) {

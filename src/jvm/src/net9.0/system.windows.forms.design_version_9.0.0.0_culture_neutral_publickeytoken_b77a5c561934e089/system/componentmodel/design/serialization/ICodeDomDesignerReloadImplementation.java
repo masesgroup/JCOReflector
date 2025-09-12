@@ -143,9 +143,13 @@ public class ICodeDomDesignerReloadImplementation extends NetObject implements I
     
     public boolean ShouldReloadDesigner(CodeCompileUnit newTree) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldReloadDesigner = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldReloadDesigner", newTree == null ? null : newTree.getJCOInstance());
+            retObjectShouldReloadDesigner = classInstance.Invoke("ShouldReloadDesigner", newTree == null ? null : newTree.getJCOInstance());
+            return (boolean)retObjectShouldReloadDesigner;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldReloadDesigner != null ? retObjectShouldReloadDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

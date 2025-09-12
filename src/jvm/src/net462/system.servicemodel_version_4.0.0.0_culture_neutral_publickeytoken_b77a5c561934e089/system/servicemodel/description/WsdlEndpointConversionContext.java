@@ -164,10 +164,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
     
     public FaultDescription GetFaultDescription(FaultBinding faultBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFaultDescription = null;
         try {
-            JCObject objGetFaultDescription = (JCObject)classInstance.Invoke("GetFaultDescription", faultBinding == null ? null : faultBinding.getJCOInstance());
+            retObjectGetFaultDescription = classInstance.Invoke("GetFaultDescription", faultBinding == null ? null : faultBinding.getJCOInstance());
+            JCObject objGetFaultDescription = (JCObject)retObjectGetFaultDescription;
             return new FaultDescription(objGetFaultDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFaultDescription != null ? retObjectGetFaultDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public MessageDescription GetMessageDescription(MessageBinding messageBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageDescription = null;
         try {
-            JCObject objGetMessageDescription = (JCObject)classInstance.Invoke("GetMessageDescription", messageBinding == null ? null : messageBinding.getJCOInstance());
+            retObjectGetMessageDescription = classInstance.Invoke("GetMessageDescription", messageBinding == null ? null : messageBinding.getJCOInstance());
+            JCObject objGetMessageDescription = (JCObject)retObjectGetMessageDescription;
             return new MessageDescription(objGetMessageDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageDescription != null ? retObjectGetMessageDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public OperationDescription GetOperationDescription(OperationBinding operationBinding) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOperationDescription = null;
         try {
-            JCObject objGetOperationDescription = (JCObject)classInstance.Invoke("GetOperationDescription", operationBinding == null ? null : operationBinding.getJCOInstance());
+            retObjectGetOperationDescription = classInstance.Invoke("GetOperationDescription", operationBinding == null ? null : operationBinding.getJCOInstance());
+            JCObject objGetOperationDescription = (JCObject)retObjectGetOperationDescription;
             return new OperationDescription(objGetOperationDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOperationDescription != null ? retObjectGetOperationDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public FaultBinding GetFaultBinding(FaultDescription fault) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFaultBinding = null;
         try {
-            JCObject objGetFaultBinding = (JCObject)classInstance.Invoke("GetFaultBinding", fault == null ? null : fault.getJCOInstance());
+            retObjectGetFaultBinding = classInstance.Invoke("GetFaultBinding", fault == null ? null : fault.getJCOInstance());
+            JCObject objGetFaultBinding = (JCObject)retObjectGetFaultBinding;
             return new FaultBinding(objGetFaultBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFaultBinding != null ? retObjectGetFaultBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public MessageBinding GetMessageBinding(MessageDescription message) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageBinding = null;
         try {
-            JCObject objGetMessageBinding = (JCObject)classInstance.Invoke("GetMessageBinding", message == null ? null : message.getJCOInstance());
+            retObjectGetMessageBinding = classInstance.Invoke("GetMessageBinding", message == null ? null : message.getJCOInstance());
+            JCObject objGetMessageBinding = (JCObject)retObjectGetMessageBinding;
             return new MessageBinding(objGetMessageBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageBinding != null ? retObjectGetMessageBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public OperationBinding GetOperationBinding(OperationDescription operation) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOperationBinding = null;
         try {
-            JCObject objGetOperationBinding = (JCObject)classInstance.Invoke("GetOperationBinding", operation == null ? null : operation.getJCOInstance());
+            retObjectGetOperationBinding = classInstance.Invoke("GetOperationBinding", operation == null ? null : operation.getJCOInstance());
+            JCObject objGetOperationBinding = (JCObject)retObjectGetOperationBinding;
             return new OperationBinding(objGetOperationBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOperationBinding != null ? retObjectGetOperationBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +258,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
     
     public ServiceEndpoint getEndpoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Endpoint");
+            retObjectEndpoint = classInstance.Get("Endpoint");
+            JCObject val = (JCObject)retObjectEndpoint;
             return new ServiceEndpoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpoint != null ? retObjectEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +273,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public WsdlContractConversionContext getContractConversionContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractConversionContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContractConversionContext");
+            retObjectContractConversionContext = classInstance.Get("ContractConversionContext");
+            JCObject val = (JCObject)retObjectContractConversionContext;
             return new WsdlContractConversionContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContractConversionContext != null ? retObjectContractConversionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +288,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public system.web.services.description.Binding getWsdlBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWsdlBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WsdlBinding");
+            retObjectWsdlBinding = classInstance.Get("WsdlBinding");
+            JCObject val = (JCObject)retObjectWsdlBinding;
             return new system.web.services.description.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWsdlBinding != null ? retObjectWsdlBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +303,14 @@ public class WsdlEndpointConversionContext extends NetObject  {
 
     public Port getWsdlPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWsdlPort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WsdlPort");
+            retObjectWsdlPort = classInstance.Get("WsdlPort");
+            JCObject val = (JCObject)retObjectWsdlPort;
             return new Port(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWsdlPort != null ? retObjectWsdlPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

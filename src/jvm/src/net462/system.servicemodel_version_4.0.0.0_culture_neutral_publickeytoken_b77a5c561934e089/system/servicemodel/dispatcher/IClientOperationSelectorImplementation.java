@@ -143,9 +143,13 @@ public class IClientOperationSelectorImplementation extends NetObject implements
     
     public java.lang.String SelectOperation(MethodBase method, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectOperation = null;
         try {
-            return (java.lang.String)classInstance.Invoke("SelectOperation", method == null ? null : method.getJCOInstance(), toObjectFromArray(parameters));
+            retObjectSelectOperation = classInstance.Invoke("SelectOperation", method == null ? null : method.getJCOInstance(), toObjectFromArray(parameters));
+            return (java.lang.String)retObjectSelectOperation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSelectOperation != null ? retObjectSelectOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,9 +161,13 @@ public class IClientOperationSelectorImplementation extends NetObject implements
     
     public boolean getAreParametersRequiredForSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreParametersRequiredForSelection = null;
         try {
-            return (boolean)classInstance.Get("AreParametersRequiredForSelection");
+            retObjectAreParametersRequiredForSelection = classInstance.Get("AreParametersRequiredForSelection");
+            return (boolean)retObjectAreParametersRequiredForSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreParametersRequiredForSelection != null ? retObjectAreParametersRequiredForSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

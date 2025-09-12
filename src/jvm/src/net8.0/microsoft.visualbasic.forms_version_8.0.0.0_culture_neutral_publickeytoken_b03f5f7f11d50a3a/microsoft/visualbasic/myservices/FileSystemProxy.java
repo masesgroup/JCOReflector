@@ -167,9 +167,13 @@ public class FileSystemProxy extends NetObject  {
     
     public boolean DirectoryExists(java.lang.String directory) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryExists = null;
         try {
-            return (boolean)classInstance.Invoke("DirectoryExists", directory);
+            retObjectDirectoryExists = classInstance.Invoke("DirectoryExists", directory);
+            return (boolean)retObjectDirectoryExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDirectoryExists != null ? retObjectDirectoryExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class FileSystemProxy extends NetObject  {
 
     public boolean FileExists(java.lang.String file) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileExists = null;
         try {
-            return (boolean)classInstance.Invoke("FileExists", file);
+            retObjectFileExists = classInstance.Invoke("FileExists", file);
+            return (boolean)retObjectFileExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFileExists != null ? retObjectFileExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,12 @@ public class FileSystemProxy extends NetObject  {
 
     public byte[] ReadAllBytes(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.globalization.CultureNotFoundException, system.io.IOException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAllBytes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadAllBytes", file);
+            retObjectReadAllBytes = classInstance.Invoke("ReadAllBytes", file);
+            JCObject resultingObjects = (JCObject)retObjectReadAllBytes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -199,6 +209,8 @@ public class FileSystemProxy extends NetObject  {
 				resultingArray[indexReadAllBytes] = (byte)resultingArrayList.get(indexReadAllBytes);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadAllBytes != null ? retObjectReadAllBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class FileSystemProxy extends NetObject  {
 
     public TextFieldParser OpenTextFieldParser(java.lang.String file, int... fieldWidths) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFieldParser = null;
         try {
-            JCObject objOpenTextFieldParser = (JCObject)classInstance.Invoke("OpenTextFieldParser", file, fieldWidths);
+            retObjectOpenTextFieldParser = classInstance.Invoke("OpenTextFieldParser", file, fieldWidths);
+            JCObject objOpenTextFieldParser = (JCObject)retObjectOpenTextFieldParser;
             return new TextFieldParser(objOpenTextFieldParser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFieldParser != null ? retObjectOpenTextFieldParser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class FileSystemProxy extends NetObject  {
 
     public TextFieldParser OpenTextFieldParser(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFieldParser = null;
         try {
-            JCObject objOpenTextFieldParser = (JCObject)classInstance.Invoke("OpenTextFieldParser", dupParam0, dupParam1.getJCRefOut());
+            retObjectOpenTextFieldParser = classInstance.Invoke("OpenTextFieldParser", dupParam0, dupParam1.getJCRefOut());
+            JCObject objOpenTextFieldParser = (JCObject)retObjectOpenTextFieldParser;
             return new TextFieldParser(objOpenTextFieldParser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFieldParser != null ? retObjectOpenTextFieldParser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +248,14 @@ public class FileSystemProxy extends NetObject  {
 
     public TextFieldParser OpenTextFieldParser(java.lang.String file, java.lang.String... delimiters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFieldParser = null;
         try {
-            JCObject objOpenTextFieldParser = (JCObject)classInstance.Invoke("OpenTextFieldParser", file, delimiters);
+            retObjectOpenTextFieldParser = classInstance.Invoke("OpenTextFieldParser", file, delimiters);
+            JCObject objOpenTextFieldParser = (JCObject)retObjectOpenTextFieldParser;
             return new TextFieldParser(objOpenTextFieldParser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFieldParser != null ? retObjectOpenTextFieldParser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +263,14 @@ public class FileSystemProxy extends NetObject  {
 
     public TextFieldParser OpenTextFieldParser(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.text.regularexpressions.RegexParseException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFieldParser = null;
         try {
-            JCObject objOpenTextFieldParser = (JCObject)classInstance.Invoke("OpenTextFieldParser", file);
+            retObjectOpenTextFieldParser = classInstance.Invoke("OpenTextFieldParser", file);
+            JCObject objOpenTextFieldParser = (JCObject)retObjectOpenTextFieldParser;
             return new TextFieldParser(objOpenTextFieldParser);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFieldParser != null ? retObjectOpenTextFieldParser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +278,14 @@ public class FileSystemProxy extends NetObject  {
 
     public DirectoryInfo GetDirectoryInfo(java.lang.String directory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectoryInfo = null;
         try {
-            JCObject objGetDirectoryInfo = (JCObject)classInstance.Invoke("GetDirectoryInfo", directory);
+            retObjectGetDirectoryInfo = classInstance.Invoke("GetDirectoryInfo", directory);
+            JCObject objGetDirectoryInfo = (JCObject)retObjectGetDirectoryInfo;
             return new DirectoryInfo(objGetDirectoryInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectoryInfo != null ? retObjectGetDirectoryInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +293,14 @@ public class FileSystemProxy extends NetObject  {
 
     public DriveInfo GetDriveInfo(java.lang.String drive) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDriveInfo = null;
         try {
-            JCObject objGetDriveInfo = (JCObject)classInstance.Invoke("GetDriveInfo", drive);
+            retObjectGetDriveInfo = classInstance.Invoke("GetDriveInfo", drive);
+            JCObject objGetDriveInfo = (JCObject)retObjectGetDriveInfo;
             return new DriveInfo(objGetDriveInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDriveInfo != null ? retObjectGetDriveInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +308,14 @@ public class FileSystemProxy extends NetObject  {
 
     public FileInfo GetFileInfo(java.lang.String file) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileInfo = null;
         try {
-            JCObject objGetFileInfo = (JCObject)classInstance.Invoke("GetFileInfo", file);
+            retObjectGetFileInfo = classInstance.Invoke("GetFileInfo", file);
+            JCObject objGetFileInfo = (JCObject)retObjectGetFileInfo;
             return new FileInfo(objGetFileInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileInfo != null ? retObjectGetFileInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +323,14 @@ public class FileSystemProxy extends NetObject  {
 
     public StreamReader OpenTextFileReader(java.lang.String file, Encoding encoding) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFileReader = null;
         try {
-            JCObject objOpenTextFileReader = (JCObject)classInstance.Invoke("OpenTextFileReader", file, encoding == null ? null : encoding.getJCOInstance());
+            retObjectOpenTextFileReader = classInstance.Invoke("OpenTextFileReader", file, encoding == null ? null : encoding.getJCOInstance());
+            JCObject objOpenTextFileReader = (JCObject)retObjectOpenTextFileReader;
             return new StreamReader(objOpenTextFileReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFileReader != null ? retObjectOpenTextFileReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +338,14 @@ public class FileSystemProxy extends NetObject  {
 
     public StreamReader OpenTextFileReader(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFileReader = null;
         try {
-            JCObject objOpenTextFileReader = (JCObject)classInstance.Invoke("OpenTextFileReader", file);
+            retObjectOpenTextFileReader = classInstance.Invoke("OpenTextFileReader", file);
+            JCObject objOpenTextFileReader = (JCObject)retObjectOpenTextFileReader;
             return new StreamReader(objOpenTextFileReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFileReader != null ? retObjectOpenTextFileReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +353,14 @@ public class FileSystemProxy extends NetObject  {
 
     public StreamWriter OpenTextFileWriter(java.lang.String file, boolean append, Encoding encoding) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFileWriter = null;
         try {
-            JCObject objOpenTextFileWriter = (JCObject)classInstance.Invoke("OpenTextFileWriter", file, append, encoding == null ? null : encoding.getJCOInstance());
+            retObjectOpenTextFileWriter = classInstance.Invoke("OpenTextFileWriter", file, append, encoding == null ? null : encoding.getJCOInstance());
+            JCObject objOpenTextFileWriter = (JCObject)retObjectOpenTextFileWriter;
             return new StreamWriter(objOpenTextFileWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFileWriter != null ? retObjectOpenTextFileWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +368,14 @@ public class FileSystemProxy extends NetObject  {
 
     public StreamWriter OpenTextFileWriter(java.lang.String file, boolean append) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenTextFileWriter = null;
         try {
-            JCObject objOpenTextFileWriter = (JCObject)classInstance.Invoke("OpenTextFileWriter", file, append);
+            retObjectOpenTextFileWriter = classInstance.Invoke("OpenTextFileWriter", file, append);
+            JCObject objOpenTextFileWriter = (JCObject)retObjectOpenTextFileWriter;
             return new StreamWriter(objOpenTextFileWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFileWriter != null ? retObjectOpenTextFileWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +383,13 @@ public class FileSystemProxy extends NetObject  {
 
     public java.lang.String CombinePath(java.lang.String baseDirectory, java.lang.String relativePath) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCombinePath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("CombinePath", baseDirectory, relativePath);
+            retObjectCombinePath = classInstance.Invoke("CombinePath", baseDirectory, relativePath);
+            return (java.lang.String)retObjectCombinePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombinePath != null ? retObjectCombinePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +397,13 @@ public class FileSystemProxy extends NetObject  {
 
     public java.lang.String GetName(java.lang.String path) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", path);
+            retObjectGetName = classInstance.Invoke("GetName", path);
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +411,13 @@ public class FileSystemProxy extends NetObject  {
 
     public java.lang.String GetParentPath(java.lang.String path) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetParentPath", path);
+            retObjectGetParentPath = classInstance.Invoke("GetParentPath", path);
+            return (java.lang.String)retObjectGetParentPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetParentPath != null ? retObjectGetParentPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +425,13 @@ public class FileSystemProxy extends NetObject  {
 
     public java.lang.String GetTempFileName() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTempFileName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTempFileName");
+            retObjectGetTempFileName = classInstance.Invoke("GetTempFileName");
+            return (java.lang.String)retObjectGetTempFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTempFileName != null ? retObjectGetTempFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +439,13 @@ public class FileSystemProxy extends NetObject  {
 
     public java.lang.String ReadAllText(java.lang.String file, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAllText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadAllText", file, encoding == null ? null : encoding.getJCOInstance());
+            retObjectReadAllText = classInstance.Invoke("ReadAllText", file, encoding == null ? null : encoding.getJCOInstance());
+            return (java.lang.String)retObjectReadAllText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadAllText != null ? retObjectReadAllText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +453,13 @@ public class FileSystemProxy extends NetObject  {
 
     public java.lang.String ReadAllText(java.lang.String file) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAllText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadAllText", file);
+            retObjectReadAllText = classInstance.Invoke("ReadAllText", file);
+            return (java.lang.String)retObjectReadAllText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadAllText != null ? retObjectReadAllText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,7 +467,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, boolean overwrite) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyDirectory", sourceDirectoryName, destinationDirectoryName, overwrite);
         } catch (JCNativeException jcne) {
@@ -397,7 +477,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyDirectory", sourceDirectoryName, destinationDirectoryName, showUI == null ? null : showUI.getJCOInstance(), onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,7 +487,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyDirectory", sourceDirectoryName, destinationDirectoryName, showUI == null ? null : showUI.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,7 +497,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyDirectory", sourceDirectoryName, destinationDirectoryName);
         } catch (JCNativeException jcne) {
@@ -427,7 +507,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFile", sourceFileName, destinationFileName, overwrite);
         } catch (JCNativeException jcne) {
@@ -437,7 +517,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFile", sourceFileName, destinationFileName, showUI == null ? null : showUI.getJCOInstance(), onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -447,7 +527,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFile", sourceFileName, destinationFileName, showUI == null ? null : showUI.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -457,7 +537,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CopyFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFile", sourceFileName, destinationFileName);
         } catch (JCNativeException jcne) {
@@ -467,7 +547,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void CreateDirectory(java.lang.String directory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateDirectory", directory);
         } catch (JCNativeException jcne) {
@@ -477,7 +557,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void DeleteDirectory(java.lang.String directory, DeleteDirectoryOption onDirectoryNotEmpty) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteDirectory", directory, onDirectoryNotEmpty == null ? null : onDirectoryNotEmpty.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -487,7 +567,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void DeleteDirectory(java.lang.String directory, UIOption showUI, RecycleOption recycle, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteDirectory", directory, showUI == null ? null : showUI.getJCOInstance(), recycle == null ? null : recycle.getJCOInstance(), onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -497,7 +577,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void DeleteDirectory(java.lang.String directory, UIOption showUI, RecycleOption recycle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteDirectory", directory, showUI == null ? null : showUI.getJCOInstance(), recycle == null ? null : recycle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -507,7 +587,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void DeleteFile(java.lang.String file, UIOption showUI, RecycleOption recycle, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteFile", file, showUI == null ? null : showUI.getJCOInstance(), recycle == null ? null : recycle.getJCOInstance(), onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -517,7 +597,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void DeleteFile(java.lang.String file, UIOption showUI, RecycleOption recycle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteFile", file, showUI == null ? null : showUI.getJCOInstance(), recycle == null ? null : recycle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -527,7 +607,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void DeleteFile(java.lang.String file) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteFile", file);
         } catch (JCNativeException jcne) {
@@ -537,7 +617,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, boolean overwrite) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveDirectory", sourceDirectoryName, destinationDirectoryName, overwrite);
         } catch (JCNativeException jcne) {
@@ -547,7 +627,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveDirectory", sourceDirectoryName, destinationDirectoryName, showUI == null ? null : showUI.getJCOInstance(), onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -557,7 +637,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName, UIOption showUI) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.io.DirectoryNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveDirectory", sourceDirectoryName, destinationDirectoryName, showUI == null ? null : showUI.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -567,7 +647,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationDirectoryName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.DirectoryNotFoundException, system.io.IOException, system.OperationCanceledException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveDirectory", sourceDirectoryName, destinationDirectoryName);
         } catch (JCNativeException jcne) {
@@ -577,7 +657,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveFile", sourceFileName, destinationFileName, overwrite);
         } catch (JCNativeException jcne) {
@@ -587,7 +667,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI, UICancelOption onUserCancel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveFile", sourceFileName, destinationFileName, showUI == null ? null : showUI.getJCOInstance(), onUserCancel == null ? null : onUserCancel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -597,7 +677,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName, UIOption showUI) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveFile", sourceFileName, destinationFileName, showUI == null ? null : showUI.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -607,7 +687,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void MoveFile(java.lang.String sourceFileName, java.lang.String destinationFileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.IOException, system.NotSupportedException, system.OperationCanceledException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveFile", sourceFileName, destinationFileName);
         } catch (JCNativeException jcne) {
@@ -617,7 +697,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void RenameDirectory(java.lang.String directory, java.lang.String newName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException, system.io.DirectoryNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenameDirectory", directory, newName);
         } catch (JCNativeException jcne) {
@@ -627,7 +707,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void RenameFile(java.lang.String file, java.lang.String newName) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenameFile", file, newName);
         } catch (JCNativeException jcne) {
@@ -637,7 +717,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void WriteAllBytes(java.lang.String file, byte[] data, boolean append) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAllBytes", file, data, append);
         } catch (JCNativeException jcne) {
@@ -647,7 +727,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void WriteAllBytes(java.lang.String dupParam0, JCORefOut dupParam1, boolean dupParam2) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAllBytes", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
@@ -657,7 +737,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void WriteAllText(java.lang.String file, java.lang.String text, boolean append, Encoding encoding) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAllText", file, text, append, encoding == null ? null : encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -667,7 +747,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void WriteAllText(java.lang.String file, java.lang.String text, boolean append) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAllText", file, text, append);
         } catch (JCNativeException jcne) {
@@ -681,10 +761,14 @@ public class FileSystemProxy extends NetObject  {
     
     public SpecialDirectoriesProxy getSpecialDirectories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpecialDirectories = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpecialDirectories");
+            retObjectSpecialDirectories = classInstance.Get("SpecialDirectories");
+            JCObject val = (JCObject)retObjectSpecialDirectories;
             return new SpecialDirectoriesProxy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpecialDirectories != null ? retObjectSpecialDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -692,9 +776,13 @@ public class FileSystemProxy extends NetObject  {
 
     public java.lang.String getCurrentDirectory() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrentDirectory");
+            retObjectCurrentDirectory = classInstance.Get("CurrentDirectory");
+            return (java.lang.String)retObjectCurrentDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentDirectory != null ? retObjectCurrentDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,7 +790,7 @@ public class FileSystemProxy extends NetObject  {
 
     public void setCurrentDirectory(java.lang.String CurrentDirectory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentDirectory", CurrentDirectory);
         } catch (JCNativeException jcne) {

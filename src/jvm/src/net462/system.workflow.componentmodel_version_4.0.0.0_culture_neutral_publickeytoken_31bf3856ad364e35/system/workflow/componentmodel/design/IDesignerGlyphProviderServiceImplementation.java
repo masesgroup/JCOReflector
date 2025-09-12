@@ -144,7 +144,7 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
     
     public void AddGlyphProvider(IDesignerGlyphProvider glyphProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddGlyphProvider", glyphProvider == null ? null : glyphProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
 
     public void RemoveGlyphProvider(IDesignerGlyphProvider glyphProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveGlyphProvider", glyphProvider == null ? null : glyphProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -144,9 +144,13 @@ public class IValueSerializableExpressionImplementation extends NetObject implem
     
     public boolean CanConvertToString(IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertToString = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertToString", context == null ? null : context.getJCOInstance());
+            retObjectCanConvertToString = classInstance.Invoke("CanConvertToString", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanConvertToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertToString != null ? retObjectCanConvertToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,9 +158,13 @@ public class IValueSerializableExpressionImplementation extends NetObject implem
 
     public java.lang.String ConvertToString(IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ConvertToString", context == null ? null : context.getJCOInstance());
+            retObjectConvertToString = classInstance.Invoke("ConvertToString", context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectConvertToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectConvertToString != null ? retObjectConvertToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -188,10 +188,14 @@ public class X509CertificateStoreTokenResolver extends SecurityTokenResolver  {
     
     public StoreLocation getStoreLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoreLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StoreLocation");
+            retObjectStoreLocation = classInstance.Get("StoreLocation");
+            JCObject val = (JCObject)retObjectStoreLocation;
             return new StoreLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStoreLocation != null ? retObjectStoreLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +203,13 @@ public class X509CertificateStoreTokenResolver extends SecurityTokenResolver  {
 
     public java.lang.String getStoreName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoreName = null;
         try {
-            return (java.lang.String)classInstance.Get("StoreName");
+            retObjectStoreName = classInstance.Get("StoreName");
+            return (java.lang.String)retObjectStoreName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStoreName != null ? retObjectStoreName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

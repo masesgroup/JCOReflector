@@ -158,9 +158,13 @@ public class EventDescriptor extends MemberDescriptor  {
     
     public boolean getIsMulticast() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMulticast = null;
         try {
-            return (boolean)classInstance.Get("IsMulticast");
+            retObjectIsMulticast = classInstance.Get("IsMulticast");
+            return (boolean)retObjectIsMulticast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMulticast != null ? retObjectIsMulticast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class EventDescriptor extends MemberDescriptor  {
 
     public NetType getComponentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ComponentType");
+            retObjectComponentType = classInstance.Get("ComponentType");
+            JCObject val = (JCObject)retObjectComponentType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponentType != null ? retObjectComponentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class EventDescriptor extends MemberDescriptor  {
 
     public NetType getEventType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventType");
+            retObjectEventType = classInstance.Get("EventType");
+            JCObject val = (JCObject)retObjectEventType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventType != null ? retObjectEventType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,10 +159,14 @@ public class LoopExpression extends Expression  {
     
     public LoopExpression Update(LabelTarget breakLabel, LabelTarget continueLabel, Expression body) throws Throwable, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", breakLabel == null ? null : breakLabel.getJCOInstance(), continueLabel == null ? null : continueLabel.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", breakLabel == null ? null : breakLabel.getJCOInstance(), continueLabel == null ? null : continueLabel.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            JCObject objUpdate = (JCObject)retObjectUpdate;
             return new LoopExpression(objUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class LoopExpression extends Expression  {
     
     public Expression getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class LoopExpression extends Expression  {
 
     public LabelTarget getBreakLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakLabel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BreakLabel");
+            retObjectBreakLabel = classInstance.Get("BreakLabel");
+            JCObject val = (JCObject)retObjectBreakLabel;
             return new LabelTarget(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreakLabel != null ? retObjectBreakLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class LoopExpression extends Expression  {
 
     public LabelTarget getContinueLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueLabel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContinueLabel");
+            retObjectContinueLabel = classInstance.Get("ContinueLabel");
+            JCObject val = (JCObject)retObjectContinueLabel;
             return new LabelTarget(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueLabel != null ? retObjectContinueLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

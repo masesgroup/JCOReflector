@@ -190,9 +190,13 @@ public class ContentElement extends DependencyObject  {
     
     public boolean CaptureMouse() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptureMouse = null;
         try {
-            return (boolean)classInstance.Invoke("CaptureMouse");
+            retObjectCaptureMouse = classInstance.Invoke("CaptureMouse");
+            return (boolean)retObjectCaptureMouse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCaptureMouse != null ? retObjectCaptureMouse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean CaptureStylus() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptureStylus = null;
         try {
-            return (boolean)classInstance.Invoke("CaptureStylus");
+            retObjectCaptureStylus = classInstance.Invoke("CaptureStylus");
+            return (boolean)retObjectCaptureStylus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCaptureStylus != null ? retObjectCaptureStylus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +218,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean CaptureTouch(TouchDevice touchDevice) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptureTouch = null;
         try {
-            return (boolean)classInstance.Invoke("CaptureTouch", touchDevice == null ? null : touchDevice.getJCOInstance());
+            retObjectCaptureTouch = classInstance.Invoke("CaptureTouch", touchDevice == null ? null : touchDevice.getJCOInstance());
+            return (boolean)retObjectCaptureTouch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCaptureTouch != null ? retObjectCaptureTouch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +232,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean Focus() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocus = null;
         try {
-            return (boolean)classInstance.Invoke("Focus");
+            retObjectFocus = classInstance.Invoke("Focus");
+            return (boolean)retObjectFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFocus != null ? retObjectFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +246,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean MoveFocus(TraversalRequest request) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveFocus = null;
         try {
-            return (boolean)classInstance.Invoke("MoveFocus", request == null ? null : request.getJCOInstance());
+            retObjectMoveFocus = classInstance.Invoke("MoveFocus", request == null ? null : request.getJCOInstance());
+            return (boolean)retObjectMoveFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveFocus != null ? retObjectMoveFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +260,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean ReleaseTouchCapture(TouchDevice touchDevice) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReleaseTouchCapture = null;
         try {
-            return (boolean)classInstance.Invoke("ReleaseTouchCapture", touchDevice == null ? null : touchDevice.getJCOInstance());
+            retObjectReleaseTouchCapture = classInstance.Invoke("ReleaseTouchCapture", touchDevice == null ? null : touchDevice.getJCOInstance());
+            return (boolean)retObjectReleaseTouchCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReleaseTouchCapture != null ? retObjectReleaseTouchCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +274,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean ShouldSerializeCommandBindings() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeCommandBindings = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeCommandBindings");
+            retObjectShouldSerializeCommandBindings = classInstance.Invoke("ShouldSerializeCommandBindings");
+            return (boolean)retObjectShouldSerializeCommandBindings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeCommandBindings != null ? retObjectShouldSerializeCommandBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +288,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean ShouldSerializeInputBindings() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeInputBindings = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeInputBindings");
+            retObjectShouldSerializeInputBindings = classInstance.Invoke("ShouldSerializeInputBindings");
+            return (boolean)retObjectShouldSerializeInputBindings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeInputBindings != null ? retObjectShouldSerializeInputBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +302,14 @@ public class ContentElement extends DependencyObject  {
 
     public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnimationBaseValue = null;
         try {
-            JCObject objGetAnimationBaseValue = (JCObject)classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
+            retObjectGetAnimationBaseValue = classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
+            JCObject objGetAnimationBaseValue = (JCObject)retObjectGetAnimationBaseValue;
             return new NetObject(objGetAnimationBaseValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnimationBaseValue != null ? retObjectGetAnimationBaseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +317,14 @@ public class ContentElement extends DependencyObject  {
 
     public DependencyObject PredictFocus(FocusNavigationDirection direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPredictFocus = null;
         try {
-            JCObject objPredictFocus = (JCObject)classInstance.Invoke("PredictFocus", direction == null ? null : direction.getJCOInstance());
+            retObjectPredictFocus = classInstance.Invoke("PredictFocus", direction == null ? null : direction.getJCOInstance());
+            JCObject objPredictFocus = (JCObject)retObjectPredictFocus;
             return new DependencyObject(objPredictFocus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPredictFocus != null ? retObjectPredictFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +332,7 @@ public class ContentElement extends DependencyObject  {
 
     public void AddToEventRoute(EventRoute route, RoutedEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddToEventRoute", route == null ? null : route.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +342,7 @@ public class ContentElement extends DependencyObject  {
 
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock, HandoffBehavior handoffBehavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.MulticastNotSupportedException, system.windows.media.animation.AnimationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyAnimationClock", dp == null ? null : dp.getJCOInstance(), clock == null ? null : clock.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,7 +352,7 @@ public class ContentElement extends DependencyObject  {
 
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyAnimationClock", dp == null ? null : dp.getJCOInstance(), clock == null ? null : clock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,7 +362,7 @@ public class ContentElement extends DependencyObject  {
 
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation, HandoffBehavior handoffBehavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.windows.media.animation.AnimationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAnimation", dp == null ? null : dp.getJCOInstance(), animation == null ? null : animation.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -332,7 +372,7 @@ public class ContentElement extends DependencyObject  {
 
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.windows.media.animation.AnimationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAnimation", dp == null ? null : dp.getJCOInstance(), animation == null ? null : animation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +382,7 @@ public class ContentElement extends DependencyObject  {
 
     public void RaiseEvent(RoutedEventArgs e) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseEvent", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,7 +392,7 @@ public class ContentElement extends DependencyObject  {
 
     public void ReleaseAllTouchCaptures() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseAllTouchCaptures");
         } catch (JCNativeException jcne) {
@@ -362,7 +402,7 @@ public class ContentElement extends DependencyObject  {
 
     public void ReleaseMouseCapture() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseMouseCapture");
         } catch (JCNativeException jcne) {
@@ -372,7 +412,7 @@ public class ContentElement extends DependencyObject  {
 
     public void ReleaseStylusCapture() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseStylusCapture");
         } catch (JCNativeException jcne) {
@@ -386,9 +426,13 @@ public class ContentElement extends DependencyObject  {
     
     public boolean getAllowDrop() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowDrop = null;
         try {
-            return (boolean)classInstance.Get("AllowDrop");
+            retObjectAllowDrop = classInstance.Get("AllowDrop");
+            return (boolean)retObjectAllowDrop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowDrop != null ? retObjectAllowDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +440,7 @@ public class ContentElement extends DependencyObject  {
 
     public void setAllowDrop(boolean AllowDrop) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowDrop", AllowDrop);
         } catch (JCNativeException jcne) {
@@ -406,9 +450,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getAreAnyTouchesCaptured() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAnyTouchesCaptured = null;
         try {
-            return (boolean)classInstance.Get("AreAnyTouchesCaptured");
+            retObjectAreAnyTouchesCaptured = classInstance.Get("AreAnyTouchesCaptured");
+            return (boolean)retObjectAreAnyTouchesCaptured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAnyTouchesCaptured != null ? retObjectAreAnyTouchesCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,9 +464,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getAreAnyTouchesCapturedWithin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAnyTouchesCapturedWithin = null;
         try {
-            return (boolean)classInstance.Get("AreAnyTouchesCapturedWithin");
+            retObjectAreAnyTouchesCapturedWithin = classInstance.Get("AreAnyTouchesCapturedWithin");
+            return (boolean)retObjectAreAnyTouchesCapturedWithin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAnyTouchesCapturedWithin != null ? retObjectAreAnyTouchesCapturedWithin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,9 +478,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getAreAnyTouchesDirectlyOver() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAnyTouchesDirectlyOver = null;
         try {
-            return (boolean)classInstance.Get("AreAnyTouchesDirectlyOver");
+            retObjectAreAnyTouchesDirectlyOver = classInstance.Get("AreAnyTouchesDirectlyOver");
+            return (boolean)retObjectAreAnyTouchesDirectlyOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAnyTouchesDirectlyOver != null ? retObjectAreAnyTouchesDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,9 +492,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getAreAnyTouchesOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreAnyTouchesOver = null;
         try {
-            return (boolean)classInstance.Get("AreAnyTouchesOver");
+            retObjectAreAnyTouchesOver = classInstance.Get("AreAnyTouchesOver");
+            return (boolean)retObjectAreAnyTouchesOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAreAnyTouchesOver != null ? retObjectAreAnyTouchesOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,9 +506,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getFocusable() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusable = null;
         try {
-            return (boolean)classInstance.Get("Focusable");
+            retObjectFocusable = classInstance.Get("Focusable");
+            return (boolean)retObjectFocusable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFocusable != null ? retObjectFocusable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +520,7 @@ public class ContentElement extends DependencyObject  {
 
     public void setFocusable(boolean Focusable) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Focusable", Focusable);
         } catch (JCNativeException jcne) {
@@ -466,9 +530,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getHasAnimatedProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAnimatedProperties = null;
         try {
-            return (boolean)classInstance.Get("HasAnimatedProperties");
+            retObjectHasAnimatedProperties = classInstance.Get("HasAnimatedProperties");
+            return (boolean)retObjectHasAnimatedProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAnimatedProperties != null ? retObjectHasAnimatedProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,9 +544,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            retObjectIsEnabled = classInstance.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +558,7 @@ public class ContentElement extends DependencyObject  {
 
     public void setIsEnabled(boolean IsEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEnabled", IsEnabled);
         } catch (JCNativeException jcne) {
@@ -496,9 +568,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsFocused() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFocused = null;
         try {
-            return (boolean)classInstance.Get("IsFocused");
+            retObjectIsFocused = classInstance.Get("IsFocused");
+            return (boolean)retObjectIsFocused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFocused != null ? retObjectIsFocused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,9 +582,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsInputMethodEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInputMethodEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsInputMethodEnabled");
+            retObjectIsInputMethodEnabled = classInstance.Get("IsInputMethodEnabled");
+            return (boolean)retObjectIsInputMethodEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInputMethodEnabled != null ? retObjectIsInputMethodEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,9 +596,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsKeyboardFocused() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyboardFocused = null;
         try {
-            return (boolean)classInstance.Get("IsKeyboardFocused");
+            retObjectIsKeyboardFocused = classInstance.Get("IsKeyboardFocused");
+            return (boolean)retObjectIsKeyboardFocused;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKeyboardFocused != null ? retObjectIsKeyboardFocused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,9 +610,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsKeyboardFocusWithin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyboardFocusWithin = null;
         try {
-            return (boolean)classInstance.Get("IsKeyboardFocusWithin");
+            retObjectIsKeyboardFocusWithin = classInstance.Get("IsKeyboardFocusWithin");
+            return (boolean)retObjectIsKeyboardFocusWithin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKeyboardFocusWithin != null ? retObjectIsKeyboardFocusWithin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,9 +624,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsMouseCaptured() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseCaptured = null;
         try {
-            return (boolean)classInstance.Get("IsMouseCaptured");
+            retObjectIsMouseCaptured = classInstance.Get("IsMouseCaptured");
+            return (boolean)retObjectIsMouseCaptured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseCaptured != null ? retObjectIsMouseCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,9 +638,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsMouseCaptureWithin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseCaptureWithin = null;
         try {
-            return (boolean)classInstance.Get("IsMouseCaptureWithin");
+            retObjectIsMouseCaptureWithin = classInstance.Get("IsMouseCaptureWithin");
+            return (boolean)retObjectIsMouseCaptureWithin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseCaptureWithin != null ? retObjectIsMouseCaptureWithin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,9 +652,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsMouseDirectlyOver() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseDirectlyOver = null;
         try {
-            return (boolean)classInstance.Get("IsMouseDirectlyOver");
+            retObjectIsMouseDirectlyOver = classInstance.Get("IsMouseDirectlyOver");
+            return (boolean)retObjectIsMouseDirectlyOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseDirectlyOver != null ? retObjectIsMouseDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,9 +666,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsMouseOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMouseOver = null;
         try {
-            return (boolean)classInstance.Get("IsMouseOver");
+            retObjectIsMouseOver = classInstance.Get("IsMouseOver");
+            return (boolean)retObjectIsMouseOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMouseOver != null ? retObjectIsMouseOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,9 +680,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsStylusCaptured() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStylusCaptured = null;
         try {
-            return (boolean)classInstance.Get("IsStylusCaptured");
+            retObjectIsStylusCaptured = classInstance.Get("IsStylusCaptured");
+            return (boolean)retObjectIsStylusCaptured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStylusCaptured != null ? retObjectIsStylusCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,9 +694,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsStylusCaptureWithin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStylusCaptureWithin = null;
         try {
-            return (boolean)classInstance.Get("IsStylusCaptureWithin");
+            retObjectIsStylusCaptureWithin = classInstance.Get("IsStylusCaptureWithin");
+            return (boolean)retObjectIsStylusCaptureWithin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStylusCaptureWithin != null ? retObjectIsStylusCaptureWithin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,9 +708,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsStylusDirectlyOver() throws Throwable, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStylusDirectlyOver = null;
         try {
-            return (boolean)classInstance.Get("IsStylusDirectlyOver");
+            retObjectIsStylusDirectlyOver = classInstance.Get("IsStylusDirectlyOver");
+            return (boolean)retObjectIsStylusDirectlyOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStylusDirectlyOver != null ? retObjectIsStylusDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,9 +722,13 @@ public class ContentElement extends DependencyObject  {
 
     public boolean getIsStylusOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStylusOver = null;
         try {
-            return (boolean)classInstance.Get("IsStylusOver");
+            retObjectIsStylusOver = classInstance.Get("IsStylusOver");
+            return (boolean)retObjectIsStylusOver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStylusOver != null ? retObjectIsStylusOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,10 +736,14 @@ public class ContentElement extends DependencyObject  {
 
     public CommandBindingCollection getCommandBindings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandBindings");
+            retObjectCommandBindings = classInstance.Get("CommandBindings");
+            JCObject val = (JCObject)retObjectCommandBindings;
             return new CommandBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandBindings != null ? retObjectCommandBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,10 +751,14 @@ public class ContentElement extends DependencyObject  {
 
     public InputBindingCollection getInputBindings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputBindings");
+            retObjectInputBindings = classInstance.Get("InputBindings");
+            JCObject val = (JCObject)retObjectInputBindings;
             return new InputBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputBindings != null ? retObjectInputBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,7 +771,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addFocusableChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FocusableChanged", handler);
         } catch (JCNativeException jcne) {
@@ -653,7 +781,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeFocusableChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FocusableChanged", handler);
         } catch (JCNativeException jcne) {
@@ -663,7 +791,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsEnabledChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsEnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -673,7 +801,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsEnabledChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsEnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -683,7 +811,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsKeyboardFocusedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsKeyboardFocusedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -693,7 +821,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsKeyboardFocusedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsKeyboardFocusedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -703,7 +831,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsKeyboardFocusWithinChanged", handler);
         } catch (JCNativeException jcne) {
@@ -713,7 +841,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsKeyboardFocusWithinChanged", handler);
         } catch (JCNativeException jcne) {
@@ -723,7 +851,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsMouseCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsMouseCapturedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -733,7 +861,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsMouseCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsMouseCapturedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -743,7 +871,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsMouseCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsMouseCaptureWithinChanged", handler);
         } catch (JCNativeException jcne) {
@@ -753,7 +881,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsMouseCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsMouseCaptureWithinChanged", handler);
         } catch (JCNativeException jcne) {
@@ -763,7 +891,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsMouseDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsMouseDirectlyOverChanged", handler);
         } catch (JCNativeException jcne) {
@@ -773,7 +901,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsMouseDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsMouseDirectlyOverChanged", handler);
         } catch (JCNativeException jcne) {
@@ -783,7 +911,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsStylusCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsStylusCapturedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -793,7 +921,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsStylusCapturedChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsStylusCapturedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -803,7 +931,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsStylusCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsStylusCaptureWithinChanged", handler);
         } catch (JCNativeException jcne) {
@@ -813,7 +941,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsStylusCaptureWithinChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsStylusCaptureWithinChanged", handler);
         } catch (JCNativeException jcne) {
@@ -823,7 +951,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addIsStylusDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsStylusDirectlyOverChanged", handler);
         } catch (JCNativeException jcne) {
@@ -833,7 +961,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeIsStylusDirectlyOverChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsStylusDirectlyOverChanged", handler);
         } catch (JCNativeException jcne) {
@@ -843,7 +971,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -853,7 +981,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -863,7 +991,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -873,7 +1001,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -883,7 +1011,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -893,7 +1021,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -903,7 +1031,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Drop", handler);
         } catch (JCNativeException jcne) {
@@ -913,7 +1041,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Drop", handler);
         } catch (JCNativeException jcne) {
@@ -923,7 +1051,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewDragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -933,7 +1061,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewDragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -943,7 +1071,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewDragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -953,7 +1081,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewDragLeave(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewDragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -963,7 +1091,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewDragOver", handler);
         } catch (JCNativeException jcne) {
@@ -973,7 +1101,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewDragOver", handler);
         } catch (JCNativeException jcne) {
@@ -983,7 +1111,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewDrop", handler);
         } catch (JCNativeException jcne) {
@@ -993,7 +1121,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewDrop", handler);
         } catch (JCNativeException jcne) {
@@ -1003,7 +1131,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1013,7 +1141,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1023,7 +1151,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewGiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1033,7 +1161,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewGiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1043,7 +1171,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1053,7 +1181,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1063,7 +1191,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1073,7 +1201,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1083,7 +1211,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewGotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1093,7 +1221,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewGotKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewGotKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1103,7 +1231,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewLostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1113,7 +1241,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewLostKeyboardFocus(KeyboardFocusChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewLostKeyboardFocus", handler);
         } catch (JCNativeException jcne) {
@@ -1123,7 +1251,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -1133,7 +1261,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -1143,7 +1271,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -1153,7 +1281,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -1163,7 +1291,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewKeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -1173,7 +1301,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewKeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -1183,7 +1311,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewKeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -1193,7 +1321,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewKeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -1203,7 +1331,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1213,7 +1341,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1223,7 +1351,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1233,7 +1361,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1243,7 +1371,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1253,7 +1381,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1263,7 +1391,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1273,7 +1401,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1283,7 +1411,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1293,7 +1421,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1303,7 +1431,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -1313,7 +1441,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -1323,7 +1451,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1333,7 +1461,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1343,7 +1471,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1353,7 +1481,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseLeftButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseLeftButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1363,7 +1491,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1373,7 +1501,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseLeftButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseLeftButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1383,7 +1511,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1393,7 +1521,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseRightButtonDown(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseRightButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1403,7 +1531,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1413,7 +1541,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseRightButtonUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseRightButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1423,7 +1551,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -1433,7 +1561,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseUp(MouseButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -1443,7 +1571,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1453,7 +1581,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeGotMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1463,7 +1591,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1473,7 +1601,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeLostMouseCapture(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostMouseCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1483,7 +1611,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1493,7 +1621,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseEnter(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1503,7 +1631,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1513,7 +1641,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseLeave(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1523,7 +1651,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1533,7 +1661,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1543,7 +1671,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1553,7 +1681,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1563,7 +1691,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -1573,7 +1701,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -1583,7 +1711,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewMouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -1593,7 +1721,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewMouseWheel(MouseWheelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewMouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -1603,7 +1731,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addQueryCursor(QueryCursorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryCursor", handler);
         } catch (JCNativeException jcne) {
@@ -1613,7 +1741,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeQueryCursor(QueryCursorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryCursor", handler);
         } catch (JCNativeException jcne) {
@@ -1623,7 +1751,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1633,7 +1761,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1643,7 +1771,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1653,7 +1781,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1663,7 +1791,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1673,7 +1801,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusButtonDown(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusButtonDown", handler);
         } catch (JCNativeException jcne) {
@@ -1683,7 +1811,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1693,7 +1821,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusButtonUp(StylusButtonEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusButtonUp", handler);
         } catch (JCNativeException jcne) {
@@ -1703,7 +1831,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -1713,7 +1841,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -1723,7 +1851,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -1733,7 +1861,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusDown(StylusDownEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusDown", handler);
         } catch (JCNativeException jcne) {
@@ -1743,7 +1871,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1753,7 +1881,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeGotStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1763,7 +1891,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1773,7 +1901,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeLostStylusCapture(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostStylusCapture", handler);
         } catch (JCNativeException jcne) {
@@ -1783,7 +1911,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1793,7 +1921,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1803,7 +1931,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1813,7 +1941,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1823,7 +1951,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1833,7 +1961,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1843,7 +1971,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -1853,7 +1981,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -1863,7 +1991,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -1873,7 +2001,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -1883,7 +2011,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1893,7 +2021,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusEnter(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1903,7 +2031,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1913,7 +2041,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusInAirMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusInAirMove", handler);
         } catch (JCNativeException jcne) {
@@ -1923,7 +2051,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1933,7 +2061,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusInRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusInRange", handler);
         } catch (JCNativeException jcne) {
@@ -1943,7 +2071,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1953,7 +2081,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusLeave(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1963,7 +2091,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1973,7 +2101,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusMove(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusMove", handler);
         } catch (JCNativeException jcne) {
@@ -1983,7 +2111,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -1993,7 +2121,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusOutOfRange(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusOutOfRange", handler);
         } catch (JCNativeException jcne) {
@@ -2003,7 +2131,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -2013,7 +2141,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusUp(StylusEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusUp", handler);
         } catch (JCNativeException jcne) {
@@ -2023,7 +2151,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewStylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -2033,7 +2161,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewStylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -2043,7 +2171,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -2053,7 +2181,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeStylusSystemGesture(StylusSystemGestureEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StylusSystemGesture", handler);
         } catch (JCNativeException jcne) {
@@ -2063,7 +2191,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewTextInput", handler);
         } catch (JCNativeException jcne) {
@@ -2073,7 +2201,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewTextInput", handler);
         } catch (JCNativeException jcne) {
@@ -2083,7 +2211,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextInput", handler);
         } catch (JCNativeException jcne) {
@@ -2093,7 +2221,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeTextInput(TextCompositionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextInput", handler);
         } catch (JCNativeException jcne) {
@@ -2103,7 +2231,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addPreviewQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewQueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -2113,7 +2241,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removePreviewQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewQueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -2123,7 +2251,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -2133,7 +2261,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -2143,7 +2271,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addGotFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotFocus", handler);
         } catch (JCNativeException jcne) {
@@ -2153,7 +2281,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeGotFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotFocus", handler);
         } catch (JCNativeException jcne) {
@@ -2163,7 +2291,7 @@ public class ContentElement extends DependencyObject  {
 
     public void addLostFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostFocus", handler);
         } catch (JCNativeException jcne) {
@@ -2173,7 +2301,7 @@ public class ContentElement extends DependencyObject  {
 
     public void removeLostFocus(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostFocus", handler);
         } catch (JCNativeException jcne) {

@@ -142,10 +142,14 @@ public class IFormatProviderImplementation extends NetObject implements IFormatP
     
     public NetObject GetFormat(NetType formatType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFormat = null;
         try {
-            JCObject objGetFormat = (JCObject)classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            retObjectGetFormat = classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            JCObject objGetFormat = (JCObject)retObjectGetFormat;
             return new NetObject(objGetFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFormat != null ? retObjectGetFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -155,10 +155,14 @@ public class ModelService extends NetObject  {
     
     public ModelItem FromName(ModelItem scope, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromName = null;
         try {
-            JCObject objFromName = (JCObject)classInstance.Invoke("FromName", scope == null ? null : scope.getJCOInstance(), name);
+            retObjectFromName = classInstance.Invoke("FromName", scope == null ? null : scope.getJCOInstance(), name);
+            JCObject objFromName = (JCObject)retObjectFromName;
             return new ModelItem(objFromName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromName != null ? retObjectFromName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ModelService extends NetObject  {
 
     public ModelItem FromName(ModelItem scope, java.lang.String name, StringComparison comparison) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromName = null;
         try {
-            JCObject objFromName = (JCObject)classInstance.Invoke("FromName", scope == null ? null : scope.getJCOInstance(), name, comparison == null ? null : comparison.getJCOInstance());
+            retObjectFromName = classInstance.Invoke("FromName", scope == null ? null : scope.getJCOInstance(), name, comparison == null ? null : comparison.getJCOInstance());
+            JCObject objFromName = (JCObject)retObjectFromName;
             return new ModelItem(objFromName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromName != null ? retObjectFromName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class ModelService extends NetObject  {
     
     public ModelItem getRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Root");
+            retObjectRoot = classInstance.Get("Root");
+            JCObject val = (JCObject)retObjectRoot;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoot != null ? retObjectRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

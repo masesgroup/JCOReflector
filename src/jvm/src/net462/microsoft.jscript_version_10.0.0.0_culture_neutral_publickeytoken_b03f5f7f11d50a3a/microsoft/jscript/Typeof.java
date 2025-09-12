@@ -156,9 +156,13 @@ public class Typeof extends UnaryOp  {
     
     public static java.lang.String JScriptTypeof(NetObject value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptTypeof = null;
         try {
-            return (java.lang.String)classType.Invoke("JScriptTypeof", value == null ? null : value.getJCOInstance());
+            retObjectJScriptTypeof = classType.Invoke("JScriptTypeof", value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectJScriptTypeof;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectJScriptTypeof != null ? retObjectJScriptTypeof.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

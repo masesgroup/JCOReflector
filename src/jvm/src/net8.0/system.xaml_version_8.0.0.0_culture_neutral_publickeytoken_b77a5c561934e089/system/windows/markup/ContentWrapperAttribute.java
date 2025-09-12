@@ -170,10 +170,14 @@ public class ContentWrapperAttribute extends Attribute  {
     
     public NetType getContentWrapper() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentWrapper = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentWrapper");
+            retObjectContentWrapper = classInstance.Get("ContentWrapper");
+            JCObject val = (JCObject)retObjectContentWrapper;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentWrapper != null ? retObjectContentWrapper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

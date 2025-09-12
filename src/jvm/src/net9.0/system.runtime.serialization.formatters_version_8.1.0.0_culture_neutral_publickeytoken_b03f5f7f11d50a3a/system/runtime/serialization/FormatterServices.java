@@ -159,10 +159,14 @@ public class FormatterServices extends NetObject  {
     
     public static NetObject GetSafeUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSafeUninitializedObject = null;
         try {
-            JCObject objGetSafeUninitializedObject = (JCObject)classType.Invoke("GetSafeUninitializedObject", type == null ? null : type.getJCOInstance());
+            retObjectGetSafeUninitializedObject = classType.Invoke("GetSafeUninitializedObject", type == null ? null : type.getJCOInstance());
+            JCObject objGetSafeUninitializedObject = (JCObject)retObjectGetSafeUninitializedObject;
             return new NetObject(objGetSafeUninitializedObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSafeUninitializedObject != null ? retObjectGetSafeUninitializedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class FormatterServices extends NetObject  {
 
     public static NetObject GetUninitializedObject(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUninitializedObject = null;
         try {
-            JCObject objGetUninitializedObject = (JCObject)classType.Invoke("GetUninitializedObject", type == null ? null : type.getJCOInstance());
+            retObjectGetUninitializedObject = classType.Invoke("GetUninitializedObject", type == null ? null : type.getJCOInstance());
+            JCObject objGetUninitializedObject = (JCObject)retObjectGetUninitializedObject;
             return new NetObject(objGetUninitializedObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUninitializedObject != null ? retObjectGetUninitializedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class FormatterServices extends NetObject  {
 
     public static NetObject PopulateObjectMembers(NetObject obj, MemberInfo[] members, NetObject[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPopulateObjectMembers = null;
         try {
-            JCObject objPopulateObjectMembers = (JCObject)classType.Invoke("PopulateObjectMembers", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members), toObjectFromArray(data));
+            retObjectPopulateObjectMembers = classType.Invoke("PopulateObjectMembers", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members), toObjectFromArray(data));
+            JCObject objPopulateObjectMembers = (JCObject)retObjectPopulateObjectMembers;
             return new NetObject(objPopulateObjectMembers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPopulateObjectMembers != null ? retObjectPopulateObjectMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,16 +204,20 @@ public class FormatterServices extends NetObject  {
 
     public static NetObject[] GetObjectData(NetObject obj, MemberInfo[] members) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetObjectData = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members));
+            retObjectGetObjectData = classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members));
+            JCObject resultingObjects = (JCObject)retObjectGetObjectData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectData != null ? retObjectGetObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,16 +225,20 @@ public class FormatterServices extends NetObject  {
 
     public static MemberInfo[] GetSerializableMembers(NetType type, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSerializableMembers = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectGetSerializableMembers = classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetSerializableMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializableMembers != null ? retObjectGetSerializableMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,16 +246,20 @@ public class FormatterServices extends NetObject  {
 
     public static MemberInfo[] GetSerializableMembers(NetType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSerializableMembers = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance());
+            retObjectGetSerializableMembers = classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetSerializableMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerializableMembers != null ? retObjectGetSerializableMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +267,14 @@ public class FormatterServices extends NetObject  {
 
     public static ISerializationSurrogate GetSurrogateForCyclicalReference(ISerializationSurrogate innerSurrogate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSurrogateForCyclicalReference = null;
         try {
-            JCObject objGetSurrogateForCyclicalReference = (JCObject)classType.Invoke("GetSurrogateForCyclicalReference", innerSurrogate == null ? null : innerSurrogate.getJCOInstance());
+            retObjectGetSurrogateForCyclicalReference = classType.Invoke("GetSurrogateForCyclicalReference", innerSurrogate == null ? null : innerSurrogate.getJCOInstance());
+            JCObject objGetSurrogateForCyclicalReference = (JCObject)retObjectGetSurrogateForCyclicalReference;
             return new ISerializationSurrogateImplementation(objGetSurrogateForCyclicalReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSurrogateForCyclicalReference != null ? retObjectGetSurrogateForCyclicalReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +282,14 @@ public class FormatterServices extends NetObject  {
 
     public static NetType GetTypeFromAssembly(Assembly assem, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeFromAssembly = null;
         try {
-            JCObject objGetTypeFromAssembly = (JCObject)classType.Invoke("GetTypeFromAssembly", assem == null ? null : assem.getJCOInstance(), name);
+            retObjectGetTypeFromAssembly = classType.Invoke("GetTypeFromAssembly", assem == null ? null : assem.getJCOInstance(), name);
+            JCObject objGetTypeFromAssembly = (JCObject)retObjectGetTypeFromAssembly;
             return new NetType(objGetTypeFromAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeFromAssembly != null ? retObjectGetTypeFromAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +297,7 @@ public class FormatterServices extends NetObject  {
 
     public static void CheckTypeSecurity(NetType t, TypeFilterLevel securityLevel) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CheckTypeSecurity", t == null ? null : t.getJCOInstance(), securityLevel == null ? null : securityLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

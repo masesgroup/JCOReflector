@@ -154,10 +154,14 @@ public class IntrospectionExtensions extends NetObject  {
     
     public static TypeInfo GetTypeInfo(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypeInfo = null;
         try {
-            JCObject objGetTypeInfo = (JCObject)classType.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance());
+            retObjectGetTypeInfo = classType.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance());
+            JCObject objGetTypeInfo = (JCObject)retObjectGetTypeInfo;
             return new TypeInfo(objGetTypeInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeInfo != null ? retObjectGetTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,10 +162,14 @@ public class ReferentialConstraint extends MetadataItem  {
     
     public RelationshipEndMember getFromRole() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromRole = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FromRole");
+            retObjectFromRole = classInstance.Get("FromRole");
+            JCObject val = (JCObject)retObjectFromRole;
             return new RelationshipEndMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromRole != null ? retObjectFromRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ReferentialConstraint extends MetadataItem  {
 
     public RelationshipEndMember getToRole() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToRole = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToRole");
+            retObjectToRole = classInstance.Get("ToRole");
+            JCObject val = (JCObject)retObjectToRole;
             return new RelationshipEndMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToRole != null ? retObjectToRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

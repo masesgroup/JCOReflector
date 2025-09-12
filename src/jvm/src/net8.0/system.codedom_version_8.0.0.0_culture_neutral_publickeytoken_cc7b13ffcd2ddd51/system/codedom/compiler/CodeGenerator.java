@@ -166,9 +166,13 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
     
     public static boolean IsValidLanguageIndependentIdentifier(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidLanguageIndependentIdentifier = null;
         try {
-            return (boolean)classType.Invoke("IsValidLanguageIndependentIdentifier", value);
+            retObjectIsValidLanguageIndependentIdentifier = classType.Invoke("IsValidLanguageIndependentIdentifier", value);
+            return (boolean)retObjectIsValidLanguageIndependentIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidLanguageIndependentIdentifier != null ? retObjectIsValidLanguageIndependentIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
 
     public void GenerateCodeFromMember(CodeTypeMember member, TextWriter writer, CodeGeneratorOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCodeFromMember", member == null ? null : member.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
 
     public static void ValidateIdentifiers(CodeObject e) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ValidateIdentifiers", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,7 +204,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public boolean IsValidIdentifier(java.lang.String value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -209,7 +213,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public boolean Supports(GeneratorSupport supports) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -218,7 +222,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public java.lang.String CreateEscapedIdentifier(java.lang.String value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -227,7 +231,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public java.lang.String CreateValidIdentifier(java.lang.String value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -236,7 +240,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public java.lang.String GetTypeOutput(CodeTypeReference type) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -245,7 +249,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -254,7 +258,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -263,7 +267,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public void GenerateCodeFromNamespace(CodeNamespace e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -272,7 +276,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -281,7 +285,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
     /**
@@ -290,7 +294,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
      */
     @Deprecated 
     public void ValidateIdentifier(java.lang.String value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
 

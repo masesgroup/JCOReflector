@@ -158,7 +158,7 @@ public class DbApplyExpression extends DbExpression  {
     
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,10 +172,14 @@ public class DbApplyExpression extends DbExpression  {
     
     public DbExpressionBinding getApply() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApply = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Apply");
+            retObjectApply = classInstance.Get("Apply");
+            JCObject val = (JCObject)retObjectApply;
             return new DbExpressionBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApply != null ? retObjectApply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DbApplyExpression extends DbExpression  {
 
     public DbExpressionBinding getInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Input");
+            retObjectInput = classInstance.Get("Input");
+            JCObject val = (JCObject)retObjectInput;
             return new DbExpressionBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInput != null ? retObjectInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

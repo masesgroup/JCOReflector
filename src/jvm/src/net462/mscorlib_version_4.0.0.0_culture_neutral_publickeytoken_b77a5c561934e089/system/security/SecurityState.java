@@ -153,9 +153,13 @@ public class SecurityState extends NetObject  {
     
     public boolean IsStateAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStateAvailable = null;
         try {
-            return (boolean)classInstance.Invoke("IsStateAvailable");
+            retObjectIsStateAvailable = classInstance.Invoke("IsStateAvailable");
+            return (boolean)retObjectIsStateAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStateAvailable != null ? retObjectIsStateAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +167,7 @@ public class SecurityState extends NetObject  {
 
     public void EnsureState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnsureState");
         } catch (JCNativeException jcne) {

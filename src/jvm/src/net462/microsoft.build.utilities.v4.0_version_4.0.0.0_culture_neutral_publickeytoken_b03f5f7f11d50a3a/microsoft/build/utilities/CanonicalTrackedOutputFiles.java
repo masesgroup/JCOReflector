@@ -190,9 +190,13 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
     
     public boolean RemoveOutputForSourceRoot(java.lang.String sourceRoot, java.lang.String outputPathToRemove) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveOutputForSourceRoot = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveOutputForSourceRoot", sourceRoot, outputPathToRemove);
+            retObjectRemoveOutputForSourceRoot = classInstance.Invoke("RemoveOutputForSourceRoot", sourceRoot, outputPathToRemove);
+            return (boolean)retObjectRemoveOutputForSourceRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveOutputForSourceRoot != null ? retObjectRemoveOutputForSourceRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,16 +204,20 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public ITaskItem[] OutputsForNonCompositeSource(ITaskItem... sources) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputsForNonCompositeSource = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("OutputsForNonCompositeSource", (java.lang.Object)toObjectFromArray(sources));
+            retObjectOutputsForNonCompositeSource = classInstance.Invoke("OutputsForNonCompositeSource", (java.lang.Object)toObjectFromArray(sources));
+            JCObject resultingObjects = (JCObject)retObjectOutputsForNonCompositeSource;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputsForNonCompositeSource != null ? retObjectOutputsForNonCompositeSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,16 +225,20 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public ITaskItem[] OutputsForSource(ITaskItem... sources) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputsForSource = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("OutputsForSource", (java.lang.Object)toObjectFromArray(sources));
+            retObjectOutputsForSource = classInstance.Invoke("OutputsForSource", (java.lang.Object)toObjectFromArray(sources));
+            JCObject resultingObjects = (JCObject)retObjectOutputsForSource;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputsForSource != null ? retObjectOutputsForSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,16 +246,20 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public ITaskItem[] OutputsForSource(ITaskItem[] sources, boolean searchForSubRootsInCompositeRootingMarkers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputsForSource = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("OutputsForSource", toObjectFromArray(sources), searchForSubRootsInCompositeRootingMarkers);
+            retObjectOutputsForSource = classInstance.Invoke("OutputsForSource", toObjectFromArray(sources), searchForSubRootsInCompositeRootingMarkers);
+            JCObject resultingObjects = (JCObject)retObjectOutputsForSource;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputsForSource != null ? retObjectOutputsForSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +267,12 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public java.lang.String[] RemoveRootsWithSharedOutputs(ITaskItem[] sources) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveRootsWithSharedOutputs = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("RemoveRootsWithSharedOutputs", (java.lang.Object)toObjectFromArray(sources));
+            retObjectRemoveRootsWithSharedOutputs = classInstance.Invoke("RemoveRootsWithSharedOutputs", (java.lang.Object)toObjectFromArray(sources));
+            JCObject resultingObjects = (JCObject)retObjectRemoveRootsWithSharedOutputs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -263,6 +281,8 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 				resultingArray[indexRemoveRootsWithSharedOutputs] = (java.lang.String)resultingArrayList.get(indexRemoveRootsWithSharedOutputs);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRemoveRootsWithSharedOutputs != null ? retObjectRemoveRootsWithSharedOutputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +290,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void AddComputedOutputForSourceRoot(java.lang.String sourceKey, java.lang.String computedOutput) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddComputedOutputForSourceRoot", sourceKey, computedOutput);
         } catch (JCNativeException jcne) {
@@ -280,7 +300,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void AddComputedOutputsForSourceRoot(java.lang.String sourceKey, ITaskItem[] computedOutputs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.io.PathTooLongException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddComputedOutputsForSourceRoot", sourceKey, toObjectFromArray(computedOutputs));
         } catch (JCNativeException jcne) {
@@ -290,7 +310,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void AddComputedOutputsForSourceRoot(java.lang.String sourceKey, java.lang.String[] computedOutputs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddComputedOutputsForSourceRoot", sourceKey, computedOutputs);
         } catch (JCNativeException jcne) {
@@ -300,7 +320,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void AddComputedOutputsForSourceRoot(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddComputedOutputsForSourceRoot", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -310,7 +330,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDependenciesFromEntryIfMissing", source == null ? null : source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,7 +340,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem source, ITaskItem correspondingOutput) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDependenciesFromEntryIfMissing", source == null ? null : source.getJCOInstance(), correspondingOutput == null ? null : correspondingOutput.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,7 +350,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem[] source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDependenciesFromEntryIfMissing", (java.lang.Object)toObjectFromArray(source));
         } catch (JCNativeException jcne) {
@@ -340,7 +360,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveDependenciesFromEntryIfMissing(ITaskItem[] source, ITaskItem[] correspondingOutputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDependenciesFromEntryIfMissing", toObjectFromArray(source), toObjectFromArray(correspondingOutputs));
         } catch (JCNativeException jcne) {
@@ -350,7 +370,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveDependencyFromEntry(ITaskItem source, ITaskItem dependencyToRemove) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDependencyFromEntry", source == null ? null : source.getJCOInstance(), dependencyToRemove == null ? null : dependencyToRemove.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,7 +380,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveDependencyFromEntry(ITaskItem[] sources, ITaskItem dependencyToRemove) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDependencyFromEntry", toObjectFromArray(sources), dependencyToRemove == null ? null : dependencyToRemove.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,7 +390,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveEntriesForSource(ITaskItem source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveEntriesForSource", source == null ? null : source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -380,7 +400,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveEntriesForSource(ITaskItem source, ITaskItem correspondingOutput) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveEntriesForSource", source == null ? null : source.getJCOInstance(), correspondingOutput == null ? null : correspondingOutput.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,7 +410,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveEntriesForSource(ITaskItem[] source) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveEntriesForSource", (java.lang.Object)toObjectFromArray(source));
         } catch (JCNativeException jcne) {
@@ -400,7 +420,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void RemoveEntriesForSource(ITaskItem[] source, ITaskItem[] correspondingOutputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveEntriesForSource", toObjectFromArray(source), toObjectFromArray(correspondingOutputs));
         } catch (JCNativeException jcne) {
@@ -410,7 +430,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void SaveTlog() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.InvalidOperationException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveTlog");
         } catch (JCNativeException jcne) {
@@ -420,7 +440,7 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
 
     public void SaveTlog(DependencyFilter includeInTLog) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveTlog", includeInTLog);
         } catch (JCNativeException jcne) {

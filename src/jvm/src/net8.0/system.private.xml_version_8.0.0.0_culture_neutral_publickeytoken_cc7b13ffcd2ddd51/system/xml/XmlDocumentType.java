@@ -160,10 +160,14 @@ public class XmlDocumentType extends XmlLinkedNode  {
     
     public XmlNode CloneNode(boolean deep) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneNode = null;
         try {
-            JCObject objCloneNode = (JCObject)classInstance.Invoke("CloneNode", deep);
+            retObjectCloneNode = classInstance.Invoke("CloneNode", deep);
+            JCObject objCloneNode = (JCObject)retObjectCloneNode;
             return new XmlNode(objCloneNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneNode != null ? retObjectCloneNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class XmlDocumentType extends XmlLinkedNode  {
 
     public void WriteContentTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteContentTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,7 +185,7 @@ public class XmlDocumentType extends XmlLinkedNode  {
 
     public void WriteTo(XmlWriter w) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", w == null ? null : w.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,9 +199,13 @@ public class XmlDocumentType extends XmlLinkedNode  {
     
     public java.lang.String getInternalSubset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInternalSubset = null;
         try {
-            return (java.lang.String)classInstance.Get("InternalSubset");
+            retObjectInternalSubset = classInstance.Get("InternalSubset");
+            return (java.lang.String)retObjectInternalSubset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInternalSubset != null ? retObjectInternalSubset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +213,13 @@ public class XmlDocumentType extends XmlLinkedNode  {
 
     public java.lang.String getPublicId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicId = null;
         try {
-            return (java.lang.String)classInstance.Get("PublicId");
+            retObjectPublicId = classInstance.Get("PublicId");
+            return (java.lang.String)retObjectPublicId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublicId != null ? retObjectPublicId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +227,13 @@ public class XmlDocumentType extends XmlLinkedNode  {
 
     public java.lang.String getSystemId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemId = null;
         try {
-            return (java.lang.String)classInstance.Get("SystemId");
+            retObjectSystemId = classInstance.Get("SystemId");
+            return (java.lang.String)retObjectSystemId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemId != null ? retObjectSystemId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +241,14 @@ public class XmlDocumentType extends XmlLinkedNode  {
 
     public XmlNamedNodeMap getEntities() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntities = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Entities");
+            retObjectEntities = classInstance.Get("Entities");
+            JCObject val = (JCObject)retObjectEntities;
             return new XmlNamedNodeMap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntities != null ? retObjectEntities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +256,14 @@ public class XmlDocumentType extends XmlLinkedNode  {
 
     public XmlNamedNodeMap getNotations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Notations");
+            retObjectNotations = classInstance.Get("Notations");
+            JCObject val = (JCObject)retObjectNotations;
             return new XmlNamedNodeMap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotations != null ? retObjectNotations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

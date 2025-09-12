@@ -196,9 +196,13 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
     
     public boolean TryReset() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReset = null;
         try {
-            return (boolean)classInstance.Invoke("TryReset");
+            retObjectTryReset = classInstance.Invoke("TryReset");
+            return (boolean)retObjectTryReset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReset != null ? retObjectTryReset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +210,14 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token1, CancellationToken token2) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateLinkedTokenSource = null;
         try {
-            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", token1 == null ? null : token1.getJCOInstance(), token2 == null ? null : token2.getJCOInstance());
+            retObjectCreateLinkedTokenSource = classType.Invoke("CreateLinkedTokenSource", token1 == null ? null : token1.getJCOInstance(), token2 == null ? null : token2.getJCOInstance());
+            JCObject objCreateLinkedTokenSource = (JCObject)retObjectCreateLinkedTokenSource;
             return new CancellationTokenSource(objCreateLinkedTokenSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateLinkedTokenSource != null ? retObjectCreateLinkedTokenSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +225,14 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateLinkedTokenSource = null;
         try {
-            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", token == null ? null : token.getJCOInstance());
+            retObjectCreateLinkedTokenSource = classType.Invoke("CreateLinkedTokenSource", token == null ? null : token.getJCOInstance());
+            JCObject objCreateLinkedTokenSource = (JCObject)retObjectCreateLinkedTokenSource;
             return new CancellationTokenSource(objCreateLinkedTokenSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateLinkedTokenSource != null ? retObjectCreateLinkedTokenSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +240,14 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken... tokens) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateLinkedTokenSource = null;
         try {
-            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", (java.lang.Object)toObjectFromArray(tokens));
+            retObjectCreateLinkedTokenSource = classType.Invoke("CreateLinkedTokenSource", (java.lang.Object)toObjectFromArray(tokens));
+            JCObject objCreateLinkedTokenSource = (JCObject)retObjectCreateLinkedTokenSource;
             return new CancellationTokenSource(objCreateLinkedTokenSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateLinkedTokenSource != null ? retObjectCreateLinkedTokenSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +255,14 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public Task CancelAsync() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.AggregateException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelAsync = null;
         try {
-            JCObject objCancelAsync = (JCObject)classInstance.Invoke("CancelAsync");
+            retObjectCancelAsync = classInstance.Invoke("CancelAsync");
+            JCObject objCancelAsync = (JCObject)retObjectCancelAsync;
             return new Task(objCancelAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancelAsync != null ? retObjectCancelAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +270,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public void Cancel() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -260,7 +280,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public void Cancel(boolean throwOnFirstException) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.ArgumentNullException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel", throwOnFirstException);
         } catch (JCNativeException jcne) {
@@ -270,7 +290,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public void CancelAfter(int millisecondsDelay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAfter", millisecondsDelay);
         } catch (JCNativeException jcne) {
@@ -280,7 +300,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public void CancelAfter(TimeSpan delay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAfter", delay == null ? null : delay.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,7 +310,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -301,7 +321,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -317,9 +337,13 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
     
     public boolean getIsCancellationRequested() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCancellationRequested = null;
         try {
-            return (boolean)classInstance.Get("IsCancellationRequested");
+            retObjectIsCancellationRequested = classInstance.Get("IsCancellationRequested");
+            return (boolean)retObjectIsCancellationRequested;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCancellationRequested != null ? retObjectIsCancellationRequested.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +351,14 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
 
     public CancellationToken getToken() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Token");
+            retObjectToken = classInstance.Get("Token");
+            JCObject val = (JCObject)retObjectToken;
             return new CancellationToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToken != null ? retObjectToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

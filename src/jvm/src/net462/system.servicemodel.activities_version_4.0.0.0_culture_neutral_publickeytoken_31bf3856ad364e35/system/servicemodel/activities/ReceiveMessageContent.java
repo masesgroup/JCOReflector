@@ -183,9 +183,13 @@ public class ReceiveMessageContent extends ReceiveContent  {
     
     public boolean ShouldSerializeDeclaredMessageType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeDeclaredMessageType = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeDeclaredMessageType");
+            retObjectShouldSerializeDeclaredMessageType = classInstance.Invoke("ShouldSerializeDeclaredMessageType");
+            return (boolean)retObjectShouldSerializeDeclaredMessageType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeDeclaredMessageType != null ? retObjectShouldSerializeDeclaredMessageType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +201,14 @@ public class ReceiveMessageContent extends ReceiveContent  {
     
     public OutArgument getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            JCObject val = (JCObject)retObjectMessage;
             return new OutArgument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class ReceiveMessageContent extends ReceiveContent  {
 
     public void setMessage(OutArgument Message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +226,14 @@ public class ReceiveMessageContent extends ReceiveContent  {
 
     public NetType getDeclaredMessageType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredMessageType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaredMessageType");
+            retObjectDeclaredMessageType = classInstance.Get("DeclaredMessageType");
+            JCObject val = (JCObject)retObjectDeclaredMessageType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredMessageType != null ? retObjectDeclaredMessageType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class ReceiveMessageContent extends ReceiveContent  {
 
     public void setDeclaredMessageType(NetType DeclaredMessageType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeclaredMessageType", DeclaredMessageType == null ? null : DeclaredMessageType.getJCOInstance());
         } catch (JCNativeException jcne) {

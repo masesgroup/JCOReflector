@@ -168,10 +168,14 @@ public class InvokeDelegate extends NativeActivity  {
     
     public Activity getDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            retObjectDefault = classInstance.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class InvokeDelegate extends NativeActivity  {
 
     public void setDefault(Activity Default) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Default", Default == null ? null : Default.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class InvokeDelegate extends NativeActivity  {
 
     public ActivityDelegate getDelegate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelegate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Delegate");
+            retObjectDelegate = classInstance.Get("Delegate");
+            JCObject val = (JCObject)retObjectDelegate;
             return new ActivityDelegate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelegate != null ? retObjectDelegate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class InvokeDelegate extends NativeActivity  {
 
     public void setDelegate(ActivityDelegate Delegate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delegate", Delegate == null ? null : Delegate.getJCOInstance());
         } catch (JCNativeException jcne) {

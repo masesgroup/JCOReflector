@@ -144,16 +144,20 @@ public class ISelectionProviderImplementation extends NetObject implements ISele
     
     public IRawElementProviderSimple[] GetSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelection = null;
         try {
             ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSelection");
+            retObjectGetSelection = classInstance.Invoke("GetSelection");
+            JCObject resultingObjects = (JCObject)retObjectGetSelection;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
             }
             IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelection != null ? retObjectGetSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class ISelectionProviderImplementation extends NetObject implements ISele
     
     public boolean getCanSelectMultiple() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanSelectMultiple = null;
         try {
-            return (boolean)classInstance.Get("CanSelectMultiple");
+            retObjectCanSelectMultiple = classInstance.Get("CanSelectMultiple");
+            return (boolean)retObjectCanSelectMultiple;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanSelectMultiple != null ? retObjectCanSelectMultiple.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +183,13 @@ public class ISelectionProviderImplementation extends NetObject implements ISele
 
     public boolean getIsSelectionRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectionRequired = null;
         try {
-            return (boolean)classInstance.Get("IsSelectionRequired");
+            retObjectIsSelectionRequired = classInstance.Get("IsSelectionRequired");
+            return (boolean)retObjectIsSelectionRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionRequired != null ? retObjectIsSelectionRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

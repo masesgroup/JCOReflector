@@ -160,10 +160,14 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
     
     public IAsyncResult BeginReply(Message message, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReply = null;
         try {
-            JCObject objBeginReply = (JCObject)classInstance.Invoke("BeginReply", message == null ? null : message.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReply = classInstance.Invoke("BeginReply", message == null ? null : message.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReply = (JCObject)retObjectBeginReply;
             return new IAsyncResultImplementation(objBeginReply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReply != null ? retObjectBeginReply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
 
     public IAsyncResult BeginReply(Message message, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReply = null;
         try {
-            JCObject objBeginReply = (JCObject)classInstance.Invoke("BeginReply", message == null ? null : message.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginReply = classInstance.Invoke("BeginReply", message == null ? null : message.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReply = (JCObject)retObjectBeginReply;
             return new IAsyncResultImplementation(objBeginReply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReply != null ? retObjectBeginReply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
 
     public void Abort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -192,7 +200,7 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -202,7 +210,7 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
 
     public void Close(TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +220,7 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
 
     public void EndReply(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndReply", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,7 +230,7 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
 
     public void Reply(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reply", message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,7 +240,7 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
 
     public void Reply(Message message, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reply", message == null ? null : message.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,13 +254,13 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -268,10 +276,14 @@ public class RequestContext extends NetObject implements system.IDisposable, Aut
     
     public Message getRequestMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestMessage");
+            retObjectRequestMessage = classInstance.Get("RequestMessage");
+            JCObject val = (JCObject)retObjectRequestMessage;
             return new Message(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestMessage != null ? retObjectRequestMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

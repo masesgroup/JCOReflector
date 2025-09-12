@@ -176,9 +176,13 @@ public class Frame extends ContentControl  {
     
     public boolean Navigate(NetObject content) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.RankException, system.SystemException, system.deployment.application.InvalidDeploymentException, system.UriFormatException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class Frame extends ContentControl  {
 
     public boolean Navigate(NetObject content, NetObject extraData) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.UriFormatException, system.RankException, system.SystemException, system.deployment.application.InvalidDeploymentException, system.MemberAccessException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", content == null ? null : content.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +204,13 @@ public class Frame extends ContentControl  {
 
     public boolean Navigate(Uri source) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.InvalidCastException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.UriFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.security.XmlSyntaxException, system.NullReferenceException, system.RankException, system.SystemException, system.deployment.application.InvalidDeploymentException, system.MulticastNotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +218,13 @@ public class Frame extends ContentControl  {
 
     public boolean Navigate(Uri source, NetObject extraData) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.InvalidCastException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.UriFormatException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.security.XmlSyntaxException, system.NullReferenceException, system.RankException, system.SystemException, system.deployment.application.InvalidDeploymentException, system.MulticastNotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            return (boolean)classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", source == null ? null : source.getJCOInstance(), extraData == null ? null : extraData.getJCOInstance());
+            return (boolean)retObjectNavigate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +232,13 @@ public class Frame extends ContentControl  {
 
     public boolean ShouldSerializeContent() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeContent = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeContent");
+            retObjectShouldSerializeContent = classInstance.Invoke("ShouldSerializeContent");
+            return (boolean)retObjectShouldSerializeContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeContent != null ? retObjectShouldSerializeContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +246,14 @@ public class Frame extends ContentControl  {
 
     public JournalEntry RemoveBackEntry() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveBackEntry = null;
         try {
-            JCObject objRemoveBackEntry = (JCObject)classInstance.Invoke("RemoveBackEntry");
+            retObjectRemoveBackEntry = classInstance.Invoke("RemoveBackEntry");
+            JCObject objRemoveBackEntry = (JCObject)retObjectRemoveBackEntry;
             return new JournalEntry(objRemoveBackEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveBackEntry != null ? retObjectRemoveBackEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +261,7 @@ public class Frame extends ContentControl  {
 
     public void AddBackEntry(CustomContentState state) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.SystemException, system.deployment.application.InvalidDeploymentException, system.MemberAccessException, system.UriFormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBackEntry", state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,7 +271,7 @@ public class Frame extends ContentControl  {
 
     public void GoBack() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GoBack");
         } catch (JCNativeException jcne) {
@@ -257,7 +281,7 @@ public class Frame extends ContentControl  {
 
     public void GoForward() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GoForward");
         } catch (JCNativeException jcne) {
@@ -267,7 +291,7 @@ public class Frame extends ContentControl  {
 
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -277,7 +301,7 @@ public class Frame extends ContentControl  {
 
     public void Refresh() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UriFormatException, system.InvalidCastException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.RankException, system.SystemException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -287,7 +311,7 @@ public class Frame extends ContentControl  {
 
     public void StopLoading() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopLoading");
         } catch (JCNativeException jcne) {
@@ -301,9 +325,13 @@ public class Frame extends ContentControl  {
     
     public boolean getCanGoBack() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoBack = null;
         try {
-            return (boolean)classInstance.Get("CanGoBack");
+            retObjectCanGoBack = classInstance.Get("CanGoBack");
+            return (boolean)retObjectCanGoBack;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoBack != null ? retObjectCanGoBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +339,13 @@ public class Frame extends ContentControl  {
 
     public boolean getCanGoForward() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoForward = null;
         try {
-            return (boolean)classInstance.Get("CanGoForward");
+            retObjectCanGoForward = classInstance.Get("CanGoForward");
+            return (boolean)retObjectCanGoForward;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoForward != null ? retObjectCanGoForward.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,9 +353,13 @@ public class Frame extends ContentControl  {
 
     public boolean getSandboxExternalContent() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSandboxExternalContent = null;
         try {
-            return (boolean)classInstance.Get("SandboxExternalContent");
+            retObjectSandboxExternalContent = classInstance.Get("SandboxExternalContent");
+            return (boolean)retObjectSandboxExternalContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSandboxExternalContent != null ? retObjectSandboxExternalContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +367,7 @@ public class Frame extends ContentControl  {
 
     public void setSandboxExternalContent(boolean SandboxExternalContent) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SandboxExternalContent", SandboxExternalContent);
         } catch (JCNativeException jcne) {
@@ -341,10 +377,14 @@ public class Frame extends ContentControl  {
 
     public IEnumerable getBackStack() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackStack = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackStack");
+            retObjectBackStack = classInstance.Get("BackStack");
+            JCObject val = (JCObject)retObjectBackStack;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackStack != null ? retObjectBackStack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +392,14 @@ public class Frame extends ContentControl  {
 
     public IEnumerable getForwardStack() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForwardStack = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForwardStack");
+            retObjectForwardStack = classInstance.Get("ForwardStack");
+            JCObject val = (JCObject)retObjectForwardStack;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForwardStack != null ? retObjectForwardStack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +407,14 @@ public class Frame extends ContentControl  {
 
     public Uri getCurrentSource() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentSource");
+            retObjectCurrentSource = classInstance.Get("CurrentSource");
+            JCObject val = (JCObject)retObjectCurrentSource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentSource != null ? retObjectCurrentSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +422,14 @@ public class Frame extends ContentControl  {
 
     public Uri getSource() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,7 +437,7 @@ public class Frame extends ContentControl  {
 
     public void setSource(Uri Source) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -395,10 +447,14 @@ public class Frame extends ContentControl  {
 
     public JournalOwnership getJournalOwnership() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJournalOwnership = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("JournalOwnership");
+            retObjectJournalOwnership = classInstance.Get("JournalOwnership");
+            JCObject val = (JCObject)retObjectJournalOwnership;
             return new JournalOwnership(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJournalOwnership != null ? retObjectJournalOwnership.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +462,7 @@ public class Frame extends ContentControl  {
 
     public void setJournalOwnership(JournalOwnership JournalOwnership) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("JournalOwnership", JournalOwnership == null ? null : JournalOwnership.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -416,10 +472,14 @@ public class Frame extends ContentControl  {
 
     public NavigationService getNavigationService() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationService");
+            retObjectNavigationService = classInstance.Get("NavigationService");
+            JCObject val = (JCObject)retObjectNavigationService;
             return new NavigationService(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationService != null ? retObjectNavigationService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +487,14 @@ public class Frame extends ContentControl  {
 
     public NavigationUIVisibility getNavigationUIVisibility() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationUIVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationUIVisibility");
+            retObjectNavigationUIVisibility = classInstance.Get("NavigationUIVisibility");
+            JCObject val = (JCObject)retObjectNavigationUIVisibility;
             return new NavigationUIVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationUIVisibility != null ? retObjectNavigationUIVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +502,7 @@ public class Frame extends ContentControl  {
 
     public void setNavigationUIVisibility(NavigationUIVisibility NavigationUIVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NavigationUIVisibility", NavigationUIVisibility == null ? null : NavigationUIVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -453,7 +517,7 @@ public class Frame extends ContentControl  {
 
     public void addContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContentRendered", handler);
         } catch (JCNativeException jcne) {
@@ -463,7 +527,7 @@ public class Frame extends ContentControl  {
 
     public void removeContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContentRendered", handler);
         } catch (JCNativeException jcne) {
@@ -473,7 +537,7 @@ public class Frame extends ContentControl  {
 
     public void addFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
@@ -483,7 +547,7 @@ public class Frame extends ContentControl  {
 
     public void removeFragmentNavigation(FragmentNavigationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FragmentNavigation", handler);
         } catch (JCNativeException jcne) {
@@ -493,7 +557,7 @@ public class Frame extends ContentControl  {
 
     public void addLoadCompleted(LoadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -503,7 +567,7 @@ public class Frame extends ContentControl  {
 
     public void removeLoadCompleted(LoadCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -513,7 +577,7 @@ public class Frame extends ContentControl  {
 
     public void addNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -523,7 +587,7 @@ public class Frame extends ContentControl  {
 
     public void removeNavigated(NavigatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigated", handler);
         } catch (JCNativeException jcne) {
@@ -533,7 +597,7 @@ public class Frame extends ContentControl  {
 
     public void addNavigating(NavigatingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -543,7 +607,7 @@ public class Frame extends ContentControl  {
 
     public void removeNavigating(NavigatingCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Navigating", handler);
         } catch (JCNativeException jcne) {
@@ -553,7 +617,7 @@ public class Frame extends ContentControl  {
 
     public void addNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationFailed", handler);
         } catch (JCNativeException jcne) {
@@ -563,7 +627,7 @@ public class Frame extends ContentControl  {
 
     public void removeNavigationFailed(NavigationFailedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationFailed", handler);
         } catch (JCNativeException jcne) {
@@ -573,7 +637,7 @@ public class Frame extends ContentControl  {
 
     public void addNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationProgress", handler);
         } catch (JCNativeException jcne) {
@@ -583,7 +647,7 @@ public class Frame extends ContentControl  {
 
     public void removeNavigationProgress(NavigationProgressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationProgress", handler);
         } catch (JCNativeException jcne) {
@@ -593,7 +657,7 @@ public class Frame extends ContentControl  {
 
     public void addNavigationStopped(NavigationStoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("NavigationStopped", handler);
         } catch (JCNativeException jcne) {
@@ -603,7 +667,7 @@ public class Frame extends ContentControl  {
 
     public void removeNavigationStopped(NavigationStoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("NavigationStopped", handler);
         } catch (JCNativeException jcne) {

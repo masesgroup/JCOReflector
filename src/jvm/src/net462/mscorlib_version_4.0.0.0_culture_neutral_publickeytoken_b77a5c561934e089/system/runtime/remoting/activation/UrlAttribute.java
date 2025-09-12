@@ -169,9 +169,13 @@ public class UrlAttribute extends ContextAttribute  {
     
     public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContextOK = null;
         try {
-            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            retObjectIsContextOK = classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectIsContextOK;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContextOK != null ? retObjectIsContextOK.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class UrlAttribute extends ContextAttribute  {
 
     public void GetPropertiesForNewContext(IConstructionCallMessage ctorMsg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPropertiesForNewContext", ctorMsg == null ? null : ctorMsg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,9 +197,13 @@ public class UrlAttribute extends ContextAttribute  {
     
     public java.lang.String getUrlValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlValue = null;
         try {
-            return (java.lang.String)classInstance.Get("UrlValue");
+            retObjectUrlValue = classInstance.Get("UrlValue");
+            return (java.lang.String)retObjectUrlValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrlValue != null ? retObjectUrlValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,10 +160,14 @@ public class WebBaseErrorEvent extends WebManagementEvent  {
     
     public NetException getErrorException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorException");
+            retObjectErrorException = classInstance.Get("ErrorException");
+            JCObject val = (JCObject)retObjectErrorException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorException != null ? retObjectErrorException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

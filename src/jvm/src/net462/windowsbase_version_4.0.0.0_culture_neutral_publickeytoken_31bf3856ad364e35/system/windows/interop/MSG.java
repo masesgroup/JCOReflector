@@ -160,9 +160,19 @@ public class MSG extends ValueType  {
     
     public int getmessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectmessage = null;
         try {
-            return (int)classInstance.Get("message");
+            retObjectmessage = classInstance.Get("message");
+            return (int)retObjectmessage;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectmessageNumber = (java.lang.Number)retObjectmessage;
+                return retObjectmessageNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectmessage != null ? retObjectmessage.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +180,7 @@ public class MSG extends ValueType  {
 
     public void setmessage(int message) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("message", message);
         } catch (JCNativeException jcne) {
@@ -180,9 +190,19 @@ public class MSG extends ValueType  {
 
     public int getpt_x() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectpt_x = null;
         try {
-            return (int)classInstance.Get("pt_x");
+            retObjectpt_x = classInstance.Get("pt_x");
+            return (int)retObjectpt_x;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectpt_xNumber = (java.lang.Number)retObjectpt_x;
+                return retObjectpt_xNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectpt_x != null ? retObjectpt_x.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +210,7 @@ public class MSG extends ValueType  {
 
     public void setpt_x(int pt_x) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("pt_x", pt_x);
         } catch (JCNativeException jcne) {
@@ -200,9 +220,19 @@ public class MSG extends ValueType  {
 
     public int getpt_y() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectpt_y = null;
         try {
-            return (int)classInstance.Get("pt_y");
+            retObjectpt_y = classInstance.Get("pt_y");
+            return (int)retObjectpt_y;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectpt_yNumber = (java.lang.Number)retObjectpt_y;
+                return retObjectpt_yNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectpt_y != null ? retObjectpt_y.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +240,7 @@ public class MSG extends ValueType  {
 
     public void setpt_y(int pt_y) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("pt_y", pt_y);
         } catch (JCNativeException jcne) {
@@ -220,9 +250,19 @@ public class MSG extends ValueType  {
 
     public int gettime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjecttime = null;
         try {
-            return (int)classInstance.Get("time");
+            retObjecttime = classInstance.Get("time");
+            return (int)retObjecttime;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjecttimeNumber = (java.lang.Number)retObjecttime;
+                return retObjecttimeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjecttime != null ? retObjecttime.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +270,7 @@ public class MSG extends ValueType  {
 
     public void settime(int time) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("time", time);
         } catch (JCNativeException jcne) {

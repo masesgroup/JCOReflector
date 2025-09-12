@@ -155,10 +155,14 @@ public class EdmFunctions extends NetObject  {
     
     public static DbExpression Contains(DbExpression searchedString, DbExpression searchedForString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            JCObject objContains = (JCObject)classType.Invoke("Contains", searchedString == null ? null : searchedString.getJCOInstance(), searchedForString == null ? null : searchedForString.getJCOInstance());
+            retObjectContains = classType.Invoke("Contains", searchedString == null ? null : searchedString.getJCOInstance(), searchedForString == null ? null : searchedForString.getJCOInstance());
+            JCObject objContains = (JCObject)retObjectContains;
             return new DbExpression(objContains);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Abs(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbs = null;
         try {
-            JCObject objAbs = (JCObject)classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            retObjectAbs = classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            JCObject objAbs = (JCObject)retObjectAbs;
             return new DbFunctionExpression(objAbs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbs != null ? retObjectAbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddDays(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddDays = null;
         try {
-            JCObject objAddDays = (JCObject)classType.Invoke("AddDays", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddDays = classType.Invoke("AddDays", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddDays = (JCObject)retObjectAddDays;
             return new DbFunctionExpression(objAddDays);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDays != null ? retObjectAddDays.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddHours(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddHours = null;
         try {
-            JCObject objAddHours = (JCObject)classType.Invoke("AddHours", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddHours = classType.Invoke("AddHours", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddHours = (JCObject)retObjectAddHours;
             return new DbFunctionExpression(objAddHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddHours != null ? retObjectAddHours.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddMicroseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMicroseconds = null;
         try {
-            JCObject objAddMicroseconds = (JCObject)classType.Invoke("AddMicroseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddMicroseconds = classType.Invoke("AddMicroseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMicroseconds = (JCObject)retObjectAddMicroseconds;
             return new DbFunctionExpression(objAddMicroseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMicroseconds != null ? retObjectAddMicroseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddMilliseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMilliseconds = null;
         try {
-            JCObject objAddMilliseconds = (JCObject)classType.Invoke("AddMilliseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddMilliseconds = classType.Invoke("AddMilliseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMilliseconds = (JCObject)retObjectAddMilliseconds;
             return new DbFunctionExpression(objAddMilliseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMilliseconds != null ? retObjectAddMilliseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +245,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddMinutes(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMinutes = null;
         try {
-            JCObject objAddMinutes = (JCObject)classType.Invoke("AddMinutes", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddMinutes = classType.Invoke("AddMinutes", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMinutes = (JCObject)retObjectAddMinutes;
             return new DbFunctionExpression(objAddMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMinutes != null ? retObjectAddMinutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +260,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddMonths(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMonths = null;
         try {
-            JCObject objAddMonths = (JCObject)classType.Invoke("AddMonths", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddMonths = classType.Invoke("AddMonths", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMonths = (JCObject)retObjectAddMonths;
             return new DbFunctionExpression(objAddMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMonths != null ? retObjectAddMonths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +275,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddNanoseconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddNanoseconds = null;
         try {
-            JCObject objAddNanoseconds = (JCObject)classType.Invoke("AddNanoseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddNanoseconds = classType.Invoke("AddNanoseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddNanoseconds = (JCObject)retObjectAddNanoseconds;
             return new DbFunctionExpression(objAddNanoseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNanoseconds != null ? retObjectAddNanoseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +290,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddSeconds(DbExpression timeValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddSeconds = null;
         try {
-            JCObject objAddSeconds = (JCObject)classType.Invoke("AddSeconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddSeconds = classType.Invoke("AddSeconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddSeconds = (JCObject)retObjectAddSeconds;
             return new DbFunctionExpression(objAddSeconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddSeconds != null ? retObjectAddSeconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +305,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression AddYears(DbExpression dateValue, DbExpression addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddYears = null;
         try {
-            JCObject objAddYears = (JCObject)classType.Invoke("AddYears", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            retObjectAddYears = classType.Invoke("AddYears", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddYears = (JCObject)retObjectAddYears;
             return new DbFunctionExpression(objAddYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddYears != null ? retObjectAddYears.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +320,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Average(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAverage = null;
         try {
-            JCObject objAverage = (JCObject)classType.Invoke("Average", collection == null ? null : collection.getJCOInstance());
+            retObjectAverage = classType.Invoke("Average", collection == null ? null : collection.getJCOInstance());
+            JCObject objAverage = (JCObject)retObjectAverage;
             return new DbFunctionExpression(objAverage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAverage != null ? retObjectAverage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +335,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression BitwiseAnd(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitwiseAnd = null;
         try {
-            JCObject objBitwiseAnd = (JCObject)classType.Invoke("BitwiseAnd", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            retObjectBitwiseAnd = classType.Invoke("BitwiseAnd", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            JCObject objBitwiseAnd = (JCObject)retObjectBitwiseAnd;
             return new DbFunctionExpression(objBitwiseAnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitwiseAnd != null ? retObjectBitwiseAnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +350,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression BitwiseNot(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitwiseNot = null;
         try {
-            JCObject objBitwiseNot = (JCObject)classType.Invoke("BitwiseNot", value == null ? null : value.getJCOInstance());
+            retObjectBitwiseNot = classType.Invoke("BitwiseNot", value == null ? null : value.getJCOInstance());
+            JCObject objBitwiseNot = (JCObject)retObjectBitwiseNot;
             return new DbFunctionExpression(objBitwiseNot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitwiseNot != null ? retObjectBitwiseNot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +365,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression BitwiseOr(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitwiseOr = null;
         try {
-            JCObject objBitwiseOr = (JCObject)classType.Invoke("BitwiseOr", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            retObjectBitwiseOr = classType.Invoke("BitwiseOr", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            JCObject objBitwiseOr = (JCObject)retObjectBitwiseOr;
             return new DbFunctionExpression(objBitwiseOr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitwiseOr != null ? retObjectBitwiseOr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +380,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression BitwiseXor(DbExpression value1, DbExpression value2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitwiseXor = null;
         try {
-            JCObject objBitwiseXor = (JCObject)classType.Invoke("BitwiseXor", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            retObjectBitwiseXor = classType.Invoke("BitwiseXor", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance());
+            JCObject objBitwiseXor = (JCObject)retObjectBitwiseXor;
             return new DbFunctionExpression(objBitwiseXor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitwiseXor != null ? retObjectBitwiseXor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +395,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Ceiling(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCeiling = null;
         try {
-            JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", value == null ? null : value.getJCOInstance());
+            retObjectCeiling = classType.Invoke("Ceiling", value == null ? null : value.getJCOInstance());
+            JCObject objCeiling = (JCObject)retObjectCeiling;
             return new DbFunctionExpression(objCeiling);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCeiling != null ? retObjectCeiling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +410,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Concat(DbExpression string1, DbExpression string2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConcat = null;
         try {
-            JCObject objConcat = (JCObject)classType.Invoke("Concat", string1 == null ? null : string1.getJCOInstance(), string2 == null ? null : string2.getJCOInstance());
+            retObjectConcat = classType.Invoke("Concat", string1 == null ? null : string1.getJCOInstance(), string2 == null ? null : string2.getJCOInstance());
+            JCObject objConcat = (JCObject)retObjectConcat;
             return new DbFunctionExpression(objConcat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcat != null ? retObjectConcat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +425,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Count(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            JCObject objCount = (JCObject)classType.Invoke("Count", collection == null ? null : collection.getJCOInstance());
+            retObjectCount = classType.Invoke("Count", collection == null ? null : collection.getJCOInstance());
+            JCObject objCount = (JCObject)retObjectCount;
             return new DbFunctionExpression(objCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +440,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression CreateDateTime(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDateTime = null;
         try {
-            JCObject objCreateDateTime = (JCObject)classType.Invoke("CreateDateTime", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            retObjectCreateDateTime = classType.Invoke("CreateDateTime", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objCreateDateTime = (JCObject)retObjectCreateDateTime;
             return new DbFunctionExpression(objCreateDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDateTime != null ? retObjectCreateDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +455,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression CreateDateTimeOffset(DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second, DbExpression timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDateTimeOffset = null;
         try {
-            JCObject objCreateDateTimeOffset = (JCObject)classType.Invoke("CreateDateTimeOffset", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance(), timeZoneOffset == null ? null : timeZoneOffset.getJCOInstance());
+            retObjectCreateDateTimeOffset = classType.Invoke("CreateDateTimeOffset", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance(), timeZoneOffset == null ? null : timeZoneOffset.getJCOInstance());
+            JCObject objCreateDateTimeOffset = (JCObject)retObjectCreateDateTimeOffset;
             return new DbFunctionExpression(objCreateDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDateTimeOffset != null ? retObjectCreateDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +470,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression CreateTime(DbExpression hour, DbExpression minute, DbExpression second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTime = null;
         try {
-            JCObject objCreateTime = (JCObject)classType.Invoke("CreateTime", hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            retObjectCreateTime = classType.Invoke("CreateTime", hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objCreateTime = (JCObject)retObjectCreateTime;
             return new DbFunctionExpression(objCreateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTime != null ? retObjectCreateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +485,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression CurrentDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentDateTime = null;
         try {
-            JCObject objCurrentDateTime = (JCObject)classType.Invoke("CurrentDateTime");
+            retObjectCurrentDateTime = classType.Invoke("CurrentDateTime");
+            JCObject objCurrentDateTime = (JCObject)retObjectCurrentDateTime;
             return new DbFunctionExpression(objCurrentDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentDateTime != null ? retObjectCurrentDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +500,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression CurrentDateTimeOffset() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentDateTimeOffset = null;
         try {
-            JCObject objCurrentDateTimeOffset = (JCObject)classType.Invoke("CurrentDateTimeOffset");
+            retObjectCurrentDateTimeOffset = classType.Invoke("CurrentDateTimeOffset");
+            JCObject objCurrentDateTimeOffset = (JCObject)retObjectCurrentDateTimeOffset;
             return new DbFunctionExpression(objCurrentDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentDateTimeOffset != null ? retObjectCurrentDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +515,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression CurrentUtcDateTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentUtcDateTime = null;
         try {
-            JCObject objCurrentUtcDateTime = (JCObject)classType.Invoke("CurrentUtcDateTime");
+            retObjectCurrentUtcDateTime = classType.Invoke("CurrentUtcDateTime");
+            JCObject objCurrentUtcDateTime = (JCObject)retObjectCurrentUtcDateTime;
             return new DbFunctionExpression(objCurrentUtcDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentUtcDateTime != null ? retObjectCurrentUtcDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +530,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Day(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDay = null;
         try {
-            JCObject objDay = (JCObject)classType.Invoke("Day", dateValue == null ? null : dateValue.getJCOInstance());
+            retObjectDay = classType.Invoke("Day", dateValue == null ? null : dateValue.getJCOInstance());
+            JCObject objDay = (JCObject)retObjectDay;
             return new DbFunctionExpression(objDay);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDay != null ? retObjectDay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +545,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DayOfYear(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDayOfYear = null;
         try {
-            JCObject objDayOfYear = (JCObject)classType.Invoke("DayOfYear", dateValue == null ? null : dateValue.getJCOInstance());
+            retObjectDayOfYear = classType.Invoke("DayOfYear", dateValue == null ? null : dateValue.getJCOInstance());
+            JCObject objDayOfYear = (JCObject)retObjectDayOfYear;
             return new DbFunctionExpression(objDayOfYear);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,10 +560,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffDays(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffDays = null;
         try {
-            JCObject objDiffDays = (JCObject)classType.Invoke("DiffDays", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            retObjectDiffDays = classType.Invoke("DiffDays", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            JCObject objDiffDays = (JCObject)retObjectDiffDays;
             return new DbFunctionExpression(objDiffDays);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffDays != null ? retObjectDiffDays.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,10 +575,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffHours(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffHours = null;
         try {
-            JCObject objDiffHours = (JCObject)classType.Invoke("DiffHours", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            retObjectDiffHours = classType.Invoke("DiffHours", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffHours = (JCObject)retObjectDiffHours;
             return new DbFunctionExpression(objDiffHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffHours != null ? retObjectDiffHours.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,10 +590,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffMicroseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMicroseconds = null;
         try {
-            JCObject objDiffMicroseconds = (JCObject)classType.Invoke("DiffMicroseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            retObjectDiffMicroseconds = classType.Invoke("DiffMicroseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffMicroseconds = (JCObject)retObjectDiffMicroseconds;
             return new DbFunctionExpression(objDiffMicroseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMicroseconds != null ? retObjectDiffMicroseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,10 +605,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffMilliseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMilliseconds = null;
         try {
-            JCObject objDiffMilliseconds = (JCObject)classType.Invoke("DiffMilliseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            retObjectDiffMilliseconds = classType.Invoke("DiffMilliseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffMilliseconds = (JCObject)retObjectDiffMilliseconds;
             return new DbFunctionExpression(objDiffMilliseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMilliseconds != null ? retObjectDiffMilliseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,10 +620,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffMinutes(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMinutes = null;
         try {
-            JCObject objDiffMinutes = (JCObject)classType.Invoke("DiffMinutes", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            retObjectDiffMinutes = classType.Invoke("DiffMinutes", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffMinutes = (JCObject)retObjectDiffMinutes;
             return new DbFunctionExpression(objDiffMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMinutes != null ? retObjectDiffMinutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,10 +635,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffMonths(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMonths = null;
         try {
-            JCObject objDiffMonths = (JCObject)classType.Invoke("DiffMonths", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            retObjectDiffMonths = classType.Invoke("DiffMonths", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            JCObject objDiffMonths = (JCObject)retObjectDiffMonths;
             return new DbFunctionExpression(objDiffMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMonths != null ? retObjectDiffMonths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,10 +650,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffNanoseconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffNanoseconds = null;
         try {
-            JCObject objDiffNanoseconds = (JCObject)classType.Invoke("DiffNanoseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            retObjectDiffNanoseconds = classType.Invoke("DiffNanoseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffNanoseconds = (JCObject)retObjectDiffNanoseconds;
             return new DbFunctionExpression(objDiffNanoseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffNanoseconds != null ? retObjectDiffNanoseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,10 +665,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffSeconds(DbExpression timeValue1, DbExpression timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffSeconds = null;
         try {
-            JCObject objDiffSeconds = (JCObject)classType.Invoke("DiffSeconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            retObjectDiffSeconds = classType.Invoke("DiffSeconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffSeconds = (JCObject)retObjectDiffSeconds;
             return new DbFunctionExpression(objDiffSeconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffSeconds != null ? retObjectDiffSeconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,10 +680,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression DiffYears(DbExpression dateValue1, DbExpression dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffYears = null;
         try {
-            JCObject objDiffYears = (JCObject)classType.Invoke("DiffYears", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            retObjectDiffYears = classType.Invoke("DiffYears", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            JCObject objDiffYears = (JCObject)retObjectDiffYears;
             return new DbFunctionExpression(objDiffYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffYears != null ? retObjectDiffYears.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,10 +695,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression EndsWith(DbExpression stringArgument, DbExpression suffix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEndsWith = null;
         try {
-            JCObject objEndsWith = (JCObject)classType.Invoke("EndsWith", stringArgument == null ? null : stringArgument.getJCOInstance(), suffix == null ? null : suffix.getJCOInstance());
+            retObjectEndsWith = classType.Invoke("EndsWith", stringArgument == null ? null : stringArgument.getJCOInstance(), suffix == null ? null : suffix.getJCOInstance());
+            JCObject objEndsWith = (JCObject)retObjectEndsWith;
             return new DbFunctionExpression(objEndsWith);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndsWith != null ? retObjectEndsWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,10 +710,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Floor(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFloor = null;
         try {
-            JCObject objFloor = (JCObject)classType.Invoke("Floor", value == null ? null : value.getJCOInstance());
+            retObjectFloor = classType.Invoke("Floor", value == null ? null : value.getJCOInstance());
+            JCObject objFloor = (JCObject)retObjectFloor;
             return new DbFunctionExpression(objFloor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFloor != null ? retObjectFloor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,10 +725,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression GetTotalOffsetMinutes(DbExpression dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTotalOffsetMinutes = null;
         try {
-            JCObject objGetTotalOffsetMinutes = (JCObject)classType.Invoke("GetTotalOffsetMinutes", dateTimeOffsetArgument == null ? null : dateTimeOffsetArgument.getJCOInstance());
+            retObjectGetTotalOffsetMinutes = classType.Invoke("GetTotalOffsetMinutes", dateTimeOffsetArgument == null ? null : dateTimeOffsetArgument.getJCOInstance());
+            JCObject objGetTotalOffsetMinutes = (JCObject)retObjectGetTotalOffsetMinutes;
             return new DbFunctionExpression(objGetTotalOffsetMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTotalOffsetMinutes != null ? retObjectGetTotalOffsetMinutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -584,10 +740,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Hour(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHour = null;
         try {
-            JCObject objHour = (JCObject)classType.Invoke("Hour", timeValue == null ? null : timeValue.getJCOInstance());
+            retObjectHour = classType.Invoke("Hour", timeValue == null ? null : timeValue.getJCOInstance());
+            JCObject objHour = (JCObject)retObjectHour;
             return new DbFunctionExpression(objHour);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHour != null ? retObjectHour.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,10 +755,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression IndexOf(DbExpression searchString, DbExpression stringToFind) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            JCObject objIndexOf = (JCObject)classType.Invoke("IndexOf", searchString == null ? null : searchString.getJCOInstance(), stringToFind == null ? null : stringToFind.getJCOInstance());
+            retObjectIndexOf = classType.Invoke("IndexOf", searchString == null ? null : searchString.getJCOInstance(), stringToFind == null ? null : stringToFind.getJCOInstance());
+            JCObject objIndexOf = (JCObject)retObjectIndexOf;
             return new DbFunctionExpression(objIndexOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,10 +770,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Left(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            JCObject objLeft = (JCObject)classType.Invoke("Left", stringArgument == null ? null : stringArgument.getJCOInstance(), length == null ? null : length.getJCOInstance());
+            retObjectLeft = classType.Invoke("Left", stringArgument == null ? null : stringArgument.getJCOInstance(), length == null ? null : length.getJCOInstance());
+            JCObject objLeft = (JCObject)retObjectLeft;
             return new DbFunctionExpression(objLeft);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -617,10 +785,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Length(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            JCObject objLength = (JCObject)classType.Invoke("Length", stringArgument == null ? null : stringArgument.getJCOInstance());
+            retObjectLength = classType.Invoke("Length", stringArgument == null ? null : stringArgument.getJCOInstance());
+            JCObject objLength = (JCObject)retObjectLength;
             return new DbFunctionExpression(objLength);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,10 +800,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression LongCount(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCount = null;
         try {
-            JCObject objLongCount = (JCObject)classType.Invoke("LongCount", collection == null ? null : collection.getJCOInstance());
+            retObjectLongCount = classType.Invoke("LongCount", collection == null ? null : collection.getJCOInstance());
+            JCObject objLongCount = (JCObject)retObjectLongCount;
             return new DbFunctionExpression(objLongCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLongCount != null ? retObjectLongCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,10 +815,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Max(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
         try {
-            JCObject objMax = (JCObject)classType.Invoke("Max", collection == null ? null : collection.getJCOInstance());
+            retObjectMax = classType.Invoke("Max", collection == null ? null : collection.getJCOInstance());
+            JCObject objMax = (JCObject)retObjectMax;
             return new DbFunctionExpression(objMax);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,10 +830,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Millisecond(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMillisecond = null;
         try {
-            JCObject objMillisecond = (JCObject)classType.Invoke("Millisecond", timeValue == null ? null : timeValue.getJCOInstance());
+            retObjectMillisecond = classType.Invoke("Millisecond", timeValue == null ? null : timeValue.getJCOInstance());
+            JCObject objMillisecond = (JCObject)retObjectMillisecond;
             return new DbFunctionExpression(objMillisecond);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMillisecond != null ? retObjectMillisecond.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,10 +845,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Min(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMin = null;
         try {
-            JCObject objMin = (JCObject)classType.Invoke("Min", collection == null ? null : collection.getJCOInstance());
+            retObjectMin = classType.Invoke("Min", collection == null ? null : collection.getJCOInstance());
+            JCObject objMin = (JCObject)retObjectMin;
             return new DbFunctionExpression(objMin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMin != null ? retObjectMin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,10 +860,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Minute(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinute = null;
         try {
-            JCObject objMinute = (JCObject)classType.Invoke("Minute", timeValue == null ? null : timeValue.getJCOInstance());
+            retObjectMinute = classType.Invoke("Minute", timeValue == null ? null : timeValue.getJCOInstance());
+            JCObject objMinute = (JCObject)retObjectMinute;
             return new DbFunctionExpression(objMinute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinute != null ? retObjectMinute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,10 +875,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Month(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMonth = null;
         try {
-            JCObject objMonth = (JCObject)classType.Invoke("Month", dateValue == null ? null : dateValue.getJCOInstance());
+            retObjectMonth = classType.Invoke("Month", dateValue == null ? null : dateValue.getJCOInstance());
+            JCObject objMonth = (JCObject)retObjectMonth;
             return new DbFunctionExpression(objMonth);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMonth != null ? retObjectMonth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -694,10 +890,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression NewGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewGuid = null;
         try {
-            JCObject objNewGuid = (JCObject)classType.Invoke("NewGuid");
+            retObjectNewGuid = classType.Invoke("NewGuid");
+            JCObject objNewGuid = (JCObject)retObjectNewGuid;
             return new DbFunctionExpression(objNewGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewGuid != null ? retObjectNewGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -705,10 +905,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Power(DbExpression baseArgument, DbExpression exponent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPower = null;
         try {
-            JCObject objPower = (JCObject)classType.Invoke("Power", baseArgument == null ? null : baseArgument.getJCOInstance(), exponent == null ? null : exponent.getJCOInstance());
+            retObjectPower = classType.Invoke("Power", baseArgument == null ? null : baseArgument.getJCOInstance(), exponent == null ? null : exponent.getJCOInstance());
+            JCObject objPower = (JCObject)retObjectPower;
             return new DbFunctionExpression(objPower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPower != null ? retObjectPower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,10 +920,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Replace(DbExpression stringArgument, DbExpression toReplace, DbExpression replacement) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            JCObject objReplace = (JCObject)classType.Invoke("Replace", stringArgument == null ? null : stringArgument.getJCOInstance(), toReplace == null ? null : toReplace.getJCOInstance(), replacement == null ? null : replacement.getJCOInstance());
+            retObjectReplace = classType.Invoke("Replace", stringArgument == null ? null : stringArgument.getJCOInstance(), toReplace == null ? null : toReplace.getJCOInstance(), replacement == null ? null : replacement.getJCOInstance());
+            JCObject objReplace = (JCObject)retObjectReplace;
             return new DbFunctionExpression(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -727,10 +935,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Reverse(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverse = null;
         try {
-            JCObject objReverse = (JCObject)classType.Invoke("Reverse", stringArgument == null ? null : stringArgument.getJCOInstance());
+            retObjectReverse = classType.Invoke("Reverse", stringArgument == null ? null : stringArgument.getJCOInstance());
+            JCObject objReverse = (JCObject)retObjectReverse;
             return new DbFunctionExpression(objReverse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverse != null ? retObjectReverse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -738,10 +950,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Right(DbExpression stringArgument, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            JCObject objRight = (JCObject)classType.Invoke("Right", stringArgument == null ? null : stringArgument.getJCOInstance(), length == null ? null : length.getJCOInstance());
+            retObjectRight = classType.Invoke("Right", stringArgument == null ? null : stringArgument.getJCOInstance(), length == null ? null : length.getJCOInstance());
+            JCObject objRight = (JCObject)retObjectRight;
             return new DbFunctionExpression(objRight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -749,10 +965,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Round(DbExpression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", value == null ? null : value.getJCOInstance());
+            retObjectRound = classType.Invoke("Round", value == null ? null : value.getJCOInstance());
+            JCObject objRound = (JCObject)retObjectRound;
             return new DbFunctionExpression(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -760,10 +980,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Round(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
+            retObjectRound = classType.Invoke("Round", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
+            JCObject objRound = (JCObject)retObjectRound;
             return new DbFunctionExpression(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -771,10 +995,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Second(DbExpression timeValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecond = null;
         try {
-            JCObject objSecond = (JCObject)classType.Invoke("Second", timeValue == null ? null : timeValue.getJCOInstance());
+            retObjectSecond = classType.Invoke("Second", timeValue == null ? null : timeValue.getJCOInstance());
+            JCObject objSecond = (JCObject)retObjectSecond;
             return new DbFunctionExpression(objSecond);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecond != null ? retObjectSecond.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -782,10 +1010,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression StartsWith(DbExpression stringArgument, DbExpression prefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartsWith = null;
         try {
-            JCObject objStartsWith = (JCObject)classType.Invoke("StartsWith", stringArgument == null ? null : stringArgument.getJCOInstance(), prefix == null ? null : prefix.getJCOInstance());
+            retObjectStartsWith = classType.Invoke("StartsWith", stringArgument == null ? null : stringArgument.getJCOInstance(), prefix == null ? null : prefix.getJCOInstance());
+            JCObject objStartsWith = (JCObject)retObjectStartsWith;
             return new DbFunctionExpression(objStartsWith);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartsWith != null ? retObjectStartsWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -793,10 +1025,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression StDev(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStDev = null;
         try {
-            JCObject objStDev = (JCObject)classType.Invoke("StDev", collection == null ? null : collection.getJCOInstance());
+            retObjectStDev = classType.Invoke("StDev", collection == null ? null : collection.getJCOInstance());
+            JCObject objStDev = (JCObject)retObjectStDev;
             return new DbFunctionExpression(objStDev);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStDev != null ? retObjectStDev.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -804,10 +1040,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression StDevP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStDevP = null;
         try {
-            JCObject objStDevP = (JCObject)classType.Invoke("StDevP", collection == null ? null : collection.getJCOInstance());
+            retObjectStDevP = classType.Invoke("StDevP", collection == null ? null : collection.getJCOInstance());
+            JCObject objStDevP = (JCObject)retObjectStDevP;
             return new DbFunctionExpression(objStDevP);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStDevP != null ? retObjectStDevP.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -815,10 +1055,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Substring(DbExpression stringArgument, DbExpression start, DbExpression length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubstring = null;
         try {
-            JCObject objSubstring = (JCObject)classType.Invoke("Substring", stringArgument == null ? null : stringArgument.getJCOInstance(), start == null ? null : start.getJCOInstance(), length == null ? null : length.getJCOInstance());
+            retObjectSubstring = classType.Invoke("Substring", stringArgument == null ? null : stringArgument.getJCOInstance(), start == null ? null : start.getJCOInstance(), length == null ? null : length.getJCOInstance());
+            JCObject objSubstring = (JCObject)retObjectSubstring;
             return new DbFunctionExpression(objSubstring);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubstring != null ? retObjectSubstring.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -826,10 +1070,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Sum(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSum = null;
         try {
-            JCObject objSum = (JCObject)classType.Invoke("Sum", collection == null ? null : collection.getJCOInstance());
+            retObjectSum = classType.Invoke("Sum", collection == null ? null : collection.getJCOInstance());
+            JCObject objSum = (JCObject)retObjectSum;
             return new DbFunctionExpression(objSum);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSum != null ? retObjectSum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -837,10 +1085,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression ToLower(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLower = null;
         try {
-            JCObject objToLower = (JCObject)classType.Invoke("ToLower", stringArgument == null ? null : stringArgument.getJCOInstance());
+            retObjectToLower = classType.Invoke("ToLower", stringArgument == null ? null : stringArgument.getJCOInstance());
+            JCObject objToLower = (JCObject)retObjectToLower;
             return new DbFunctionExpression(objToLower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLower != null ? retObjectToLower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -848,10 +1100,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression ToUpper(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToUpper = null;
         try {
-            JCObject objToUpper = (JCObject)classType.Invoke("ToUpper", stringArgument == null ? null : stringArgument.getJCOInstance());
+            retObjectToUpper = classType.Invoke("ToUpper", stringArgument == null ? null : stringArgument.getJCOInstance());
+            JCObject objToUpper = (JCObject)retObjectToUpper;
             return new DbFunctionExpression(objToUpper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUpper != null ? retObjectToUpper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -859,10 +1115,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Trim(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrim = null;
         try {
-            JCObject objTrim = (JCObject)classType.Invoke("Trim", stringArgument == null ? null : stringArgument.getJCOInstance());
+            retObjectTrim = classType.Invoke("Trim", stringArgument == null ? null : stringArgument.getJCOInstance());
+            JCObject objTrim = (JCObject)retObjectTrim;
             return new DbFunctionExpression(objTrim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -870,10 +1130,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression TrimEnd(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimEnd = null;
         try {
-            JCObject objTrimEnd = (JCObject)classType.Invoke("TrimEnd", stringArgument == null ? null : stringArgument.getJCOInstance());
+            retObjectTrimEnd = classType.Invoke("TrimEnd", stringArgument == null ? null : stringArgument.getJCOInstance());
+            JCObject objTrimEnd = (JCObject)retObjectTrimEnd;
             return new DbFunctionExpression(objTrimEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimEnd != null ? retObjectTrimEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,10 +1145,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression TrimStart(DbExpression stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimStart = null;
         try {
-            JCObject objTrimStart = (JCObject)classType.Invoke("TrimStart", stringArgument == null ? null : stringArgument.getJCOInstance());
+            retObjectTrimStart = classType.Invoke("TrimStart", stringArgument == null ? null : stringArgument.getJCOInstance());
+            JCObject objTrimStart = (JCObject)retObjectTrimStart;
             return new DbFunctionExpression(objTrimStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimStart != null ? retObjectTrimStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -892,10 +1160,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Truncate(DbExpression value, DbExpression digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncate = null;
         try {
-            JCObject objTruncate = (JCObject)classType.Invoke("Truncate", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
+            retObjectTruncate = classType.Invoke("Truncate", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
+            JCObject objTruncate = (JCObject)retObjectTruncate;
             return new DbFunctionExpression(objTruncate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -903,10 +1175,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression TruncateTime(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncateTime = null;
         try {
-            JCObject objTruncateTime = (JCObject)classType.Invoke("TruncateTime", dateValue == null ? null : dateValue.getJCOInstance());
+            retObjectTruncateTime = classType.Invoke("TruncateTime", dateValue == null ? null : dateValue.getJCOInstance());
+            JCObject objTruncateTime = (JCObject)retObjectTruncateTime;
             return new DbFunctionExpression(objTruncateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncateTime != null ? retObjectTruncateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -914,10 +1190,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Var(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVar = null;
         try {
-            JCObject objVar = (JCObject)classType.Invoke("Var", collection == null ? null : collection.getJCOInstance());
+            retObjectVar = classType.Invoke("Var", collection == null ? null : collection.getJCOInstance());
+            JCObject objVar = (JCObject)retObjectVar;
             return new DbFunctionExpression(objVar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVar != null ? retObjectVar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -925,10 +1205,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression VarP(DbExpression collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVarP = null;
         try {
-            JCObject objVarP = (JCObject)classType.Invoke("VarP", collection == null ? null : collection.getJCOInstance());
+            retObjectVarP = classType.Invoke("VarP", collection == null ? null : collection.getJCOInstance());
+            JCObject objVarP = (JCObject)retObjectVarP;
             return new DbFunctionExpression(objVarP);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVarP != null ? retObjectVarP.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -936,10 +1220,14 @@ public class EdmFunctions extends NetObject  {
 
     public static DbFunctionExpression Year(DbExpression dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.data.EntitySqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYear = null;
         try {
-            JCObject objYear = (JCObject)classType.Invoke("Year", dateValue == null ? null : dateValue.getJCOInstance());
+            retObjectYear = classType.Invoke("Year", dateValue == null ? null : dateValue.getJCOInstance());
+            JCObject objYear = (JCObject)retObjectYear;
             return new DbFunctionExpression(objYear);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYear != null ? retObjectYear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

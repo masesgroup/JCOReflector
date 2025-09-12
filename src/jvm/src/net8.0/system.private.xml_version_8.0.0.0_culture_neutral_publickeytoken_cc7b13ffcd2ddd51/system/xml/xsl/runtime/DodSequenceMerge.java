@@ -157,7 +157,7 @@ public class DodSequenceMerge extends ValueType  {
     
     public void Create(XmlQueryRuntime runtime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Create", runtime == null ? null : runtime.getJCOInstance());
         } catch (JCNativeException jcne) {

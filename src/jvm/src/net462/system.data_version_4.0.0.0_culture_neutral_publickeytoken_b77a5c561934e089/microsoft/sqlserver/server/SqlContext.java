@@ -162,9 +162,13 @@ public class SqlContext extends NetObject  {
     
     public static boolean getIsAvailable() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAvailable = null;
         try {
-            return (boolean)classType.Get("IsAvailable");
+            retObjectIsAvailable = classType.Get("IsAvailable");
+            return (boolean)retObjectIsAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAvailable != null ? retObjectIsAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class SqlContext extends NetObject  {
 
     public static SqlPipe getPipe() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPipe = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pipe");
+            retObjectPipe = classType.Get("Pipe");
+            JCObject val = (JCObject)retObjectPipe;
             return new SqlPipe(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPipe != null ? retObjectPipe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class SqlContext extends NetObject  {
 
     public static SqlTriggerContext getTriggerContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTriggerContext = null;
         try {
-            JCObject val = (JCObject)classType.Get("TriggerContext");
+            retObjectTriggerContext = classType.Get("TriggerContext");
+            JCObject val = (JCObject)retObjectTriggerContext;
             return new SqlTriggerContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTriggerContext != null ? retObjectTriggerContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class SqlContext extends NetObject  {
 
     public static WindowsIdentity getWindowsIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWindowsIdentity = null;
         try {
-            JCObject val = (JCObject)classType.Get("WindowsIdentity");
+            retObjectWindowsIdentity = classType.Get("WindowsIdentity");
+            JCObject val = (JCObject)retObjectWindowsIdentity;
             return new WindowsIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowsIdentity != null ? retObjectWindowsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

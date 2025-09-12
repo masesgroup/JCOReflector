@@ -163,10 +163,14 @@ public class DefaultJsonTypeInfoResolver extends NetObject  {
     
     public JsonTypeInfo GetTypeInfo(NetType type, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeInfo = null;
         try {
-            JCObject objGetTypeInfo = (JCObject)classInstance.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectGetTypeInfo = classInstance.Invoke("GetTypeInfo", type == null ? null : type.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objGetTypeInfo = (JCObject)retObjectGetTypeInfo;
             return new JsonTypeInfo(objGetTypeInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeInfo != null ? retObjectGetTypeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

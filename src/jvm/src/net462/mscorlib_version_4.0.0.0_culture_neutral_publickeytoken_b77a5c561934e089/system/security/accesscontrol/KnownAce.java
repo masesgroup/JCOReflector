@@ -159,9 +159,19 @@ public class KnownAce extends GenericAce  {
     
     public int getAccessMask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessMask = null;
         try {
-            return (int)classInstance.Get("AccessMask");
+            retObjectAccessMask = classInstance.Get("AccessMask");
+            return (int)retObjectAccessMask;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAccessMaskNumber = (java.lang.Number)retObjectAccessMask;
+                return retObjectAccessMaskNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAccessMask != null ? retObjectAccessMask.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +179,7 @@ public class KnownAce extends GenericAce  {
 
     public void setAccessMask(int AccessMask) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessMask", AccessMask);
         } catch (JCNativeException jcne) {
@@ -179,10 +189,14 @@ public class KnownAce extends GenericAce  {
 
     public SecurityIdentifier getSecurityIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityIdentifier");
+            retObjectSecurityIdentifier = classInstance.Get("SecurityIdentifier");
+            JCObject val = (JCObject)retObjectSecurityIdentifier;
             return new SecurityIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityIdentifier != null ? retObjectSecurityIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +204,7 @@ public class KnownAce extends GenericAce  {
 
     public void setSecurityIdentifier(SecurityIdentifier SecurityIdentifier) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityIdentifier", SecurityIdentifier == null ? null : SecurityIdentifier.getJCOInstance());
         } catch (JCNativeException jcne) {

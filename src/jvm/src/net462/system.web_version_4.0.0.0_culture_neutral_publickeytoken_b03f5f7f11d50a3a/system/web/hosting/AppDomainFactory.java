@@ -161,10 +161,14 @@ public class AppDomainFactory extends NetObject  {
     
     public NetObject Create(java.lang.String module, java.lang.String typeName, java.lang.String appId, java.lang.String appPath, java.lang.String strUrlOfAppOrigin, int iZone) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.web.HttpException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.OverflowException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.CannotUnloadAppDomainException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", module, typeName, appId, appPath, strUrlOfAppOrigin, iZone);
+            retObjectCreate = classInstance.Invoke("Create", module, typeName, appId, appPath, strUrlOfAppOrigin, iZone);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new NetObject(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -202,10 +202,14 @@ public class SyndicationItem extends NetObject  {
     
     public Atom10ItemFormatter GetAtom10Formatter() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAtom10Formatter = null;
         try {
-            JCObject objGetAtom10Formatter = (JCObject)classInstance.Invoke("GetAtom10Formatter");
+            retObjectGetAtom10Formatter = classInstance.Invoke("GetAtom10Formatter");
+            JCObject objGetAtom10Formatter = (JCObject)retObjectGetAtom10Formatter;
             return new Atom10ItemFormatter(objGetAtom10Formatter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAtom10Formatter != null ? retObjectGetAtom10Formatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +217,14 @@ public class SyndicationItem extends NetObject  {
 
     public Rss20ItemFormatter GetRss20Formatter() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRss20Formatter = null;
         try {
-            JCObject objGetRss20Formatter = (JCObject)classInstance.Invoke("GetRss20Formatter");
+            retObjectGetRss20Formatter = classInstance.Invoke("GetRss20Formatter");
+            JCObject objGetRss20Formatter = (JCObject)retObjectGetRss20Formatter;
             return new Rss20ItemFormatter(objGetRss20Formatter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRss20Formatter != null ? retObjectGetRss20Formatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +232,14 @@ public class SyndicationItem extends NetObject  {
 
     public Rss20ItemFormatter GetRss20Formatter(boolean serializeExtensionsAsAtom) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRss20Formatter = null;
         try {
-            JCObject objGetRss20Formatter = (JCObject)classInstance.Invoke("GetRss20Formatter", serializeExtensionsAsAtom);
+            retObjectGetRss20Formatter = classInstance.Invoke("GetRss20Formatter", serializeExtensionsAsAtom);
+            JCObject objGetRss20Formatter = (JCObject)retObjectGetRss20Formatter;
             return new Rss20ItemFormatter(objGetRss20Formatter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRss20Formatter != null ? retObjectGetRss20Formatter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +247,14 @@ public class SyndicationItem extends NetObject  {
 
     public SyndicationItem Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new SyndicationItem(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +262,14 @@ public class SyndicationItem extends NetObject  {
 
     public static SyndicationItem Load(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new SyndicationItem(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class SyndicationItem extends NetObject  {
 
     public void AddPermalink(Uri permalink) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPermalink", permalink == null ? null : permalink.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,7 +287,7 @@ public class SyndicationItem extends NetObject  {
 
     public void SaveAsAtom10(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveAsAtom10", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,7 +297,7 @@ public class SyndicationItem extends NetObject  {
 
     public void SaveAsRss20(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveAsRss20", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,10 +311,14 @@ public class SyndicationItem extends NetObject  {
     
     public DateTimeOffset getLastUpdatedTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastUpdatedTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastUpdatedTime");
+            retObjectLastUpdatedTime = classInstance.Get("LastUpdatedTime");
+            JCObject val = (JCObject)retObjectLastUpdatedTime;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastUpdatedTime != null ? retObjectLastUpdatedTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +326,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setLastUpdatedTime(DateTimeOffset LastUpdatedTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastUpdatedTime", LastUpdatedTime == null ? null : LastUpdatedTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,10 +336,14 @@ public class SyndicationItem extends NetObject  {
 
     public DateTimeOffset getPublishDate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublishDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PublishDate");
+            retObjectPublishDate = classInstance.Get("PublishDate");
+            JCObject val = (JCObject)retObjectPublishDate;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPublishDate != null ? retObjectPublishDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +351,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setPublishDate(DateTimeOffset PublishDate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PublishDate", PublishDate == null ? null : PublishDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -333,10 +361,14 @@ public class SyndicationItem extends NetObject  {
 
     public SyndicationContent getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            JCObject val = (JCObject)retObjectContent;
             return new SyndicationContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +376,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setContent(SyndicationContent Content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -354,10 +386,14 @@ public class SyndicationItem extends NetObject  {
 
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementExtensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementExtensions");
+            retObjectElementExtensions = classInstance.Get("ElementExtensions");
+            JCObject val = (JCObject)retObjectElementExtensions;
             return new SyndicationElementExtensionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementExtensions != null ? retObjectElementExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +401,14 @@ public class SyndicationItem extends NetObject  {
 
     public SyndicationFeed getSourceFeed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceFeed = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceFeed");
+            retObjectSourceFeed = classInstance.Get("SourceFeed");
+            JCObject val = (JCObject)retObjectSourceFeed;
             return new SyndicationFeed(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceFeed != null ? retObjectSourceFeed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +416,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setSourceFeed(SyndicationFeed SourceFeed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceFeed", SourceFeed == null ? null : SourceFeed.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +426,14 @@ public class SyndicationItem extends NetObject  {
 
     public TextSyndicationContent getCopyright() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyright = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Copyright");
+            retObjectCopyright = classInstance.Get("Copyright");
+            JCObject val = (JCObject)retObjectCopyright;
             return new TextSyndicationContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyright != null ? retObjectCopyright.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +441,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setCopyright(TextSyndicationContent Copyright) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Copyright", Copyright == null ? null : Copyright.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,10 +451,14 @@ public class SyndicationItem extends NetObject  {
 
     public TextSyndicationContent getSummary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSummary = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Summary");
+            retObjectSummary = classInstance.Get("Summary");
+            JCObject val = (JCObject)retObjectSummary;
             return new TextSyndicationContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSummary != null ? retObjectSummary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +466,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setSummary(TextSyndicationContent Summary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Summary", Summary == null ? null : Summary.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -428,10 +476,14 @@ public class SyndicationItem extends NetObject  {
 
     public TextSyndicationContent getTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            JCObject val = (JCObject)retObjectTitle;
             return new TextSyndicationContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +491,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setTitle(TextSyndicationContent Title) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title == null ? null : Title.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -449,9 +501,13 @@ public class SyndicationItem extends NetObject  {
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,7 +515,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setId(java.lang.String Id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Id", Id);
         } catch (JCNativeException jcne) {
@@ -469,10 +525,14 @@ public class SyndicationItem extends NetObject  {
 
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            retObjectBaseUri = classInstance.Get("BaseUri");
+            JCObject val = (JCObject)retObjectBaseUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseUri != null ? retObjectBaseUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +540,7 @@ public class SyndicationItem extends NetObject  {
 
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {

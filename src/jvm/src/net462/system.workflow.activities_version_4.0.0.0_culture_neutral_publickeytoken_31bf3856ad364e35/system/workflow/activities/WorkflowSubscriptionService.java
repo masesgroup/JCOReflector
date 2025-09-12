@@ -155,7 +155,7 @@ public class WorkflowSubscriptionService extends NetObject  {
     
     public void CreateSubscription(MessageEventSubscription subscription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateSubscription", subscription == null ? null : subscription.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class WorkflowSubscriptionService extends NetObject  {
 
     public void DeleteSubscription(Guid subscriptionId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteSubscription", subscriptionId == null ? null : subscriptionId.getJCOInstance());
         } catch (JCNativeException jcne) {

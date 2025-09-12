@@ -161,10 +161,14 @@ public class FrameworkRichTextComposition extends FrameworkTextComposition  {
     
     public TextPointer getCompositionEnd() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompositionEnd");
+            retObjectCompositionEnd = classInstance.Get("CompositionEnd");
+            JCObject val = (JCObject)retObjectCompositionEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompositionEnd != null ? retObjectCompositionEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class FrameworkRichTextComposition extends FrameworkTextComposition  {
 
     public TextPointer getCompositionStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompositionStart");
+            retObjectCompositionStart = classInstance.Get("CompositionStart");
+            JCObject val = (JCObject)retObjectCompositionStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompositionStart != null ? retObjectCompositionStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class FrameworkRichTextComposition extends FrameworkTextComposition  {
 
     public TextPointer getResultEnd() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultEnd");
+            retObjectResultEnd = classInstance.Get("ResultEnd");
+            JCObject val = (JCObject)retObjectResultEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResultEnd != null ? retObjectResultEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class FrameworkRichTextComposition extends FrameworkTextComposition  {
 
     public TextPointer getResultStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResultStart");
+            retObjectResultStart = classInstance.Get("ResultStart");
+            JCObject val = (JCObject)retObjectResultStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResultStart != null ? retObjectResultStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

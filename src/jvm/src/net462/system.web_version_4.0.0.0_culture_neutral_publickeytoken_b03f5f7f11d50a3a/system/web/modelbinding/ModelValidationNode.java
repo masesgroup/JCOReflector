@@ -168,7 +168,7 @@ public class ModelValidationNode extends NetObject  {
     
     public void CombineWith(ModelValidationNode otherNode) throws Throwable, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CombineWith", otherNode == null ? null : otherNode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class ModelValidationNode extends NetObject  {
 
     public void Validate(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class ModelValidationNode extends NetObject  {
 
     public void Validate(ModelBindingExecutionContext modelBindingExecutionContext, ModelValidationNode parentNode) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance(), parentNode == null ? null : parentNode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +202,13 @@ public class ModelValidationNode extends NetObject  {
     
     public boolean getSuppressValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuppressValidation = null;
         try {
-            return (boolean)classInstance.Get("SuppressValidation");
+            retObjectSuppressValidation = classInstance.Get("SuppressValidation");
+            return (boolean)retObjectSuppressValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSuppressValidation != null ? retObjectSuppressValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +216,7 @@ public class ModelValidationNode extends NetObject  {
 
     public void setSuppressValidation(boolean SuppressValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuppressValidation", SuppressValidation);
         } catch (JCNativeException jcne) {
@@ -222,9 +226,13 @@ public class ModelValidationNode extends NetObject  {
 
     public boolean getValidateAllProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateAllProperties = null;
         try {
-            return (boolean)classInstance.Get("ValidateAllProperties");
+            retObjectValidateAllProperties = classInstance.Get("ValidateAllProperties");
+            return (boolean)retObjectValidateAllProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateAllProperties != null ? retObjectValidateAllProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +240,7 @@ public class ModelValidationNode extends NetObject  {
 
     public void setValidateAllProperties(boolean ValidateAllProperties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateAllProperties", ValidateAllProperties);
         } catch (JCNativeException jcne) {
@@ -242,9 +250,13 @@ public class ModelValidationNode extends NetObject  {
 
     public java.lang.String getModelStateKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelStateKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ModelStateKey");
+            retObjectModelStateKey = classInstance.Get("ModelStateKey");
+            return (java.lang.String)retObjectModelStateKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectModelStateKey != null ? retObjectModelStateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +264,7 @@ public class ModelValidationNode extends NetObject  {
 
     public void setModelStateKey(java.lang.String ModelStateKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelStateKey", ModelStateKey);
         } catch (JCNativeException jcne) {
@@ -262,10 +274,14 @@ public class ModelValidationNode extends NetObject  {
 
     public ModelMetadata getModelMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelMetadata = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModelMetadata");
+            retObjectModelMetadata = classInstance.Get("ModelMetadata");
+            JCObject val = (JCObject)retObjectModelMetadata;
             return new ModelMetadata(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelMetadata != null ? retObjectModelMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +289,7 @@ public class ModelValidationNode extends NetObject  {
 
     public void setModelMetadata(ModelMetadata ModelMetadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelMetadata", ModelMetadata == null ? null : ModelMetadata.getJCOInstance());
         } catch (JCNativeException jcne) {

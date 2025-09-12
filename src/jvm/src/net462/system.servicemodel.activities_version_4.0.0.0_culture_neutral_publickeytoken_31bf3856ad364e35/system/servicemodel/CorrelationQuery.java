@@ -167,10 +167,14 @@ public class CorrelationQuery extends NetObject  {
     
     public MessageFilter getWhere() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWhere = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Where");
+            retObjectWhere = classInstance.Get("Where");
+            JCObject val = (JCObject)retObjectWhere;
             return new MessageFilter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class CorrelationQuery extends NetObject  {
 
     public void setWhere(MessageFilter Where) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Where", Where == null ? null : Where.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class CorrelationQuery extends NetObject  {
 
     public MessageQuerySet getSelect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Select");
+            retObjectSelect = classInstance.Get("Select");
+            JCObject val = (JCObject)retObjectSelect;
             return new MessageQuerySet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class CorrelationQuery extends NetObject  {
 
     public void setSelect(MessageQuerySet Select) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Select", Select == null ? null : Select.getJCOInstance());
         } catch (JCNativeException jcne) {

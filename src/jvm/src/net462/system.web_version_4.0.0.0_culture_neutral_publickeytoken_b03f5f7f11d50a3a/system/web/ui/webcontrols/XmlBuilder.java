@@ -164,9 +164,13 @@ public class XmlBuilder extends ControlBuilder  {
     
     public boolean NeedsTagInnerText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeedsTagInnerText = null;
         try {
-            return (boolean)classInstance.Invoke("NeedsTagInnerText");
+            retObjectNeedsTagInnerText = classInstance.Invoke("NeedsTagInnerText");
+            return (boolean)retObjectNeedsTagInnerText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNeedsTagInnerText != null ? retObjectNeedsTagInnerText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class XmlBuilder extends ControlBuilder  {
 
     public NetType GetChildControlType(java.lang.String tagName, IDictionary attribs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildControlType = null;
         try {
-            JCObject objGetChildControlType = (JCObject)classInstance.Invoke("GetChildControlType", tagName, attribs == null ? null : attribs.getJCOInstance());
+            retObjectGetChildControlType = classInstance.Invoke("GetChildControlType", tagName, attribs == null ? null : attribs.getJCOInstance());
+            JCObject objGetChildControlType = (JCObject)retObjectGetChildControlType;
             return new NetType(objGetChildControlType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildControlType != null ? retObjectGetChildControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class XmlBuilder extends ControlBuilder  {
 
     public void AppendLiteralString(java.lang.String s) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendLiteralString", s);
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class XmlBuilder extends ControlBuilder  {
 
     public void SetTagInnerText(java.lang.String text) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.xml.XmlException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTagInnerText", text);
         } catch (JCNativeException jcne) {

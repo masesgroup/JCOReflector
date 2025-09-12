@@ -154,9 +154,13 @@ public class XmlNavigatorFilter extends NetObject  {
     
     public boolean IsFiltered(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFiltered = null;
         try {
-            return (boolean)classInstance.Invoke("IsFiltered", navigator == null ? null : navigator.getJCOInstance());
+            retObjectIsFiltered = classInstance.Invoke("IsFiltered", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectIsFiltered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFiltered != null ? retObjectIsFiltered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class XmlNavigatorFilter extends NetObject  {
 
     public boolean MoveToContent(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToContent = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToContent", navigator == null ? null : navigator.getJCOInstance());
+            retObjectMoveToContent = classInstance.Invoke("MoveToContent", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectMoveToContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToContent != null ? retObjectMoveToContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class XmlNavigatorFilter extends NetObject  {
 
     public boolean MoveToFollowing(XPathNavigator navigator, XPathNavigator navigatorEnd) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFollowing = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFollowing", navigator == null ? null : navigator.getJCOInstance(), navigatorEnd == null ? null : navigatorEnd.getJCOInstance());
+            retObjectMoveToFollowing = classInstance.Invoke("MoveToFollowing", navigator == null ? null : navigator.getJCOInstance(), navigatorEnd == null ? null : navigatorEnd.getJCOInstance());
+            return (boolean)retObjectMoveToFollowing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFollowing != null ? retObjectMoveToFollowing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class XmlNavigatorFilter extends NetObject  {
 
     public boolean MoveToFollowingSibling(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFollowingSibling = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFollowingSibling", navigator == null ? null : navigator.getJCOInstance());
+            retObjectMoveToFollowingSibling = classInstance.Invoke("MoveToFollowingSibling", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectMoveToFollowingSibling;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFollowingSibling != null ? retObjectMoveToFollowingSibling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +210,13 @@ public class XmlNavigatorFilter extends NetObject  {
 
     public boolean MoveToNextContent(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNextContent = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNextContent", navigator == null ? null : navigator.getJCOInstance());
+            retObjectMoveToNextContent = classInstance.Invoke("MoveToNextContent", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectMoveToNextContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNextContent != null ? retObjectMoveToNextContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +224,13 @@ public class XmlNavigatorFilter extends NetObject  {
 
     public boolean MoveToPreviousSibling(XPathNavigator navigator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToPreviousSibling = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToPreviousSibling", navigator == null ? null : navigator.getJCOInstance());
+            retObjectMoveToPreviousSibling = classInstance.Invoke("MoveToPreviousSibling", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectMoveToPreviousSibling;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToPreviousSibling != null ? retObjectMoveToPreviousSibling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

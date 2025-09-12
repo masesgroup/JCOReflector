@@ -160,9 +160,13 @@ public class StringType extends NetObject  {
     
     public static boolean StrLike(java.lang.String Source, java.lang.String Pattern, CompareMethod CompareOption) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStrLike = null;
         try {
-            return (boolean)classType.Invoke("StrLike", Source, Pattern, CompareOption == null ? null : CompareOption.getJCOInstance());
+            retObjectStrLike = classType.Invoke("StrLike", Source, Pattern, CompareOption == null ? null : CompareOption.getJCOInstance());
+            return (boolean)retObjectStrLike;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStrLike != null ? retObjectStrLike.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class StringType extends NetObject  {
 
     public static boolean StrLikeBinary(java.lang.String Source, java.lang.String Pattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStrLikeBinary = null;
         try {
-            return (boolean)classType.Invoke("StrLikeBinary", Source, Pattern);
+            retObjectStrLikeBinary = classType.Invoke("StrLikeBinary", Source, Pattern);
+            return (boolean)retObjectStrLikeBinary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStrLikeBinary != null ? retObjectStrLikeBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class StringType extends NetObject  {
 
     public static boolean StrLikeText(java.lang.String Source, java.lang.String Pattern) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStrLikeText = null;
         try {
-            return (boolean)classType.Invoke("StrLikeText", Source, Pattern);
+            retObjectStrLikeText = classType.Invoke("StrLikeText", Source, Pattern);
+            return (boolean)retObjectStrLikeText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStrLikeText != null ? retObjectStrLikeText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,19 @@ public class StringType extends NetObject  {
 
     public static int StrCmp(java.lang.String sLeft, java.lang.String sRight, boolean TextCompare) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStrCmp = null;
         try {
-            return (int)classType.Invoke("StrCmp", sLeft, sRight, TextCompare);
+            retObjectStrCmp = classType.Invoke("StrCmp", sLeft, sRight, TextCompare);
+            return (int)retObjectStrCmp;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectStrCmpNumber = (java.lang.Number)retObjectStrCmp;
+                return retObjectStrCmpNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectStrCmp != null ? retObjectStrCmp.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +222,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromBoolean(boolean Value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromBoolean = null;
         try {
-            return (java.lang.String)classType.Invoke("FromBoolean", Value);
+            retObjectFromBoolean = classType.Invoke("FromBoolean", Value);
+            return (java.lang.String)retObjectFromBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromBoolean != null ? retObjectFromBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +236,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromByte(byte Value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromByte = null;
         try {
-            return (java.lang.String)classType.Invoke("FromByte", Value);
+            retObjectFromByte = classType.Invoke("FromByte", Value);
+            return (java.lang.String)retObjectFromByte;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromByte != null ? retObjectFromByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +250,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromChar(char Value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromChar = null;
         try {
-            return (java.lang.String)classType.Invoke("FromChar", Value);
+            retObjectFromChar = classType.Invoke("FromChar", Value);
+            return (java.lang.String)retObjectFromChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromChar != null ? retObjectFromChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +264,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromDate(DateTime Value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDate = null;
         try {
-            return (java.lang.String)classType.Invoke("FromDate", Value == null ? null : Value.getJCOInstance());
+            retObjectFromDate = classType.Invoke("FromDate", Value == null ? null : Value.getJCOInstance());
+            return (java.lang.String)retObjectFromDate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromDate != null ? retObjectFromDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +278,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromDecimal(Decimal Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDecimal = null;
         try {
-            return (java.lang.String)classType.Invoke("FromDecimal", Value == null ? null : Value.getJCOInstance(), NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            retObjectFromDecimal = classType.Invoke("FromDecimal", Value == null ? null : Value.getJCOInstance(), NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            return (java.lang.String)retObjectFromDecimal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromDecimal != null ? retObjectFromDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +292,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromDecimal(Decimal Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDecimal = null;
         try {
-            return (java.lang.String)classType.Invoke("FromDecimal", Value == null ? null : Value.getJCOInstance());
+            retObjectFromDecimal = classType.Invoke("FromDecimal", Value == null ? null : Value.getJCOInstance());
+            return (java.lang.String)retObjectFromDecimal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromDecimal != null ? retObjectFromDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +306,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromDouble(double Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDouble = null;
         try {
-            return (java.lang.String)classType.Invoke("FromDouble", Value, NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            retObjectFromDouble = classType.Invoke("FromDouble", Value, NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            return (java.lang.String)retObjectFromDouble;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromDouble != null ? retObjectFromDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +320,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromDouble(double Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDouble = null;
         try {
-            return (java.lang.String)classType.Invoke("FromDouble", Value);
+            retObjectFromDouble = classType.Invoke("FromDouble", Value);
+            return (java.lang.String)retObjectFromDouble;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromDouble != null ? retObjectFromDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +334,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromInteger(int Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromInteger = null;
         try {
-            return (java.lang.String)classType.Invoke("FromInteger", Value);
+            retObjectFromInteger = classType.Invoke("FromInteger", Value);
+            return (java.lang.String)retObjectFromInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromInteger != null ? retObjectFromInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +348,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromLong(long Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromLong = null;
         try {
-            return (java.lang.String)classType.Invoke("FromLong", Value);
+            retObjectFromLong = classType.Invoke("FromLong", Value);
+            return (java.lang.String)retObjectFromLong;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromLong != null ? retObjectFromLong.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,9 +362,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromObject(NetObject Value) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.OverflowException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromObject = null;
         try {
-            return (java.lang.String)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            retObjectFromObject = classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            return (java.lang.String)retObjectFromObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromObject != null ? retObjectFromObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,9 +376,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromShort(short Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromShort = null;
         try {
-            return (java.lang.String)classType.Invoke("FromShort", Value);
+            retObjectFromShort = classType.Invoke("FromShort", Value);
+            return (java.lang.String)retObjectFromShort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromShort != null ? retObjectFromShort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +390,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromSingle(Single Value, NumberFormatInfo NumberFormat) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromSingle = null;
         try {
-            return (java.lang.String)classType.Invoke("FromSingle", Value == null ? null : Value.getJCOInstance(), NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            retObjectFromSingle = classType.Invoke("FromSingle", Value == null ? null : Value.getJCOInstance(), NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            return (java.lang.String)retObjectFromSingle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromSingle != null ? retObjectFromSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +404,13 @@ public class StringType extends NetObject  {
 
     public static java.lang.String FromSingle(Single Value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromSingle = null;
         try {
-            return (java.lang.String)classType.Invoke("FromSingle", Value == null ? null : Value.getJCOInstance());
+            retObjectFromSingle = classType.Invoke("FromSingle", Value == null ? null : Value.getJCOInstance());
+            return (java.lang.String)retObjectFromSingle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFromSingle != null ? retObjectFromSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +418,7 @@ public class StringType extends NetObject  {
 
     public static void MidStmtStr(JCORefOut sDest, int StartPosition, int MaxInsertLength, java.lang.String sInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MidStmtStr", sDest.getJCRefOut(), StartPosition, MaxInsertLength, sInsert);
         } catch (JCNativeException jcne) {

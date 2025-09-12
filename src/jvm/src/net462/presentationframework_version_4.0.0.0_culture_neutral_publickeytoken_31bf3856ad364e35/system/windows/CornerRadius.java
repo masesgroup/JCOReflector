@@ -177,9 +177,13 @@ public class CornerRadius extends ValueType  {
     
     public boolean Equals(CornerRadius cornerRadius) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", cornerRadius == null ? null : cornerRadius.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", cornerRadius == null ? null : cornerRadius.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,19 @@ public class CornerRadius extends ValueType  {
     
     public double getBottomLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottomLeft = null;
         try {
-            return (double)classInstance.Get("BottomLeft");
+            retObjectBottomLeft = classInstance.Get("BottomLeft");
+            return (double)retObjectBottomLeft;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBottomLeftNumber = (java.lang.Number)retObjectBottomLeft;
+                return retObjectBottomLeftNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBottomLeft != null ? retObjectBottomLeft.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +215,7 @@ public class CornerRadius extends ValueType  {
 
     public void setBottomLeft(double BottomLeft) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BottomLeft", BottomLeft);
         } catch (JCNativeException jcne) {
@@ -211,9 +225,19 @@ public class CornerRadius extends ValueType  {
 
     public double getBottomRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottomRight = null;
         try {
-            return (double)classInstance.Get("BottomRight");
+            retObjectBottomRight = classInstance.Get("BottomRight");
+            return (double)retObjectBottomRight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBottomRightNumber = (java.lang.Number)retObjectBottomRight;
+                return retObjectBottomRightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectBottomRight != null ? retObjectBottomRight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +245,7 @@ public class CornerRadius extends ValueType  {
 
     public void setBottomRight(double BottomRight) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BottomRight", BottomRight);
         } catch (JCNativeException jcne) {
@@ -231,9 +255,19 @@ public class CornerRadius extends ValueType  {
 
     public double getTopLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopLeft = null;
         try {
-            return (double)classInstance.Get("TopLeft");
+            retObjectTopLeft = classInstance.Get("TopLeft");
+            return (double)retObjectTopLeft;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTopLeftNumber = (java.lang.Number)retObjectTopLeft;
+                return retObjectTopLeftNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTopLeft != null ? retObjectTopLeft.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +275,7 @@ public class CornerRadius extends ValueType  {
 
     public void setTopLeft(double TopLeft) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopLeft", TopLeft);
         } catch (JCNativeException jcne) {
@@ -251,9 +285,19 @@ public class CornerRadius extends ValueType  {
 
     public double getTopRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopRight = null;
         try {
-            return (double)classInstance.Get("TopRight");
+            retObjectTopRight = classInstance.Get("TopRight");
+            return (double)retObjectTopRight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTopRightNumber = (java.lang.Number)retObjectTopRight;
+                return retObjectTopRightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectTopRight != null ? retObjectTopRight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +305,7 @@ public class CornerRadius extends ValueType  {
 
     public void setTopRight(double TopRight) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopRight", TopRight);
         } catch (JCNativeException jcne) {

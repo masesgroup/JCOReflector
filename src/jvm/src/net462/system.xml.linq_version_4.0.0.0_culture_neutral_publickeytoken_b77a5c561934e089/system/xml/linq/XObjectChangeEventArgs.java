@@ -171,10 +171,14 @@ public class XObjectChangeEventArgs extends EventArgs  {
     
     public XObjectChange getObjectChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectChange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectChange");
+            retObjectObjectChange = classInstance.Get("ObjectChange");
+            JCObject val = (JCObject)retObjectObjectChange;
             return new XObjectChange(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectChange != null ? retObjectObjectChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

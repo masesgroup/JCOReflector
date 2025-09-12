@@ -167,7 +167,7 @@ public class ControlSkin extends NetObject  {
     
     public void ApplySkin(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplySkin", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,10 +181,14 @@ public class ControlSkin extends NetObject  {
     
     public NetType getControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlType");
+            retObjectControlType = classInstance.Get("ControlType");
+            JCObject val = (JCObject)retObjectControlType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlType != null ? retObjectControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

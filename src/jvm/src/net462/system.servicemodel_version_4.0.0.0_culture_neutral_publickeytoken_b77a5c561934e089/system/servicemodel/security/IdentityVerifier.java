@@ -157,9 +157,13 @@ public class IdentityVerifier extends NetObject  {
     
     public boolean CheckAccess(EndpointIdentity identity, AuthorizationContext authContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckAccess = null;
         try {
-            return (boolean)classInstance.Invoke("CheckAccess", identity == null ? null : identity.getJCOInstance(), authContext == null ? null : authContext.getJCOInstance());
+            retObjectCheckAccess = classInstance.Invoke("CheckAccess", identity == null ? null : identity.getJCOInstance(), authContext == null ? null : authContext.getJCOInstance());
+            return (boolean)retObjectCheckAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckAccess != null ? retObjectCheckAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class IdentityVerifier extends NetObject  {
 
     public boolean TryGetIdentity(EndpointAddress reference, JCORefOut<EndpointIdentity> identity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetIdentity = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetIdentity", reference == null ? null : reference.getJCOInstance(), identity.getJCRefOut());
+            retObjectTryGetIdentity = classInstance.Invoke("TryGetIdentity", reference == null ? null : reference.getJCOInstance(), identity.getJCRefOut());
+            return (boolean)retObjectTryGetIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetIdentity != null ? retObjectTryGetIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class IdentityVerifier extends NetObject  {
 
     public static IdentityVerifier CreateDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDefault = null;
         try {
-            JCObject objCreateDefault = (JCObject)classType.Invoke("CreateDefault");
+            retObjectCreateDefault = classType.Invoke("CreateDefault");
+            JCObject objCreateDefault = (JCObject)retObjectCreateDefault;
             return new IdentityVerifier(objCreateDefault);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDefault != null ? retObjectCreateDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

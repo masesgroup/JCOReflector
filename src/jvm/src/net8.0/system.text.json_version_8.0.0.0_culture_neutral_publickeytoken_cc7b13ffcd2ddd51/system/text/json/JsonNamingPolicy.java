@@ -154,9 +154,13 @@ public class JsonNamingPolicy extends NetObject  {
     
     public java.lang.String ConvertName(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ConvertName", name);
+            retObjectConvertName = classInstance.Invoke("ConvertName", name);
+            return (java.lang.String)retObjectConvertName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectConvertName != null ? retObjectConvertName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class JsonNamingPolicy extends NetObject  {
     
     public static JsonNamingPolicy getCamelCase() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCamelCase = null;
         try {
-            JCObject val = (JCObject)classType.Get("CamelCase");
+            retObjectCamelCase = classType.Get("CamelCase");
+            JCObject val = (JCObject)retObjectCamelCase;
             return new JsonNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCamelCase != null ? retObjectCamelCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class JsonNamingPolicy extends NetObject  {
 
     public static JsonNamingPolicy getKebabCaseLower() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKebabCaseLower = null;
         try {
-            JCObject val = (JCObject)classType.Get("KebabCaseLower");
+            retObjectKebabCaseLower = classType.Get("KebabCaseLower");
+            JCObject val = (JCObject)retObjectKebabCaseLower;
             return new JsonNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKebabCaseLower != null ? retObjectKebabCaseLower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class JsonNamingPolicy extends NetObject  {
 
     public static JsonNamingPolicy getKebabCaseUpper() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKebabCaseUpper = null;
         try {
-            JCObject val = (JCObject)classType.Get("KebabCaseUpper");
+            retObjectKebabCaseUpper = classType.Get("KebabCaseUpper");
+            JCObject val = (JCObject)retObjectKebabCaseUpper;
             return new JsonNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKebabCaseUpper != null ? retObjectKebabCaseUpper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class JsonNamingPolicy extends NetObject  {
 
     public static JsonNamingPolicy getSnakeCaseLower() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSnakeCaseLower = null;
         try {
-            JCObject val = (JCObject)classType.Get("SnakeCaseLower");
+            retObjectSnakeCaseLower = classType.Get("SnakeCaseLower");
+            JCObject val = (JCObject)retObjectSnakeCaseLower;
             return new JsonNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSnakeCaseLower != null ? retObjectSnakeCaseLower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class JsonNamingPolicy extends NetObject  {
 
     public static JsonNamingPolicy getSnakeCaseUpper() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSnakeCaseUpper = null;
         try {
-            JCObject val = (JCObject)classType.Get("SnakeCaseUpper");
+            retObjectSnakeCaseUpper = classType.Get("SnakeCaseUpper");
+            JCObject val = (JCObject)retObjectSnakeCaseUpper;
             return new JsonNamingPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSnakeCaseUpper != null ? retObjectSnakeCaseUpper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

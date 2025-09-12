@@ -180,9 +180,13 @@ public class RegionInfo extends NetObject  {
     
     public boolean getIsMetric() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMetric = null;
         try {
-            return (boolean)classInstance.Get("IsMetric");
+            retObjectIsMetric = classInstance.Get("IsMetric");
+            return (boolean)retObjectIsMetric;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMetric != null ? retObjectIsMetric.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,19 @@ public class RegionInfo extends NetObject  {
 
     public int getGeoId() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeoId = null;
         try {
-            return (int)classInstance.Get("GeoId");
+            retObjectGeoId = classInstance.Get("GeoId");
+            return (int)retObjectGeoId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGeoIdNumber = (java.lang.Number)retObjectGeoId;
+                return retObjectGeoIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGeoId != null ? retObjectGeoId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +214,14 @@ public class RegionInfo extends NetObject  {
 
     public static RegionInfo getCurrentRegion() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentRegion = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentRegion");
+            retObjectCurrentRegion = classType.Get("CurrentRegion");
+            JCObject val = (JCObject)retObjectCurrentRegion;
             return new RegionInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentRegion != null ? retObjectCurrentRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +229,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getCurrencyEnglishName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyEnglishName = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrencyEnglishName");
+            retObjectCurrencyEnglishName = classInstance.Get("CurrencyEnglishName");
+            return (java.lang.String)retObjectCurrencyEnglishName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrencyEnglishName != null ? retObjectCurrencyEnglishName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +243,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getCurrencyNativeName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyNativeName = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrencyNativeName");
+            retObjectCurrencyNativeName = classInstance.Get("CurrencyNativeName");
+            return (java.lang.String)retObjectCurrencyNativeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrencyNativeName != null ? retObjectCurrencyNativeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +257,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getCurrencySymbol() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencySymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrencySymbol");
+            retObjectCurrencySymbol = classInstance.Get("CurrencySymbol");
+            return (java.lang.String)retObjectCurrencySymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrencySymbol != null ? retObjectCurrencySymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +271,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +285,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getEnglishName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnglishName = null;
         try {
-            return (java.lang.String)classInstance.Get("EnglishName");
+            retObjectEnglishName = classInstance.Get("EnglishName");
+            return (java.lang.String)retObjectEnglishName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEnglishName != null ? retObjectEnglishName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +299,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getISOCurrencySymbol() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectISOCurrencySymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("ISOCurrencySymbol");
+            retObjectISOCurrencySymbol = classInstance.Get("ISOCurrencySymbol");
+            return (java.lang.String)retObjectISOCurrencySymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectISOCurrencySymbol != null ? retObjectISOCurrencySymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +313,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +327,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getNativeName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeName = null;
         try {
-            return (java.lang.String)classInstance.Get("NativeName");
+            retObjectNativeName = classInstance.Get("NativeName");
+            return (java.lang.String)retObjectNativeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNativeName != null ? retObjectNativeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +341,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getThreeLetterISORegionName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreeLetterISORegionName = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreeLetterISORegionName");
+            retObjectThreeLetterISORegionName = classInstance.Get("ThreeLetterISORegionName");
+            return (java.lang.String)retObjectThreeLetterISORegionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreeLetterISORegionName != null ? retObjectThreeLetterISORegionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +355,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getThreeLetterWindowsRegionName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreeLetterWindowsRegionName = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreeLetterWindowsRegionName");
+            retObjectThreeLetterWindowsRegionName = classInstance.Get("ThreeLetterWindowsRegionName");
+            return (java.lang.String)retObjectThreeLetterWindowsRegionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreeLetterWindowsRegionName != null ? retObjectThreeLetterWindowsRegionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +369,13 @@ public class RegionInfo extends NetObject  {
 
     public java.lang.String getTwoLetterISORegionName() throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTwoLetterISORegionName = null;
         try {
-            return (java.lang.String)classInstance.Get("TwoLetterISORegionName");
+            retObjectTwoLetterISORegionName = classInstance.Get("TwoLetterISORegionName");
+            return (java.lang.String)retObjectTwoLetterISORegionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTwoLetterISORegionName != null ? retObjectTwoLetterISORegionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,10 +160,14 @@ public class BookmarkInfo extends NetObject  {
     
     public BookmarkScopeInfo getScopeInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScopeInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScopeInfo");
+            retObjectScopeInfo = classInstance.Get("ScopeInfo");
+            JCObject val = (JCObject)retObjectScopeInfo;
             return new BookmarkScopeInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScopeInfo != null ? retObjectScopeInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class BookmarkInfo extends NetObject  {
 
     public void setScopeInfo(BookmarkScopeInfo ScopeInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScopeInfo", ScopeInfo == null ? null : ScopeInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,9 +185,13 @@ public class BookmarkInfo extends NetObject  {
 
     public java.lang.String getBookmarkName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBookmarkName = null;
         try {
-            return (java.lang.String)classInstance.Get("BookmarkName");
+            retObjectBookmarkName = classInstance.Get("BookmarkName");
+            return (java.lang.String)retObjectBookmarkName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBookmarkName != null ? retObjectBookmarkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class BookmarkInfo extends NetObject  {
 
     public void setBookmarkName(java.lang.String BookmarkName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BookmarkName", BookmarkName);
         } catch (JCNativeException jcne) {
@@ -201,9 +209,13 @@ public class BookmarkInfo extends NetObject  {
 
     public java.lang.String getOwnerDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("OwnerDisplayName");
+            retObjectOwnerDisplayName = classInstance.Get("OwnerDisplayName");
+            return (java.lang.String)retObjectOwnerDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOwnerDisplayName != null ? retObjectOwnerDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class BookmarkInfo extends NetObject  {
 
     public void setOwnerDisplayName(java.lang.String OwnerDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerDisplayName", OwnerDisplayName);
         } catch (JCNativeException jcne) {

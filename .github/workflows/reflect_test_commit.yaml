@@ -23,11 +23,6 @@ on:
         required: false
         default: false
         type: boolean
-      ExecuteSocketTest:
-        description: 'Execute the test related to socket'
-        required: true
-        default: true
-        type: boolean
       ExecuteSocketTestAsync:
         description: 'Execute the test related to async mode socket'
         required: false
@@ -322,7 +317,6 @@ jobs:
         continue-on-error: true
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}
         continue-on-error: true
     
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
@@ -444,7 +438,7 @@ jobs:
         continue-on-error: true
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}
+        if: ${{ inputs.ExecuteScalaEventTest == true }}
         shell: cmd
         continue-on-error: true
     
@@ -556,7 +550,6 @@ jobs:
         continue-on-error: true
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true }}
         continue-on-error: true
     
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
@@ -673,7 +666,7 @@ jobs:
         continue-on-error: true
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}  
+        if: ${{ inputs.ExecuteScalaEventTest == true }}  
         continue-on-error: true
     
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
@@ -797,7 +790,7 @@ jobs:
         continue-on-error: true
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-        if: ${{ inputs.ExecuteSocketTest == true && inputs.ExecuteScalaEventTest == true }}
+        if: ${{ inputs.ExecuteScalaEventTest == true }}
         continue-on-error: true
     
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}

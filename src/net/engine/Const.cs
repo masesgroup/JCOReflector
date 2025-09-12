@@ -312,7 +312,7 @@ namespace MASES.JCOReflector.Engine
                 ReflectorClassVoidMethodTemplate,
                 ReflectorClassNativeMethodTemplate,
                 ReflectorClassNativeArrayMethodTemplate,
-                ReflectorClassNativeMethodWithCastToNumber,
+                ReflectorClassNativeMethodWithCastToNumberTemplate,
                 ReflectorClassObjectMethodTemplate,
                 ReflectorClassObjectArrayMethodTemplate,
 
@@ -402,7 +402,7 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorClassVoidMethodTemplate = "JCObjectReflectorClassVoidMethod.template";
             public const string ReflectorClassNativeMethodTemplate = "JCObjectReflectorClassNativeMethod.template";
-            public const string ReflectorClassNativeMethodWithCastToNumber = "JCObjectReflectorClassNativeMethodWithCastToNumber.template";
+            public const string ReflectorClassNativeMethodWithCastToNumberTemplate = "JCObjectReflectorClassNativeMethodWithCastToNumber.template";
             public const string ReflectorClassNativeArrayMethodTemplate = "JCObjectReflectorClassNativeMethodArray.template";
             public const string ReflectorClassObjectMethodTemplate = "JCObjectReflectorClassObjectMethod.template";
             public const string ReflectorClassObjectArrayMethodTemplate = "JCObjectReflectorClassObjectMethodArray.template";
@@ -415,6 +415,7 @@ namespace MASES.JCOReflector.Engine
 
             public const string ReflectorClassSetTemplate = "JCObjectReflectorClassSetProperty.template";
             public const string ReflectorClassNativeGetTemplate = "JCObjectReflectorClassNativeGetProperty.template";
+            public const string ReflectorClassNativeGetWithCastToNumberTemplate = "JCObjectReflectorClassNativeGetPropertyWithCastToNumber.template";
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";

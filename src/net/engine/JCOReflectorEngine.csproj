@@ -53,6 +53,7 @@
   <ItemGroup>
     <EmbeddedResource Include="JCObjectReflectorClassEnumerable.template" />
     <EmbeddedResource Include="JCObjectReflectorClassEvent.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassNativeGetPropertyWithCastToNumber.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeGetPropertyArray.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeMethodWithCastToNumber.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeMethodArray.template" />

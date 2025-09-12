@@ -1514,12 +1514,15 @@ namespace MASES.JCOReflector.Engine
                             if (isRetValArray)
                             {
                                 isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate
+                                                                                        : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
                             }
                             else
                             {
                                 isInterfaceRetVal = item.ReturnType.IsInterface;
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeMethodTemplate : Const.Templates.ReflectorClassObjectMethodTemplate);
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(returnType) ? Const.Templates.ReflectorClassNativeMethodWithCastToNumberTemplate 
+                                                                                                                                       : Const.Templates.ReflectorClassNativeMethodTemplate
+                                                                                        : Const.Templates.ReflectorClassObjectMethodTemplate);
                             }
                         }
 
@@ -2217,11 +2220,14 @@ namespace MASES.JCOReflector.Engine
                         {
                             if (isArray)
                             {
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate : Const.Templates.ReflectorClassObjectArrayGetTemplate);
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate 
+                                                                                        : Const.Templates.ReflectorClassObjectArrayGetTemplate);
                             }
                             else
                             {
-                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? IsPrivitiveConvertibleFromNumber(propertyType) ? Const.Templates.ReflectorClassNativeGetWithCastToNumberTemplate
+                                                                                                                                         : Const.Templates.ReflectorClassNativeGetTemplate 
+                                                                                        : Const.Templates.ReflectorClassObjectGetTemplate);
                             }
 
                             var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
@@ -2445,12 +2451,15 @@ namespace MASES.JCOReflector.Engine
                 if (isRetValArray)
                 {
                     isInterfaceRetVal = invokeMethod.ReturnType.GetElementType().IsInterface;
-                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate 
+                                                                                               : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
                 }
                 else
                 {
                     isInterfaceRetVal = invokeMethod.ReturnType.IsInterface;
-                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.ReflectorClassNativeMethodTemplate : Const.Templates.ReflectorClassObjectMethodTemplate);
+                    dynamicInvokeTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? IsPrivitiveConvertibleFromNumber(returnType) ? Const.Templates.ReflectorClassNativeMethodWithCastToNumberTemplate
+                                                                                                                                              : Const.Templates.ReflectorClassNativeMethodTemplate 
+                                                                                               : Const.Templates.ReflectorClassObjectMethodTemplate);
                 }
             }
 
@@ -2967,6 +2976,21 @@ namespace MASES.JCOReflector.Engine
                         imports.Add(innerType);
                     }
                 }
+            }
+        }
+
+        static bool IsPrivitiveConvertibleFromNumber(string type)
+        {
+            switch (type.ToLowerInvariant())
+            {
+                case "byte":
+                case "double":
+                case "float":
+                case "int":
+                case "long":
+                case "short":
+                    return true;
+                default: return false;
             }
         }
     }

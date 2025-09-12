@@ -324,6 +324,7 @@ namespace MASES.JCOReflector.Engine
 
                 ReflectorClassSetTemplate,
                 ReflectorClassNativeGetTemplate,
+                ReflectorClassNativeGetWithCastToNumberTemplate,
                 ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
                 ReflectorClassObjectArrayGetTemplate,

@@ -25,7 +25,7 @@ on:
         type: boolean
       ExecuteSocketTest:
         description: 'Execute the test related to socket'
-        required: false
+        required: true
         default: true
         type: boolean
       ExecuteSocketTestAsync:
